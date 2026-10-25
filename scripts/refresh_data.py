@@ -1,8 +1,9 @@
 import json, os, datetime, urllib.request, urllib.parse, pathlib
 KEY=os.environ.get("API_FOOTBALL_KEY","").strip()
 OUT=pathlib.Path("recommendations.json"); now=datetime.datetime.now(datetime.timezone.utc)
-season=now.year if now.month>=7 else now.year-1
-leagues={"Premier League":39,"Bundesliga":78,"La Liga":140,"Serie A":135,"Ligue 1":61,"Primeira Liga":94,"Champions League":2,"Europa League":3,"Conference League":848}
+season=now.year if now.month>=6 else now.year-1
+leagues={"Premier League":("en.1.json","Europe/London"),"Bundesliga":("de.1.json","Europe/Berlin"),"La Liga":("es.1.json","Europe/Madrid"),"Serie A":("it.1.json","Europe/Rome"),"Ligue 1":("fr.1.json","Europe/Paris"),"Primeira Liga":("pt.1.json","Europe/Lisbon")}
+uefa={"Champions League":2,"Europa League":3,"Conference League":848}
 BUDGET=92; used=0
 def save(x): OUT.write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding="utf-8")
 def api(path,params):
@@ -16,11 +17,34 @@ def api(path,params):
 def pct(v):
  try:return round(float(str(v).replace("%","").strip()),1)
  except:return None
+def fixture_fallback():
+ all_matches=[]; errors=[]
+ for league,(file,zone) in leagues.items():
+  url="https://raw.githubusercontent.com/openfootball/football.json/master/%s/%s"%(str(season)+"-"+str((season+1)%100).zfill(2),file)
+  try:
+   req=urllib.request.Request(url,headers={"User-Agent":"Wettbot/3.0"})
+   with urllib.request.urlopen(req,timeout=15) as resp: d=json.load(resp)
+   for m in d.get("matches",[]):
+    day=m.get("date"); tm=m.get("time") or "15:00"
+    if not day: continue
+    try:
+     from zoneinfo import ZoneInfo
+     local=datetime.datetime.fromisoformat(day+"T"+tm).replace(tzinfo=ZoneInfo(zone))
+     dt=local.astimezone(datetime.timezone.utc)
+    except Exception: continue
+    if dt<now-datetime.timedelta(hours=4): continue
+    all_matches.append({"id":"fallback-"+league.lower().replace(" ","-")+"-"+str(day)+"-"+str(len(all_matches)),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":(m.get("team1") or {}).get("name"),"away":(m.get("team2") or {}).get("name"),"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenFootball","dataCoverage":{"fixture":"OpenFootball","prediction":"Nicht abgerufen – API-Schlüssel fehlt"}})
+  except Exception as e: errors.append(league+": "+str(e)[:100])
+ all_matches.sort(key=lambda x:x["timestamp"])
+ return all_matches,errors
 if not KEY:
- save({"generatedAt":now.isoformat(),"status":"needs_api_key","message":"Für automatisierte Prognosen und Detaildaten wird ein API-Football-Schlüssel als GitHub Secret API_FOOTBALL_KEY benötigt.","recommendations":[],"fixtures":[]})
- print("API key missing"); raise SystemExit(0)
+ fixtures,errors=fixture_fallback()
+ save({"generatedAt":now.isoformat(),"status":"needs_api_key","message":"Spielplan-Fallback ist aktiv. Für Prognosen, Form, Verletzungen und Aufstellungen muss API_FOOTBALL_KEY als GitHub Secret gesetzt werden.","recommendations":fixtures,"fixtures":fixtures,"errors":errors,"source":"OpenFootball Spielplan-Fallback"})
+ print("API key missing; fallback fixtures=%s errors=%s"%(len(fixtures),len(errors))); raise SystemExit(0)
+season=now.year if now.month>=7 else now.year-1
+leagues_api={"Premier League":39,"Bundesliga":78,"La Liga":140,"Serie A":135,"Ligue 1":61,"Primeira Liga":94,"Champions League":2,"Europa League":3,"Conference League":848}
 fixtures=[]; errors=[]; start=now.date().isoformat(); end=(now.date()+datetime.timedelta(days=7)).isoformat()
-for name,lid in leagues.items():
+for name,lid in leagues_api.items():
  try:
   for row in api("fixtures",{"league":lid,"season":season,"from":start,"to":end,"timezone":"Europe/Berlin"}):
    f=row.get("fixture",{}); t=row.get("teams",{})
@@ -40,7 +64,6 @@ for f in fixtures:
    f["h2h"]=(r.get("h2h") or [])[:10]; f["analysisStatus"]="available"; f["dataCoverage"]["prediction"]="API-Football"
   else: f["analysisStatus"]="prediction_unavailable"; f["dataCoverage"]["prediction"]="Keine Prognose geliefert"
  except Exception as e: f["analysisStatus"]="prediction_error"; errors.append("prediction "+str(f["id"])+": "+str(e)[:80])
-# Recent form: one API request per team, cached and reused across fixtures.
 cache={}; team_ids=[]
 for f in fixtures:
  for k in ("homeId","awayId"):
@@ -57,14 +80,13 @@ for tid in team_ids[:20]:
 for f in fixtures:
  f["form"]={"home":cache.get(str(f.get("homeId"))),"away":cache.get(str(f.get("awayId")))}
  f["dataCoverage"]["recentForm"]="API-Football" if f["form"]["home"] or f["form"]["away"] else "Keine Daten"
-# Fixture-specific injury feed; lineups queried only for kickoffs within 48 hours.
 for f in fixtures:
  if used>=BUDGET-10: break
  try:
   rows=api("injuries",{"fixture":f["id"]})
   f["injuries"]=[{"player":(x.get("player") or {}).get("name"),"type":(x.get("player") or {}).get("type"),"reason":(x.get("player") or {}).get("reason"),"team":(x.get("team") or {}).get("name")} for x in rows]
   f["dataCoverage"]["injuries"]="API-Football" if rows else "Quelle lieferte keine Einträge"
- except Exception as e: f["injuries"]=None; f["dataCoverage"]["injuries"]="Nicht abrufbar"
+ except Exception: f["injuries"]=None; f["dataCoverage"]["injuries"]="Nicht abrufbar"
 for f in fixtures:
  if used>=BUDGET: break
  if f["timestamp"]-now.timestamp()>48*3600: continue
