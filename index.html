@@ -83,6 +83,7 @@
           <div class="field"><label for="oLine">Linie</label><input id="oLine" placeholder="z. B. 2,5 Tore / FT"></div>
           <div class="field"><label for="oOdds">Dezimalquote</label><input id="oOdds" type="number" min="1.01" step="0.01" required placeholder="1.85"></div>
           <div class="field"><label for="oProb">Eigene Modell-Wahrscheinlichkeit (%)</label><input id="oProb" type="number" min="0" max="100" step="0.1" required placeholder="z. B. 58"></div>
+          <div class="field full"><button class="btn" type="button" id="estimateProbBtn">↗ Wahrscheinlichkeit aus letzten Ergebnissen schätzen</button><div id="modelMsg" class="small muted">Optionaler Basis-Schätzer aus abgeschlossenen ESPN-Spielen; keine Verletzungs- oder Aufstellungsdaten.</div></div>
           <div class="field"><label for="oTime">Abrufzeit</label><input id="oTime" type="datetime-local" required></div>
           <div class="field full"><label for="oUrl">Quellen-URL (Beleg)</label><input id="oUrl" type="url" placeholder="https://…"></div>
           <div class="field"><label><input type="checkbox" id="oGermany" style="width:auto;margin-right:7px">Deutsches Buchmacherangebot geprüft</label></div>
@@ -205,6 +206,86 @@
     const s=statusFor(o);toast(s.ok?'Quote gespeichert: formaler Kandidat.':'Quote gespeichert, aber ausgeschlossen: '+s.reasons.slice(0,2).join(', '));
   });
   ['oOdds','oProb'].forEach(x=>$(x).addEventListener('input',updateEvPreview));
+
+  // Transparent baseline probability estimate from recent completed ESPN results.
+  const espnCodesForModel={
+    'Premier League':'eng.1','Bundesliga':'ger.1','La Liga':'esp.1','Serie A':'ita.1','Ligue 1':'fra.1','Primeira Liga':'por.1',
+    'Champions League':'uefa.champions','Europa League':'uefa.europa','Conference League':'uefa.europa.conf'
+  };
+  const poisson=(lambda,k)=>Math.exp(-lambda)*Math.pow(lambda,k)/factorial(k);
+  const factorial=n=>{let v=1;for(let i=2;i<=n;i++)v*=i;return v;};
+  async function estimateModelProbability(){
+    const match=state.matches.find(m=>m.id===$('oMatch').value);
+    if(!match){toast('Bitte zuerst ein Spiel auswählen.');return;}
+    const code=espnCodesForModel[match.league];
+    if(!code){toast('Für diesen Wettbewerb ist kein Statistikabruf hinterlegt.');return;}
+    const btn=$('estimateProbBtn');btn.disabled=true;btn.textContent='Ergebnisse werden geladen …';
+    $('modelMsg').textContent='Lade abgeschlossene Spiele der letzten 60 Tage. Das Modell berücksichtigt nur Tore, Heim-/Auswärtsleistung und keine Aufstellungen oder Verletzungen.';
+    try{
+      const end=new Date();const start=new Date(end.getTime()-60*86400000);
+      const ymd=d=>{const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');return ''+y+m+day;};
+      const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+code+'/scoreboard?dates='+ymd(start)+'-'+ymd(end);
+      const response=await fetch(url,{headers:{'Accept':'application/json'}});
+      if(!response.ok)throw Error('HTTP '+response.status);
+      const json=await response.json(), games=[];
+      for(const ev of (json.events||[])){
+        const comp=(ev.competitions||[])[0], cs=comp?.competitors||[];
+        const h=cs.find(c=>c.homeAway==='home'),a=cs.find(c=>c.homeAway==='away');
+        const status=ev.status?.type?.completed ?? comp?.status?.type?.completed;
+        const hg=Number(h?.score),ag=Number(a?.score);
+        if(h?.team?.displayName&&a?.team?.displayName&&Number.isFinite(hg)&&Number.isFinite(ag)&&status===true)
+          games.push({home:h.team.displayName,away:a.team.displayName,hg,ag,date:ev.date});
+      }
+      const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+      const homeKey=norm(match.home),awayKey=norm(match.away);
+      const teamMatch=(a,b)=>{const x=norm(a),y=norm(b);return x===y||x.includes(y)||y.includes(x);};
+      const relevant=games.filter(g=>new Date(g.date)<new Date(match.date+'T'+(match.time||'23:59')+':00'));
+      const homeTeamGames=relevant.filter(g=>teamMatch(g.home,match.home)||teamMatch(g.away,match.home)).slice(-10);
+      const awayTeamGames=relevant.filter(g=>teamMatch(g.home,match.away)||teamMatch(g.away,match.away)).slice(-10);
+      if(homeTeamGames.length<3||awayTeamGames.length<3)throw Error('Zu wenige abgeschlossene Spiele für beide Teams (mindestens 3 je Team erforderlich).');
+      const avg=(arr,fn)=>arr.reduce((s,x)=>s+fn(x),0)/arr.length;
+      const leagueHome=avg(relevant,g=>g.hg),leagueAway=avg(relevant,g=>g.ag);
+      const teamRates=(arr,team)=>({
+        hGF:avg(arr.filter(g=>teamMatch(g.home,team)),g=>g.hg)||avg(arr,g=>g.hg),
+        hGA:avg(arr.filter(g=>teamMatch(g.home,team)),g=>g.ag)||avg(arr,g=>g.ag),
+        aGF:avg(arr.filter(g=>teamMatch(g.away,team)),g=>g.ag)||avg(arr,g=>g.ag),
+        aGA:avg(arr.filter(g=>teamMatch(g.away,team)),g=>g.hg)||avg(arr,g=>g.hg)
+      });
+      const hr=teamRates(homeTeamGames,match.home),ar=teamRates(awayTeamGames,match.away);
+      const safe=(n,f)=>Number.isFinite(n)&&n>0?n:f;
+      const lamH=Math.max(.15,Math.min(3.8,leagueHome*(hr.hGF/safe(leagueHome,1.4))*(ar.aGA/safe(leagueHome,1.4))));
+      const lamA=Math.max(.15,Math.min(3.8,leagueAway*(ar.aGF/safe(leagueAway,1.1))*(hr.hGA/safe(leagueAway,1.1))));
+      let pHome=0,pDraw=0,pAway=0,pOver25=0,pBTTS=0;
+      const distH=Array.from({length:11},(_,k)=>poisson(lamH,k)),distA=Array.from({length:11},(_,k)=>poisson(lamA,k));
+      for(let h=0;h<=10;h++)for(let a=0;a<=10;a++){const p=distH[h]*distA[a];if(h>a)pHome+=p;else if(h===a)pDraw+=p;else pAway+=p;if(h+a>=3)pOver25+=p;if(h>0&&a>0)pBTTS+=p;}
+      const market=$('oMarket').value,selection=$('oSelection').value.trim().toLowerCase(),line=$('oLine').value.trim().replace(',','.');
+      let p=null,label='';
+      if(market==='1X2'){
+        if(/^(1|heim|heimteam|.*gewinnt.*)$/.test(selection)&&selection.includes(norm(match.home).toLowerCase()))p=pHome;
+        else if(selection==='1'||selection==='heim'||selection===match.home.toLowerCase()||selection===('sieg '+match.home).toLowerCase())p=pHome;
+        else if(selection==='x'||selection==='draw'||selection==='unentschieden')p=pDraw;
+        else if(selection==='2'||selection===match.away.toLowerCase()||selection===('sieg '+match.away).toLowerCase())p=pAway;
+        else if(selection.includes(match.home.toLowerCase())&&selection.includes('sieg'))p=pHome;
+      } else if(market==='Doppelte Chance'){
+        if(selection.includes('1x')||selection.includes('1/x'))p=pHome+pDraw;
+        else if(selection.includes('x2')||selection.includes('x/2'))p=pDraw+pAway;
+        else if(selection.includes('12')||selection.includes('1/2'))p=pHome+pAway;
+      } else if(market==='Über/Unter Tore'){
+        const ln=Number((line.match(/[0-9]+(?:\.[0-9]+)?/)||[])[0]);
+        if(Number.isFinite(ln)&&ln===2.5){p=/unter|under|u\s*2/i.test(selection)?1-pOver25:pOver25;}
+        else if(Number.isFinite(ln)&&ln===1.5){let over=0;for(let h=0;h<=10;h++)for(let a=0;a<=10;a++)if(h+a>=2)over+=distH[h]*distA[a];p=/unter|under|u\s*1/i.test(selection)?1-over:over;}
+      } else if(market==='Beide Teams treffen'){
+        p=/nein|no|nicht/i.test(selection)?1-pBTTS:pBTTS;
+      }
+      if(p===null||!Number.isFinite(p)){throw Error('Markt/Auswahl nicht erkannt. Nutze bei 1X2 „1“, „X“ oder „2“, bei Über/Unter z. B. „Über 2,5“ und bei BTTS „Ja“/„Nein“.');}
+      $('oProb').value=(p*100).toFixed(1);updateEvPreview();
+      $('modelMsg').textContent='Basis-Schätzung: '+(p*100).toFixed(1).replace('.',',')+' % · erwartete Tore '+match.home+' '+lamH.toFixed(2)+' / '+match.away+' '+lamA.toFixed(2)+' · '+homeTeamGames.length+' / '+awayTeamGames.length+' jüngste Teamspiele. Keine xG-, Verletzungs- oder Aufstellungsdaten; nicht als belastbare Prognose behandeln.';
+      toast('Basis-Wahrscheinlichkeit berechnet. Bitte Modellhinweis beachten.');
+    }catch(err){$('modelMsg').textContent='Keine Schätzung möglich: '+err.message;toast('Modell konnte keine Wahrscheinlichkeit berechnen.');}
+    finally{btn.disabled=false;btn.textContent='↗ Wahrscheinlichkeit aus letzten Ergebnissen schätzen';}
+  }
+  $('estimateProbBtn').addEventListener('click',estimateModelProbability);
+
   document.addEventListener('click',e=>{
     const t=e.target.closest('button'); if(!t)return;
     if(t.dataset.editMatch){
