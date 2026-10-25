@@ -460,6 +460,7 @@
     if(!m){out.innerHTML='<div class="empty">Bitte wähle eine Liga und ein Spiel aus.</div>';return;}
     const p=m.prediction||{},pr=p.probabilities||{},c=p.comparison||{};
     const fmt=v=>v===null||v===undefined||v===''?'Keine Daten':String(v);
+    if(m.analysisStatus==='fixture_only'){out.innerHTML='<div class="row between"><h2>'+esc(m.home)+' – '+esc(m.away)+'</h2><span class="status warn">Nur Spielplan verfügbar</span></div><div class="small muted">'+esc(m.league)+' · '+new Date(m.date).toLocaleString('de-DE',{dateStyle:'full',timeStyle:'short'})+'</div><div class="hr"></div><div class="danger-note">Das Spiel wurde gefunden, aber verlässliche Prognosen, Formdaten, direkte Duelle und aktuelle Kaderinformationen sind noch nicht im Datenfeed verfügbar. Es werden keine Wahrscheinlichkeiten erfunden.</div>';return;}
     const pct=v=>v===null||v===undefined?'Nicht verfügbar':v+' %';
     const rows=Object.entries(c).map(([k,v])=>'<div class="resultline"><span>'+esc(k.replaceAll('_',' '))+'</span><strong>'+esc(fmt(v))+'</strong></div>').join('');
     const h2h=Array.isArray(m.h2h)&&m.h2h.length?m.h2h.map(x=>{const t=x.teams||{},g=x.goals||{},f=x.fixture||{};return '<div class="resultline"><span>'+esc((t.home||{}).name||'Heimteam')+' – '+esc((t.away||{}).name||'Auswärtsteam')+'<br><span class="small muted">'+(f.date?new Date(f.date).toLocaleDateString('de-DE'):'')+'</span></span><strong>'+fmt(g.home)+' : '+fmt(g.away)+'</strong></div>';}).join(''):'Direkte Duelle wurden für dieses Spiel nicht mitgeliefert.';
@@ -471,6 +472,28 @@
   $('showAnalysisBtn').addEventListener('click',renderSelectedAnalysis);
   $('analysisMatch').addEventListener('change',renderSelectedAnalysis);
   $('refreshAnalysisDataBtn').addEventListener('click',()=>loadAnalyses());
+  async function loadESPNFixtures(){
+    const comps=[['Premier League','eng.1'],['Bundesliga','ger.1'],['La Liga','esp.1'],['Serie A','ita.1'],['Ligue 1','fra.1'],['Primeira Liga','por.1'],['Champions League','uefa.champions'],['Europa League','uefa.europa'],['Conference League','uefa.europa.conf']];
+    const all=[],seen=new Set(),now=new Date();
+    for(let day=0;day<7;day++){
+      const d=new Date(now);d.setDate(now.getDate()+day);
+      const ymd=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0');
+      await Promise.allSettled(comps.map(async ([league,code])=>{
+        const res=await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/'+code+'/scoreboard?dates='+ymd,{cache:'no-store'});
+        if(!res.ok)throw Error('HTTP '+res.status);
+        const json=await res.json();
+        for(const e of (json.events||[])){
+          const c=e.competitions?.[0],cs=c?.competitors||[],home=cs.find(x=>x.homeAway==='home'),away=cs.find(x=>x.homeAway==='away');
+          if(!home||!away||!e.date)continue;
+          const dt=new Date(e.date);if(dt<now)continue;
+          const id='espn-'+code+'-'+e.id;if(seen.has(id))continue;seen.add(id);
+          all.push({id,date:dt.toISOString(),timestamp:dt.getTime()/1000,league,home:home.team?.displayName||home.team?.name||'Heimteam',away:away.team?.displayName||away.team?.name||'Auswärtsteam',venue:c?.venue?.fullName||'',analysisStatus:'fixture_only',prediction:{},h2h:[],source:'ESPN Spielplan'});
+        }
+      }));
+    }
+    all.sort((a,b)=>a.timestamp-b.timestamp);
+    return all;
+  }
   async function loadAnalyses(){
     const status=$('top10Status'),list=$('analysisList'),stamp=$('analysisTimestamp');
     status.textContent='Lade automatische Spielanalysen …';list.innerHTML='';stamp.textContent='';
@@ -478,6 +501,13 @@
       const res=await fetch('./recommendations.json?v='+Date.now(),{cache:'no-store'});
       if(!res.ok)throw Error('Datenfeed HTTP '+res.status);
       const data=await res.json();
+      analysisData=data;
+      if(!Array.isArray(analysisData.recommendations)||analysisData.recommendations.length===0){
+        status.textContent='Keine Prognosedaten verfügbar – lade Spielpläne der Top-Ligen …';
+        try{const fallback=await loadESPNFixtures();analysisData={...data,recommendations:fallback,source:'ESPN Spielplan (ohne Prognosen)',generatedAt:new Date().toISOString()};}
+        catch(feedError){analysisData={...data,recommendations:[],source:'Kein Spielplan verfügbar'};}
+      }
+      fillAnalysisSelectors();
       if(data.status==='needs_api_key'){
         status.textContent=data.message||'API-Schlüssel fehlt.';
         list.innerHTML='<div class="empty">Nach Einrichtung des kostenlosen API-Schlüssels erscheinen die Spielanalysen automatisch.</div>';
@@ -497,7 +527,8 @@
           return '<div class="match"><div class="matchhead"><div><div class="teams">'+esc(m.home)+' – '+esc(m.away)+'</div><div class="small muted">'+esc(m.league)+' · '+new Date(m.date).toLocaleString('de-DE',{dateStyle:'medium',timeStyle:'short'})+'</div></div><span class="status '+(m.analysisStatus==='available'?'good':'warn')+'">'+(m.analysisStatus==='available'?'Analyse verfügbar':'Daten fehlen')+'</span></div>'+probBlock+'<div class="hr"></div><h3>Torprognose & Empfehlung</h3><div class="resultline"><span>Modell-Empfehlung</span><strong>'+esc(fmt(p.advice))+'</strong></div><div class="resultline"><span>Unter/Über</span><strong>'+esc(fmt(p.underOver))+'</strong></div><div class="resultline"><span>Heimtore laut Modell</span><strong>'+esc(fmt(p.homeGoals))+'</strong></div><div class="resultline"><span>Auswärtstore laut Modell</span><strong>'+esc(fmt(p.awayGoals))+'</strong></div><div class="resultline"><span>Modell-Konfidenz</span><strong>'+esc(fmt(p.confidence))+'</strong></div><div class="hr"></div><details><summary>Teamvergleich / Formindikatoren</summary><div style="margin-top:8px">'+(compRows||'<div class="small muted">Kein Teamvergleich geliefert.</div>')+'</div></details><details><summary>Letzte direkte Duelle</summary><div style="margin-top:8px">'+h2hText+'</div></details><p class="small muted">Keine Buchmacherquoten. Die Quelle liefert nicht für jedes Spiel alle Märkte, Verletzungen oder Aufstellungen; fehlende Informationen werden nicht erfunden.</p></div>';
         }).join('');
       }
-      if(data.generatedAt)stamp.textContent='Datenstand: '+new Date(data.generatedAt).toLocaleString('de-DE')+'. Quelle: '+(data.source||'');
+      if(analysisData?.generatedAt)stamp.textContent='Datenstand: '+new Date(analysisData.generatedAt).toLocaleString('de-DE')+'. Quelle: '+(analysisData.source||data.source||'');
+      if(analysisData?.recommendations?.length)status.textContent=analysisData.recommendations.length+' Spiele geladen. '+(data.status==='needs_api_key'?'Spielplan verfügbar; Prognosen benötigen noch die Datenanbindung.':'');
     }catch(e){status.textContent='Automatische Analysen konnten nicht geladen werden: '+e.message;list.innerHTML='<div class="empty">Bitte später erneut versuchen.</div>';}
   }
   $('reloadAnalysisBtn').addEventListener('click',loadAnalyses);
