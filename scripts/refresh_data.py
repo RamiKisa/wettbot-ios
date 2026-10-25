@@ -48,7 +48,7 @@ def enrich_team_news(fixtures, max_teams=24):
   f['teamNews']={'home':cache.get(f.get('home'),[]),'away':cache.get(f.get('away'),[])}
   f.setdefault('dataCoverage',{})['teamNews']='Google News RSS (Suchtreffer, keine bestätigten Ausfälle)' if (f['teamNews']['home'] or f['teamNews']['away']) else 'Keine RSS-Treffer / Abruf nicht verfügbar'
 def fixture_fallback():
- all_matches=[]; errors=[]
+ all_matches=[]; errors=[]; history={}
  for league,(file,zone) in leagues.items():
   url="https://raw.githubusercontent.com/openfootball/football.json/master/%s/%s"%(str(season)+"-"+str((season+1)%100).zfill(2),file)
   try:
@@ -62,15 +62,54 @@ def fixture_fallback():
      local=datetime.datetime.fromisoformat(day+"T"+tm).replace(tzinfo=ZoneInfo(zone))
      dt=local.astimezone(datetime.timezone.utc)
     except Exception: continue
+    home=(m.get("team1") or {}).get("name"); away=(m.get("team2") or {}).get("name")
+    score=m.get("score") or {}; ft=score.get("ft") or score.get("fulltime") or []
+    if isinstance(ft,dict): hg=ft.get("team1",ft.get("home")); ag=ft.get("team2",ft.get("away"))
+    elif isinstance(ft,list) and len(ft)>=2: hg,ag=ft[0],ft[1]
+    else: hg=ag=None
+    try:
+     hg=int(hg); ag=int(ag)
+     if hg>=0 and ag>=0:
+      for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
+       history.setdefault((league,team),[]).append({"date":dt.isoformat(),"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent})
+    except (TypeError,ValueError): pass
     if dt<now-datetime.timedelta(hours=4): continue
-    all_matches.append({"id":"fallback-"+league.lower().replace(" ","-")+"-"+str(day)+"-"+str(len(all_matches)),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":(m.get("team1") or {}).get("name"),"away":(m.get("team2") or {}).get("name"),"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenFootball","dataCoverage":{"fixture":"OpenFootball","prediction":"Nicht abgerufen – API-Schlüssel fehlt"}})
+    all_matches.append({"id":"fallback-"+league.lower().replace(" ","-")+"-"+str(day)+"-"+str(len(all_matches)),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenFootball","dataCoverage":{"fixture":"OpenFootball"}})
   except Exception as e: errors.append(league+": "+str(e)[:100])
  all_matches.sort(key=lambda x:x["timestamp"])
+ import math
+ for f in all_matches:
+  h=sorted(history.get((f["league"],f["home"]),[]),key=lambda x:x["date"])[-5:]
+  a=sorted(history.get((f["league"],f["away"]),[]),key=lambda x:x["date"])[-5:]
+  f["form"]={"home":h,"away":a}
+  f["dataCoverage"]["recentForm"]="OpenFootball-Ergebnisse" if h or a else "Keine historischen Ergebnisse im kostenlosen Feed"
+  league_rows=[v for (lg,_),vals in history.items() if lg==f["league"] for v in vals]
+  avg=sum(v["gf"] for v in league_rows)/len(league_rows) if league_rows else 1.35
+  def avg_goals(rows,key,default):
+   vals=[x[key] for x in rows]
+   return sum(vals)/len(vals) if vals else default
+  lam_h=max(0.15,min(4.0,0.55*avg_goals(h,"gf",avg)+0.45*avg_goals(a,"ga",avg)))
+  lam_a=max(0.15,min(4.0,0.55*avg_goals(a,"gf",avg)+0.45*avg_goals(h,"ga",avg)))
+  def pois(lam,n): return math.exp(-lam)*lam**n/math.factorial(n)
+  probs={"home":0.0,"draw":0.0,"away":0.0}; over25=0.0; btts=0.0; scores=[]
+  for i in range(8):
+   for j in range(8):
+    p=pois(lam_h,i)*pois(lam_a,j); scores.append((p,i,j))
+    probs["home" if i>j else "draw" if i==j else "away"]+=p
+    if i+j>=3: over25+=p
+    if i>0 and j>0: btts+=p
+  total=sum(probs.values()) or 1
+  probs={k:round(v/total*100,1) for k,v in probs.items()}
+  f["prediction"]={"model":"Kostenloses Basis-Modell (letzte verfügbare Ergebnisse)","probabilities":probs,"homeGoals":round(lam_h,2),"awayGoals":round(lam_a,2),"underOver":"Über 2,5" if over25>=0.5 else "Unter 2,5","markets":{"over25":round(over25*100,1),"under25":round((1-over25)*100,1),"bttsYes":round(btts*100,1),"bttsNo":round((1-btts)*100,1)},"mostLikelyScore":"%s:%s"%(max(scores)[1],max(scores)[2])}
+  f["analysisStatus"]="model_estimate" if h or a else "limited_model"
+  f["dataCoverage"]["prediction"]="Eigene Poisson-Schätzung aus verfügbaren Ergebnissen; nicht validiert"
+  f["h2h"]=[x for x in h if x.get("opponent")==f["away"]][-5:]
+ enrich_team_news(all_matches,max_teams=40)
  return all_matches,errors
 if not KEY:
  fixtures,errors=fixture_fallback()
- save({"generatedAt":now.isoformat(),"status":"needs_api_key","message":"Spielplan-Fallback ist aktiv. Für Prognosen, Form, Verletzungen und Aufstellungen muss API_FOOTBALL_KEY als GitHub Secret gesetzt werden.","recommendations":fixtures,"fixtures":fixtures,"errors":errors,"source":"OpenFootball Spielplan-Fallback"})
- print("API key missing; fallback fixtures=%s errors=%s"%(len(fixtures),len(errors))); raise SystemExit(0)
+ save({"generatedAt":now.isoformat(),"status":"free_mode","message":"Kostenloser Modus: OpenFootball-Spielplan und Ergebnisse, eigene einfache Tor-Modellschätzung sowie Google News RSS. Verletzungen und Aufstellungen sind nicht garantiert verfügbar.","recommendations":fixtures,"fixtures":fixtures,"errors":errors,"source":"OpenFootball + Google News RSS + eigenes Poisson-Basismodell"})
+ print("Free mode; fixtures=%s with_predictions=%s errors=%s"%(len(fixtures),sum(bool(f.get("prediction")) for f in fixtures),len(errors))); raise SystemExit(0)
 season=now.year if now.month>=7 else now.year-1
 leagues_api={"Premier League":39,"Bundesliga":78,"La Liga":140,"Serie A":135,"Ligue 1":61,"Primeira Liga":94,"Champions League":2,"Europa League":3,"Conference League":848}
 fixtures=[]; errors=[]; start=now.date().isoformat(); end=(now.date()+datetime.timedelta(days=7)).isoformat()
