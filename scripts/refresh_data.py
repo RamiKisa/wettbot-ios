@@ -75,7 +75,28 @@ def fixture_fallback():
     except (TypeError,ValueError): pass
     if dt<now-datetime.timedelta(hours=4): continue
     all_matches.append({"id":"fallback-"+league.lower().replace(" ","-")+"-"+str(day)+"-"+str(len(all_matches)),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenFootball","dataCoverage":{"fixture":"OpenFootball"}})
-  except Exception as e: errors.append(league+": "+str(e)[:100])
+  except Exception as e:
+   errors.append(league+" OpenFootball: "+str(e)[:80])
+   # Free ESPN public scoreboard fallback if the current OpenFootball season is not published.
+   espn_slug={"Premier League":"eng.1","Bundesliga":"ger.1","La Liga":"esp.1","Serie A":"ita.1","Ligue 1":"fra.1","Primeira Liga":"por.1"}.get(league)
+   if espn_slug:
+    try:
+     dates=now.strftime("%Y%m%d")+"-"+(now+datetime.timedelta(days=7)).strftime("%Y%m%d")
+     u="https://site.api.espn.com/apis/site/v2/sports/soccer/"+espn_slug+"/scoreboard?dates="+dates
+     req=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0 Wettbot free football data"})
+     with urllib.request.urlopen(req,timeout=15) as resp: payload=json.load(resp)
+     for event in payload.get("events",[]):
+      comps=event.get("competitions") or []
+      if not comps: continue
+      competitors=comps[0].get("competitors") or []
+      home=next((z.get("team",{}).get("displayName") for z in competitors if z.get("homeAway")=="home"),None)
+      away=next((z.get("team",{}).get("displayName") for z in competitors if z.get("homeAway")=="away"),None)
+      rawdate=event.get("date")
+      if not home or not away or not rawdate: continue
+      dt=datetime.datetime.fromisoformat(rawdate.replace("Z","+00:00"))
+      if dt<now-datetime.timedelta(hours=4): continue
+      all_matches.append({"id":"espn-"+str(event.get("id")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"ESPN public scoreboard","dataCoverage":{"fixture":"ESPN public scoreboard"}})
+    except Exception as ee: errors.append(league+" ESPN: "+str(ee)[:80])
  all_matches.sort(key=lambda x:x["timestamp"])
  import math
  for f in all_matches:
