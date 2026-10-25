@@ -1,0 +1,7 @@
+{
+  "generatedAt": null,
+  "status": "needs_api_key",
+  "message": "API_FOOTBALL_KEY muss in den GitHub Actions Secrets hinterlegt werden.",
+  "recommendations": [],
+  "fixtures": []
+}
