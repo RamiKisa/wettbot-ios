@@ -114,7 +114,7 @@
 (() => {
   const KEY = 'wettbot-ios-free-v1';
   const $ = id => document.getElementById(id);
-  const today = () => new Date().toISOString().slice(0,10);
+  const today = () => { const d=new Date(); d.setMinutes(d.getMinutes()-d.getTimezoneOffset()); return d.toISOString().slice(0,10); };
   const localDateTime = () => { const d = new Date(); d.setMinutes(d.getMinutes()-d.getTimezoneOffset()); return d.toISOString().slice(0,16); };
   const id = () => Date.now().toString(36) + Math.random().toString(36).slice(2,7);
   const money = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n || 0);
@@ -247,7 +247,7 @@
     // Discover league shortcuts dynamically. Normalize names because OpenLigaDB uses
     // slightly different labels across seasons. Never infer a league from a partial substring.
     const normalizeLeague = value => String(value || '')
-      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/ß/g,'ss').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
       .toLowerCase().replace(/20\d{2}\s*\/\s*20\d{2}/g, '')
       .replace(/[._-]+/g, ' ').replace(/[^a-z0-9 ]/g, ' ')
       .replace(/\s+/g, ' ').trim();
@@ -266,11 +266,11 @@
       if (/^(?:(?:uefa )?conference league|europa conference league|uefa europa conference league)$/.test(n)) return 'Conference League';
       return null;
     };
+    const selected=[];
     try {
       const catalogRes=await fetch(`https://api.openligadb.de/getavailableleagues/${season}`,{headers:{'Accept':'application/json'}});
       if(!catalogRes.ok) throw new Error('Liga-Katalog nicht erreichbar');
       const catalog=await catalogRes.json();
-      const selected=[];
       for(const entry of catalog){
         const name=String(entry.leagueName||'').trim();
         const shortcut=String(entry.leagueShortcut||'').trim();
