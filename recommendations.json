@@ -1,16 +1,22 @@
 {
-  "generatedAt": "2026-10-25T21:33:56.399000+00:00",
+  "generatedAt": "2026-10-25T21:34:28.122763+00:00",
   "status": "free_mode",
   "message": "Kostenloser Modus: OpenFootball-Spielplan und Ergebnisse, eigene einfache Tor-Modellschätzung sowie Google News RSS. Verletzungen und Aufstellungen sind nicht garantiert verfügbar.",
   "recommendations": [],
   "fixtures": [],
   "errors": [
-    "Premier League: 'str' object has no attribute 'get'",
-    "Bundesliga: 'str' object has no attribute 'get'",
-    "La Liga: 'str' object has no attribute 'get'",
-    "Serie A: 'str' object has no attribute 'get'",
-    "Ligue 1: 'str' object has no attribute 'get'",
-    "Primeira Liga: 'str' object has no attribute 'get'"
+    "Premier League OpenFootball: 'str' object has no attribute 'get'",
+    "Premier League ESPN: HTTP Error 403: Forbidden",
+    "Bundesliga OpenFootball: 'str' object has no attribute 'get'",
+    "Bundesliga ESPN: HTTP Error 403: Forbidden",
+    "La Liga OpenFootball: 'str' object has no attribute 'get'",
+    "La Liga ESPN: HTTP Error 403: Forbidden",
+    "Serie A OpenFootball: 'str' object has no attribute 'get'",
+    "Serie A ESPN: HTTP Error 403: Forbidden",
+    "Ligue 1 OpenFootball: 'str' object has no attribute 'get'",
+    "Ligue 1 ESPN: HTTP Error 403: Forbidden",
+    "Primeira Liga OpenFootball: 'str' object has no attribute 'get'",
+    "Primeira Liga ESPN: HTTP Error 403: Forbidden"
   ],
   "source": "OpenFootball + Google News RSS + eigenes Poisson-Basismodell"
 }
