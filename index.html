@@ -47,6 +47,13 @@
       <div class="actions" style="margin-top:12px"><button class="btn primary" id="refreshBtn">↻ Kostenlosen Spielplan abrufen</button><button class="btn" id="addMatchJump">+ Spiel manuell hinzufügen</button></div>
       <div id="refreshMsg" class="small muted" style="margin-top:9px">Der Abruf erfolgt erst, wenn du auf den Button tippst.</div>
     </div>
+    <div class="card" id="autoTop10Card">
+      <div class="row between"><h2>Automatische Top-10-Tipps</h2><button class="btn" id="reloadTop10Btn" type="button">Aktualisieren</button></div>
+      <p class="small muted">Sortiert nach geschätzter Trefferwahrscheinlichkeit. Ein Tipp wird nur gezeigt, wenn die Datenquelle eine passende Quote liefert und der berechnete EV mindestens +5 % beträgt. Keine Garantie auf Treffer.</p>
+      <div id="top10Status" class="small muted">Automatische Daten werden geladen …</div>
+      <div id="top10List"></div>
+      <div class="small muted" id="top10Timestamp"></div>
+    </div>
     <div class="card"><h2>Letzte Empfehlungen</h2><div id="recentPicks" class="empty">Noch keine Paper-Wetten erfasst.</div></div>
     <div class="danger-note">Value-Berechnung: EV = (geschätzte Eintrittswahrscheinlichkeit × Dezimalquote) − 1. Ein positiver EV ist nur so zuverlässig wie das unabhängige Wahrscheinlichkeitsmodell. Diese Version hat noch kein trainiertes Prognosemodell.</div>
   </section>
@@ -417,7 +424,30 @@
     try{const incoming=JSON.parse(await f.text());if(!Array.isArray(incoming.matches)||!Array.isArray(incoming.odds)||!Array.isArray(incoming.bets))throw Error('Format');if(!confirm('Import ersetzt die derzeitigen lokalen Daten. Fortfahren?'))return;state=incoming;save();toast('Sicherung importiert.');}catch{toast('Import fehlgeschlagen: ungültige Sicherungsdatei.');}finally{e.target.value='';}
   });
   $('clearBtn').onclick=()=>{if(confirm('Wirklich alle lokalen Spiele, Quoten und Paper-Wetten unwiderruflich löschen?')){state={matches:[],odds:[],bets:[],lastRefresh:null};save();toast('Lokale Daten gelöscht.');}};
+  async function loadTop10(){
+    const status=$('top10Status'),list=$('top10List'),stamp=$('top10Timestamp');
+    status.textContent='Lade automatisch erzeugte Tipps …';list.innerHTML='';stamp.textContent='';
+    try{
+      const res=await fetch('./recommendations.json?v='+Date.now(),{cache:'no-store'});
+      if(!res.ok)throw Error('Datenfeed HTTP '+res.status);
+      const data=await res.json();
+      if(data.status==='needs_api_key'){
+        status.textContent='Automatik noch nicht aktiviert: '+(data.message||'API-Schlüssel fehlt.');
+        list.innerHTML='<div class="empty">Sobald der API-Schlüssel sicher in GitHub hinterlegt ist und der Datenlauf erfolgreich war, erscheinen hier die geprüften Kandidaten.</div>';
+      }else if(!data.recommendations||!data.recommendations.length){
+        status.textContent='Aktualisierung erfolgreich, aber derzeit keine Tipps erfüllen alle Kriterien.';
+        list.innerHTML='<div class="empty">Keine qualifizierten Tipps. Es werden keine zehn Tipps künstlich aufgefüllt.</div>';
+        if(data.errors?.length)status.textContent+=' Einige Datenabrufe sind fehlgeschlagen.';
+      }else{
+        status.textContent=''+data.recommendations.length+' qualifizierte(r) Tipp(s) · nach Trefferwahrscheinlichkeit sortiert.';
+        list.innerHTML=data.recommendations.map((r,i)=>'<div class="match"><div class="matchhead"><div><div class="teams">'+(i+1)+'. '+esc(r.home)+' – '+esc(r.away)+'</div><div class="small muted">'+esc(r.league)+' · '+new Date(r.date).toLocaleString('de-DE',{dateStyle:'medium',timeStyle:'short'})+'</div></div><span class="status good">'+(r.probability*100).toFixed(1).replace('.',',')+' %</span></div><div class="resultline"><span>Tipp / Markt</span><strong>'+esc(r.selection)+' · '+esc(r.market)+'</strong></div><div class="resultline"><span>Buchmacher / Quote</span><strong>'+esc(r.bookmaker)+' · '+Number(r.odds).toFixed(2)+'</strong></div><div class="resultline"><span>Modellierter EV</span><strong>'+(r.ev*100).toFixed(1).replace('.',',')+' %</strong></div><div class="small muted">'+esc(r.reason||'Automatisch berechnet; Prognose nicht garantiert.')+'</div></div>').join('');
+      }
+      if(data.generatedAt)stamp.textContent='Datenstand: '+new Date(data.generatedAt).toLocaleString('de-DE')+'. '+(data.source||'');
+    }catch(e){status.textContent='Automatische Tipps konnten nicht geladen werden: '+e.message;list.innerHTML='<div class="empty">Bitte später erneut versuchen.</div>';}
+  }
+  $('reloadTop10Btn').addEventListener('click',loadTop10);
   render();
+  loadTop10();
   if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(()=>{});
 })();
 </script>
