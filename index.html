@@ -64,7 +64,7 @@
         <div class="formgrid">
           <div class="field"><label for="mDate">Datum</label><input type="date" id="mDate" required></div>
           <div class="field"><label for="mTime">Anstoß (lokal)</label><input type="time" id="mTime"></div>
-          <div class="field"><label for="mLeague">Wettbewerb</label><select id="mLeague"><option>Premier League</option><option>Bundesliga</option><option>La Liga</option><option>Serie A</option><option>Ligue 1</option><option>Champions League</option><option>Europa League</option><option>Conference League</option><option>Sonstiger</option></select></div>
+          <div class="field"><label for="mLeague">Wettbewerb</label><select id="mLeague"><option>Premier League</option><option>Bundesliga</option><option>La Liga</option><option>Serie A</option><option>Ligue 1</option><option>Primeira Liga</option><option>Champions League</option><option>Europa League</option><option>Conference League</option><option>Sonstiger</option></select></div>
           <div class="field"><label for="mHome">Heimteam</label><input id="mHome" required placeholder="z. B. Hoffenheim"></div>
           <div class="field"><label for="mAway">Auswärtsteam</label><input id="mAway" required placeholder="z. B. Leverkusen"></div>
           <div class="field"><label for="mSource">Quelle / Match-URL</label><input id="mSource" placeholder="https://…"></div>
@@ -103,7 +103,7 @@
       <div class="actions"><button class="btn primary" id="exportBtn">Daten als JSON exportieren</button><button class="btn" id="exportCsvBtn">Paper-Trading als CSV exportieren</button><label class="btn" for="importFile">Sicherung importieren</label><input class="hidden" type="file" id="importFile" accept="application/json"></div>
     </div>
     <div class="card"><h2>Wettregeln</h2><div class="resultline"><span>Mindesquote</span><strong>1,50</strong></div><div class="resultline"><span>Mindest-EV</span><strong>+5 %</strong></div><div class="resultline"><span>Virtueller Einsatz</span><strong>10 € pro Einzelwette</strong></div><div class="resultline"><span>Analyse-Zeitpunkte</span><strong>ca. −24 h / −60 min</strong></div><div class="resultline"><span>Wettabgabe</span><strong>Deaktiviert</strong></div></div>
-    <div class="card"><h2>Wettbewerbe nach Wochentag</h2><div class="small muted">Fr–So: Premier League, Bundesliga, La Liga, Serie A, Ligue 1. Di–Mi: Champions League. Do: Europa League und Conference League. An anderen Tagen keine automatische Wettbewerbsfreigabe. Ziel 4–6 Spiele; bei unzureichender Qualität weniger.</div></div>
+    <div class="card"><h2>Wettbewerbe nach Wochentag</h2><div class="small muted">Fr–So: Premier League, Bundesliga (1. Liga), La Liga, Serie A, Ligue 1 und Primeira Liga (Portugal, 1. Liga). Di–Mi: Champions League. Do: Europa League und Conference League. An anderen Tagen keine automatische Wettbewerbsfreigabe. Ziel 4–6 Spiele; bei unzureichender Qualität weniger.</div></div>
     <div class="card"><h2>Lokale Daten löschen</h2><p class="small muted">Löscht alle lokal gespeicherten Spiele, Quoten und Paper-Wetten. Vorher eine Sicherung exportieren.</p><button class="btn danger" id="clearBtn">Alle lokalen Daten löschen</button></div>
     <div class="card"><h2>Quellen und Einschränkungen</h2><ul class="small muted"><li>OpenLigaDB: kostenloser, community-basierter Spielplan-/Ergebnisabruf; Wettbewerbsabdeckung unvollständig.</li><li>Flashscore/FotMob: ergänzende manuelle Prüfung; diese App extrahiert deren Seiten nicht automatisch.</li><li>Aktuelle deutsche bet365-/Betano-Quoten: manuell eintragen und anhand des deutschen Angebots verifizieren.</li><li>Diese App erstellt keine automatischen Prognosen. Eintrittswahrscheinlichkeiten müssen unabhängig geschätzt werden.</li></ul></div>
   </section>
@@ -125,7 +125,7 @@
   function toast(s){ $('toast').textContent=s; $('toast').classList.remove('hidden'); setTimeout(()=>$('toast').classList.add('hidden'),2800); }
   function eligibleLeagues(){
     const d = new Date().getDay();
-    if ([5,6,0].includes(d)) return ['Premier League','Bundesliga','La Liga','Serie A','Ligue 1'];
+    if ([5,6,0].includes(d)) return ['Premier League','Bundesliga','La Liga','Serie A','Ligue 1','Primeira Liga'];
     if ([2,3].includes(d)) return ['Champions League'];
     if (d===4) return ['Europa League','Conference League'];
     return [];
@@ -244,19 +244,28 @@
       $('refreshMsg').textContent='Für heute ist laut Wettbot-Regeln kein Wettbewerb freigegeben.';
       btn.disabled=false;btn.textContent='↻ Kostenlosen Spielplan abrufen';return;
     }
-    // Discover league shortcuts dynamically, then filter by top-tier competition names.
-    // Explicitly reject 2nd/3rd divisions to prevent the previous Bundesliga mapping error.
-    const aliases = [
-      {label:'Bundesliga', re:/^(1\.?\s*(fußball-)?bundesliga|bundesliga)$/i, reject:/(2\.?|3\.?|zweite|dritte|frauen|women)/i},
-      {label:'Premier League', re:/^(premier league|england premier league)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(2\.?|championship|women)/i},
-      {label:'La Liga', re:/^(la liga|laliga|primera division|primera división|spanien la liga)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(2\.?|segunda|women)/i},
-      {label:'Serie A', re:/^(serie a|italien serie a)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(serie b|serie c|women)/i},
-      {label:'Ligue 1', re:/^(ligue 1|frankreich ligue 1)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(ligue 2|national|women)/i},
-      {label:'Primeira Liga', re:/^(primeira liga|liga portugal(?: betclic)?|portugal primeira liga)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(liga portugal 2|segunda|women)/i},
-      {label:'Champions League', re:/^(champions league|uefa champions league)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(youth|women)/i},
-      {label:'Europa League', re:/^(europa league|uefa europa league)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(youth|women)/i},
-      {label:'Conference League', re:/^(conference league|uefa conference league|europa conference league)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(youth|women)/i}
-    ];
+    // Discover league shortcuts dynamically. Normalize names because OpenLigaDB uses
+    // slightly different labels across seasons. Never infer a league from a partial substring.
+    const normalizeLeague = value => String(value || '')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase().replace(/20\d{2}\s*\/\s*20\d{2}/g, '')
+      .replace(/[._-]+/g, ' ').replace(/[^a-z0-9 ]/g, ' ')
+      .replace(/\s+/g, ' ').trim();
+    const classifyLeague = raw => {
+      const n = normalizeLeague(raw);
+      if (!n || /women|frauen|youth|u ?(17|18|19|20|21|23)|junior/.test(n)) return null;
+      // Bundesliga: accept only the first division or an unnumbered official top-tier label.
+      if (/^(?:1 )?(?:fussball )?bundesliga$/.test(n)) return 'Bundesliga';
+      if (/^premier league$/.test(n)) return 'Premier League';
+      if (/^(?:la liga|laliga|primera division|primera division espana|spanien la liga)$/.test(n)) return 'La Liga';
+      if (/^(?:serie a|italien serie a)$/.test(n)) return 'Serie A';
+      if (/^(?:ligue 1|frankreich ligue 1)$/.test(n)) return 'Ligue 1';
+      if (/^(?:primeira liga|liga portugal|liga portugal betclic|portugal primeira liga)$/.test(n)) return 'Primeira Liga';
+      if (/^(?:uefa )?champions league$/.test(n)) return 'Champions League';
+      if (/^(?:uefa )?europa league$/.test(n)) return 'Europa League';
+      if (/^(?:(?:uefa )?conference league|europa conference league|uefa europa conference league)$/.test(n)) return 'Conference League';
+      return null;
+    };
     try {
       const catalogRes=await fetch(`https://api.openligadb.de/getavailableleagues/${season}`,{headers:{'Accept':'application/json'}});
       if(!catalogRes.ok) throw new Error('Liga-Katalog nicht erreichbar');
@@ -264,9 +273,14 @@
       const selected=[];
       for(const entry of catalog){
         const name=String(entry.leagueName||'').trim();
-        const shortcut=entry.leagueShortcut;
-        const match=aliases.find(a=>allowed.includes(a.label)&&a.re.test(name)&&!a.reject.test(name));
-        if(match && shortcut && !selected.some(x=>x.shortcut===shortcut)) selected.push({shortcut,label:match.label,season:entry.leagueSeason||season});
+        const shortcut=String(entry.leagueShortcut||'').trim();
+        const label=classifyLeague(name);
+        if(label && allowed.includes(label) && shortcut && !selected.some(x=>x.shortcut===shortcut && x.season===String(entry.leagueSeason||season))) {
+          selected.push({shortcut,label,season:String(entry.leagueSeason||season),catalogName:name});
+        }
+      }
+      if(!selected.length){
+        $('refreshMsg').textContent='Die kostenlose Datenquelle hat für heute keine eindeutig erkannten passenden Wettbewerbe geliefert. Es wurden keine Spiele importiert. Bitte nicht als Bestätigung verstehen, dass keine Spiele stattfinden.';
       }
       // OpenLigaDB does not guarantee coverage of every requested league.
       for(const item of selected){
@@ -288,7 +302,7 @@
       errors.push('Liga-Katalog');
     }
     state.lastRefresh=new Date().toISOString();save();
-    $('refreshMsg').textContent=added?`${added} Spiel(e) hinzugefügt. Bitte Vollständigkeit und lokale Anstoßzeit prüfen.`:errors.length?'Abruf nicht erfolgreich oder API im Browser blockiert (CORS/Netzwerk). Spiele manuell eintragen.':'Keine passenden Spiele gefunden. Das bedeutet nicht, dass keine Spiele stattfinden; die Quelle deckt nicht alles ab.';
+    $('refreshMsg').textContent=added?`${added} Spiel(e) hinzugefügt (${[...new Set(selected.map(x=>x.label))].join(', ')}). Bitte Vollständigkeit und lokale Anstoßzeit prüfen.`:errors.length?'Abruf nicht erfolgreich oder API im Browser blockiert (CORS/Netzwerk). Spiele manuell eintragen.':`Keine Spiele importiert. Erkannte Wettbewerbe: ${[...new Set(selected.map(x=>x.label))].join(', ') || 'keine'}. Die kostenlose Quelle kann Wettbewerbe oder heutige Spiele nicht abdecken; bitte Spielplan extern prüfen.`;
     btn.disabled=false;btn.textContent='↻ Kostenlosen Spielplan abrufen';toast(added?`${added} Spiel(e) importiert.`:'Kein Spiel importiert. Manuelle Eingabe bleibt möglich.');
   };
   $('exportBtn').onclick=()=>{
