@@ -1,6 +1,10 @@
 name: Refresh Wettbot data
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'recommendations.json'
   schedule:
     - cron: "17 4 * * *"
 permissions:
