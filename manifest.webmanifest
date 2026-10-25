@@ -1,11 +1,11 @@
 {
-  "name": "Wettbot – Paper Trading v4",
-  "short_name": "Wettbot",
+  "name": "RamoBet – Fußballanalyse & Paper Trading",
+  "short_name": "RamoBet",
   "description": "Kostenloser Fußballanalyse- und Paper-Trading-Wettbot",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#0c1118",
-  "theme_color": "#10151d",
+  "background_color": "#070809",
+  "theme_color": "#070809",
   "icons": [
     {
       "src": "assets/icon-192.png",
