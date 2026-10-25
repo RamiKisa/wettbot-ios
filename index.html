@@ -257,10 +257,16 @@
       // Bundesliga: accept only the first division or an unnumbered official top-tier label.
       if (/^(?:1 )?(?:fussball )?bundesliga$/.test(n)) return 'Bundesliga';
       if (/^premier league$/.test(n)) return 'Premier League';
-      if (/^(?:la liga|laliga|primera division|primera division espana|spanien la liga)$/.test(n)) return 'La Liga';
-      if (/^(?:serie a|italien serie a)$/.test(n)) return 'Serie A';
-      if (/^(?:ligue 1|frankreich ligue 1)$/.test(n)) return 'Ligue 1';
-      if (/^(?:primeira liga|liga portugal|liga portugal betclic|portugal primeira liga)$/.test(n)) return 'Primeira Liga';
+      // Sponsors/branding change across seasons (e.g. LaLiga EA Sports, Serie A Enilive,
+      // Ligue 1 McDonald's). Accept known top-tier prefixes, but reject lower-tier names.
+      if (/^(?:la liga|laliga)(?: |$)/.test(n) && !/(hypermotion|2 |segunda|women|frauen)/.test(n)) return 'La Liga';
+      if (/^(?:primera division|primera division espana|spanien la liga)$/.test(n)) return 'La Liga';
+      if (/^(?:serie a)(?: |$)/.test(n) && !/(women|frauen|femminile|2 |primavera)/.test(n)) return 'Serie A';
+      if (/^(?:italien serie a)$/.test(n)) return 'Serie A';
+      if (/^(?:ligue 1)(?: |$)/.test(n) && !/(women|frauen|feminine|2 |national)/.test(n)) return 'Ligue 1';
+      if (/^(?:frankreich ligue 1)$/.test(n)) return 'Ligue 1';
+      if (/^(?:primeira liga|liga portugal)(?: |$)/.test(n) && !/(2 |segunda|women|frauen)/.test(n)) return 'Primeira Liga';
+      if (/^(?:portugal primeira liga)$/.test(n)) return 'Primeira Liga';
       if (/^(?:uefa )?champions league$/.test(n)) return 'Champions League';
       if (/^(?:uefa )?europa league$/.test(n)) return 'Europa League';
       if (/^(?:(?:uefa )?conference league|europa conference league|uefa europa conference league)$/.test(n)) return 'Conference League';
