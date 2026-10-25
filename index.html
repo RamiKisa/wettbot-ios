@@ -227,27 +227,65 @@
   $('refreshBtn').onclick=async()=>{
     const btn=$('refreshBtn');btn.disabled=true;btn.textContent='Abruf läuft …';$('refreshMsg').textContent='Versuche kostenlose OpenLigaDB-Daten abzurufen. Nicht alle Wettbewerbe sind abgedeckt.';
     let added=0,errors=[];
+    // Remove old OpenLigaDB-imported fixtures before refreshing; manually added games remain.
+    // Keep any match that already has paper bets so historical records stay intact.
+    const paperMatchIds = new Set(state.bets.map(b=>b.matchId));
+    const oldImportedIds = new Set(state.matches.filter(m=>String(m.source||'').startsWith('OpenLigaDB') && !paperMatchIds.has(m.id)).map(m=>m.id));
+    state.matches = state.matches.filter(m=>!oldImportedIds.has(m.id));
+    state.odds = state.odds.filter(o=>!oldImportedIds.has(o.matchId));
     const season=(new Date().getMonth()>=6)?new Date().getFullYear():new Date().getFullYear()-1;
-    const map=[
-      ['bl1','Bundesliga'],['bl2','Bundesliga'],['bl3','Bundesliga'],
-      ['eng1','Premier League'],['esp1','La Liga'],['ita1','Serie A'],['fra1','Ligue 1'],
-      ['ucl','Champions League'],['el','Europa League'],['uecl','Conference League']
-    ];
     const date=today();
-    for(const [shortcut,league] of map){
-      try{
-        const res=await fetch(`https://api.openligadb.de/getmatchdata/${shortcut}/${season}`,{headers:{'Accept':'application/json'}});
-        if(!res.ok)continue;
-        const data=await res.json();
-        for(const x of data){
-          const dt=x.matchDateTime||x.matchDateTimeUTC||'';
-          if(!dt.startsWith(date))continue;
-          const home=x.team1?.teamName,away=x.team2?.teamName;if(!home||!away)continue;
-          const key=(date+'|'+home+'|'+away).toLowerCase();
-          if(state.matches.some(m=>(m.date+'|'+m.home+'|'+m.away).toLowerCase()===key))continue;
-          state.matches.push({id:id(),date,time:dt.length>=16?dt.slice(11,16):'',league,home,away,source:`OpenLigaDB: https://www.openligadb.de/`});added++;
-        }
-      }catch(err){errors.push(shortcut);}
+    const day = new Date().getDay();
+    let allowed = [];
+    if ([5,6,0].includes(day)) allowed = ['Premier League','Bundesliga','La Liga','Serie A','Ligue 1','Primeira Liga'];
+    else if ([2,3].includes(day)) allowed = ['Champions League'];
+    else if (day===4) allowed = ['Europa League','Conference League'];
+    if (!allowed.length) {
+      $('refreshMsg').textContent='Für heute ist laut Wettbot-Regeln kein Wettbewerb freigegeben.';
+      btn.disabled=false;btn.textContent='↻ Kostenlosen Spielplan abrufen';return;
+    }
+    // Discover league shortcuts dynamically, then filter by top-tier competition names.
+    // Explicitly reject 2nd/3rd divisions to prevent the previous Bundesliga mapping error.
+    const aliases = [
+      {label:'Bundesliga', re:/^(1\.?\s*(fußball-)?bundesliga|bundesliga)$/i, reject:/(2\.?|3\.?|zweite|dritte|frauen|women)/i},
+      {label:'Premier League', re:/^(premier league|england premier league)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(2\.?|championship|women)/i},
+      {label:'La Liga', re:/^(la liga|laliga|primera division|primera división|spanien la liga)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(2\.?|segunda|women)/i},
+      {label:'Serie A', re:/^(serie a|italien serie a)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(serie b|serie c|women)/i},
+      {label:'Ligue 1', re:/^(ligue 1|frankreich ligue 1)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(ligue 2|national|women)/i},
+      {label:'Primeira Liga', re:/^(primeira liga|liga portugal(?: betclic)?|portugal primeira liga)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(liga portugal 2|segunda|women)/i},
+      {label:'Champions League', re:/^(champions league|uefa champions league)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(youth|women)/i},
+      {label:'Europa League', re:/^(europa league|uefa europa league)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(youth|women)/i},
+      {label:'Conference League', re:/^(conference league|uefa conference league|europa conference league)(?:\\s+20\\d{2}\\/20\\d{2})?$/i, reject:/(youth|women)/i}
+    ];
+    try {
+      const catalogRes=await fetch(`https://api.openligadb.de/getavailableleagues/${season}`,{headers:{'Accept':'application/json'}});
+      if(!catalogRes.ok) throw new Error('Liga-Katalog nicht erreichbar');
+      const catalog=await catalogRes.json();
+      const selected=[];
+      for(const entry of catalog){
+        const name=String(entry.leagueName||'').trim();
+        const shortcut=entry.leagueShortcut;
+        const match=aliases.find(a=>allowed.includes(a.label)&&a.re.test(name)&&!a.reject.test(name));
+        if(match && shortcut && !selected.some(x=>x.shortcut===shortcut)) selected.push({shortcut,label:match.label,season:entry.leagueSeason||season});
+      }
+      // OpenLigaDB does not guarantee coverage of every requested league.
+      for(const item of selected){
+        try{
+          const res=await fetch(`https://api.openligadb.de/getmatchdata/${encodeURIComponent(item.shortcut)}/${item.season}`,{headers:{'Accept':'application/json'}});
+          if(!res.ok)continue;
+          const data=await res.json();
+          for(const x of data){
+            const dt=x.matchDateTime||x.matchDateTimeUTC||'';
+            if(!dt.startsWith(date))continue;
+            const home=x.team1?.teamName,away=x.team2?.teamName;if(!home||!away)continue;
+            const key=(date+'|'+home+'|'+away).toLowerCase();
+            if(state.matches.some(m=>(m.date+'|'+m.home+'|'+m.away).toLowerCase()===key))continue;
+            state.matches.push({id:id(),date,time:dt.length>=16?dt.slice(11,16):'',league:item.label,home,away,source:`OpenLigaDB (${item.shortcut}): https://www.openligadb.de/`});added++;
+          }
+        }catch(err){errors.push(item.shortcut);}
+      }
+    } catch(err) {
+      errors.push('Liga-Katalog');
     }
     state.lastRefresh=new Date().toISOString();save();
     $('refreshMsg').textContent=added?`${added} Spiel(e) hinzugefügt. Bitte Vollständigkeit und lokale Anstoßzeit prüfen.`:errors.length?'Abruf nicht erfolgreich oder API im Browser blockiert (CORS/Netzwerk). Spiele manuell eintragen.':'Keine passenden Spiele gefunden. Das bedeutet nicht, dass keine Spiele stattfinden; die Quelle deckt nicht alles ab.';
