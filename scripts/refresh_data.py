@@ -36,6 +36,57 @@ def fetch_team_news(team):
   return items
  except Exception as e:
   return []
+def fetch_google_search(query, limit=5):
+ # Google web search is used as a link/snippet discovery source; results are not treated as verified structured statistics.
+ url='https://www.google.com/search?'+urllib.parse.urlencode({'q':query,'hl':'de','num':str(limit)})
+ try:
+  req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131.0.0.0 Safari/537.36','Accept-Language':'de-DE,de;q=0.9,en;q=0.7'})
+  with urllib.request.urlopen(req,timeout=12) as resp: html=resp.read().decode('utf-8','ignore')
+  from html.parser import HTMLParser
+  import re, html as htmlmod
+  class SearchParser(HTMLParser):
+   def __init__(self):
+    super().__init__(); self.results=[]; self.current=None; self.capture_title=False; self.capture_snippet=False; self.depth=0
+   def handle_starttag(self,tag,attrs):
+    a=dict(attrs)
+    if tag=='a' and a.get('href','').startswith('http') and 'google.com' not in a.get('href','') and self.current is None:
+     self.current={'url':a['href'],'title':'','snippet':''}; self.capture_title=False; self.depth=0
+    elif self.current is not None and tag=='h3': self.capture_title=True
+    elif self.current is not None and tag in ('div','span') and a.get('data-sncf')=='1': self.capture_snippet=True
+   def handle_data(self,data):
+    if self.current is not None:
+     val=data.strip()
+     if val and self.capture_title: self.current['title']+=((' ' if self.current['title'] else '')+val)
+     elif val and self.capture_snippet and len(self.current['snippet'])<500: self.current['snippet']+=((' ' if self.current['snippet'] else '')+val)
+   def handle_endtag(self,tag):
+    if tag=='h3': self.capture_title=False
+    if tag=='a' and self.current is not None:
+     if self.current.get('title') and self.current['url'].startswith('https://'):
+      self.results.append(self.current)
+     self.current=None; self.capture_title=False; self.capture_snippet=False
+  parser=SearchParser(); parser.feed(html)
+  out=[]; seen=set()
+  for item in parser.results:
+   if item['url'] in seen: continue
+   seen.add(item['url'])
+   item['title']=htmlmod.unescape(item['title']).strip()
+   item['snippet']=htmlmod.unescape(item['snippet']).strip()
+   out.append(item)
+   if len(out)>=limit: break
+  return out
+ except Exception:
+  return []
+def enrich_google_team_research(fixtures, max_teams=20):
+ teams=[]
+ for f in fixtures:
+  for team in (f.get('home'),f.get('away')):
+   if team and team not in teams: teams.append(team)
+ cache={}
+ for team in teams[:max_teams]:
+  cache[team]=fetch_google_search('"'+team+'" letzte Spiele Ergebnisse Statistik Fußball',4)
+ for f in fixtures:
+  f['googleResearch']={'home':cache.get(f.get('home'),[]),'away':cache.get(f.get('away'),[])}
+  f.setdefault('dataCoverage',{})['googleResearch']='Google-Suchergebnisse (Links/Snippets, vor Verwendung Quelle und Datum prüfen)'
 def enrich_team_news(fixtures, max_teams=24):
  teams=[]
  for f in fixtures:
@@ -126,6 +177,7 @@ def fixture_fallback():
   f["dataCoverage"]["prediction"]="Eigene Poisson-Schätzung aus verfügbaren Ergebnissen; nicht validiert"
   f["h2h"]=[x for x in h if x.get("opponent")==f["away"]][-5:]
  enrich_team_news(all_matches,max_teams=40)
+ enrich_google_team_research(all_matches,max_teams=20)
  return all_matches,errors
 if not KEY:
  fixtures,errors=fixture_fallback()
