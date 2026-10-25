@@ -17,6 +17,36 @@ def api(path,params):
 def pct(v):
  try:return round(float(str(v).replace("%","").strip()),1)
  except:return None
+def fetch_team_news(team):
+ if not team: return []
+ q='"'+team+'" (Verletzung OR verletzt OR Ausfall OR gesperrt OR Aufstellung OR Pressekonferenz)'
+ url='https://news.google.com/rss/search?'+urllib.parse.urlencode({'q':q,'hl':'de','gl':'DE','ceid':'DE:de'})
+ try:
+  req=urllib.request.Request(url,headers={'User-Agent':'Wettbot/3.1 (RSS reader)','Accept':'application/rss+xml, application/xml'})
+  with urllib.request.urlopen(req,timeout=12) as resp: raw=resp.read()
+  import xml.etree.ElementTree as ET
+  root=ET.fromstring(raw); items=[]
+  for item in root.findall('.//item')[:5]:
+   title=(item.findtext('title') or '').strip()
+   link=(item.findtext('link') or '').strip()
+   pub=(item.findtext('pubDate') or '').strip()
+   source=(item.findtext('source') or '').strip()
+   if title and link.startswith('https://'):
+    items.append({'title':title,'url':link,'publishedAt':pub,'source':source or 'Google News RSS'})
+  return items
+ except Exception as e:
+  return []
+def enrich_team_news(fixtures, max_teams=24):
+ teams=[]
+ for f in fixtures:
+  for name in (f.get('home'),f.get('away')):
+   if name and name not in teams: teams.append(name)
+ cache={}
+ for team in teams[:max_teams]:
+  cache[team]=fetch_team_news(team)
+ for f in fixtures:
+  f['teamNews']={'home':cache.get(f.get('home'),[]),'away':cache.get(f.get('away'),[])}
+  f.setdefault('dataCoverage',{})['teamNews']='Google News RSS (Suchtreffer, keine bestätigten Ausfälle)' if (f['teamNews']['home'] or f['teamNews']['away']) else 'Keine RSS-Treffer / Abruf nicht verfügbar'
 def fixture_fallback():
  all_matches=[]; errors=[]
  for league,(file,zone) in leagues.items():
