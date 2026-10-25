@@ -7,7 +7,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="RamoBet">
-  <meta name="description" content="Kostenloser Fußballanalyse- und Paper-Trading-Wettbot">
+  <meta name="description" content="Kostenlose Fußballanalyse mit Spielplan, Formdaten und Prognosen">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
   <title>RamoBet · Fußballanalyse</title>
@@ -148,12 +148,27 @@
     #settings .card:nth-child(2),#settings .card:nth-child(3){display:none}
     @media(max-width:480px){#analysisList .match .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
+
+    /* RamoBet: analysis-only product surface */
+    .home-intro{padding:10px 2px 16px}
+    .home-kicker{font-size:10px;font-weight:900;letter-spacing:.18em;color:#ff656b}
+    .home-intro h2{font-size:26px;letter-spacing:-.04em;margin:5px 0}
+    .home-intro p{max-width:36rem;margin:0}
+    #home .grid{display:none!important}
+    #home .card:has(#recentPicks){display:none!important}
+    #paper{display:none!important}
+    #oddsFormCard{display:none!important}
+    #matches .card:first-child .small{margin-bottom:12px}
+    #settings .card:nth-child(2){display:none!important}
+    #settings .card:first-child .actions label[for="importFile"]{display:inline-flex;align-items:center}
+    #settings #exportCsvBtn{display:none!important}
+
   </style>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
-    <div class="brand"><div class="logo">R</div><div><div class="eyebrow">Fußballanalyse · Paper-Trading</div><h1>RamoBet</h1></div></div>
+    <div class="brand"><div class="logo">R</div><div><div class="eyebrow">Fußballanalyse · kostenlos</div><h1>RamoBet</h1></div></div>
     <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menü öffnen" aria-expanded="false">⋯</button>
   </header>
   <div class="menu-backdrop" id="menuBackdrop"></div>
@@ -162,26 +177,19 @@
     <button class="menu-item active" data-view="home"><span>⌂</span><span><strong>Start</strong><small>Spieltag & Überblick</small></span></button>
     <button class="menu-item" data-view="analysis"><span>◉</span><span><strong>Analyse</strong><small>Prognosen und Form</small></span></button>
     <button class="menu-item" data-view="matches"><span>⚽</span><span><strong>Spiele</strong><small>Spielplan und eigene Spiele</small></span></button>
-    <button class="menu-item" data-view="paper"><span>▤</span><span><strong>Verlauf</strong><small>Virtuelle Ergebnisse</small></span></button>
     <button class="menu-item" data-view="settings"><span>⚙</span><span><strong>Einstellungen</strong><small>Sicherung und App-Infos</small></span></button>
   </nav>
 
   <section class="view active" id="home">
-    <div class="grid">
-      <div class="stat"><div class="muted small">Offene Paper-Wetten</div><div class="n" id="statOpen">0</div></div>
-      <div class="stat"><div class="muted small">Abgeschlossene Wetten</div><div class="n" id="statDone">0</div></div>
-      <div class="stat"><div class="muted small">Virtueller Gewinn/Verlust</div><div class="n" id="statPL">0,00 €</div></div>
-      <div class="stat"><div class="muted small">ROI</div><div class="n" id="statROI">—</div></div>
-    </div>
+    <div class="home-intro"><span class="home-kicker">DEIN SPIELTAG</span><h2>Fußball im Überblick</h2><p class="muted small">Spielpläne, Form und datenbasierte Einschätzungen – ohne Quoten oder Wettempfehlungen.</p></div>
     <div class="card" style="margin-top:12px">
       <div class="row between"><h2>Spieltags-Check</h2><span class="pill" id="todayLabel"></span></div>
       <p class="muted small">Spiele und Daten für den aktuellen Spieltag laden oder ein Spiel manuell erfassen.</p>
-      <div class="resultline"><span>Erlaubte Wettbewerbe heute</span><strong id="todayCompetitions">—</strong></div>
       <div class="resultline"><span>Spiele lokal gespeichert</span><strong id="matchCount">0</strong></div>
       <div class="actions" style="margin-top:12px"><button class="btn primary" id="refreshBtn">↻ Kostenlosen Spielplan abrufen</button><button class="btn" id="addMatchJump">+ Spiel manuell hinzufügen</button></div>
       <div id="refreshMsg" class="small muted" style="margin-top:9px">Der Abruf erfolgt erst, wenn du auf den Button tippst.</div>
     </div>
-    <div class="card"><h2>Letzte Empfehlungen</h2><div id="recentPicks" class="empty">Noch keine Paper-Wetten erfasst.</div></div>
+    <div class="card"><div class="row between"><h2>Analyse öffnen</h2><button class="btn primary" id="openAnalysisBtn" type="button">Zu den Analysen</button></div><p class="small muted">Wähle ein Spiel, um Prognose, letzte Ergebnisse, direkte Duelle und verfügbare Team-News anzusehen.</p></div>
     </section>
 
   <section class="view" id="analysis">
@@ -248,17 +256,16 @@
   </section>
 
   <section class="view" id="paper">
-    <div class="card"><div class="row between"><h2>Verlauf</h2><span class="pill">Virtuelle Einsätze</span></div><p class="muted small">Erfasse Ergebnisse deiner gespeicherten virtuellen Tipps nach Spielende. Es werden keine echten Wetten platziert.</p><div id="paperList"></div></div>
-  </section>
+  <div id="paperList" hidden></div>
 
   <section class="view" id="settings">
-    <div class="card"><h2>Datenspeicherung</h2><p class="small muted">Alle erfassten Spiele, Quoten und Paper-Wetten werden in diesem Browser auf diesem iPhone gespeichert (localStorage). Beim Löschen der Websitedaten können sie verloren gehen. Exportiere regelmäßig eine Sicherung.</p>
-      <div class="actions"><button class="btn primary" id="exportBtn">Daten als JSON exportieren</button><button class="btn" id="exportCsvBtn">Paper-Trading als CSV exportieren</button><label class="btn" for="importFile">Sicherung importieren</label><input class="hidden" type="file" id="importFile" accept="application/json"></div>
+    <div class="card"><h2>Datenspeicherung</h2><p class="small muted">Deine erfassten Spiele werden in diesem Browser auf diesem iPhone gespeichert (localStorage). Beim Löschen der Websitedaten können sie verloren gehen. Exportiere regelmäßig eine Sicherung.</p>
+      <div class="actions"><button class="btn primary" id="exportBtn">Daten als JSON exportieren</button><label class="btn" for="importFile">Sicherung importieren</label><input class="hidden" type="file" id="importFile" accept="application/json"></div>
     </div>
     
     
-    <div class="card"><h2>Lokale Daten löschen</h2><p class="small muted">Löscht alle lokal gespeicherten Spiele, Quoten und Paper-Wetten. Vorher eine Sicherung exportieren.</p><button class="btn danger" id="clearBtn">Alle lokalen Daten löschen</button></div>
-    <div class="card"><h2>Über RamoBet</h2><p class="small muted">Kostenlose Fußball-Spielplan- und Analyseübersicht. Prognosen hängen von den verfügbaren Daten ab. Fehlende Statistiken, Ausfälle und Aufstellungen werden als nicht verfügbar gekennzeichnet.</p></div>${m.source?`<div class="small source muted" style="margin-top:8px">${esc(m.source)}</div>`:''}${odds.map(o=>oddsCard(o)).join('')}</div>`;
+    <div class="card"><h2>Lokale Daten löschen</h2><p class="small muted">Löscht alle lokal gespeicherten Spiele und Einstellungen. Vorher eine Sicherung exportieren.</p><button class="btn danger" id="clearBtn">Lokale Daten löschen</button></div>
+    <div class="card"><h2>Über RamoBet</h2><p class="small muted">RamoBet ist eine kostenlose Fußballanalyse-App. Sie zeigt Spielpläne, Formdaten und verfügbare Prognosen. Fehlende Statistiken, Ausfälle oder Aufstellungen werden transparent gekennzeichnet.</p></div>${m.source?`<div class="small source muted" style="margin-top:8px">${esc(m.source)}</div>`:''}${odds.map(o=>oddsCard(o)).join('')}</div>`;
     }).join('') : '<div class="empty">Noch keine Spiele. Nutze den kostenlosen Abruf oder füge ein Spiel manuell hinzu.</div>';
     $('oMatch').innerHTML=state.matches.map(m=>`<option value="${m.id}">${esc(m.home)} – ${esc(m.away)} · ${esc(m.league)} · ${fmtDate(m.date)}</option>`).join('');
     if(!state.matches.length) $('oMatch').innerHTML='<option value="">Zuerst ein Spiel hinzufügen</option>';
@@ -290,6 +297,7 @@
   function openMenu(){const menu=$('appMenu'),backdrop=$('menuBackdrop'),toggle=$('menuToggle');menu.classList.add('open');backdrop.classList.add('open');toggle.setAttribute('aria-expanded','true');}
   function setView(view){document.querySelectorAll('.menu-item').forEach(b=>b.classList.toggle('active',b.dataset.view===view));document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===view));closeMenu();window.scrollTo({top:0,behavior:'smooth'});}
   $('menuToggle').addEventListener('click',()=> $('appMenu').classList.contains('open')?closeMenu():openMenu());
+  $('openAnalysisBtn').addEventListener('click',()=>setView('analysis'));
   $('menuBackdrop').addEventListener('click',closeMenu);
   document.querySelectorAll('.menu-item').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
