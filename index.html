@@ -224,17 +224,25 @@
     try{
       const end=new Date();const start=new Date(end.getTime()-60*86400000);
       const ymd=d=>{const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');return ''+y+m+day;};
-      const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+code+'/scoreboard?dates='+ymd(start)+'-'+ymd(end);
-      const response=await fetch(url,{headers:{'Accept':'application/json'}});
-      if(!response.ok)throw Error('HTTP '+response.status);
-      const json=await response.json(), games=[];
-      for(const ev of (json.events||[])){
-        const comp=(ev.competitions||[])[0], cs=comp?.competitors||[];
-        const h=cs.find(c=>c.homeAway==='home'),a=cs.find(c=>c.homeAway==='away');
-        const status=ev.status?.type?.completed ?? comp?.status?.type?.completed;
-        const hg=Number(h?.score),ag=Number(a?.score);
-        if(h?.team?.displayName&&a?.team?.displayName&&Number.isFinite(hg)&&Number.isFinite(ag)&&status===true)
-          games.push({home:h.team.displayName,away:a.team.displayName,hg,ag,date:ev.date});
+      const games=[],seen=new Set();
+      // ESPN kann bei langen Datumsbereichen HTTP 400 liefern; daher in 7-Tage-Fenstern abrufen.
+      for(let cursor=new Date(start);cursor<=end;){
+        const chunkEnd=new Date(Math.min(end.getTime(),cursor.getTime()+6*86400000));
+        const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+code+'/scoreboard?dates='+ymd(cursor)+'-'+ymd(chunkEnd);
+        const response=await fetch(url,{headers:{'Accept':'application/json'}});
+        if(!response.ok)throw Error('HTTP '+response.status+' beim Abruf eines Wochenfensters');
+        const json=await response.json();
+        for(const ev of (json.events||[])){
+          const comp=(ev.competitions||[])[0], cs=comp?.competitors||[];
+          const h=cs.find(c=>c.homeAway==='home'),a=cs.find(c=>c.homeAway==='away');
+          const status=ev.status?.type?.completed ?? comp?.status?.type?.completed;
+          const hg=Number(h?.score),ag=Number(a?.score);
+          const key=String(ev.id||ev.date)+'|'+String(h?.team?.displayName||'')+'|'+String(a?.team?.displayName||'');
+          if(!seen.has(key)&&h?.team?.displayName&&a?.team?.displayName&&Number.isFinite(hg)&&Number.isFinite(ag)&&status===true){
+            seen.add(key);games.push({home:h.team.displayName,away:a.team.displayName,hg,ag,date:ev.date});
+          }
+        }
+        cursor=new Date(chunkEnd.getTime()+86400000);
       }
       const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
       const homeKey=norm(match.home),awayKey=norm(match.away);
@@ -381,6 +389,14 @@
         const data=await res.json();for(const x of data){const dt=x.matchDateTime||x.matchDateTimeUTC||'';const home=x.team1?.teamName,away=x.team2?.teamName;if(addFixture(item.label,home,away,dt,`OpenLigaDB (${item.shortcut}): ${url}`))added++;}
       }catch(err){errors.push(`OpenLigaDB ${item.label}`)}}
     }catch(err){errors.push('OpenLigaDB Katalog')}
+    // Keep only the 10 soonest upcoming imported fixtures across the selected top leagues.
+    // Preserve any fixture already linked to odds or paper bets.
+    const linked=new Set([...state.odds.map(o=>o.matchId),...state.bets.map(b=>b.matchId)]);
+    const imported=state.matches.filter(m=>targetDates.has(m.date)&&/^(?:ESPN|OpenLigaDB)/.test(String(m.source||''))&&!linked.has(m.id));
+    imported.sort((a,b)=>(a.date+' '+(a.time||'23:59')).localeCompare(b.date+' '+(b.time||'23:59')));
+    const keepIds=new Set(imported.slice(0,10).map(m=>m.id));
+    state.matches=state.matches.filter(m=>!imported.some(x=>x.id===m.id)||keepIds.has(m.id)||linked.has(m.id));
+    added=Math.min(added,10);
     state.lastRefresh=new Date().toISOString();save();
     const leagues=[...new Set(state.matches.filter(m=>targetDates.has(m.date)&&/^(?:ESPN|OpenLigaDB)/.test(String(m.source||''))).map(m=>m.league))];
     $('refreshMsg').textContent=added?`${added} zukünftige(s) Spiel(e) für die nächsten 7 Tage hinzugefügt. Gefundene Ligen: ${leagues.join(', ')||'—'}. Quellen können unvollständig sein; Spielzeiten bitte prüfen.`:errors.length?`Keine neuen zukünftigen Spiele importiert. Einige Abrufe schlugen fehl (${errors.slice(0,4).join(', ')}). Bereits gespeicherte Spiele mit Quoten/Paper-Wetten blieben erhalten.`:'Keine neuen zukünftigen Spiele für die nächsten 7 Tage gefunden. Kostenlose Quellen können Lücken haben.';
