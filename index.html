@@ -6,11 +6,11 @@
   <meta name="theme-color" content="#10151d">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Wettbot">
+  <meta name="apple-mobile-web-app-title" content="RamoBet">
   <meta name="description" content="Kostenloser Fußballanalyse- und Paper-Trading-Wettbot">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
-  <title>Wettbot · Fußballanalyse</title>
+  <title>RamoBet · Fußballanalyse</title>
   <style>
     :root{color-scheme:dark;--bg:#0c1118;--panel:#141c27;--panel2:#1a2532;--border:#2a3747;--text:#f3f6fa;--muted:#9baabd;--accent:#9fe870;--blue:#8bbcff;--red:#ff9b9b;--amber:#ffd17a}
     *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
@@ -102,21 +102,49 @@
       .full{grid-column:auto}
     }
 
+
+    /* RamoBet app navigation and compact overview */
+    :root{--accent:#ed1c24}
+    .top{position:relative;align-items:center;padding:14px 2px 20px;margin-bottom:18px}
+    .menu-toggle{width:48px;height:48px;flex:0 0 48px;border-radius:50%;border:1px solid #3a3a40;background:#1a1b1f;color:#fff;font-size:32px;line-height:1;font-weight:800;display:grid;place-items:center;letter-spacing:2px;padding:0 0 9px;box-shadow:0 5px 18px #0005}
+    .menu-toggle:active{transform:scale(.96)}
+    .menu-backdrop{position:fixed;inset:0;background:#000a;backdrop-filter:blur(3px);z-index:19;opacity:0;pointer-events:none;transition:opacity .18s}
+    .menu-backdrop.open{opacity:1;pointer-events:auto}
+    .app-menu{position:fixed;z-index:20;top:calc(env(safe-area-inset-top) + 78px);right:14px;width:min(340px,calc(100vw - 28px));padding:12px;background:#151518;border:1px solid #39393f;border-radius:20px;box-shadow:0 24px 70px #000b;transform:translateY(-8px) scale(.98);transform-origin:top right;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s}
+    .app-menu.open{opacity:1;pointer-events:auto;transform:translateY(0) scale(1)}
+    .menu-heading{display:flex;justify-content:space-between;align-items:center;padding:9px 10px 13px;color:#fff;font-size:13px;font-weight:900;letter-spacing:.16em}
+    .menu-heading span{color:#ff656b;font-size:10px}
+    .menu-item{display:flex;align-items:center;gap:13px;width:100%;padding:13px 11px;margin:3px 0;text-align:left;background:transparent;color:#e8e8eb;border:1px solid transparent;border-radius:13px}
+    .menu-item>span:first-child{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:#242428;color:#ff5a61;font-size:19px;flex-shrink:0}
+    .menu-item>span:last-child{display:flex;flex-direction:column;gap:2px}
+    .menu-item strong{font-size:14px}
+    .menu-item small{font-size:11px;color:#9c9ca5}
+    .menu-item.active{background:#2a1114;border-color:#64252a}
+    .menu-item.active>span:first-child{background:#ed1c24;color:#fff}
+    .tabs{display:none!important}
+    #home .card{margin-bottom:11px}
+    #home .stat .n{font-size:24px}
+    #home #recentPicks{padding:8px 2px}
+    #home .danger-note{display:none}
+    #analysis #autoTop10Card{margin-top:12px}
+    @media(max-width:480px){.top{padding-top:12px;padding-bottom:16px}.brand{gap:10px}.logo{width:43px;height:43px}.app-menu{top:calc(env(safe-area-inset-top) + 72px)}}
+
   </style>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
-    <div class="brand"><div class="logo">W</div><div><div class="eyebrow">Kostenlos · lokal auf diesem Gerät</div><h1>Wettbot</h1></div></div>
-    <span class="pill">MATCH ANALYSEN · V7</span>
+    <div class="brand"><div class="logo">R</div><div><div class="eyebrow">Fußballanalyse · Paper-Trading</div><h1>RamoBet</h1></div></div>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menü öffnen" aria-expanded="false">⋯</button>
   </header>
-  <div class="notice"><strong>Regeln aktiv:</strong> Mindestquote 1,50 · modellierter EV ≥ +5 % · virtueller Einsatz 10 € · keine echten Wetten. Aktuelle Quoten und Eintrittswahrscheinlichkeiten werden nicht erfunden.</div>
-  <nav class="tabs" aria-label="Navigation">
-    <button class="tab active" data-view="home">Übersicht</button>
-    <button class="tab" data-view="analysis">Spielanalyse</button>
-    <button class="tab" data-view="matches">Spiele & Quoten</button>
-    <button class="tab" data-view="paper">Paper-Trading</button>
-    <button class="tab" data-view="settings">Daten & Export</button>
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+  <nav class="app-menu" id="appMenu" aria-label="Hauptmenü">
+    <div class="menu-heading">RAMOBET <span>MENÜ</span></div>
+    <button class="menu-item active" data-view="home"><span>⌂</span><span><strong>Übersicht</strong><small>Kontostand & Spieltag</small></span></button>
+    <button class="menu-item" data-view="analysis"><span>◉</span><span><strong>Spielanalyse</strong><small>Prognosen & Teamdaten</small></span></button>
+    <button class="menu-item" data-view="matches"><span>⚽</span><span><strong>Spiele & Quoten</strong><small>Spiele verwalten und Quoten prüfen</small></span></button>
+    <button class="menu-item" data-view="paper"><span>▤</span><span><strong>Paper-Trading</strong><small>Virtuelle Wetten & Verlauf</small></span></button>
+    <button class="menu-item" data-view="settings"><span>⚙</span><span><strong>Daten & Export</strong><small>Import, Export und Einstellungen</small></span></button>
   </nav>
 
   <section class="view active" id="home">
@@ -128,22 +156,14 @@
     </div>
     <div class="card" style="margin-top:12px">
       <div class="row between"><h2>Spieltags-Check</h2><span class="pill" id="todayLabel"></span></div>
-      <p class="muted small">Die Auswahlregeln richten sich nach Wochentag. Der kostenlose Spielplanabruf ist ein Hilfsmittel und kann unvollständig sein. Die App füllt keine Auswahl künstlich auf.</p>
+      <p class="muted small">Spiele und Daten für den aktuellen Spieltag laden oder ein Spiel manuell erfassen.</p>
       <div class="resultline"><span>Erlaubte Wettbewerbe heute</span><strong id="todayCompetitions">—</strong></div>
       <div class="resultline"><span>Spiele lokal gespeichert</span><strong id="matchCount">0</strong></div>
       <div class="actions" style="margin-top:12px"><button class="btn primary" id="refreshBtn">↻ Kostenlosen Spielplan abrufen</button><button class="btn" id="addMatchJump">+ Spiel manuell hinzufügen</button></div>
       <div id="refreshMsg" class="small muted" style="margin-top:9px">Der Abruf erfolgt erst, wenn du auf den Button tippst.</div>
     </div>
-    <div class="card" id="autoTop10Card">
-      <div class="row between"><h2>Automatische Spielanalysen</h2><button class="btn" id="reloadAnalysisBtn" type="button">Aktualisieren</button></div>
-      <p class="small muted">Alle kommenden Spiele der unterstützten Wettbewerbe mit Modellprognose, Formvergleich und direkten Duellen. Keine Quoten. Prognosen sind Schätzungen, keine Garantien.</p>
-      <div id="top10Status" class="small muted">Automatische Daten werden geladen …</div>
-      <div id="analysisList"></div>
-      <div class="small muted" id="analysisTimestamp"></div>
-    </div>
     <div class="card"><h2>Letzte Empfehlungen</h2><div id="recentPicks" class="empty">Noch keine Paper-Wetten erfasst.</div></div>
-    <div class="danger-note">Value-Berechnung: EV = (geschätzte Eintrittswahrscheinlichkeit × Dezimalquote) − 1. Ein positiver EV ist nur so zuverlässig wie das unabhängige Wahrscheinlichkeitsmodell. Diese Version hat noch kein trainiertes Prognosemodell.</div>
-  </section>
+    </section>
 
   <section class="view" id="analysis">
     <div class="card">
@@ -155,6 +175,13 @@
       <div id="selectorStatus" class="small muted" style="margin-top:10px">Analysedaten werden geladen …</div>
     </div>
     <div id="selectedAnalysis" class="card"><div class="empty">Wähle eine Liga und ein Spiel aus, um die Analyse zu öffnen.</div></div>
+    <div class="card" id="autoTop10Card">
+      <div class="row between"><h2>Automatische Spielanalysen</h2><button class="btn" id="reloadAnalysisBtn" type="button">Aktualisieren</button></div>
+      <p class="small muted">Alle kommenden Spiele der unterstützten Wettbewerbe mit Modellprognose, Formvergleich und direkten Duellen. Keine Quoten. Prognosen sind Schätzungen, keine Garantien.</p>
+      <div id="top10Status" class="small muted">Automatische Daten werden geladen …</div>
+      <div id="analysisList"></div>
+      <div class="small muted" id="analysisTimestamp"></div>
+    </div>
   </section>
 
   <section class="view" id="matches">
@@ -289,8 +316,13 @@
       el.innerHTML=`<div class="muted small">EV-Vorschau</div><div class="n">${(ev*100).toFixed(1).replace('.',',')} %</div><div class="small ${pass?'':'muted'}">${pass?'Quote und EV erfüllen die Schwellenwerte. Verifizierung bleibt erforderlich.':'Quote ≥ 1,50 und EV ≥ +5 % müssen beide erfüllt sein.'}</div>`;
     } else el.innerHTML='<div class="muted small">EV-Vorschau</div><div class="n">—</div><div class="small muted">Quote und Wahrscheinlichkeit eingeben.</div>';
   }
-  function setView(view){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.view===view));document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===view));window.scrollTo({top:0,behavior:'smooth'});}
-  document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
+  function closeMenu(){const menu=$('appMenu'),backdrop=$('menuBackdrop'),toggle=$('menuToggle');menu.classList.remove('open');backdrop.classList.remove('open');toggle.setAttribute('aria-expanded','false');}
+  function openMenu(){const menu=$('appMenu'),backdrop=$('menuBackdrop'),toggle=$('menuToggle');menu.classList.add('open');backdrop.classList.add('open');toggle.setAttribute('aria-expanded','true');}
+  function setView(view){document.querySelectorAll('.menu-item').forEach(b=>b.classList.toggle('active',b.dataset.view===view));document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===view));closeMenu();window.scrollTo({top:0,behavior:'smooth'});}
+  $('menuToggle').addEventListener('click',()=> $('appMenu').classList.contains('open')?closeMenu():openMenu());
+  $('menuBackdrop').addEventListener('click',closeMenu);
+  document.querySelectorAll('.menu-item').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
   $('mDate').value=today(); $('oTime').value=localDateTime();
   $('addMatchBtn').onclick=()=>{ $('matchFormCard').scrollIntoView({behavior:'smooth'}); };
   $('addMatchJump').onclick=()=>{setView('matches');$('matchFormCard').scrollIntoView({behavior:'smooth'});};
