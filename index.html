@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#10151d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Wettbot">
+  <meta name="description" content="Kostenloser Fußballanalyse- und Paper-Trading-Wettbot">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <title>Wettbot · Paper Trading</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0c1118;--panel:#141c27;--panel2:#1a2532;--border:#2a3747;--text:#f3f6fa;--muted:#9baabd;--accent:#9fe870;--blue:#8bbcff;--red:#ff9b9b;--amber:#ffd17a}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+    .wrap{max-width:920px;margin:auto;padding:16px 14px 40px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:4px 0 18px}.brand{display:flex;align-items:center;gap:10px}.logo{width:42px;height:42px;border-radius:14px;background:var(--accent);color:#10200c;display:grid;place-items:center;font-size:22px;font-weight:900}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}h1{font-size:23px;margin:2px 0 0}h2{font-size:17px;margin:0 0 12px}h3{font-size:15px;margin:0 0 8px}.pill{font-size:11px;border:1px solid var(--border);border-radius:999px;padding:6px 9px;color:var(--muted);white-space:nowrap}.notice{background:#17221b;border:1px solid #34543a;color:#d9f6d2;border-radius:14px;padding:12px 13px;margin-bottom:15px;font-size:13px;line-height:1.45}.tabs{display:flex;gap:7px;overflow:auto;margin:0 0 15px;padding-bottom:2px}.tab{border:1px solid var(--border);background:var(--panel);color:var(--muted);border-radius:11px;padding:10px 13px;font-weight:650;white-space:nowrap}.tab.active{background:var(--accent);color:#10200c;border-color:var(--accent)}.view{display:none}.view.active{display:block}.card{background:var(--panel);border:1px solid var(--border);border-radius:17px;padding:15px;margin-bottom:12px}.row{display:flex;gap:10px;align-items:center}.between{justify-content:space-between}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.stat{background:var(--panel2);border-radius:12px;padding:12px}.stat .n{font-size:23px;font-weight:750;margin-top:4px}.muted{color:var(--muted)}.small{font-size:12px;line-height:1.45}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:11px;min-width:0}.field label{font-size:12px;color:var(--muted)}input,select,textarea{width:100%;background:#0d141d;color:var(--text);border:1px solid var(--border);border-radius:10px;padding:11px 10px;font:inherit;min-width:0}input:focus,select:focus,textarea:focus{outline:2px solid #5c8147;border-color:transparent}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 10px}.full{grid-column:1/-1}button{font:inherit;cursor:pointer}.btn{border:1px solid var(--border);background:var(--panel2);color:var(--text);border-radius:11px;padding:11px 13px;font-weight:650}.btn.primary{background:var(--accent);color:#10200c;border-color:var(--accent)}.btn.secondary{background:transparent}.btn.danger{color:var(--red)}.actions{display:flex;gap:8px;flex-wrap:wrap}.match{border:1px solid var(--border);background:#101720;border-radius:13px;padding:12px;margin:9px 0}.matchhead{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.teams{font-weight:720;font-size:15px}.chip{font-size:11px;padding:4px 7px;border-radius:7px;background:#253143;color:#c4d7ee;display:inline-block;margin-top:5px}.status{font-size:11px;border-radius:7px;padding:5px 7px;background:#252f3c;color:var(--muted)}.status.good{background:#203b27;color:var(--accent)}.status.bad{background:#402527;color:var(--red)}.status.warn{background:#3b3221;color:var(--amber)}.value{font-weight:800;font-size:18px}.hr{height:1px;background:var(--border);margin:13px 0}.empty{padding:20px 10px;text-align:center;color:var(--muted);font-size:13px}.footer{color:var(--muted);font-size:11px;text-align:center;padding:18px 8px}.hidden{display:none!important}.resultline{display:flex;justify-content:space-between;gap:8px;font-size:13px;margin:6px 0}.toast{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom));left:14px;right:14px;max-width:500px;margin:auto;background:#e6f5df;color:#14210f;border-radius:12px;padding:12px 14px;box-shadow:0 6px 25px #0008;z-index:9;font-weight:650}.source{overflow-wrap:anywhere}.danger-note{border:1px solid #6d4f24;background:#2b2418;color:#ffe2ac;padding:10px;border-radius:11px;font-size:12px;line-height:1.4}
+    @media(min-width:650px){.wrap{padding:26px 22px}.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.formgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><div class="logo">W</div><div><div class="eyebrow">Kostenlos · lokal auf diesem Gerät</div><h1>Wettbot</h1></div></div>
+    <span class="pill">PAPER TRADING</span>
+  </header>
+  <div class="notice"><strong>Regeln aktiv:</strong> Mindestquote 1,50 · modellierter EV ≥ +5 % · virtueller Einsatz 10 € · keine echten Wetten. Aktuelle Quoten und Eintrittswahrscheinlichkeiten werden nicht erfunden.</div>
+  <nav class="tabs" aria-label="Navigation">
+    <button class="tab active" data-view="home">Übersicht</button>
+    <button class="tab" data-view="matches">Spiele & Quoten</button>
+    <button class="tab" data-view="paper">Paper-Trading</button>
+    <button class="tab" data-view="settings">Daten & Export</button>
+  </nav>
+
+  <section class="view active" id="home">
+    <div class="grid">
+      <div class="stat"><div class="muted small">Offene Paper-Wetten</div><div class="n" id="statOpen">0</div></div>
+      <div class="stat"><div class="muted small">Abgeschlossene Wetten</div><div class="n" id="statDone">0</div></div>
+      <div class="stat"><div class="muted small">Virtueller Gewinn/Verlust</div><div class="n" id="statPL">0,00 €</div></div>
+      <div class="stat"><div class="muted small">ROI</div><div class="n" id="statROI">—</div></div>
+    </div>
+    <div class="card" style="margin-top:12px">
+      <div class="row between"><h2>Spieltags-Check</h2><span class="pill" id="todayLabel"></span></div>
+      <p class="muted small">Die Auswahlregeln richten sich nach Wochentag. Der kostenlose Spielplanabruf ist ein Hilfsmittel und kann unvollständig sein. Die App füllt keine Auswahl künstlich auf.</p>
+      <div class="resultline"><span>Erlaubte Wettbewerbe heute</span><strong id="todayCompetitions">—</strong></div>
+      <div class="resultline"><span>Spiele lokal gespeichert</span><strong id="matchCount">0</strong></div>
+      <div class="actions" style="margin-top:12px"><button class="btn primary" id="refreshBtn">↻ Kostenlosen Spielplan abrufen</button><button class="btn" id="addMatchJump">+ Spiel manuell hinzufügen</button></div>
+      <div id="refreshMsg" class="small muted" style="margin-top:9px">Der Abruf erfolgt erst, wenn du auf den Button tippst.</div>
+    </div>
+    <div class="card"><h2>Letzte Empfehlungen</h2><div id="recentPicks" class="empty">Noch keine Paper-Wetten erfasst.</div></div>
+    <div class="danger-note">Value-Berechnung: EV = (geschätzte Eintrittswahrscheinlichkeit × Dezimalquote) − 1. Ein positiver EV ist nur so zuverlässig wie das unabhängige Wahrscheinlichkeitsmodell. Diese Version hat noch kein trainiertes Prognosemodell.</div>
+  </section>
+
+  <section class="view" id="matches">
+    <div class="card">
+      <div class="row between"><h2>Spiele & Quoten</h2><button class="btn secondary" id="addMatchBtn">+ Spiel</button></div>
+      <div class="small muted">Spiele aus dem kostenlosen Abruf werden nach Möglichkeit gespeichert. Quoten, Buchmacher, Markt und Modellwahrscheinlichkeit müssen für eine Empfehlung vollständig eingetragen und geprüft sein.</div>
+      <div id="matchesList"></div>
+    </div>
+    <div class="card" id="matchFormCard">
+      <h2 id="matchFormTitle">Spiel manuell hinzufügen</h2>
+      <form id="matchForm">
+        <input type="hidden" id="editMatchId">
+        <div class="formgrid">
+          <div class="field"><label for="mDate">Datum</label><input type="date" id="mDate" required></div>
+          <div class="field"><label for="mTime">Anstoß (lokal)</label><input type="time" id="mTime"></div>
+          <div class="field"><label for="mLeague">Wettbewerb</label><select id="mLeague"><option>Premier League</option><option>Bundesliga</option><option>La Liga</option><option>Serie A</option><option>Ligue 1</option><option>Champions League</option><option>Europa League</option><option>Conference League</option><option>Sonstiger</option></select></div>
+          <div class="field"><label for="mHome">Heimteam</label><input id="mHome" required placeholder="z. B. Hoffenheim"></div>
+          <div class="field"><label for="mAway">Auswärtsteam</label><input id="mAway" required placeholder="z. B. Leverkusen"></div>
+          <div class="field"><label for="mSource">Quelle / Match-URL</label><input id="mSource" placeholder="https://…"></div>
+        </div>
+        <div class="actions"><button class="btn primary" type="submit">Spiel speichern</button><button class="btn secondary" type="button" id="cancelEdit">Abbrechen</button></div>
+      </form>
+    </div>
+    <div class="card" id="oddsFormCard">
+      <h2>Quote und Value prüfen</h2>
+      <form id="oddsForm">
+        <div class="formgrid">
+          <div class="field full"><label for="oMatch">Spiel</label><select id="oMatch" required></select></div>
+          <div class="field"><label for="oBook">Buchmacher</label><select id="oBook"><option>bet365 Deutschland</option><option>Betano Deutschland</option><option>Andere / nicht verifiziert</option></select></div>
+          <div class="field"><label for="oMarket">Markt</label><select id="oMarket"><option>1X2</option><option>Doppelte Chance</option><option>Über/Unter Tore</option><option>Beide Teams treffen</option><option>Handicap</option><option>Andere</option></select></div>
+          <div class="field"><label for="oSelection">Auswahl</label><input id="oSelection" required placeholder="z. B. Leverkusen gewinnt"></div>
+          <div class="field"><label for="oLine">Linie</label><input id="oLine" placeholder="z. B. 2,5 Tore / FT"></div>
+          <div class="field"><label for="oOdds">Dezimalquote</label><input id="oOdds" type="number" min="1.01" step="0.01" required placeholder="1.85"></div>
+          <div class="field"><label for="oProb">Eigene Modell-Wahrscheinlichkeit (%)</label><input id="oProb" type="number" min="0" max="100" step="0.1" required placeholder="z. B. 58"></div>
+          <div class="field"><label for="oTime">Abrufzeit</label><input id="oTime" type="datetime-local" required></div>
+          <div class="field full"><label for="oUrl">Quellen-URL (Beleg)</label><input id="oUrl" type="url" placeholder="https://…"></div>
+          <div class="field"><label><input type="checkbox" id="oGermany" style="width:auto;margin-right:7px">Deutsches Buchmacherangebot geprüft</label></div>
+          <div class="field"><label><input type="checkbox" id="oMarketVerified" style="width:auto;margin-right:7px">Konkreten Markt geprüft</label></div>
+        </div>
+        <div id="evPreview" class="stat" style="margin:4px 0 12px"><div class="muted small">EV-Vorschau</div><div class="n">—</div><div class="small muted">Quote und Wahrscheinlichkeit eingeben.</div></div>
+        <div class="actions"><button class="btn primary" type="submit">Quote speichern & prüfen</button></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="view" id="paper">
+    <div class="card"><div class="row between"><h2>Paper-Trading</h2><span class="pill">10 € pro Wette</span></div><p class="muted small">Nur virtuelle Einsätze. Ergebnis nach Spielende manuell als gewonnen, verloren oder storniert erfassen. Jede Empfehlung bleibt mit ihrer ursprünglichen Quote gespeichert.</p><div id="paperList"></div></div>
+  </section>
+
+  <section class="view" id="settings">
+    <div class="card"><h2>Datenspeicherung</h2><p class="small muted">Alle erfassten Spiele, Quoten und Paper-Wetten werden in diesem Browser auf diesem iPhone gespeichert (localStorage). Beim Löschen der Websitedaten können sie verloren gehen. Exportiere regelmäßig eine Sicherung.</p>
+      <div class="actions"><button class="btn primary" id="exportBtn">Daten als JSON exportieren</button><button class="btn" id="exportCsvBtn">Paper-Trading als CSV exportieren</button><label class="btn" for="importFile">Sicherung importieren</label><input class="hidden" type="file" id="importFile" accept="application/json"></div>
+    </div>
+    <div class="card"><h2>Wettregeln</h2><div class="resultline"><span>Mindesquote</span><strong>1,50</strong></div><div class="resultline"><span>Mindest-EV</span><strong>+5 %</strong></div><div class="resultline"><span>Virtueller Einsatz</span><strong>10 € pro Einzelwette</strong></div><div class="resultline"><span>Analyse-Zeitpunkte</span><strong>ca. −24 h / −60 min</strong></div><div class="resultline"><span>Wettabgabe</span><strong>Deaktiviert</strong></div></div>
+    <div class="card"><h2>Wettbewerbe nach Wochentag</h2><div class="small muted">Fr–So: Premier League, Bundesliga, La Liga, Serie A, Ligue 1. Di–Mi: Champions League. Do: Europa League und Conference League. An anderen Tagen keine automatische Wettbewerbsfreigabe. Ziel 4–6 Spiele; bei unzureichender Qualität weniger.</div></div>
+    <div class="card"><h2>Lokale Daten löschen</h2><p class="small muted">Löscht alle lokal gespeicherten Spiele, Quoten und Paper-Wetten. Vorher eine Sicherung exportieren.</p><button class="btn danger" id="clearBtn">Alle lokalen Daten löschen</button></div>
+    <div class="card"><h2>Quellen und Einschränkungen</h2><ul class="small muted"><li>OpenLigaDB: kostenloser, community-basierter Spielplan-/Ergebnisabruf; Wettbewerbsabdeckung unvollständig.</li><li>Flashscore/FotMob: ergänzende manuelle Prüfung; diese App extrahiert deren Seiten nicht automatisch.</li><li>Aktuelle deutsche bet365-/Betano-Quoten: manuell eintragen und anhand des deutschen Angebots verifizieren.</li><li>Diese App erstellt keine automatischen Prognosen. Eintrittswahrscheinlichkeiten müssen unabhängig geschätzt werden.</li></ul></div>
+  </section>
+  <div class="footer">Wettbot Free · keine kostenpflichtigen Dienste · keine automatischen Wetten · Daten bleiben lokal</div>
+</div>
+<div id="toast" class="toast hidden" role="status"></div>
+<script>
+(() => {
+  const KEY = 'wettbot-ios-free-v1';
+  const $ = id => document.getElementById(id);
+  const today = () => new Date().toISOString().slice(0,10);
+  const localDateTime = () => { const d = new Date(); d.setMinutes(d.getMinutes()-d.getTimezoneOffset()); return d.toISOString().slice(0,16); };
+  const id = () => Date.now().toString(36) + Math.random().toString(36).slice(2,7);
+  const money = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n || 0);
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  let state = load();
+  function load(){ try { return Object.assign({matches:[], odds:[], bets:[], lastRefresh:null}, JSON.parse(localStorage.getItem(KEY)||'{}')); } catch { return {matches:[],odds:[],bets:[],lastRefresh:null}; } }
+  function save(){ localStorage.setItem(KEY, JSON.stringify(state)); render(); }
+  function toast(s){ $('toast').textContent=s; $('toast').classList.remove('hidden'); setTimeout(()=>$('toast').classList.add('hidden'),2800); }
+  function eligibleLeagues(){
+    const d = new Date().getDay();
+    if ([5,6,0].includes(d)) return ['Premier League','Bundesliga','La Liga','Serie A','Ligue 1'];
+    if ([2,3].includes(d)) return ['Champions League'];
+    if (d===4) return ['Europa League','Conference League'];
+    return [];
+  }
+  function fmtDate(d){ if(!d)return 'Datum offen'; return new Date(d+'T12:00:00').toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric'}); }
+  function evFor(o){ return (Number(o.prob)/100)*Number(o.odds)-1; }
+  function statusFor(o){
+    const reasons=[];
+    if(Number(o.odds)<1.5) reasons.push('Quote < 1,50');
+    if(evFor(o)<0.05) reasons.push('EV < +5 %');
+    if(!o.germanyVerified) reasons.push('deutsches Angebot nicht verifiziert');
+    if(!o.marketVerified) reasons.push('Markt nicht verifiziert');
+    if(!o.url) reasons.push('Quellenbeleg fehlt');
+    if(!o.capturedAt) reasons.push('Abrufzeit fehlt');
+    return {ok:reasons.length===0,reasons};
+  }
+  function render(){
+    $('todayLabel').textContent = new Date().toLocaleDateString('de-DE',{weekday:'short',day:'2-digit',month:'2-digit'});
+    $('todayCompetitions').textContent = eligibleLeagues().join(', ') || 'Keine automatische Auswahl';
+    $('matchCount').textContent = state.matches.length;
+    const done=state.bets.filter(b=>b.result && b.result!=='open');
+    const open=state.bets.filter(b=>!b.result || b.result==='open');
+    const pl=done.reduce((s,b)=>s+Number(b.pnl||0),0);
+    const staked=done.reduce((s,b)=>s+Number(b.stake||10),0);
+    $('statOpen').textContent=open.length; $('statDone').textContent=done.length;
+    $('statPL').textContent=money(pl); $('statROI').textContent=staked?((pl/staked)*100).toFixed(1).replace('.',',')+' %':'—';
+    $('matchesList').innerHTML = state.matches.length ? state.matches.slice().sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time)).map(m=>{
+      const odds=state.odds.filter(o=>o.matchId===m.id);
+      return `<div class="match"><div class="matchhead"><div><div class="teams">${esc(m.home)} – ${esc(m.away)}</div><div class="small muted">${esc(m.league)} · ${fmtDate(m.date)} ${esc(m.time||'')}</div><span class="chip">${odds.length} Quoten</span></div><div class="actions"><button class="btn" data-edit-match="${m.id}">Bearbeiten</button><button class="btn danger" data-delete-match="${m.id}">×</button></div></div>${m.source?`<div class="small source muted" style="margin-top:8px">${esc(m.source)}</div>`:''}${odds.map(o=>oddsCard(o)).join('')}</div>`;
+    }).join('') : '<div class="empty">Noch keine Spiele. Nutze den kostenlosen Abruf oder füge ein Spiel manuell hinzu.</div>';
+    $('oMatch').innerHTML=state.matches.map(m=>`<option value="${m.id}">${esc(m.home)} – ${esc(m.away)} · ${esc(m.league)} · ${fmtDate(m.date)}</option>`).join('');
+    if(!state.matches.length) $('oMatch').innerHTML='<option value="">Zuerst ein Spiel hinzufügen</option>';
+    $('paperList').innerHTML=state.bets.length?state.bets.slice().reverse().map(b=>paperCard(b)).join(''):'<div class="empty">Noch keine Paper-Wetten. Speichere eine Quote, die alle formalen Gates erfüllt.</div>';
+    const rec=state.odds.filter(o=>statusFor(o).ok).slice(-5).reverse();
+    $('recentPicks').innerHTML=rec.length?rec.map(o=>`<div class="resultline"><span>${esc(matchName(o.matchId))} · ${esc(o.selection)}</span><strong>${Number(o.odds).toFixed(2)} / EV ${(evFor(o)*100).toFixed(1)} %</strong></div>`).join(''):'Noch keine formal qualifizierte Empfehlung.';
+    updateEvPreview();
+  }
+  function matchName(mid){const m=state.matches.find(x=>x.id===mid);return m?`${m.home} – ${m.away}`:'Spiel gelöscht';}
+  function oddsCard(o){
+    const s=statusFor(o),ev=evFor(o);
+    const b=state.bets.find(x=>x.oddsId===o.id);
+    return `<div class="hr"></div><div class="row between"><div><strong>${esc(o.selection)}</strong><div class="small muted">${esc(o.book)} · ${esc(o.market)} · ${esc(o.line||'ohne Linie')}</div></div><div style="text-align:right"><div class="value">${Number(o.odds).toFixed(2)}</div><div class="small ${ev>=.05?'':'muted'}">EV ${(ev*100).toFixed(1)} %</div></div></div><div class="small muted" style="margin:7px 0">Modell p: ${Number(o.prob).toFixed(1)} % · abgerufen: ${esc(o.capturedAt||'—')}</div><span class="status ${s.ok?'good':(Number(o.odds)>=1.5&&ev>=.05?'warn':'bad')}">${s.ok?'FORMALER KANDIDAT':'AUSGESCHLOSSEN'}</span><div class="small muted" style="margin:6px 0">${s.ok?'Formale Gates bestanden; Modellgüte weiterhin selbst prüfen.':esc(s.reasons.join(' · '))}</div><div class="actions" style="margin-top:8px">${s.ok&&!b?`<button class="btn primary" data-paper="${o.id}">+ 10 € virtuell erfassen</button>`:''}<button class="btn danger" data-delete-odds="${o.id}">Quote löschen</button></div>`;
+  }
+  function paperCard(b){
+    const o=state.odds.find(x=>x.id===b.oddsId);
+    let resultLabel = b.result==='won'?'Gewonnen':b.result==='lost'?'Verloren':b.result==='void'?'Storniert':'Offen';
+    return `<div class="match"><div class="matchhead"><div><div class="teams">${esc(b.matchName)}</div><div class="small muted">${esc(b.selection)} · Quote ${Number(b.odds).toFixed(2)} · Einsatz ${money(b.stake||10)}</div></div><span class="status ${b.result==='won'?'good':b.result==='lost'?'bad':'warn'}">${resultLabel}</span></div><div class="resultline"><span>Ergebnis / P&L</span><strong>${b.result==='open'? 'Noch offen':money(b.pnl||0)}</strong></div>${b.result==='open'?`<div class="actions"><button class="btn primary" data-result="${b.id}" data-value="won">Gewonnen</button><button class="btn" data-result="${b.id}" data-value="lost">Verloren</button><button class="btn" data-result="${b.id}" data-value="void">Storniert</button></div>`:`<div class="small muted">Abgeschlossen · Quote bei Empfehlung: ${Number(b.odds).toFixed(2)}</div>`}</div>`;
+  }
+  function updateEvPreview(){
+    const odds=Number($('oOdds').value),prob=Number($('oProb').value);
+    const el=$('evPreview');
+    if(odds>1&&prob>=0&&prob<=100&&!$('oProb').value==false){
+      const ev=prob/100*odds-1,pass=odds>=1.5&&ev>=.05;
+      el.innerHTML=`<div class="muted small">EV-Vorschau</div><div class="n">${(ev*100).toFixed(1).replace('.',',')} %</div><div class="small ${pass?'':'muted'}">${pass?'Quote und EV erfüllen die Schwellenwerte. Verifizierung bleibt erforderlich.':'Quote ≥ 1,50 und EV ≥ +5 % müssen beide erfüllt sein.'}</div>`;
+    } else el.innerHTML='<div class="muted small">EV-Vorschau</div><div class="n">—</div><div class="small muted">Quote und Wahrscheinlichkeit eingeben.</div>';
+  }
+  function setView(view){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.view===view));document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===view));window.scrollTo({top:0,behavior:'smooth'});}
+  document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
+  $('mDate').value=today(); $('oTime').value=localDateTime();
+  $('addMatchBtn').onclick=()=>{ $('matchFormCard').scrollIntoView({behavior:'smooth'}); };
+  $('addMatchJump').onclick=()=>{setView('matches');$('matchFormCard').scrollIntoView({behavior:'smooth'});};
+  $('cancelEdit').onclick=()=>{$('matchForm').reset();$('editMatchId').value='';$('mDate').value=today();$('matchFormTitle').textContent='Spiel manuell hinzufügen';};
+  $('matchForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    const editId=$('editMatchId').value;
+    const obj={id:editId||id(),date:$('mDate').value,time:$('mTime').value,league:$('mLeague').value,home:$('mHome').value.trim(),away:$('mAway').value.trim(),source:$('mSource').value.trim()};
+    if(editId) state.matches=state.matches.map(m=>m.id===editId?obj:m); else state.matches.push(obj);
+    $('matchForm').reset();$('editMatchId').value='';$('mDate').value=today();$('matchFormTitle').textContent='Spiel manuell hinzufügen';save();toast('Spiel lokal gespeichert.');
+  });
+  $('oddsForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    const odds=Number($('oOdds').value),prob=Number($('oProb').value);
+    if(!$('oMatch').value){toast('Bitte zuerst ein Spiel hinzufügen.');return;}
+    if(!(odds>1)||prob<0||prob>100){toast('Quote oder Wahrscheinlichkeit ungültig.');return;}
+    const o={id:id(),matchId:$('oMatch').value,book:$('oBook').value,market:$('oMarket').value,selection:$('oSelection').value.trim(),line:$('oLine').value.trim(),odds,prob,capturedAt:$('oTime').value,germanyVerified:$('oGermany').checked,marketVerified:$('oMarketVerified').checked,url:$('oUrl').value.trim()};
+    state.odds.push(o);$('oddsForm').reset();$('oTime').value=localDateTime();save();
+    const s=statusFor(o);toast(s.ok?'Quote gespeichert: formaler Kandidat.':'Quote gespeichert, aber ausgeschlossen: '+s.reasons.slice(0,2).join(', '));
+  });
+  ['oOdds','oProb'].forEach(x=>$(x).addEventListener('input',updateEvPreview));
+  document.addEventListener('click',e=>{
+    const t=e.target.closest('button'); if(!t)return;
+    if(t.dataset.editMatch){
+      const m=state.matches.find(x=>x.id===t.dataset.editMatch);if(!m)return;
+      $('editMatchId').value=m.id;$('mDate').value=m.date;$('mTime').value=m.time||'';$('mLeague').value=m.league;$('mHome').value=m.home;$('mAway').value=m.away;$('mSource').value=m.source||'';$('matchFormTitle').textContent='Spiel bearbeiten';$('matchFormCard').scrollIntoView({behavior:'smooth'});
+    }
+    if(t.dataset.deleteMatch){const mid=t.dataset.deleteMatch;if(confirm('Spiel und zugehörige Quoten löschen? Bereits erfasste Paper-Wetten bleiben als Verlauf erhalten.')){state.matches=state.matches.filter(m=>m.id!==mid);state.odds=state.odds.filter(o=>o.matchId!==mid);save();}}
+    if(t.dataset.deleteOdds){const oid=t.dataset.deleteOdds;if(confirm('Diese Quote löschen?')){state.odds=state.odds.filter(o=>o.id!==oid);save();}}
+    if(t.dataset.paper){
+      const o=state.odds.find(x=>x.id===t.dataset.paper);if(!o||!statusFor(o).ok)return;
+      const m=state.matches.find(x=>x.id===o.matchId);
+      state.bets.push({id:id(),oddsId:o.id,matchId:o.matchId,matchName:m?`${m.home} – ${m.away}`:'Spiel',selection:o.selection,odds:o.odds,prob:o.prob,ev:evFor(o),stake:10,result:'open',pnl:0,createdAt:new Date().toISOString()});
+      save();toast('10 € virtuell erfasst.');
+    }
+    if(t.dataset.result){
+      const b=state.bets.find(x=>x.id===t.dataset.result);if(!b||b.result!=='open')return;
+      const v=t.dataset.value;b.result=v;b.pnl=v==='won'?(Number(b.stake)*(Number(b.odds)-1)):v==='lost'?-Number(b.stake):0;b.closedAt=new Date().toISOString();save();toast('Paper-Ergebnis gespeichert.');
+    }
+  });
+  $('refreshBtn').onclick=async()=>{
+    const btn=$('refreshBtn');btn.disabled=true;btn.textContent='Abruf läuft …';$('refreshMsg').textContent='Versuche kostenlose OpenLigaDB-Daten abzurufen. Nicht alle Wettbewerbe sind abgedeckt.';
+    let added=0,errors=[];
+    const season=(new Date().getMonth()>=6)?new Date().getFullYear():new Date().getFullYear()-1;
+    const map=[
+      ['bl1','Bundesliga'],['bl2','Bundesliga'],['bl3','Bundesliga'],
+      ['eng1','Premier League'],['esp1','La Liga'],['ita1','Serie A'],['fra1','Ligue 1'],
+      ['ucl','Champions League'],['el','Europa League'],['uecl','Conference League']
+    ];
+    const date=today();
+    for(const [shortcut,league] of map){
+      try{
+        const res=await fetch(`https://api.openligadb.de/getmatchdata/${shortcut}/${season}`,{headers:{'Accept':'application/json'}});
+        if(!res.ok)continue;
+        const data=await res.json();
+        for(const x of data){
+          const dt=x.matchDateTime||x.matchDateTimeUTC||'';
+          if(!dt.startsWith(date))continue;
+          const home=x.team1?.teamName,away=x.team2?.teamName;if(!home||!away)continue;
+          const key=(date+'|'+home+'|'+away).toLowerCase();
+          if(state.matches.some(m=>(m.date+'|'+m.home+'|'+m.away).toLowerCase()===key))continue;
+          state.matches.push({id:id(),date,time:dt.length>=16?dt.slice(11,16):'',league,home,away,source:`OpenLigaDB: https://www.openligadb.de/`});added++;
+        }
+      }catch(err){errors.push(shortcut);}
+    }
+    state.lastRefresh=new Date().toISOString();save();
+    $('refreshMsg').textContent=added?`${added} Spiel(e) hinzugefügt. Bitte Vollständigkeit und lokale Anstoßzeit prüfen.`:errors.length?'Abruf nicht erfolgreich oder API im Browser blockiert (CORS/Netzwerk). Spiele manuell eintragen.':'Keine passenden Spiele gefunden. Das bedeutet nicht, dass keine Spiele stattfinden; die Quelle deckt nicht alles ab.';
+    btn.disabled=false;btn.textContent='↻ Kostenlosen Spielplan abrufen';toast(added?`${added} Spiel(e) importiert.`:'Kein Spiel importiert. Manuelle Eingabe bleibt möglich.');
+  };
+  $('exportBtn').onclick=()=>{
+    const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});download(blob,`wettbot-sicherung-${today()}.json`);
+  };
+  $('exportCsvBtn').onclick=()=>{
+    const cols=['id','createdAt','matchName','selection','odds','prob','ev','stake','result','pnl','closedAt'];
+    const rows=[cols.join(','),...state.bets.map(b=>cols.map(c=>csv(b[c])).join(','))].join('\r\n');
+    download(new Blob(['\ufeff'+rows],{type:'text/csv;charset=utf-8'}),`paper-trading-${today()}.csv`);
+  };
+  function csv(v){return '"'+String(v??'').replace(/"/g,'""')+'"';}
+  function download(blob,name){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);}
+  $('importFile').addEventListener('change',async e=>{
+    const f=e.target.files[0];if(!f)return;
+    try{const incoming=JSON.parse(await f.text());if(!Array.isArray(incoming.matches)||!Array.isArray(incoming.odds)||!Array.isArray(incoming.bets))throw Error('Format');if(!confirm('Import ersetzt die derzeitigen lokalen Daten. Fortfahren?'))return;state=incoming;save();toast('Sicherung importiert.');}catch{toast('Import fehlgeschlagen: ungültige Sicherungsdatei.');}finally{e.target.value='';}
+  });
+  $('clearBtn').onclick=()=>{if(confirm('Wirklich alle lokalen Spiele, Quoten und Paper-Wetten unwiderruflich löschen?')){state={matches:[],odds:[],bets:[],lastRefresh:null};save();toast('Lokale Daten gelöscht.');}};
+  render();
+  if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(()=>{});
+})();
+</script>
+</body>
+</html>
