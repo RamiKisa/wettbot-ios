@@ -113,7 +113,10 @@ def fixture_fallback():
      local=datetime.datetime.fromisoformat(day+"T"+tm).replace(tzinfo=ZoneInfo(zone))
      dt=local.astimezone(datetime.timezone.utc)
     except Exception: continue
-    home=(m.get("team1") or {}).get("name"); away=(m.get("team2") or {}).get("name")
+    t1=m.get("team1"); t2=m.get("team2")
+    home=(t1.get("name") if isinstance(t1,dict) else t1 if isinstance(t1,str) else None)
+    away=(t2.get("name") if isinstance(t2,dict) else t2 if isinstance(t2,str) else None)
+    if not home or not away: continue
     score=m.get("score") or {}; ft=score.get("ft") or score.get("fulltime") or []
     if isinstance(ft,dict): hg=ft.get("team1",ft.get("home")); ag=ft.get("team2",ft.get("away"))
     elif isinstance(ft,list) and len(ft)>=2: hg,ag=ft[0],ft[1]
