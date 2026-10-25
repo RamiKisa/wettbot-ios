@@ -545,8 +545,9 @@
       }
       fillAnalysisSelectors();
       if(data.status==='needs_api_key'){
-        status.textContent=data.message||'API-Schlüssel fehlt.';
-        list.innerHTML='<div class="empty">Nach Einrichtung des kostenlosen API-Schlüssels erscheinen die Spielanalysen automatisch.</div>';
+        const scheduled=analysisData.recommendations||[];
+        status.textContent=scheduled.length+' Spiel(e) im Spielplan · für Prognosen ist noch ein Datenzugang nötig.';
+        list.innerHTML='<div class="empty"><strong>Spielplan geladen, Pre-Match-Prognosen noch nicht aktiv.</strong><br>'+esc(data.message||'Für zusätzliche Statistiken und Prognosen fehlt der Datenzugang.')+'<br><br>'+scheduled.length+' kommende Spiele aus dem kostenlosen Spielplan-Fallback. Wähle oben eine Liga und ein Spiel aus. Die App zeigt nur verfügbare Informationen und erfindet keine Prognosen.</div>';
       }else if(!data.recommendations||!data.recommendations.length){
         status.textContent='Der Datenlauf enthält aktuell keine auswertbaren Spiele.';
         list.innerHTML='<div class="empty">Keine Prognosedaten verfügbar. Das bedeutet nicht, dass keine Spiele stattfinden.</div>';
