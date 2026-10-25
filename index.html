@@ -63,6 +63,45 @@
     @media(min-width:760px){.wrap{padding:30px 24px 56px}.view#home>.grid{gap:12px}.card{padding:20px}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
 
+  
+    /* Stronger mobile-first hierarchy: less clutter, clearer sections, larger tap targets */
+    .wrap{max-width:1120px;padding:18px 14px 44px}
+    .top{gap:14px;padding:10px 2px 18px}
+    .brand{min-width:0}.eyebrow{font-size:10px}
+    .tabs{position:sticky;top:0;z-index:5;background:#080809f2;backdrop-filter:blur(16px);margin-left:-14px;margin-right:-14px;padding:10px 14px 12px;border-bottom:1px solid #27272b}
+    .view>.card:first-child{margin-top:4px}
+    .card{padding:18px;border-radius:18px;margin-bottom:13px}
+    .view#home>.grid{gap:10px}
+    .stat .n{font-size:25px}
+    .resultline{align-items:flex-start;line-height:1.45}
+    .resultline>span{flex:1;min-width:0}.resultline>strong{max-width:58%;text-align:right;overflow-wrap:anywhere}
+    .actions .btn{min-height:44px}
+    select,input,textarea{min-height:46px}
+    #refreshMsg,#selectorStatus,#top10Status{line-height:1.55}
+    #analysisList .match{padding:16px;margin:11px 0}
+    #selectedAnalysis{overflow:hidden}
+    #selectedAnalysis .grid{gap:8px}
+    @media(max-width:480px){
+      .wrap{padding:12px 12px 38px}
+      .top{align-items:center;margin-bottom:12px}
+      h1{font-size:22px}
+      .pill{font-size:10px;padding:5px 7px}
+      .card{padding:15px;border-radius:16px}
+      .tabs{margin-left:-12px;margin-right:-12px;padding-left:12px;padding-right:12px}
+      .tab{padding:10px 12px;font-size:13px}
+      .view#home>.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+      .stat{padding:12px;border-radius:12px}
+      .stat .n{font-size:23px}
+      .grid{gap:8px}
+      .matchhead{gap:8px}
+      .teams{font-size:14px}
+      .btn{padding:11px 12px;font-size:14px}
+      .actions{gap:7px}
+      .actions .btn{flex:1 1 auto}
+      .formgrid{grid-template-columns:1fr}
+      .full{grid-column:auto}
+    }
+
   </style>
 </head>
 <body>
@@ -382,10 +421,10 @@
   });
   $('refreshBtn').onclick=async()=>{
     const btn=$('refreshBtn');btn.disabled=true;btn.textContent='Abruf läuft …';
-    $('refreshMsg').textContent='Prüfe ESPN und OpenLigaDB für die nächsten 7 Tage. Importiert werden nur noch nicht angepfiffene Spiele an den vorgesehenen Spieltagen.';
+    $('refreshMsg').textContent='Prüfe alle unterstützten Wettbewerbe über kostenlose Quellen für die nächsten 7 Tage. Es gibt kein künstliches 10-Spiele-Limit.';
     let added=0, attempted=0; const errors=[]; const foundLeagues=new Set();
     const now=Date.now(), date=today();
-    const allowedForDay=day=>day===5||day===6||day===0?['Premier League','Bundesliga','La Liga','Serie A','Ligue 1','Primeira Liga']:day===2||day===3?['Champions League']:day===4?['Europa League','Conference League']:[];
+    const allowedForDay=day=>['Premier League','Bundesliga','La Liga','Serie A','Ligue 1','Primeira Liga','Champions League','Europa League','Conference League'];
     const targets=[];
     for(let offset=0;offset<7;offset++){const d=new Date();d.setDate(d.getDate()+offset);const local=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');const leagues=allowedForDay(d.getDay());if(leagues.length)targets.push({date:local,allowed:leagues});}
     const targetDates=new Set(targets.map(t=>t.date));
@@ -458,14 +497,11 @@
       fillAnalysisSelectors();for(const x of data){const dt=x.matchDateTime||x.matchDateTimeUTC||'';const home=x.team1?.teamName,away=x.team2?.teamName;if(addFixture(item.label,home,away,dt,`OpenLigaDB (${item.shortcut}): ${url}`))added++;}
       }catch(err){errors.push(`OpenLigaDB ${item.label}`)}}
     }catch(err){errors.push('OpenLigaDB Katalog')}
-    // Keep only the 10 soonest upcoming imported fixtures across the selected top leagues.
-    // Preserve any fixture already linked to odds or paper bets.
+    // Keep every upcoming fixture returned by the free sources; never cap the import at 10.
+    // Preserve all fixtures linked to odds or paper bets.
     const linked=new Set([...state.odds.map(o=>o.matchId),...state.bets.map(b=>b.matchId)]);
-    const imported=state.matches.filter(m=>targetDates.has(m.date)&&/^(?:ESPN|OpenLigaDB)/.test(String(m.source||''))&&!linked.has(m.id));
-    imported.sort((a,b)=>(a.date+' '+(a.time||'23:59')).localeCompare(b.date+' '+(b.time||'23:59')));
-    const keepIds=new Set(imported.slice(0,10).map(m=>m.id));
-    state.matches=state.matches.filter(m=>!imported.some(x=>x.id===m.id)||keepIds.has(m.id)||linked.has(m.id));
-    added=Math.min(added,10);
+    state.matches=state.matches.filter(m=>!targetDates.has(m.date)||!/^(?:ESPN|OpenLigaDB)/.test(String(m.source||''))||!linked.has(m.id)||true);
+    added=state.matches.filter(m=>targetDates.has(m.date)&&/^(?:ESPN|OpenLigaDB)/.test(String(m.source||''))).length;
     state.lastRefresh=new Date().toISOString();save();
     const leagues=[...new Set(state.matches.filter(m=>targetDates.has(m.date)&&/^(?:ESPN|OpenLigaDB)/.test(String(m.source||''))).map(m=>m.league))];
     $('refreshMsg').textContent=added?`${added} zukünftige(s) Spiel(e) für die nächsten 7 Tage hinzugefügt. Gefundene Ligen: ${leagues.join(', ')||'—'}. Quellen können unvollständig sein; Spielzeiten bitte prüfen.`:errors.length?`Keine neuen zukünftigen Spiele importiert. Einige Abrufe schlugen fehl (${errors.slice(0,4).join(', ')}). Bereits gespeicherte Spiele mit Quoten/Paper-Wetten blieben erhalten.`:'Keine neuen zukünftigen Spiele für die nächsten 7 Tage gefunden. Kostenlose Quellen können Lücken haben.';
