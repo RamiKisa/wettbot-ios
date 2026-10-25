@@ -500,8 +500,8 @@
     // Keep every upcoming fixture returned by the free sources; never cap the import at 10.
     // Preserve all fixtures linked to odds or paper bets.
     const linked=new Set([...state.odds.map(o=>o.matchId),...state.bets.map(b=>b.matchId)]);
-    state.matches=state.matches.filter(m=>!targetDates.has(m.date)||!/^(?:ESPN|OpenLigaDB)/.test(String(m.source||''))||!linked.has(m.id)||true);
-    added=state.matches.filter(m=>targetDates.has(m.date)&&/^(?:ESPN|OpenLigaDB)/.test(String(m.source||''))).length;
+    // Imported matches remain in the local list until the next refresh; linked records are never removed.
+
     state.lastRefresh=new Date().toISOString();save();
     const leagues=[...new Set(state.matches.filter(m=>targetDates.has(m.date)&&/^(?:ESPN|OpenLigaDB)/.test(String(m.source||''))).map(m=>m.league))];
     $('refreshMsg').textContent=added?`${added} zukünftige(s) Spiel(e) für die nächsten 7 Tage hinzugefügt. Gefundene Ligen: ${leagues.join(', ')||'—'}. Quellen können unvollständig sein; Spielzeiten bitte prüfen.`:errors.length?`Keine neuen zukünftigen Spiele importiert. Einige Abrufe schlugen fehl (${errors.slice(0,4).join(', ')}). Bereits gespeicherte Spiele mit Quoten/Paper-Wetten blieben erhalten.`:'Keine neuen zukünftigen Spiele für die nächsten 7 Tage gefunden. Kostenlose Quellen können Lücken haben.';
