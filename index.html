@@ -474,11 +474,11 @@
   $('refreshAnalysisDataBtn').addEventListener('click',()=>loadAnalyses());
   async function loadFixtureSchedules(){
     const sources=[
-      ['Premier League','en.1.json'],['Bundesliga','de.1.json'],['La Liga','es.1.json'],
-      ['Serie A','it.1.json'],['Ligue 1','fr.1.json'],['Primeira Liga','pt.1.json']
+      ['Premier League','en.1.json','Europe/London'],['Bundesliga','de.1.json','Europe/Berlin'],['La Liga','es.1.json','Europe/Madrid'],
+      ['Serie A','it.1.json','Europe/Rome'],['Ligue 1','fr.1.json','Europe/Paris'],['Primeira Liga','pt.1.json','Europe/Lisbon']
     ];
     const season=(new Date().getMonth()>=6?new Date().getFullYear():new Date().getFullYear()-1)+'-'+String((new Date().getMonth()>=6?new Date().getFullYear()+1:new Date().getFullYear())%100).padStart(2,'0'),all=[],errors=[];
-    const loaded=await Promise.allSettled(sources.map(async ([league,file])=>{
+    const loaded=await Promise.allSettled(sources.map(async ([league,file,sourceZone])=>{
       const url='https://raw.githubusercontent.com/openfootball/football.json/master/'+season+'/'+file;
       const res=await fetch(url,{cache:'no-store'});
       if(!res.ok)throw Error(league+': HTTP '+res.status);
@@ -486,8 +486,17 @@
       for(const m of (json.matches||[])){
         if(!m.date||!m.team1||!m.team2)continue;
         const parts=m.date.split('-').map(Number),clock=(m.time||'12:00').split(':').map(Number);
-        // Build local device time from the schedule's local kickoff clock; render explicitly in Europe/Berlin below.
-        const dt=new Date(parts[0],parts[1]-1,parts[2],clock[0]||0,clock[1]||0,0);
+        // Convert the source league's local kickoff time into an absolute timestamp, then display it in German time.
+        const desired=Date.UTC(parts[0],parts[1]-1,parts[2],clock[0]||0,clock[1]||0,0);
+        let utcGuess=desired;
+        for(let k=0;k<2;k++){
+          const z=new Date(utcGuess);
+          const f=new Intl.DateTimeFormat('en-GB',{timeZone:sourceZone,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
+          const vals={};f.formatToParts(z).forEach(p=>{if(p.type!=='literal')vals[p.type]=Number(p.value);});
+          const represented=Date.UTC(vals.year,vals.month-1,vals.day,vals.hour,vals.minute,0);
+          utcGuess+=desired-represented;
+        }
+        const dt=new Date(utcGuess);
         if(Number.isNaN(dt.getTime()))continue;
         const score=m.score||{};
         const hasResult=Array.isArray(score.ft)||Array.isArray(score);
