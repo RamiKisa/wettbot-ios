@@ -22,7 +22,7 @@
 <div class="wrap">
   <header class="top">
     <div class="brand"><div class="logo">W</div><div><div class="eyebrow">Kostenlos · lokal auf diesem Gerät</div><h1>Wettbot</h1></div></div>
-    <span class="pill">PAPER TRADING · V6</span>
+    <span class="pill">MATCH ANALYSEN · V7</span>
   </header>
   <div class="notice"><strong>Regeln aktiv:</strong> Mindestquote 1,50 · modellierter EV ≥ +5 % · virtueller Einsatz 10 € · keine echten Wetten. Aktuelle Quoten und Eintrittswahrscheinlichkeiten werden nicht erfunden.</div>
   <nav class="tabs" aria-label="Navigation">
@@ -48,11 +48,11 @@
       <div id="refreshMsg" class="small muted" style="margin-top:9px">Der Abruf erfolgt erst, wenn du auf den Button tippst.</div>
     </div>
     <div class="card" id="autoTop10Card">
-      <div class="row between"><h2>Automatische Top-10-Tipps</h2><button class="btn" id="reloadTop10Btn" type="button">Aktualisieren</button></div>
-      <p class="small muted">Sortiert nach geschätzter Trefferwahrscheinlichkeit. Ein Tipp wird nur gezeigt, wenn die Datenquelle eine passende Quote liefert und der berechnete EV mindestens +5 % beträgt. Keine Garantie auf Treffer.</p>
+      <div class="row between"><h2>Automatische Spielanalysen</h2><button class="btn" id="reloadAnalysisBtn" type="button">Aktualisieren</button></div>
+      <p class="small muted">Alle kommenden Spiele der unterstützten Wettbewerbe mit Modellprognose, Formvergleich und direkten Duellen. Keine Quoten. Prognosen sind Schätzungen, keine Garantien.</p>
       <div id="top10Status" class="small muted">Automatische Daten werden geladen …</div>
-      <div id="top10List"></div>
-      <div class="small muted" id="top10Timestamp"></div>
+      <div id="analysisList"></div>
+      <div class="small muted" id="analysisTimestamp"></div>
     </div>
     <div class="card"><h2>Letzte Empfehlungen</h2><div id="recentPicks" class="empty">Noch keine Paper-Wetten erfasst.</div></div>
     <div class="danger-note">Value-Berechnung: EV = (geschätzte Eintrittswahrscheinlichkeit × Dezimalquote) − 1. Ein positiver EV ist nur so zuverlässig wie das unabhängige Wahrscheinlichkeitsmodell. Diese Version hat noch kein trainiertes Prognosemodell.</div>
@@ -424,30 +424,38 @@
     try{const incoming=JSON.parse(await f.text());if(!Array.isArray(incoming.matches)||!Array.isArray(incoming.odds)||!Array.isArray(incoming.bets))throw Error('Format');if(!confirm('Import ersetzt die derzeitigen lokalen Daten. Fortfahren?'))return;state=incoming;save();toast('Sicherung importiert.');}catch{toast('Import fehlgeschlagen: ungültige Sicherungsdatei.');}finally{e.target.value='';}
   });
   $('clearBtn').onclick=()=>{if(confirm('Wirklich alle lokalen Spiele, Quoten und Paper-Wetten unwiderruflich löschen?')){state={matches:[],odds:[],bets:[],lastRefresh:null};save();toast('Lokale Daten gelöscht.');}};
-  async function loadTop10(){
-    const status=$('top10Status'),list=$('top10List'),stamp=$('top10Timestamp');
-    status.textContent='Lade automatisch erzeugte Tipps …';list.innerHTML='';stamp.textContent='';
+  async function loadAnalyses(){
+    const status=$('top10Status'),list=$('analysisList'),stamp=$('analysisTimestamp');
+    status.textContent='Lade automatische Spielanalysen …';list.innerHTML='';stamp.textContent='';
     try{
       const res=await fetch('./recommendations.json?v='+Date.now(),{cache:'no-store'});
       if(!res.ok)throw Error('Datenfeed HTTP '+res.status);
       const data=await res.json();
       if(data.status==='needs_api_key'){
-        status.textContent='Automatik noch nicht aktiviert: '+(data.message||'API-Schlüssel fehlt.');
-        list.innerHTML='<div class="empty">Sobald der API-Schlüssel sicher in GitHub hinterlegt ist und der Datenlauf erfolgreich war, erscheinen hier die geprüften Kandidaten.</div>';
+        status.textContent=data.message||'API-Schlüssel fehlt.';
+        list.innerHTML='<div class="empty">Nach Einrichtung des kostenlosen API-Schlüssels erscheinen die Spielanalysen automatisch.</div>';
       }else if(!data.recommendations||!data.recommendations.length){
-        status.textContent='Aktualisierung erfolgreich, aber derzeit keine Tipps erfüllen alle Kriterien.';
-        list.innerHTML='<div class="empty">Keine qualifizierten Tipps. Es werden keine zehn Tipps künstlich aufgefüllt.</div>';
-        if(data.errors?.length)status.textContent+=' Einige Datenabrufe sind fehlgeschlagen.';
+        status.textContent='Der Datenlauf enthält aktuell keine auswertbaren Spiele.';
+        list.innerHTML='<div class="empty">Keine Prognosedaten verfügbar. Das bedeutet nicht, dass keine Spiele stattfinden.</div>';
       }else{
-        status.textContent=''+data.recommendations.length+' qualifizierte(r) Tipp(s) · nach Trefferwahrscheinlichkeit sortiert.';
-        list.innerHTML=data.recommendations.map((r,i)=>'<div class="match"><div class="matchhead"><div><div class="teams">'+(i+1)+'. '+esc(r.home)+' – '+esc(r.away)+'</div><div class="small muted">'+esc(r.league)+' · '+new Date(r.date).toLocaleString('de-DE',{dateStyle:'medium',timeStyle:'short'})+'</div></div><span class="status good">'+(r.probability*100).toFixed(1).replace('.',',')+' %</span></div><div class="resultline"><span>Tipp / Markt</span><strong>'+esc(r.selection)+' · '+esc(r.market)+'</strong></div><div class="resultline"><span>Buchmacher / Quote</span><strong>'+esc(r.bookmaker)+' · '+Number(r.odds).toFixed(2)+'</strong></div><div class="resultline"><span>Modellierter EV</span><strong>'+(r.ev*100).toFixed(1).replace('.',',')+' %</strong></div><div class="small muted">'+esc(r.reason||'Automatisch berechnet; Prognose nicht garantiert.')+'</div></div>').join('');
+        status.textContent=data.recommendations.length+' Spiel(e) mit Prognosedaten · nächste 7 Tage.';
+        const fmt=v=>v===null||v===undefined||v===''?'Keine Angabe':String(v);
+        const pct=v=>v===null||v===undefined?'—':v+' %';
+        list.innerHTML=data.recommendations.map((m)=>{
+          const p=m.prediction||{},pr=p.probabilities||{},c=p.comparison||{};
+          const h2h=Array.isArray(m.h2h)?m.h2h:[];
+          const h2hText=h2h.length?h2h.map(x=>{const t=x.teams||{},g=x.goals||{},f=x.fixture||{};return '<div class="resultline"><span>'+esc((t.home||{}).name||'Heim')+' – '+esc((t.away||{}).name||'Gast')+'</span><strong>'+fmt(g.home)+' : '+fmt(g.away)+'</strong></div>';}).join(''):'Keine direkten Duelle in der Antwort der Datenquelle.';
+          const probBlock='<div class="grid" style="margin-top:8px"><div class="stat"><div class="small muted">Heimsieg</div><div class="value">'+pct(pr.home)+'</div></div><div class="stat"><div class="small muted">Unentschieden</div><div class="value">'+pct(pr.draw)+'</div></div><div class="stat"><div class="small muted">Auswärtssieg</div><div class="value">'+pct(pr.away)+'</div></div><div class="stat"><div class="small muted">Modell-Tendenz</div><div class="value" style="font-size:14px">'+esc(fmt(p.winner))+'</div></div></div>';
+          const compRows=Object.entries(c).map(([k,v])=>'<div class="resultline"><span>'+esc(k.replaceAll('_',' '))+'</span><strong>'+esc(fmt(v))+'</strong></div>').join('');
+          return '<div class="match"><div class="matchhead"><div><div class="teams">'+esc(m.home)+' – '+esc(m.away)+'</div><div class="small muted">'+esc(m.league)+' · '+new Date(m.date).toLocaleString('de-DE',{dateStyle:'medium',timeStyle:'short'})+'</div></div><span class="status '+(m.analysisStatus==='available'?'good':'warn')+'">'+(m.analysisStatus==='available'?'Analyse verfügbar':'Daten fehlen')+'</span></div>'+probBlock+'<div class="hr"></div><h3>Torprognose & Empfehlung</h3><div class="resultline"><span>Modell-Empfehlung</span><strong>'+esc(fmt(p.advice))+'</strong></div><div class="resultline"><span>Unter/Über</span><strong>'+esc(fmt(p.underOver))+'</strong></div><div class="resultline"><span>Heimtore laut Modell</span><strong>'+esc(fmt(p.homeGoals))+'</strong></div><div class="resultline"><span>Auswärtstore laut Modell</span><strong>'+esc(fmt(p.awayGoals))+'</strong></div><div class="resultline"><span>Modell-Konfidenz</span><strong>'+esc(fmt(p.confidence))+'</strong></div><div class="hr"></div><details><summary>Teamvergleich / Formindikatoren</summary><div style="margin-top:8px">'+(compRows||'<div class="small muted">Kein Teamvergleich geliefert.</div>')+'</div></details><details><summary>Letzte direkte Duelle</summary><div style="margin-top:8px">'+h2hText+'</div></details><p class="small muted">Keine Buchmacherquoten. Die Quelle liefert nicht für jedes Spiel alle Märkte, Verletzungen oder Aufstellungen; fehlende Informationen werden nicht erfunden.</p></div>';
+        }).join('');
       }
-      if(data.generatedAt)stamp.textContent='Datenstand: '+new Date(data.generatedAt).toLocaleString('de-DE')+'. '+(data.source||'');
-    }catch(e){status.textContent='Automatische Tipps konnten nicht geladen werden: '+e.message;list.innerHTML='<div class="empty">Bitte später erneut versuchen.</div>';}
+      if(data.generatedAt)stamp.textContent='Datenstand: '+new Date(data.generatedAt).toLocaleString('de-DE')+'. Quelle: '+(data.source||'');
+    }catch(e){status.textContent='Automatische Analysen konnten nicht geladen werden: '+e.message;list.innerHTML='<div class="empty">Bitte später erneut versuchen.</div>';}
   }
-  $('reloadTop10Btn').addEventListener('click',loadTop10);
+  $('reloadAnalysisBtn').addEventListener('click',loadAnalyses);
   render();
-  loadTop10();
+  loadAnalyses();
   if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(()=>{});
 })();
 </script>
