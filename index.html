@@ -130,37 +130,15 @@
     @media(max-width:480px){.top{padding-top:12px;padding-bottom:16px}.brand{gap:10px}.logo{width:43px;height:43px}.app-menu{top:calc(env(safe-area-inset-top) + 72px)}}
 
 
-    /* Compact, odds-free RamoBet interface */
-    #oddsFormCard{display:none!important}
-    #home .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-    #home .stat:nth-child(n+3){display:none}
-    #home .card{margin-top:10px}
-    #home .card:has(#recentPicks .empty){display:none}
-    #analysis .card:first-child p{margin:4px 0 14px}
-    #autoTop10Card>p{margin-bottom:10px}
-    #analysisList .match{padding:13px;margin:8px 0}
-    #analysisList .match .hr{margin:9px 0}
-    #analysisList .match details{border-top:1px solid #292a2e;padding:8px 0}
-    #analysisList .match details summary{font-size:13px;font-weight:750;padding:4px 0}
-    #analysisList .match .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-    #analysisList .match .grid .stat{padding:10px}
-    #analysisList .match .grid .value{font-size:17px}
-    #settings .card:nth-child(2),#settings .card:nth-child(3){display:none}
-    @media(max-width:480px){#analysisList .match .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-
-
-    /* RamoBet: analysis-only product surface */
+    /* RamoBet: analysis-only interface */
     .home-intro{padding:10px 2px 16px}
     .home-kicker{font-size:10px;font-weight:900;letter-spacing:.18em;color:#ff656b}
     .home-intro h2{font-size:26px;letter-spacing:-.04em;margin:5px 0}
     .home-intro p{max-width:36rem;margin:0}
     #home .grid{display:none!important}
     #home .card:has(#recentPicks){display:none!important}
-    #paper{display:none!important}
     #oddsFormCard{display:none!important}
-    #matches .card:first-child .small{margin-bottom:12px}
     #settings .card:nth-child(2){display:none!important}
-    #settings .card:first-child .actions label[for="importFile"]{display:inline-flex;align-items:center}
     #settings #exportCsvBtn{display:none!important}
 
   </style>
@@ -168,16 +146,16 @@
 <body>
 <div class="wrap">
   <header class="top">
-    <div class="brand"><div class="logo">R</div><div><div class="eyebrow">Fußballanalyse · kostenlos</div><h1>RamoBet</h1></div></div>
+    <div class="brand"><div class="logo">R</div><div><div class="eyebrow">Fußballanalyse · Paper-Trading</div><h1>RamoBet</h1></div></div>
     <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menü öffnen" aria-expanded="false">⋯</button>
   </header>
   <div class="menu-backdrop" id="menuBackdrop"></div>
   <nav class="app-menu" id="appMenu" aria-label="Hauptmenü">
     <div class="menu-heading">RAMOBET <span>MENÜ</span></div>
-    <button class="menu-item active" data-view="home"><span>⌂</span><span><strong>Start</strong><small>Spieltag & Überblick</small></span></button>
-    <button class="menu-item" data-view="analysis"><span>◉</span><span><strong>Analyse</strong><small>Prognosen und Form</small></span></button>
-    <button class="menu-item" data-view="matches"><span>⚽</span><span><strong>Spiele</strong><small>Spielplan und eigene Spiele</small></span></button>
-    <button class="menu-item" data-view="settings"><span>⚙</span><span><strong>Einstellungen</strong><small>Sicherung und App-Infos</small></span></button>
+    <button class="menu-item active" data-view="home"><span>⌂</span><span><strong>Übersicht</strong><small>Kontostand & Spieltag</small></span></button>
+    <button class="menu-item" data-view="analysis"><span>◉</span><span><strong>Spielanalyse</strong><small>Prognosen & Teamdaten</small></span></button>
+    <button class="menu-item" data-view="matches"><span>⚽</span><span><strong>Spiele & Quoten</strong><small>Spiele verwalten und Quoten prüfen</small></span></button>
+    <button class="menu-item" data-view="settings"><span>⚙</span><span><strong>Daten & Export</strong><small>Import, Export und Einstellungen</small></span></button>
   </nav>
 
   <section class="view active" id="home">
@@ -213,8 +191,8 @@
 
   <section class="view" id="matches">
     <div class="card">
-      <div class="row between"><h2>Spiele</h2><button class="btn secondary" id="addMatchBtn">+ Spiel</button></div>
-      <div class="small muted">Kommende Spiele aus dem kostenlosen Spielplan oder eigene Spiele. Fehlende Daten werden nicht ergänzt oder erfunden.</div>
+      <div class="row between"><h2>Spiele & Quoten</h2><button class="btn secondary" id="addMatchBtn">+ Spiel</button></div>
+      <div class="small muted">Spiele aus dem kostenlosen Abruf werden nach Möglichkeit gespeichert. Quoten, Buchmacher, Markt und Modellwahrscheinlichkeit müssen für eine Empfehlung vollständig eingetragen und geprüft sein.</div>
       <div id="matchesList"></div>
     </div>
     <div class="card" id="matchFormCard">
@@ -261,10 +239,59 @@
     <div class="card"><h2>Datenspeicherung</h2><p class="small muted">Deine erfassten Spiele werden in diesem Browser auf diesem iPhone gespeichert (localStorage). Beim Löschen der Websitedaten können sie verloren gehen. Exportiere regelmäßig eine Sicherung.</p>
       <div class="actions"><button class="btn primary" id="exportBtn">Daten als JSON exportieren</button><label class="btn" for="importFile">Sicherung importieren</label><input class="hidden" type="file" id="importFile" accept="application/json"></div>
     </div>
-    
-    
-    <div class="card"><h2>Lokale Daten löschen</h2><p class="small muted">Löscht alle lokal gespeicherten Spiele und Einstellungen. Vorher eine Sicherung exportieren.</p><button class="btn danger" id="clearBtn">Lokale Daten löschen</button></div>
-    <div class="card"><h2>Über RamoBet</h2><p class="small muted">RamoBet ist eine kostenlose Fußballanalyse-App. Sie zeigt Spielpläne, Formdaten und verfügbare Prognosen. Fehlende Statistiken, Ausfälle oder Aufstellungen werden transparent gekennzeichnet.</p></div>${m.source?`<div class="small source muted" style="margin-top:8px">${esc(m.source)}</div>`:''}${odds.map(o=>oddsCard(o)).join('')}</div>`;
+    <div class="card"><h2>Wettregeln</h2><div class="resultline"><span>Mindesquote</span><strong>1,50</strong></div><div class="resultline"><span>Mindest-EV</span><strong>+5 %</strong></div><div class="resultline"><span>Virtueller Einsatz</span><strong>10 € pro Einzelwette</strong></div><div class="resultline"><span>Analyse-Zeitpunkte</span><strong>ca. −24 h / −60 min</strong></div><div class="resultline"><span>Wettabgabe</span><strong>Deaktiviert</strong></div></div>
+    <div class="card"><h2>Wettbewerbe nach Wochentag</h2><div class="small muted">Fr–So: Premier League, Bundesliga (1. Liga), La Liga, Serie A, Ligue 1 und Primeira Liga (Portugal, 1. Liga). Di–Mi: Champions League. Do: Europa League und Conference League. An anderen Tagen keine automatische Wettbewerbsfreigabe. Ziel 4–6 Spiele; bei unzureichender Qualität weniger.</div></div>
+    <div class="card"><h2>Lokale Daten löschen</h2><p class="small muted">Löscht alle lokal gespeicherten Spiele und Einstellungen. Vorher eine Sicherung exportieren.</p><button class="btn danger" id="clearBtn">Alle lokalen Daten löschen</button></div>
+    <div class="card"><h2>Quellen und Einschränkungen</h2><ul class="small muted"><li>ESPN-Spielplan-Endpunkte (inoffiziell, kostenlos, ohne API-Schlüssel) plus OpenLigaDB als zweite Quelle; Abdeckung und Aktualität können variieren.</li><li>OpenFootball: offene Spielplandaten als mögliche Ergänzung; nicht für Live-Quoten.</li><li>Flashscore/FotMob: ergänzende manuelle Prüfung; diese App extrahiert deren Seiten nicht automatisch.</li><li>Aktuelle deutsche bet365-/Betano-Quoten: manuell eintragen und anhand des deutschen Angebots verifizieren.</li><li>Diese App erstellt keine automatischen Prognosen. Eintrittswahrscheinlichkeiten müssen unabhängig geschätzt werden.</li></ul></div>
+  </section>
+  <div class="footer">Wettbot Free · keine kostenpflichtigen Dienste · keine automatischen Wetten · Daten bleiben lokal</div>
+</div>
+<div id="toast" class="toast hidden" role="status"></div>
+<script>
+(() => {
+  const KEY = 'wettbot-ios-free-v1';
+  const $ = id => document.getElementById(id);
+  const today = () => { const d=new Date(); d.setMinutes(d.getMinutes()-d.getTimezoneOffset()); return d.toISOString().slice(0,10); };
+  const localDateTime = () => { const d = new Date(); d.setMinutes(d.getMinutes()-d.getTimezoneOffset()); return d.toISOString().slice(0,16); };
+  const id = () => Date.now().toString(36) + Math.random().toString(36).slice(2,7);
+  const money = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n || 0);
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  let state = load();
+  function load(){ try { return Object.assign({matches:[], odds:[], bets:[], lastRefresh:null}, JSON.parse(localStorage.getItem(KEY)||'{}')); } catch { return {matches:[],odds:[],bets:[],lastRefresh:null}; } }
+  function save(){ localStorage.setItem(KEY, JSON.stringify(state)); render(); }
+  function toast(s){ $('toast').textContent=s; $('toast').classList.remove('hidden'); setTimeout(()=>$('toast').classList.add('hidden'),2800); }
+  function eligibleLeagues(){
+    const d = new Date().getDay();
+    if ([5,6,0].includes(d)) return ['Premier League','Bundesliga','La Liga','Serie A','Ligue 1','Primeira Liga'];
+    if ([2,3].includes(d)) return ['Champions League'];
+    if (d===4) return ['Europa League','Conference League'];
+    return [];
+  }
+  function fmtDate(d){ if(!d)return 'Datum offen'; return new Date(d+'T12:00:00').toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric'}); }
+  function evFor(o){ return (Number(o.prob)/100)*Number(o.odds)-1; }
+  function statusFor(o){
+    const reasons=[];
+    if(Number(o.odds)<1.5) reasons.push('Quote < 1,50');
+    if(evFor(o)<0.05) reasons.push('EV < +5 %');
+    if(!o.germanyVerified) reasons.push('deutsches Angebot nicht verifiziert');
+    if(!o.marketVerified) reasons.push('Markt nicht verifiziert');
+    if(!o.url) reasons.push('Quellenbeleg fehlt');
+    if(!o.capturedAt) reasons.push('Abrufzeit fehlt');
+    return {ok:reasons.length===0,reasons};
+  }
+  function render(){
+    $('todayLabel').textContent = new Date().toLocaleDateString('de-DE',{weekday:'short',day:'2-digit',month:'2-digit'});
+    $('todayCompetitions').textContent = eligibleLeagues().join(', ') || 'Keine automatische Auswahl';
+    $('matchCount').textContent = state.matches.length;
+    const done=state.bets.filter(b=>b.result && b.result!=='open');
+    const open=state.bets.filter(b=>!b.result || b.result==='open');
+    const pl=done.reduce((s,b)=>s+Number(b.pnl||0),0);
+    const staked=done.reduce((s,b)=>s+Number(b.stake||10),0);
+    $('statOpen').textContent=open.length; $('statDone').textContent=done.length;
+    $('statPL').textContent=money(pl); $('statROI').textContent=staked?((pl/staked)*100).toFixed(1).replace('.',',')+' %':'—';
+    $('matchesList').innerHTML = state.matches.length ? state.matches.slice().sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time)).map(m=>{
+      const odds=state.odds.filter(o=>o.matchId===m.id);
+      return `<div class="match"><div class="matchhead"><div><div class="teams">${esc(m.home)} – ${esc(m.away)}</div><div class="small muted">${esc(m.league)} · ${fmtDate(m.date)} ${esc(m.time||'')}</div><span class="chip">${odds.length} Quoten</span></div><div class="actions"><button class="btn" data-edit-match="${m.id}">Bearbeiten</button><button class="btn danger" data-delete-match="${m.id}">×</button></div></div>${m.source?`<div class="small source muted" style="margin-top:8px">${esc(m.source)}</div>`:''}${odds.map(o=>oddsCard(o)).join('')}</div>`;
     }).join('') : '<div class="empty">Noch keine Spiele. Nutze den kostenlosen Abruf oder füge ein Spiel manuell hinzu.</div>';
     $('oMatch').innerHTML=state.matches.map(m=>`<option value="${m.id}">${esc(m.home)} – ${esc(m.away)} · ${esc(m.league)} · ${fmtDate(m.date)}</option>`).join('');
     if(!state.matches.length) $('oMatch').innerHTML='<option value="">Zuerst ein Spiel hinzufügen</option>';
