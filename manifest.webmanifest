@@ -1,7 +1,7 @@
 {
-  "name": "RamoBet – Fußballanalyse & Paper Trading",
+  "name": "RamoBet – Fußballanalyse",
   "short_name": "RamoBet",
-  "description": "Kostenloser Fußballanalyse- und Paper-Trading-Wettbot",
+  "description": "Kostenlose Fußballanalyse mit Spielplan, Formdaten und Prognosen",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#070809",
