@@ -151,6 +151,47 @@ def fixture_fallback():
       if dt<now-datetime.timedelta(hours=4): continue
       all_matches.append({"id":"espn-"+str(event.get("id")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"ESPN public scoreboard","dataCoverage":{"fixture":"ESPN public scoreboard"}})
     except Exception as ee: errors.append(league+" ESPN: "+str(ee)[:80])
+ # Secondary independent fixture feed: ESPN scoreboard for all supported competitions.
+ espn_leagues={"Premier League":"eng.1","Bundesliga":"ger.1","La Liga":"esp.1","Serie A":"ita.1","Ligue 1":"fra.1","Primeira Liga":"por.1","Champions League":"uefa.champions","Europa League":"uefa.europa","Conference League":"uefa.europa.conf"}
+ dates=now.strftime("%Y%m%d")+"-"+(now+datetime.timedelta(days=7)).strftime("%Y%m%d")
+ for league,slug in espn_leagues.items():
+  try:
+   url="https://site.api.espn.com/apis/site/v2/sports/soccer/"+slug+"/scoreboard?dates="+dates
+   req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0 RamoBet fixture fallback","Accept":"application/json"})
+   with urllib.request.urlopen(req,timeout=8) as resp: payload=json.load(resp)
+   for event in payload.get("events",[]):
+    comps=event.get("competitions") or []
+    if not comps: continue
+    competitors=comps[0].get("competitors") or []
+    home=next((z.get("team",{}).get("displayName") for z in competitors if z.get("homeAway")=="home"),None)
+    away=next((z.get("team",{}).get("displayName") for z in competitors if z.get("homeAway")=="away"),None)
+    rawdate=event.get("date")
+    if not home or not away or not rawdate: continue
+    dt=datetime.datetime.fromisoformat(rawdate.replace("Z","+00:00"))
+    if dt<now-datetime.timedelta(hours=4): continue
+    all_matches.append({"id":"espn-"+str(event.get("id")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"ESPN public scoreboard","dataCoverage":{"fixture":"ESPN public scoreboard"}})
+  except Exception as e:
+   errors.append(league+" ESPN fallback: "+str(e)[:80])
+ # OpenLigaDB is an additional keyless source for the German Bundesliga.
+ try:
+  req=urllib.request.Request("https://api.openligadb.de/getmatchdata/bl1",headers={"User-Agent":"RamoBet/1.0","Accept":"application/json"})
+  with urllib.request.urlopen(req,timeout=8) as resp: matches=json.load(resp)
+  for m in matches:
+   rawdate=m.get("matchDateTimeUTC"); home=(m.get("team1") or {}).get("teamName"); away=(m.get("team2") or {}).get("teamName")
+   if not rawdate or not home or not away: continue
+   dt=datetime.datetime.fromisoformat(rawdate.replace("Z","+00:00"))
+   if dt<now-datetime.timedelta(hours=4) or dt>now+datetime.timedelta(days=7): continue
+   all_matches.append({"id":"openligadb-"+str(m.get("matchID")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":"Bundesliga","home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenLigaDB","dataCoverage":{"fixture":"OpenLigaDB"}})
+ except Exception as e:
+  errors.append("OpenLigaDB Bundesliga: "+str(e)[:80])
+ # Deduplicate feeds by competition, kickoff date and normalized team names.
+ import unicodedata,re
+ unique=[]; seen=set()
+ for match in sorted(all_matches,key=lambda x:x.get("timestamp",0)):
+  key=(match.get("league"),match.get("date","")[:10],re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",match.get("home","")).encode("ascii","ignore").decode().lower()),re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",match.get("away","")).encode("ascii","ignore").decode().lower()))
+  if key in seen: continue
+  seen.add(key); unique.append(match)
+ all_matches=unique
  all_matches.sort(key=lambda x:x["timestamp"])
  import math
  for f in all_matches:
