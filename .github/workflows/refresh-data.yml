@@ -1,36 +1,119 @@
-name: Refresh Wettbot data
+name: Refresh RamoBet data
+
 on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths-ignore:
-      - 'recommendations.json'
+    paths:
+      - 'scripts/refresh_data.py'
+      - '.github/workflows/refresh-data.yml'
   schedule:
-    - cron: "17 4 * * *"
+    - cron: "17 */6 * * *"
+
 permissions:
   contents: write
+
 concurrency:
-  group: wettbot-data-refresh
+  group: ramobet-data-refresh
   cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Fetch fixtures, predictions and bookmaker odds
+        with:
+          fetch-depth: 0
+
+      - name: Generate, validate and publish current football data
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
-        run: python3 scripts/refresh_data.py
-      - name: Commit generated recommendations
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add recommendations.json
-          if git diff --cached --quiet; then
-            echo "No data changes to commit"
-          else
+
+          for attempt in 1 2 3; do
+            echo "Data refresh attempt ${attempt}/3"
+            git fetch origin main
+            git checkout -B main origin/main
+
+            python3 -m py_compile scripts/refresh_data.py
+            python3 scripts/refresh_data.py
+
+            python3 - <<'PY'
+          import collections, datetime, json, pathlib, sys, unicodedata, re
+          path = pathlib.Path("recommendations.json")
+          try:
+              data = json.loads(path.read_text(encoding="utf-8"))
+          except Exception as exc:
+              sys.exit(f"Invalid recommendations.json: {exc}")
+          if not isinstance(data, dict):
+              sys.exit("Data feed must be a JSON object")
+          fixtures = data.get("recommendations")
+          if not isinstance(fixtures, list) or not fixtures:
+              sys.exit("Refusing to publish an empty fixture list")
+          allowed = {
+              "Bundesliga", "Serie A", "Ligue 1", "La Liga", "Premier League",
+              "Süper Lig", "Süper Lig (Türkei)", "Primeira Liga", "Champions League",
+              "Europa League", "Conference League"
+          }
+          errors = []
+          ids = set()
+          duplicate_keys = set()
+          league_counts = collections.Counter()
+          source_counts = collections.Counter()
+          model_counts = collections.Counter()
+          def norm(value):
+              value = unicodedata.normalize("NFKD", str(value or "")).encode("ascii", "ignore").decode().lower()
+              return re.sub(r"[^a-z0-9]", "", value)
+          for i, item in enumerate(fixtures):
+              if not isinstance(item, dict):
+                  errors.append(f"fixture[{i}] is not an object")
+                  continue
+              for key in ("id", "date", "league", "home", "away"):
+                  if not item.get(key):
+                      errors.append(f"fixture[{i}] missing {key}")
+              if item.get("league") not in allowed:
+                  errors.append(f"fixture[{i}] unexpected league: {item.get('league')}")
+              if item.get("id") in ids:
+                  errors.append(f"duplicate id: {item.get('id')}")
+              ids.add(item.get("id"))
+              league_counts[item.get("league", "UNKNOWN")] += 1
+              source_counts[item.get("source", "unknown")] += 1
+              model_counts[item.get("analysisStatus", "unknown")] += 1
+              try:
+                  datetime.datetime.fromisoformat(str(item.get("date")).replace("Z", "+00:00"))
+              except Exception:
+                  errors.append(f"fixture[{i}] invalid date: {item.get('date')}")
+              key = (item.get("league"), str(item.get("date", ""))[:10], norm(item.get("home")), norm(item.get("away")))
+              if key in duplicate_keys:
+                  errors.append(f"duplicate fixture: {key}")
+              duplicate_keys.add(key)
+          if errors:
+              sys.exit("Feed validation failed:\\n- " + "\\n- ".join(errors[:30]))
+          print(f"Validation OK: {len(fixtures)} fixtures")
+          print("By league: " + json.dumps(dict(sorted(league_counts.items())), ensure_ascii=False))
+          print("By source: " + json.dumps(dict(sorted(source_counts.items())), ensure_ascii=False))
+          print("Analysis status: " + json.dumps(dict(sorted(model_counts.items())), ensure_ascii=False))
+          print("Generated at: " + str(data.get("generatedAt")) + "; overall status: " + str(data.get("status")))
+          PY
+
+            git add recommendations.json
+            if git diff --cached --quiet; then
+              echo "Generated data has no changes; repository is already current."
+              exit 0
+            fi
             git commit -m "Refresh automated football analysis data"
-            git pull --rebase origin main
-            git push
-          fi
+            if git push origin HEAD:main; then
+              echo "Published validated recommendations successfully."
+              exit 0
+            fi
+            echo "Remote changed during publishing; retrying from current main."
+            sleep $((attempt * 2))
+          done
+          echo "Could not publish after three attempts." >&2
+          exit 1
