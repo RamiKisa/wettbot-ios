@@ -262,7 +262,7 @@ def sportscore_match_rows(payload: Any) -> list[dict]:
             if away:
                 break
         competition = None
-        for key in ("competition", "competitionName", "competition_name", "league", "tournament", "leagueName"):
+        for key in ("competition", "competitionName", "competition_name", "competitionSlug", "competition_slug", "league", "tournament", "leagueName", "leagueSlug"):
             competition = _nested_name(raw.get(key))
             if competition:
                 break
@@ -272,6 +272,20 @@ def sportscore_match_rows(payload: Any) -> list[dict]:
             if isinstance(val, str) and val.strip():
                 match_date = val.strip()
                 break
+        # Some fixture feeds separate a calendar date from a kickoff clock.
+        # Combine them only when a proper ISO timestamp was not supplied.
+        if match_date and len(match_date) == 10 and match_date[4:5] == "-" and match_date[7:8] == "-":
+            for time_key in ("kickoffTime", "startTime", "start_time", "kickoff_time", "time"):
+                clock = raw.get(time_key)
+                if isinstance(clock, str) and len(clock.strip()) >= 4 and ":" in clock:
+                    clock = clock.strip()
+                    if len(clock) == 5:
+                        clock += ":00"
+                    match_date = match_date + "T" + clock
+                    timezone_value = raw.get("timezone") or raw.get("timeZone") or "Z"
+                    if timezone_value in ("UTC", "GMT", "Z", "+00:00"):
+                        match_date += "Z" if not match_date.endswith("Z") else ""
+                    break
         status = None
         for key in ("status", "matchStatus", "match_status", "state", "status_text"):
             val = raw.get(key)
