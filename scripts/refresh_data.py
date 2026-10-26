@@ -58,7 +58,7 @@ def fetch_openfootball(season_year, filename):
   raise RuntimeError("OpenFootball GitHub Contents API returned no base64 file content")
  try: return json.loads(base64.b64decode(entry["content"]).decode("utf-8"))
  except Exception as exc: raise RuntimeError("Could not decode OpenFootball season file: "+str(exc)[:100])
-from feed_utils import espn_completed_match_rows, full_time_score, match_rows, poisson_match_model
+from feed_utils import espn_completed_match_rows, full_time_score, match_rows, poisson_match_model, sportscore_match_rows
 def pct(v):
  try:return round(float(str(v).replace("%","").strip()),1)
  except:return None
@@ -349,6 +349,84 @@ def fixture_fallback():
    all_matches.append({"id":"openligadb-"+str(m.get("matchID")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":"Bundesliga","home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenLigaDB","dataCoverage":{"fixture":"OpenLigaDB"}})
  except Exception as e:
   errors.append("OpenLigaDB Bundesliga: "+str(e)[:80])
+ # Independent SportScore source: daily fixture/result endpoint, separate from ESPN.
+ # One request per calendar day covers all competitions; restrict output to RamoBet's fixed list.
+ def sportscore_competition(value):
+  norm=re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",str(value or "")).encode("ascii","ignore").decode().lower())
+  aliases={
+   "bundesliga":"Bundesliga","germanbundesliga":"Bundesliga","1bundesliga":"Bundesliga","germanybundesliga":"Bundesliga",
+   "seriea":"Serie A","italianseriea":"Serie A","serieaitaly":"Serie A",
+   "ligue1":"Ligue 1","frenchligue1":"Ligue 1",
+   "laliga":"La Liga","laligaspain":"La Liga","spanishlaliga":"La Liga","primeradivision":"La Liga",
+   "premierleague":"Premier League","englishpremierleague":"Premier League","epl":"Premier League",
+   "superlig":"Süper Lig","turkishsuperlig":"Süper Lig","superligturkey":"Süper Lig","turkeysuperlig":"Süper Lig",
+   "primeiraliga":"Primeira Liga","portugueseprimeiraliga":"Primeira Liga","ligaportugal":"Primeira Liga","portugalprimeiraliga":"Primeira Liga",
+   "championsleague":"Champions League","uefachampionsleague":"Champions League",
+   "europaleague":"Europa League","uefaeuropaleague":"Europa League",
+   "conferenceleague":"Conference League","uefaconferenceleague":"Conference League","uefaeuropaconferenceleague":"Conference League","europaconferenceleague":"Conference League"
+  }
+  return aliases.get(norm)
+ def sportscore_fetch_day(day):
+  params=urllib.parse.urlencode({"sport":"football","date":day.isoformat(),"limit":200,"src":"ramobet-ios"})
+  url="https://sportscore.com/api/v1/fixtures/?"+params
+  req=urllib.request.Request(url,headers={"User-Agent":"RamoBet/1.0 (+https://ramikisa.github.io/wettbot-ios/)","Accept":"application/json"})
+  with urllib.request.urlopen(req,timeout=12) as resp:
+   payload=json.load(resp)
+  return day,sportscore_match_rows(payload)
+ sportscore_fixture_counts=collections.Counter()
+ sportscore_history_counts=collections.Counter()
+ sportscore_errors=[]
+ sportscore_days=[]
+ for offset in range(-45,WINDOW_DAYS+1):
+  sportscore_days.append(now.date()+datetime.timedelta(days=offset))
+ def fetch_sportscore_safe(day):
+  try: return day,sportscore_fetch_day(day)[1],None
+  except Exception as exc: return day,[],str(exc)[:120]
+ with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+  for day,rows,error in pool.map(fetch_sportscore_safe,sportscore_days):
+   if error:
+    sportscore_errors.append(day.isoformat()+": "+error)
+    continue
+   for row in rows:
+    league=sportscore_competition(row.get("competition"))
+    if not league: continue
+    rawdate=row.get("date")
+    try:
+     kickoff=datetime.datetime.fromisoformat(str(rawdate).replace("Z","+00:00"))
+     if kickoff.tzinfo is None: kickoff=kickoff.replace(tzinfo=datetime.timezone.utc)
+     kickoff=kickoff.astimezone(datetime.timezone.utc)
+    except Exception:
+     continue
+    home=row["home"]; away=row["away"]
+    status_norm=re.sub(r"[^a-z]","",str(row.get("status") or "").lower())
+    is_finished=status_norm in {"finished","finish","complete","completed","post","ft","fulltime","ended","final"}
+    is_cancelled=any(term in status_norm for term in ("cancel","postpon","abandon","suspend"))
+    if is_finished and row.get("homeGoals") is not None and row.get("awayGoals") is not None:
+     if kickoff>now or kickoff<now-datetime.timedelta(days=45): continue
+     hg=row["homeGoals"]; ag=row["awayGoals"]
+     for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
+      history.setdefault((league,team),[]).append({
+       "date":kickoff.isoformat(),"gf":gf,"ga":ga,
+       "result":"W" if gf>ga else "D" if gf==ga else "L",
+       "opponent":opponent,"home":home,"away":away,
+       "homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home,
+       "historySource":"SportScore"
+      })
+     sportscore_history_counts[league]+=1
+     continue
+    if is_cancelled or kickoff<=now or kickoff>now+datetime.timedelta(days=WINDOW_DAYS): continue
+    all_matches.append({
+     "id":"sportscore-"+str(row.get("id") or (league+"-"+kickoff.isoformat()+"-"+home+"-"+away)),
+     "date":kickoff.isoformat(),"timestamp":kickoff.timestamp(),"league":league,
+     "home":home,"away":away,"venue":row.get("venue"),"status":"scheduled",
+     "analysisStatus":"fixture_only","prediction":{},"h2h":[],
+     "source":"SportScore API","dataCoverage":{"fixture":"SportScore API"}
+    })
+    sportscore_fixture_counts[league]+=1
+ errors.extend(["SportScore "+msg for msg in sportscore_errors[:25]])
+ print("SportScore upcoming fixtures by league:",json.dumps(dict(sorted(sportscore_fixture_counts.items())),ensure_ascii=False))
+ print("SportScore completed history matches by league:",json.dumps(dict(sorted(sportscore_history_counts.items())),ensure_ascii=False))
+ print("SportScore daily requests:",len(sportscore_days),"; errors:",len(sportscore_errors))
  # Canonical team names before source merging; this removes ESPN/OpenFootball alias duplicates.
  import unicodedata,re,math
  aliases={
