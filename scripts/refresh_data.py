@@ -6,6 +6,7 @@ COMPETITIONS=CONFIG["competitions"]
 if len(COMPETITIONS)!=10 or len({x.get("name") for x in COMPETITIONS})!=10:
  raise SystemExit("competitions.json must contain exactly 10 uniquely named configured competitions")
 OUT=ROOT/"recommendations.json"; now=datetime.datetime.now(datetime.timezone.utc)
+TEAM_RESEARCH_CACHE={"news":{},"googleSearch":{}}
 season=now.year if now.month>=6 else now.year-1
 WINDOW_DAYS=max(1,min(60,int(CONFIG.get("fixtureWindowDays",7))))
 leagues={x["name"]:(x["openFootballFile"],x["openFootballTimezone"]) for x in COMPETITIONS if x.get("openFootballFile") and x.get("openFootballTimezone")}
@@ -14,7 +15,9 @@ API_LEAGUE_IDS={x["name"]:x["apiFootballId"] for x in COMPETITIONS if x.get("api
 # API-Football Free plan is 100 requests/day and 10 requests/minute.
 # RamoBet refreshes four times a day: cap one run at 20 requests and preserve quota for retries/manual runs.
 BUDGET=20; DAILY_QUOTA_RESERVE=10; used=0; API_DAILY_REMAINING=None; LAST_API_REQUEST=0.0
-def save(x): OUT.write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding="utf-8")
+def save(x):
+ x.setdefault("teamResearchCache",TEAM_RESEARCH_CACHE)
+ OUT.write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding="utf-8")
 def api(path,params):
  global used, API_DAILY_REMAINING, LAST_API_REQUEST
  if used>=BUDGET: raise RuntimeError("Run-Budget erreicht (%s API-Anfragen)"%BUDGET)
@@ -116,46 +119,61 @@ def fetch_google_search(query, limit=5):
   return out
  except Exception:
   return []
-def enrich_google_team_research(fixtures, max_teams=20):
- teams=[]
- for f in fixtures:
-  for team in (f.get('home'),f.get('away')):
-   if team and team not in teams: teams.append(team)
- selected=teams[:max_teams]; cache={}
+def research_cache_fresh(entry,ttl_hours):
+ if not isinstance(entry,dict) or not isinstance(entry.get("items"),list) or not entry.get("updatedAt"): return False
+ try:
+  stamp=datetime.datetime.fromisoformat(str(entry["updatedAt"]).replace("Z","+00:00"))
+  if stamp.tzinfo is None: stamp=stamp.replace(tzinfo=datetime.timezone.utc)
+  age=now-stamp
+  return datetime.timedelta(0)<=age<=datetime.timedelta(hours=ttl_hours)
+ except Exception:
+  return False
+def team_names(fixtures):
+ names=[]
+ for fixture in fixtures:
+  for name in (fixture.get("home"),fixture.get("away")):
+   if name and name not in names: names.append(name)
+ return names
+def enrich_google_team_research(fixtures, max_teams=40):
+ teams=team_names(fixtures); cache=TEAM_RESEARCH_CACHE.setdefault("googleSearch",{})
+ stale=[team for team in teams if not research_cache_fresh(cache.get(team),24)]
+ selected=stale[:max_teams]
  with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
-  futures={executor.submit(fetch_google_search,'"'+team+'" letzte Spiele Ergebnisse Statistik Fußball',4):team for team in selected}
+  futures={executor.submit(fetch_google_search, '"'+team+'" letzte Spiele Ergebnisse Statistik Fußball', 4):team for team in selected}
   for future in concurrent.futures.as_completed(futures):
    team=futures[future]
-   try: cache[team]=future.result()
-   except Exception: cache[team]=[]
- for f in fixtures:
-  f['googleResearch']={'home':cache.get(f.get('home'),[]),'away':cache.get(f.get('away'),[])}
-  if f.get('home') not in selected or f.get('away') not in selected:
-   note='Nur ein Teil der Teams wurde im Recherchebudget berücksichtigt'
+   try: items=future.result()
+   except Exception: items=[]
+   cache[team]={"items":items,"updatedAt":now.isoformat()}
+ for fixture in fixtures:
+  home_entry=cache.get(fixture.get("home"),{}); away_entry=cache.get(fixture.get("away"),{})
+  fixture["googleResearch"]={"home":home_entry.get("items",[]),"away":away_entry.get("items",[])}
+  if fixture.get("home") in stale or fixture.get("away") in stale:
+   note="Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
   else:
-   note='Google-Suchergebnisse (Links/Snippets, Quelle und Datum vor Verwendung prüfen)'
-  f.setdefault('dataCoverage',{})['googleResearch']=note
-def enrich_team_news(fixtures, max_teams=24):
- teams=[]
- for f in fixtures:
-  for name in (f.get('home'),f.get('away')):
-   if name and name not in teams: teams.append(name)
- selected=teams[:max_teams]; cache={}
- with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
-  futures={executor.submit(fetch_team_news,team):team for team in selected}
+   note="Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
+  fixture.setdefault("dataCoverage",{})["googleResearch"]=note
+def enrich_team_news(fixtures, max_teams=None):
+ teams=team_names(fixtures); cache=TEAM_RESEARCH_CACHE.setdefault("news",{})
+ stale=[team for team in teams if not research_cache_fresh(cache.get(team),12)]
+ with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+  futures={executor.submit(fetch_team_news,team):team for team in stale}
   for future in concurrent.futures.as_completed(futures):
    team=futures[future]
-   try: cache[team]=future.result()
-   except Exception: cache[team]=[]
- for f in fixtures:
-  f['teamNews']={'home':cache.get(f.get('home'),[]),'away':cache.get(f.get('away'),[])}
-  if f.get('home') not in selected or f.get('away') not in selected:
-   note='Team wurde aufgrund des Recherchebudgets nicht abgefragt'
-  elif f['teamNews']['home'] or f['teamNews']['away']:
-   note='Google News RSS-Suchtreffer (nicht automatisch bestätigte Ausfälle)'
+   try: items=future.result()
+   except Exception: items=[]
+   cache[team]={"items":items,"updatedAt":now.isoformat()}
+ for fixture in fixtures:
+  home_entry=cache.get(fixture.get("home"),{}); away_entry=cache.get(fixture.get("away"),{})
+  fixture["teamNews"]={"home":home_entry.get("items",[]),"away":away_entry.get("items",[])}
+  fresh_home=research_cache_fresh(home_entry,12); fresh_away=research_cache_fresh(away_entry,12)
+  if not fresh_home or not fresh_away:
+   note="Team-News-Cache teilweise älter; Abruf wird im nächsten Aktualisierungslauf ergänzt"
+  elif fixture["teamNews"]["home"] or fixture["teamNews"]["away"]:
+   note="Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)"
   else:
-   note='Abfrage erfolgt; keine RSS-Treffer oder Quelle nicht verfügbar'
-  f.setdefault('dataCoverage',{})['teamNews']=note
+   note="Beide Team-Abfragen aktuell; keine RSS-Treffer geliefert"
+  fixture.setdefault("dataCoverage",{})["teamNews"]=note
 def fetch_espn_events(slug, start_date=None, end_date=None):
  start=start_date or now.date()
  end=end_date or (now.date()+datetime.timedelta(days=WINDOW_DAYS))
@@ -259,7 +277,7 @@ def fixture_fallback():
   except Exception as e:
    errors.append(league+" ESPN fallback: "+str(e)[:100])
  # Recent completed ESPN results fill form gaps, especially for UEFA fixtures and Turkish clubs.
- history_days=45
+ history_days=90
  history_start=now.date()-datetime.timedelta(days=history_days)
  history_end=now.date()-datetime.timedelta(days=1)
  espn_history_counts={}
@@ -475,6 +493,34 @@ try:
  if not isinstance(previous_data,dict): previous_data={}
 except Exception:
  previous_data={}
+# Reuse team-level research between scheduled refreshes to reduce duplicate source traffic.
+def hydrate_team_research_cache(data):
+ cache=data.get("teamResearchCache") if isinstance(data.get("teamResearchCache"),dict) else {}
+ for kind in ("news","googleSearch"):
+  stored=cache.get(kind) if isinstance(cache.get(kind),dict) else {}
+  for team,entry in stored.items():
+   if isinstance(team,str) and isinstance(entry,dict) and isinstance(entry.get("items"),list):
+    TEAM_RESEARCH_CACHE[kind][team]=entry
+ if any(TEAM_RESEARCH_CACHE[kind] for kind in ("news","googleSearch")):
+  return
+ stamp=data.get("generatedAt")
+ if not stamp: return
+ legacy_fixtures=data.get("recommendations") if isinstance(data.get("recommendations"),list) else []
+ for old in legacy_fixtures:
+  if not isinstance(old,dict): continue
+  coverage=old.get("dataCoverage") or {}
+  home=old.get("home"); away=old.get("away")
+  news=old.get("teamNews") if isinstance(old.get("teamNews"),dict) else {}
+  if "nicht abgefragt" not in str(coverage.get("teamNews","")).lower() and "budget" not in str(coverage.get("teamNews","")).lower():
+   for team,side in ((home,"home"),(away,"away")):
+    if team and isinstance(news.get(side),list):
+     TEAM_RESEARCH_CACHE["news"].setdefault(team,{"items":news[side],"updatedAt":stamp})
+  google=old.get("googleResearch") if isinstance(old.get("googleResearch"),dict) else {}
+  if "nur ein teil" not in str(coverage.get("googleResearch","")).lower():
+   for team,side in ((home,"home"),(away,"away")):
+    if team and isinstance(google.get(side),list):
+     TEAM_RESEARCH_CACHE["googleSearch"].setdefault(team,{"items":google[side],"updatedAt":stamp})
+hydrate_team_research_cache(previous_data)
 previous_api={}
 for old in previous_data.get("recommendations",[]) if isinstance(previous_data.get("recommendations"),list) else []:
  if not isinstance(old,dict): continue
