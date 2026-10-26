@@ -1,4 +1,4 @@
-import json, os, datetime, urllib.request, urllib.parse, pathlib, base64, collections
+import json, os, datetime, urllib.request, urllib.parse, urllib.error, pathlib, base64, collections
 KEY=os.environ.get("API_FOOTBALL_KEY","").strip()
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 CONFIG=json.loads((ROOT/"competitions.json").read_text(encoding="utf-8"))
@@ -131,6 +131,34 @@ def enrich_team_news(fixtures, max_teams=24):
  for f in fixtures:
   f['teamNews']={'home':cache.get(f.get('home'),[]),'away':cache.get(f.get('away'),[])}
   f.setdefault('dataCoverage',{})['teamNews']='Google News RSS (Suchtreffer, keine bestätigten Ausfälle)' if (f['teamNews']['home'] or f['teamNews']['away']) else 'Keine RSS-Treffer / Abruf nicht verfügbar'
+def fetch_espn_events(slug):
+ start=now.date()
+ end=now.date()+datetime.timedelta(days=WINDOW_DAYS)
+ found={}
+ cursor=start
+ headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","Accept":"application/json","Referer":"https://www.espn.com/"}
+ def request_events(date_arg):
+  url="https://site.api.espn.com/apis/site/v2/sports/soccer/"+slug+"/scoreboard?dates="+date_arg
+  req=urllib.request.Request(url,headers=headers)
+  with urllib.request.urlopen(req,timeout=10) as resp: return json.load(resp).get("events",[])
+ while cursor<=end:
+  chunk_end=min(end,cursor+datetime.timedelta(days=6))
+  date_arg=cursor.strftime("%Y%m%d")+"-"+chunk_end.strftime("%Y%m%d")
+  try:
+   batch=request_events(date_arg)
+  except urllib.error.HTTPError as exc:
+   if exc.code!=400: raise
+   # ESPN sometimes rejects date ranges; retry those dates individually.
+   batch=[]
+   day=cursor
+   while day<=chunk_end:
+    batch.extend(request_events(day.strftime("%Y%m%d")))
+    day+=datetime.timedelta(days=1)
+  for event in batch:
+   event_id=str(event.get("id") or "")
+   if event_id: found[event_id]=event
+  cursor=chunk_end+datetime.timedelta(days=1)
+ return list(found.values())
 def fixture_fallback():
  all_matches=[]; errors=[]; history={}
  for league,(file,zone) in leagues.items():
@@ -161,28 +189,7 @@ def fixture_fallback():
     if dt<=now or dt>now+datetime.timedelta(days=WINDOW_DAYS): continue
     all_matches.append({"id":"fallback-"+league.lower().replace(" ","-")+"-"+str(day)+"-"+str(len(all_matches)),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenFootball","dataCoverage":{"fixture":"OpenFootball"}})
   except Exception as e:
-   errors.append(league+" OpenFootball: "+str(e)[:80])
-   # Free ESPN public scoreboard fallback if the current OpenFootball season is not published.
-   espn_slug=ESPN_SLUGS.get(league)
-   if espn_slug:
-    try:
-     dates=now.strftime("%Y%m%d")+"-"+(now+datetime.timedelta(days=WINDOW_DAYS)).strftime("%Y%m%d")
-     u="https://site.api.espn.com/apis/site/v2/sports/soccer/"+espn_slug+"/scoreboard?dates="+dates
-     req=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0 Wettbot free football data"})
-     with urllib.request.urlopen(req,timeout=15) as resp: payload=json.load(resp)
-     for event in payload.get("events",[]):
-      comps=event.get("competitions") or []
-      if not comps: continue
-      competitors=comps[0].get("competitors") or []
-      home=next((z.get("team",{}).get("displayName") for z in competitors if z.get("homeAway")=="home"),None)
-      away=next((z.get("team",{}).get("displayName") for z in competitors if z.get("homeAway")=="away"),None)
-      rawdate=event.get("date")
-      if not home or not away or not rawdate: continue
-      dt=datetime.datetime.fromisoformat(rawdate.replace("Z","+00:00"))
-      if dt<=now: continue
-      all_matches.append({"id":"espn-"+str(event.get("id")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"ESPN public scoreboard","dataCoverage":{"fixture":"ESPN public scoreboard"}})
-    except Exception as ee: errors.append(league+" ESPN: "+str(ee)[:80])
- # Supplement current-season results with previous-season results for a stable form baseline.
+   errors.append(league+" OpenFootball: "+str(e)[:80]) # Supplement current-season results with previous-season results for a stable form baseline.
  previous_season=season-1
  for league,(file,zone) in leagues.items():
   try:
@@ -210,15 +217,10 @@ def fixture_fallback():
       rows.append({"date":dt.isoformat(),"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent,"home":home,"away":away,"homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home})
   except Exception as e:
    errors.append(league+" previous-season history: "+str(e)[:70])
- # Secondary independent fixture feed: ESPN scoreboard for all supported competitions.
- espn_leagues=ESPN_SLUGS
- dates=now.strftime("%Y%m%d")+"-"+(now+datetime.timedelta(days=WINDOW_DAYS)).strftime("%Y%m%d")
- for league,slug in espn_leagues.items():
+ # Secondary independent fixture feed: ESPN for every configured competition.
+ for league,slug in ESPN_SLUGS.items():
   try:
-   url="https://site.api.espn.com/apis/site/v2/sports/soccer/"+slug+"/scoreboard?dates="+dates
-   req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0 RamoBet fixture fallback","Accept":"application/json"})
-   with urllib.request.urlopen(req,timeout=8) as resp: payload=json.load(resp)
-   for event in payload.get("events",[]):
+   for event in fetch_espn_events(slug):
     comps=event.get("competitions") or []
     if not comps: continue
     competitors=comps[0].get("competitors") or []
@@ -227,10 +229,10 @@ def fixture_fallback():
     rawdate=event.get("date")
     if not home or not away or not rawdate: continue
     dt=datetime.datetime.fromisoformat(rawdate.replace("Z","+00:00"))
-    if dt<=now: continue
+    if dt<=now or dt>now+datetime.timedelta(days=WINDOW_DAYS): continue
     all_matches.append({"id":"espn-"+str(event.get("id")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"ESPN public scoreboard","dataCoverage":{"fixture":"ESPN public scoreboard"}})
   except Exception as e:
-   errors.append(league+" ESPN fallback: "+str(e)[:80])
+   errors.append(league+" ESPN fallback: "+str(e)[:100])
  # OpenLigaDB is an additional keyless source for the German Bundesliga.
  try:
   req=urllib.request.Request("https://api.openligadb.de/getmatchdata/bl1",headers={"User-Agent":"RamoBet/1.0","Accept":"application/json"})
