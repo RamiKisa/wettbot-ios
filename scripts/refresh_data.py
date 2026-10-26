@@ -30,7 +30,7 @@ def fetch_openfootball(season_year, filename):
   raise RuntimeError("OpenFootball GitHub Contents API returned no base64 file content")
  try: return json.loads(base64.b64decode(entry["content"]).decode("utf-8"))
  except Exception as exc: raise RuntimeError("Could not decode OpenFootball season file: "+str(exc)[:100])
-from feed_utils import match_rows, full_time_score
+from feed_utils import espn_completed_match_rows, full_time_score, match_rows, poisson_match_model
 def pct(v):
  try:return round(float(str(v).replace("%","").strip()),1)
  except:return None
@@ -125,9 +125,9 @@ def enrich_team_news(fixtures, max_teams=24):
   else:
    note='Abfrage erfolgt; keine RSS-Treffer oder Quelle nicht verfügbar'
   f.setdefault('dataCoverage',{})['teamNews']=note
-def fetch_espn_events(slug):
- start=now.date()
- end=now.date()+datetime.timedelta(days=WINDOW_DAYS)
+def fetch_espn_events(slug, start_date=None, end_date=None):
+ start=start_date or now.date()
+ end=end_date or (now.date()+datetime.timedelta(days=WINDOW_DAYS))
  found={}
  cursor=start
  headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","Accept":"application/json","Referer":"https://www.espn.com/"}
@@ -142,7 +142,7 @@ def fetch_espn_events(slug):
    batch=request_events(date_arg)
   except urllib.error.HTTPError as exc:
    if exc.code!=400: raise
-   # ESPN sometimes rejects date ranges; retry those dates individually.
+   # ESPN can reject a range; retry that week day-by-day.
    batch=[]
    day=cursor
    while day<=chunk_end:
