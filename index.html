@@ -254,6 +254,16 @@
 (() => {
   const KEY = 'wettbot-ios-free-v1';
   const $ = id => document.getElementById(id);
+  let competitionsCache = null;
+  async function getCompetitions(){
+    if(competitionsCache)return competitionsCache;
+    const res=await fetch('./competitions.json',{cache:'no-store'});
+    if(!res.ok)throw Error('Wettbewerbskonfiguration HTTP '+res.status);
+    const data=await res.json(),items=data.competitions;
+    if(!Array.isArray(items)||items.length!==10||new Set(items.map(x=>x.name)).size!==10||items.some(x=>!x.name||!x.espnSlug))throw Error('Ungültige Wettbewerbskonfiguration');
+    competitionsCache=items;
+    return items;
+  }
   const today = () => { const d=new Date(); d.setMinutes(d.getMinutes()-d.getTimezoneOffset()); return d.toISOString().slice(0,10); };
   const localDateTime = () => { const d = new Date(); d.setMinutes(d.getMinutes()-d.getTimezoneOffset()); return d.toISOString().slice(0,16); };
   const id = () => Date.now().toString(36) + Math.random().toString(36).slice(2,7);
@@ -264,11 +274,7 @@
   function save(){ localStorage.setItem(KEY, JSON.stringify(state)); render(); }
   function toast(s){ let el=$('toast'); if(!el){el=document.createElement('div');el.id='toast';el.className='toast hidden';el.setAttribute('role','status');document.body.appendChild(el);} el.textContent=String(s??'');el.classList.remove('hidden');setTimeout(()=>el.classList.add('hidden'),2800); }
   function eligibleLeagues(){
-    const d = new Date().getDay();
-    if ([5,6,0].includes(d)) return ['Premier League','Bundesliga','La Liga','Serie A','Ligue 1','Primeira Liga'];
-    if ([2,3].includes(d)) return ['Champions League'];
-    if (d===4) return ['Europa League','Conference League'];
-    return [];
+    return (competitionsCache||[]).map(x=>x.name);
   }
   function fmtDate(d){ if(!d)return 'Datum offen'; return new Date(d+'T12:00:00').toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric'}); }
   function evFor(o){ return (Number(o.prob)/100)*Number(o.odds)-1; }
@@ -468,13 +474,9 @@
     setMessage('Rufe den heutigen Spielplan ab …');
     let added=0;
     const errors=[];
-    const leagues=[
-      ['Premier League','eng.1'],['Bundesliga','ger.1'],['La Liga','esp.1'],
-      ['Serie A','ita.1'],['Ligue 1','fra.1'],['Primeira Liga','por.1'],
-      ['Champions League','uefa.champions'],['Europa League','uefa.europa'],
-      ['Conference League','uefa.europa.conf'],['Süper Lig (Türkei)','tur.1'],
-    ];
+    let leagues=[];
     try{
+      leagues=(await getCompetitions()).map(x=>[x.name,x.espnSlug]);
       const now=new Date();
       const date=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
       const ymd=date.replace(/-/g,'');
@@ -594,11 +596,7 @@
   $('analysisMatch').addEventListener('change',renderSelectedAnalysis);
   $('refreshAnalysisDataBtn').addEventListener('click',()=>loadAnalyses());
   async function loadFixtureSchedules(){
-    const codes=[
-      ['Premier League','eng.1'],['Bundesliga','ger.1'],['La Liga','esp.1'],
-      ['Serie A','ita.1'],['Ligue 1','fra.1'],['Primeira Liga','por.1'],
-      ['Champions League','uefa.champions'],['Europa League','uefa.europa'],['Conference League','uefa.europa.conf'],['Süper Lig (Türkei)','tur.1']
-    ];
+    const codes=(await getCompetitions()).map(x=>[x.name,x.espnSlug]);
     const now=new Date(),todayKey=now.getFullYear()+String(now.getMonth()+1).padStart(2,'0')+String(now.getDate()).padStart(2,'0');
     const settled=await Promise.allSettled(codes.map(async ([league,code])=>{
       const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),5000);
