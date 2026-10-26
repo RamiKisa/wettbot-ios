@@ -404,8 +404,16 @@ def fixture_fallback():
  for offset in range(-45,WINDOW_DAYS+1):
   sportscore_days.append(now.date()+datetime.timedelta(days=offset))
  def fetch_sportscore_safe(day):
-  try: return day,sportscore_fetch_day(day)[1],None
-  except Exception as exc: return day,[],str(exc)[:120]
+  last_error=None
+  for attempt in range(3):
+   try:
+    fetched_day,rows=sportscore_fetch_day(day)
+    return fetched_day,rows,None
+   except Exception as exc:
+    last_error=str(exc)[:120]
+    if attempt<2:
+     time.sleep(1.0*(attempt+1))
+  return day,[],last_error or "Unknown SportScore fetch failure"
  with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
   for day,rows,error in pool.map(fetch_sportscore_safe,sportscore_days):
    if error:
