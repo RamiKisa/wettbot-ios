@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "timezone": "Europe/Berlin",
+  "fixtureWindowDays": 7,
+  "competitions": [
+    {
+      "name": "Bundesliga",
+      "espnSlug": "ger.1",
+      "apiFootballId": 78,
+      "openFootballFile": "de.1.json",
+      "openFootballTimezone": "Europe/Berlin"
+    },
+    {
+      "name": "Serie A",
+      "espnSlug": "ita.1",
+      "apiFootballId": 135,
+      "openFootballFile": "it.1.json",
+      "openFootballTimezone": "Europe/Rome"
+    },
+    {
+      "name": "Ligue 1",
+      "espnSlug": "fra.1",
+      "apiFootballId": 61,
+      "openFootballFile": "fr.1.json",
+      "openFootballTimezone": "Europe/Paris"
+    },
+    {
+      "name": "La Liga",
+      "espnSlug": "esp.1",
+      "apiFootballId": 140,
+      "openFootballFile": "es.1.json",
+      "openFootballTimezone": "Europe/Madrid"
+    },
+    {
+      "name": "Premier League",
+      "espnSlug": "eng.1",
+      "apiFootballId": 39,
+      "openFootballFile": "en.1.json",
+      "openFootballTimezone": "Europe/London"
+    },
+    {
+      "name": "Süper Lig",
+      "espnSlug": "tur.1",
+      "apiFootballId": 203,
+      "openFootballFile": "tr.1.json",
+      "openFootballTimezone": "Europe/Istanbul"
+    },
+    {
+      "name": "Primeira Liga",
+      "espnSlug": "por.1",
+      "apiFootballId": 94,
+      "openFootballFile": "pt.1.json",
+      "openFootballTimezone": "Europe/Lisbon"
+    },
+    {
+      "name": "Champions League",
+      "espnSlug": "uefa.champions",
+      "apiFootballId": 2
+    },
+    {
+      "name": "Europa League",
+      "espnSlug": "uefa.europa",
+      "apiFootballId": 3
+    },
+    {
+      "name": "Conference League",
+      "espnSlug": "uefa.europa.conf",
+      "apiFootballId": 848
+    }
+  ]
+}
