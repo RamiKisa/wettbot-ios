@@ -33,6 +33,7 @@ jobs:
       - name: Generate, validate and publish current football data
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
         shell: bash
         run: |
           set -euo pipefail
