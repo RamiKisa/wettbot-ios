@@ -293,8 +293,8 @@ def fixture_fallback():
   f["h2h"]=sorted([x for x in history_by_team.get(team_key(f["home"]),[]) if team_key(x.get("opponent"))==team_key(f["away"])],key=lambda x:x["date"])[-5:]
  enrich_team_news(all_matches,max_teams=40)
  enrich_google_team_research(all_matches,max_teams=20)
- print("Fallback fixture counts by league:",json.dumps(dict(sorted(collections.Counter(x.get("league","UNKNOWN") for x in all_matches).items()),ensure_ascii=False))
- print("Fallback fixture counts by source:",json.dumps(dict(sorted(collections.Counter(x.get("source","unknown") for x in all_matches).items()),ensure_ascii=False))
+ print("Fallback fixture counts by league:",json.dumps(dict(sorted(collections.Counter(x.get("league","UNKNOWN") for x in all_matches).items())),ensure_ascii=False))
+ print("Fallback fixture counts by source:",json.dumps(dict(sorted(collections.Counter(x.get("source","unknown") for x in all_matches).items())),ensure_ascii=False))
  print("Source errors:",json.dumps(errors[:30],ensure_ascii=False))
  return all_matches,errors
 if not KEY:
