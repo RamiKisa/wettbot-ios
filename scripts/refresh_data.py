@@ -6,7 +6,7 @@ COMPETITIONS=CONFIG["competitions"]
 if len(COMPETITIONS)!=10 or len({x.get("name") for x in COMPETITIONS})!=10:
  raise SystemExit("competitions.json must contain exactly 10 uniquely named configured competitions")
 OUT=ROOT/"recommendations.json"; now=datetime.datetime.now(datetime.timezone.utc)
-TEAM_RESEARCH_CACHE={"news":{},"googleSearch":{}}
+TEAM_RESEARCH_CACHE={"news":{},"googleSearch":{}}; TEAM_RESEARCH_ERRORS=[]
 season=now.year if now.month>=6 else now.year-1
 WINDOW_DAYS=max(1,min(60,int(CONFIG.get("fixtureWindowDays",7))))
 leagues={x["name"]:(x["openFootballFile"],x["openFootballTimezone"]) for x in COMPETITIONS if x.get("openFootballFile") and x.get("openFootballTimezone")}
@@ -17,6 +17,8 @@ API_LEAGUE_IDS={x["name"]:x["apiFootballId"] for x in COMPETITIONS if x.get("api
 BUDGET=20; DAILY_QUOTA_RESERVE=10; used=0; API_DAILY_REMAINING=None; LAST_API_REQUEST=0.0
 def save(x):
  x.setdefault("teamResearchCache",TEAM_RESEARCH_CACHE)
+ x.setdefault("researchErrors",TEAM_RESEARCH_ERRORS[-100:])
+ x.setdefault("researchSummary",{kind:{"teamsCached":len(items),"cachedErrors":sum(1 for v in items.values() if v.get("status")=="error")} for kind,items in TEAM_RESEARCH_CACHE.items()})
  OUT.write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding="utf-8")
 def api(path,params):
  global used, API_DAILY_REMAINING, LAST_API_REQUEST
@@ -77,8 +79,8 @@ def fetch_team_news(team):
    if title and link.startswith('https://'):
     items.append({'title':title,'url':link,'publishedAt':pub,'source':source or 'Google News RSS'})
   return items
- except Exception as e:
-  return []
+ except Exception:
+  return None
 def fetch_google_search(query, limit=5):
  # Google web search is used as a link/snippet discovery source; results are not treated as verified structured statistics.
  url='https://www.google.com/search?'+urllib.parse.urlencode({'q':query,'hl':'de','num':str(limit)})
@@ -118,9 +120,17 @@ def fetch_google_search(query, limit=5):
    if len(out)>=limit: break
   return out
  except Exception:
-  return []
+  return None
 def research_cache_fresh(entry,ttl_hours):
- if not isinstance(entry,dict) or not isinstance(entry.get("items"),list) or not entry.get("updatedAt"): return False
+ if not isinstance(entry,dict) or not isinstance(entry.get("items"),list): return False
+ if entry.get("status")=="error":
+  try:
+   retry=datetime.datetime.fromisoformat(str(entry.get("retryAfterAt","")).replace("Z","+00:00"))
+   if retry.tzinfo is None: retry=retry.replace(tzinfo=datetime.timezone.utc)
+   return now<retry
+  except Exception:
+   return False
+ if not entry.get("updatedAt"): return False
  try:
   stamp=datetime.datetime.fromisoformat(str(entry["updatedAt"]).replace("Z","+00:00"))
   if stamp.tzinfo is None: stamp=stamp.replace(tzinfo=datetime.timezone.utc)
@@ -128,6 +138,19 @@ def research_cache_fresh(entry,ttl_hours):
   return datetime.timedelta(0)<=age<=datetime.timedelta(hours=ttl_hours)
  except Exception:
   return False
+def store_research_result(kind,team,items):
+ cache=TEAM_RESEARCH_CACHE.setdefault(kind,{})
+ if isinstance(items,list):
+  entry={"items":items,"updatedAt":now.isoformat(),"status":"ok"}
+ else:
+  previous=cache.get(team,{})
+  retry=(now+datetime.timedelta(hours=2)).isoformat()
+  entry={"items":previous.get("items",[]) if isinstance(previous,dict) else [],
+         "updatedAt":previous.get("updatedAt") if isinstance(previous,dict) else None,
+         "status":"error","lastAttemptAt":now.isoformat(),"retryAfterAt":retry}
+  TEAM_RESEARCH_ERRORS.append({"source":kind,"team":team,"error":"source request failed","at":now.isoformat()})
+ cache[team]=entry
+ return entry
 def team_names(fixtures):
  names=[]
  for fixture in fixtures:
@@ -143,12 +166,14 @@ def enrich_google_team_research(fixtures, max_teams=40):
   for future in concurrent.futures.as_completed(futures):
    team=futures[future]
    try: items=future.result()
-   except Exception: items=[]
-   cache[team]={"items":items,"updatedAt":now.isoformat()}
+   except Exception: items=None
+   store_research_result("googleSearch",team,items)
  for fixture in fixtures:
   home_entry=cache.get(fixture.get("home"),{}); away_entry=cache.get(fixture.get("away"),{})
   fixture["googleResearch"]={"home":home_entry.get("items",[]),"away":away_entry.get("items",[])}
-  if fixture.get("home") in stale or fixture.get("away") in stale:
+  if home_entry.get("status")=="error" or away_entry.get("status")=="error":
+   note="Google-Suche momentan nicht erreichbar; vorhandene Treffer können älter sein"
+  elif fixture.get("home") in stale or fixture.get("away") in stale:
    note="Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
   else:
    note="Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
@@ -161,13 +186,15 @@ def enrich_team_news(fixtures, max_teams=None):
   for future in concurrent.futures.as_completed(futures):
    team=futures[future]
    try: items=future.result()
-   except Exception: items=[]
-   cache[team]={"items":items,"updatedAt":now.isoformat()}
+   except Exception: items=None
+   store_research_result("news",team,items)
  for fixture in fixtures:
   home_entry=cache.get(fixture.get("home"),{}); away_entry=cache.get(fixture.get("away"),{})
   fixture["teamNews"]={"home":home_entry.get("items",[]),"away":away_entry.get("items",[])}
   fresh_home=research_cache_fresh(home_entry,12); fresh_away=research_cache_fresh(away_entry,12)
-  if not fresh_home or not fresh_away:
+  if home_entry.get("status")=="error" or away_entry.get("status")=="error":
+   note="Google News RSS momentan nicht erreichbar; vorhandene Treffer können älter sein"
+  elif not fresh_home or not fresh_away:
    note="Team-News-Cache teilweise älter; Abruf wird im nächsten Aktualisierungslauf ergänzt"
   elif fixture["teamNews"]["home"] or fixture["teamNews"]["away"]:
    note="Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)"
