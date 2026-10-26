@@ -6,6 +6,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/refresh_data.py'
+      - 'scripts/feed_utils.py'
+      - 'tests/test_feed_utils.py'
       - 'competitions.json'
       - '.github/workflows/refresh-data.yml'
   schedule:
@@ -42,7 +44,8 @@ jobs:
             git fetch origin main
             git checkout -B main origin/main
 
-            python3 -m py_compile scripts/refresh_data.py
+            python3 -m py_compile scripts/refresh_data.py scripts/feed_utils.py
+            python3 -m unittest discover -s tests -v
             python3 scripts/refresh_data.py
 
             python3 - <<'PY'
