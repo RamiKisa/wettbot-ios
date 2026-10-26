@@ -559,8 +559,8 @@ def fixture_fallback():
  pair=tuple(sorted((home_key,away_key)))
  key=(match.get("league"),match.get("date","")[:10],pair)
  if key in seen:
-  duplicate_sources[match.get("source","unknown")]+=1
-  continue
+ duplicate_sources[match.get("source","unknown")]+=1
+ continue
  seen.add(key); unique.append(match)
  print("Duplicate fixtures removed by source:",json.dumps(dict(sorted(duplicate_sources.items())),ensure_ascii=False))
  all_matches=unique
@@ -571,22 +571,22 @@ def fixture_fallback():
  def last_five(team,league):
  combined={}
  for row in history.get((league,team),[])+history_by_team.get(team_key(team),[]):
-  key=(str(row.get("date",""))[:10],team_key(row.get("opponent")),row.get("gf"),row.get("ga"))
-  prior=combined.get(key)
-  # Prefer precise ESPN kickoff time/source metadata when the two feeds describe the same result.
-  if prior is None or row.get("historySource")=="ESPN completed scoreboard":
-   combined[key]=row
+ key=(str(row.get("date",""))[:10],team_key(row.get("opponent")),row.get("gf"),row.get("ga"))
+ prior=combined.get(key)
+ # Prefer precise ESPN kickoff time/source metadata when the two feeds describe the same result.
+ if prior is None or row.get("historySource")=="ESPN completed scoreboard":
+  combined[key]=row
  return sorted(combined.values(),key=lambda x:x.get("date",""))[-5:]
  # Estimate league home/away goal baselines from unique completed matches, not duplicated team-perspective rows.
  unique_matches_by_league={}
  for (history_league,_team),rows in history.items():
  for row in rows:
-  hg=row.get("homeGoals"); ag=row.get("awayGoals")
-  if hg is None or ag is None or not row.get("home") or not row.get("away"): continue
-  try: hg=int(hg); ag=int(ag)
-  except (TypeError,ValueError): continue
-  match_key=(str(row.get("date",""))[:10],team_key(row.get("home")),team_key(row.get("away")),hg,ag)
-  unique_matches_by_league.setdefault(history_league,{})[match_key]=(hg,ag)
+ hg=row.get("homeGoals"); ag=row.get("awayGoals")
+ if hg is None or ag is None or not row.get("home") or not row.get("away"): continue
+ try: hg=int(hg); ag=int(ag)
+ except (TypeError,ValueError): continue
+ match_key=(str(row.get("date",""))[:10],team_key(row.get("home")),team_key(row.get("away")),hg,ag)
+ unique_matches_by_league.setdefault(history_league,{})[match_key]=(hg,ag)
  global_match_map={}
  for games in unique_matches_by_league.values():
  global_match_map.update(games)
@@ -603,7 +603,7 @@ def fixture_fallback():
  home_sources=sorted({row.get("historySource","OpenFootball season results") for row in h})
  away_sources=sorted({row.get("historySource","OpenFootball season results") for row in a})
  f["dataCoverage"]["recentForm"]="Heim: %s/5; Gast: %s/5; Quellen: %s" % (
-  len(h),len(a),", ".join(sorted(set(home_sources+away_sources))) or "keine"
+ len(h),len(a),", ".join(sorted(set(home_sources+away_sources))) or "keine"
  )
  league_home_avg,league_away_avg=league_baselines.get(f["league"],(global_home_avg,global_away_avg))
  prediction=poisson_match_model(h,a,league_home_avg,league_away_avg)
@@ -614,9 +614,9 @@ def fixture_fallback():
  enough_form=len(h)>=3 and len(a)>=3
  f["analysisStatus"]="model_estimate" if enough_form else "limited_model"
  f["dataCoverage"]["prediction"]=(
-  "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim %s Historien, Gast %s Historien; nicht extern validiert" % (len(h),len(a))
-  if enough_form else
-  "Begrenzte Modellbasis: Heim %s/5 und Gast %s/5 historische Ergebnisse; Liga-Durchschnitt gleicht fehlende Werte teilweise aus" % (len(h),len(a))
+ "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim %s Historien, Gast %s Historien; nicht extern validiert" % (len(h),len(a))
+ if enough_form else
+ "Begrenzte Modellbasis: Heim %s/5 und Gast %s/5 historische Ergebnisse; Liga-Durchschnitt gleicht fehlende Werte teilweise aus" % (len(h),len(a))
  )
  f["marketCoverage"]={"1X2":"Poisson-Modell aus jüngster Teamform und Liga-Heim-/Auswärtsschnitt","overUnder":"Poisson-Torverteilung","btts":"Poisson-Torverteilung","corners":"Keine belastbare kostenlose Prognose verfügbar","cards":"Keine belastbare kostenlose Prognose verfügbar","playerProps":"Keine belastbare kostenlose Prognose verfügbar"}
  f["h2h"]=sorted([x for x in history_by_team.get(team_key(f["home"]),[]) if team_key(x.get("opponent"))==team_key(f["away"])],key=lambda x:x.get("date",""))[-5:]
@@ -631,10 +631,10 @@ def fixture_fallback():
  status_by_league.setdefault(league_name,collections.Counter())[fixture.get("analysisStatus","unknown")]+=1
  date_value=fixture.get("date")
  if date_value:
-  date_obj=datetime.datetime.fromisoformat(date_value.replace("Z","+00:00"))
-  bounds=date_bounds.setdefault(league_name,{"first":date_obj,"last":date_obj})
-  if date_obj<bounds["first"]: bounds["first"]=date_obj
-  if date_obj>bounds["last"]: bounds["last"]=date_obj
+ date_obj=datetime.datetime.fromisoformat(date_value.replace("Z","+00:00"))
+ bounds=date_bounds.setdefault(league_name,{"first":date_obj,"last":date_obj})
+ if date_obj<bounds["first"]: bounds["first"]=date_obj
+ if date_obj>bounds["last"]: bounds["last"]=date_obj
  print("Analysis status by league:",json.dumps({k:dict(v) for k,v in sorted(status_by_league.items())},ensure_ascii=False))
  print("Fixture date bounds by league:",json.dumps({k:{"count":status_by_league[k].total(),"first":v["first"].isoformat(),"last":v["last"].isoformat()} for k,v in sorted(date_bounds.items())},ensure_ascii=False))
  print("Source errors:",json.dumps(errors[:30],ensure_ascii=False))
@@ -643,8 +643,8 @@ def fixture_fallback():
  for key,rows in history_by_team.items():
  unique={}
  for row in rows:
-  row_key=(str(row.get("date",""))[:10],row.get("opponent"),row.get("gf"),row.get("ga"))
-  unique[row_key]=row
+ row_key=(str(row.get("date",""))[:10],row.get("opponent"),row.get("gf"),row.get("ga"))
+ unique[row_key]=row
  compact_history[key]=sorted(unique.values(),key=lambda x:x.get("date",""))[-10:]
  return all_matches,errors,compact_history
 def normalize_team_name(value):
@@ -708,8 +708,8 @@ def hydrate_team_research_cache(data):
  for kind in ("news","googleSearch"):
  stored=cache.get(kind) if isinstance(cache.get(kind),dict) else {}
  for team,entry in stored.items():
-  if isinstance(team,str) and isinstance(entry,dict) and isinstance(entry.get("items"),list):
-   TEAM_RESEARCH_CACHE[kind][team]=entry
+ if isinstance(team,str) and isinstance(entry,dict) and isinstance(entry.get("items"),list):
+  TEAM_RESEARCH_CACHE[kind][team]=entry
  if any(TEAM_RESEARCH_CACHE[kind] for kind in ("news","googleSearch")):
  return
  stamp=data.get("generatedAt")
@@ -721,14 +721,14 @@ def hydrate_team_research_cache(data):
  home=old.get("home"); away=old.get("away")
  news=old.get("teamNews") if isinstance(old.get("teamNews"),dict) else {}
  if "nicht abgefragt" not in str(coverage.get("teamNews","")).lower() and "budget" not in str(coverage.get("teamNews","")).lower():
-  for team,side in ((home,"home"),(away,"away")):
-   if team and isinstance(news.get(side),list):
-    TEAM_RESEARCH_CACHE["news"].setdefault(team,{"items":news[side],"updatedAt":stamp})
+ for team,side in ((home,"home"),(away,"away")):
+  if team and isinstance(news.get(side),list):
+   TEAM_RESEARCH_CACHE["news"].setdefault(team,{"items":news[side],"updatedAt":stamp})
  google=old.get("googleResearch") if isinstance(old.get("googleResearch"),dict) else {}
  if "nur ein teil" not in str(coverage.get("googleResearch","")).lower():
-  for team,side in ((home,"home"),(away,"away")):
-   if team and isinstance(google.get(side),list):
-    TEAM_RESEARCH_CACHE["googleSearch"].setdefault(team,{"items":google[side],"updatedAt":stamp})
+ for team,side in ((home,"home"),(away,"away")):
+  if team and isinstance(google.get(side),list):
+   TEAM_RESEARCH_CACHE["googleSearch"].setdefault(team,{"items":google[side],"updatedAt":stamp})
 hydrate_team_research_cache(previous_data)
 previous_api={}
 for old in previous_data.get("recommendations",[]) if isinstance(previous_data.get("recommendations"),list) else []:
@@ -758,7 +758,7 @@ for item in fixtures:
  item["apiFootballPrediction"]=cached.get("prediction")
  item["apiFootballPredictionUpdatedAt"]=cached["predictionUpdatedAt"]
  item.setdefault("dataCoverage",{})["apiFootballPrediction"]=(
-  "API-Football-Prognose (zwischengespeichert)" if cached.get("prediction") else "Letzte API-Abfrage lieferte keine Prognose"
+ "API-Football-Prognose (zwischengespeichert)" if cached.get("prediction") else "Letzte API-Abfrage lieferte keine Prognose"
  )
  if cached.get("injuries") is not None and cache_is_fresh(cached.get("injuriesUpdatedAt"),kickoff):
  item["apiFootballInjuries"]=cached["injuries"]
@@ -813,74 +813,74 @@ if api_status is not None:
  league_name=comp["name"]; league_id=comp.get("apiFootballId")
  if league_id is None: continue
  try:
-  result=api("fixtures",{"league":league_id,"season":season,"from":start,"to":end,"timezone":CONFIG.get("timezone","Europe/Berlin")})
+ result=api("fixtures",{"league":league_id,"season":season,"from":start,"to":end,"timezone":CONFIG.get("timezone","Europe/Berlin")})
  except Exception as exc:
-  text=str(exc)
-  if "Run-Budget erreicht" in text or "Tagesquote geschützt" in text:
-   errors.append("API-Football fixture enrichment paused: "+text); break
-  errors.append(league_name+" API-Football fixtures: "+text[:100]); continue
+ text=str(exc)
+ if "Run-Budget erreicht" in text or "Tagesquote geschützt" in text:
+  errors.append("API-Football fixture enrichment paused: "+text); break
+ errors.append(league_name+" API-Football fixtures: "+text[:100]); continue
  for row in result if isinstance(result,list) else []:
-  fixture=row.get("fixture") or {}; teams=row.get("teams") or {}
-  rawdate=fixture.get("date"); home=(teams.get("home") or {}).get("name"); away=(teams.get("away") or {}).get("name")
-  if not rawdate or not home or not away: continue
-  try:
-   kickoff=datetime.datetime.fromisoformat(str(rawdate).replace("Z","+00:00"))
-   if kickoff.tzinfo is None: kickoff=kickoff.replace(tzinfo=datetime.timezone.utc)
-  except Exception: continue
-  if kickoff<=now or kickoff>now+datetime.timedelta(days=WINDOW_DAYS): continue
-  try: sig=fixture_signature(league_name,rawdate,home,away)
-  except Exception: continue
-  venue=(fixture.get("venue") or {}).get("name")
-  api_match={"league":league_name,"date":kickoff.isoformat(),"home":home,"away":away,"fixtureId":fixture.get("id"),"venue":venue,
-             "homeId":(teams.get("home") or {}).get("id"),"awayId":(teams.get("away") or {}).get("id"),"timestamp":kickoff.timestamp()}
-  matches=base_index.get(sig,[])
-  if matches:
-   item=matches[0]
-   item["apiFootballFixtureId"]=fixture.get("id")
-   item["apiFootballHomeId"]=api_match["homeId"]; item["apiFootballAwayId"]=api_match["awayId"]
-   if venue and not item.get("venue"): item["venue"]=venue
-   api_fixtures_matched+=1
-  else:
-   model=poisson_match_model([],[])
-   winner_key=max(model["probabilities"],key=model["probabilities"].get)
-   model["winner"]={"home":home,"draw":"Unentschieden","away":away}[winner_key]
-   model["winnerComment"]="Eingeschränkte Basis-Modellschätzung; keine passenden jüngsten Ergebnisse gefunden"
-   item={"id":"api-football-"+str(fixture.get("id")),"date":kickoff.isoformat(),"timestamp":kickoff.timestamp(),
-         "league":league_name,"home":home,"away":away,"venue":venue,"status":"scheduled","source":"API-Football",
-         "analysisStatus":"limited_model","prediction":model,"form":{"home":[],"away":[]},"h2h":[],
-         "dataCoverage":{"fixture":"API-Football","recentForm":"Keine passenden jüngsten Team-Ergebnisse in den kostenlosen Quellen",
-                         "prediction":"Eingeschränkte Poisson-Basisschätzung; Teamdaten fehlen"}}
-   fixtures.append(item); base_index.setdefault(sig,[]).append(item); api_only_fixtures+=1
+ fixture=row.get("fixture") or {}; teams=row.get("teams") or {}
+ rawdate=fixture.get("date"); home=(teams.get("home") or {}).get("name"); away=(teams.get("away") or {}).get("name")
+ if not rawdate or not home or not away: continue
+ try:
+  kickoff=datetime.datetime.fromisoformat(str(rawdate).replace("Z","+00:00"))
+  if kickoff.tzinfo is None: kickoff=kickoff.replace(tzinfo=datetime.timezone.utc)
+ except Exception: continue
+ if kickoff<=now or kickoff>now+datetime.timedelta(days=WINDOW_DAYS): continue
+ try: sig=fixture_signature(league_name,rawdate,home,away)
+ except Exception: continue
+ venue=(fixture.get("venue") or {}).get("name")
+ api_match={"league":league_name,"date":kickoff.isoformat(),"home":home,"away":away,"fixtureId":fixture.get("id"),"venue":venue,
+            "homeId":(teams.get("home") or {}).get("id"),"awayId":(teams.get("away") or {}).get("id"),"timestamp":kickoff.timestamp()}
+ matches=base_index.get(sig,[])
+ if matches:
+  item=matches[0]
   item["apiFootballFixtureId"]=fixture.get("id")
-  if item.get("apiFootballPredictionUpdatedAt") and cache_is_fresh(item.get("apiFootballPredictionUpdatedAt"),kickoff):
-   continue
-  api_rows.append((kickoff.timestamp(),item,api_match))
+  item["apiFootballHomeId"]=api_match["homeId"]; item["apiFootballAwayId"]=api_match["awayId"]
+  if venue and not item.get("venue"): item["venue"]=venue
+  api_fixtures_matched+=1
+ else:
+  model=poisson_match_model([],[])
+  winner_key=max(model["probabilities"],key=model["probabilities"].get)
+  model["winner"]={"home":home,"draw":"Unentschieden","away":away}[winner_key]
+  model["winnerComment"]="Eingeschränkte Basis-Modellschätzung; keine passenden jüngsten Ergebnisse gefunden"
+  item={"id":"api-football-"+str(fixture.get("id")),"date":kickoff.isoformat(),"timestamp":kickoff.timestamp(),
+        "league":league_name,"home":home,"away":away,"venue":venue,"status":"scheduled","source":"API-Football",
+        "analysisStatus":"limited_model","prediction":model,"form":{"home":[],"away":[]},"h2h":[],
+        "dataCoverage":{"fixture":"API-Football","recentForm":"Keine passenden jüngsten Team-Ergebnisse in den kostenlosen Quellen",
+                        "prediction":"Eingeschränkte Poisson-Basisschätzung; Teamdaten fehlen"}}
+  fixtures.append(item); base_index.setdefault(sig,[]).append(item); api_only_fixtures+=1
+ item["apiFootballFixtureId"]=fixture.get("id")
+ if item.get("apiFootballPredictionUpdatedAt") and cache_is_fresh(item.get("apiFootballPredictionUpdatedAt"),kickoff):
+  continue
+ api_rows.append((kickoff.timestamp(),item,api_match))
  # Use a bounded number of individual prediction calls; all remaining fixtures retain the tested baseline model.
  api_rows.sort(key=lambda x:x[0])
  predictions_added=0
  for _,item,api_match in api_rows[:5]:
  if used>=BUDGET or (API_DAILY_REMAINING is not None and API_DAILY_REMAINING<=DAILY_QUOTA_RESERVE): break
  try:
-  rows=api("predictions",{"fixture":api_match["fixtureId"]})
-  item["apiFootballPredictionUpdatedAt"]=now.isoformat()
-  if rows:
-   row=rows[0]; pred=row.get("predictions") or {}; percent=pred.get("percent") or {}; goals=pred.get("goals") or {}
-   item["apiFootballPrediction"]={
-    "winner":(pred.get("winner") or {}).get("name"),
-    "winnerComment":(pred.get("winner") or {}).get("comment"),
-    "advice":pred.get("advice"),"underOver":pred.get("under_over"),
-    "homeGoals":goals.get("home"),"awayGoals":goals.get("away"),"confidence":pred.get("confidence"),
-    "probabilities":{"home":pct(percent.get("home")),"draw":pct(percent.get("draw")),"away":pct(percent.get("away"))},
-    "comparison":row.get("comparison") or {}
-   }
-   item.setdefault("dataCoverage",{})["apiFootballPrediction"]="API-Football offizielle Pre-Match-Prognose"
-   predictions_added+=1
-  else:
-   item["apiFootballPrediction"]=None
-   item.setdefault("dataCoverage",{})["apiFootballPrediction"]="Abfrage erfolgt; keine Prognose von API-Football geliefert"
+ rows=api("predictions",{"fixture":api_match["fixtureId"]})
+ item["apiFootballPredictionUpdatedAt"]=now.isoformat()
+ if rows:
+  row=rows[0]; pred=row.get("predictions") or {}; percent=pred.get("percent") or {}; goals=pred.get("goals") or {}
+  item["apiFootballPrediction"]={
+   "winner":(pred.get("winner") or {}).get("name"),
+   "winnerComment":(pred.get("winner") or {}).get("comment"),
+   "advice":pred.get("advice"),"underOver":pred.get("under_over"),
+   "homeGoals":goals.get("home"),"awayGoals":goals.get("away"),"confidence":pred.get("confidence"),
+   "probabilities":{"home":pct(percent.get("home")),"draw":pct(percent.get("draw")),"away":pct(percent.get("away"))},
+   "comparison":row.get("comparison") or {}
+  }
+  item.setdefault("dataCoverage",{})["apiFootballPrediction"]="API-Football offizielle Pre-Match-Prognose"
+  predictions_added+=1
+ else:
+  item["apiFootballPrediction"]=None
+  item.setdefault("dataCoverage",{})["apiFootballPrediction"]="Abfrage erfolgt; keine Prognose von API-Football geliefert"
  except Exception as exc:
-  errors.append("API-Football prediction "+str(api_match["fixtureId"])+": "+str(exc)[:100])
-  if "Run-Budget erreicht" in str(exc) or "Tagesquote geschützt" in str(exc): break
+ errors.append("API-Football prediction "+str(api_match["fixtureId"])+": "+str(exc)[:100])
+ if "Run-Budget erreicht" in str(exc) or "Tagesquote geschützt" in str(exc): break
  # Injury data is reserved for the next three matches with API IDs and kickoff within 72 hours.
  injuries_added=0
  injury_candidates=[]
@@ -891,19 +891,19 @@ if api_status is not None:
  except Exception: continue
  if kickoff.tzinfo is None: kickoff=kickoff.replace(tzinfo=datetime.timezone.utc)
  if now<kickoff<=now+datetime.timedelta(hours=72) and not cache_is_fresh(item.get("apiFootballInjuriesUpdatedAt"),kickoff,near_hours=48):
-  injury_candidates.append((kickoff.timestamp(),item))
+ injury_candidates.append((kickoff.timestamp(),item))
  for _,item in sorted(injury_candidates,key=lambda x:x[0])[:3]:
  if used>=BUDGET or (API_DAILY_REMAINING is not None and API_DAILY_REMAINING<=DAILY_QUOTA_RESERVE): break
  try:
-  rows=api("injuries",{"fixture":item["apiFootballFixtureId"]})
-  item["apiFootballInjuries"]=[{"player":(x.get("player") or {}).get("name"),"type":(x.get("player") or {}).get("type"),
-    "reason":(x.get("player") or {}).get("reason"),"team":(x.get("team") or {}).get("name")} for x in rows]
-  item["apiFootballInjuriesUpdatedAt"]=now.isoformat()
-  item.setdefault("dataCoverage",{})["injuries"]="API-Football" if rows else "Abfrage erfolgt; keine Einträge geliefert"
-  injuries_added+=bool(rows)
+ rows=api("injuries",{"fixture":item["apiFootballFixtureId"]})
+ item["apiFootballInjuries"]=[{"player":(x.get("player") or {}).get("name"),"type":(x.get("player") or {}).get("type"),
+   "reason":(x.get("player") or {}).get("reason"),"team":(x.get("team") or {}).get("name")} for x in rows]
+ item["apiFootballInjuriesUpdatedAt"]=now.isoformat()
+ item.setdefault("dataCoverage",{})["injuries"]="API-Football" if rows else "Abfrage erfolgt; keine Einträge geliefert"
+ injuries_added+=bool(rows)
  except Exception as exc:
-  errors.append("API-Football injuries "+str(item["apiFootballFixtureId"])+": "+str(exc)[:100])
-  if "Run-Budget erreicht" in str(exc) or "Tagesquote geschützt" in str(exc): break
+ errors.append("API-Football injuries "+str(item["apiFootballFixtureId"])+": "+str(exc)[:100])
+ if "Run-Budget erreicht" in str(exc) or "Tagesquote geschützt" in str(exc): break
  # Ask for a lineup only when kickoff is near enough for official lineups to exist; at most one extra call per run.
  lineup_candidates=[]
  for item in fixtures:
@@ -913,18 +913,18 @@ if api_status is not None:
  except Exception: continue
  if kickoff.tzinfo is None: kickoff=kickoff.replace(tzinfo=datetime.timezone.utc)
  if now<kickoff<=now+datetime.timedelta(hours=36) and not cache_is_fresh(item.get("apiFootballLineupsUpdatedAt"),kickoff,near_hours=36):
-  lineup_candidates.append((kickoff.timestamp(),item))
+ lineup_candidates.append((kickoff.timestamp(),item))
  for _,item in sorted(lineup_candidates,key=lambda x:x[0])[:1]:
  if used>=BUDGET or (API_DAILY_REMAINING is not None and API_DAILY_REMAINING<=DAILY_QUOTA_RESERVE): break
  try:
-  rows=api("fixtures/lineups",{"fixture":item["apiFootballFixtureId"]})
-  item["apiFootballLineups"]=[{"team":x.get("team",{}).get("name"),"formation":x.get("formation"),
-   "startXI":[(z.get("player") or {}).get("name") for z in x.get("startXI",[])],
-   "substitutes":[(z.get("player") or {}).get("name") for z in x.get("substitutes",[])]} for x in rows]
-  item["apiFootballLineupsUpdatedAt"]=now.isoformat()
-  item.setdefault("dataCoverage",{})["lineups"]="API-Football" if rows else "Abfrage erfolgt; offizielle Aufstellungen noch nicht veröffentlicht"
+ rows=api("fixtures/lineups",{"fixture":item["apiFootballFixtureId"]})
+ item["apiFootballLineups"]=[{"team":x.get("team",{}).get("name"),"formation":x.get("formation"),
+  "startXI":[(z.get("player") or {}).get("name") for z in x.get("startXI",[])],
+  "substitutes":[(z.get("player") or {}).get("name") for z in x.get("substitutes",[])]} for x in rows]
+ item["apiFootballLineupsUpdatedAt"]=now.isoformat()
+ item.setdefault("dataCoverage",{})["lineups"]="API-Football" if rows else "Abfrage erfolgt; offizielle Aufstellungen noch nicht veröffentlicht"
  except Exception as exc:
-  errors.append("API-Football lineups "+str(item["apiFootballFixtureId"])+": "+str(exc)[:100])
+ errors.append("API-Football lineups "+str(item["apiFootballFixtureId"])+": "+str(exc)[:100])
 # Preserve model predictions for every fixture and attach a compact quality summary.
 for item in fixtures:
  item.setdefault("dataCoverage",{})
