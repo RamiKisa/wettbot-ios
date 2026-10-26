@@ -1,5 +1,6 @@
 import json, os, datetime, urllib.request, urllib.parse, urllib.error, pathlib, base64, collections, concurrent.futures, time, re, unicodedata
 KEY=os.environ.get("API_FOOTBALL_KEY","").strip()
+FOOTBALL_DATA_TOKEN=os.environ.get("FOOTBALL_DATA_TOKEN","").strip()
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 CONFIG=json.loads((ROOT/"competitions.json").read_text(encoding="utf-8"))
 COMPETITIONS=CONFIG["competitions"]
@@ -430,6 +431,64 @@ def fixture_fallback():
  print("SportScore upcoming fixtures by league:",json.dumps(dict(sorted(sportscore_fixture_counts.items())),ensure_ascii=False))
  print("SportScore completed history matches by league:",json.dumps(dict(sorted(sportscore_history_counts.items())),ensure_ascii=False))
  print("SportScore daily requests:",len(sportscore_days),"; errors:",len(sportscore_errors))
+ # Optional registered-token source: football-data.org (independent of ESPN/API-Football).
+ # Its free tier covers only selected competitions; omit competitions without a documented code.
+ football_data_counts=collections.Counter()
+ football_data_history_counts=collections.Counter()
+ if FOOTBALL_DATA_TOKEN:
+  for comp in COMPETITIONS:
+   code=comp.get("footballDataCode")
+   if not code: continue
+   league=comp["name"]
+   params=urllib.parse.urlencode({
+    "dateFrom":(now.date()-datetime.timedelta(days=45)).isoformat(),
+    "dateTo":(now.date()+datetime.timedelta(days=WINDOW_DAYS)).isoformat()
+   })
+   url="https://api.football-data.org/v4/competitions/"+urllib.parse.quote(str(code),safe="")+"/matches?"+params
+   req=urllib.request.Request(url,headers={"X-Auth-Token":FOOTBALL_DATA_TOKEN,"Accept":"application/json","User-Agent":"RamoBet/1.0"})
+   try:
+    with urllib.request.urlopen(req,timeout=15) as resp: payload=json.load(resp)
+    rows=payload.get("matches",[]) if isinstance(payload,dict) else []
+    for row in rows:
+     if not isinstance(row,dict): continue
+     rawdate=row.get("utcDate")
+     home=(row.get("homeTeam") or {}).get("name")
+     away=(row.get("awayTeam") or {}).get("name")
+     if not rawdate or not home or not away: continue
+     try:
+      kickoff=datetime.datetime.fromisoformat(str(rawdate).replace("Z","+00:00"))
+      if kickoff.tzinfo is None: kickoff=kickoff.replace(tzinfo=datetime.timezone.utc)
+      kickoff=kickoff.astimezone(datetime.timezone.utc)
+     except Exception: continue
+     status=str(row.get("status") or "").upper()
+     if status=="FINISHED":
+      hg,ag=full_time_score(row.get("score") or {})
+      if hg is None or ag is None: continue
+      try: hg=int(hg); ag=int(ag)
+      except (TypeError,ValueError): continue
+      if hg<0 or ag<0: continue
+      for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
+       history.setdefault((league,team),[]).append({
+        "date":kickoff.isoformat(),"gf":gf,"ga":ga,
+        "result":"W" if gf>ga else "D" if gf==ga else "L",
+        "opponent":opponent,"home":home,"away":away,
+        "homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home,
+        "historySource":"football-data.org"
+       })
+      football_data_history_counts[league]+=1
+     elif now<kickoff<=now+datetime.timedelta(days=WINDOW_DAYS) and status not in {"CANCELLED","POSTPONED","SUSPENDED","ABANDONED"}:
+      all_matches.append({
+       "id":"football-data-"+str(row.get("id") or (code+"-"+kickoff.isoformat()+"-"+home+"-"+away)),
+       "date":kickoff.isoformat(),"timestamp":kickoff.timestamp(),"league":league,
+       "home":home,"away":away,"venue":row.get("venue"),"status":"scheduled",
+       "analysisStatus":"fixture_only","prediction":{},"h2h":[],
+       "source":"football-data.org","dataCoverage":{"fixture":"football-data.org"}
+      })
+      football_data_counts[league]+=1
+   except Exception as exc:
+    errors.append(league+" football-data.org: "+str(exc)[:120])
+ print("football-data.org upcoming fixtures by league:",json.dumps(dict(sorted(football_data_counts.items())),ensure_ascii=False))
+ print("football-data.org completed-history matches by league:",json.dumps(dict(sorted(football_data_history_counts.items())),ensure_ascii=False))
  # Canonical team names before source merging; this removes ESPN/OpenFootball alias duplicates.
  import unicodedata,re,math
  aliases={
