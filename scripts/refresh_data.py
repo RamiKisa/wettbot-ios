@@ -391,11 +391,14 @@ def fixture_fallback():
   url="https://sportscore.com/api/v1/fixtures/?"+params
   req=urllib.request.Request(url,headers={"User-Agent":"RamoBet/1.0 (+https://ramikisa.github.io/wettbot-ios/)","Accept":"application/json"})
   with urllib.request.urlopen(req,timeout=12) as resp:
+   if not 200<=resp.status<300: raise RuntimeError("HTTP "+str(resp.status))
    payload=json.load(resp)
   return day,sportscore_match_rows(payload)
  sportscore_fixture_counts=collections.Counter()
  sportscore_history_counts=collections.Counter()
  sportscore_errors=[]
+ sportscore_http_success=0
+ sportscore_http_empty=0
  sportscore_days=[]
  for offset in range(-45,WINDOW_DAYS+1):
   sportscore_days.append(now.date()+datetime.timedelta(days=offset))
@@ -407,6 +410,8 @@ def fixture_fallback():
    if error:
     sportscore_errors.append(day.isoformat()+": "+error)
     continue
+   sportscore_http_success+=1
+   if not rows: sportscore_http_empty+=1
    for row in rows:
     league=sportscore_competition(row.get("competition"))
     if not league: continue
@@ -447,9 +452,15 @@ def fixture_fallback():
     })
     sportscore_fixture_counts[league]+=1
  errors.extend(["SportScore "+msg for msg in sportscore_errors[:25]])
+ _diag("SportScore","error" if sportscore_errors else "ok" if sum(sportscore_fixture_counts.values()) else "empty",
+       sportscore_http_success==len(sportscore_days),sum(sportscore_fixture_counts.values()),
+       "; ".join(sportscore_errors[:8]) or None,dailyRequests=len(sportscore_days),
+       httpSuccesses=sportscore_http_success,emptyResponses=sportscore_http_empty,
+       failedDays=len(sportscore_errors),perLeague=dict(sorted(sportscore_fixture_counts.items())),
+       historyByLeague=dict(sorted(sportscore_history_counts.items())))
  print("SportScore upcoming fixtures by league:",json.dumps(dict(sorted(sportscore_fixture_counts.items())),ensure_ascii=False))
  print("SportScore completed history matches by league:",json.dumps(dict(sorted(sportscore_history_counts.items())),ensure_ascii=False))
- print("SportScore daily requests:",len(sportscore_days),"; errors:",len(sportscore_errors))
+ print("SportScore daily requests:",len(sportscore_days),"; HTTP success:",sportscore_http_success,"; empty responses:",sportscore_http_empty,"; errors:",len(sportscore_errors))
  # Optional registered-token source: football-data.org (independent of ESPN/API-Football).
  # Its free tier covers only selected competitions; omit competitions without a documented code.
  football_data_counts=collections.Counter()
