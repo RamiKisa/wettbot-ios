@@ -306,6 +306,19 @@ def fixture_fallback():
  enrich_google_team_research(all_matches,max_teams=20)
  print("Fallback fixture counts by league:",json.dumps(dict(sorted(collections.Counter(x.get("league","UNKNOWN") for x in all_matches).items())),ensure_ascii=False))
  print("Fallback fixture counts by source:",json.dumps(dict(sorted(collections.Counter(x.get("source","unknown") for x in all_matches).items())),ensure_ascii=False))
+ status_by_league={}
+ date_bounds={}
+ for fixture in all_matches:
+  league_name=fixture.get("league","UNKNOWN")
+  status_by_league.setdefault(league_name,collections.Counter())[fixture.get("analysisStatus","unknown")]+=1
+  date_value=fixture.get("date")
+  if date_value:
+   date_obj=datetime.datetime.fromisoformat(date_value.replace("Z","+00:00"))
+   bounds=date_bounds.setdefault(league_name,{"first":date_obj,"last":date_obj})
+   if date_obj<bounds["first"]: bounds["first"]=date_obj
+   if date_obj>bounds["last"]: bounds["last"]=date_obj
+ print("Analysis status by league:",json.dumps({k:dict(v) for k,v in sorted(status_by_league.items())},ensure_ascii=False))
+ print("Fixture date bounds by league:",json.dumps({k:{"count":status_by_league[k].total(),"first":v["first"].isoformat(),"last":v["last"].isoformat()} for k,v in sorted(date_bounds.items())},ensure_ascii=False))
  print("Source errors:",json.dumps(errors[:30],ensure_ascii=False))
  # Store a compact, normalized team-history index so browser-side ESPN fallback fixtures can also be modeled.
  compact_history={}
