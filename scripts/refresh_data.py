@@ -762,7 +762,6 @@ for item in fixtures:
   item["apiFootballLineupsUpdatedAt"]=cached["lineupsUpdatedAt"]
   item.setdefault("dataCoverage",{})["lineups"]="API-Football (zwischengespeichert)"
 if not KEY:
- _diag("API-Football","not_configured",None,0,"API_FOOTBALL_KEY is empty")
  coverage=coverage_summary(fixtures)
  save({
   "generatedAt":now.isoformat(),"status":"free_mode",
@@ -776,11 +775,20 @@ if not KEY:
  print("Coverage:",json.dumps(coverage,ensure_ascii=False))
  raise SystemExit(0)
 # A configured API key enriches the complete free-source baseline rather than replacing it.
+try:
+ _diag("API-Football","not_configured" if not KEY else "error",None if not KEY else False,0,"API_FOOTBALL_KEY is empty" if not KEY else "API-Football status request pending")
+except Exception:
+ pass
 api_status=None
 try:
- api_status=api("status",{})
+ if KEY:
+  api_status=api("status",{})
+  _diag("API-Football","ok" if api_status is not None else "empty",True,0,"Status endpoint succeeded; fixture counts reported separately",statusChecked=True)
+ else:
+  _diag("API-Football","not_configured",None,0,"API_FOOTBALL_KEY is empty")
 except Exception as exc:
  errors.append("API-Football status: "+str(exc)[:120])
+ _diag("API-Football","error",False,0,str(exc),statusChecked=True)
  print("API-Football unavailable; retaining complete free-source baseline:",str(exc)[:160])
 api_fixtures_matched=0; api_only_fixtures=0; predictions_added=0; injuries_added=0
 if api_status is not None:
