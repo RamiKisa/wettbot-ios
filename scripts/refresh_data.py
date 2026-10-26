@@ -1,4 +1,4 @@
-import json, os, datetime, urllib.request, urllib.parse, urllib.error, pathlib, base64, collections, concurrent.futures
+import json, os, datetime, urllib.request, urllib.parse, urllib.error, pathlib, base64, collections, concurrent.futures, time, re, unicodedata
 KEY=os.environ.get("API_FOOTBALL_KEY","").strip()
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 CONFIG=json.loads((ROOT/"competitions.json").read_text(encoding="utf-8"))
@@ -11,16 +11,39 @@ WINDOW_DAYS=max(1,min(60,int(CONFIG.get("fixtureWindowDays",7))))
 leagues={x["name"]:(x["openFootballFile"],x["openFootballTimezone"]) for x in COMPETITIONS if x.get("openFootballFile") and x.get("openFootballTimezone")}
 ESPN_SLUGS={x["name"]:x["espnSlug"] for x in COMPETITIONS if x.get("espnSlug")}
 API_LEAGUE_IDS={x["name"]:x["apiFootballId"] for x in COMPETITIONS if x.get("apiFootballId") is not None}
-BUDGET=92; used=0
+# API-Football Free plan is 100 requests/day and 10 requests/minute.
+# RamoBet refreshes four times a day: cap one run at 20 requests and preserve quota for retries/manual runs.
+BUDGET=20; DAILY_QUOTA_RESERVE=10; used=0; API_DAILY_REMAINING=None; LAST_API_REQUEST=0.0
 def save(x): OUT.write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding="utf-8")
 def api(path,params):
- global used
- if used>=BUDGET: raise RuntimeError("Tagesbudget erreicht")
- req=urllib.request.Request("https://v3.football.api-sports.io/"+path+"?"+urllib.parse.urlencode(params),headers={"x-apisports-key":KEY,"Accept":"application/json","User-Agent":"WettbotFree/3.0"})
- with urllib.request.urlopen(req,timeout=25) as resp: d=json.load(resp)
- used+=1
- if d.get("errors"): raise RuntimeError(str(d["errors"]))
- return d.get("response",[])
+ global used, API_DAILY_REMAINING, LAST_API_REQUEST
+ if used>=BUDGET: raise RuntimeError("Run-Budget erreicht (%s API-Anfragen)"%BUDGET)
+ if API_DAILY_REMAINING is not None and API_DAILY_REMAINING<=DAILY_QUOTA_RESERVE:
+  raise RuntimeError("Tagesquote geschützt: nur noch %s API-Anfragen verfügbar"%API_DAILY_REMAINING)
+ # Respect the 10 requests/minute free-plan ceiling, even on rapid workflow retries.
+ if LAST_API_REQUEST:
+  delay=6.1-(time.monotonic()-LAST_API_REQUEST)
+  if delay>0: time.sleep(delay)
+ req=urllib.request.Request("https://v3.football.api-sports.io/"+path+"?"+urllib.parse.urlencode(params),headers={"x-apisports-key":KEY,"Accept":"application/json","User-Agent":"RamoBet/3.4"})
+ used+=1 # Count attempted requests conservatively, including errors.
+ try:
+  with urllib.request.urlopen(req,timeout=25) as resp:
+   remaining_header=resp.headers.get("x-ratelimit-requests-remaining")
+   if remaining_header is not None:
+    try: API_DAILY_REMAINING=max(0,int(remaining_header))
+    except (TypeError,ValueError): pass
+   d=json.load(resp)
+  if d.get("errors"): raise RuntimeError(str(d["errors"]))
+  result=d.get("response",[])
+  if path=="status" and isinstance(result,dict):
+   req_info=result.get("requests") or {}
+   try:
+    body_remaining=max(0,int(req_info.get("limit_day"))-int(req_info.get("current")))
+    API_DAILY_REMAINING=body_remaining if API_DAILY_REMAINING is None else min(API_DAILY_REMAINING,body_remaining)
+   except (TypeError,ValueError): pass
+  return result
+ finally:
+  LAST_API_REQUEST=time.monotonic()
 def fetch_openfootball(season_year, filename):
  season_folder=str(season_year)+"-"+str((season_year+1)%100).zfill(2)
  url="https://api.github.com/repos/openfootball/football.json/contents/"+season_folder+"/"+filename+"?ref=master"
