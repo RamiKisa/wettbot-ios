@@ -132,7 +132,7 @@ def fixture_fallback():
      hg=int(hg); ag=int(ag)
      if hg>=0 and ag>=0:
       for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
-       history.setdefault((league,team),[]).append({"date":dt.isoformat(),"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent})
+       history.setdefault((league,team),[]).append({"date":dt.isoformat(),"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent,"home":home,"away":away,"homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home})
     except (TypeError,ValueError): pass
     if dt<=now: continue
     all_matches.append({"id":"fallback-"+league.lower().replace(" ","-")+"-"+str(day)+"-"+str(len(all_matches)),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenFootball","dataCoverage":{"fixture":"OpenFootball"}})
@@ -186,7 +186,7 @@ def fixture_fallback():
     for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
      rows=history.setdefault((league,team),[])
      if not any(x.get("date")==dt.isoformat() and x.get("opponent")==opponent for x in rows):
-      rows.append({"date":dt.isoformat(),"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent})
+      rows.append({"date":dt.isoformat(),"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent,"home":home,"away":away,"homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home})
   except Exception as e:
    errors.append(league+" previous-season history: "+str(e)[:70])
  # Secondary independent fixture feed: ESPN scoreboard for all supported competitions.
@@ -278,10 +278,12 @@ def fixture_fallback():
     if i>0 and j>0: btts+=p
   total=sum(probs.values()) or 1
   probs={k:round(v/total*100,1) for k,v in probs.items()}
-  f["prediction"]={"model":"Kostenloses Basis-Modell (letzte verfügbare Ergebnisse)","probabilities":probs,"homeGoals":round(lam_h,2),"awayGoals":round(lam_a,2),"underOver":"Über 2,5" if over25>=0.5 else "Unter 2,5","markets":{"over25":round(over25*100,1),"under25":round((1-over25)*100,1),"bttsYes":round(btts*100,1),"bttsNo":round((1-btts)*100,1)},"mostLikelyScore":"%s:%s"%(max(scores,key=lambda z:z[0])[1],max(scores,key=lambda z:z[0])[2])}
+  winner_key=max(probs,key=probs.get)
+  predicted_winner={"home":f["home"],"draw":"Unentschieden","away":f["away"]}[winner_key]
+  f["prediction"]={"model":"Poisson-Basismodell aus letzten verfügbaren Team-Ergebnissen","winner":predicted_winner,"winnerComment":"Modellschätzung, keine bestätigte Marktprognose","probabilities":probs,"homeGoals":round(lam_h,2),"awayGoals":round(lam_a,2),"underOver":"Über 2,5" if over25>=0.5 else "Unter 2,5","markets":{"over25":round(over25*100,1),"under25":round((1-over25)*100,1),"bttsYes":round(btts*100,1),"bttsNo":round((1-btts)*100,1)},"mostLikelyScore":"%s:%s"%(max(scores,key=lambda z:z[0])[1],max(scores,key=lambda z:z[0])[2])}
   f["analysisStatus"]="model_estimate" if h or a else "limited_model"
   f["dataCoverage"]["prediction"]="Eigene Poisson-Schätzung aus letzten Team-Ergebnissen; nicht extern validiert" if h or a else "Begrenzte Basisschätzung: keine passenden Team-Ergebnisse gefunden"
-  f["marketCoverage"]={"1X2":True,"overUnder":True,"btts":"Poisson-Modell","corners":"Keine belastbare kostenlose Prognose verfügbar","cards":"Keine belastbare kostenlose Prognose verfügbar","playerProps":"Keine belastbare kostenlose Prognose verfügbar"}
+  f["marketCoverage"]={"1X2":"Poisson-Modell aus Team-Ergebnissen","overUnder":"Poisson-Torverteilung","btts":"Poisson-Torverteilung","corners":"Keine belastbare kostenlose Prognose verfügbar","cards":"Keine belastbare kostenlose Prognose verfügbar","playerProps":"Keine belastbare kostenlose Prognose verfügbar"}
   f["h2h"]=sorted([x for x in history_by_team.get(team_key(f["home"]),[]) if team_key(x.get("opponent"))==team_key(f["away"])],key=lambda x:x["date"])[-5:]
  enrich_team_news(all_matches,max_teams=40)
  enrich_google_team_research(all_matches,max_teams=20)
