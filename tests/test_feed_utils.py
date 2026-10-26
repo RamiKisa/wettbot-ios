@@ -6,7 +6,7 @@ import unittest
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from feed_utils import full_time_score, match_rows
+from feed_utils import espn_completed_match_rows, full_time_score, match_rows, poisson_match_model
 
 
 class MatchRowsTests(unittest.TestCase):
@@ -59,6 +59,68 @@ class FixedCompetitionConfigTests(unittest.TestCase):
         )
         self.assertEqual(len({item["name"] for item in config["competitions"]}), 10)
         self.assertTrue(all(item.get("espnSlug") for item in config["competitions"]))
+
+
+class EspnCompletedMatchTests(unittest.TestCase):
+    def test_extracts_only_completed_matches_with_two_scores(self):
+        events = [
+            {
+                "id": "finished-1",
+                "date": "2026-10-24T16:00:00Z",
+                "status": {"type": {"completed": True, "state": "post"}},
+                "competitions": [{"competitors": [
+                    {"homeAway": "home", "team": {"displayName": "Home FC"}, "score": "2"},
+                    {"homeAway": "away", "team": {"displayName": "Away FC"}, "score": "1"},
+                ]}],
+            },
+            {
+                "id": "upcoming-1",
+                "date": "2026-10-29T16:00:00Z",
+                "status": {"type": {"completed": False, "state": "pre"}},
+                "competitions": [{"competitors": [
+                    {"homeAway": "home", "team": {"displayName": "Home FC"}, "score": ""},
+                    {"homeAway": "away", "team": {"displayName": "Away FC"}, "score": ""},
+                ]}],
+            },
+        ]
+        self.assertEqual(espn_completed_match_rows(events), [{
+            "id": "finished-1",
+            "date": "2026-10-24T16:00:00Z",
+            "home": "Home FC",
+            "away": "Away FC",
+            "homeGoals": 2,
+            "awayGoals": 1,
+        }])
+
+    def test_ignores_malformed_payloads(self):
+        self.assertEqual(espn_completed_match_rows(None), [])
+        self.assertEqual(espn_completed_match_rows([None, {}, {"competitions": []}]), [])
+
+
+class PoissonModelTests(unittest.TestCase):
+    def test_probabilities_and_markets_are_valid(self):
+        history = [
+            {"date": "2026-10-01", "gf": 2, "ga": 0, "teamIsHome": True},
+            {"date": "2026-10-05", "gf": 1, "ga": 1, "teamIsHome": False},
+            {"date": "2026-10-10", "gf": 3, "ga": 1, "teamIsHome": True},
+            {"date": "2026-10-15", "gf": 2, "ga": 2, "teamIsHome": False},
+            {"date": "2026-10-20", "gf": 2, "ga": 1, "teamIsHome": True},
+        ]
+        result = poisson_match_model(history, list(reversed(history)))
+        probabilities = result["probabilities"]
+        self.assertAlmostEqual(sum(probabilities.values()), 100.0, delta=0.2)
+        self.assertGreaterEqual(min(probabilities.values()), 0.0)
+        self.assertLessEqual(max(probabilities.values()), 100.0)
+        self.assertAlmostEqual(result["markets"]["over25"] + result["markets"]["under25"], 100.0, delta=0.2)
+        self.assertAlmostEqual(result["markets"]["bttsYes"] + result["markets"]["bttsNo"], 100.0, delta=0.2)
+        self.assertRegex(result["mostLikelyScore"], r"^\\d+:\\d+$")
+
+    def test_empty_history_returns_finite_baseline(self):
+        result = poisson_match_model([], [])
+        self.assertGreater(result["homeGoals"], 0)
+        self.assertGreater(result["awayGoals"], 0)
+        self.assertAlmostEqual(sum(result["probabilities"].values()), 100.0, delta=0.2)
+        self.assertEqual(result["historyMatches"], {"home": 0, "away": 0})
 
 
 if __name__ == "__main__":
