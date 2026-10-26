@@ -519,8 +519,8 @@ def fixture_fallback():
  print("football-data.org completed-history matches by league:",json.dumps(dict(sorted(football_data_history_counts.items())),ensure_ascii=False))
  else:
   _diag("football-data.org","not_configured",None,0,"FOOTBALL_DATA_TOKEN is empty")
- # Canonical team names before source merging; this removes ESPN/OpenFootball alias duplicates.
- import unicodedata,math
+# Canonical team names before source merging; this removes ESPN/OpenFootball alias duplicates.
+import unicodedata,math
  aliases={
   "fcbarcelona":"barcelona","barcelonafc":"barcelona",
   "bayernmunchen":"bayernmunich","fcbayernmunchen":"bayernmunich","fcbayern":"bayernmunich",
