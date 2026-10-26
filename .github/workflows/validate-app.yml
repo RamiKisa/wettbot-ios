@@ -70,10 +70,10 @@ jobs:
           python3 - <<'PY'
           import pathlib, re, sys
           html = pathlib.Path("index.html").read_text(encoding="utf-8")
-          ids = set(re.findall(r"""\\bid=["']([^"']+)["']""", html))
+          ids = set(re.findall(r"""\bid=["']([^"']+)["']""", html))
           # Match only literal-ID setters: reads and dynamically created toast elements are not false-positive write targets.
           setters = re.findall(
-              r"""\\$\\(['"]([^'"]+)['"]\\)\\.(?:textContent|innerHTML|value|disabled|className|src|href|checked)\\s*=""",
+              r"""\$\(['"]([^'"]+)['"]\)\.(?:textContent|innerHTML|value|disabled|className|src|href|checked)\s*=""",
               html,
           )
           missing = sorted(set(setters) - ids)
