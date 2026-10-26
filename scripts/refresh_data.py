@@ -36,6 +36,17 @@ def match_rows(payload):
   rows=payload.get("matches",[])
   return rows if isinstance(rows,list) else []
  return []
+def full_time_score(score):
+ if isinstance(score,list):
+  if len(score)>=2: return score[0],score[1]
+  return None,None
+ if isinstance(score,dict):
+  ft=score.get("ft") or score.get("fulltime")
+  if isinstance(ft,dict): return ft.get("team1",ft.get("home")),ft.get("team2",ft.get("away"))
+  if isinstance(ft,list) and len(ft)>=2: return ft[0],ft[1]
+  # A dictionary may itself represent a pair of final scores.
+  if "home" in score or "team1" in score: return score.get("team1",score.get("home")),score.get("team2",score.get("away"))
+ return None,None
 def pct(v):
  try:return round(float(str(v).replace("%","").strip()),1)
  except:return None
@@ -139,10 +150,8 @@ def fixture_fallback():
     home=(t1.get("name") if isinstance(t1,dict) else t1 if isinstance(t1,str) else None)
     away=(t2.get("name") if isinstance(t2,dict) else t2 if isinstance(t2,str) else None)
     if not home or not away: continue
-    score=m.get("score") or {}; ft=score.get("ft") or score.get("fulltime") or []
-    if isinstance(ft,dict): hg=ft.get("team1",ft.get("home")); ag=ft.get("team2",ft.get("away"))
-    elif isinstance(ft,list) and len(ft)>=2: hg,ag=ft[0],ft[1]
-    else: hg=ag=None
+    score=m.get("score")
+    hg,ag=full_time_score(score)
     try:
      hg=int(hg); ag=int(ag)
      if hg>=0 and ag>=0:
@@ -189,10 +198,9 @@ def fixture_fallback():
     home=(t1.get("name") if isinstance(t1,dict) else t1 if isinstance(t1,str) else None)
     away=(t2.get("name") if isinstance(t2,dict) else t2 if isinstance(t2,str) else None)
     if not home or not away: continue
-    score=m.get("score") or {}; ft=score.get("ft") or score.get("fulltime") or []
-    if isinstance(ft,dict): hg=ft.get("team1",ft.get("home")); ag=ft.get("team2",ft.get("away"))
-    elif isinstance(ft,list) and len(ft)>=2: hg,ag=ft[0],ft[1]
-    else: continue
+    score=m.get("score")
+    hg,ag=full_time_score(score)
+    if hg is None or ag is None: continue
     try: hg=int(hg); ag=int(ag)
     except (TypeError,ValueError): continue
     if hg<0 or ag<0: continue
