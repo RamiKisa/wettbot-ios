@@ -8,6 +8,12 @@ if len(COMPETITIONS)!=10 or len({x.get("name") for x in COMPETITIONS})!=10:
  raise SystemExit("competitions.json must contain exactly 10 uniquely named configured competitions")
 OUT=ROOT/"recommendations.json"; now=datetime.datetime.now(datetime.timezone.utc)
 TEAM_RESEARCH_CACHE={"news":{},"googleSearch":{}}; TEAM_RESEARCH_ERRORS=[]
+SOURCE_DIAGNOSTICS={}
+def _diag(source,status,http_success,fixtures=0,error=None,**extra):
+ item={"status":status,"httpSuccess":http_success,"fixtures":int(fixtures)}
+ if error: item["error"]=str(error)[:180]
+ item.update(extra)
+ SOURCE_DIAGNOSTICS[source]=item
 season=now.year if now.month>=6 else now.year-1
 WINDOW_DAYS=max(1,min(60,int(CONFIG.get("fixtureWindowDays",7))))
 leagues={x["name"]:(x["openFootballFile"],x["openFootballTimezone"]) for x in COMPETITIONS if x.get("openFootballFile") and x.get("openFootballTimezone")}
