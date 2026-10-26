@@ -319,6 +319,7 @@ def sportscore_match_rows(payload: Any) -> list[dict]:
             "homeGoals": hg,
             "awayGoals": ag,
             "venue": venue,
+            "timezone": raw.get("timezone") or raw.get("timeZone") or "UTC",
             "source": "SportScore",
         })
     return out
