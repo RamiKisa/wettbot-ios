@@ -70,7 +70,7 @@ jobs:
           python3 - <<'PY'
           import pathlib, re, sys
           code=pathlib.Path("sw.js").read_text(encoding="utf-8")
-          m=re.search(r"const CACHE='ramobet-free-v(\\d+)';",code)
+          m=re.search(r"const CACHE='ramobet-free-v(\d+)';",code)
           if not m: sys.exit("Service worker cache version missing")
           if "'./competitions.json'" not in code: sys.exit("Service worker does not precache competitions.json")
           print("Service worker cache version:",m.group(1))
