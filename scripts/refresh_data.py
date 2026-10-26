@@ -1,4 +1,4 @@
-import json, os, datetime, urllib.request, urllib.parse, urllib.error, pathlib, base64, collections
+import json, os, datetime, urllib.request, urllib.parse, urllib.error, pathlib, base64, collections, concurrent.futures
 KEY=os.environ.get("API_FOOTBALL_KEY","").strip()
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 CONFIG=json.loads((ROOT/"competitions.json").read_text(encoding="utf-8"))
@@ -98,12 +98,16 @@ def enrich_google_team_research(fixtures, max_teams=20):
  for f in fixtures:
   for team in (f.get('home'),f.get('away')):
    if team and team not in teams: teams.append(team)
- attempted=set(teams[:max_teams]); cache={}
- for team in attempted:
-  cache[team]=fetch_google_search('"'+team+'" letzte Spiele Ergebnisse Statistik Fußball',4)
+ selected=teams[:max_teams]; cache={}
+ with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+  futures={executor.submit(fetch_google_search,'"'+team+'" letzte Spiele Ergebnisse Statistik Fußball',4):team for team in selected}
+  for future in concurrent.futures.as_completed(futures):
+   team=futures[future]
+   try: cache[team]=future.result()
+   except Exception: cache[team]=[]
  for f in fixtures:
   f['googleResearch']={'home':cache.get(f.get('home'),[]),'away':cache.get(f.get('away'),[])}
-  if f.get('home') not in attempted or f.get('away') not in attempted:
+  if f.get('home') not in selected or f.get('away') not in selected:
    note='Nur ein Teil der Teams wurde im Recherchebudget berücksichtigt'
   else:
    note='Google-Suchergebnisse (Links/Snippets, Quelle und Datum vor Verwendung prüfen)'
@@ -113,12 +117,16 @@ def enrich_team_news(fixtures, max_teams=24):
  for f in fixtures:
   for name in (f.get('home'),f.get('away')):
    if name and name not in teams: teams.append(name)
- attempted=set(teams[:max_teams]); cache={}
- for team in attempted:
-  cache[team]=fetch_team_news(team)
+ selected=teams[:max_teams]; cache={}
+ with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+  futures={executor.submit(fetch_team_news,team):team for team in selected}
+  for future in concurrent.futures.as_completed(futures):
+   team=futures[future]
+   try: cache[team]=future.result()
+   except Exception: cache[team]=[]
  for f in fixtures:
   f['teamNews']={'home':cache.get(f.get('home'),[]),'away':cache.get(f.get('away'),[])}
-  if f.get('home') not in attempted or f.get('away') not in attempted:
+  if f.get('home') not in selected or f.get('away') not in selected:
    note='Team wurde aufgrund des Recherchebudgets nicht abgefragt'
   elif f['teamNews']['home'] or f['teamNews']['away']:
    note='Google News RSS-Suchtreffer (nicht automatisch bestätigte Ausfälle)'
@@ -232,29 +240,34 @@ def fixture_fallback():
  history_start=now.date()-datetime.timedelta(days=history_days)
  history_end=now.date()-datetime.timedelta(days=1)
  espn_history_counts={}
- for league,slug in ESPN_SLUGS.items():
-  try:
-   events=fetch_espn_events(slug,history_start,history_end)
-   completed_rows=espn_completed_match_rows(events)
-   added_rows=0
-   for row in completed_rows:
-    try: dt=datetime.datetime.fromisoformat(row["date"].replace("Z","+00:00"))
-    except Exception: continue
-    if dt>now or dt<now-datetime.timedelta(days=history_days): continue
-    home=row["home"]; away=row["away"]; hg=row["homeGoals"]; ag=row["awayGoals"]
-    for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
-     history.setdefault((league,team),[]).append({
-      "date":dt.isoformat(),"gf":gf,"ga":ga,
-      "result":"W" if gf>ga else "D" if gf==ga else "L",
-      "opponent":opponent,"home":home,"away":away,
-      "homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home,
-      "historySource":"ESPN completed scoreboard"
-     })
-    added_rows+=1
-   espn_history_counts[league]=added_rows
-  except Exception as e:
-   espn_history_counts[league]=0
-   errors.append(league+" ESPN history: "+str(e)[:100])
+ def load_history_for_league(league,slug):
+  rows=espn_completed_match_rows(fetch_espn_events(slug,history_start,history_end))
+  return league,rows
+ with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+  futures={executor.submit(load_history_for_league,league,slug):league for league,slug in ESPN_SLUGS.items()}
+  for future in concurrent.futures.as_completed(futures):
+   league=futures[future]
+   try:
+    _league,completed_rows=future.result()
+    added_rows=0
+    for row in completed_rows:
+     try: dt=datetime.datetime.fromisoformat(row["date"].replace("Z","+00:00"))
+     except Exception: continue
+     if dt>now or dt<now-datetime.timedelta(days=history_days): continue
+     home=row["home"]; away=row["away"]; hg=row["homeGoals"]; ag=row["awayGoals"]
+     for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
+      history.setdefault((league,team),[]).append({
+       "date":dt.isoformat(),"gf":gf,"ga":ga,
+       "result":"W" if gf>ga else "D" if gf==ga else "L",
+       "opponent":opponent,"home":home,"away":away,
+       "homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home,
+       "historySource":"ESPN completed scoreboard"
+      })
+     added_rows+=1
+    espn_history_counts[league]=added_rows
+   except Exception as e:
+    espn_history_counts[league]=0
+    errors.append(league+" ESPN history: "+str(e)[:100])
  print("ESPN completed-history matches by league:",json.dumps(dict(sorted(espn_history_counts.items())),ensure_ascii=False))
  # OpenLigaDB is an additional keyless source for the German Bundesliga.
  try:
