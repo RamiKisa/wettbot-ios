@@ -30,6 +30,12 @@ def fetch_openfootball(season_year, filename):
   raise RuntimeError("OpenFootball GitHub Contents API returned no base64 file content")
  try: return json.loads(base64.b64decode(entry["content"]).decode("utf-8"))
  except Exception as exc: raise RuntimeError("Could not decode OpenFootball season file: "+str(exc)[:100])
+def match_rows(payload):
+ if isinstance(payload,list): return payload
+ if isinstance(payload,dict):
+  rows=payload.get("matches",[])
+  return rows if isinstance(rows,list) else []
+ return []
 def pct(v):
  try:return round(float(str(v).replace("%","").strip()),1)
  except:return None
@@ -119,8 +125,9 @@ def fixture_fallback():
  for league,(file,zone) in leagues.items():
   try:
    d=fetch_openfootball(season,file)
-   print("OpenFootball current season:",league,"matches=",len(d.get("matches",[])))
-   for m in d.get("matches",[]):
+   current_rows=match_rows(d)
+   print("OpenFootball current season:",league,"matches=",len(current_rows),"root_type=",type(d).__name__)
+   for m in current_rows:
     day=m.get("date"); tm=m.get("time") or "15:00"
     if not day: continue
     try:
@@ -142,7 +149,7 @@ def fixture_fallback():
       for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
        history.setdefault((league,team),[]).append({"date":dt.isoformat(),"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent,"home":home,"away":away,"homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home})
     except (TypeError,ValueError): pass
-    if dt<=now: continue
+    if dt<=now or dt>now+datetime.timedelta(days=WINDOW_DAYS): continue
     all_matches.append({"id":"fallback-"+league.lower().replace(" ","-")+"-"+str(day)+"-"+str(len(all_matches)),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenFootball","dataCoverage":{"fixture":"OpenFootball"}})
   except Exception as e:
    errors.append(league+" OpenFootball: "+str(e)[:80])
@@ -172,7 +179,7 @@ def fixture_fallback():
   try:
    previous_data=fetch_openfootball(previous_season,file)
    from zoneinfo import ZoneInfo
-   for m in previous_data.get("matches",[]):
+   for m in match_rows(previous_data):
     day=m.get("date"); tm=m.get("time") or "15:00"
     if not day: continue
     try: dt=datetime.datetime.fromisoformat(day+"T"+tm).replace(tzinfo=ZoneInfo(zone)).astimezone(datetime.timezone.utc)
