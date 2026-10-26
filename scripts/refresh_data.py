@@ -517,8 +517,8 @@ def fixture_fallback():
  _fd_errors=[e for e in errors if " football-data.org:" in e]
  _diag("football-data.org","error" if _fd_errors else "ok" if sum(football_data_counts.values()) else "empty",not bool(_fd_errors),sum(football_data_counts.values()),"; ".join(_fd_errors[:8]) or None,perLeague=dict(sorted(football_data_counts.items())),historyByLeague=dict(sorted(football_data_history_counts.items())))
  print("football-data.org completed-history matches by league:",json.dumps(dict(sorted(football_data_history_counts.items())),ensure_ascii=False))
- else:
-  _diag("football-data.org","not_configured",None,0,"FOOTBALL_DATA_TOKEN is empty")
+if not FOOTBALL_DATA_TOKEN:
+ _diag("football-data.org","not_configured",None,0,"FOOTBALL_DATA_TOKEN is empty")
 # Canonical team names before source merging; this removes ESPN/OpenFootball alias duplicates.
 import unicodedata,math
  aliases={
