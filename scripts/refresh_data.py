@@ -30,23 +30,7 @@ def fetch_openfootball(season_year, filename):
   raise RuntimeError("OpenFootball GitHub Contents API returned no base64 file content")
  try: return json.loads(base64.b64decode(entry["content"]).decode("utf-8"))
  except Exception as exc: raise RuntimeError("Could not decode OpenFootball season file: "+str(exc)[:100])
-def match_rows(payload):
- if isinstance(payload,list): return payload
- if isinstance(payload,dict):
-  rows=payload.get("matches",[])
-  return rows if isinstance(rows,list) else []
- return []
-def full_time_score(score):
- if isinstance(score,list):
-  if len(score)>=2: return score[0],score[1]
-  return None,None
- if isinstance(score,dict):
-  ft=score.get("ft") or score.get("fulltime")
-  if isinstance(ft,dict): return ft.get("team1",ft.get("home")),ft.get("team2",ft.get("away"))
-  if isinstance(ft,list) and len(ft)>=2: return ft[0],ft[1]
-  # A dictionary may itself represent a pair of final scores.
-  if "home" in score or "team1" in score: return score.get("team1",score.get("home")),score.get("team2",score.get("away"))
- return None,None
+from feed_utils import match_rows, full_time_score
 def pct(v):
  try:return round(float(str(v).replace("%","").strip()),1)
  except:return None
