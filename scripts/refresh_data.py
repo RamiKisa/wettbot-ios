@@ -353,6 +353,8 @@ def fixture_fallback():
  # Independent SportScore source: daily fixture/result endpoint, separate from ESPN.
  # One request per calendar day covers all competitions; restrict output to RamoBet's fixed list.
  def sportscore_competition(value):
+  import re
+  import unicodedata
   norm=re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",str(value or "")).encode("ascii","ignore").decode().lower())
   aliases={
    "bundesliga":"Bundesliga","germanbundesliga":"Bundesliga","1bundesliga":"Bundesliga","germanybundesliga":"Bundesliga",
