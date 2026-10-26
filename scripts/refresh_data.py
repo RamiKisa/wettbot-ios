@@ -8,6 +8,12 @@ if len(COMPETITIONS)!=10 or len({x.get("name") for x in COMPETITIONS})!=10:
  raise SystemExit("competitions.json must contain exactly 10 uniquely named configured competitions")
 OUT=ROOT/"recommendations.json"; now=datetime.datetime.now(datetime.timezone.utc)
 TEAM_RESEARCH_CACHE={"news":{},"googleSearch":{}}; TEAM_RESEARCH_ERRORS=[]
+SOURCE_DIAGNOSTICS={}
+def _diag(source,status,http_success,fixtures=0,error=None,**extra):
+ item={"status":status,"httpSuccess":http_success,"fixtures":int(fixtures)}
+ if error: item["error"]=str(error)[:180]
+ item.update(extra)
+ SOURCE_DIAGNOSTICS[source]=item
 season=now.year if now.month>=6 else now.year-1
 WINDOW_DAYS=max(1,min(60,int(CONFIG.get("fixtureWindowDays",7))))
 leagues={x["name"]:(x["openFootballFile"],x["openFootballTimezone"]) for x in COMPETITIONS if x.get("openFootballFile") and x.get("openFootballTimezone")}
@@ -232,6 +238,7 @@ def fetch_espn_events(slug, start_date=None, end_date=None):
  return list(found.values())
 def fixture_fallback():
  all_matches=[]; errors=[]; history={}
+ SOURCE_DIAGNOSTICS.clear()
  for league,(file,zone) in leagues.items():
   try:
    d=fetch_openfootball(season,file)
@@ -288,7 +295,11 @@ def fixture_fallback():
       rows.append({"date":dt.isoformat(),"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent,"home":home,"away":away,"homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home})
   except Exception as e:
    errors.append(league+" previous-season history: "+str(e)[:70])
+ _of_errors=[e for e in errors if "OpenFootball:" in e]
+ _of_by_league={league:sum(1 for row in all_matches if row.get("league")==league and row.get("source")=="OpenFootball") for league in [x["name"] for x in COMPETITIONS]}
+ _diag("OpenFootball","error" if _of_errors else "ok" if sum(_of_by_league.values()) else "empty",not bool(_of_errors),sum(_of_by_league.values()),"; ".join(_of_errors[:8]) or None,perLeague=_of_by_league)
  # Secondary independent fixture feed: ESPN for every configured competition.
+ espn_fixture_counts=collections.Counter(); espn_errors=[]
  for league,slug in ESPN_SLUGS.items():
   try:
    for event in fetch_espn_events(slug):
@@ -302,8 +313,10 @@ def fixture_fallback():
     dt=datetime.datetime.fromisoformat(rawdate.replace("Z","+00:00"))
     if dt<=now or dt>now+datetime.timedelta(days=WINDOW_DAYS): continue
     all_matches.append({"id":"espn-"+str(event.get("id")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"ESPN public scoreboard","dataCoverage":{"fixture":"ESPN public scoreboard"}})
+    espn_fixture_counts[league]+=1
   except Exception as e:
-   errors.append(league+" ESPN fallback: "+str(e)[:100])
+   errors.append(league+" ESPN fallback: "+str(e)[:100]); espn_errors.append(league+": "+str(e)[:100])
+ _diag("ESPN","error" if espn_errors else "ok" if sum(espn_fixture_counts.values()) else "empty",not bool(espn_errors),sum(espn_fixture_counts.values()),"; ".join(espn_errors[:8]) or None,perLeague=dict(sorted(espn_fixture_counts.items())),requestedLeagues=len(ESPN_SLUGS),failedLeagues=len(espn_errors))
  # Recent completed ESPN results fill form gaps, especially for UEFA fixtures and Turkish clubs.
  history_days=90
  history_start=now.date()-datetime.timedelta(days=history_days)
@@ -341,15 +354,21 @@ def fixture_fallback():
  # OpenLigaDB is an additional keyless source for the German Bundesliga.
  try:
   req=urllib.request.Request("https://api.openligadb.de/getmatchdata/bl1",headers={"User-Agent":"RamoBet/1.0","Accept":"application/json"})
-  with urllib.request.urlopen(req,timeout=8) as resp: matches=json.load(resp)
-  for m in matches:
+  with urllib.request.urlopen(req,timeout=8) as resp:
+   if not 200<=resp.status<300: raise RuntimeError("HTTP "+str(resp.status))
+   matches=json.load(resp)
+  openligadb_count=0
+  for m in matches if isinstance(matches,list) else []:
    rawdate=m.get("matchDateTimeUTC"); home=(m.get("team1") or {}).get("teamName"); away=(m.get("team2") or {}).get("teamName")
    if not rawdate or not home or not away: continue
    dt=datetime.datetime.fromisoformat(rawdate.replace("Z","+00:00"))
    if dt<=now or dt>now+datetime.timedelta(days=WINDOW_DAYS): continue
    all_matches.append({"id":"openligadb-"+str(m.get("matchID")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":"Bundesliga","home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenLigaDB","dataCoverage":{"fixture":"OpenLigaDB"}})
+   openligadb_count+=1
+  _diag("OpenLigaDB","ok" if openligadb_count else "empty",True,openligadb_count,responseRows=len(matches) if isinstance(matches,list) else 0)
  except Exception as e:
   errors.append("OpenLigaDB Bundesliga: "+str(e)[:80])
+  _diag("OpenLigaDB","error",False,0,str(e))
  # Independent SportScore source: daily fixture/result endpoint, separate from ESPN.
  # One request per calendar day covers all competitions; restrict output to RamoBet's fixed list.
  def sportscore_competition(value):
@@ -374,11 +393,13 @@ def fixture_fallback():
   url="https://sportscore.com/api/v1/fixtures/?"+params
   req=urllib.request.Request(url,headers={"User-Agent":"RamoBet/1.0 (+https://ramikisa.github.io/wettbot-ios/)","Accept":"application/json"})
   with urllib.request.urlopen(req,timeout=12) as resp:
+   if not 200<=resp.status<300: raise RuntimeError("HTTP "+str(resp.status))
    payload=json.load(resp)
   return day,sportscore_match_rows(payload)
  sportscore_fixture_counts=collections.Counter()
  sportscore_history_counts=collections.Counter()
  sportscore_errors=[]
+ sportscore_http_success=0; sportscore_empty_responses=0
  sportscore_days=[]
  for offset in range(-45,WINDOW_DAYS+1):
   sportscore_days.append(now.date()+datetime.timedelta(days=offset))
@@ -390,6 +411,8 @@ def fixture_fallback():
    if error:
     sportscore_errors.append(day.isoformat()+": "+error)
     continue
+   sportscore_http_success+=1
+   if not rows: sportscore_empty_responses+=1
    for row in rows:
     league=sportscore_competition(row.get("competition"))
     if not league: continue
@@ -432,7 +455,8 @@ def fixture_fallback():
  errors.extend(["SportScore "+msg for msg in sportscore_errors[:25]])
  print("SportScore upcoming fixtures by league:",json.dumps(dict(sorted(sportscore_fixture_counts.items())),ensure_ascii=False))
  print("SportScore completed history matches by league:",json.dumps(dict(sorted(sportscore_history_counts.items())),ensure_ascii=False))
- print("SportScore daily requests:",len(sportscore_days),"; errors:",len(sportscore_errors))
+ _diag("SportScore","error" if sportscore_errors else "ok" if sum(sportscore_fixture_counts.values()) else "empty",sportscore_http_success==len(sportscore_days),sum(sportscore_fixture_counts.values()),"; ".join(sportscore_errors[:8]) or None,dailyRequests=len(sportscore_days),httpSuccesses=sportscore_http_success,emptyResponses=sportscore_empty_responses,failedDays=len(sportscore_errors),perLeague=dict(sorted(sportscore_fixture_counts.items())),historyByLeague=dict(sorted(sportscore_history_counts.items())))
+ print("SportScore daily requests:",len(sportscore_days),"; HTTP successes:",sportscore_http_success,"; empty:",sportscore_empty_responses,"; errors:",len(sportscore_errors))
  # Optional registered-token source: football-data.org (independent of ESPN/API-Football).
  # Its free tier covers only selected competitions; omit competitions without a documented code.
  football_data_counts=collections.Counter()
@@ -490,7 +514,11 @@ def fixture_fallback():
    except Exception as exc:
     errors.append(league+" football-data.org: "+str(exc)[:120])
  print("football-data.org upcoming fixtures by league:",json.dumps(dict(sorted(football_data_counts.items())),ensure_ascii=False))
+ _fd_errors=[e for e in errors if " football-data.org:" in e]
+ _diag("football-data.org","error" if _fd_errors else "ok" if sum(football_data_counts.values()) else "empty",not bool(_fd_errors),sum(football_data_counts.values()),"; ".join(_fd_errors[:8]) or None,perLeague=dict(sorted(football_data_counts.items())),historyByLeague=dict(sorted(football_data_history_counts.items())))
  print("football-data.org completed-history matches by league:",json.dumps(dict(sorted(football_data_history_counts.items())),ensure_ascii=False))
+ else:
+  _diag("football-data.org","not_configured",None,0,"FOOTBALL_DATA_TOKEN is empty")
  # Canonical team names before source merging; this removes ESPN/OpenFootball alias duplicates.
  import unicodedata,math
  aliases={
@@ -729,6 +757,7 @@ for item in fixtures:
   item["apiFootballLineupsUpdatedAt"]=cached["lineupsUpdatedAt"]
   item.setdefault("dataCoverage",{})["lineups"]="API-Football (zwischengespeichert)"
 if not KEY:
+ _diag("API-Football","not_configured",None,0,"API_FOOTBALL_KEY is empty")
  coverage=coverage_summary(fixtures)
  save({
   "generatedAt":now.isoformat(),"status":"free_mode",
@@ -736,7 +765,8 @@ if not KEY:
   "configuredLeagues":[x["name"] for x in COMPETITIONS],"fixtureWindowDays":WINDOW_DAYS,
   "teamHistory":team_history,"coverage":coverage,"apiFootball":{"configured":False,"requestsUsed":0},
   "recommendations":fixtures,"fixtures":fixtures,"errors":errors[:50],
-  "source":"OpenFootball + ESPN + OpenLigaDB + Google News RSS + Google Suche + Poisson-Basismodell"
+  "source":"OpenFootball + ESPN + OpenLigaDB + Google News RSS + Google Suche + Poisson-Basismodell",
+  "sourceDiagnostics":SOURCE_DIAGNOSTICS
  })
  print("Free mode; fixtures=%s model_estimates=%s limited=%s errors=%s"%(len(fixtures),sum(x.get("analysisStatus")=="model_estimate" for x in fixtures),sum(x.get("analysisStatus")=="limited_model" for x in fixtures),len(errors)))
  print("Coverage:",json.dumps(coverage,ensure_ascii=False))
@@ -893,7 +923,7 @@ save({
  "generatedAt":now.isoformat(),"status":"hybrid_mode",
  "message":"Alle Spiele aus dem festen 10-Ligen-Spielplan werden mit dem Basis-Modell analysiert. API-Football erweitert ausgewählte zeitnahe Spiele quota-bewusst; fehlende Detaildaten bleiben ausdrücklich gekennzeichnet.",
  "configuredLeagues":[x["name"] for x in COMPETITIONS],"fixtureWindowDays":WINDOW_DAYS,
- "teamHistory":team_history,"coverage":coverage,"apiFootball":api_meta,
+ "teamHistory":team_history,"coverage":coverage,"apiFootball":api_meta,"sourceDiagnostics":SOURCE_DIAGNOSTICS,
  "recommendations":fixtures,"fixtures":fixtures,"errors":errors[:50],
  "source":"OpenFootball + ESPN + OpenLigaDB + API-Football (quota-aware) + Google News RSS + Google Suche + Poisson-Modell"
 })
