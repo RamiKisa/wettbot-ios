@@ -1,9 +1,16 @@
 import json, os, datetime, urllib.request, urllib.parse, pathlib
 KEY=os.environ.get("API_FOOTBALL_KEY","").strip()
-OUT=pathlib.Path("recommendations.json"); now=datetime.datetime.now(datetime.timezone.utc)
+ROOT=pathlib.Path(__file__).resolve().parent.parent
+CONFIG=json.loads((ROOT/"competitions.json").read_text(encoding="utf-8"))
+COMPETITIONS=CONFIG["competitions"]
+if len(COMPETITIONS)!=10 or len({x.get("name") for x in COMPETITIONS})!=10:
+ raise SystemExit("competitions.json must contain exactly 10 uniquely named configured competitions")
+OUT=ROOT/"recommendations.json"; now=datetime.datetime.now(datetime.timezone.utc)
 season=now.year if now.month>=6 else now.year-1
-leagues={"Premier League":("en.1.json","Europe/London"),"Bundesliga":("de.1.json","Europe/Berlin"),"La Liga":("es.1.json","Europe/Madrid"),"Serie A":("it.1.json","Europe/Rome"),"Ligue 1":("fr.1.json","Europe/Paris"),"Primeira Liga":("pt.1.json","Europe/Lisbon"),"Süper Lig":("tr.1.json","Europe/Istanbul")}
-uefa={"Champions League":2,"Europa League":3,"Conference League":848,"Süper Lig":203}
+WINDOW_DAYS=max(1,min(60,int(CONFIG.get("fixtureWindowDays",7))))
+leagues={x["name"]:(x["openFootballFile"],x["openFootballTimezone"]) for x in COMPETITIONS if x.get("openFootballFile") and x.get("openFootballTimezone")}
+ESPN_SLUGS={x["name"]:x["espnSlug"] for x in COMPETITIONS if x.get("espnSlug")}
+API_LEAGUE_IDS={x["name"]:x["apiFootballId"] for x in COMPETITIONS if x.get("apiFootballId") is not None}
 BUDGET=92; used=0
 def save(x): OUT.write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding="utf-8")
 def api(path,params):
@@ -135,7 +142,7 @@ def fixture_fallback():
    espn_slug={"Premier League":"eng.1","Bundesliga":"ger.1","La Liga":"esp.1","Serie A":"ita.1","Ligue 1":"fra.1","Primeira Liga":"por.1"}.get(league)
    if espn_slug:
     try:
-     dates=now.strftime("%Y%m%d")+"-"+(now+datetime.timedelta(days=7)).strftime("%Y%m%d")
+     dates=now.strftime("%Y%m%d")+"-"+(now+datetime.timedelta(days=WINDOW_DAYS)).strftime("%Y%m%d")
      u="https://site.api.espn.com/apis/site/v2/sports/soccer/"+espn_slug+"/scoreboard?dates="+dates
      req=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0 Wettbot free football data"})
      with urllib.request.urlopen(req,timeout=15) as resp: payload=json.load(resp)
@@ -183,8 +190,8 @@ def fixture_fallback():
   except Exception as e:
    errors.append(league+" previous-season history: "+str(e)[:70])
  # Secondary independent fixture feed: ESPN scoreboard for all supported competitions.
- espn_leagues={"Premier League":"eng.1","Bundesliga":"ger.1","La Liga":"esp.1","Serie A":"ita.1","Ligue 1":"fra.1","Primeira Liga":"por.1","Champions League":"uefa.champions","Europa League":"uefa.europa","Conference League":"uefa.europa.conf","Süper Lig":"tur.1"}
- dates=now.strftime("%Y%m%d")+"-"+(now+datetime.timedelta(days=7)).strftime("%Y%m%d")
+ espn_leagues=ESPN_SLUGS
+ dates=now.strftime("%Y%m%d")+"-"+(now+datetime.timedelta(days=WINDOW_DAYS)).strftime("%Y%m%d")
  for league,slug in espn_leagues.items():
   try:
    url="https://site.api.espn.com/apis/site/v2/sports/soccer/"+slug+"/scoreboard?dates="+dates
@@ -211,7 +218,7 @@ def fixture_fallback():
    rawdate=m.get("matchDateTimeUTC"); home=(m.get("team1") or {}).get("teamName"); away=(m.get("team2") or {}).get("teamName")
    if not rawdate or not home or not away: continue
    dt=datetime.datetime.fromisoformat(rawdate.replace("Z","+00:00"))
-   if dt<=now or dt>now+datetime.timedelta(days=7): continue
+   if dt<=now or dt>now+datetime.timedelta(days=WINDOW_DAYS): continue
    all_matches.append({"id":"openligadb-"+str(m.get("matchID")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":"Bundesliga","home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenLigaDB","dataCoverage":{"fixture":"OpenLigaDB"}})
  except Exception as e:
   errors.append("OpenLigaDB Bundesliga: "+str(e)[:80])
@@ -281,11 +288,11 @@ def fixture_fallback():
  return all_matches,errors
 if not KEY:
  fixtures,errors=fixture_fallback()
- save({"generatedAt":now.isoformat(),"status":"free_mode","message":"Kostenloser Modus: OpenFootball-Spielplan und Ergebnisse, eigene einfache Tor-Modellschätzung sowie Google News RSS. Verletzungen und Aufstellungen sind nicht garantiert verfügbar.","recommendations":fixtures,"fixtures":fixtures,"errors":errors,"source":"OpenFootball + Google News RSS + eigenes Poisson-Basismodell"})
+ save({"generatedAt":now.isoformat(),"status":"free_mode","message":"Kostenloser Modus: feste 10-Ligen-Konfiguration, OpenFootball/ESPN/OpenLigaDB-Spielpläne, letzte Team-Ergebnisse und eigene Poisson-Schätzung. Verletzungen, Aufstellungen und Quoten sind nicht für alle Spiele verfügbar.","configuredLeagues":[x["name"] for x in COMPETITIONS],"fixtureWindowDays":WINDOW_DAYS,"recommendations":fixtures,"fixtures":fixtures,"errors":errors,"source":"OpenFootball + ESPN + OpenLigaDB + Google News RSS + Google-Suche + Poisson-Basismodell"})
  print("Free mode; fixtures=%s with_predictions=%s errors=%s"%(len(fixtures),sum(bool(f.get("prediction")) for f in fixtures),len(errors))); raise SystemExit(0)
 season=now.year if now.month>=7 else now.year-1
-leagues_api={"Premier League":39,"Bundesliga":78,"La Liga":140,"Serie A":135,"Ligue 1":61,"Primeira Liga":94,"Champions League":2,"Europa League":3,"Conference League":848,"Süper Lig":203}
-fixtures=[]; errors=[]; start=now.date().isoformat(); end=(now.date()+datetime.timedelta(days=7)).isoformat()
+leagues_api=API_LEAGUE_IDS
+fixtures=[]; errors=[]; start=now.date().isoformat(); end=(now.date()+datetime.timedelta(days=WINDOW_DAYS)).isoformat()
 for name,lid in leagues_api.items():
  try:
   for row in api("fixtures",{"league":lid,"season":season,"from":start,"to":end,"timezone":"Europe/Berlin"}):
@@ -339,5 +346,5 @@ for f in fixtures:
  except Exception: f["lineups"]=None; f["dataCoverage"]["lineups"]="Nicht abrufbar"
 for f in fixtures:
  f["marketCoverage"]={"1X2":bool(f.get("prediction",{}).get("probabilities")),"overUnder":bool((f.get("prediction") or {}).get("underOver")),"btts":"Keine eigenständige Prognose integriert","corners":"Keine eigenständige Prognose integriert","cards":"Keine eigenständige Prognose integriert","playerProps":"Keine eigenständige Prognose integriert"}
-save({"generatedAt":now.isoformat(),"status":"ok","message":"Datenabdeckung wird pro Spiel ausgewiesen. Nicht gelieferte Daten werden nicht erfunden.","recommendations":fixtures,"fixtures":fixtures,"errors":errors[:25],"source":"API-Football","requestsUsed":used,"dailyRequestBudget":BUDGET,"season":season})
+save({"generatedAt":now.isoformat(),"status":"ok","message":"Alle Spiele im konfigurierten Zeitraum werden geladen; verfügbare Prognosen und Datenabdeckung sind pro Spiel gekennzeichnet.","configuredLeagues":[x["name"] for x in COMPETITIONS],"fixtureWindowDays":WINDOW_DAYS,"recommendations":fixtures,"fixtures":fixtures,"errors":errors[:25],"source":"API-Football","requestsUsed":used,"dailyRequestBudget":BUDGET,"season":season})
 print("fixtures=%s predictions=%s requests=%s errors=%s"%(len(fixtures),sum(bool(f.get("prediction")) for f in fixtures),used,len(errors)))
