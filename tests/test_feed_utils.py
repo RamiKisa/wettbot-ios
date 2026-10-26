@@ -113,7 +113,7 @@ class PoissonModelTests(unittest.TestCase):
         self.assertLessEqual(max(probabilities.values()), 100.0)
         self.assertAlmostEqual(result["markets"]["over25"] + result["markets"]["under25"], 100.0, delta=0.2)
         self.assertAlmostEqual(result["markets"]["bttsYes"] + result["markets"]["bttsNo"], 100.0, delta=0.2)
-        self.assertRegex(result["mostLikelyScore"], r"^\\d+:\\d+$")
+        self.assertRegex(result["mostLikelyScore"], r"^\d+:\d+$")
 
     def test_empty_history_returns_finite_baseline(self):
         result = poisson_match_model([], [])
