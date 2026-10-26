@@ -280,25 +280,27 @@
     return {ok:reasons.length===0,reasons};
   }
   function render(){
-    $('todayLabel').textContent = new Date().toLocaleDateString('de-DE',{weekday:'short',day:'2-digit',month:'2-digit'});
-    $('todayCompetitions').textContent = eligibleLeagues().join(', ') || 'Keine automatische Auswahl';
-    $('matchCount').textContent = state.matches.length;
-    const done=state.bets.filter(b=>b.result && b.result!=='open');
-    const open=state.bets.filter(b=>!b.result || b.result==='open');
-    const pl=done.reduce((s,b)=>s+Number(b.pnl||0),0);
-    const staked=done.reduce((s,b)=>s+Number(b.stake||10),0);
-    $('statOpen').textContent=open.length; $('statDone').textContent=done.length;
-    $('statPL').textContent=money(pl); $('statROI').textContent=staked?((pl/staked)*100).toFixed(1).replace('.',',')+' %':'—';
-    $('matchesList').innerHTML = state.matches.length ? state.matches.slice().sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time)).map(m=>{
-      const odds=state.odds.filter(o=>o.matchId===m.id);
+    const setText=(id,value)=>{const el=$(id);if(el)el.textContent=value;};
+    const setHTML=(id,value)=>{const el=$(id);if(el)el.innerHTML=value;};
+    setText('todayLabel',new Date().toLocaleDateString('de-DE',{weekday:'short',day:'2-digit',month:'2-digit'}));
+    setText('todayCompetitions',eligibleLeagues().join(', ')||'Keine automatische Auswahl');
+    setText('matchCount',(state.matches||[]).length);
+    const done=(state.bets||[]).filter(b=>b.result&&b.result!=='open');
+    const open=(state.bets||[]).filter(b=>!b.result||b.result==='open');
+    const pl=done.reduce((sum,b)=>sum+Number(b.pnl||0),0);
+    const staked=done.reduce((sum,b)=>sum+Number(b.stake||10),0);
+    setText('statOpen',open.length);setText('statDone',done.length);
+    setText('statPL',money(pl));setText('statROI',staked?((pl/staked)*100).toFixed(1).replace('.',',')+' %':'—');
+    setHTML('matchesList',(state.matches||[]).length?(state.matches||[]).slice().sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time)).map(m=>{
+      const odds=(state.odds||[]).filter(o=>o.matchId===m.id);
       return `<div class="match"><div class="matchhead"><div><div class="teams">${esc(m.home)} – ${esc(m.away)}</div><div class="small muted">${esc(m.league)} · ${fmtDate(m.date)} ${esc(m.time||'')}</div><span class="chip">${odds.length} Quoten</span></div><div class="actions"><button class="btn" data-edit-match="${m.id}">Bearbeiten</button><button class="btn danger" data-delete-match="${m.id}">×</button></div></div>${m.source?`<div class="small source muted" style="margin-top:8px">${esc(m.source)}</div>`:''}${odds.map(o=>oddsCard(o)).join('')}</div>`;
-    }).join('') : '<div class="empty">Noch keine Spiele. Nutze den kostenlosen Abruf oder füge ein Spiel manuell hinzu.</div>';
-    $('oMatch').innerHTML=state.matches.map(m=>`<option value="${m.id}">${esc(m.home)} – ${esc(m.away)} · ${esc(m.league)} · ${fmtDate(m.date)}</option>`).join('');
-    if(!state.matches.length) $('oMatch').innerHTML='<option value="">Zuerst ein Spiel hinzufügen</option>';
-    $('paperList').innerHTML=state.bets.length?state.bets.slice().reverse().map(b=>paperCard(b)).join(''):'<div class="empty">Noch keine Paper-Wetten. Speichere eine Quote, die alle formalen Gates erfüllt.</div>';
-    const rec=state.odds.filter(o=>statusFor(o).ok).slice(-5).reverse();
-    $('recentPicks').innerHTML=rec.length?rec.map(o=>`<div class="resultline"><span>${esc(matchName(o.matchId))} · ${esc(o.selection)}</span><strong>${Number(o.odds).toFixed(2)} / EV ${(evFor(o)*100).toFixed(1)} %</strong></div>`).join(''):'Noch keine formal qualifizierte Empfehlung.';
-    updateEvPreview();
+    }).join(''):'<div class="empty">Noch keine Spiele. Nutze den kostenlosen Abruf oder füge ein Spiel manuell hinzu.</div>');
+    setHTML('oMatch',(state.matches||[]).map(m=>`<option value="${m.id}">${esc(m.home)} – ${esc(m.away)} · ${esc(m.league)} · ${fmtDate(m.date)}</option>`).join(''));
+    if(!(state.matches||[]).length){const el=$('oMatch');if(el)el.innerHTML='<option value="">Zuerst ein Spiel hinzufügen</option>';}
+    setHTML('paperList',(state.bets||[]).length?(state.bets||[]).slice().reverse().map(b=>paperCard(b)).join(''):'<div class="empty">Noch keine Paper-Wetten.</div>');
+    const rec=(state.odds||[]).filter(o=>statusFor(o).ok).slice(-5).reverse();
+    setHTML('recentPicks',rec.length?rec.map(o=>`<div class="resultline"><span>${esc(matchName(o.matchId))} · ${esc(o.selection)}</span><strong>${Number(o.odds).toFixed(2)} / EV ${(evFor(o)*100).toFixed(1)} %</strong></div>`).join(''):'Noch keine formal qualifizierte Empfehlung.');
+    const preview=$('evPreview');if(preview)updateEvPreview();
   }
   function matchName(mid){const m=state.matches.find(x=>x.id===mid);return m?`${m.home} – ${m.away}`:'Spiel gelöscht';}
   function oddsCard(o){
