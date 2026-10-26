@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T08:49:19.983127+00:00",
+  "generatedAt": "2026-10-26T08:49:53.920783+00:00",
   "status": "free_mode",
   "message": "Kostenloser Modus: feste 10-Ligen-Konfiguration, OpenFootball/ESPN/OpenLigaDB-Spielpläne, Team-Ergebnisse und Poisson-Modell. Verletzungen, Aufstellungen und Quoten sind nicht für jedes Spiel verfügbar.",
   "configuredLeagues": [
@@ -17425,27 +17425,27 @@
             "source": "Kicker"
           },
           {
-            "title": "Aufstellung Konyaspor - İstanbul Başakşehir 0:0 | 7. Spieltag, SüperLig 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOWUydnFmeEU3M19SYUphR1ZWQUpxTi1rTmlfWlVyNW9ISWxMdzVGMnB6eHAtUDRVZE1yQjE3U1QzcVM3M0s2S2NpYXZHQXcySFVoclEwU0tvNUhMd0UxUDBBVGZvTnhzYWEwd2QwRXpJQ0NfYVlsNC1uYnlnQmN4eC15b04tRzR2NTVEZTViWUhmV3BOS3B3TU8yeWFTMEo2NG9j?oc=5",
-            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Istanbul Basaksehir vs Galatasaray Prognose: Sahin gerät unter Druck - Goal.com",
-            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNYXQ0dHE4c3F5THN1TjEtSm9SS0dTZU00U1YxdkFseTdaOFJTOU15WkdFcF9MbjlUVWJOT2NndnQwa1ZjZHlzVGMzUlkyUnhfMGVlQWdhd0otU0NCMVlpeHRfMk10MFhCUkFMTlE2NFY5SnYtdTJMaEFaTzdJZTFMeUltcElyVlZKdjZjeHlJcVloUG81RW50QkFSZlpNcHJIXzVtdUd5YmxWcV8zZ040b3puUUFIQVRUaVE?oc=5",
-            "publishedAt": "Sat, 05 Sep 2026 07:00:00 GMT",
-            "source": "Goal.com"
-          },
-          {
             "title": "Aufstellung İstanbul Başakşehir - Gaziantep FK 2:1 | 8. Spieltag, SüperLig 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSkM1SzZuSHhjdUwxcjlXa3NJRHVtQnNuV3pseFlKNldYQndLNThrZE1vLWFMUVVyRnlwNGh3RDVTM29EVE0xbFozQjYtV3NLNFo4WE5DSlF3UWhHVmxRTXJabVdZRTZ4QVdLMFk2OHpaZ21KX1FTdGhTNDJzWFNrbDdrWkkzUUZKRFJuT3gweE5GaTctSDlob3Q3cGxUZXRodDlwYmlHcw?oc=5",
             "publishedAt": "Sun, 18 Oct 2026 16:00:00 GMT",
             "source": "sport.de"
           },
           {
-            "title": "Aufstellung | Istanbul Basaksehir FK - Galatasaray SK 2:3 | 4. Spieltag | Trendyol SüperLig 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOWUwwQ3BKSkpnQndQRnJ6WnlCa0Ffdi1FWjZSN19JODhhUFB6dE1KbVFTeHljd096cEZVY2M1WXROUGZ1RzQtTzhnUkJrczBsNzZEbUtQUEs5d0JURGwyZE5TbzBXaWY3XzVUU1N4Qy1lbmM2OFNKcmJZa2xnRkdtbkRMeXhkSnhreGQtSHhMNA?oc=5",
-            "publishedAt": "Fri, 04 Sep 2026 16:21:24 GMT",
+            "title": "Aufstellung Konyaspor - İstanbul Başakşehir 0:0 | 7. Spieltag, SüperLig 2026/2027 - sport.de",
+            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOWUydnFmeEU3M19SYUphR1ZWQUpxTi1rTmlfWlVyNW9ISWxMdzVGMnB6eHAtUDRVZE1yQjE3U1QzcVM3M0s2S2NpYXZHQXcySFVoclEwU0tvNUhMd0UxUDBBVGZvTnhzYWEwd2QwRXpJQ0NfYVlsNC1uYnlnQmN4eC15b04tRzR2NTVEZTViWUhmV3BOS3B3TU8yeWFTMEo2NG9j?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
+            "source": "sport.de"
+          },
+          {
+            "title": "Aufstellung | Istanbul Basaksehir FK - Inter Turku 1:1 | 2. Runde | Conference-League-Qualifikation 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdnJZbWRXS0ZLY0JvZkF0bzR6ZEUxQTN0S1pCQWd6N1FtX0pCRHZEZzBlQ1MzanNfVkZDdUZZcXN1Wl9DOVJGQnNMM3I1V3prY21QWTNiRkNHTGd5V2Nmb19fLXdBeFltM29aNEpPNndZZFNzejUxMEtXRUFzcXJIZm5pc0dEN04yVjgwZlpGOHZmc2JzeWFadklyai1GY1VNWjF0c2JBbzAxUzVCVi12aWJB?oc=5",
+            "publishedAt": "Wed, 22 Jul 2026 17:00:49 GMT",
+            "source": "Kicker"
+          },
+          {
+            "title": "Aufstellung | Konyaspor - Istanbul Basaksehir FK 0:0 | 7. Spieltag | Trendyol SüperLig 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQS1J2MVJub2oyZnZXVkZTbV84dldvVWVFdm9lS3dCcVZKUG5oMVJ5WWNVdXkzdF9udDJ2S0tKVFRLaWE3Z1lDZm9rMjBZVktTT19rMWhPRE16MVBsZDZEb2lHN0JoQXpiTm95YmJ6cnRzU01ZU1N2bVZCbkJDOWVPLWtLTlZNNDg?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 10:16:02 GMT",
             "source": "Kicker"
           }
         ]
@@ -18207,16 +18207,16 @@
             "source": "Kicker"
           },
           {
+            "title": "Sportings Bayern-Generalprobe: Lissaboner Derby bei Benfica endet Remis - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNzBZcnVUeGJBay1QbmdiQlIyQnpOUDdNLVdna1ZrUjY0dmhnRmNnaHNXR2dFOFNVLWxEMkJGVWJlY2hzeU9scHZjOTBrZ09KYW14U081LXRoRGM4MVhKTlFja2RUdTVxTlhMZUVjYk5KSkh0dy1NUWlJd3dFSTAzRUp6bE1FU2RsSC1TelZjMEFWbWxZ?oc=5",
+            "publishedAt": "Fri, 05 Dec 2025 08:00:00 GMT",
+            "source": "Kicker"
+          },
+          {
             "title": "SL Benfica - sport.de",
             "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5SMTMyNG1LT3BoRUxqdkRtaVJjYWRnOXNwNkhCOEdQYkRiR3JMSmN5NVVBX3JvTk14bU1HSjNMd0lRV1FzX19SRmxMeE1RUmkyREc5X0RyX1UxYnlM?oc=5",
             "publishedAt": "Sat, 11 Mar 2017 16:14:09 GMT",
             "source": "sport.de"
-          },
-          {
-            "title": "Teils auf Bewährung: UEFA sperrt Benficas Prestianni für sechs Spiele - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdmpCSkM1eTdVc3M3X2NCN1dwSHdlQW1BODhfQ3M2cUVGWllFS3hGbE1WR2tWUzFMSW03aGRlZmhxeWJydUpBczVPSjR1VG9jQnlET0tyNU5PNko4RHFBVkVzbzQ3cHlhN3o3bE1xeWZpdHlVSXY0blFNaUtZUHJNMGRkNE1Qb2kxSk1MOUhQQVd6S19yaUVjazh3d2Nka1lROUcwSzN4a0l3ODJs?oc=5",
-            "publishedAt": "Fri, 24 Apr 2026 07:00:00 GMT",
-            "source": "Kicker"
           }
         ]
       },
@@ -18297,16 +18297,16 @@
             "source": "SZ.de"
           },
           {
-            "title": "Aufstellung | CD Santa Clara - Sporting Braga 0:0 | 7. Spieltag | Liga Portugal Betclic 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVZlTFlqdnlDLXRsZ240VlI2Tm83SkpyR1RTRzRhV0pLSDR4QW9LUUFKVG5tbjhrMllsNElheUVIOEY0LWJBMWVsOXV4U01LUG9iNUtOeWlMX056bnQxanNwakFiVklpZ3RYWm5DQjNXX0ZOMVhGUkotM1U0SUxud25iVzRKMmtDUXlTeQ?oc=5",
-            "publishedAt": "Sun, 20 Sep 2026 16:28:30 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "Aufstellung FC Alverca - CD Santa Clara 1:1 | 4. Spieltag, Primeira Liga 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdE9tYjhQd2pNVjVzaWx4R0loc3hmLXF0bFhhSDd1U0Z0bzVaUE95bmQwcndlaHJTdG5Vd2JPRFJFLWNZVXNuTWs4cmpjV2dDR3dNSG9mUmt4M085MzcxNXo1VG11UTBDUjN2czRNa0t4X3dod0ZEdlM2S3RVSmw4R1lOeGJQUnBuVndBaFJwVGJvTW5GWmRJeEVLMHVScTNPOUJSdQ?oc=5",
             "publishedAt": "Sat, 29 Aug 2026 07:00:00 GMT",
             "source": "sport.de"
+          },
+          {
+            "title": "Aufstellung | CD Santa Clara - Sporting Braga 0:0 | 7. Spieltag | Liga Portugal Betclic 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVZlTFlqdnlDLXRsZ240VlI2Tm83SkpyR1RTRzRhV0pLSDR4QW9LUUFKVG5tbjhrMllsNElheUVIOEY0LWJBMWVsOXV4U01LUG9iNUtOeWlMX056bnQxanNwakFiVklpZ3RYWm5DQjNXX0ZOMVhGUkotM1U0SUxud25iVzRKMmtDUXlTeQ?oc=5",
+            "publishedAt": "Sun, 20 Sep 2026 16:28:30 GMT",
+            "source": "Kicker"
           }
         ],
         "away": [
@@ -18329,16 +18329,16 @@
             "source": "L'essentiel"
           },
           {
-            "title": "Aufstellung | Borussia Dortmund - Benfica Lissabon 5:0 | Achtelfinale | Europapokal der Landesmeister 1963/64 - kicker",
-            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcm1VRVVTZExudDBzRjc0U2NpbndGaVlGTnhuaDN3ZklFbEpDeE9JeVctYlEwNTh5dWZ3T2dScmJVczhOUmdHRFlDM3IzdHo5Y2NzMWFnT29RcjhDQTVqVWZxSkpFUzFMY0djU1FVWVQyR25XTWVaU1g5OUd6TVRVOGliNHZGUTVkZ0JvbHU1Ykludw?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 22:07:18 GMT",
-            "source": "kicker"
-          },
-          {
             "title": "Aufstellung: Benfica vs. Bayern - Champions League 26/27 - FC Bayern",
             "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOaVFCRGt5Y3pYcW42RnBZVVFkcmhzOWFLcnRPNUlJZG9mMTNWOW5yNXNjREVnWGJNVW9mVjNISEx6R3V0M0lPOE10TEpOM1A0SzFCRTJGR0dzeHRkd3ozRXhqeEUtRURxVmlJd3dHT2RWUFpHTENZaGFmMFg5RS0xSTlfOGdXelVyWjdYLTVwR3RvV1JCRVpaSXJDLV9NZGtKWFVaX1VGUmdsSEJOcEhhMk5DekRCUUJxamR4aDk4amNqbWcyUWd3?oc=5",
             "publishedAt": "Wed, 30 Sep 2026 07:00:00 GMT",
             "source": "FC Bayern"
+          },
+          {
+            "title": "Benfica Lissabon - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNnptYUpVYk1oVFJ3R3VzaklIdWthYk1fZjh6VHo0OVd0b0E3emY3VWtyeTNDYUo5Yi00MEk1QUQ0bVF0SHE0T29TWXUyZmdQSHpMMzhsV2RKQkdyMUlwNUlUTTJiZUpBMC1RRWhQcUpDd0NOeDUzWGxlanNPdmtCRGxxNHF2YTg?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 14:39:12 GMT",
+            "source": "Transfermarkt"
           }
         ]
       },
@@ -18590,28 +18590,28 @@
             "source": "Real Madrid CF | Web Oficial"
           },
           {
-            "title": "Aufstellung Athletic Club - Sevilla FC 1:3 | 2. Spieltag, La Liga 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaUNSVmZadGptUHVQTURiZjlrNkRmNnRtTjFDMmJDeE5jc3RpOU9yTF9KbTh5R1lsUElXaVI0M2ZzNnNwdGFlVHJ3SkRPU2xyOURFb2R1WlAySUVXNW9SbHcwbGtBbU1TeXAtc3VuWEU5ZEd0VlpPcWxCMXNWRHJCaVRCcDBQTzRvVmNJT2VHVWx2RnBxTktJM1ZiQVNoeHJ2YjIxRmJ3?oc=5",
-            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Bayer 04 - FC Sevilla | Testspiel 2026/27 - Bayer04.de",
-            "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdGdPeWp3WmJyem5aU1o3XzB5WEIxdDNsSzdzS19taHctRkpLM2luSU03NDNFLVhiNk1RYU9GNFY1Z3FDbFdVZmpKSWtuY1laUEZRZDR1aXlteXBRTUI4UzFsQ2xEYjZWeG1BczVuSmd5MnZuckFNZXNuNGx5X2ZKY0xn?oc=5",
-            "publishedAt": "Tue, 02 Jun 2026 20:27:48 GMT",
-            "source": "Bayer04.de"
-          },
-          {
-            "title": "Schwerer Unfall mit Stier: Torero in Sevilla wird von hinten aufgespießt - Spiegel",
-            "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNRHBmcF9iY2xrU2MwNEs3eGtINkVObl9kWFNsaThQMlZUcTQzREg1SFBRdmlhQ0FETWNaSHBkRWVicFVLSlhwNDFlOTk1TGJPNlZHZ1daYy1yTU1QS01EaExzRTZQd2xRSVlMZnVNaVhidTFMSUhFaFh4Nm1ZZ1ozWHJycklyaTJGTEJEUFo0WEJkUmRQS0lnNTlaYkFaTnVyb0V6ZnV6ZVYzZUU2eW5FdGxHaDhvcDhTeng3blMtOHEyWFBEU3JEOVQwdl8wRDItTFNvZldRaDY1V3c1SEE?oc=5",
-            "publishedAt": "Tue, 21 Apr 2026 07:00:00 GMT",
-            "source": "Spiegel"
-          },
-          {
-            "title": "Fußball Champions League: Lille gegen Betis Sevilla - Aufstellung - 1. Gruppenspieltag - 2026/2027 - sportschau.de",
-            "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOcm42NGR1Uk1tazYyQkxvNHBOTXVRWnNVVEFwc2JyX2lMNU1YM05WeVRYOFNtYmp0N2todndVclJ4Vk50Wm9ZZ2tJVUVZY3cyd1g0TUhkSEFPQ2lPSGdIaml0cjhidGdjSzVfWTF2V2g0eGNsbFEwQkJNZUF6RXJpSHlaUnVyY2Z5bng4dS1OR2ZrTHZTMXhtNXBOUFdGN0pKRk0zNlVHWHFVM2hQNVQwcmtaYWk1S3djend0V1VNakN5Q2g1SWRlNk5hajZzQQ?oc=5",
-            "publishedAt": "Tue, 08 Sep 2026 20:57:43 GMT",
+            "title": "Fußball Champions League: Betis Sevilla gegen Feyenoord - Aufstellung - 3. Gruppenspieltag - 2026/2027 - sportschau.de",
+            "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPa3N3TUZZRDlQNGN2V2JrZjZWNWpHYnBMb2NETHJTMG9aZDNpYTV2YmRZMW5WV3VtaUdiTER2WHR1NFZaZUlVUm9KWTRQUXJVb1h4bjIwRWd5dHlXSGdzYU11Qkx0Y2x6UzJJRkNYanhIWHAtcjY1ejFIdy1UVWVBSHF1dlZLdmNVWHpGRE92eE5YeloxejBXaFNncDVROUdPbGQ4UjBEZzZ5d1dGWWxBRll2RWxRSkdFQ3E2WWRWNktuNG9qaHZwN0t1aEN3bnh0c2hVTklwUGlzTGs?oc=5",
+            "publishedAt": "Wed, 21 Oct 2026 22:28:39 GMT",
             "source": "sportschau.de"
+          },
+          {
+            "title": "Real Betis Sevilla - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQdFZuTE56dnV4NHNUd0xCXzJ3cjFEb0tyaHZiOEpONkRieHlGVFBONjIweDJiNW5xQ0cwS3dUZTJWMXFmM0tmNFpOLVM1bGN3RHFocEJMdnhkZkpWVVlGeEZjZzJXYVp6QnpSYnVrTHBtc21xaXQ1bHFSVEFqN0ZIbTg4VnJPUXpkbl9LQTQyaDdRWFU?oc=5",
+            "publishedAt": "Fri, 23 Oct 2026 09:51:25 GMT",
+            "source": "Transfermarkt"
+          },
+          {
+            "title": "Aufstellung | Celta Vigo - Real Betis Sevilla 0:0 | 10. Spieltag | La Liga 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4yVlU5MVZvNk12ZGJielg2NmZoNHpFVWRvZ0hzQ3l3czBPTW9VMno0MGY1MUFVZXZVOUo0c0ZvSHl5bUhQN2NFeE5rWmVIdElUSkR3Y2RBU3hqc1RCT0tQQUJkNFlFQnZGYnpScWNnODdYLXlQWlhWQ1R3cw?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 14:30:26 GMT",
+            "source": "Kicker"
+          },
+          {
+            "title": "Aufstellung | Celta Vigo - Real Betis Sevilla : | 10. Spieltag | La Liga 2026/27 - kicker.ch",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9TWUdhRXZQa1M3T29NMTI4ZjYzYWt1dm1kTm52cjJhRF9OVGRtbWJ6MVhpNzYzS0hvT0hfTE1zUTZXaVNFVVZiRUc3a1NYUTlVZU5CNlhuM2xfS2M3bVJ4X09oRFFob2xYS0I1V0p1TWdFa2E1SUgybVBDbw?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 15:11:57 GMT",
+            "source": "kicker.ch"
           }
         ],
         "away": [
@@ -18981,9 +18981,15 @@
             "source": "sport.de"
           },
           {
-            "title": "Frosinone Calcio gegen US Sassuolo Aufstellung - Serie A 7. Spieltag 2026/2027 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTmVnNlFFV2xORGZaYlpIaEVZQWE0MTlNWmxKZDN5cWpfY1hZUFo1dWJGY0pFdS1SSGQ5ajVzZDBkbXJ6TXlMVEMteWVmZkdMVGNXUk9ZSF9IdmFWRmNkeTZoREp0RF9udFZxa09OQjlzS0hBZ0Q3cEQwQmVnZFpuLU1ZZ0plLTd3a1lxZW5lNGNMVldFUGc?oc=5",
-            "publishedAt": "Tue, 20 Oct 2026 18:05:36 GMT",
+            "title": "US Sassuolo - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSENINzViNF81UFJBUk1uSWdPUmh2N0lMNktjajctNkJkRjhhQWp1NEl6VVdfbUplYlpqd0JNeXh6TTc3NkVVdzJLRGxVZGpyaWpYT2h3Sld4LVlPWnhZVmlfcEFkZDh2UGhrSnJ2ZGdRRGdsSF9UdU8wdEFpSk83RWFxeWNMcEtfTVQ0?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 03:42:42 GMT",
+            "source": "Transfermarkt"
+          },
+          {
+            "title": "US Sassuolo gegen Bologna FC Aufstellung - Serie A 23. Spieltag 2020/2021 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQkxxZm5ycFlZVk5zdnJIWHBLU0U0Y2xDdUg5RldXbzR2ZGJ5SXBIMk9Tb1dCQVd6ZXRGY3VONmZPb0d3X0pLRHFWSUlEUzYzT182UUVsR2gycjFZRXlBTjh2czJRLVlvazdZNnRFNGlnWGxXQjg0VVZxbzdkWXdJQk14WTdyWTc2TnRJSTJ1UQ?oc=5",
+            "publishedAt": "Thu, 22 Oct 2026 17:32:49 GMT",
             "source": "BILD"
           },
           {
@@ -18993,16 +18999,10 @@
             "source": "Kicker"
           },
           {
-            "title": "Aufstellung Frosinone Calcio - US Sassuolo 4:2 | 7. Spieltag, Serie A 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSUdBV1Ywa05qcTN2ZXpYaFczc19xX0NVLThOaHN3cjNYbUxQaGNxa1RhWXdmVENYbUpmeHBKcVNXYUZOZmpvM1B6ZWVrS0cyR1g5RDB4NUgyN29BVThRcU1JLWhBS0dJaXZzZGdUZHhHdWNhSHBGYjUyM2U0QTUzN1lWUDNldUdqbHBWQkt4YU41ZE4zbl9BOENSUEFEdEk?oc=5",
-            "publishedAt": "Fri, 16 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Aufstellung | Sassuolo Calcio - AC Mailand 1:1 | 6. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOVUhsa3VkU0RqRTRJZEp5LTRKYU5vRlVaUkpoYmVrNHVkaFlITWJkWFlNbWVmUGdSeU1aell2aUE5aGhXcXFjdjZQc0lIU29Eb2hYLWtNNkczck1QbEZNRXh1YVUzQWJaaFQwc090cE1TZWFkcU43dnRiM2hZeWItQw?oc=5",
-            "publishedAt": "Sun, 11 Oct 2026 15:16:30 GMT",
-            "source": "Kicker"
+            "title": "Frosinone Calcio gegen US Sassuolo Aufstellung - Serie A 7. Spieltag 2026/2027 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTmVnNlFFV2xORGZaYlpIaEVZQWE0MTlNWmxKZDN5cWpfY1hZUFo1dWJGY0pFdS1SSGQ5ajVzZDBkbXJ6TXlMVEMteWVmZkdMVGNXUk9ZSF9IdmFWRmNkeTZoREp0RF9udFZxa09OQjlzS0hBZ0Q3cEQwQmVnZFpuLU1ZZ0plLTd3a1lxZW5lNGNMVldFUGc?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 18:05:36 GMT",
+            "source": "BILD"
           }
         ],
         "away": [
@@ -19250,12 +19250,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -19268,10 +19262,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -19702,12 +19702,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -19720,10 +19714,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -20815,6 +20815,12 @@
         ],
         "away": [
           {
+            "title": "Aufstellung | Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPREwxaXFMMVgwNGV5TmExWmVOWko2WlkyZUJOMUg0Nk5oV2szOXVpYWVaTXhsNm1yZ3VEWTRSWXh6a2RkR09MemFoay00UlN3QThwcWF1ajNPX0J3c0hEYmFsakRtd0VhejR3cmtUb0cydDZsR3o0cGlYVm1tV1pwaVhoQQ?oc=5",
+            "publishedAt": "Sat, 24 Oct 2026 12:21:11 GMT",
+            "source": "Kicker"
+          },
+          {
             "title": "Aufstellung Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag, Serie A 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQVmlpVFRTUURSeC1IenN5dXJaa0hRSjJNRmFicGZiSHp4MDhyVngtcGFCWDRxc0VDXzVUSE1LUTVDNkVONmdjNXVDYzdnLU16c3VERXBXdWViZUQtTXdqUTB6cExGS3FjNWdrS2NkLWYtU28tUVFvU3hDYmRYYzNHcDFUYlZpdnAzV1Z0TnhwZm1ONXFvNmRLNVAzS28?oc=5",
             "publishedAt": "Sat, 24 Oct 2026 13:00:00 GMT",
@@ -20827,22 +20833,16 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Aufstellung | Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPREwxaXFMMVgwNGV5TmExWmVOWko2WlkyZUJOMUg0Nk5oV2szOXVpYWVaTXhsNm1yZ3VEWTRSWXh6a2RkR09MemFoay00UlN3QThwcWF1ajNPX0J3c0hEYmFsakRtd0VhejR3cmtUb0cydDZsR3o0cGlYVm1tV1pwaVhoQQ?oc=5",
-            "publishedAt": "Sat, 24 Oct 2026 12:21:11 GMT",
+            "title": "Aufstellung | FC Bologna - Inter Mailand 1:3 | 7. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1UOTlfWjI4YklwbzJURWd1OUpUdkJ4blhLdE1mZVVWNXRCV2pQbTRJUHBFeUh4dU81Z0ZlZmVpQlM4SnR6bG5ZTFRtTHQ0RWEzX0FzUWU0MzV2cmNYRkw1NVpuOHIwTHFlMXVETXlZVWFQR2d5VnJOcVRyUTFFMWM?oc=5",
+            "publishedAt": "Sat, 17 Oct 2026 15:16:32 GMT",
             "source": "Kicker"
           },
           {
-            "title": "US Sassuolo gegen Bologna FC Aufstellung - Serie A 23. Spieltag 2020/2021 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQkxxZm5ycFlZVk5zdnJIWHBLU0U0Y2xDdUg5RldXbzR2ZGJ5SXBIMk9Tb1dCQVd6ZXRGY3VONmZPb0d3X0pLRHFWSUlEUzYzT182UUVsR2gycjFZRXlBTjh2czJRLVlvazdZNnRFNGlnWGxXQjg0VVZxbzdkWXdJQk14WTdyWTc2TnRJSTJ1UQ?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 17:32:49 GMT",
-            "source": "BILD"
-          },
-          {
-            "title": "FC Bologna - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOSUVzUzhUbUpyQlIycW5QU1FTUWQ1SVNUUmQ4M18tS1Vrd1ZHQmlwQ0tRMzJiQ0p1T3JrVWRFdFpDeFBwcDlObXhYSnFzYVBsUUt6dkJMeXFyaWVZanBJYjNEdVhKTkt4TlpERGhPNzBsZ0F0cHgwdncxUFhIZFF0UnRINHdXUHpnWHc?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 03:49:11 GMT",
-            "source": "Transfermarkt"
+            "title": "Aufstellung US Lecce - FC Bologna 1:2 | 6. Spieltag, Serie A 2026/2027 - sport.de",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPbXBjYTJkNV8zYU80MkllSjBYZTE5UW9xQ2xoMm5hemI3UGdPa3NBTm5odkNTVWk0R0pTMWdhLUJlV29sZUlpazRtVGFvQkEtU3FKZjdyQ1VwSlMzZk5LMGFyRkQ1YTNaX2tDNVFRekFZXzRob1pJVGRMSHFYNGZ5eFk4d0UxbUM2UHlWcnpySDI2Mnc?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
+            "source": "sport.de"
           }
         ]
       },
@@ -21572,6 +21572,12 @@
         ],
         "away": [
           {
+            "title": "8. Spieltag: SSC Neapel - AS Rom - S.S.C. Napoli - I Partenopei - Forum | Page 1 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUlFrU1RSVHJseVZmVWJTQnlVYXZQaWFwd29WM0RfTV9Ha1B3U2xrTVROTEF5UFBlRm5UdXRRV3hvVTlkaWIxVmZ4U1JPdnQ0NEZNVldCUEVhSWNMU1ZnaFY1Q0lTVTNEUXdzWlpsYjRZMDFfZFFRb2dPdjNuNmVWNDU4bjd5SlBXaW5uUVg0clVKdEk?oc=5",
+            "publishedAt": "Sat, 24 Oct 2026 14:58:00 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Napoli verliert Abwehrchef: Buongiorno droht monatelanger Ausfall - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPby15dk1FZmQ5bWRzSDhUUFBZSW9sSWRKaElLbkxKbExmaDlsVTQybHdpbWE3TjZrYU41LU11cDU4LWw4aVRUSTE0dmNfZF9KWXNJcG0wcGV5NWZUOVZybk9BM000ZllJb3pNV0ZMX2tWT09hTzJqQ2hVaGlCSndTUjJhVEJjaUQ4QjV0YzEzWGh5YXN4M2Z1ZUplX2dQOVZn?oc=5",
             "publishedAt": "Tue, 21 Jul 2026 07:00:00 GMT",
@@ -21584,22 +21590,16 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Vorschau: Nächster Halt Neapel - Eintracht Frankfurt",
-            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1yMHdYblNJWkNmV0V5dEVRTXZCeFdwblNVM0RjZUU4RTItMHc1Q0NDZU91OUk1czFpbTdqaGs3TUlUTk5teERSY21vRW15c3Fzc2s0eWVMR2dhZ2NGSXpTVmFHRlBRNm1ZaVJQbEFmRFdkQTlWblFMRDd0dw?oc=5",
-            "publishedAt": "Sun, 02 Nov 2025 07:00:00 GMT",
-            "source": "Eintracht Frankfurt"
+            "title": "Inter Mailand gegen Neapel, Serie-A-Vorschau: Alles, was ihr wissen müsst - Goal.com",
+            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMGxUekRLTGtKckpYSHN5QkNIckVqU3hRUmx4MzRfQ29IalpjNGJ6U3QzcEgwd1VfMFZqMEJTcEM2ZEgxV2Y2Zld4a3dWQ25kNFl2RDM4Nl9uc0JIQWpha2luekZsenpJbVlScnNYSmlEQUZYTUpRWkNYUzVNQXBWQlBWRVdhU0puQ3pPVGZ1UWtQRzVfb3ZEakJNalNQbGlfMk9Bd0p4eFNDcDMxcXMxUU1nRllmenA3VnlPcVp0ZF9GZ2s?oc=5",
+            "publishedAt": "Fri, 04 Sep 2026 07:00:00 GMT",
+            "source": "Goal.com"
           },
           {
-            "title": "Oberschenkelverletzung! Havel verpasst Genua-Auftakt gegen Napoli - LAOLA1",
-            "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUUhlalZNbndFNDRrQkQtLThSNHdWYy1sXzllck1Tb2NVaDhveGRBWEx3UGtuelRYOGhSVHJyMURUbG9GMHh5ZTJFRmNxWHBNTnNlLUN1RHRBNS1qY05kcWFmeTNjTXU0RkdFTnVMemNaTXdtNjRQTWtueTljRXhzMVpxQ0JMSWlCYUVkSDRLSDI1bFJsTHFRTnRsc2VOQkllT253eGJOaTc1SzFUYThWNkU3SGhXLUhKNkxid2JsM2hmaklWOEY0dlRzemJ3QkNFbGpUMkFxM2hyOERmblhjRg?oc=5",
-            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
-            "source": "LAOLA1"
-          },
-          {
-            "title": "Anguissa verpasst Afrika-Cup: Nächste schwere Verletzung bei SSC Napoli - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOYmluZWw3bkl4ME5SRjVyQmU5cVNPcUN3c2hmX3JnVVI0d0p3U1I3OVR4TzNZaVphdjBZbElmMTB1VjlteGRoOC1ra1ZSb2tIcnpUbUtDUWplUW1XcUtYSGgwNU9tZWhEenJmRDNIanQ2RVhnb3lXYUFIemh0VjRlRFRSRE5hX3BIRnU5OHZPWklqaGZ0cm9wWDRwWjBQQlpncnVOQ015SzFtZ1lrUnNCbENpeExmOG8?oc=5",
-            "publishedAt": "Fri, 14 Nov 2025 08:00:00 GMT",
-            "source": "Transfermarkt"
+            "title": "SSC Napoli - Celta Vigo Live ticker, H2H und Aufstellungen - Sofascore",
+            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53TE1FZWdwTzlVVktnRGp4TmtRNUh4RGItY1BLeFBxUFkxdExObzZzOFp5NkdxaUZuUFc2NGxZUkFzMGY0VXBlTWtPbkxnX1pYcXVsTmo0OE03dVdaSzgwZmU4aHE1bzdWbnBMbnM0M25qRkhaVUxzTjJIYm00dw?oc=5",
+            "publishedAt": "Sat, 08 Aug 2026 07:00:00 GMT",
+            "source": "Sofascore"
           }
         ]
       },
@@ -24643,6 +24643,12 @@
       "teamNews": {
         "home": [
           {
+            "title": "Aufstellung | Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPREwxaXFMMVgwNGV5TmExWmVOWko2WlkyZUJOMUg0Nk5oV2szOXVpYWVaTXhsNm1yZ3VEWTRSWXh6a2RkR09MemFoay00UlN3QThwcWF1ajNPX0J3c0hEYmFsakRtd0VhejR3cmtUb0cydDZsR3o0cGlYVm1tV1pwaVhoQQ?oc=5",
+            "publishedAt": "Sat, 24 Oct 2026 12:21:11 GMT",
+            "source": "Kicker"
+          },
+          {
             "title": "Aufstellung Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag, Serie A 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQVmlpVFRTUURSeC1IenN5dXJaa0hRSjJNRmFicGZiSHp4MDhyVngtcGFCWDRxc0VDXzVUSE1LUTVDNkVONmdjNXVDYzdnLU16c3VERXBXdWViZUQtTXdqUTB6cExGS3FjNWdrS2NkLWYtU28tUVFvU3hDYmRYYzNHcDFUYlZpdnAzV1Z0TnhwZm1ONXFvNmRLNVAzS28?oc=5",
             "publishedAt": "Sat, 24 Oct 2026 13:00:00 GMT",
@@ -24655,22 +24661,16 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Aufstellung | Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPREwxaXFMMVgwNGV5TmExWmVOWko2WlkyZUJOMUg0Nk5oV2szOXVpYWVaTXhsNm1yZ3VEWTRSWXh6a2RkR09MemFoay00UlN3QThwcWF1ajNPX0J3c0hEYmFsakRtd0VhejR3cmtUb0cydDZsR3o0cGlYVm1tV1pwaVhoQQ?oc=5",
-            "publishedAt": "Sat, 24 Oct 2026 12:21:11 GMT",
+            "title": "Aufstellung | FC Bologna - Inter Mailand 1:3 | 7. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1UOTlfWjI4YklwbzJURWd1OUpUdkJ4blhLdE1mZVVWNXRCV2pQbTRJUHBFeUh4dU81Z0ZlZmVpQlM4SnR6bG5ZTFRtTHQ0RWEzX0FzUWU0MzV2cmNYRkw1NVpuOHIwTHFlMXVETXlZVWFQR2d5VnJOcVRyUTFFMWM?oc=5",
+            "publishedAt": "Sat, 17 Oct 2026 15:16:32 GMT",
             "source": "Kicker"
           },
           {
-            "title": "US Sassuolo gegen Bologna FC Aufstellung - Serie A 23. Spieltag 2020/2021 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQkxxZm5ycFlZVk5zdnJIWHBLU0U0Y2xDdUg5RldXbzR2ZGJ5SXBIMk9Tb1dCQVd6ZXRGY3VONmZPb0d3X0pLRHFWSUlEUzYzT182UUVsR2gycjFZRXlBTjh2czJRLVlvazdZNnRFNGlnWGxXQjg0VVZxbzdkWXdJQk14WTdyWTc2TnRJSTJ1UQ?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 17:32:49 GMT",
-            "source": "BILD"
-          },
-          {
-            "title": "FC Bologna - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOSUVzUzhUbUpyQlIycW5QU1FTUWQ1SVNUUmQ4M18tS1Vrd1ZHQmlwQ0tRMzJiQ0p1T3JrVWRFdFpDeFBwcDlObXhYSnFzYVBsUUt6dkJMeXFyaWVZanBJYjNEdVhKTkt4TlpERGhPNzBsZ0F0cHgwdncxUFhIZFF0UnRINHdXUHpnWHc?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 03:49:11 GMT",
-            "source": "Transfermarkt"
+            "title": "Aufstellung US Lecce - FC Bologna 1:2 | 6. Spieltag, Serie A 2026/2027 - sport.de",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPbXBjYTJkNV8zYU80MkllSjBYZTE5UW9xQ2xoMm5hemI3UGdPa3NBTm5odkNTVWk0R0pTMWdhLUJlV29sZUlpazRtVGFvQkEtU3FKZjdyQ1VwSlMzZk5LMGFyRkQ1YTNaX2tDNVFRekFZXzRob1pJVGRMSHFYNGZ5eFk4d0UxbUM2UHlWcnpySDI2Mnc?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
+            "source": "sport.de"
           }
         ],
         "away": []
@@ -28348,12 +28348,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -28366,10 +28360,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -28531,12 +28531,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -28549,10 +28543,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -31825,28 +31825,28 @@
             "source": "Real Madrid CF | Web Oficial"
           },
           {
-            "title": "Aufstellung Athletic Club - Sevilla FC 1:3 | 2. Spieltag, La Liga 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaUNSVmZadGptUHVQTURiZjlrNkRmNnRtTjFDMmJDeE5jc3RpOU9yTF9KbTh5R1lsUElXaVI0M2ZzNnNwdGFlVHJ3SkRPU2xyOURFb2R1WlAySUVXNW9SbHcwbGtBbU1TeXAtc3VuWEU5ZEd0VlpPcWxCMXNWRHJCaVRCcDBQTzRvVmNJT2VHVWx2RnBxTktJM1ZiQVNoeHJ2YjIxRmJ3?oc=5",
-            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Bayer 04 - FC Sevilla | Testspiel 2026/27 - Bayer04.de",
-            "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdGdPeWp3WmJyem5aU1o3XzB5WEIxdDNsSzdzS19taHctRkpLM2luSU03NDNFLVhiNk1RYU9GNFY1Z3FDbFdVZmpKSWtuY1laUEZRZDR1aXlteXBRTUI4UzFsQ2xEYjZWeG1BczVuSmd5MnZuckFNZXNuNGx5X2ZKY0xn?oc=5",
-            "publishedAt": "Tue, 02 Jun 2026 20:27:48 GMT",
-            "source": "Bayer04.de"
-          },
-          {
-            "title": "Schwerer Unfall mit Stier: Torero in Sevilla wird von hinten aufgespießt - Spiegel",
-            "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNRHBmcF9iY2xrU2MwNEs3eGtINkVObl9kWFNsaThQMlZUcTQzREg1SFBRdmlhQ0FETWNaSHBkRWVicFVLSlhwNDFlOTk1TGJPNlZHZ1daYy1yTU1QS01EaExzRTZQd2xRSVlMZnVNaVhidTFMSUhFaFh4Nm1ZZ1ozWHJycklyaTJGTEJEUFo0WEJkUmRQS0lnNTlaYkFaTnVyb0V6ZnV6ZVYzZUU2eW5FdGxHaDhvcDhTeng3blMtOHEyWFBEU3JEOVQwdl8wRDItTFNvZldRaDY1V3c1SEE?oc=5",
-            "publishedAt": "Tue, 21 Apr 2026 07:00:00 GMT",
-            "source": "Spiegel"
-          },
-          {
-            "title": "Fußball Champions League: Lille gegen Betis Sevilla - Aufstellung - 1. Gruppenspieltag - 2026/2027 - sportschau.de",
-            "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOcm42NGR1Uk1tazYyQkxvNHBOTXVRWnNVVEFwc2JyX2lMNU1YM05WeVRYOFNtYmp0N2todndVclJ4Vk50Wm9ZZ2tJVUVZY3cyd1g0TUhkSEFPQ2lPSGdIaml0cjhidGdjSzVfWTF2V2g0eGNsbFEwQkJNZUF6RXJpSHlaUnVyY2Z5bng4dS1OR2ZrTHZTMXhtNXBOUFdGN0pKRk0zNlVHWHFVM2hQNVQwcmtaYWk1S3djend0V1VNakN5Q2g1SWRlNk5hajZzQQ?oc=5",
-            "publishedAt": "Tue, 08 Sep 2026 20:57:43 GMT",
+            "title": "Fußball Champions League: Betis Sevilla gegen Feyenoord - Aufstellung - 3. Gruppenspieltag - 2026/2027 - sportschau.de",
+            "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPa3N3TUZZRDlQNGN2V2JrZjZWNWpHYnBMb2NETHJTMG9aZDNpYTV2YmRZMW5WV3VtaUdiTER2WHR1NFZaZUlVUm9KWTRQUXJVb1h4bjIwRWd5dHlXSGdzYU11Qkx0Y2x6UzJJRkNYanhIWHAtcjY1ejFIdy1UVWVBSHF1dlZLdmNVWHpGRE92eE5YeloxejBXaFNncDVROUdPbGQ4UjBEZzZ5d1dGWWxBRll2RWxRSkdFQ3E2WWRWNktuNG9qaHZwN0t1aEN3bnh0c2hVTklwUGlzTGs?oc=5",
+            "publishedAt": "Wed, 21 Oct 2026 22:28:39 GMT",
             "source": "sportschau.de"
+          },
+          {
+            "title": "Real Betis Sevilla - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQdFZuTE56dnV4NHNUd0xCXzJ3cjFEb0tyaHZiOEpONkRieHlGVFBONjIweDJiNW5xQ0cwS3dUZTJWMXFmM0tmNFpOLVM1bGN3RHFocEJMdnhkZkpWVVlGeEZjZzJXYVp6QnpSYnVrTHBtc21xaXQ1bHFSVEFqN0ZIbTg4VnJPUXpkbl9LQTQyaDdRWFU?oc=5",
+            "publishedAt": "Fri, 23 Oct 2026 09:51:25 GMT",
+            "source": "Transfermarkt"
+          },
+          {
+            "title": "Aufstellung | Celta Vigo - Real Betis Sevilla 0:0 | 10. Spieltag | La Liga 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4yVlU5MVZvNk12ZGJielg2NmZoNHpFVWRvZ0hzQ3l3czBPTW9VMno0MGY1MUFVZXZVOUo0c0ZvSHl5bUhQN2NFeE5rWmVIdElUSkR3Y2RBU3hqc1RCT0tQQUJkNFlFQnZGYnpScWNnODdYLXlQWlhWQ1R3cw?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 14:30:26 GMT",
+            "source": "Kicker"
+          },
+          {
+            "title": "Aufstellung | Celta Vigo - Real Betis Sevilla : | 10. Spieltag | La Liga 2026/27 - kicker.ch",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9TWUdhRXZQa1M3T29NMTI4ZjYzYWt1dm1kTm52cjJhRF9OVGRtbWJ6MVhpNzYzS0hvT0hfTE1zUTZXaVNFVVZiRUc3a1NYUTlVZU5CNlhuM2xfS2M3bVJ4X09oRFFob2xYS0I1V0p1TWdFa2E1SUgybVBDbw?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 15:11:57 GMT",
+            "source": "kicker.ch"
           }
         ]
       },
@@ -32037,27 +32037,27 @@
             "source": "Kicker"
           },
           {
-            "title": "Aufstellung Konyaspor - İstanbul Başakşehir 0:0 | 7. Spieltag, SüperLig 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOWUydnFmeEU3M19SYUphR1ZWQUpxTi1rTmlfWlVyNW9ISWxMdzVGMnB6eHAtUDRVZE1yQjE3U1QzcVM3M0s2S2NpYXZHQXcySFVoclEwU0tvNUhMd0UxUDBBVGZvTnhzYWEwd2QwRXpJQ0NfYVlsNC1uYnlnQmN4eC15b04tRzR2NTVEZTViWUhmV3BOS3B3TU8yeWFTMEo2NG9j?oc=5",
-            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Istanbul Basaksehir vs Galatasaray Prognose: Sahin gerät unter Druck - Goal.com",
-            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNYXQ0dHE4c3F5THN1TjEtSm9SS0dTZU00U1YxdkFseTdaOFJTOU15WkdFcF9MbjlUVWJOT2NndnQwa1ZjZHlzVGMzUlkyUnhfMGVlQWdhd0otU0NCMVlpeHRfMk10MFhCUkFMTlE2NFY5SnYtdTJMaEFaTzdJZTFMeUltcElyVlZKdjZjeHlJcVloUG81RW50QkFSZlpNcHJIXzVtdUd5YmxWcV8zZ040b3puUUFIQVRUaVE?oc=5",
-            "publishedAt": "Sat, 05 Sep 2026 07:00:00 GMT",
-            "source": "Goal.com"
-          },
-          {
             "title": "Aufstellung İstanbul Başakşehir - Gaziantep FK 2:1 | 8. Spieltag, SüperLig 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSkM1SzZuSHhjdUwxcjlXa3NJRHVtQnNuV3pseFlKNldYQndLNThrZE1vLWFMUVVyRnlwNGh3RDVTM29EVE0xbFozQjYtV3NLNFo4WE5DSlF3UWhHVmxRTXJabVdZRTZ4QVdLMFk2OHpaZ21KX1FTdGhTNDJzWFNrbDdrWkkzUUZKRFJuT3gweE5GaTctSDlob3Q3cGxUZXRodDlwYmlHcw?oc=5",
             "publishedAt": "Sun, 18 Oct 2026 16:00:00 GMT",
             "source": "sport.de"
           },
           {
-            "title": "Aufstellung | Istanbul Basaksehir FK - Galatasaray SK 2:3 | 4. Spieltag | Trendyol SüperLig 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOWUwwQ3BKSkpnQndQRnJ6WnlCa0Ffdi1FWjZSN19JODhhUFB6dE1KbVFTeHljd096cEZVY2M1WXROUGZ1RzQtTzhnUkJrczBsNzZEbUtQUEs5d0JURGwyZE5TbzBXaWY3XzVUU1N4Qy1lbmM2OFNKcmJZa2xnRkdtbkRMeXhkSnhreGQtSHhMNA?oc=5",
-            "publishedAt": "Fri, 04 Sep 2026 16:21:24 GMT",
+            "title": "Aufstellung Konyaspor - İstanbul Başakşehir 0:0 | 7. Spieltag, SüperLig 2026/2027 - sport.de",
+            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOWUydnFmeEU3M19SYUphR1ZWQUpxTi1rTmlfWlVyNW9ISWxMdzVGMnB6eHAtUDRVZE1yQjE3U1QzcVM3M0s2S2NpYXZHQXcySFVoclEwU0tvNUhMd0UxUDBBVGZvTnhzYWEwd2QwRXpJQ0NfYVlsNC1uYnlnQmN4eC15b04tRzR2NTVEZTViWUhmV3BOS3B3TU8yeWFTMEo2NG9j?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
+            "source": "sport.de"
+          },
+          {
+            "title": "Aufstellung | Istanbul Basaksehir FK - Inter Turku 1:1 | 2. Runde | Conference-League-Qualifikation 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdnJZbWRXS0ZLY0JvZkF0bzR6ZEUxQTN0S1pCQWd6N1FtX0pCRHZEZzBlQ1MzanNfVkZDdUZZcXN1Wl9DOVJGQnNMM3I1V3prY21QWTNiRkNHTGd5V2Nmb19fLXdBeFltM29aNEpPNndZZFNzejUxMEtXRUFzcXJIZm5pc0dEN04yVjgwZlpGOHZmc2JzeWFadklyai1GY1VNWjF0c2JBbzAxUzVCVi12aWJB?oc=5",
+            "publishedAt": "Wed, 22 Jul 2026 17:00:49 GMT",
+            "source": "Kicker"
+          },
+          {
+            "title": "Aufstellung | Konyaspor - Istanbul Basaksehir FK 0:0 | 7. Spieltag | Trendyol SüperLig 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQS1J2MVJub2oyZnZXVkZTbV84dldvVWVFdm9lS3dCcVZKUG5oMVJ5WWNVdXkzdF9udDJ2S0tKVFRLaWE3Z1lDZm9rMjBZVktTT19rMWhPRE16MVBsZDZEb2lHN0JoQXpiTm95YmJ6cnRzU01ZU1N2bVZCbkJDOWVPLWtLTlZNNDg?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 10:16:02 GMT",
             "source": "Kicker"
           }
         ],
@@ -37989,16 +37989,16 @@
             "source": "SZ.de"
           },
           {
-            "title": "Aufstellung | CD Santa Clara - Sporting Braga 0:0 | 7. Spieltag | Liga Portugal Betclic 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVZlTFlqdnlDLXRsZ240VlI2Tm83SkpyR1RTRzRhV0pLSDR4QW9LUUFKVG5tbjhrMllsNElheUVIOEY0LWJBMWVsOXV4U01LUG9iNUtOeWlMX056bnQxanNwakFiVklpZ3RYWm5DQjNXX0ZOMVhGUkotM1U0SUxud25iVzRKMmtDUXlTeQ?oc=5",
-            "publishedAt": "Sun, 20 Sep 2026 16:28:30 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "Aufstellung FC Alverca - CD Santa Clara 1:1 | 4. Spieltag, Primeira Liga 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdE9tYjhQd2pNVjVzaWx4R0loc3hmLXF0bFhhSDd1U0Z0bzVaUE95bmQwcndlaHJTdG5Vd2JPRFJFLWNZVXNuTWs4cmpjV2dDR3dNSG9mUmt4M085MzcxNXo1VG11UTBDUjN2czRNa0t4X3dod0ZEdlM2S3RVSmw4R1lOeGJQUnBuVndBaFJwVGJvTW5GWmRJeEVLMHVScTNPOUJSdQ?oc=5",
             "publishedAt": "Sat, 29 Aug 2026 07:00:00 GMT",
             "source": "sport.de"
+          },
+          {
+            "title": "Aufstellung | CD Santa Clara - Sporting Braga 0:0 | 7. Spieltag | Liga Portugal Betclic 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVZlTFlqdnlDLXRsZ240VlI2Tm83SkpyR1RTRzRhV0pLSDR4QW9LUUFKVG5tbjhrMllsNElheUVIOEY0LWJBMWVsOXV4U01LUG9iNUtOeWlMX056bnQxanNwakFiVklpZ3RYWm5DQjNXX0ZOMVhGUkotM1U0SUxud25iVzRKMmtDUXlTeQ?oc=5",
+            "publishedAt": "Sun, 20 Sep 2026 16:28:30 GMT",
+            "source": "Kicker"
           }
         ]
       },
@@ -38240,6 +38240,12 @@
         ],
         "away": [
           {
+            "title": "8. Spieltag: SSC Neapel - AS Rom - S.S.C. Napoli - I Partenopei - Forum | Page 1 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUlFrU1RSVHJseVZmVWJTQnlVYXZQaWFwd29WM0RfTV9Ha1B3U2xrTVROTEF5UFBlRm5UdXRRV3hvVTlkaWIxVmZ4U1JPdnQ0NEZNVldCUEVhSWNMU1ZnaFY1Q0lTVTNEUXdzWlpsYjRZMDFfZFFRb2dPdjNuNmVWNDU4bjd5SlBXaW5uUVg0clVKdEk?oc=5",
+            "publishedAt": "Sat, 24 Oct 2026 14:58:00 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Napoli verliert Abwehrchef: Buongiorno droht monatelanger Ausfall - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPby15dk1FZmQ5bWRzSDhUUFBZSW9sSWRKaElLbkxKbExmaDlsVTQybHdpbWE3TjZrYU41LU11cDU4LWw4aVRUSTE0dmNfZF9KWXNJcG0wcGV5NWZUOVZybk9BM000ZllJb3pNV0ZMX2tWT09hTzJqQ2hVaGlCSndTUjJhVEJjaUQ4QjV0YzEzWGh5YXN4M2Z1ZUplX2dQOVZn?oc=5",
             "publishedAt": "Tue, 21 Jul 2026 07:00:00 GMT",
@@ -38252,22 +38258,16 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Vorschau: Nächster Halt Neapel - Eintracht Frankfurt",
-            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1yMHdYblNJWkNmV0V5dEVRTXZCeFdwblNVM0RjZUU4RTItMHc1Q0NDZU91OUk1czFpbTdqaGs3TUlUTk5teERSY21vRW15c3Fzc2s0eWVMR2dhZ2NGSXpTVmFHRlBRNm1ZaVJQbEFmRFdkQTlWblFMRDd0dw?oc=5",
-            "publishedAt": "Sun, 02 Nov 2025 07:00:00 GMT",
-            "source": "Eintracht Frankfurt"
+            "title": "Inter Mailand gegen Neapel, Serie-A-Vorschau: Alles, was ihr wissen müsst - Goal.com",
+            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMGxUekRLTGtKckpYSHN5QkNIckVqU3hRUmx4MzRfQ29IalpjNGJ6U3QzcEgwd1VfMFZqMEJTcEM2ZEgxV2Y2Zld4a3dWQ25kNFl2RDM4Nl9uc0JIQWpha2luekZsenpJbVlScnNYSmlEQUZYTUpRWkNYUzVNQXBWQlBWRVdhU0puQ3pPVGZ1UWtQRzVfb3ZEakJNalNQbGlfMk9Bd0p4eFNDcDMxcXMxUU1nRllmenA3VnlPcVp0ZF9GZ2s?oc=5",
+            "publishedAt": "Fri, 04 Sep 2026 07:00:00 GMT",
+            "source": "Goal.com"
           },
           {
-            "title": "Oberschenkelverletzung! Havel verpasst Genua-Auftakt gegen Napoli - LAOLA1",
-            "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUUhlalZNbndFNDRrQkQtLThSNHdWYy1sXzllck1Tb2NVaDhveGRBWEx3UGtuelRYOGhSVHJyMURUbG9GMHh5ZTJFRmNxWHBNTnNlLUN1RHRBNS1qY05kcWFmeTNjTXU0RkdFTnVMemNaTXdtNjRQTWtueTljRXhzMVpxQ0JMSWlCYUVkSDRLSDI1bFJsTHFRTnRsc2VOQkllT253eGJOaTc1SzFUYThWNkU3SGhXLUhKNkxid2JsM2hmaklWOEY0dlRzemJ3QkNFbGpUMkFxM2hyOERmblhjRg?oc=5",
-            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
-            "source": "LAOLA1"
-          },
-          {
-            "title": "Anguissa verpasst Afrika-Cup: Nächste schwere Verletzung bei SSC Napoli - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOYmluZWw3bkl4ME5SRjVyQmU5cVNPcUN3c2hmX3JnVVI0d0p3U1I3OVR4TzNZaVphdjBZbElmMTB1VjlteGRoOC1ra1ZSb2tIcnpUbUtDUWplUW1XcUtYSGgwNU9tZWhEenJmRDNIanQ2RVhnb3lXYUFIemh0VjRlRFRSRE5hX3BIRnU5OHZPWklqaGZ0cm9wWDRwWjBQQlpncnVOQ015SzFtZ1lrUnNCbENpeExmOG8?oc=5",
-            "publishedAt": "Fri, 14 Nov 2025 08:00:00 GMT",
-            "source": "Transfermarkt"
+            "title": "SSC Napoli - Celta Vigo Live ticker, H2H und Aufstellungen - Sofascore",
+            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53TE1FZWdwTzlVVktnRGp4TmtRNUh4RGItY1BLeFBxUFkxdExObzZzOFp5NkdxaUZuUFc2NGxZUkFzMGY0VXBlTWtPbkxnX1pYcXVsTmo0OE03dVdaSzgwZmU4aHE1bzdWbnBMbnM0M25qRkhaVUxzTjJIYm00dw?oc=5",
+            "publishedAt": "Sat, 08 Aug 2026 07:00:00 GMT",
+            "source": "Sofascore"
           }
         ]
       },
@@ -39545,9 +39545,15 @@
             "source": "sport.de"
           },
           {
-            "title": "Frosinone Calcio gegen US Sassuolo Aufstellung - Serie A 7. Spieltag 2026/2027 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTmVnNlFFV2xORGZaYlpIaEVZQWE0MTlNWmxKZDN5cWpfY1hZUFo1dWJGY0pFdS1SSGQ5ajVzZDBkbXJ6TXlMVEMteWVmZkdMVGNXUk9ZSF9IdmFWRmNkeTZoREp0RF9udFZxa09OQjlzS0hBZ0Q3cEQwQmVnZFpuLU1ZZ0plLTd3a1lxZW5lNGNMVldFUGc?oc=5",
-            "publishedAt": "Tue, 20 Oct 2026 18:05:36 GMT",
+            "title": "US Sassuolo - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSENINzViNF81UFJBUk1uSWdPUmh2N0lMNktjajctNkJkRjhhQWp1NEl6VVdfbUplYlpqd0JNeXh6TTc3NkVVdzJLRGxVZGpyaWpYT2h3Sld4LVlPWnhZVmlfcEFkZDh2UGhrSnJ2ZGdRRGdsSF9UdU8wdEFpSk83RWFxeWNMcEtfTVQ0?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 03:42:42 GMT",
+            "source": "Transfermarkt"
+          },
+          {
+            "title": "US Sassuolo gegen Bologna FC Aufstellung - Serie A 23. Spieltag 2020/2021 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQkxxZm5ycFlZVk5zdnJIWHBLU0U0Y2xDdUg5RldXbzR2ZGJ5SXBIMk9Tb1dCQVd6ZXRGY3VONmZPb0d3X0pLRHFWSUlEUzYzT182UUVsR2gycjFZRXlBTjh2czJRLVlvazdZNnRFNGlnWGxXQjg0VVZxbzdkWXdJQk14WTdyWTc2TnRJSTJ1UQ?oc=5",
+            "publishedAt": "Thu, 22 Oct 2026 17:32:49 GMT",
             "source": "BILD"
           },
           {
@@ -39557,16 +39563,10 @@
             "source": "Kicker"
           },
           {
-            "title": "Aufstellung Frosinone Calcio - US Sassuolo 4:2 | 7. Spieltag, Serie A 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSUdBV1Ywa05qcTN2ZXpYaFczc19xX0NVLThOaHN3cjNYbUxQaGNxa1RhWXdmVENYbUpmeHBKcVNXYUZOZmpvM1B6ZWVrS0cyR1g5RDB4NUgyN29BVThRcU1JLWhBS0dJaXZzZGdUZHhHdWNhSHBGYjUyM2U0QTUzN1lWUDNldUdqbHBWQkt4YU41ZE4zbl9BOENSUEFEdEk?oc=5",
-            "publishedAt": "Fri, 16 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Aufstellung | Sassuolo Calcio - AC Mailand 1:1 | 6. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOVUhsa3VkU0RqRTRJZEp5LTRKYU5vRlVaUkpoYmVrNHVkaFlITWJkWFlNbWVmUGdSeU1aell2aUE5aGhXcXFjdjZQc0lIU29Eb2hYLWtNNkczck1QbEZNRXh1YVUzQWJaaFQwc090cE1TZWFkcU43dnRiM2hZeWItQw?oc=5",
-            "publishedAt": "Sun, 11 Oct 2026 15:16:30 GMT",
-            "source": "Kicker"
+            "title": "Frosinone Calcio gegen US Sassuolo Aufstellung - Serie A 7. Spieltag 2026/2027 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTmVnNlFFV2xORGZaYlpIaEVZQWE0MTlNWmxKZDN5cWpfY1hZUFo1dWJGY0pFdS1SSGQ5ajVzZDBkbXJ6TXlMVEMteWVmZkdMVGNXUk9ZSF9IdmFWRmNkeTZoREp0RF9udFZxa09OQjlzS0hBZ0Q3cEQwQmVnZFpuLU1ZZ0plLTd3a1lxZW5lNGNMVldFUGc?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 18:05:36 GMT",
+            "source": "BILD"
           }
         ],
         "away": []
@@ -40482,16 +40482,16 @@
             "source": "Kicker"
           },
           {
+            "title": "Sportings Bayern-Generalprobe: Lissaboner Derby bei Benfica endet Remis - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNzBZcnVUeGJBay1QbmdiQlIyQnpOUDdNLVdna1ZrUjY0dmhnRmNnaHNXR2dFOFNVLWxEMkJGVWJlY2hzeU9scHZjOTBrZ09KYW14U081LXRoRGM4MVhKTlFja2RUdTVxTlhMZUVjYk5KSkh0dy1NUWlJd3dFSTAzRUp6bE1FU2RsSC1TelZjMEFWbWxZ?oc=5",
+            "publishedAt": "Fri, 05 Dec 2025 08:00:00 GMT",
+            "source": "Kicker"
+          },
+          {
             "title": "SL Benfica - sport.de",
             "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5SMTMyNG1LT3BoRUxqdkRtaVJjYWRnOXNwNkhCOEdQYkRiR3JMSmN5NVVBX3JvTk14bU1HSjNMd0lRV1FzX19SRmxMeE1RUmkyREc5X0RyX1UxYnlM?oc=5",
             "publishedAt": "Sat, 11 Mar 2017 16:14:09 GMT",
             "source": "sport.de"
-          },
-          {
-            "title": "Teils auf Bewährung: UEFA sperrt Benficas Prestianni für sechs Spiele - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdmpCSkM1eTdVc3M3X2NCN1dwSHdlQW1BODhfQ3M2cUVGWllFS3hGbE1WR2tWUzFMSW03aGRlZmhxeWJydUpBczVPSjR1VG9jQnlET0tyNU5PNko4RHFBVkVzbzQ3cHlhN3o3bE1xeWZpdHlVSXY0blFNaUtZUHJNMGRkNE1Qb2kxSk1MOUhQQVd6S19yaUVjazh3d2Nka1lROUcwSzN4a0l3ODJs?oc=5",
-            "publishedAt": "Fri, 24 Apr 2026 07:00:00 GMT",
-            "source": "Kicker"
           }
         ],
         "away": []
@@ -40780,16 +40780,16 @@
             "source": "L'essentiel"
           },
           {
-            "title": "Aufstellung | Borussia Dortmund - Benfica Lissabon 5:0 | Achtelfinale | Europapokal der Landesmeister 1963/64 - kicker",
-            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcm1VRVVTZExudDBzRjc0U2NpbndGaVlGTnhuaDN3ZklFbEpDeE9JeVctYlEwNTh5dWZ3T2dScmJVczhOUmdHRFlDM3IzdHo5Y2NzMWFnT29RcjhDQTVqVWZxSkpFUzFMY0djU1FVWVQyR25XTWVaU1g5OUd6TVRVOGliNHZGUTVkZ0JvbHU1Ykludw?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 22:07:18 GMT",
-            "source": "kicker"
-          },
-          {
             "title": "Aufstellung: Benfica vs. Bayern - Champions League 26/27 - FC Bayern",
             "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOaVFCRGt5Y3pYcW42RnBZVVFkcmhzOWFLcnRPNUlJZG9mMTNWOW5yNXNjREVnWGJNVW9mVjNISEx6R3V0M0lPOE10TEpOM1A0SzFCRTJGR0dzeHRkd3ozRXhqeEUtRURxVmlJd3dHT2RWUFpHTENZaGFmMFg5RS0xSTlfOGdXelVyWjdYLTVwR3RvV1JCRVpaSXJDLV9NZGtKWFVaX1VGUmdsSEJOcEhhMk5DekRCUUJxamR4aDk4amNqbWcyUWd3?oc=5",
             "publishedAt": "Wed, 30 Sep 2026 07:00:00 GMT",
             "source": "FC Bayern"
+          },
+          {
+            "title": "Benfica Lissabon - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNnptYUpVYk1oVFJ3R3VzaklIdWthYk1fZjh6VHo0OVd0b0E3emY3VWtyeTNDYUo5Yi00MEk1QUQ0bVF0SHE0T29TWXUyZmdQSHpMMzhsV2RKQkdyMUlwNUlUTTJiZUpBMC1RRWhQcUpDd0NOeDUzWGxlanNPdmtCRGxxNHF2YTg?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 14:39:12 GMT",
+            "source": "Transfermarkt"
           }
         ],
         "away": []
@@ -41707,12 +41707,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -41725,10 +41719,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -44344,16 +44344,16 @@
             "source": "L'essentiel"
           },
           {
-            "title": "Aufstellung | Borussia Dortmund - Benfica Lissabon 5:0 | Achtelfinale | Europapokal der Landesmeister 1963/64 - kicker",
-            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcm1VRVVTZExudDBzRjc0U2NpbndGaVlGTnhuaDN3ZklFbEpDeE9JeVctYlEwNTh5dWZ3T2dScmJVczhOUmdHRFlDM3IzdHo5Y2NzMWFnT29RcjhDQTVqVWZxSkpFUzFMY0djU1FVWVQyR25XTWVaU1g5OUd6TVRVOGliNHZGUTVkZ0JvbHU1Ykludw?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 22:07:18 GMT",
-            "source": "kicker"
-          },
-          {
             "title": "Aufstellung: Benfica vs. Bayern - Champions League 26/27 - FC Bayern",
             "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOaVFCRGt5Y3pYcW42RnBZVVFkcmhzOWFLcnRPNUlJZG9mMTNWOW5yNXNjREVnWGJNVW9mVjNISEx6R3V0M0lPOE10TEpOM1A0SzFCRTJGR0dzeHRkd3ozRXhqeEUtRURxVmlJd3dHT2RWUFpHTENZaGFmMFg5RS0xSTlfOGdXelVyWjdYLTVwR3RvV1JCRVpaSXJDLV9NZGtKWFVaX1VGUmdsSEJOcEhhMk5DekRCUUJxamR4aDk4amNqbWcyUWd3?oc=5",
             "publishedAt": "Wed, 30 Sep 2026 07:00:00 GMT",
             "source": "FC Bayern"
+          },
+          {
+            "title": "Benfica Lissabon - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNnptYUpVYk1oVFJ3R3VzaklIdWthYk1fZjh6VHo0OVd0b0E3emY3VWtyeTNDYUo5Yi00MEk1QUQ0bVF0SHE0T29TWXUyZmdQSHpMMzhsV2RKQkdyMUlwNUlUTTJiZUpBMC1RRWhQcUpDd0NOeDUzWGxlanNPdmtCRGxxNHF2YTg?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 14:39:12 GMT",
+            "source": "Transfermarkt"
           }
         ],
         "away": []
@@ -46497,28 +46497,28 @@
             "source": "Real Madrid CF | Web Oficial"
           },
           {
-            "title": "Aufstellung Athletic Club - Sevilla FC 1:3 | 2. Spieltag, La Liga 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaUNSVmZadGptUHVQTURiZjlrNkRmNnRtTjFDMmJDeE5jc3RpOU9yTF9KbTh5R1lsUElXaVI0M2ZzNnNwdGFlVHJ3SkRPU2xyOURFb2R1WlAySUVXNW9SbHcwbGtBbU1TeXAtc3VuWEU5ZEd0VlpPcWxCMXNWRHJCaVRCcDBQTzRvVmNJT2VHVWx2RnBxTktJM1ZiQVNoeHJ2YjIxRmJ3?oc=5",
-            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Bayer 04 - FC Sevilla | Testspiel 2026/27 - Bayer04.de",
-            "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdGdPeWp3WmJyem5aU1o3XzB5WEIxdDNsSzdzS19taHctRkpLM2luSU03NDNFLVhiNk1RYU9GNFY1Z3FDbFdVZmpKSWtuY1laUEZRZDR1aXlteXBRTUI4UzFsQ2xEYjZWeG1BczVuSmd5MnZuckFNZXNuNGx5X2ZKY0xn?oc=5",
-            "publishedAt": "Tue, 02 Jun 2026 20:27:48 GMT",
-            "source": "Bayer04.de"
-          },
-          {
-            "title": "Schwerer Unfall mit Stier: Torero in Sevilla wird von hinten aufgespießt - Spiegel",
-            "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNRHBmcF9iY2xrU2MwNEs3eGtINkVObl9kWFNsaThQMlZUcTQzREg1SFBRdmlhQ0FETWNaSHBkRWVicFVLSlhwNDFlOTk1TGJPNlZHZ1daYy1yTU1QS01EaExzRTZQd2xRSVlMZnVNaVhidTFMSUhFaFh4Nm1ZZ1ozWHJycklyaTJGTEJEUFo0WEJkUmRQS0lnNTlaYkFaTnVyb0V6ZnV6ZVYzZUU2eW5FdGxHaDhvcDhTeng3blMtOHEyWFBEU3JEOVQwdl8wRDItTFNvZldRaDY1V3c1SEE?oc=5",
-            "publishedAt": "Tue, 21 Apr 2026 07:00:00 GMT",
-            "source": "Spiegel"
-          },
-          {
-            "title": "Fußball Champions League: Lille gegen Betis Sevilla - Aufstellung - 1. Gruppenspieltag - 2026/2027 - sportschau.de",
-            "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOcm42NGR1Uk1tazYyQkxvNHBOTXVRWnNVVEFwc2JyX2lMNU1YM05WeVRYOFNtYmp0N2todndVclJ4Vk50Wm9ZZ2tJVUVZY3cyd1g0TUhkSEFPQ2lPSGdIaml0cjhidGdjSzVfWTF2V2g0eGNsbFEwQkJNZUF6RXJpSHlaUnVyY2Z5bng4dS1OR2ZrTHZTMXhtNXBOUFdGN0pKRk0zNlVHWHFVM2hQNVQwcmtaYWk1S3djend0V1VNakN5Q2g1SWRlNk5hajZzQQ?oc=5",
-            "publishedAt": "Tue, 08 Sep 2026 20:57:43 GMT",
+            "title": "Fußball Champions League: Betis Sevilla gegen Feyenoord - Aufstellung - 3. Gruppenspieltag - 2026/2027 - sportschau.de",
+            "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPa3N3TUZZRDlQNGN2V2JrZjZWNWpHYnBMb2NETHJTMG9aZDNpYTV2YmRZMW5WV3VtaUdiTER2WHR1NFZaZUlVUm9KWTRQUXJVb1h4bjIwRWd5dHlXSGdzYU11Qkx0Y2x6UzJJRkNYanhIWHAtcjY1ejFIdy1UVWVBSHF1dlZLdmNVWHpGRE92eE5YeloxejBXaFNncDVROUdPbGQ4UjBEZzZ5d1dGWWxBRll2RWxRSkdFQ3E2WWRWNktuNG9qaHZwN0t1aEN3bnh0c2hVTklwUGlzTGs?oc=5",
+            "publishedAt": "Wed, 21 Oct 2026 22:28:39 GMT",
             "source": "sportschau.de"
+          },
+          {
+            "title": "Real Betis Sevilla - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQdFZuTE56dnV4NHNUd0xCXzJ3cjFEb0tyaHZiOEpONkRieHlGVFBONjIweDJiNW5xQ0cwS3dUZTJWMXFmM0tmNFpOLVM1bGN3RHFocEJMdnhkZkpWVVlGeEZjZzJXYVp6QnpSYnVrTHBtc21xaXQ1bHFSVEFqN0ZIbTg4VnJPUXpkbl9LQTQyaDdRWFU?oc=5",
+            "publishedAt": "Fri, 23 Oct 2026 09:51:25 GMT",
+            "source": "Transfermarkt"
+          },
+          {
+            "title": "Aufstellung | Celta Vigo - Real Betis Sevilla 0:0 | 10. Spieltag | La Liga 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4yVlU5MVZvNk12ZGJielg2NmZoNHpFVWRvZ0hzQ3l3czBPTW9VMno0MGY1MUFVZXZVOUo0c0ZvSHl5bUhQN2NFeE5rWmVIdElUSkR3Y2RBU3hqc1RCT0tQQUJkNFlFQnZGYnpScWNnODdYLXlQWlhWQ1R3cw?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 14:30:26 GMT",
+            "source": "Kicker"
+          },
+          {
+            "title": "Aufstellung | Celta Vigo - Real Betis Sevilla : | 10. Spieltag | La Liga 2026/27 - kicker.ch",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9TWUdhRXZQa1M3T29NMTI4ZjYzYWt1dm1kTm52cjJhRF9OVGRtbWJ6MVhpNzYzS0hvT0hfTE1zUTZXaVNFVVZiRUc3a1NYUTlVZU5CNlhuM2xfS2M3bVJ4X09oRFFob2xYS0I1V0p1TWdFa2E1SUgybVBDbw?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 15:11:57 GMT",
+            "source": "kicker.ch"
           }
         ],
         "away": []
@@ -51881,27 +51881,27 @@
             "source": "Kicker"
           },
           {
-            "title": "Aufstellung Konyaspor - İstanbul Başakşehir 0:0 | 7. Spieltag, SüperLig 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOWUydnFmeEU3M19SYUphR1ZWQUpxTi1rTmlfWlVyNW9ISWxMdzVGMnB6eHAtUDRVZE1yQjE3U1QzcVM3M0s2S2NpYXZHQXcySFVoclEwU0tvNUhMd0UxUDBBVGZvTnhzYWEwd2QwRXpJQ0NfYVlsNC1uYnlnQmN4eC15b04tRzR2NTVEZTViWUhmV3BOS3B3TU8yeWFTMEo2NG9j?oc=5",
-            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Istanbul Basaksehir vs Galatasaray Prognose: Sahin gerät unter Druck - Goal.com",
-            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNYXQ0dHE4c3F5THN1TjEtSm9SS0dTZU00U1YxdkFseTdaOFJTOU15WkdFcF9MbjlUVWJOT2NndnQwa1ZjZHlzVGMzUlkyUnhfMGVlQWdhd0otU0NCMVlpeHRfMk10MFhCUkFMTlE2NFY5SnYtdTJMaEFaTzdJZTFMeUltcElyVlZKdjZjeHlJcVloUG81RW50QkFSZlpNcHJIXzVtdUd5YmxWcV8zZ040b3puUUFIQVRUaVE?oc=5",
-            "publishedAt": "Sat, 05 Sep 2026 07:00:00 GMT",
-            "source": "Goal.com"
-          },
-          {
             "title": "Aufstellung İstanbul Başakşehir - Gaziantep FK 2:1 | 8. Spieltag, SüperLig 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSkM1SzZuSHhjdUwxcjlXa3NJRHVtQnNuV3pseFlKNldYQndLNThrZE1vLWFMUVVyRnlwNGh3RDVTM29EVE0xbFozQjYtV3NLNFo4WE5DSlF3UWhHVmxRTXJabVdZRTZ4QVdLMFk2OHpaZ21KX1FTdGhTNDJzWFNrbDdrWkkzUUZKRFJuT3gweE5GaTctSDlob3Q3cGxUZXRodDlwYmlHcw?oc=5",
             "publishedAt": "Sun, 18 Oct 2026 16:00:00 GMT",
             "source": "sport.de"
           },
           {
-            "title": "Aufstellung | Istanbul Basaksehir FK - Galatasaray SK 2:3 | 4. Spieltag | Trendyol SüperLig 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOWUwwQ3BKSkpnQndQRnJ6WnlCa0Ffdi1FWjZSN19JODhhUFB6dE1KbVFTeHljd096cEZVY2M1WXROUGZ1RzQtTzhnUkJrczBsNzZEbUtQUEs5d0JURGwyZE5TbzBXaWY3XzVUU1N4Qy1lbmM2OFNKcmJZa2xnRkdtbkRMeXhkSnhreGQtSHhMNA?oc=5",
-            "publishedAt": "Fri, 04 Sep 2026 16:21:24 GMT",
+            "title": "Aufstellung Konyaspor - İstanbul Başakşehir 0:0 | 7. Spieltag, SüperLig 2026/2027 - sport.de",
+            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOWUydnFmeEU3M19SYUphR1ZWQUpxTi1rTmlfWlVyNW9ISWxMdzVGMnB6eHAtUDRVZE1yQjE3U1QzcVM3M0s2S2NpYXZHQXcySFVoclEwU0tvNUhMd0UxUDBBVGZvTnhzYWEwd2QwRXpJQ0NfYVlsNC1uYnlnQmN4eC15b04tRzR2NTVEZTViWUhmV3BOS3B3TU8yeWFTMEo2NG9j?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
+            "source": "sport.de"
+          },
+          {
+            "title": "Aufstellung | Istanbul Basaksehir FK - Inter Turku 1:1 | 2. Runde | Conference-League-Qualifikation 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdnJZbWRXS0ZLY0JvZkF0bzR6ZEUxQTN0S1pCQWd6N1FtX0pCRHZEZzBlQ1MzanNfVkZDdUZZcXN1Wl9DOVJGQnNMM3I1V3prY21QWTNiRkNHTGd5V2Nmb19fLXdBeFltM29aNEpPNndZZFNzejUxMEtXRUFzcXJIZm5pc0dEN04yVjgwZlpGOHZmc2JzeWFadklyai1GY1VNWjF0c2JBbzAxUzVCVi12aWJB?oc=5",
+            "publishedAt": "Wed, 22 Jul 2026 17:00:49 GMT",
+            "source": "Kicker"
+          },
+          {
+            "title": "Aufstellung | Konyaspor - Istanbul Basaksehir FK 0:0 | 7. Spieltag | Trendyol SüperLig 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQS1J2MVJub2oyZnZXVkZTbV84dldvVWVFdm9lS3dCcVZKUG5oMVJ5WWNVdXkzdF9udDJ2S0tKVFRLaWE3Z1lDZm9rMjBZVktTT19rMWhPRE16MVBsZDZEb2lHN0JoQXpiTm95YmJ6cnRzU01ZU1N2bVZCbkJDOWVPLWtLTlZNNDg?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 10:16:02 GMT",
             "source": "Kicker"
           }
         ]
@@ -52473,6 +52473,12 @@
         ],
         "away": [
           {
+            "title": "Aufstellung | Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPREwxaXFMMVgwNGV5TmExWmVOWko2WlkyZUJOMUg0Nk5oV2szOXVpYWVaTXhsNm1yZ3VEWTRSWXh6a2RkR09MemFoay00UlN3QThwcWF1ajNPX0J3c0hEYmFsakRtd0VhejR3cmtUb0cydDZsR3o0cGlYVm1tV1pwaVhoQQ?oc=5",
+            "publishedAt": "Sat, 24 Oct 2026 12:21:11 GMT",
+            "source": "Kicker"
+          },
+          {
             "title": "Aufstellung Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag, Serie A 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQVmlpVFRTUURSeC1IenN5dXJaa0hRSjJNRmFicGZiSHp4MDhyVngtcGFCWDRxc0VDXzVUSE1LUTVDNkVONmdjNXVDYzdnLU16c3VERXBXdWViZUQtTXdqUTB6cExGS3FjNWdrS2NkLWYtU28tUVFvU3hDYmRYYzNHcDFUYlZpdnAzV1Z0TnhwZm1ONXFvNmRLNVAzS28?oc=5",
             "publishedAt": "Sat, 24 Oct 2026 13:00:00 GMT",
@@ -52485,22 +52491,16 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Aufstellung | Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPREwxaXFMMVgwNGV5TmExWmVOWko2WlkyZUJOMUg0Nk5oV2szOXVpYWVaTXhsNm1yZ3VEWTRSWXh6a2RkR09MemFoay00UlN3QThwcWF1ajNPX0J3c0hEYmFsakRtd0VhejR3cmtUb0cydDZsR3o0cGlYVm1tV1pwaVhoQQ?oc=5",
-            "publishedAt": "Sat, 24 Oct 2026 12:21:11 GMT",
+            "title": "Aufstellung | FC Bologna - Inter Mailand 1:3 | 7. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1UOTlfWjI4YklwbzJURWd1OUpUdkJ4blhLdE1mZVVWNXRCV2pQbTRJUHBFeUh4dU81Z0ZlZmVpQlM4SnR6bG5ZTFRtTHQ0RWEzX0FzUWU0MzV2cmNYRkw1NVpuOHIwTHFlMXVETXlZVWFQR2d5VnJOcVRyUTFFMWM?oc=5",
+            "publishedAt": "Sat, 17 Oct 2026 15:16:32 GMT",
             "source": "Kicker"
           },
           {
-            "title": "US Sassuolo gegen Bologna FC Aufstellung - Serie A 23. Spieltag 2020/2021 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQkxxZm5ycFlZVk5zdnJIWHBLU0U0Y2xDdUg5RldXbzR2ZGJ5SXBIMk9Tb1dCQVd6ZXRGY3VONmZPb0d3X0pLRHFWSUlEUzYzT182UUVsR2gycjFZRXlBTjh2czJRLVlvazdZNnRFNGlnWGxXQjg0VVZxbzdkWXdJQk14WTdyWTc2TnRJSTJ1UQ?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 17:32:49 GMT",
-            "source": "BILD"
-          },
-          {
-            "title": "FC Bologna - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOSUVzUzhUbUpyQlIycW5QU1FTUWQ1SVNUUmQ4M18tS1Vrd1ZHQmlwQ0tRMzJiQ0p1T3JrVWRFdFpDeFBwcDlObXhYSnFzYVBsUUt6dkJMeXFyaWVZanBJYjNEdVhKTkt4TlpERGhPNzBsZ0F0cHgwdncxUFhIZFF0UnRINHdXUHpnWHc?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 03:49:11 GMT",
-            "source": "Transfermarkt"
+            "title": "Aufstellung US Lecce - FC Bologna 1:2 | 6. Spieltag, Serie A 2026/2027 - sport.de",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPbXBjYTJkNV8zYU80MkllSjBYZTE5UW9xQ2xoMm5hemI3UGdPa3NBTm5odkNTVWk0R0pTMWdhLUJlV29sZUlpazRtVGFvQkEtU3FKZjdyQ1VwSlMzZk5LMGFyRkQ1YTNaX2tDNVFRekFZXzRob1pJVGRMSHFYNGZ5eFk4d0UxbUM2UHlWcnpySDI2Mnc?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
+            "source": "sport.de"
           }
         ]
       },
@@ -53523,12 +53523,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -53541,10 +53535,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -53888,12 +53888,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -53906,10 +53900,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -53920,9 +53920,15 @@
             "source": "sport.de"
           },
           {
-            "title": "Frosinone Calcio gegen US Sassuolo Aufstellung - Serie A 7. Spieltag 2026/2027 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTmVnNlFFV2xORGZaYlpIaEVZQWE0MTlNWmxKZDN5cWpfY1hZUFo1dWJGY0pFdS1SSGQ5ajVzZDBkbXJ6TXlMVEMteWVmZkdMVGNXUk9ZSF9IdmFWRmNkeTZoREp0RF9udFZxa09OQjlzS0hBZ0Q3cEQwQmVnZFpuLU1ZZ0plLTd3a1lxZW5lNGNMVldFUGc?oc=5",
-            "publishedAt": "Tue, 20 Oct 2026 18:05:36 GMT",
+            "title": "US Sassuolo - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSENINzViNF81UFJBUk1uSWdPUmh2N0lMNktjajctNkJkRjhhQWp1NEl6VVdfbUplYlpqd0JNeXh6TTc3NkVVdzJLRGxVZGpyaWpYT2h3Sld4LVlPWnhZVmlfcEFkZDh2UGhrSnJ2ZGdRRGdsSF9UdU8wdEFpSk83RWFxeWNMcEtfTVQ0?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 03:42:42 GMT",
+            "source": "Transfermarkt"
+          },
+          {
+            "title": "US Sassuolo gegen Bologna FC Aufstellung - Serie A 23. Spieltag 2020/2021 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQkxxZm5ycFlZVk5zdnJIWHBLU0U0Y2xDdUg5RldXbzR2ZGJ5SXBIMk9Tb1dCQVd6ZXRGY3VONmZPb0d3X0pLRHFWSUlEUzYzT182UUVsR2gycjFZRXlBTjh2czJRLVlvazdZNnRFNGlnWGxXQjg0VVZxbzdkWXdJQk14WTdyWTc2TnRJSTJ1UQ?oc=5",
+            "publishedAt": "Thu, 22 Oct 2026 17:32:49 GMT",
             "source": "BILD"
           },
           {
@@ -53932,16 +53938,10 @@
             "source": "Kicker"
           },
           {
-            "title": "Aufstellung Frosinone Calcio - US Sassuolo 4:2 | 7. Spieltag, Serie A 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSUdBV1Ywa05qcTN2ZXpYaFczc19xX0NVLThOaHN3cjNYbUxQaGNxa1RhWXdmVENYbUpmeHBKcVNXYUZOZmpvM1B6ZWVrS0cyR1g5RDB4NUgyN29BVThRcU1JLWhBS0dJaXZzZGdUZHhHdWNhSHBGYjUyM2U0QTUzN1lWUDNldUdqbHBWQkt4YU41ZE4zbl9BOENSUEFEdEk?oc=5",
-            "publishedAt": "Fri, 16 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Aufstellung | Sassuolo Calcio - AC Mailand 1:1 | 6. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOVUhsa3VkU0RqRTRJZEp5LTRKYU5vRlVaUkpoYmVrNHVkaFlITWJkWFlNbWVmUGdSeU1aell2aUE5aGhXcXFjdjZQc0lIU29Eb2hYLWtNNkczck1QbEZNRXh1YVUzQWJaaFQwc090cE1TZWFkcU43dnRiM2hZeWItQw?oc=5",
-            "publishedAt": "Sun, 11 Oct 2026 15:16:30 GMT",
-            "source": "Kicker"
+            "title": "Frosinone Calcio gegen US Sassuolo Aufstellung - Serie A 7. Spieltag 2026/2027 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTmVnNlFFV2xORGZaYlpIaEVZQWE0MTlNWmxKZDN5cWpfY1hZUFo1dWJGY0pFdS1SSGQ5ajVzZDBkbXJ6TXlMVEMteWVmZkdMVGNXUk9ZSF9IdmFWRmNkeTZoREp0RF9udFZxa09OQjlzS0hBZ0Q3cEQwQmVnZFpuLU1ZZ0plLTd3a1lxZW5lNGNMVldFUGc?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 18:05:36 GMT",
+            "source": "BILD"
           }
         ]
       },
@@ -54782,6 +54782,12 @@
       "teamNews": {
         "home": [
           {
+            "title": "8. Spieltag: SSC Neapel - AS Rom - S.S.C. Napoli - I Partenopei - Forum | Page 1 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUlFrU1RSVHJseVZmVWJTQnlVYXZQaWFwd29WM0RfTV9Ha1B3U2xrTVROTEF5UFBlRm5UdXRRV3hvVTlkaWIxVmZ4U1JPdnQ0NEZNVldCUEVhSWNMU1ZnaFY1Q0lTVTNEUXdzWlpsYjRZMDFfZFFRb2dPdjNuNmVWNDU4bjd5SlBXaW5uUVg0clVKdEk?oc=5",
+            "publishedAt": "Sat, 24 Oct 2026 14:58:00 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Napoli verliert Abwehrchef: Buongiorno droht monatelanger Ausfall - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPby15dk1FZmQ5bWRzSDhUUFBZSW9sSWRKaElLbkxKbExmaDlsVTQybHdpbWE3TjZrYU41LU11cDU4LWw4aVRUSTE0dmNfZF9KWXNJcG0wcGV5NWZUOVZybk9BM000ZllJb3pNV0ZMX2tWT09hTzJqQ2hVaGlCSndTUjJhVEJjaUQ4QjV0YzEzWGh5YXN4M2Z1ZUplX2dQOVZn?oc=5",
             "publishedAt": "Tue, 21 Jul 2026 07:00:00 GMT",
@@ -54794,22 +54800,16 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Vorschau: Nächster Halt Neapel - Eintracht Frankfurt",
-            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1yMHdYblNJWkNmV0V5dEVRTXZCeFdwblNVM0RjZUU4RTItMHc1Q0NDZU91OUk1czFpbTdqaGs3TUlUTk5teERSY21vRW15c3Fzc2s0eWVMR2dhZ2NGSXpTVmFHRlBRNm1ZaVJQbEFmRFdkQTlWblFMRDd0dw?oc=5",
-            "publishedAt": "Sun, 02 Nov 2025 07:00:00 GMT",
-            "source": "Eintracht Frankfurt"
+            "title": "Inter Mailand gegen Neapel, Serie-A-Vorschau: Alles, was ihr wissen müsst - Goal.com",
+            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMGxUekRLTGtKckpYSHN5QkNIckVqU3hRUmx4MzRfQ29IalpjNGJ6U3QzcEgwd1VfMFZqMEJTcEM2ZEgxV2Y2Zld4a3dWQ25kNFl2RDM4Nl9uc0JIQWpha2luekZsenpJbVlScnNYSmlEQUZYTUpRWkNYUzVNQXBWQlBWRVdhU0puQ3pPVGZ1UWtQRzVfb3ZEakJNalNQbGlfMk9Bd0p4eFNDcDMxcXMxUU1nRllmenA3VnlPcVp0ZF9GZ2s?oc=5",
+            "publishedAt": "Fri, 04 Sep 2026 07:00:00 GMT",
+            "source": "Goal.com"
           },
           {
-            "title": "Oberschenkelverletzung! Havel verpasst Genua-Auftakt gegen Napoli - LAOLA1",
-            "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUUhlalZNbndFNDRrQkQtLThSNHdWYy1sXzllck1Tb2NVaDhveGRBWEx3UGtuelRYOGhSVHJyMURUbG9GMHh5ZTJFRmNxWHBNTnNlLUN1RHRBNS1qY05kcWFmeTNjTXU0RkdFTnVMemNaTXdtNjRQTWtueTljRXhzMVpxQ0JMSWlCYUVkSDRLSDI1bFJsTHFRTnRsc2VOQkllT253eGJOaTc1SzFUYThWNkU3SGhXLUhKNkxid2JsM2hmaklWOEY0dlRzemJ3QkNFbGpUMkFxM2hyOERmblhjRg?oc=5",
-            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
-            "source": "LAOLA1"
-          },
-          {
-            "title": "Anguissa verpasst Afrika-Cup: Nächste schwere Verletzung bei SSC Napoli - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOYmluZWw3bkl4ME5SRjVyQmU5cVNPcUN3c2hmX3JnVVI0d0p3U1I3OVR4TzNZaVphdjBZbElmMTB1VjlteGRoOC1ra1ZSb2tIcnpUbUtDUWplUW1XcUtYSGgwNU9tZWhEenJmRDNIanQ2RVhnb3lXYUFIemh0VjRlRFRSRE5hX3BIRnU5OHZPWklqaGZ0cm9wWDRwWjBQQlpncnVOQ015SzFtZ1lrUnNCbENpeExmOG8?oc=5",
-            "publishedAt": "Fri, 14 Nov 2025 08:00:00 GMT",
-            "source": "Transfermarkt"
+            "title": "SSC Napoli - Celta Vigo Live ticker, H2H und Aufstellungen - Sofascore",
+            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53TE1FZWdwTzlVVktnRGp4TmtRNUh4RGItY1BLeFBxUFkxdExObzZzOFp5NkdxaUZuUFc2NGxZUkFzMGY0VXBlTWtPbkxnX1pYcXVsTmo0OE03dVdaSzgwZmU4aHE1bzdWbnBMbnM0M25qRkhaVUxzTjJIYm00dw?oc=5",
+            "publishedAt": "Sat, 08 Aug 2026 07:00:00 GMT",
+            "source": "Sofascore"
           }
         ],
         "away": [
@@ -59527,16 +59527,16 @@
             "source": "SZ.de"
           },
           {
-            "title": "Aufstellung | CD Santa Clara - Sporting Braga 0:0 | 7. Spieltag | Liga Portugal Betclic 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVZlTFlqdnlDLXRsZ240VlI2Tm83SkpyR1RTRzRhV0pLSDR4QW9LUUFKVG5tbjhrMllsNElheUVIOEY0LWJBMWVsOXV4U01LUG9iNUtOeWlMX056bnQxanNwakFiVklpZ3RYWm5DQjNXX0ZOMVhGUkotM1U0SUxud25iVzRKMmtDUXlTeQ?oc=5",
-            "publishedAt": "Sun, 20 Sep 2026 16:28:30 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "Aufstellung FC Alverca - CD Santa Clara 1:1 | 4. Spieltag, Primeira Liga 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdE9tYjhQd2pNVjVzaWx4R0loc3hmLXF0bFhhSDd1U0Z0bzVaUE95bmQwcndlaHJTdG5Vd2JPRFJFLWNZVXNuTWs4cmpjV2dDR3dNSG9mUmt4M085MzcxNXo1VG11UTBDUjN2czRNa0t4X3dod0ZEdlM2S3RVSmw4R1lOeGJQUnBuVndBaFJwVGJvTW5GWmRJeEVLMHVScTNPOUJSdQ?oc=5",
             "publishedAt": "Sat, 29 Aug 2026 07:00:00 GMT",
             "source": "sport.de"
+          },
+          {
+            "title": "Aufstellung | CD Santa Clara - Sporting Braga 0:0 | 7. Spieltag | Liga Portugal Betclic 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVZlTFlqdnlDLXRsZ240VlI2Tm83SkpyR1RTRzRhV0pLSDR4QW9LUUFKVG5tbjhrMllsNElheUVIOEY0LWJBMWVsOXV4U01LUG9iNUtOeWlMX056bnQxanNwakFiVklpZ3RYWm5DQjNXX0ZOMVhGUkotM1U0SUxud25iVzRKMmtDUXlTeQ?oc=5",
+            "publishedAt": "Sun, 20 Sep 2026 16:28:30 GMT",
+            "source": "Kicker"
           }
         ],
         "away": []
@@ -63356,16 +63356,16 @@
             "source": "Kicker"
           },
           {
+            "title": "Sportings Bayern-Generalprobe: Lissaboner Derby bei Benfica endet Remis - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNzBZcnVUeGJBay1QbmdiQlIyQnpOUDdNLVdna1ZrUjY0dmhnRmNnaHNXR2dFOFNVLWxEMkJGVWJlY2hzeU9scHZjOTBrZ09KYW14U081LXRoRGM4MVhKTlFja2RUdTVxTlhMZUVjYk5KSkh0dy1NUWlJd3dFSTAzRUp6bE1FU2RsSC1TelZjMEFWbWxZ?oc=5",
+            "publishedAt": "Fri, 05 Dec 2025 08:00:00 GMT",
+            "source": "Kicker"
+          },
+          {
             "title": "SL Benfica - sport.de",
             "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5SMTMyNG1LT3BoRUxqdkRtaVJjYWRnOXNwNkhCOEdQYkRiR3JMSmN5NVVBX3JvTk14bU1HSjNMd0lRV1FzX19SRmxMeE1RUmkyREc5X0RyX1UxYnlM?oc=5",
             "publishedAt": "Sat, 11 Mar 2017 16:14:09 GMT",
             "source": "sport.de"
-          },
-          {
-            "title": "Teils auf Bewährung: UEFA sperrt Benficas Prestianni für sechs Spiele - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdmpCSkM1eTdVc3M3X2NCN1dwSHdlQW1BODhfQ3M2cUVGWllFS3hGbE1WR2tWUzFMSW03aGRlZmhxeWJydUpBczVPSjR1VG9jQnlET0tyNU5PNko4RHFBVkVzbzQ3cHlhN3o3bE1xeWZpdHlVSXY0blFNaUtZUHJNMGRkNE1Qb2kxSk1MOUhQQVd6S19yaUVjazh3d2Nka1lROUcwSzN4a0l3ODJs?oc=5",
-            "publishedAt": "Fri, 24 Apr 2026 07:00:00 GMT",
-            "source": "Kicker"
           }
         ]
       },
@@ -63447,16 +63447,16 @@
             "source": "L'essentiel"
           },
           {
-            "title": "Aufstellung | Borussia Dortmund - Benfica Lissabon 5:0 | Achtelfinale | Europapokal der Landesmeister 1963/64 - kicker",
-            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcm1VRVVTZExudDBzRjc0U2NpbndGaVlGTnhuaDN3ZklFbEpDeE9JeVctYlEwNTh5dWZ3T2dScmJVczhOUmdHRFlDM3IzdHo5Y2NzMWFnT29RcjhDQTVqVWZxSkpFUzFMY0djU1FVWVQyR25XTWVaU1g5OUd6TVRVOGliNHZGUTVkZ0JvbHU1Ykludw?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 22:07:18 GMT",
-            "source": "kicker"
-          },
-          {
             "title": "Aufstellung: Benfica vs. Bayern - Champions League 26/27 - FC Bayern",
             "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOaVFCRGt5Y3pYcW42RnBZVVFkcmhzOWFLcnRPNUlJZG9mMTNWOW5yNXNjREVnWGJNVW9mVjNISEx6R3V0M0lPOE10TEpOM1A0SzFCRTJGR0dzeHRkd3ozRXhqeEUtRURxVmlJd3dHT2RWUFpHTENZaGFmMFg5RS0xSTlfOGdXelVyWjdYLTVwR3RvV1JCRVpaSXJDLV9NZGtKWFVaX1VGUmdsSEJOcEhhMk5DekRCUUJxamR4aDk4amNqbWcyUWd3?oc=5",
             "publishedAt": "Wed, 30 Sep 2026 07:00:00 GMT",
             "source": "FC Bayern"
+          },
+          {
+            "title": "Benfica Lissabon - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNnptYUpVYk1oVFJ3R3VzaklIdWthYk1fZjh6VHo0OVd0b0E3emY3VWtyeTNDYUo5Yi00MEk1QUQ0bVF0SHE0T29TWXUyZmdQSHpMMzhsV2RKQkdyMUlwNUlUTTJiZUpBMC1RRWhQcUpDd0NOeDUzWGxlanNPdmtCRGxxNHF2YTg?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 14:39:12 GMT",
+            "source": "Transfermarkt"
           }
         ]
       },
@@ -63754,27 +63754,27 @@
             "source": "Kicker"
           },
           {
-            "title": "Aufstellung Konyaspor - İstanbul Başakşehir 0:0 | 7. Spieltag, SüperLig 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOWUydnFmeEU3M19SYUphR1ZWQUpxTi1rTmlfWlVyNW9ISWxMdzVGMnB6eHAtUDRVZE1yQjE3U1QzcVM3M0s2S2NpYXZHQXcySFVoclEwU0tvNUhMd0UxUDBBVGZvTnhzYWEwd2QwRXpJQ0NfYVlsNC1uYnlnQmN4eC15b04tRzR2NTVEZTViWUhmV3BOS3B3TU8yeWFTMEo2NG9j?oc=5",
-            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Istanbul Basaksehir vs Galatasaray Prognose: Sahin gerät unter Druck - Goal.com",
-            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNYXQ0dHE4c3F5THN1TjEtSm9SS0dTZU00U1YxdkFseTdaOFJTOU15WkdFcF9MbjlUVWJOT2NndnQwa1ZjZHlzVGMzUlkyUnhfMGVlQWdhd0otU0NCMVlpeHRfMk10MFhCUkFMTlE2NFY5SnYtdTJMaEFaTzdJZTFMeUltcElyVlZKdjZjeHlJcVloUG81RW50QkFSZlpNcHJIXzVtdUd5YmxWcV8zZ040b3puUUFIQVRUaVE?oc=5",
-            "publishedAt": "Sat, 05 Sep 2026 07:00:00 GMT",
-            "source": "Goal.com"
-          },
-          {
             "title": "Aufstellung İstanbul Başakşehir - Gaziantep FK 2:1 | 8. Spieltag, SüperLig 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSkM1SzZuSHhjdUwxcjlXa3NJRHVtQnNuV3pseFlKNldYQndLNThrZE1vLWFMUVVyRnlwNGh3RDVTM29EVE0xbFozQjYtV3NLNFo4WE5DSlF3UWhHVmxRTXJabVdZRTZ4QVdLMFk2OHpaZ21KX1FTdGhTNDJzWFNrbDdrWkkzUUZKRFJuT3gweE5GaTctSDlob3Q3cGxUZXRodDlwYmlHcw?oc=5",
             "publishedAt": "Sun, 18 Oct 2026 16:00:00 GMT",
             "source": "sport.de"
           },
           {
-            "title": "Aufstellung | Istanbul Basaksehir FK - Galatasaray SK 2:3 | 4. Spieltag | Trendyol SüperLig 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOWUwwQ3BKSkpnQndQRnJ6WnlCa0Ffdi1FWjZSN19JODhhUFB6dE1KbVFTeHljd096cEZVY2M1WXROUGZ1RzQtTzhnUkJrczBsNzZEbUtQUEs5d0JURGwyZE5TbzBXaWY3XzVUU1N4Qy1lbmM2OFNKcmJZa2xnRkdtbkRMeXhkSnhreGQtSHhMNA?oc=5",
-            "publishedAt": "Fri, 04 Sep 2026 16:21:24 GMT",
+            "title": "Aufstellung Konyaspor - İstanbul Başakşehir 0:0 | 7. Spieltag, SüperLig 2026/2027 - sport.de",
+            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOWUydnFmeEU3M19SYUphR1ZWQUpxTi1rTmlfWlVyNW9ISWxMdzVGMnB6eHAtUDRVZE1yQjE3U1QzcVM3M0s2S2NpYXZHQXcySFVoclEwU0tvNUhMd0UxUDBBVGZvTnhzYWEwd2QwRXpJQ0NfYVlsNC1uYnlnQmN4eC15b04tRzR2NTVEZTViWUhmV3BOS3B3TU8yeWFTMEo2NG9j?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
+            "source": "sport.de"
+          },
+          {
+            "title": "Aufstellung | Istanbul Basaksehir FK - Inter Turku 1:1 | 2. Runde | Conference-League-Qualifikation 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdnJZbWRXS0ZLY0JvZkF0bzR6ZEUxQTN0S1pCQWd6N1FtX0pCRHZEZzBlQ1MzanNfVkZDdUZZcXN1Wl9DOVJGQnNMM3I1V3prY21QWTNiRkNHTGd5V2Nmb19fLXdBeFltM29aNEpPNndZZFNzejUxMEtXRUFzcXJIZm5pc0dEN04yVjgwZlpGOHZmc2JzeWFadklyai1GY1VNWjF0c2JBbzAxUzVCVi12aWJB?oc=5",
+            "publishedAt": "Wed, 22 Jul 2026 17:00:49 GMT",
+            "source": "Kicker"
+          },
+          {
+            "title": "Aufstellung | Konyaspor - Istanbul Basaksehir FK 0:0 | 7. Spieltag | Trendyol SüperLig 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQS1J2MVJub2oyZnZXVkZTbV84dldvVWVFdm9lS3dCcVZKUG5oMVJ5WWNVdXkzdF9udDJ2S0tKVFRLaWE3Z1lDZm9rMjBZVktTT19rMWhPRE16MVBsZDZEb2lHN0JoQXpiTm95YmJ6cnRzU01ZU1N2bVZCbkJDOWVPLWtLTlZNNDg?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 10:16:02 GMT",
             "source": "Kicker"
           }
         ]
@@ -64536,16 +64536,16 @@
             "source": "Kicker"
           },
           {
+            "title": "Sportings Bayern-Generalprobe: Lissaboner Derby bei Benfica endet Remis - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNzBZcnVUeGJBay1QbmdiQlIyQnpOUDdNLVdna1ZrUjY0dmhnRmNnaHNXR2dFOFNVLWxEMkJGVWJlY2hzeU9scHZjOTBrZ09KYW14U081LXRoRGM4MVhKTlFja2RUdTVxTlhMZUVjYk5KSkh0dy1NUWlJd3dFSTAzRUp6bE1FU2RsSC1TelZjMEFWbWxZ?oc=5",
+            "publishedAt": "Fri, 05 Dec 2025 08:00:00 GMT",
+            "source": "Kicker"
+          },
+          {
             "title": "SL Benfica - sport.de",
             "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5SMTMyNG1LT3BoRUxqdkRtaVJjYWRnOXNwNkhCOEdQYkRiR3JMSmN5NVVBX3JvTk14bU1HSjNMd0lRV1FzX19SRmxMeE1RUmkyREc5X0RyX1UxYnlM?oc=5",
             "publishedAt": "Sat, 11 Mar 2017 16:14:09 GMT",
             "source": "sport.de"
-          },
-          {
-            "title": "Teils auf Bewährung: UEFA sperrt Benficas Prestianni für sechs Spiele - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdmpCSkM1eTdVc3M3X2NCN1dwSHdlQW1BODhfQ3M2cUVGWllFS3hGbE1WR2tWUzFMSW03aGRlZmhxeWJydUpBczVPSjR1VG9jQnlET0tyNU5PNko4RHFBVkVzbzQ3cHlhN3o3bE1xeWZpdHlVSXY0blFNaUtZUHJNMGRkNE1Qb2kxSk1MOUhQQVd6S19yaUVjazh3d2Nka1lROUcwSzN4a0l3ODJs?oc=5",
-            "publishedAt": "Fri, 24 Apr 2026 07:00:00 GMT",
-            "source": "Kicker"
           }
         ]
       },
@@ -64626,16 +64626,16 @@
             "source": "SZ.de"
           },
           {
-            "title": "Aufstellung | CD Santa Clara - Sporting Braga 0:0 | 7. Spieltag | Liga Portugal Betclic 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVZlTFlqdnlDLXRsZ240VlI2Tm83SkpyR1RTRzRhV0pLSDR4QW9LUUFKVG5tbjhrMllsNElheUVIOEY0LWJBMWVsOXV4U01LUG9iNUtOeWlMX056bnQxanNwakFiVklpZ3RYWm5DQjNXX0ZOMVhGUkotM1U0SUxud25iVzRKMmtDUXlTeQ?oc=5",
-            "publishedAt": "Sun, 20 Sep 2026 16:28:30 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "Aufstellung FC Alverca - CD Santa Clara 1:1 | 4. Spieltag, Primeira Liga 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdE9tYjhQd2pNVjVzaWx4R0loc3hmLXF0bFhhSDd1U0Z0bzVaUE95bmQwcndlaHJTdG5Vd2JPRFJFLWNZVXNuTWs4cmpjV2dDR3dNSG9mUmt4M085MzcxNXo1VG11UTBDUjN2czRNa0t4X3dod0ZEdlM2S3RVSmw4R1lOeGJQUnBuVndBaFJwVGJvTW5GWmRJeEVLMHVScTNPOUJSdQ?oc=5",
             "publishedAt": "Sat, 29 Aug 2026 07:00:00 GMT",
             "source": "sport.de"
+          },
+          {
+            "title": "Aufstellung | CD Santa Clara - Sporting Braga 0:0 | 7. Spieltag | Liga Portugal Betclic 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVZlTFlqdnlDLXRsZ240VlI2Tm83SkpyR1RTRzRhV0pLSDR4QW9LUUFKVG5tbjhrMllsNElheUVIOEY0LWJBMWVsOXV4U01LUG9iNUtOeWlMX056bnQxanNwakFiVklpZ3RYWm5DQjNXX0ZOMVhGUkotM1U0SUxud25iVzRKMmtDUXlTeQ?oc=5",
+            "publishedAt": "Sun, 20 Sep 2026 16:28:30 GMT",
+            "source": "Kicker"
           }
         ],
         "away": [
@@ -64658,16 +64658,16 @@
             "source": "L'essentiel"
           },
           {
-            "title": "Aufstellung | Borussia Dortmund - Benfica Lissabon 5:0 | Achtelfinale | Europapokal der Landesmeister 1963/64 - kicker",
-            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcm1VRVVTZExudDBzRjc0U2NpbndGaVlGTnhuaDN3ZklFbEpDeE9JeVctYlEwNTh5dWZ3T2dScmJVczhOUmdHRFlDM3IzdHo5Y2NzMWFnT29RcjhDQTVqVWZxSkpFUzFMY0djU1FVWVQyR25XTWVaU1g5OUd6TVRVOGliNHZGUTVkZ0JvbHU1Ykludw?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 22:07:18 GMT",
-            "source": "kicker"
-          },
-          {
             "title": "Aufstellung: Benfica vs. Bayern - Champions League 26/27 - FC Bayern",
             "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOaVFCRGt5Y3pYcW42RnBZVVFkcmhzOWFLcnRPNUlJZG9mMTNWOW5yNXNjREVnWGJNVW9mVjNISEx6R3V0M0lPOE10TEpOM1A0SzFCRTJGR0dzeHRkd3ozRXhqeEUtRURxVmlJd3dHT2RWUFpHTENZaGFmMFg5RS0xSTlfOGdXelVyWjdYLTVwR3RvV1JCRVpaSXJDLV9NZGtKWFVaX1VGUmdsSEJOcEhhMk5DekRCUUJxamR4aDk4amNqbWcyUWd3?oc=5",
             "publishedAt": "Wed, 30 Sep 2026 07:00:00 GMT",
             "source": "FC Bayern"
+          },
+          {
+            "title": "Benfica Lissabon - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNnptYUpVYk1oVFJ3R3VzaklIdWthYk1fZjh6VHo0OVd0b0E3emY3VWtyeTNDYUo5Yi00MEk1QUQ0bVF0SHE0T29TWXUyZmdQSHpMMzhsV2RKQkdyMUlwNUlUTTJiZUpBMC1RRWhQcUpDd0NOeDUzWGxlanNPdmtCRGxxNHF2YTg?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 14:39:12 GMT",
+            "source": "Transfermarkt"
           }
         ]
       },
@@ -64919,28 +64919,28 @@
             "source": "Real Madrid CF | Web Oficial"
           },
           {
-            "title": "Aufstellung Athletic Club - Sevilla FC 1:3 | 2. Spieltag, La Liga 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaUNSVmZadGptUHVQTURiZjlrNkRmNnRtTjFDMmJDeE5jc3RpOU9yTF9KbTh5R1lsUElXaVI0M2ZzNnNwdGFlVHJ3SkRPU2xyOURFb2R1WlAySUVXNW9SbHcwbGtBbU1TeXAtc3VuWEU5ZEd0VlpPcWxCMXNWRHJCaVRCcDBQTzRvVmNJT2VHVWx2RnBxTktJM1ZiQVNoeHJ2YjIxRmJ3?oc=5",
-            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Bayer 04 - FC Sevilla | Testspiel 2026/27 - Bayer04.de",
-            "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdGdPeWp3WmJyem5aU1o3XzB5WEIxdDNsSzdzS19taHctRkpLM2luSU03NDNFLVhiNk1RYU9GNFY1Z3FDbFdVZmpKSWtuY1laUEZRZDR1aXlteXBRTUI4UzFsQ2xEYjZWeG1BczVuSmd5MnZuckFNZXNuNGx5X2ZKY0xn?oc=5",
-            "publishedAt": "Tue, 02 Jun 2026 20:27:48 GMT",
-            "source": "Bayer04.de"
-          },
-          {
-            "title": "Schwerer Unfall mit Stier: Torero in Sevilla wird von hinten aufgespießt - Spiegel",
-            "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNRHBmcF9iY2xrU2MwNEs3eGtINkVObl9kWFNsaThQMlZUcTQzREg1SFBRdmlhQ0FETWNaSHBkRWVicFVLSlhwNDFlOTk1TGJPNlZHZ1daYy1yTU1QS01EaExzRTZQd2xRSVlMZnVNaVhidTFMSUhFaFh4Nm1ZZ1ozWHJycklyaTJGTEJEUFo0WEJkUmRQS0lnNTlaYkFaTnVyb0V6ZnV6ZVYzZUU2eW5FdGxHaDhvcDhTeng3blMtOHEyWFBEU3JEOVQwdl8wRDItTFNvZldRaDY1V3c1SEE?oc=5",
-            "publishedAt": "Tue, 21 Apr 2026 07:00:00 GMT",
-            "source": "Spiegel"
-          },
-          {
-            "title": "Fußball Champions League: Lille gegen Betis Sevilla - Aufstellung - 1. Gruppenspieltag - 2026/2027 - sportschau.de",
-            "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOcm42NGR1Uk1tazYyQkxvNHBOTXVRWnNVVEFwc2JyX2lMNU1YM05WeVRYOFNtYmp0N2todndVclJ4Vk50Wm9ZZ2tJVUVZY3cyd1g0TUhkSEFPQ2lPSGdIaml0cjhidGdjSzVfWTF2V2g0eGNsbFEwQkJNZUF6RXJpSHlaUnVyY2Z5bng4dS1OR2ZrTHZTMXhtNXBOUFdGN0pKRk0zNlVHWHFVM2hQNVQwcmtaYWk1S3djend0V1VNakN5Q2g1SWRlNk5hajZzQQ?oc=5",
-            "publishedAt": "Tue, 08 Sep 2026 20:57:43 GMT",
+            "title": "Fußball Champions League: Betis Sevilla gegen Feyenoord - Aufstellung - 3. Gruppenspieltag - 2026/2027 - sportschau.de",
+            "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPa3N3TUZZRDlQNGN2V2JrZjZWNWpHYnBMb2NETHJTMG9aZDNpYTV2YmRZMW5WV3VtaUdiTER2WHR1NFZaZUlVUm9KWTRQUXJVb1h4bjIwRWd5dHlXSGdzYU11Qkx0Y2x6UzJJRkNYanhIWHAtcjY1ejFIdy1UVWVBSHF1dlZLdmNVWHpGRE92eE5YeloxejBXaFNncDVROUdPbGQ4UjBEZzZ5d1dGWWxBRll2RWxRSkdFQ3E2WWRWNktuNG9qaHZwN0t1aEN3bnh0c2hVTklwUGlzTGs?oc=5",
+            "publishedAt": "Wed, 21 Oct 2026 22:28:39 GMT",
             "source": "sportschau.de"
+          },
+          {
+            "title": "Real Betis Sevilla - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQdFZuTE56dnV4NHNUd0xCXzJ3cjFEb0tyaHZiOEpONkRieHlGVFBONjIweDJiNW5xQ0cwS3dUZTJWMXFmM0tmNFpOLVM1bGN3RHFocEJMdnhkZkpWVVlGeEZjZzJXYVp6QnpSYnVrTHBtc21xaXQ1bHFSVEFqN0ZIbTg4VnJPUXpkbl9LQTQyaDdRWFU?oc=5",
+            "publishedAt": "Fri, 23 Oct 2026 09:51:25 GMT",
+            "source": "Transfermarkt"
+          },
+          {
+            "title": "Aufstellung | Celta Vigo - Real Betis Sevilla 0:0 | 10. Spieltag | La Liga 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4yVlU5MVZvNk12ZGJielg2NmZoNHpFVWRvZ0hzQ3l3czBPTW9VMno0MGY1MUFVZXZVOUo0c0ZvSHl5bUhQN2NFeE5rWmVIdElUSkR3Y2RBU3hqc1RCT0tQQUJkNFlFQnZGYnpScWNnODdYLXlQWlhWQ1R3cw?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 14:30:26 GMT",
+            "source": "Kicker"
+          },
+          {
+            "title": "Aufstellung | Celta Vigo - Real Betis Sevilla : | 10. Spieltag | La Liga 2026/27 - kicker.ch",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9TWUdhRXZQa1M3T29NMTI4ZjYzYWt1dm1kTm52cjJhRF9OVGRtbWJ6MVhpNzYzS0hvT0hfTE1zUTZXaVNFVVZiRUc3a1NYUTlVZU5CNlhuM2xfS2M3bVJ4X09oRFFob2xYS0I1V0p1TWdFa2E1SUgybVBDbw?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 15:11:57 GMT",
+            "source": "kicker.ch"
           }
         ],
         "away": [
@@ -65310,9 +65310,15 @@
             "source": "sport.de"
           },
           {
-            "title": "Frosinone Calcio gegen US Sassuolo Aufstellung - Serie A 7. Spieltag 2026/2027 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTmVnNlFFV2xORGZaYlpIaEVZQWE0MTlNWmxKZDN5cWpfY1hZUFo1dWJGY0pFdS1SSGQ5ajVzZDBkbXJ6TXlMVEMteWVmZkdMVGNXUk9ZSF9IdmFWRmNkeTZoREp0RF9udFZxa09OQjlzS0hBZ0Q3cEQwQmVnZFpuLU1ZZ0plLTd3a1lxZW5lNGNMVldFUGc?oc=5",
-            "publishedAt": "Tue, 20 Oct 2026 18:05:36 GMT",
+            "title": "US Sassuolo - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSENINzViNF81UFJBUk1uSWdPUmh2N0lMNktjajctNkJkRjhhQWp1NEl6VVdfbUplYlpqd0JNeXh6TTc3NkVVdzJLRGxVZGpyaWpYT2h3Sld4LVlPWnhZVmlfcEFkZDh2UGhrSnJ2ZGdRRGdsSF9UdU8wdEFpSk83RWFxeWNMcEtfTVQ0?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 03:42:42 GMT",
+            "source": "Transfermarkt"
+          },
+          {
+            "title": "US Sassuolo gegen Bologna FC Aufstellung - Serie A 23. Spieltag 2020/2021 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQkxxZm5ycFlZVk5zdnJIWHBLU0U0Y2xDdUg5RldXbzR2ZGJ5SXBIMk9Tb1dCQVd6ZXRGY3VONmZPb0d3X0pLRHFWSUlEUzYzT182UUVsR2gycjFZRXlBTjh2czJRLVlvazdZNnRFNGlnWGxXQjg0VVZxbzdkWXdJQk14WTdyWTc2TnRJSTJ1UQ?oc=5",
+            "publishedAt": "Thu, 22 Oct 2026 17:32:49 GMT",
             "source": "BILD"
           },
           {
@@ -65322,16 +65328,10 @@
             "source": "Kicker"
           },
           {
-            "title": "Aufstellung Frosinone Calcio - US Sassuolo 4:2 | 7. Spieltag, Serie A 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSUdBV1Ywa05qcTN2ZXpYaFczc19xX0NVLThOaHN3cjNYbUxQaGNxa1RhWXdmVENYbUpmeHBKcVNXYUZOZmpvM1B6ZWVrS0cyR1g5RDB4NUgyN29BVThRcU1JLWhBS0dJaXZzZGdUZHhHdWNhSHBGYjUyM2U0QTUzN1lWUDNldUdqbHBWQkt4YU41ZE4zbl9BOENSUEFEdEk?oc=5",
-            "publishedAt": "Fri, 16 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Aufstellung | Sassuolo Calcio - AC Mailand 1:1 | 6. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOVUhsa3VkU0RqRTRJZEp5LTRKYU5vRlVaUkpoYmVrNHVkaFlITWJkWFlNbWVmUGdSeU1aell2aUE5aGhXcXFjdjZQc0lIU29Eb2hYLWtNNkczck1QbEZNRXh1YVUzQWJaaFQwc090cE1TZWFkcU43dnRiM2hZeWItQw?oc=5",
-            "publishedAt": "Sun, 11 Oct 2026 15:16:30 GMT",
-            "source": "Kicker"
+            "title": "Frosinone Calcio gegen US Sassuolo Aufstellung - Serie A 7. Spieltag 2026/2027 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTmVnNlFFV2xORGZaYlpIaEVZQWE0MTlNWmxKZDN5cWpfY1hZUFo1dWJGY0pFdS1SSGQ5ajVzZDBkbXJ6TXlMVEMteWVmZkdMVGNXUk9ZSF9IdmFWRmNkeTZoREp0RF9udFZxa09OQjlzS0hBZ0Q3cEQwQmVnZFpuLU1ZZ0plLTd3a1lxZW5lNGNMVldFUGc?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 18:05:36 GMT",
+            "source": "BILD"
           }
         ],
         "away": [
@@ -65579,12 +65579,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -65597,10 +65591,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -66031,12 +66031,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -66049,10 +66043,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -67144,6 +67144,12 @@
         ],
         "away": [
           {
+            "title": "Aufstellung | Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPREwxaXFMMVgwNGV5TmExWmVOWko2WlkyZUJOMUg0Nk5oV2szOXVpYWVaTXhsNm1yZ3VEWTRSWXh6a2RkR09MemFoay00UlN3QThwcWF1ajNPX0J3c0hEYmFsakRtd0VhejR3cmtUb0cydDZsR3o0cGlYVm1tV1pwaVhoQQ?oc=5",
+            "publishedAt": "Sat, 24 Oct 2026 12:21:11 GMT",
+            "source": "Kicker"
+          },
+          {
             "title": "Aufstellung Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag, Serie A 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQVmlpVFRTUURSeC1IenN5dXJaa0hRSjJNRmFicGZiSHp4MDhyVngtcGFCWDRxc0VDXzVUSE1LUTVDNkVONmdjNXVDYzdnLU16c3VERXBXdWViZUQtTXdqUTB6cExGS3FjNWdrS2NkLWYtU28tUVFvU3hDYmRYYzNHcDFUYlZpdnAzV1Z0TnhwZm1ONXFvNmRLNVAzS28?oc=5",
             "publishedAt": "Sat, 24 Oct 2026 13:00:00 GMT",
@@ -67156,22 +67162,16 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Aufstellung | Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPREwxaXFMMVgwNGV5TmExWmVOWko2WlkyZUJOMUg0Nk5oV2szOXVpYWVaTXhsNm1yZ3VEWTRSWXh6a2RkR09MemFoay00UlN3QThwcWF1ajNPX0J3c0hEYmFsakRtd0VhejR3cmtUb0cydDZsR3o0cGlYVm1tV1pwaVhoQQ?oc=5",
-            "publishedAt": "Sat, 24 Oct 2026 12:21:11 GMT",
+            "title": "Aufstellung | FC Bologna - Inter Mailand 1:3 | 7. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1UOTlfWjI4YklwbzJURWd1OUpUdkJ4blhLdE1mZVVWNXRCV2pQbTRJUHBFeUh4dU81Z0ZlZmVpQlM4SnR6bG5ZTFRtTHQ0RWEzX0FzUWU0MzV2cmNYRkw1NVpuOHIwTHFlMXVETXlZVWFQR2d5VnJOcVRyUTFFMWM?oc=5",
+            "publishedAt": "Sat, 17 Oct 2026 15:16:32 GMT",
             "source": "Kicker"
           },
           {
-            "title": "US Sassuolo gegen Bologna FC Aufstellung - Serie A 23. Spieltag 2020/2021 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQkxxZm5ycFlZVk5zdnJIWHBLU0U0Y2xDdUg5RldXbzR2ZGJ5SXBIMk9Tb1dCQVd6ZXRGY3VONmZPb0d3X0pLRHFWSUlEUzYzT182UUVsR2gycjFZRXlBTjh2czJRLVlvazdZNnRFNGlnWGxXQjg0VVZxbzdkWXdJQk14WTdyWTc2TnRJSTJ1UQ?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 17:32:49 GMT",
-            "source": "BILD"
-          },
-          {
-            "title": "FC Bologna - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOSUVzUzhUbUpyQlIycW5QU1FTUWQ1SVNUUmQ4M18tS1Vrd1ZHQmlwQ0tRMzJiQ0p1T3JrVWRFdFpDeFBwcDlObXhYSnFzYVBsUUt6dkJMeXFyaWVZanBJYjNEdVhKTkt4TlpERGhPNzBsZ0F0cHgwdncxUFhIZFF0UnRINHdXUHpnWHc?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 03:49:11 GMT",
-            "source": "Transfermarkt"
+            "title": "Aufstellung US Lecce - FC Bologna 1:2 | 6. Spieltag, Serie A 2026/2027 - sport.de",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPbXBjYTJkNV8zYU80MkllSjBYZTE5UW9xQ2xoMm5hemI3UGdPa3NBTm5odkNTVWk0R0pTMWdhLUJlV29sZUlpazRtVGFvQkEtU3FKZjdyQ1VwSlMzZk5LMGFyRkQ1YTNaX2tDNVFRekFZXzRob1pJVGRMSHFYNGZ5eFk4d0UxbUM2UHlWcnpySDI2Mnc?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
+            "source": "sport.de"
           }
         ]
       },
@@ -67901,6 +67901,12 @@
         ],
         "away": [
           {
+            "title": "8. Spieltag: SSC Neapel - AS Rom - S.S.C. Napoli - I Partenopei - Forum | Page 1 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUlFrU1RSVHJseVZmVWJTQnlVYXZQaWFwd29WM0RfTV9Ha1B3U2xrTVROTEF5UFBlRm5UdXRRV3hvVTlkaWIxVmZ4U1JPdnQ0NEZNVldCUEVhSWNMU1ZnaFY1Q0lTVTNEUXdzWlpsYjRZMDFfZFFRb2dPdjNuNmVWNDU4bjd5SlBXaW5uUVg0clVKdEk?oc=5",
+            "publishedAt": "Sat, 24 Oct 2026 14:58:00 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Napoli verliert Abwehrchef: Buongiorno droht monatelanger Ausfall - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPby15dk1FZmQ5bWRzSDhUUFBZSW9sSWRKaElLbkxKbExmaDlsVTQybHdpbWE3TjZrYU41LU11cDU4LWw4aVRUSTE0dmNfZF9KWXNJcG0wcGV5NWZUOVZybk9BM000ZllJb3pNV0ZMX2tWT09hTzJqQ2hVaGlCSndTUjJhVEJjaUQ4QjV0YzEzWGh5YXN4M2Z1ZUplX2dQOVZn?oc=5",
             "publishedAt": "Tue, 21 Jul 2026 07:00:00 GMT",
@@ -67913,22 +67919,16 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Vorschau: Nächster Halt Neapel - Eintracht Frankfurt",
-            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1yMHdYblNJWkNmV0V5dEVRTXZCeFdwblNVM0RjZUU4RTItMHc1Q0NDZU91OUk1czFpbTdqaGs3TUlUTk5teERSY21vRW15c3Fzc2s0eWVMR2dhZ2NGSXpTVmFHRlBRNm1ZaVJQbEFmRFdkQTlWblFMRDd0dw?oc=5",
-            "publishedAt": "Sun, 02 Nov 2025 07:00:00 GMT",
-            "source": "Eintracht Frankfurt"
+            "title": "Inter Mailand gegen Neapel, Serie-A-Vorschau: Alles, was ihr wissen müsst - Goal.com",
+            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMGxUekRLTGtKckpYSHN5QkNIckVqU3hRUmx4MzRfQ29IalpjNGJ6U3QzcEgwd1VfMFZqMEJTcEM2ZEgxV2Y2Zld4a3dWQ25kNFl2RDM4Nl9uc0JIQWpha2luekZsenpJbVlScnNYSmlEQUZYTUpRWkNYUzVNQXBWQlBWRVdhU0puQ3pPVGZ1UWtQRzVfb3ZEakJNalNQbGlfMk9Bd0p4eFNDcDMxcXMxUU1nRllmenA3VnlPcVp0ZF9GZ2s?oc=5",
+            "publishedAt": "Fri, 04 Sep 2026 07:00:00 GMT",
+            "source": "Goal.com"
           },
           {
-            "title": "Oberschenkelverletzung! Havel verpasst Genua-Auftakt gegen Napoli - LAOLA1",
-            "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUUhlalZNbndFNDRrQkQtLThSNHdWYy1sXzllck1Tb2NVaDhveGRBWEx3UGtuelRYOGhSVHJyMURUbG9GMHh5ZTJFRmNxWHBNTnNlLUN1RHRBNS1qY05kcWFmeTNjTXU0RkdFTnVMemNaTXdtNjRQTWtueTljRXhzMVpxQ0JMSWlCYUVkSDRLSDI1bFJsTHFRTnRsc2VOQkllT253eGJOaTc1SzFUYThWNkU3SGhXLUhKNkxid2JsM2hmaklWOEY0dlRzemJ3QkNFbGpUMkFxM2hyOERmblhjRg?oc=5",
-            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
-            "source": "LAOLA1"
-          },
-          {
-            "title": "Anguissa verpasst Afrika-Cup: Nächste schwere Verletzung bei SSC Napoli - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOYmluZWw3bkl4ME5SRjVyQmU5cVNPcUN3c2hmX3JnVVI0d0p3U1I3OVR4TzNZaVphdjBZbElmMTB1VjlteGRoOC1ra1ZSb2tIcnpUbUtDUWplUW1XcUtYSGgwNU9tZWhEenJmRDNIanQ2RVhnb3lXYUFIemh0VjRlRFRSRE5hX3BIRnU5OHZPWklqaGZ0cm9wWDRwWjBQQlpncnVOQ015SzFtZ1lrUnNCbENpeExmOG8?oc=5",
-            "publishedAt": "Fri, 14 Nov 2025 08:00:00 GMT",
-            "source": "Transfermarkt"
+            "title": "SSC Napoli - Celta Vigo Live ticker, H2H und Aufstellungen - Sofascore",
+            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53TE1FZWdwTzlVVktnRGp4TmtRNUh4RGItY1BLeFBxUFkxdExObzZzOFp5NkdxaUZuUFc2NGxZUkFzMGY0VXBlTWtPbkxnX1pYcXVsTmo0OE03dVdaSzgwZmU4aHE1bzdWbnBMbnM0M25qRkhaVUxzTjJIYm00dw?oc=5",
+            "publishedAt": "Sat, 08 Aug 2026 07:00:00 GMT",
+            "source": "Sofascore"
           }
         ]
       },
@@ -70972,6 +70972,12 @@
       "teamNews": {
         "home": [
           {
+            "title": "Aufstellung | Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPREwxaXFMMVgwNGV5TmExWmVOWko2WlkyZUJOMUg0Nk5oV2szOXVpYWVaTXhsNm1yZ3VEWTRSWXh6a2RkR09MemFoay00UlN3QThwcWF1ajNPX0J3c0hEYmFsakRtd0VhejR3cmtUb0cydDZsR3o0cGlYVm1tV1pwaVhoQQ?oc=5",
+            "publishedAt": "Sat, 24 Oct 2026 12:21:11 GMT",
+            "source": "Kicker"
+          },
+          {
             "title": "Aufstellung Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag, Serie A 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQVmlpVFRTUURSeC1IenN5dXJaa0hRSjJNRmFicGZiSHp4MDhyVngtcGFCWDRxc0VDXzVUSE1LUTVDNkVONmdjNXVDYzdnLU16c3VERXBXdWViZUQtTXdqUTB6cExGS3FjNWdrS2NkLWYtU28tUVFvU3hDYmRYYzNHcDFUYlZpdnAzV1Z0TnhwZm1ONXFvNmRLNVAzS28?oc=5",
             "publishedAt": "Sat, 24 Oct 2026 13:00:00 GMT",
@@ -70984,22 +70990,16 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Aufstellung | Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPREwxaXFMMVgwNGV5TmExWmVOWko2WlkyZUJOMUg0Nk5oV2szOXVpYWVaTXhsNm1yZ3VEWTRSWXh6a2RkR09MemFoay00UlN3QThwcWF1ajNPX0J3c0hEYmFsakRtd0VhejR3cmtUb0cydDZsR3o0cGlYVm1tV1pwaVhoQQ?oc=5",
-            "publishedAt": "Sat, 24 Oct 2026 12:21:11 GMT",
+            "title": "Aufstellung | FC Bologna - Inter Mailand 1:3 | 7. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1UOTlfWjI4YklwbzJURWd1OUpUdkJ4blhLdE1mZVVWNXRCV2pQbTRJUHBFeUh4dU81Z0ZlZmVpQlM4SnR6bG5ZTFRtTHQ0RWEzX0FzUWU0MzV2cmNYRkw1NVpuOHIwTHFlMXVETXlZVWFQR2d5VnJOcVRyUTFFMWM?oc=5",
+            "publishedAt": "Sat, 17 Oct 2026 15:16:32 GMT",
             "source": "Kicker"
           },
           {
-            "title": "US Sassuolo gegen Bologna FC Aufstellung - Serie A 23. Spieltag 2020/2021 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQkxxZm5ycFlZVk5zdnJIWHBLU0U0Y2xDdUg5RldXbzR2ZGJ5SXBIMk9Tb1dCQVd6ZXRGY3VONmZPb0d3X0pLRHFWSUlEUzYzT182UUVsR2gycjFZRXlBTjh2czJRLVlvazdZNnRFNGlnWGxXQjg0VVZxbzdkWXdJQk14WTdyWTc2TnRJSTJ1UQ?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 17:32:49 GMT",
-            "source": "BILD"
-          },
-          {
-            "title": "FC Bologna - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOSUVzUzhUbUpyQlIycW5QU1FTUWQ1SVNUUmQ4M18tS1Vrd1ZHQmlwQ0tRMzJiQ0p1T3JrVWRFdFpDeFBwcDlObXhYSnFzYVBsUUt6dkJMeXFyaWVZanBJYjNEdVhKTkt4TlpERGhPNzBsZ0F0cHgwdncxUFhIZFF0UnRINHdXUHpnWHc?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 03:49:11 GMT",
-            "source": "Transfermarkt"
+            "title": "Aufstellung US Lecce - FC Bologna 1:2 | 6. Spieltag, Serie A 2026/2027 - sport.de",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPbXBjYTJkNV8zYU80MkllSjBYZTE5UW9xQ2xoMm5hemI3UGdPa3NBTm5odkNTVWk0R0pTMWdhLUJlV29sZUlpazRtVGFvQkEtU3FKZjdyQ1VwSlMzZk5LMGFyRkQ1YTNaX2tDNVFRekFZXzRob1pJVGRMSHFYNGZ5eFk4d0UxbUM2UHlWcnpySDI2Mnc?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
+            "source": "sport.de"
           }
         ],
         "away": []
@@ -74677,12 +74677,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -74695,10 +74689,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -74860,12 +74860,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -74878,10 +74872,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -78154,28 +78154,28 @@
             "source": "Real Madrid CF | Web Oficial"
           },
           {
-            "title": "Aufstellung Athletic Club - Sevilla FC 1:3 | 2. Spieltag, La Liga 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaUNSVmZadGptUHVQTURiZjlrNkRmNnRtTjFDMmJDeE5jc3RpOU9yTF9KbTh5R1lsUElXaVI0M2ZzNnNwdGFlVHJ3SkRPU2xyOURFb2R1WlAySUVXNW9SbHcwbGtBbU1TeXAtc3VuWEU5ZEd0VlpPcWxCMXNWRHJCaVRCcDBQTzRvVmNJT2VHVWx2RnBxTktJM1ZiQVNoeHJ2YjIxRmJ3?oc=5",
-            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Bayer 04 - FC Sevilla | Testspiel 2026/27 - Bayer04.de",
-            "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdGdPeWp3WmJyem5aU1o3XzB5WEIxdDNsSzdzS19taHctRkpLM2luSU03NDNFLVhiNk1RYU9GNFY1Z3FDbFdVZmpKSWtuY1laUEZRZDR1aXlteXBRTUI4UzFsQ2xEYjZWeG1BczVuSmd5MnZuckFNZXNuNGx5X2ZKY0xn?oc=5",
-            "publishedAt": "Tue, 02 Jun 2026 20:27:48 GMT",
-            "source": "Bayer04.de"
-          },
-          {
-            "title": "Schwerer Unfall mit Stier: Torero in Sevilla wird von hinten aufgespießt - Spiegel",
-            "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNRHBmcF9iY2xrU2MwNEs3eGtINkVObl9kWFNsaThQMlZUcTQzREg1SFBRdmlhQ0FETWNaSHBkRWVicFVLSlhwNDFlOTk1TGJPNlZHZ1daYy1yTU1QS01EaExzRTZQd2xRSVlMZnVNaVhidTFMSUhFaFh4Nm1ZZ1ozWHJycklyaTJGTEJEUFo0WEJkUmRQS0lnNTlaYkFaTnVyb0V6ZnV6ZVYzZUU2eW5FdGxHaDhvcDhTeng3blMtOHEyWFBEU3JEOVQwdl8wRDItTFNvZldRaDY1V3c1SEE?oc=5",
-            "publishedAt": "Tue, 21 Apr 2026 07:00:00 GMT",
-            "source": "Spiegel"
-          },
-          {
-            "title": "Fußball Champions League: Lille gegen Betis Sevilla - Aufstellung - 1. Gruppenspieltag - 2026/2027 - sportschau.de",
-            "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOcm42NGR1Uk1tazYyQkxvNHBOTXVRWnNVVEFwc2JyX2lMNU1YM05WeVRYOFNtYmp0N2todndVclJ4Vk50Wm9ZZ2tJVUVZY3cyd1g0TUhkSEFPQ2lPSGdIaml0cjhidGdjSzVfWTF2V2g0eGNsbFEwQkJNZUF6RXJpSHlaUnVyY2Z5bng4dS1OR2ZrTHZTMXhtNXBOUFdGN0pKRk0zNlVHWHFVM2hQNVQwcmtaYWk1S3djend0V1VNakN5Q2g1SWRlNk5hajZzQQ?oc=5",
-            "publishedAt": "Tue, 08 Sep 2026 20:57:43 GMT",
+            "title": "Fußball Champions League: Betis Sevilla gegen Feyenoord - Aufstellung - 3. Gruppenspieltag - 2026/2027 - sportschau.de",
+            "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPa3N3TUZZRDlQNGN2V2JrZjZWNWpHYnBMb2NETHJTMG9aZDNpYTV2YmRZMW5WV3VtaUdiTER2WHR1NFZaZUlVUm9KWTRQUXJVb1h4bjIwRWd5dHlXSGdzYU11Qkx0Y2x6UzJJRkNYanhIWHAtcjY1ejFIdy1UVWVBSHF1dlZLdmNVWHpGRE92eE5YeloxejBXaFNncDVROUdPbGQ4UjBEZzZ5d1dGWWxBRll2RWxRSkdFQ3E2WWRWNktuNG9qaHZwN0t1aEN3bnh0c2hVTklwUGlzTGs?oc=5",
+            "publishedAt": "Wed, 21 Oct 2026 22:28:39 GMT",
             "source": "sportschau.de"
+          },
+          {
+            "title": "Real Betis Sevilla - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQdFZuTE56dnV4NHNUd0xCXzJ3cjFEb0tyaHZiOEpONkRieHlGVFBONjIweDJiNW5xQ0cwS3dUZTJWMXFmM0tmNFpOLVM1bGN3RHFocEJMdnhkZkpWVVlGeEZjZzJXYVp6QnpSYnVrTHBtc21xaXQ1bHFSVEFqN0ZIbTg4VnJPUXpkbl9LQTQyaDdRWFU?oc=5",
+            "publishedAt": "Fri, 23 Oct 2026 09:51:25 GMT",
+            "source": "Transfermarkt"
+          },
+          {
+            "title": "Aufstellung | Celta Vigo - Real Betis Sevilla 0:0 | 10. Spieltag | La Liga 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4yVlU5MVZvNk12ZGJielg2NmZoNHpFVWRvZ0hzQ3l3czBPTW9VMno0MGY1MUFVZXZVOUo0c0ZvSHl5bUhQN2NFeE5rWmVIdElUSkR3Y2RBU3hqc1RCT0tQQUJkNFlFQnZGYnpScWNnODdYLXlQWlhWQ1R3cw?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 14:30:26 GMT",
+            "source": "Kicker"
+          },
+          {
+            "title": "Aufstellung | Celta Vigo - Real Betis Sevilla : | 10. Spieltag | La Liga 2026/27 - kicker.ch",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9TWUdhRXZQa1M3T29NMTI4ZjYzYWt1dm1kTm52cjJhRF9OVGRtbWJ6MVhpNzYzS0hvT0hfTE1zUTZXaVNFVVZiRUc3a1NYUTlVZU5CNlhuM2xfS2M3bVJ4X09oRFFob2xYS0I1V0p1TWdFa2E1SUgybVBDbw?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 15:11:57 GMT",
+            "source": "kicker.ch"
           }
         ]
       },
@@ -78366,27 +78366,27 @@
             "source": "Kicker"
           },
           {
-            "title": "Aufstellung Konyaspor - İstanbul Başakşehir 0:0 | 7. Spieltag, SüperLig 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOWUydnFmeEU3M19SYUphR1ZWQUpxTi1rTmlfWlVyNW9ISWxMdzVGMnB6eHAtUDRVZE1yQjE3U1QzcVM3M0s2S2NpYXZHQXcySFVoclEwU0tvNUhMd0UxUDBBVGZvTnhzYWEwd2QwRXpJQ0NfYVlsNC1uYnlnQmN4eC15b04tRzR2NTVEZTViWUhmV3BOS3B3TU8yeWFTMEo2NG9j?oc=5",
-            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Istanbul Basaksehir vs Galatasaray Prognose: Sahin gerät unter Druck - Goal.com",
-            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNYXQ0dHE4c3F5THN1TjEtSm9SS0dTZU00U1YxdkFseTdaOFJTOU15WkdFcF9MbjlUVWJOT2NndnQwa1ZjZHlzVGMzUlkyUnhfMGVlQWdhd0otU0NCMVlpeHRfMk10MFhCUkFMTlE2NFY5SnYtdTJMaEFaTzdJZTFMeUltcElyVlZKdjZjeHlJcVloUG81RW50QkFSZlpNcHJIXzVtdUd5YmxWcV8zZ040b3puUUFIQVRUaVE?oc=5",
-            "publishedAt": "Sat, 05 Sep 2026 07:00:00 GMT",
-            "source": "Goal.com"
-          },
-          {
             "title": "Aufstellung İstanbul Başakşehir - Gaziantep FK 2:1 | 8. Spieltag, SüperLig 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSkM1SzZuSHhjdUwxcjlXa3NJRHVtQnNuV3pseFlKNldYQndLNThrZE1vLWFMUVVyRnlwNGh3RDVTM29EVE0xbFozQjYtV3NLNFo4WE5DSlF3UWhHVmxRTXJabVdZRTZ4QVdLMFk2OHpaZ21KX1FTdGhTNDJzWFNrbDdrWkkzUUZKRFJuT3gweE5GaTctSDlob3Q3cGxUZXRodDlwYmlHcw?oc=5",
             "publishedAt": "Sun, 18 Oct 2026 16:00:00 GMT",
             "source": "sport.de"
           },
           {
-            "title": "Aufstellung | Istanbul Basaksehir FK - Galatasaray SK 2:3 | 4. Spieltag | Trendyol SüperLig 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOWUwwQ3BKSkpnQndQRnJ6WnlCa0Ffdi1FWjZSN19JODhhUFB6dE1KbVFTeHljd096cEZVY2M1WXROUGZ1RzQtTzhnUkJrczBsNzZEbUtQUEs5d0JURGwyZE5TbzBXaWY3XzVUU1N4Qy1lbmM2OFNKcmJZa2xnRkdtbkRMeXhkSnhreGQtSHhMNA?oc=5",
-            "publishedAt": "Fri, 04 Sep 2026 16:21:24 GMT",
+            "title": "Aufstellung Konyaspor - İstanbul Başakşehir 0:0 | 7. Spieltag, SüperLig 2026/2027 - sport.de",
+            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOWUydnFmeEU3M19SYUphR1ZWQUpxTi1rTmlfWlVyNW9ISWxMdzVGMnB6eHAtUDRVZE1yQjE3U1QzcVM3M0s2S2NpYXZHQXcySFVoclEwU0tvNUhMd0UxUDBBVGZvTnhzYWEwd2QwRXpJQ0NfYVlsNC1uYnlnQmN4eC15b04tRzR2NTVEZTViWUhmV3BOS3B3TU8yeWFTMEo2NG9j?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
+            "source": "sport.de"
+          },
+          {
+            "title": "Aufstellung | Istanbul Basaksehir FK - Inter Turku 1:1 | 2. Runde | Conference-League-Qualifikation 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdnJZbWRXS0ZLY0JvZkF0bzR6ZEUxQTN0S1pCQWd6N1FtX0pCRHZEZzBlQ1MzanNfVkZDdUZZcXN1Wl9DOVJGQnNMM3I1V3prY21QWTNiRkNHTGd5V2Nmb19fLXdBeFltM29aNEpPNndZZFNzejUxMEtXRUFzcXJIZm5pc0dEN04yVjgwZlpGOHZmc2JzeWFadklyai1GY1VNWjF0c2JBbzAxUzVCVi12aWJB?oc=5",
+            "publishedAt": "Wed, 22 Jul 2026 17:00:49 GMT",
+            "source": "Kicker"
+          },
+          {
+            "title": "Aufstellung | Konyaspor - Istanbul Basaksehir FK 0:0 | 7. Spieltag | Trendyol SüperLig 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQS1J2MVJub2oyZnZXVkZTbV84dldvVWVFdm9lS3dCcVZKUG5oMVJ5WWNVdXkzdF9udDJ2S0tKVFRLaWE3Z1lDZm9rMjBZVktTT19rMWhPRE16MVBsZDZEb2lHN0JoQXpiTm95YmJ6cnRzU01ZU1N2bVZCbkJDOWVPLWtLTlZNNDg?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 10:16:02 GMT",
             "source": "Kicker"
           }
         ],
@@ -84318,16 +84318,16 @@
             "source": "SZ.de"
           },
           {
-            "title": "Aufstellung | CD Santa Clara - Sporting Braga 0:0 | 7. Spieltag | Liga Portugal Betclic 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVZlTFlqdnlDLXRsZ240VlI2Tm83SkpyR1RTRzRhV0pLSDR4QW9LUUFKVG5tbjhrMllsNElheUVIOEY0LWJBMWVsOXV4U01LUG9iNUtOeWlMX056bnQxanNwakFiVklpZ3RYWm5DQjNXX0ZOMVhGUkotM1U0SUxud25iVzRKMmtDUXlTeQ?oc=5",
-            "publishedAt": "Sun, 20 Sep 2026 16:28:30 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "Aufstellung FC Alverca - CD Santa Clara 1:1 | 4. Spieltag, Primeira Liga 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdE9tYjhQd2pNVjVzaWx4R0loc3hmLXF0bFhhSDd1U0Z0bzVaUE95bmQwcndlaHJTdG5Vd2JPRFJFLWNZVXNuTWs4cmpjV2dDR3dNSG9mUmt4M085MzcxNXo1VG11UTBDUjN2czRNa0t4X3dod0ZEdlM2S3RVSmw4R1lOeGJQUnBuVndBaFJwVGJvTW5GWmRJeEVLMHVScTNPOUJSdQ?oc=5",
             "publishedAt": "Sat, 29 Aug 2026 07:00:00 GMT",
             "source": "sport.de"
+          },
+          {
+            "title": "Aufstellung | CD Santa Clara - Sporting Braga 0:0 | 7. Spieltag | Liga Portugal Betclic 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVZlTFlqdnlDLXRsZ240VlI2Tm83SkpyR1RTRzRhV0pLSDR4QW9LUUFKVG5tbjhrMllsNElheUVIOEY0LWJBMWVsOXV4U01LUG9iNUtOeWlMX056bnQxanNwakFiVklpZ3RYWm5DQjNXX0ZOMVhGUkotM1U0SUxud25iVzRKMmtDUXlTeQ?oc=5",
+            "publishedAt": "Sun, 20 Sep 2026 16:28:30 GMT",
+            "source": "Kicker"
           }
         ]
       },
@@ -84569,6 +84569,12 @@
         ],
         "away": [
           {
+            "title": "8. Spieltag: SSC Neapel - AS Rom - S.S.C. Napoli - I Partenopei - Forum | Page 1 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUlFrU1RSVHJseVZmVWJTQnlVYXZQaWFwd29WM0RfTV9Ha1B3U2xrTVROTEF5UFBlRm5UdXRRV3hvVTlkaWIxVmZ4U1JPdnQ0NEZNVldCUEVhSWNMU1ZnaFY1Q0lTVTNEUXdzWlpsYjRZMDFfZFFRb2dPdjNuNmVWNDU4bjd5SlBXaW5uUVg0clVKdEk?oc=5",
+            "publishedAt": "Sat, 24 Oct 2026 14:58:00 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Napoli verliert Abwehrchef: Buongiorno droht monatelanger Ausfall - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPby15dk1FZmQ5bWRzSDhUUFBZSW9sSWRKaElLbkxKbExmaDlsVTQybHdpbWE3TjZrYU41LU11cDU4LWw4aVRUSTE0dmNfZF9KWXNJcG0wcGV5NWZUOVZybk9BM000ZllJb3pNV0ZMX2tWT09hTzJqQ2hVaGlCSndTUjJhVEJjaUQ4QjV0YzEzWGh5YXN4M2Z1ZUplX2dQOVZn?oc=5",
             "publishedAt": "Tue, 21 Jul 2026 07:00:00 GMT",
@@ -84581,22 +84587,16 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Vorschau: Nächster Halt Neapel - Eintracht Frankfurt",
-            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1yMHdYblNJWkNmV0V5dEVRTXZCeFdwblNVM0RjZUU4RTItMHc1Q0NDZU91OUk1czFpbTdqaGs3TUlUTk5teERSY21vRW15c3Fzc2s0eWVMR2dhZ2NGSXpTVmFHRlBRNm1ZaVJQbEFmRFdkQTlWblFMRDd0dw?oc=5",
-            "publishedAt": "Sun, 02 Nov 2025 07:00:00 GMT",
-            "source": "Eintracht Frankfurt"
+            "title": "Inter Mailand gegen Neapel, Serie-A-Vorschau: Alles, was ihr wissen müsst - Goal.com",
+            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMGxUekRLTGtKckpYSHN5QkNIckVqU3hRUmx4MzRfQ29IalpjNGJ6U3QzcEgwd1VfMFZqMEJTcEM2ZEgxV2Y2Zld4a3dWQ25kNFl2RDM4Nl9uc0JIQWpha2luekZsenpJbVlScnNYSmlEQUZYTUpRWkNYUzVNQXBWQlBWRVdhU0puQ3pPVGZ1UWtQRzVfb3ZEakJNalNQbGlfMk9Bd0p4eFNDcDMxcXMxUU1nRllmenA3VnlPcVp0ZF9GZ2s?oc=5",
+            "publishedAt": "Fri, 04 Sep 2026 07:00:00 GMT",
+            "source": "Goal.com"
           },
           {
-            "title": "Oberschenkelverletzung! Havel verpasst Genua-Auftakt gegen Napoli - LAOLA1",
-            "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUUhlalZNbndFNDRrQkQtLThSNHdWYy1sXzllck1Tb2NVaDhveGRBWEx3UGtuelRYOGhSVHJyMURUbG9GMHh5ZTJFRmNxWHBNTnNlLUN1RHRBNS1qY05kcWFmeTNjTXU0RkdFTnVMemNaTXdtNjRQTWtueTljRXhzMVpxQ0JMSWlCYUVkSDRLSDI1bFJsTHFRTnRsc2VOQkllT253eGJOaTc1SzFUYThWNkU3SGhXLUhKNkxid2JsM2hmaklWOEY0dlRzemJ3QkNFbGpUMkFxM2hyOERmblhjRg?oc=5",
-            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
-            "source": "LAOLA1"
-          },
-          {
-            "title": "Anguissa verpasst Afrika-Cup: Nächste schwere Verletzung bei SSC Napoli - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOYmluZWw3bkl4ME5SRjVyQmU5cVNPcUN3c2hmX3JnVVI0d0p3U1I3OVR4TzNZaVphdjBZbElmMTB1VjlteGRoOC1ra1ZSb2tIcnpUbUtDUWplUW1XcUtYSGgwNU9tZWhEenJmRDNIanQ2RVhnb3lXYUFIemh0VjRlRFRSRE5hX3BIRnU5OHZPWklqaGZ0cm9wWDRwWjBQQlpncnVOQ015SzFtZ1lrUnNCbENpeExmOG8?oc=5",
-            "publishedAt": "Fri, 14 Nov 2025 08:00:00 GMT",
-            "source": "Transfermarkt"
+            "title": "SSC Napoli - Celta Vigo Live ticker, H2H und Aufstellungen - Sofascore",
+            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53TE1FZWdwTzlVVktnRGp4TmtRNUh4RGItY1BLeFBxUFkxdExObzZzOFp5NkdxaUZuUFc2NGxZUkFzMGY0VXBlTWtPbkxnX1pYcXVsTmo0OE03dVdaSzgwZmU4aHE1bzdWbnBMbnM0M25qRkhaVUxzTjJIYm00dw?oc=5",
+            "publishedAt": "Sat, 08 Aug 2026 07:00:00 GMT",
+            "source": "Sofascore"
           }
         ]
       },
@@ -85874,9 +85874,15 @@
             "source": "sport.de"
           },
           {
-            "title": "Frosinone Calcio gegen US Sassuolo Aufstellung - Serie A 7. Spieltag 2026/2027 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTmVnNlFFV2xORGZaYlpIaEVZQWE0MTlNWmxKZDN5cWpfY1hZUFo1dWJGY0pFdS1SSGQ5ajVzZDBkbXJ6TXlMVEMteWVmZkdMVGNXUk9ZSF9IdmFWRmNkeTZoREp0RF9udFZxa09OQjlzS0hBZ0Q3cEQwQmVnZFpuLU1ZZ0plLTd3a1lxZW5lNGNMVldFUGc?oc=5",
-            "publishedAt": "Tue, 20 Oct 2026 18:05:36 GMT",
+            "title": "US Sassuolo - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSENINzViNF81UFJBUk1uSWdPUmh2N0lMNktjajctNkJkRjhhQWp1NEl6VVdfbUplYlpqd0JNeXh6TTc3NkVVdzJLRGxVZGpyaWpYT2h3Sld4LVlPWnhZVmlfcEFkZDh2UGhrSnJ2ZGdRRGdsSF9UdU8wdEFpSk83RWFxeWNMcEtfTVQ0?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 03:42:42 GMT",
+            "source": "Transfermarkt"
+          },
+          {
+            "title": "US Sassuolo gegen Bologna FC Aufstellung - Serie A 23. Spieltag 2020/2021 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQkxxZm5ycFlZVk5zdnJIWHBLU0U0Y2xDdUg5RldXbzR2ZGJ5SXBIMk9Tb1dCQVd6ZXRGY3VONmZPb0d3X0pLRHFWSUlEUzYzT182UUVsR2gycjFZRXlBTjh2czJRLVlvazdZNnRFNGlnWGxXQjg0VVZxbzdkWXdJQk14WTdyWTc2TnRJSTJ1UQ?oc=5",
+            "publishedAt": "Thu, 22 Oct 2026 17:32:49 GMT",
             "source": "BILD"
           },
           {
@@ -85886,16 +85892,10 @@
             "source": "Kicker"
           },
           {
-            "title": "Aufstellung Frosinone Calcio - US Sassuolo 4:2 | 7. Spieltag, Serie A 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSUdBV1Ywa05qcTN2ZXpYaFczc19xX0NVLThOaHN3cjNYbUxQaGNxa1RhWXdmVENYbUpmeHBKcVNXYUZOZmpvM1B6ZWVrS0cyR1g5RDB4NUgyN29BVThRcU1JLWhBS0dJaXZzZGdUZHhHdWNhSHBGYjUyM2U0QTUzN1lWUDNldUdqbHBWQkt4YU41ZE4zbl9BOENSUEFEdEk?oc=5",
-            "publishedAt": "Fri, 16 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Aufstellung | Sassuolo Calcio - AC Mailand 1:1 | 6. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOVUhsa3VkU0RqRTRJZEp5LTRKYU5vRlVaUkpoYmVrNHVkaFlITWJkWFlNbWVmUGdSeU1aell2aUE5aGhXcXFjdjZQc0lIU29Eb2hYLWtNNkczck1QbEZNRXh1YVUzQWJaaFQwc090cE1TZWFkcU43dnRiM2hZeWItQw?oc=5",
-            "publishedAt": "Sun, 11 Oct 2026 15:16:30 GMT",
-            "source": "Kicker"
+            "title": "Frosinone Calcio gegen US Sassuolo Aufstellung - Serie A 7. Spieltag 2026/2027 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTmVnNlFFV2xORGZaYlpIaEVZQWE0MTlNWmxKZDN5cWpfY1hZUFo1dWJGY0pFdS1SSGQ5ajVzZDBkbXJ6TXlMVEMteWVmZkdMVGNXUk9ZSF9IdmFWRmNkeTZoREp0RF9udFZxa09OQjlzS0hBZ0Q3cEQwQmVnZFpuLU1ZZ0plLTd3a1lxZW5lNGNMVldFUGc?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 18:05:36 GMT",
+            "source": "BILD"
           }
         ],
         "away": []
@@ -86811,16 +86811,16 @@
             "source": "Kicker"
           },
           {
+            "title": "Sportings Bayern-Generalprobe: Lissaboner Derby bei Benfica endet Remis - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNzBZcnVUeGJBay1QbmdiQlIyQnpOUDdNLVdna1ZrUjY0dmhnRmNnaHNXR2dFOFNVLWxEMkJGVWJlY2hzeU9scHZjOTBrZ09KYW14U081LXRoRGM4MVhKTlFja2RUdTVxTlhMZUVjYk5KSkh0dy1NUWlJd3dFSTAzRUp6bE1FU2RsSC1TelZjMEFWbWxZ?oc=5",
+            "publishedAt": "Fri, 05 Dec 2025 08:00:00 GMT",
+            "source": "Kicker"
+          },
+          {
             "title": "SL Benfica - sport.de",
             "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5SMTMyNG1LT3BoRUxqdkRtaVJjYWRnOXNwNkhCOEdQYkRiR3JMSmN5NVVBX3JvTk14bU1HSjNMd0lRV1FzX19SRmxMeE1RUmkyREc5X0RyX1UxYnlM?oc=5",
             "publishedAt": "Sat, 11 Mar 2017 16:14:09 GMT",
             "source": "sport.de"
-          },
-          {
-            "title": "Teils auf Bewährung: UEFA sperrt Benficas Prestianni für sechs Spiele - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdmpCSkM1eTdVc3M3X2NCN1dwSHdlQW1BODhfQ3M2cUVGWllFS3hGbE1WR2tWUzFMSW03aGRlZmhxeWJydUpBczVPSjR1VG9jQnlET0tyNU5PNko4RHFBVkVzbzQ3cHlhN3o3bE1xeWZpdHlVSXY0blFNaUtZUHJNMGRkNE1Qb2kxSk1MOUhQQVd6S19yaUVjazh3d2Nka1lROUcwSzN4a0l3ODJs?oc=5",
-            "publishedAt": "Fri, 24 Apr 2026 07:00:00 GMT",
-            "source": "Kicker"
           }
         ],
         "away": []
@@ -87109,16 +87109,16 @@
             "source": "L'essentiel"
           },
           {
-            "title": "Aufstellung | Borussia Dortmund - Benfica Lissabon 5:0 | Achtelfinale | Europapokal der Landesmeister 1963/64 - kicker",
-            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcm1VRVVTZExudDBzRjc0U2NpbndGaVlGTnhuaDN3ZklFbEpDeE9JeVctYlEwNTh5dWZ3T2dScmJVczhOUmdHRFlDM3IzdHo5Y2NzMWFnT29RcjhDQTVqVWZxSkpFUzFMY0djU1FVWVQyR25XTWVaU1g5OUd6TVRVOGliNHZGUTVkZ0JvbHU1Ykludw?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 22:07:18 GMT",
-            "source": "kicker"
-          },
-          {
             "title": "Aufstellung: Benfica vs. Bayern - Champions League 26/27 - FC Bayern",
             "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOaVFCRGt5Y3pYcW42RnBZVVFkcmhzOWFLcnRPNUlJZG9mMTNWOW5yNXNjREVnWGJNVW9mVjNISEx6R3V0M0lPOE10TEpOM1A0SzFCRTJGR0dzeHRkd3ozRXhqeEUtRURxVmlJd3dHT2RWUFpHTENZaGFmMFg5RS0xSTlfOGdXelVyWjdYLTVwR3RvV1JCRVpaSXJDLV9NZGtKWFVaX1VGUmdsSEJOcEhhMk5DekRCUUJxamR4aDk4amNqbWcyUWd3?oc=5",
             "publishedAt": "Wed, 30 Sep 2026 07:00:00 GMT",
             "source": "FC Bayern"
+          },
+          {
+            "title": "Benfica Lissabon - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNnptYUpVYk1oVFJ3R3VzaklIdWthYk1fZjh6VHo0OVd0b0E3emY3VWtyeTNDYUo5Yi00MEk1QUQ0bVF0SHE0T29TWXUyZmdQSHpMMzhsV2RKQkdyMUlwNUlUTTJiZUpBMC1RRWhQcUpDd0NOeDUzWGxlanNPdmtCRGxxNHF2YTg?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 14:39:12 GMT",
+            "source": "Transfermarkt"
           }
         ],
         "away": []
@@ -88036,12 +88036,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -88054,10 +88048,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -90673,16 +90673,16 @@
             "source": "L'essentiel"
           },
           {
-            "title": "Aufstellung | Borussia Dortmund - Benfica Lissabon 5:0 | Achtelfinale | Europapokal der Landesmeister 1963/64 - kicker",
-            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcm1VRVVTZExudDBzRjc0U2NpbndGaVlGTnhuaDN3ZklFbEpDeE9JeVctYlEwNTh5dWZ3T2dScmJVczhOUmdHRFlDM3IzdHo5Y2NzMWFnT29RcjhDQTVqVWZxSkpFUzFMY0djU1FVWVQyR25XTWVaU1g5OUd6TVRVOGliNHZGUTVkZ0JvbHU1Ykludw?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 22:07:18 GMT",
-            "source": "kicker"
-          },
-          {
             "title": "Aufstellung: Benfica vs. Bayern - Champions League 26/27 - FC Bayern",
             "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOaVFCRGt5Y3pYcW42RnBZVVFkcmhzOWFLcnRPNUlJZG9mMTNWOW5yNXNjREVnWGJNVW9mVjNISEx6R3V0M0lPOE10TEpOM1A0SzFCRTJGR0dzeHRkd3ozRXhqeEUtRURxVmlJd3dHT2RWUFpHTENZaGFmMFg5RS0xSTlfOGdXelVyWjdYLTVwR3RvV1JCRVpaSXJDLV9NZGtKWFVaX1VGUmdsSEJOcEhhMk5DekRCUUJxamR4aDk4amNqbWcyUWd3?oc=5",
             "publishedAt": "Wed, 30 Sep 2026 07:00:00 GMT",
             "source": "FC Bayern"
+          },
+          {
+            "title": "Benfica Lissabon - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNnptYUpVYk1oVFJ3R3VzaklIdWthYk1fZjh6VHo0OVd0b0E3emY3VWtyeTNDYUo5Yi00MEk1QUQ0bVF0SHE0T29TWXUyZmdQSHpMMzhsV2RKQkdyMUlwNUlUTTJiZUpBMC1RRWhQcUpDd0NOeDUzWGxlanNPdmtCRGxxNHF2YTg?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 14:39:12 GMT",
+            "source": "Transfermarkt"
           }
         ],
         "away": []
@@ -92826,28 +92826,28 @@
             "source": "Real Madrid CF | Web Oficial"
           },
           {
-            "title": "Aufstellung Athletic Club - Sevilla FC 1:3 | 2. Spieltag, La Liga 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaUNSVmZadGptUHVQTURiZjlrNkRmNnRtTjFDMmJDeE5jc3RpOU9yTF9KbTh5R1lsUElXaVI0M2ZzNnNwdGFlVHJ3SkRPU2xyOURFb2R1WlAySUVXNW9SbHcwbGtBbU1TeXAtc3VuWEU5ZEd0VlpPcWxCMXNWRHJCaVRCcDBQTzRvVmNJT2VHVWx2RnBxTktJM1ZiQVNoeHJ2YjIxRmJ3?oc=5",
-            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Bayer 04 - FC Sevilla | Testspiel 2026/27 - Bayer04.de",
-            "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdGdPeWp3WmJyem5aU1o3XzB5WEIxdDNsSzdzS19taHctRkpLM2luSU03NDNFLVhiNk1RYU9GNFY1Z3FDbFdVZmpKSWtuY1laUEZRZDR1aXlteXBRTUI4UzFsQ2xEYjZWeG1BczVuSmd5MnZuckFNZXNuNGx5X2ZKY0xn?oc=5",
-            "publishedAt": "Tue, 02 Jun 2026 20:27:48 GMT",
-            "source": "Bayer04.de"
-          },
-          {
-            "title": "Schwerer Unfall mit Stier: Torero in Sevilla wird von hinten aufgespießt - Spiegel",
-            "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNRHBmcF9iY2xrU2MwNEs3eGtINkVObl9kWFNsaThQMlZUcTQzREg1SFBRdmlhQ0FETWNaSHBkRWVicFVLSlhwNDFlOTk1TGJPNlZHZ1daYy1yTU1QS01EaExzRTZQd2xRSVlMZnVNaVhidTFMSUhFaFh4Nm1ZZ1ozWHJycklyaTJGTEJEUFo0WEJkUmRQS0lnNTlaYkFaTnVyb0V6ZnV6ZVYzZUU2eW5FdGxHaDhvcDhTeng3blMtOHEyWFBEU3JEOVQwdl8wRDItTFNvZldRaDY1V3c1SEE?oc=5",
-            "publishedAt": "Tue, 21 Apr 2026 07:00:00 GMT",
-            "source": "Spiegel"
-          },
-          {
-            "title": "Fußball Champions League: Lille gegen Betis Sevilla - Aufstellung - 1. Gruppenspieltag - 2026/2027 - sportschau.de",
-            "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOcm42NGR1Uk1tazYyQkxvNHBOTXVRWnNVVEFwc2JyX2lMNU1YM05WeVRYOFNtYmp0N2todndVclJ4Vk50Wm9ZZ2tJVUVZY3cyd1g0TUhkSEFPQ2lPSGdIaml0cjhidGdjSzVfWTF2V2g0eGNsbFEwQkJNZUF6RXJpSHlaUnVyY2Z5bng4dS1OR2ZrTHZTMXhtNXBOUFdGN0pKRk0zNlVHWHFVM2hQNVQwcmtaYWk1S3djend0V1VNakN5Q2g1SWRlNk5hajZzQQ?oc=5",
-            "publishedAt": "Tue, 08 Sep 2026 20:57:43 GMT",
+            "title": "Fußball Champions League: Betis Sevilla gegen Feyenoord - Aufstellung - 3. Gruppenspieltag - 2026/2027 - sportschau.de",
+            "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPa3N3TUZZRDlQNGN2V2JrZjZWNWpHYnBMb2NETHJTMG9aZDNpYTV2YmRZMW5WV3VtaUdiTER2WHR1NFZaZUlVUm9KWTRQUXJVb1h4bjIwRWd5dHlXSGdzYU11Qkx0Y2x6UzJJRkNYanhIWHAtcjY1ejFIdy1UVWVBSHF1dlZLdmNVWHpGRE92eE5YeloxejBXaFNncDVROUdPbGQ4UjBEZzZ5d1dGWWxBRll2RWxRSkdFQ3E2WWRWNktuNG9qaHZwN0t1aEN3bnh0c2hVTklwUGlzTGs?oc=5",
+            "publishedAt": "Wed, 21 Oct 2026 22:28:39 GMT",
             "source": "sportschau.de"
+          },
+          {
+            "title": "Real Betis Sevilla - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQdFZuTE56dnV4NHNUd0xCXzJ3cjFEb0tyaHZiOEpONkRieHlGVFBONjIweDJiNW5xQ0cwS3dUZTJWMXFmM0tmNFpOLVM1bGN3RHFocEJMdnhkZkpWVVlGeEZjZzJXYVp6QnpSYnVrTHBtc21xaXQ1bHFSVEFqN0ZIbTg4VnJPUXpkbl9LQTQyaDdRWFU?oc=5",
+            "publishedAt": "Fri, 23 Oct 2026 09:51:25 GMT",
+            "source": "Transfermarkt"
+          },
+          {
+            "title": "Aufstellung | Celta Vigo - Real Betis Sevilla 0:0 | 10. Spieltag | La Liga 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4yVlU5MVZvNk12ZGJielg2NmZoNHpFVWRvZ0hzQ3l3czBPTW9VMno0MGY1MUFVZXZVOUo0c0ZvSHl5bUhQN2NFeE5rWmVIdElUSkR3Y2RBU3hqc1RCT0tQQUJkNFlFQnZGYnpScWNnODdYLXlQWlhWQ1R3cw?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 14:30:26 GMT",
+            "source": "Kicker"
+          },
+          {
+            "title": "Aufstellung | Celta Vigo - Real Betis Sevilla : | 10. Spieltag | La Liga 2026/27 - kicker.ch",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9TWUdhRXZQa1M3T29NMTI4ZjYzYWt1dm1kTm52cjJhRF9OVGRtbWJ6MVhpNzYzS0hvT0hfTE1zUTZXaVNFVVZiRUc3a1NYUTlVZU5CNlhuM2xfS2M3bVJ4X09oRFFob2xYS0I1V0p1TWdFa2E1SUgybVBDbw?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 15:11:57 GMT",
+            "source": "kicker.ch"
           }
         ],
         "away": []
@@ -98210,27 +98210,27 @@
             "source": "Kicker"
           },
           {
-            "title": "Aufstellung Konyaspor - İstanbul Başakşehir 0:0 | 7. Spieltag, SüperLig 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOWUydnFmeEU3M19SYUphR1ZWQUpxTi1rTmlfWlVyNW9ISWxMdzVGMnB6eHAtUDRVZE1yQjE3U1QzcVM3M0s2S2NpYXZHQXcySFVoclEwU0tvNUhMd0UxUDBBVGZvTnhzYWEwd2QwRXpJQ0NfYVlsNC1uYnlnQmN4eC15b04tRzR2NTVEZTViWUhmV3BOS3B3TU8yeWFTMEo2NG9j?oc=5",
-            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Istanbul Basaksehir vs Galatasaray Prognose: Sahin gerät unter Druck - Goal.com",
-            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNYXQ0dHE4c3F5THN1TjEtSm9SS0dTZU00U1YxdkFseTdaOFJTOU15WkdFcF9MbjlUVWJOT2NndnQwa1ZjZHlzVGMzUlkyUnhfMGVlQWdhd0otU0NCMVlpeHRfMk10MFhCUkFMTlE2NFY5SnYtdTJMaEFaTzdJZTFMeUltcElyVlZKdjZjeHlJcVloUG81RW50QkFSZlpNcHJIXzVtdUd5YmxWcV8zZ040b3puUUFIQVRUaVE?oc=5",
-            "publishedAt": "Sat, 05 Sep 2026 07:00:00 GMT",
-            "source": "Goal.com"
-          },
-          {
             "title": "Aufstellung İstanbul Başakşehir - Gaziantep FK 2:1 | 8. Spieltag, SüperLig 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSkM1SzZuSHhjdUwxcjlXa3NJRHVtQnNuV3pseFlKNldYQndLNThrZE1vLWFMUVVyRnlwNGh3RDVTM29EVE0xbFozQjYtV3NLNFo4WE5DSlF3UWhHVmxRTXJabVdZRTZ4QVdLMFk2OHpaZ21KX1FTdGhTNDJzWFNrbDdrWkkzUUZKRFJuT3gweE5GaTctSDlob3Q3cGxUZXRodDlwYmlHcw?oc=5",
             "publishedAt": "Sun, 18 Oct 2026 16:00:00 GMT",
             "source": "sport.de"
           },
           {
-            "title": "Aufstellung | Istanbul Basaksehir FK - Galatasaray SK 2:3 | 4. Spieltag | Trendyol SüperLig 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOWUwwQ3BKSkpnQndQRnJ6WnlCa0Ffdi1FWjZSN19JODhhUFB6dE1KbVFTeHljd096cEZVY2M1WXROUGZ1RzQtTzhnUkJrczBsNzZEbUtQUEs5d0JURGwyZE5TbzBXaWY3XzVUU1N4Qy1lbmM2OFNKcmJZa2xnRkdtbkRMeXhkSnhreGQtSHhMNA?oc=5",
-            "publishedAt": "Fri, 04 Sep 2026 16:21:24 GMT",
+            "title": "Aufstellung Konyaspor - İstanbul Başakşehir 0:0 | 7. Spieltag, SüperLig 2026/2027 - sport.de",
+            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNOWUydnFmeEU3M19SYUphR1ZWQUpxTi1rTmlfWlVyNW9ISWxMdzVGMnB6eHAtUDRVZE1yQjE3U1QzcVM3M0s2S2NpYXZHQXcySFVoclEwU0tvNUhMd0UxUDBBVGZvTnhzYWEwd2QwRXpJQ0NfYVlsNC1uYnlnQmN4eC15b04tRzR2NTVEZTViWUhmV3BOS3B3TU8yeWFTMEo2NG9j?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
+            "source": "sport.de"
+          },
+          {
+            "title": "Aufstellung | Istanbul Basaksehir FK - Inter Turku 1:1 | 2. Runde | Conference-League-Qualifikation 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdnJZbWRXS0ZLY0JvZkF0bzR6ZEUxQTN0S1pCQWd6N1FtX0pCRHZEZzBlQ1MzanNfVkZDdUZZcXN1Wl9DOVJGQnNMM3I1V3prY21QWTNiRkNHTGd5V2Nmb19fLXdBeFltM29aNEpPNndZZFNzejUxMEtXRUFzcXJIZm5pc0dEN04yVjgwZlpGOHZmc2JzeWFadklyai1GY1VNWjF0c2JBbzAxUzVCVi12aWJB?oc=5",
+            "publishedAt": "Wed, 22 Jul 2026 17:00:49 GMT",
+            "source": "Kicker"
+          },
+          {
+            "title": "Aufstellung | Konyaspor - Istanbul Basaksehir FK 0:0 | 7. Spieltag | Trendyol SüperLig 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQS1J2MVJub2oyZnZXVkZTbV84dldvVWVFdm9lS3dCcVZKUG5oMVJ5WWNVdXkzdF9udDJ2S0tKVFRLaWE3Z1lDZm9rMjBZVktTT19rMWhPRE16MVBsZDZEb2lHN0JoQXpiTm95YmJ6cnRzU01ZU1N2bVZCbkJDOWVPLWtLTlZNNDg?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 10:16:02 GMT",
             "source": "Kicker"
           }
         ]
@@ -98802,6 +98802,12 @@
         ],
         "away": [
           {
+            "title": "Aufstellung | Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPREwxaXFMMVgwNGV5TmExWmVOWko2WlkyZUJOMUg0Nk5oV2szOXVpYWVaTXhsNm1yZ3VEWTRSWXh6a2RkR09MemFoay00UlN3QThwcWF1ajNPX0J3c0hEYmFsakRtd0VhejR3cmtUb0cydDZsR3o0cGlYVm1tV1pwaVhoQQ?oc=5",
+            "publishedAt": "Sat, 24 Oct 2026 12:21:11 GMT",
+            "source": "Kicker"
+          },
+          {
             "title": "Aufstellung Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag, Serie A 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQVmlpVFRTUURSeC1IenN5dXJaa0hRSjJNRmFicGZiSHp4MDhyVngtcGFCWDRxc0VDXzVUSE1LUTVDNkVONmdjNXVDYzdnLU16c3VERXBXdWViZUQtTXdqUTB6cExGS3FjNWdrS2NkLWYtU28tUVFvU3hDYmRYYzNHcDFUYlZpdnAzV1Z0TnhwZm1ONXFvNmRLNVAzS28?oc=5",
             "publishedAt": "Sat, 24 Oct 2026 13:00:00 GMT",
@@ -98814,22 +98820,16 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Aufstellung | Cagliari Calcio - FC Bologna 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPREwxaXFMMVgwNGV5TmExWmVOWko2WlkyZUJOMUg0Nk5oV2szOXVpYWVaTXhsNm1yZ3VEWTRSWXh6a2RkR09MemFoay00UlN3QThwcWF1ajNPX0J3c0hEYmFsakRtd0VhejR3cmtUb0cydDZsR3o0cGlYVm1tV1pwaVhoQQ?oc=5",
-            "publishedAt": "Sat, 24 Oct 2026 12:21:11 GMT",
+            "title": "Aufstellung | FC Bologna - Inter Mailand 1:3 | 7. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1UOTlfWjI4YklwbzJURWd1OUpUdkJ4blhLdE1mZVVWNXRCV2pQbTRJUHBFeUh4dU81Z0ZlZmVpQlM4SnR6bG5ZTFRtTHQ0RWEzX0FzUWU0MzV2cmNYRkw1NVpuOHIwTHFlMXVETXlZVWFQR2d5VnJOcVRyUTFFMWM?oc=5",
+            "publishedAt": "Sat, 17 Oct 2026 15:16:32 GMT",
             "source": "Kicker"
           },
           {
-            "title": "US Sassuolo gegen Bologna FC Aufstellung - Serie A 23. Spieltag 2020/2021 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQkxxZm5ycFlZVk5zdnJIWHBLU0U0Y2xDdUg5RldXbzR2ZGJ5SXBIMk9Tb1dCQVd6ZXRGY3VONmZPb0d3X0pLRHFWSUlEUzYzT182UUVsR2gycjFZRXlBTjh2czJRLVlvazdZNnRFNGlnWGxXQjg0VVZxbzdkWXdJQk14WTdyWTc2TnRJSTJ1UQ?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 17:32:49 GMT",
-            "source": "BILD"
-          },
-          {
-            "title": "FC Bologna - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOSUVzUzhUbUpyQlIycW5QU1FTUWQ1SVNUUmQ4M18tS1Vrd1ZHQmlwQ0tRMzJiQ0p1T3JrVWRFdFpDeFBwcDlObXhYSnFzYVBsUUt6dkJMeXFyaWVZanBJYjNEdVhKTkt4TlpERGhPNzBsZ0F0cHgwdncxUFhIZFF0UnRINHdXUHpnWHc?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 03:49:11 GMT",
-            "source": "Transfermarkt"
+            "title": "Aufstellung US Lecce - FC Bologna 1:2 | 6. Spieltag, Serie A 2026/2027 - sport.de",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPbXBjYTJkNV8zYU80MkllSjBYZTE5UW9xQ2xoMm5hemI3UGdPa3NBTm5odkNTVWk0R0pTMWdhLUJlV29sZUlpazRtVGFvQkEtU3FKZjdyQ1VwSlMzZk5LMGFyRkQ1YTNaX2tDNVFRekFZXzRob1pJVGRMSHFYNGZ5eFk4d0UxbUM2UHlWcnpySDI2Mnc?oc=5",
+            "publishedAt": "Sun, 11 Oct 2026 07:00:00 GMT",
+            "source": "sport.de"
           }
         ]
       },
@@ -99852,12 +99852,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -99870,10 +99864,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -100217,12 +100217,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -100235,10 +100229,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -100249,9 +100249,15 @@
             "source": "sport.de"
           },
           {
-            "title": "Frosinone Calcio gegen US Sassuolo Aufstellung - Serie A 7. Spieltag 2026/2027 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTmVnNlFFV2xORGZaYlpIaEVZQWE0MTlNWmxKZDN5cWpfY1hZUFo1dWJGY0pFdS1SSGQ5ajVzZDBkbXJ6TXlMVEMteWVmZkdMVGNXUk9ZSF9IdmFWRmNkeTZoREp0RF9udFZxa09OQjlzS0hBZ0Q3cEQwQmVnZFpuLU1ZZ0plLTd3a1lxZW5lNGNMVldFUGc?oc=5",
-            "publishedAt": "Tue, 20 Oct 2026 18:05:36 GMT",
+            "title": "US Sassuolo - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSENINzViNF81UFJBUk1uSWdPUmh2N0lMNktjajctNkJkRjhhQWp1NEl6VVdfbUplYlpqd0JNeXh6TTc3NkVVdzJLRGxVZGpyaWpYT2h3Sld4LVlPWnhZVmlfcEFkZDh2UGhrSnJ2ZGdRRGdsSF9UdU8wdEFpSk83RWFxeWNMcEtfTVQ0?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 03:42:42 GMT",
+            "source": "Transfermarkt"
+          },
+          {
+            "title": "US Sassuolo gegen Bologna FC Aufstellung - Serie A 23. Spieltag 2020/2021 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOQkxxZm5ycFlZVk5zdnJIWHBLU0U0Y2xDdUg5RldXbzR2ZGJ5SXBIMk9Tb1dCQVd6ZXRGY3VONmZPb0d3X0pLRHFWSUlEUzYzT182UUVsR2gycjFZRXlBTjh2czJRLVlvazdZNnRFNGlnWGxXQjg0VVZxbzdkWXdJQk14WTdyWTc2TnRJSTJ1UQ?oc=5",
+            "publishedAt": "Thu, 22 Oct 2026 17:32:49 GMT",
             "source": "BILD"
           },
           {
@@ -100261,16 +100267,10 @@
             "source": "Kicker"
           },
           {
-            "title": "Aufstellung Frosinone Calcio - US Sassuolo 4:2 | 7. Spieltag, Serie A 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSUdBV1Ywa05qcTN2ZXpYaFczc19xX0NVLThOaHN3cjNYbUxQaGNxa1RhWXdmVENYbUpmeHBKcVNXYUZOZmpvM1B6ZWVrS0cyR1g5RDB4NUgyN29BVThRcU1JLWhBS0dJaXZzZGdUZHhHdWNhSHBGYjUyM2U0QTUzN1lWUDNldUdqbHBWQkt4YU41ZE4zbl9BOENSUEFEdEk?oc=5",
-            "publishedAt": "Fri, 16 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
-          },
-          {
-            "title": "Aufstellung | Sassuolo Calcio - AC Mailand 1:1 | 6. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOVUhsa3VkU0RqRTRJZEp5LTRKYU5vRlVaUkpoYmVrNHVkaFlITWJkWFlNbWVmUGdSeU1aell2aUE5aGhXcXFjdjZQc0lIU29Eb2hYLWtNNkczck1QbEZNRXh1YVUzQWJaaFQwc090cE1TZWFkcU43dnRiM2hZeWItQw?oc=5",
-            "publishedAt": "Sun, 11 Oct 2026 15:16:30 GMT",
-            "source": "Kicker"
+            "title": "Frosinone Calcio gegen US Sassuolo Aufstellung - Serie A 7. Spieltag 2026/2027 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTmVnNlFFV2xORGZaYlpIaEVZQWE0MTlNWmxKZDN5cWpfY1hZUFo1dWJGY0pFdS1SSGQ5ajVzZDBkbXJ6TXlMVEMteWVmZkdMVGNXUk9ZSF9IdmFWRmNkeTZoREp0RF9udFZxa09OQjlzS0hBZ0Q3cEQwQmVnZFpuLU1ZZ0plLTd3a1lxZW5lNGNMVldFUGc?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 18:05:36 GMT",
+            "source": "BILD"
           }
         ]
       },
@@ -101111,6 +101111,12 @@
       "teamNews": {
         "home": [
           {
+            "title": "8. Spieltag: SSC Neapel - AS Rom - S.S.C. Napoli - I Partenopei - Forum | Page 1 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUlFrU1RSVHJseVZmVWJTQnlVYXZQaWFwd29WM0RfTV9Ha1B3U2xrTVROTEF5UFBlRm5UdXRRV3hvVTlkaWIxVmZ4U1JPdnQ0NEZNVldCUEVhSWNMU1ZnaFY1Q0lTVTNEUXdzWlpsYjRZMDFfZFFRb2dPdjNuNmVWNDU4bjd5SlBXaW5uUVg0clVKdEk?oc=5",
+            "publishedAt": "Sat, 24 Oct 2026 14:58:00 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Napoli verliert Abwehrchef: Buongiorno droht monatelanger Ausfall - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPby15dk1FZmQ5bWRzSDhUUFBZSW9sSWRKaElLbkxKbExmaDlsVTQybHdpbWE3TjZrYU41LU11cDU4LWw4aVRUSTE0dmNfZF9KWXNJcG0wcGV5NWZUOVZybk9BM000ZllJb3pNV0ZMX2tWT09hTzJqQ2hVaGlCSndTUjJhVEJjaUQ4QjV0YzEzWGh5YXN4M2Z1ZUplX2dQOVZn?oc=5",
             "publishedAt": "Tue, 21 Jul 2026 07:00:00 GMT",
@@ -101123,22 +101129,16 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Vorschau: Nächster Halt Neapel - Eintracht Frankfurt",
-            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1yMHdYblNJWkNmV0V5dEVRTXZCeFdwblNVM0RjZUU4RTItMHc1Q0NDZU91OUk1czFpbTdqaGs3TUlUTk5teERSY21vRW15c3Fzc2s0eWVMR2dhZ2NGSXpTVmFHRlBRNm1ZaVJQbEFmRFdkQTlWblFMRDd0dw?oc=5",
-            "publishedAt": "Sun, 02 Nov 2025 07:00:00 GMT",
-            "source": "Eintracht Frankfurt"
+            "title": "Inter Mailand gegen Neapel, Serie-A-Vorschau: Alles, was ihr wissen müsst - Goal.com",
+            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMGxUekRLTGtKckpYSHN5QkNIckVqU3hRUmx4MzRfQ29IalpjNGJ6U3QzcEgwd1VfMFZqMEJTcEM2ZEgxV2Y2Zld4a3dWQ25kNFl2RDM4Nl9uc0JIQWpha2luekZsenpJbVlScnNYSmlEQUZYTUpRWkNYUzVNQXBWQlBWRVdhU0puQ3pPVGZ1UWtQRzVfb3ZEakJNalNQbGlfMk9Bd0p4eFNDcDMxcXMxUU1nRllmenA3VnlPcVp0ZF9GZ2s?oc=5",
+            "publishedAt": "Fri, 04 Sep 2026 07:00:00 GMT",
+            "source": "Goal.com"
           },
           {
-            "title": "Oberschenkelverletzung! Havel verpasst Genua-Auftakt gegen Napoli - LAOLA1",
-            "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUUhlalZNbndFNDRrQkQtLThSNHdWYy1sXzllck1Tb2NVaDhveGRBWEx3UGtuelRYOGhSVHJyMURUbG9GMHh5ZTJFRmNxWHBNTnNlLUN1RHRBNS1qY05kcWFmeTNjTXU0RkdFTnVMemNaTXdtNjRQTWtueTljRXhzMVpxQ0JMSWlCYUVkSDRLSDI1bFJsTHFRTnRsc2VOQkllT253eGJOaTc1SzFUYThWNkU3SGhXLUhKNkxid2JsM2hmaklWOEY0dlRzemJ3QkNFbGpUMkFxM2hyOERmblhjRg?oc=5",
-            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
-            "source": "LAOLA1"
-          },
-          {
-            "title": "Anguissa verpasst Afrika-Cup: Nächste schwere Verletzung bei SSC Napoli - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOYmluZWw3bkl4ME5SRjVyQmU5cVNPcUN3c2hmX3JnVVI0d0p3U1I3OVR4TzNZaVphdjBZbElmMTB1VjlteGRoOC1ra1ZSb2tIcnpUbUtDUWplUW1XcUtYSGgwNU9tZWhEenJmRDNIanQ2RVhnb3lXYUFIemh0VjRlRFRSRE5hX3BIRnU5OHZPWklqaGZ0cm9wWDRwWjBQQlpncnVOQ015SzFtZ1lrUnNCbENpeExmOG8?oc=5",
-            "publishedAt": "Fri, 14 Nov 2025 08:00:00 GMT",
-            "source": "Transfermarkt"
+            "title": "SSC Napoli - Celta Vigo Live ticker, H2H und Aufstellungen - Sofascore",
+            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53TE1FZWdwTzlVVktnRGp4TmtRNUh4RGItY1BLeFBxUFkxdExObzZzOFp5NkdxaUZuUFc2NGxZUkFzMGY0VXBlTWtPbkxnX1pYcXVsTmo0OE03dVdaSzgwZmU4aHE1bzdWbnBMbnM0M25qRkhaVUxzTjJIYm00dw?oc=5",
+            "publishedAt": "Sat, 08 Aug 2026 07:00:00 GMT",
+            "source": "Sofascore"
           }
         ],
         "away": [
@@ -105856,16 +105856,16 @@
             "source": "SZ.de"
           },
           {
-            "title": "Aufstellung | CD Santa Clara - Sporting Braga 0:0 | 7. Spieltag | Liga Portugal Betclic 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVZlTFlqdnlDLXRsZ240VlI2Tm83SkpyR1RTRzRhV0pLSDR4QW9LUUFKVG5tbjhrMllsNElheUVIOEY0LWJBMWVsOXV4U01LUG9iNUtOeWlMX056bnQxanNwakFiVklpZ3RYWm5DQjNXX0ZOMVhGUkotM1U0SUxud25iVzRKMmtDUXlTeQ?oc=5",
-            "publishedAt": "Sun, 20 Sep 2026 16:28:30 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "Aufstellung FC Alverca - CD Santa Clara 1:1 | 4. Spieltag, Primeira Liga 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdE9tYjhQd2pNVjVzaWx4R0loc3hmLXF0bFhhSDd1U0Z0bzVaUE95bmQwcndlaHJTdG5Vd2JPRFJFLWNZVXNuTWs4cmpjV2dDR3dNSG9mUmt4M085MzcxNXo1VG11UTBDUjN2czRNa0t4X3dod0ZEdlM2S3RVSmw4R1lOeGJQUnBuVndBaFJwVGJvTW5GWmRJeEVLMHVScTNPOUJSdQ?oc=5",
             "publishedAt": "Sat, 29 Aug 2026 07:00:00 GMT",
             "source": "sport.de"
+          },
+          {
+            "title": "Aufstellung | CD Santa Clara - Sporting Braga 0:0 | 7. Spieltag | Liga Portugal Betclic 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSVZlTFlqdnlDLXRsZ240VlI2Tm83SkpyR1RTRzRhV0pLSDR4QW9LUUFKVG5tbjhrMllsNElheUVIOEY0LWJBMWVsOXV4U01LUG9iNUtOeWlMX056bnQxanNwakFiVklpZ3RYWm5DQjNXX0ZOMVhGUkotM1U0SUxud25iVzRKMmtDUXlTeQ?oc=5",
+            "publishedAt": "Sun, 20 Sep 2026 16:28:30 GMT",
+            "source": "Kicker"
           }
         ],
         "away": []
@@ -109685,16 +109685,16 @@
             "source": "Kicker"
           },
           {
+            "title": "Sportings Bayern-Generalprobe: Lissaboner Derby bei Benfica endet Remis - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNzBZcnVUeGJBay1QbmdiQlIyQnpOUDdNLVdna1ZrUjY0dmhnRmNnaHNXR2dFOFNVLWxEMkJGVWJlY2hzeU9scHZjOTBrZ09KYW14U081LXRoRGM4MVhKTlFja2RUdTVxTlhMZUVjYk5KSkh0dy1NUWlJd3dFSTAzRUp6bE1FU2RsSC1TelZjMEFWbWxZ?oc=5",
+            "publishedAt": "Fri, 05 Dec 2025 08:00:00 GMT",
+            "source": "Kicker"
+          },
+          {
             "title": "SL Benfica - sport.de",
             "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5SMTMyNG1LT3BoRUxqdkRtaVJjYWRnOXNwNkhCOEdQYkRiR3JMSmN5NVVBX3JvTk14bU1HSjNMd0lRV1FzX19SRmxMeE1RUmkyREc5X0RyX1UxYnlM?oc=5",
             "publishedAt": "Sat, 11 Mar 2017 16:14:09 GMT",
             "source": "sport.de"
-          },
-          {
-            "title": "Teils auf Bewährung: UEFA sperrt Benficas Prestianni für sechs Spiele - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdmpCSkM1eTdVc3M3X2NCN1dwSHdlQW1BODhfQ3M2cUVGWllFS3hGbE1WR2tWUzFMSW03aGRlZmhxeWJydUpBczVPSjR1VG9jQnlET0tyNU5PNko4RHFBVkVzbzQ3cHlhN3o3bE1xeWZpdHlVSXY0blFNaUtZUHJNMGRkNE1Qb2kxSk1MOUhQQVd6S19yaUVjazh3d2Nka1lROUcwSzN4a0l3ODJs?oc=5",
-            "publishedAt": "Fri, 24 Apr 2026 07:00:00 GMT",
-            "source": "Kicker"
           }
         ]
       },
@@ -109776,16 +109776,16 @@
             "source": "L'essentiel"
           },
           {
-            "title": "Aufstellung | Borussia Dortmund - Benfica Lissabon 5:0 | Achtelfinale | Europapokal der Landesmeister 1963/64 - kicker",
-            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcm1VRVVTZExudDBzRjc0U2NpbndGaVlGTnhuaDN3ZklFbEpDeE9JeVctYlEwNTh5dWZ3T2dScmJVczhOUmdHRFlDM3IzdHo5Y2NzMWFnT29RcjhDQTVqVWZxSkpFUzFMY0djU1FVWVQyR25XTWVaU1g5OUd6TVRVOGliNHZGUTVkZ0JvbHU1Ykludw?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 22:07:18 GMT",
-            "source": "kicker"
-          },
-          {
             "title": "Aufstellung: Benfica vs. Bayern - Champions League 26/27 - FC Bayern",
             "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOaVFCRGt5Y3pYcW42RnBZVVFkcmhzOWFLcnRPNUlJZG9mMTNWOW5yNXNjREVnWGJNVW9mVjNISEx6R3V0M0lPOE10TEpOM1A0SzFCRTJGR0dzeHRkd3ozRXhqeEUtRURxVmlJd3dHT2RWUFpHTENZaGFmMFg5RS0xSTlfOGdXelVyWjdYLTVwR3RvV1JCRVpaSXJDLV9NZGtKWFVaX1VGUmdsSEJOcEhhMk5DekRCUUJxamR4aDk4amNqbWcyUWd3?oc=5",
             "publishedAt": "Wed, 30 Sep 2026 07:00:00 GMT",
             "source": "FC Bayern"
+          },
+          {
+            "title": "Benfica Lissabon - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNnptYUpVYk1oVFJ3R3VzaklIdWthYk1fZjh6VHo0OVd0b0E3emY3VWtyeTNDYUo5Yi00MEk1QUQ0bVF0SHE0T29TWXUyZmdQSHpMMzhsV2RKQkdyMUlwNUlUTTJiZUpBMC1RRWhQcUpDd0NOeDUzWGxlanNPdmtCRGxxNHF2YTg?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 14:39:12 GMT",
+            "source": "Transfermarkt"
           }
         ]
       },
