@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/refresh_data.py'
+      - 'competitions.json'
       - '.github/workflows/refresh-data.yml'
   schedule:
     - cron: "17 */6 * * *"
@@ -56,11 +57,18 @@ jobs:
           fixtures = data.get("recommendations")
           if not isinstance(fixtures, list) or not fixtures:
               sys.exit("Refusing to publish an empty fixture list")
-          allowed = {
+          config = json.loads(pathlib.Path("competitions.json").read_text(encoding="utf-8"))
+          expected = [
               "Bundesliga", "Serie A", "Ligue 1", "La Liga", "Premier League",
-              "Süper Lig", "Süper Lig (Türkei)", "Primeira Liga", "Champions League",
-              "Europa League", "Conference League"
-          }
+              "Süper Lig", "Primeira Liga", "Champions League", "Europa League",
+              "Conference League"
+          ]
+          configured = [x.get("name") for x in config.get("competitions", [])]
+          if configured != expected:
+              sys.exit("Competition list changed or misordered; review the fixed RamoBet configuration")
+          if any(not x.get("espnSlug") for x in config["competitions"]):
+              sys.exit("Every configured competition must have an ESPN slug")
+          allowed = set(expected)
           errors = []
           ids = set()
           duplicate_keys = set()
