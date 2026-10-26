@@ -31,5 +31,6 @@ jobs:
             echo "No data changes to commit"
           else
             git commit -m "Refresh automated football analysis data"
+            git pull --rebase origin main
             git push
           fi
