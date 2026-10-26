@@ -599,7 +599,7 @@
     const competitions=await getCompetitions();
     const now=new Date();
     const dayStart=new Date(now);dayStart.setHours(0,0,0,0);
-    const windowEnd=new Date(dayStart.getTime()+14*86400000);
+    const windowEnd=new Date(now.getTime()+14*86400000);
     const chunks=[];
     for(let cursor=new Date(dayStart);cursor<=windowEnd;){
       const chunkEnd=new Date(Math.min(windowEnd.getTime(),cursor.getTime()+6*86400000));
@@ -647,11 +647,10 @@
       const home=cs.find(x=>x.homeAway==='home'),away=cs.find(x=>x.homeAway==='away');
       if(!home||!away||!ev.date||!ev.id)continue;
       const dt=new Date(ev.date);
-      if(Number.isNaN(dt.getTime())||dt<=now||dt.getTime()>windowEnd.getTime()+86400000)continue;
+      if(Number.isNaN(dt.getTime())||dt<=now||dt.getTime()>windowEnd.getTime())continue;
       const state=comp?.status?.type?.state;
       if(state==='in'||state==='post')continue;
       const norm=value=>String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
-      const key=[item.league, norm(home.team?.displayName||home.team?.name), norm(away.team?.displayName||away.team?.name),Math.round(dt.getTime()/3600000)].join('|');
       const eventKey=item.league+'|'+String(ev.id);
       if(seen.has(eventKey))continue;
       seen.add(eventKey);
@@ -764,8 +763,11 @@
       if(analysisData?.generatedAt)stamp.textContent='Datenstand: '+new Date(analysisData.generatedAt).toLocaleString('de-DE')+'. Quelle: '+(analysisData.source||data.source||'');
       if(analysisData?.recommendations?.length){
         const windowDays=Number(data.fixtureWindowDays)||14;
-        const failedSourceText=scheduleErrors.length?' '+scheduleErrors.length+' Live-Abfrage(n) fehlgeschlagen; fehlende Daten sind in der Abdeckung erkennbar.':'';
-        status.textContent=analysisData.recommendations.length+' Spiele im '+windowDays+'-Tage-Zeitraum. '+supplementalCount+' zusätzliche ESPN-Spielpläne ergänzt.'+failedSourceText;
+        const analysisCounts=analysisData.recommendations.reduce((acc,item)=>{const key=item.analysisStatus||'unknown';acc[key]=(acc[key]||0)+1;return acc;},{});
+        const sourceCount=analysisCounts.available||0,modelCount=analysisCounts.model_estimate||0,limitedCount=analysisCounts.limited_model||0,fixtureOnlyCount=analysisCounts.fixture_only||0;
+        const supplementText=supplementalCount?supplementalCount+' Live-Spielpläne zusätzlich eingelesen.':needsLiveSupplement?'Live-Abgleich durchgeführt; bereits vorhandene Spiele wurden nicht dupliziert.':'Hauptfeed ist aktuell; kein doppelter Live-Abruf nötig.';
+        const failedSourceText=scheduleErrors.length?' '+scheduleErrors.length+' Live-Abfrage(n) fehlgeschlagen; betroffene Quellen sind nicht als vollständig bestätigt.':'';
+        status.textContent=analysisData.recommendations.length+' Spiele · '+windowDays+' Tage · '+sourceCount+' Quellenprognosen · '+modelCount+' Modellschätzungen · '+limitedCount+' mit begrenzter Datenbasis'+(fixtureOnlyCount?' · '+fixtureOnlyCount+' nur Spielplan':'')+'. '+supplementText+failedSourceText;
       }
     }catch(e){status.textContent='Automatische Analysen konnten nicht geladen werden: '+e.message;list.innerHTML='<div class="empty">Bitte später erneut versuchen.</div>';}
   }
