@@ -530,6 +530,8 @@ def fixture_fallback():
        perLeague=dict(sorted(football_data_counts.items())),historyByLeague=dict(sorted(football_data_history_counts.items())))
  print("football-data.org upcoming fixtures by league:",json.dumps(dict(sorted(football_data_counts.items())),ensure_ascii=False))
  print("football-data.org completed-history matches by league:",json.dumps(dict(sorted(football_data_history_counts.items())),ensure_ascii=False))
+else:
+ _diag("football-data.org","not_configured",None,0,"FOOTBALL_DATA_TOKEN is empty")
  # Canonical team names before source merging; this removes ESPN/OpenFootball alias duplicates.
  import unicodedata,math
  aliases={
@@ -768,6 +770,7 @@ for item in fixtures:
   item["apiFootballLineupsUpdatedAt"]=cached["lineupsUpdatedAt"]
   item.setdefault("dataCoverage",{})["lineups"]="API-Football (zwischengespeichert)"
 if not KEY:
+ _diag("API-Football","not_configured",None,0,"API_FOOTBALL_KEY is empty")
  coverage=coverage_summary(fixtures)
  save({
   "generatedAt":now.isoformat(),"status":"free_mode",
