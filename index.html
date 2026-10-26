@@ -459,6 +459,7 @@
     const btn=$('refreshBtn');btn.disabled=true;btn.textContent='↻ Spieltag wird geladen …';
     $('refreshMsg').textContent='Lade nur die heutigen Spiele aus kostenlosen Spielplanquellen.';
     let added=0;const errors=[];const foundLeagues=new Set();
+    const fetchJson=async url=>{const controller=new AbortController();let timeout;try{return await Promise.race([fetch(url,{headers:{'Accept':'application/json'},cache:'no-store',signal:controller.signal}).then(res=>{if(!res.ok)throw Error('HTTP '+res.status);return res.json();}),new Promise((_,reject)=>{timeout=setTimeout(()=>{controller.abort();reject(Error('Zeitlimit 5 Sekunden'));},5000);})]);}finally{clearTimeout(timeout);}};
     const now=new Date();
     const date=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
     const targetDates=new Set([date]);
@@ -482,10 +483,7 @@
     const results=await Promise.allSettled(allowed.map(async league=>{
       const code=espnCodes[league];
       const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+code+'/scoreboard?dates='+ymd;
-      const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),5000);
-      let res;try{res=await fetch(url,{headers:{'Accept':'application/json'},cache:'no-store',signal:controller.signal});}finally{clearTimeout(timeout);}
-      if(!res.ok)throw Error('ESPN '+league);
-      const json=await res.json();let count=0;
+      const json=await fetchJson(url);let count=0;
       for(const ev of json.events||[]){
         const comp=ev.competitions?.[0],competitors=comp?.competitors||[];
         const home=competitors.find(c=>c.homeAway==='home')?.team?.displayName;
@@ -498,7 +496,7 @@
     save();fillAnalysisSelectors();
     const todays=state.matches.filter(m=>m.date===date&&/^(?:ESPN|OpenLigaDB|OpenFootball)/.test(String(m.source||'')));
     $('refreshMsg').textContent=added?added+' heutige(s) Spiel(e) geladen. Ligen: '+[...new Set(todays.map(m=>m.league))].join(', ')+'.':errors.length?'Keine neuen Spiele gefunden. Einige kostenlose Quellen waren nicht erreichbar.':'Für heute wurden keine weiteren Spiele gefunden.';
-    btn.disabled=false;btn.textContent='↻ Heutige Spiele abrufen';toast(added?added+' heutige Spiele geladen.':'Abruf abgeschlossen.');
+    btn.disabled=false;btn.textContent='↻ Heutige Spiele abrufen';toast(added?added+' heutige Spiele geladen.':errors.length?'Abruf beendet – kostenlose Quelle nicht erreichbar.':'Abruf abgeschlossen.');
   };
   $('exportBtn').onclick=()=>{
     const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});download(blob,`wettbot-sicherung-${today()}.json`);
