@@ -248,6 +248,9 @@
 </div>
 <div id="toast" class="toast hidden" role="status"></div>
 <script>
+  // Declare before any startup handlers can reference analysis data.
+  let analysisData=null;
+
 (() => {
   const KEY = 'wettbot-ios-free-v1';
   const $ = id => document.getElementById(id);
@@ -546,7 +549,6 @@
     try{const incoming=JSON.parse(await f.text());if(!Array.isArray(incoming.matches)||!Array.isArray(incoming.odds)||!Array.isArray(incoming.bets))throw Error('Format');if(!confirm('Import ersetzt die derzeitigen lokalen Daten. Fortfahren?'))return;state=incoming;save();toast('Sicherung importiert.');}catch{toast('Import fehlgeschlagen: ungültige Sicherungsdatei.');}finally{e.target.value='';}
   });
   $('clearBtn').onclick=()=>{if(confirm('Wirklich alle lokalen Spiele, Quoten und Paper-Wetten unwiderruflich löschen?')){state={matches:[],odds:[],bets:[],lastRefresh:null};save();toast('Lokale Daten gelöscht.');}};
-  let analysisData=null;
   function fillAnalysisSelectors(){
     const league=$('analysisLeague'),match=$('analysisMatch'),status=$('selectorStatus');
     const priorLeague=league.value,priorMatch=match.value;
