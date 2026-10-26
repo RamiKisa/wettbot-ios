@@ -259,7 +259,7 @@
   let state = load();
   function load(){ try { return Object.assign({matches:[], odds:[], bets:[], lastRefresh:null}, JSON.parse(localStorage.getItem(KEY)||'{}')); } catch { return {matches:[],odds:[],bets:[],lastRefresh:null}; } }
   function save(){ localStorage.setItem(KEY, JSON.stringify(state)); render(); }
-  function toast(s){ $('toast').textContent=s; $('toast').classList.remove('hidden'); setTimeout(()=>$('toast').classList.add('hidden'),2800); }
+  function toast(s){ let el=$('toast'); if(!el){el=document.createElement('div');el.id='toast';el.className='toast hidden';el.setAttribute('role','status');document.body.appendChild(el);} el.textContent=String(s??'');el.classList.remove('hidden');setTimeout(()=>el.classList.add('hidden'),2800); }
   function eligibleLeagues(){
     const d = new Date().getDay();
     if ([5,6,0].includes(d)) return ['Premier League','Bundesliga','La Liga','Serie A','Ligue 1','Primeira Liga'];
