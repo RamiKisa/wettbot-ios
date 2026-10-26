@@ -596,27 +596,118 @@
   $('analysisMatch').addEventListener('change',renderSelectedAnalysis);
   $('refreshAnalysisDataBtn').addEventListener('click',()=>loadAnalyses());
   async function loadFixtureSchedules(){
-    const codes=(await getCompetitions()).map(x=>[x.name,x.espnSlug]);
-    const now=new Date(),todayKey=now.getFullYear()+String(now.getMonth()+1).padStart(2,'0')+String(now.getDate()).padStart(2,'0');
-    const settled=await Promise.allSettled(codes.map(async ([league,code])=>{
-      const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),5000);
+    const competitions=await getCompetitions();
+    const now=new Date();
+    const dayStart=new Date(now);dayStart.setHours(0,0,0,0);
+    const windowEnd=new Date(dayStart.getTime()+14*86400000);
+    const chunks=[];
+    for(let cursor=new Date(dayStart);cursor<=windowEnd;){
+      const chunkEnd=new Date(Math.min(windowEnd.getTime(),cursor.getTime()+6*86400000));
+      chunks.push({start:new Date(cursor),end:new Date(chunkEnd)});
+      cursor=new Date(chunkEnd.getTime()+86400000);
+    }
+    const fetchJson=async (slug,dateArg)=>{
+      const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),8000);
       try{
-        const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+code+'/scoreboard?dates='+todayKey;
-        const res=await fetch(url,{cache:'no-store',signal:controller.signal});
-        if(!res.ok)throw Error('HTTP '+res.status);
-        const json=await res.json(),out=[];
-        for(const e of json.events||[]){
-          const c=e.competitions?.[0],cs=c?.competitors||[],home=cs.find(x=>x.homeAway==='home'),away=cs.find(x=>x.homeAway==='away');
-          if(!home||!away||!e.date)continue;
-          const dt=new Date(e.date);if(dt.toDateString()!==now.toDateString())continue;
-          const hasStarted=dt.getTime()<Date.now()&&(c?.status?.type?.state==='in'||c?.status?.type?.state==='post');
-          if(hasStarted)continue;
-          out.push({id:'espn-'+code+'-'+e.id,date:dt.toISOString(),timestamp:dt.getTime()/1000,league,home:home.team?.displayName||home.team?.name||'Heimteam',away:away.team?.displayName||away.team?.name||'Auswärtsteam',venue:c?.venue?.fullName||'',analysisStatus:'fixture_only',prediction:{},h2h:[],source:'ESPN Spielplan'});
-        }
-        return out;
+        const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+slug+'/scoreboard?dates='+dateArg;
+        const res=await fetch(url,{cache:'no-store',headers:{Accept:'application/json'},signal:controller.signal});
+        if(!res.ok){const err=Error('HTTP '+res.status);err.status=res.status;throw err;}
+        return await res.json();
       }finally{clearTimeout(timeout);}
+    };
+    const requests=competitions.flatMap(comp=>chunks.map(async chunk=>{
+      const from=chunk.start.getFullYear()+String(chunk.start.getMonth()+1).padStart(2,'0')+String(chunk.start.getDate()).padStart(2,'0');
+      const to=chunk.end.getFullYear()+String(chunk.end.getMonth()+1).padStart(2,'0')+String(chunk.end.getDate()).padStart(2,'0');
+      try{
+        const payload=await fetchJson(comp.espnSlug,from+'-'+to);
+        return {league:comp.name,events:payload.events||[],error:null};
+      }catch(rangeError){
+        if(rangeError.status!==400)return {league:comp.name,events:[],error:String(rangeError.message||rangeError)};
+        const dates=[];
+        for(let d=new Date(chunk.start);d<=chunk.end;d=new Date(d.getTime()+86400000)){
+          const key=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0');
+          dates.push(fetchJson(comp.espnSlug,key).then(x=>x.events||[]).catch(e=>{throw Error(comp.name+' '+key+': '+(e.message||e));}));
+        }
+        const settled=await Promise.allSettled(dates);
+        const events=settled.flatMap(x=>x.status==='fulfilled'?x.value:[]);
+        const failures=settled.filter(x=>x.status==='rejected').map(x=>x.reason?.message||String(x.reason));
+        return {league:comp.name,events,error:failures.length?failures.slice(0,2).join('; '):null};
+      }
     }));
-    return settled.flatMap(x=>x.status==='fulfilled'?x.value:[]).sort((a,b)=>a.timestamp-b.timestamp);
+    const settled=await Promise.allSettled(requests);
+    const raw=[],errors=[];
+    for(const result of settled){
+      if(result.status==='rejected'){errors.push(String(result.reason?.message||result.reason));continue;}
+      if(result.value.error)errors.push(result.value.error);
+      for(const event of result.value.events)raw.push({league:result.value.league,event});
+    }
+    const seen=new Set(),out=[];
+    for(const item of raw){
+      const ev=item.event,comp=ev.competitions?.[0],cs=comp?.competitors||[];
+      const home=cs.find(x=>x.homeAway==='home'),away=cs.find(x=>x.homeAway==='away');
+      if(!home||!away||!ev.date||!ev.id)continue;
+      const dt=new Date(ev.date);
+      if(Number.isNaN(dt.getTime())||dt<=now||dt.getTime()>windowEnd.getTime()+86400000)continue;
+      const state=comp?.status?.type?.state;
+      if(state==='in'||state==='post')continue;
+      const norm=value=>String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+      const key=[item.league, norm(home.team?.displayName||home.team?.name), norm(away.team?.displayName||away.team?.name),Math.round(dt.getTime()/3600000)].join('|');
+      const eventKey=item.league+'|'+String(ev.id);
+      if(seen.has(eventKey))continue;
+      seen.add(eventKey);
+      out.push({id:'espn-'+item.league+'-'+ev.id,date:dt.toISOString(),timestamp:dt.getTime()/1000,league:item.league,home:home.team?.displayName||home.team?.name||'Heimteam',away:away.team?.displayName||away.team?.name||'Auswärtsteam',homeId:home.team?.id,awayId:away.team?.id,venue:comp?.venue?.fullName||'',status:'scheduled',analysisStatus:'fixture_only',prediction:{},h2h:[],source:'ESPN public scoreboard',dataCoverage:{fixture:'ESPN public scoreboard'}});
+    }
+    out.sort((a,b)=>a.timestamp-b.timestamp);
+    return {fixtures:out,errors:[...new Set(errors)]};
+  }
+  function normalizedTeamKey(value){
+    const raw=String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+    const aliases={fcbarcelona:'barcelona',barcelonafc:'barcelona',bayernmunchen:'bayernmunich',fcbayernmunchen:'bayernmunich',fcbayern:'bayernmunich',internazionale:'intermilan',inter:'intermilan',parissaintgermain:'psg',parissaintgermainfc:'psg',galatasarayistanbul:'galatasaray',fenerbahceistanbul:'fenerbahce',besiktasistanbul:'besiktas',fcporto:'porto',sportingcp:'sportinglisbon',sportinglisbon:'sportinglisbon',athleticclub:'athleticbilbao',athleticbilbao:'athleticbilbao',atleticodemadrid:'atleticomadrid'};
+    return aliases[raw]||raw;
+  }
+  function estimateSupplementalFixture(fixture, teamHistory){
+    const homeKey=normalizedTeamKey(fixture.home),awayKey=normalizedTeamKey(fixture.away);
+    const homeForm=[...(teamHistory?.[homeKey]||[])].sort((a,b)=>String(a.date).localeCompare(String(b.date))).slice(-5);
+    const awayForm=[...(teamHistory?.[awayKey]||[])].sort((a,b)=>String(a.date).localeCompare(String(b.date))).slice(-5);
+    const mean=(rows,key,def)=>{const values=rows.map(x=>Number(x[key])).filter(Number.isFinite);return values.length?values.reduce((a,b)=>a+b,0)/values.length:def;};
+    const modelReady=homeForm.length>0||awayForm.length>0;
+    const base={...fixture,form:{home:homeForm,away:awayForm},h2h:homeForm.filter(x=>normalizedTeamKey(x.opponent)===awayKey).slice(-5),dataCoverage:{...(fixture.dataCoverage||{}),recentForm:modelReady?'Letzte verfügbare Team-Ergebnisse aus der Historie':'Keine passenden historischen Team-Ergebnisse',fixture:fixture.source||'ESPN'}};
+    if(!modelReady)return {...base,analysisStatus:'limited_model',prediction:{},dataCoverage:{...base.dataCoverage,prediction:'Keine ausreichende Formbasis für eine verantwortbare Modellschätzung'}};
+    const lambdaHome=Math.max(.15,Math.min(4,.55*mean(homeForm,'gf',1.35)+.45*mean(awayForm,'ga',1.35)));
+    const lambdaAway=Math.max(.15,Math.min(4,.55*mean(awayForm,'gf',1.35)+.45*mean(homeForm,'ga',1.35)));
+    const pois=(lambda,n)=>Math.exp(-lambda)*Math.pow(lambda,n)/[1,1,2,6,24,120,720,5040,40320][n];
+    const probabilities={home:0,draw:0,away:0};let over25=0,bttsYes=0;const scores=[];
+    for(let h=0;h<=7;h++)for(let a=0;a<=7;a++){
+      const prob=pois(lambdaHome,h)*pois(lambdaAway,a);scores.push({prob,h,a});
+      probabilities[h>a?'home':h===a?'draw':'away']+=prob;
+      if(h+a>=3)over25+=prob;if(h>0&&a>0)bttsYes+=prob;
+    }
+    const total=probabilities.home+probabilities.draw+probabilities.away||1;
+    for(const key of Object.keys(probabilities))probabilities[key]=Math.round(probabilities[key]/total*1000)/10;
+    const mostLikely=scores.reduce((best,x)=>x.prob>best.prob?x:best,scores[0]);
+    const winnerKey=Object.entries(probabilities).sort((a,b)=>b[1]-a[1])[0][0];
+    const pct=x=>Math.round(x*1000)/10;
+    const winner=winnerKey==='home'?fixture.home:winnerKey==='away'?fixture.away:'Unentschieden';
+    return {...base,analysisStatus:'model_estimate',prediction:{model:'Poisson-Basismodell aus verfügbarer Team-Historie',winner,winnerComment:'Modellschätzung, keine bestätigte Marktprognose',advice:'Nur als statistische Orientierung verwenden',homeGoals:Math.round(lambdaHome*100)/100,awayGoals:Math.round(lambdaAway*100)/100,mostLikelyScore:mostLikely.h+':'+mostLikely.a,probabilities,markets:{over25:pct(over25),under25:pct(1-over25),bttsYes:pct(bttsYes),bttsNo:pct(1-bttsYes)},confidence:'Nicht extern kalibriert'},marketCoverage:{'1X2':'Poisson-Modell aus Team-Ergebnissen',overUnder:'Poisson-Torverteilung',btts:'Poisson-Torverteilung',corners:'Keine belastbare kostenlose Prognose verfügbar',cards:'Keine belastbare kostenlose Prognose verfügbar',playerProps:'Keine belastbare kostenlose Prognose verfügbar'},dataCoverage:{...base.dataCoverage,prediction:'Eigene Poisson-Schätzung; nicht extern validiert'}};
+  }
+  function mergeSupplementalFixtures(baseFixtures,supplemental,teamHistory){
+    const combined=[...(Array.isArray(baseFixtures)?baseFixtures:[])];
+    let added=0;
+    const normLeague=v=>String(v||'').replace(/\s*\(Türkei\)/i,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+    const normTeam=normalizedTeamKey;
+    for(const fixture of supplemental){
+      const instant=new Date(fixture.date).getTime();
+      const exists=combined.some(item=>{
+        if(normLeague(item.league)!==normLeague(fixture.league))return false;
+        const time=new Date(item.date).getTime();
+        if(!Number.isFinite(time)||!Number.isFinite(instant)||Math.abs(time-instant)>3*3600000)return false;
+        return normTeam(item.home)===normTeam(fixture.home)&&normTeam(item.away)===normTeam(fixture.away);
+      });
+      if(exists)continue;
+      combined.push(estimateSupplementalFixture(fixture,teamHistory||{}));added++;
+    }
+    combined.sort((a,b)=>new Date(a.date).getTime()-new Date(b.date).getTime());
+    return {fixtures:combined,added};
   }
   async function loadAnalyses(){
     const status=$('top10Status'),list=$('analysisList'),stamp=$('analysisTimestamp');
