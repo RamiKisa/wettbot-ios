@@ -718,8 +718,16 @@
       const data=await res.json();
       analysisData={...data,recommendations:Array.isArray(data.recommendations)?data.recommendations:[]};
       let supplementalCount=0, scheduleErrors=[];
-      if(data.status==='free_mode'||analysisData.recommendations.length===0){
-        status.textContent='Ergänze den Spielplan aus allen zehn festgelegten Wettbewerben …';
+      const configured=await getCompetitions();
+      const leagueAliases=value=>String(value||'').replace(/\s*\(Türkei\)/i,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+      const presentLeagues=new Set(analysisData.recommendations.map(x=>leagueAliases(x.league)));
+      const missingLeagues=configured.filter(x=>!presentLeagues.has(leagueAliases(x.name)));
+      const feedAge=Date.now()-new Date(data.generatedAt||0).getTime();
+      const feedStale=!Number.isFinite(feedAge)||feedAge>6*60*60*1000;
+      const backendEspnErrors=Array.isArray(data.errors)&&data.errors.some(x=>/ESPN/i.test(String(x)));
+      const needsLiveSupplement=data.status==='free_mode'&&(analysisData.recommendations.length===0||missingLeagues.length>0||feedStale||backendEspnErrors);
+      if(needsLiveSupplement||analysisData.recommendations.length===0){
+        status.textContent='Prüfe fehlende oder veraltete Spielpläne aus den zehn festgelegten Wettbewerben …';
         try{
           const live=await loadFixtureSchedules();
           scheduleErrors=live.errors||[];
