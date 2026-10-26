@@ -499,10 +499,12 @@ for item in fixtures:
   kickoff=datetime.datetime.fromisoformat(str(item["date"]).replace("Z","+00:00"))
   if kickoff.tzinfo is None: kickoff=kickoff.replace(tzinfo=datetime.timezone.utc)
  except Exception: kickoff=None
- if cached.get("prediction") and cache_is_fresh(cached.get("predictionUpdatedAt"),kickoff):
-  item["apiFootballPrediction"]=cached["prediction"]
+ if cached.get("predictionUpdatedAt") and cache_is_fresh(cached.get("predictionUpdatedAt"),kickoff):
+  item["apiFootballPrediction"]=cached.get("prediction")
   item["apiFootballPredictionUpdatedAt"]=cached["predictionUpdatedAt"]
-  item.setdefault("dataCoverage",{})["apiFootballPrediction"]="API-Football-Prognose (zwischengespeichert)"
+  item.setdefault("dataCoverage",{})["apiFootballPrediction"]=(
+   "API-Football-Prognose (zwischengespeichert)" if cached.get("prediction") else "Letzte API-Abfrage lieferte keine Prognose"
+  )
  if cached.get("injuries") is not None and cache_is_fresh(cached.get("injuriesUpdatedAt"),kickoff):
   item["apiFootballInjuries"]=cached["injuries"]
   item["apiFootballInjuriesUpdatedAt"]=cached["injuriesUpdatedAt"]
@@ -531,6 +533,7 @@ try:
 except Exception as exc:
  errors.append("API-Football status: "+str(exc)[:120])
  print("API-Football unavailable; retaining complete free-source baseline:",str(exc)[:160])
+api_fixtures_matched=0; api_only_fixtures=0; predictions_added=0; injuries_added=0
 if api_status is not None:
  season=now.year if now.month>=7 else now.year-1
  start=now.date().isoformat()
@@ -584,7 +587,7 @@ if api_status is not None:
                           "prediction":"Eingeschränkte Poisson-Basisschätzung; Teamdaten fehlen"}}
     fixtures.append(item); base_index.setdefault(sig,[]).append(item); api_only_fixtures+=1
    item["apiFootballFixtureId"]=fixture.get("id")
-   if item.get("apiFootballPrediction") and cache_is_fresh(item.get("apiFootballPredictionUpdatedAt"),kickoff):
+   if item.get("apiFootballPredictionUpdatedAt") and cache_is_fresh(item.get("apiFootballPredictionUpdatedAt"),kickoff):
     continue
    api_rows.append((kickoff.timestamp(),item,api_match))
  # Use a bounded number of individual prediction calls; all remaining fixtures retain the tested baseline model.
