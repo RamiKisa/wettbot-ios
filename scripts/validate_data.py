@@ -11,6 +11,7 @@ import pathlib
 import re
 import sys
 import unicodedata
+from zoneinfo import ZoneInfo
 
 EXPECTED = [
     "Bundesliga", "Serie A", "Ligue 1", "La Liga", "Premier League",
@@ -128,7 +129,12 @@ def validate(data_path: pathlib.Path, config_path: pathlib.Path, require_leagues
                 errors.append(f"fixture[{i}] outside 14-day window: {item.get('date')}")
         except (TypeError, ValueError):
             errors.append(f"fixture[{i}] invalid kickoff timestamp or timezone: {item.get('date')!r}")
-        key = (league, str(item.get("date", ""))[:10], norm(item.get("home")), norm(item.get("away")))
+        try:
+            local_day = kickoff.astimezone(ZoneInfo(config.get("timezone", "Europe/Berlin"))).date().isoformat()
+        except Exception:
+            local_day = str(item.get("date", ""))[:10]
+        teams = tuple(sorted((norm(item.get("home")), norm(item.get("away")))))
+        key = (league, local_day, teams)
         if key in duplicate_keys:
             errors.append(f"Duplicate fixture (normalized teams/day): {key}")
         duplicate_keys.add(key)

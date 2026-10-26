@@ -68,8 +68,8 @@ class ValidateDataTests(unittest.TestCase):
     def test_rejects_duplicate_normalized_fixture(self):
         first = self.fixture("Bundesliga", 1)
         second = self.fixture("Bundesliga", 2)
-        second["home"] = first["home"].replace(" ", ".")
-        second["away"] = first["away"].replace(" ", ".")
+        second["home"] = first["away"].replace(" ", ".")
+        second["away"] = first["home"].replace(" ", ".")
         second["date"] = first["date"]
         self.assertTrue(any("Duplicate fixture" in error for error in self.run_validation(self.dataset([first, second]), False)))
 

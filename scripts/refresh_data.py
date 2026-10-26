@@ -11,7 +11,8 @@ TEAM_RESEARCH_CACHE={"news":{},"googleSearch":{}}; TEAM_RESEARCH_ERRORS=[]
 SOURCE_DIAGNOSTICS={}
 def _diag(source,status,http_success,fixtures=0,error=None,**extra):
  item={"status":status,"httpSuccess":http_success,"fixtures":int(fixtures)}
- if error: item["error"]=str(error)[:180]
+ if error:
+  item["error" if status=="error" else "detail"]=str(error)[:180]
  item.update(extra)
  SOURCE_DIAGNOSTICS[source]=item
 season=now.year if now.month>=6 else now.year-1
@@ -295,7 +296,7 @@ def fixture_fallback():
       rows.append({"date":dt.isoformat(),"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent,"home":home,"away":away,"homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home})
   except Exception as e:
    errors.append(league+" previous-season history: "+str(e)[:70])
- _of_errors=[e for e in errors if "OpenFootball:" in e]
+ _of_errors=[e for e in errors if "OpenFootball:" in e or "previous-season history:" in e]
  _of_by_league={league:sum(1 for row in all_matches if row.get("league")==league and row.get("source")=="OpenFootball") for league in [x["name"] for x in COMPETITIONS]}
  _diag("OpenFootball","error" if _of_errors else "ok" if sum(_of_by_league.values()) else "empty",not bool(_of_errors),sum(_of_by_league.values()),"; ".join(_of_errors[:8]) or None,perLeague=_of_by_league)
  # Secondary independent fixture feed: ESPN for every configured competition.
@@ -618,6 +619,20 @@ def fixture_fallback():
   f["h2h"]=sorted([x for x in history_by_team.get(team_key(f["home"]),[]) if team_key(x.get("opponent"))==team_key(f["away"])],key=lambda x:x.get("date",""))[-5:]
  enrich_team_news(all_matches,max_teams=80)
  enrich_google_team_research(all_matches,max_teams=40)
+ news_cache=TEAM_RESEARCH_CACHE.get("news",{})
+ google_cache=TEAM_RESEARCH_CACHE.get("googleSearch",{})
+ news_errors=[x for x in TEAM_RESEARCH_ERRORS if x.get("source")=="news"]
+ google_errors=[x for x in TEAM_RESEARCH_ERRORS if x.get("source")=="googleSearch"]
+ _diag("Google News RSS","error" if news_errors else "ok",not bool(news_errors),
+       sum(len(x.get("items",[])) for x in news_cache.values()),
+       "; ".join(str(x.get("error") or "request failed") for x in news_errors[:8]) or None,
+       teamsQueried=len(news_cache),cachedTeams=sum(1 for x in news_cache.values() if x.get("status")=="ok"))
+ _diag("Google Search","error" if google_errors else "ok",not bool(google_errors),
+       sum(len(x.get("items",[])) for x in google_cache.values()),
+       "; ".join(str(x.get("error") or "request failed") for x in google_errors[:8]) or None,
+       teamsQueried=len(google_cache),cachedTeams=sum(1 for x in google_cache.values() if x.get("status")=="ok"))
+ print("Google News RSS research:",json.dumps(SOURCE_DIAGNOSTICS["Google News RSS"],ensure_ascii=False))
+ print("Google Search research:",json.dumps(SOURCE_DIAGNOSTICS["Google Search"],ensure_ascii=False))
  print("Fallback fixture counts by league:",json.dumps(dict(sorted(collections.Counter(x.get("league","UNKNOWN") for x in all_matches).items())),ensure_ascii=False))
  print("Fallback fixture counts by source:",json.dumps(dict(sorted(collections.Counter(x.get("source","unknown") for x in all_matches).items())),ensure_ascii=False))
  status_by_league={}
