@@ -114,23 +114,33 @@ def enrich_google_team_research(fixtures, max_teams=20):
  for f in fixtures:
   for team in (f.get('home'),f.get('away')):
    if team and team not in teams: teams.append(team)
- cache={}
- for team in teams[:max_teams]:
+ attempted=set(teams[:max_teams]); cache={}
+ for team in attempted:
   cache[team]=fetch_google_search('"'+team+'" letzte Spiele Ergebnisse Statistik Fußball',4)
  for f in fixtures:
   f['googleResearch']={'home':cache.get(f.get('home'),[]),'away':cache.get(f.get('away'),[])}
-  f.setdefault('dataCoverage',{})['googleResearch']='Google-Suchergebnisse (Links/Snippets, vor Verwendung Quelle und Datum prüfen)'
+  if f.get('home') not in attempted or f.get('away') not in attempted:
+   note='Nur ein Teil der Teams wurde im Recherchebudget berücksichtigt'
+  else:
+   note='Google-Suchergebnisse (Links/Snippets, Quelle und Datum vor Verwendung prüfen)'
+  f.setdefault('dataCoverage',{})['googleResearch']=note
 def enrich_team_news(fixtures, max_teams=24):
  teams=[]
  for f in fixtures:
   for name in (f.get('home'),f.get('away')):
    if name and name not in teams: teams.append(name)
- cache={}
- for team in teams[:max_teams]:
+ attempted=set(teams[:max_teams]); cache={}
+ for team in attempted:
   cache[team]=fetch_team_news(team)
  for f in fixtures:
   f['teamNews']={'home':cache.get(f.get('home'),[]),'away':cache.get(f.get('away'),[])}
-  f.setdefault('dataCoverage',{})['teamNews']='Google News RSS (Suchtreffer, keine bestätigten Ausfälle)' if (f['teamNews']['home'] or f['teamNews']['away']) else 'Keine RSS-Treffer / Abruf nicht verfügbar'
+  if f.get('home') not in attempted or f.get('away') not in attempted:
+   note='Team wurde aufgrund des Recherchebudgets nicht abgefragt'
+  elif f['teamNews']['home'] or f['teamNews']['away']:
+   note='Google News RSS-Suchtreffer (nicht automatisch bestätigte Ausfälle)'
+  else:
+   note='Abfrage erfolgt; keine RSS-Treffer oder Quelle nicht verfügbar'
+  f.setdefault('dataCoverage',{})['teamNews']=note
 def fetch_espn_events(slug):
  start=now.date()
  end=now.date()+datetime.timedelta(days=WINDOW_DAYS)
@@ -313,10 +323,18 @@ def fixture_fallback():
  print("Fallback fixture counts by league:",json.dumps(dict(sorted(collections.Counter(x.get("league","UNKNOWN") for x in all_matches).items())),ensure_ascii=False))
  print("Fallback fixture counts by source:",json.dumps(dict(sorted(collections.Counter(x.get("source","unknown") for x in all_matches).items())),ensure_ascii=False))
  print("Source errors:",json.dumps(errors[:30],ensure_ascii=False))
- return all_matches,errors
+ # Store a compact, normalized team-history index so browser-side ESPN fallback fixtures can also be modeled.
+ compact_history={}
+ for key,rows in history_by_team.items():
+  unique={}
+  for row in rows:
+   row_key=(row.get("date"),row.get("opponent"),row.get("gf"),row.get("ga"))
+   unique[row_key]=row
+  compact_history[key]=sorted(unique.values(),key=lambda x:x.get("date",""))[-10:]
+ return all_matches,errors,compact_history
 if not KEY:
- fixtures,errors=fixture_fallback()
- save({"generatedAt":now.isoformat(),"status":"free_mode","message":"Kostenloser Modus: feste 10-Ligen-Konfiguration, OpenFootball/ESPN/OpenLigaDB-Spielpläne, letzte Team-Ergebnisse und eigene Poisson-Schätzung. Verletzungen, Aufstellungen und Quoten sind nicht für alle Spiele verfügbar.","configuredLeagues":[x["name"] for x in COMPETITIONS],"fixtureWindowDays":WINDOW_DAYS,"recommendations":fixtures,"fixtures":fixtures,"errors":errors,"source":"OpenFootball + ESPN + OpenLigaDB + Google News RSS + Google-Suche + Poisson-Basismodell"})
+ fixtures,errors,team_history=fixture_fallback()
+ save({"generatedAt":now.isoformat(),"status":"free_mode","message":"Kostenloser Modus: feste 10-Ligen-Konfiguration, OpenFootball/ESPN/OpenLigaDB-Spielpläne, Team-Ergebnisse und Poisson-Modell. Verletzungen, Aufstellungen und Quoten sind nicht für jedes Spiel verfügbar.","configuredLeagues":[x["name"] for x in COMPETITIONS],"fixtureWindowDays":WINDOW_DAYS,"teamHistory":team_history,"recommendations":fixtures,"fixtures":fixtures,"errors":errors,"source":"OpenFootball + ESPN + OpenLigaDB + Google News RSS + Google-Suche + Poisson-Basismodell"})
  print("Free mode; fixtures=%s with_predictions=%s errors=%s"%(len(fixtures),sum(bool(f.get("prediction")) for f in fixtures),len(errors))); raise SystemExit(0)
 season=now.year if now.month>=7 else now.year-1
 leagues_api=API_LEAGUE_IDS
