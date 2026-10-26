@@ -228,7 +228,7 @@ if not KEY:
  save({"generatedAt":now.isoformat(),"status":"free_mode","message":"Kostenloser Modus: OpenFootball-Spielplan und Ergebnisse, eigene einfache Tor-Modellschätzung sowie Google News RSS. Verletzungen und Aufstellungen sind nicht garantiert verfügbar.","recommendations":fixtures,"fixtures":fixtures,"errors":errors,"source":"OpenFootball + Google News RSS + eigenes Poisson-Basismodell"})
  print("Free mode; fixtures=%s with_predictions=%s errors=%s"%(len(fixtures),sum(bool(f.get("prediction")) for f in fixtures),len(errors))); raise SystemExit(0)
 season=now.year if now.month>=7 else now.year-1
-leagues_api={"Premier League":39,"Bundesliga":78,"La Liga":140,"Serie A":135,"Ligue 1":61,"Primeira Liga":94,"Champions League":2,"Europa League":3,"Conference League":848}
+leagues_api={"Premier League":39,"Bundesliga":78,"La Liga":140,"Serie A":135,"Ligue 1":61,"Primeira Liga":94,"Champions League":2,"Europa League":3,"Conference League":848,"Süper Lig":203}
 fixtures=[]; errors=[]; start=now.date().isoformat(); end=(now.date()+datetime.timedelta(days=7)).isoformat()
 for name,lid in leagues_api.items():
  try:
