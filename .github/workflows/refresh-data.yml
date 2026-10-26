@@ -72,6 +72,11 @@ jobs:
           if any(not x.get("espnSlug") for x in config["competitions"]):
               sys.exit("Every configured competition must have an ESPN slug")
           allowed = set(expected)
+          window_days = int(config.get("fixtureWindowDays", 0))
+          if window_days != 14:
+              sys.exit("RamoBet fixture window must remain 14 days")
+          validation_now = datetime.datetime.now(datetime.timezone.utc)
+          validation_end = validation_now + datetime.timedelta(days=window_days, minutes=5)
           errors = []
           ids = set()
           duplicate_keys = set()
@@ -97,7 +102,14 @@ jobs:
               source_counts[item.get("source", "unknown")] += 1
               model_counts[item.get("analysisStatus", "unknown")] += 1
               try:
-                  datetime.datetime.fromisoformat(str(item.get("date")).replace("Z", "+00:00"))
+                  fixture_dt = datetime.datetime.fromisoformat(str(item.get("date")).replace("Z", "+00:00"))
+                  if fixture_dt.tzinfo is None:
+                      errors.append(f"fixture[{i}] date has no timezone: {item.get('date')}")
+                  else:
+                      if fixture_dt <= validation_now - datetime.timedelta(minutes=5):
+                          errors.append(f"fixture[{i}] is not upcoming: {item.get('league')} {item.get('home')} - {item.get('away')}")
+                      if fixture_dt > validation_end:
+                          errors.append(f"fixture[{i}] lies beyond the configured 14-day window: {item.get('date')}")
               except Exception:
                   errors.append(f"fixture[{i}] invalid date: {item.get('date')}")
               key = (item.get("league"), str(item.get("date", ""))[:10], norm(item.get("home")), norm(item.get("away")))
