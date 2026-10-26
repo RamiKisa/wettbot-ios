@@ -459,7 +459,7 @@
     const btn=$('refreshBtn');
     btn.disabled=true;
     btn.textContent='↻ Spieltag wird geladen …';
-    $('refreshMsg').textContent='Rufe den heutigen Spielplan ab …';
+    const refreshStatus=$('refreshMsg'); if(refreshStatus)refreshStatus.textContent='Rufe den heutigen Spielplan ab …';
     let added=0;
     const errors=[];
     const leagues=[
@@ -524,11 +524,11 @@
       }else{
         $('refreshMsg').textContent='Abruf abgeschlossen. Die erreichbaren Quellen melden keine weiteren heutigen Spiele.';
       }
-      toast(added?added+' heutige Spiele geladen.':errors.length===leagues.length?'Spielplan konnte nicht abgerufen werden.':'Abruf abgeschlossen.');
+      
     }catch(error){
       console.error('Spielplan-Abruf fehlgeschlagen:',error);
       $('refreshMsg').textContent='Abruf fehlgeschlagen: '+(error?.message||'Unbekannter Fehler')+'. Bitte erneut versuchen.';
-      toast('Spielplan-Abruf fehlgeschlagen.');
+      
     }finally{
       btn.disabled=false;
       btn.textContent='↻ Heutige Spiele abrufen';
