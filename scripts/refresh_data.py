@@ -305,45 +305,60 @@ def fixture_fallback():
  history_by_team={}
  for (history_league,team),rows in history.items():
   history_by_team.setdefault(team_key(team),[]).extend(rows)
- all_history_rows=[row for rows in history.values() for row in rows]
  def last_five(team,league):
   combined={}
   for row in history.get((league,team),[])+history_by_team.get(team_key(team),[]):
-   key=(row.get("date"),team_key(row.get("opponent")),row.get("gf"),row.get("ga"))
-   combined[key]=row
-  return sorted(combined.values(),key=lambda x:x["date"])[-5:]
+   key=(str(row.get("date",""))[:10],team_key(row.get("opponent")),row.get("gf"),row.get("ga"))
+   prior=combined.get(key)
+   # Prefer precise ESPN kickoff time/source metadata when the two feeds describe the same result.
+   if prior is None or row.get("historySource")=="ESPN completed scoreboard":
+    combined[key]=row
+  return sorted(combined.values(),key=lambda x:x.get("date",""))[-5:]
+ # Estimate league home/away goal baselines from unique completed matches, not duplicated team-perspective rows.
+ unique_matches_by_league={}
+ for (history_league,_team),rows in history.items():
+  for row in rows:
+   hg=row.get("homeGoals"); ag=row.get("awayGoals")
+   if hg is None or ag is None or not row.get("home") or not row.get("away"): continue
+   try: hg=int(hg); ag=int(ag)
+   except (TypeError,ValueError): continue
+   match_key=(str(row.get("date",""))[:10],team_key(row.get("home")),team_key(row.get("away")),hg,ag)
+   unique_matches_by_league.setdefault(history_league,{})[match_key]=(hg,ag)
+ global_match_map={}
+ for games in unique_matches_by_league.values():
+  global_match_map.update(games)
+ global_games=list(global_match_map.values())
+ def goal_baselines(games,default_home=1.45,default_away=1.20):
+  if not games: return default_home,default_away
+  return (sum(x[0] for x in games)/len(games),sum(x[1] for x in games)/len(games))
+ global_home_avg,global_away_avg=goal_baselines(global_games)
+ league_baselines={league:goal_baselines(list(games.values()),global_home_avg,global_away_avg) for league,games in unique_matches_by_league.items()}
  for f in all_matches:
   h=last_five(f["home"],f["league"])
   a=last_five(f["away"],f["league"])
   f["form"]={"home":h,"away":a}
-  f["dataCoverage"]["recentForm"]="OpenFootball-Ergebnisse" if h or a else "Keine historischen Ergebnisse im kostenlosen Feed"
-  league_rows=[v for (lg,_),vals in history.items() if lg==f["league"] for v in vals]
-  if not league_rows: league_rows=all_history_rows
-  avg=sum(v["gf"] for v in league_rows)/len(league_rows) if league_rows else 1.35
-  def avg_goals(rows,key,default):
-   vals=[x[key] for x in rows]
-   return sum(vals)/len(vals) if vals else default
-  lam_h=max(0.15,min(4.0,0.55*avg_goals(h,"gf",avg)+0.45*avg_goals(a,"ga",avg)))
-  lam_a=max(0.15,min(4.0,0.55*avg_goals(a,"gf",avg)+0.45*avg_goals(h,"ga",avg)))
-  def pois(lam,n): return math.exp(-lam)*lam**n/math.factorial(n)
-  probs={"home":0.0,"draw":0.0,"away":0.0}; over25=0.0; btts=0.0; scores=[]
-  for i in range(8):
-   for j in range(8):
-    p=pois(lam_h,i)*pois(lam_a,j); scores.append((p,i,j))
-    probs["home" if i>j else "draw" if i==j else "away"]+=p
-    if i+j>=3: over25+=p
-    if i>0 and j>0: btts+=p
-  total=sum(probs.values()) or 1
-  probs={k:round(v/total*100,1) for k,v in probs.items()}
-  winner_key=max(probs,key=probs.get)
-  predicted_winner={"home":f["home"],"draw":"Unentschieden","away":f["away"]}[winner_key]
-  f["prediction"]={"model":"Poisson-Basismodell aus letzten verfügbaren Team-Ergebnissen","winner":predicted_winner,"winnerComment":"Modellschätzung, keine bestätigte Marktprognose","probabilities":probs,"homeGoals":round(lam_h,2),"awayGoals":round(lam_a,2),"underOver":"Über 2,5" if over25>=0.5 else "Unter 2,5","markets":{"over25":round(over25*100,1),"under25":round((1-over25)*100,1),"bttsYes":round(btts*100,1),"bttsNo":round((1-btts)*100,1)},"mostLikelyScore":"%s:%s"%(max(scores,key=lambda z:z[0])[1],max(scores,key=lambda z:z[0])[2])}
-  f["analysisStatus"]="model_estimate" if h or a else "limited_model"
-  f["dataCoverage"]["prediction"]="Eigene Poisson-Schätzung aus letzten Team-Ergebnissen; nicht extern validiert" if h or a else "Begrenzte Basisschätzung: keine passenden Team-Ergebnisse gefunden"
-  f["marketCoverage"]={"1X2":"Poisson-Modell aus Team-Ergebnissen","overUnder":"Poisson-Torverteilung","btts":"Poisson-Torverteilung","corners":"Keine belastbare kostenlose Prognose verfügbar","cards":"Keine belastbare kostenlose Prognose verfügbar","playerProps":"Keine belastbare kostenlose Prognose verfügbar"}
-  f["h2h"]=sorted([x for x in history_by_team.get(team_key(f["home"]),[]) if team_key(x.get("opponent"))==team_key(f["away"])],key=lambda x:x["date"])[-5:]
- enrich_team_news(all_matches,max_teams=40)
- enrich_google_team_research(all_matches,max_teams=20)
+  home_sources=sorted({row.get("historySource","OpenFootball season results") for row in h})
+  away_sources=sorted({row.get("historySource","OpenFootball season results") for row in a})
+  f["dataCoverage"]["recentForm"]="Heim: %s/5; Gast: %s/5; Quellen: %s" % (
+   len(h),len(a),", ".join(sorted(set(home_sources+away_sources))) or "keine"
+  )
+  league_home_avg,league_away_avg=league_baselines.get(f["league"],(global_home_avg,global_away_avg))
+  prediction=poisson_match_model(h,a,league_home_avg,league_away_avg)
+  winner_key=max(prediction["probabilities"],key=prediction["probabilities"].get)
+  prediction["winner"]={"home":f["home"],"draw":"Unentschieden","away":f["away"]}[winner_key]
+  prediction["winnerComment"]="Eigene Modellschätzung; keine bestätigte Buchmacher- oder API-Prognose"
+  f["prediction"]=prediction
+  enough_form=len(h)>=3 and len(a)>=3
+  f["analysisStatus"]="model_estimate" if enough_form else "limited_model"
+  f["dataCoverage"]["prediction"]=(
+   "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim %s Historien, Gast %s Historien; nicht extern validiert" % (len(h),len(a))
+   if enough_form else
+   "Begrenzte Modellbasis: Heim %s/5 und Gast %s/5 historische Ergebnisse; Liga-Durchschnitt gleicht fehlende Werte teilweise aus" % (len(h),len(a))
+  )
+  f["marketCoverage"]={"1X2":"Poisson-Modell aus jüngster Teamform und Liga-Heim-/Auswärtsschnitt","overUnder":"Poisson-Torverteilung","btts":"Poisson-Torverteilung","corners":"Keine belastbare kostenlose Prognose verfügbar","cards":"Keine belastbare kostenlose Prognose verfügbar","playerProps":"Keine belastbare kostenlose Prognose verfügbar"}
+  f["h2h"]=sorted([x for x in history_by_team.get(team_key(f["home"]),[]) if team_key(x.get("opponent"))==team_key(f["away"])],key=lambda x:x.get("date",""))[-5:]
+ enrich_team_news(all_matches,max_teams=80)
+ enrich_google_team_research(all_matches,max_teams=40)
  print("Fallback fixture counts by league:",json.dumps(dict(sorted(collections.Counter(x.get("league","UNKNOWN") for x in all_matches).items())),ensure_ascii=False))
  print("Fallback fixture counts by source:",json.dumps(dict(sorted(collections.Counter(x.get("source","unknown") for x in all_matches).items())),ensure_ascii=False))
  status_by_league={}
@@ -365,7 +380,7 @@ def fixture_fallback():
  for key,rows in history_by_team.items():
   unique={}
   for row in rows:
-   row_key=(row.get("date"),row.get("opponent"),row.get("gf"),row.get("ga"))
+   row_key=(str(row.get("date",""))[:10],row.get("opponent"),row.get("gf"),row.get("ga"))
    unique[row_key]=row
   compact_history[key]=sorted(unique.values(),key=lambda x:x.get("date",""))[-10:]
  return all_matches,errors,compact_history
