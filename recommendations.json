@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T09:59:57.200535+00:00",
+  "generatedAt": "2026-10-26T10:26:04.384290+00:00",
   "status": "free_mode",
   "message": "Kostenloser Modus: alle zehn konfigurierten Wettbewerbe, 14-Tage-Spielplan, historische Ergebnisse aus OpenFootball/ESPN, heim-/auswärtsgewichtete Poisson-Schätzung sowie Team-News und Google-Recherche mit begrenztem Abrufbudget. API-Football-Detaildaten benötigen einen konfigurierten Schlüssel.",
   "configuredLeagues": [
@@ -22323,6 +22323,252 @@
         "historySource": "ESPN completed scoreboard"
       }
     ],
+    "aekathens": [
+      {
+        "date": "2026-09-08T16:45:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "LASK Linz",
+        "home": "AEK Athens",
+        "away": "LASK Linz",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-14T19:00:00+00:00",
+        "gf": 1,
+        "ga": 3,
+        "result": "L",
+        "opponent": "Shakhtar Donetsk",
+        "home": "Shakhtar Donetsk",
+        "away": "AEK Athens",
+        "homeGoals": 3,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-20T19:00:00+00:00",
+        "gf": 1,
+        "ga": 5,
+        "result": "L",
+        "opponent": "Manchester City",
+        "home": "Manchester City",
+        "away": "AEK Athens",
+        "homeGoals": 5,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "lasklinz": [
+      {
+        "date": "2026-09-08T16:45:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "AEK Athens",
+        "home": "AEK Athens",
+        "away": "LASK Linz",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-14T16:45:00+00:00",
+        "gf": 3,
+        "ga": 6,
+        "result": "L",
+        "opponent": "Liverpool",
+        "home": "LASK Linz",
+        "away": "Liverpool",
+        "homeGoals": 3,
+        "awayGoals": 6,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-21T19:00:00+00:00",
+        "gf": 3,
+        "ga": 2,
+        "result": "W",
+        "opponent": "Sporting CP",
+        "home": "Sporting CP",
+        "away": "LASK Linz",
+        "homeGoals": 2,
+        "awayGoals": 3,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "clubbrugge": [
+      {
+        "date": "2026-09-08T16:45:00+00:00",
+        "gf": 2,
+        "ga": 3,
+        "result": "L",
+        "opponent": "Aston Villa",
+        "home": "Club Brugge",
+        "away": "Aston Villa",
+        "homeGoals": 2,
+        "awayGoals": 3,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-13T19:00:00+00:00",
+        "gf": 4,
+        "ga": 3,
+        "result": "W",
+        "opponent": "Internazionale",
+        "home": "Internazionale",
+        "away": "Club Brugge",
+        "homeGoals": 3,
+        "awayGoals": 4,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-21T19:00:00+00:00",
+        "gf": 3,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Lens",
+        "home": "Club Brugge",
+        "away": "Lens",
+        "homeGoals": 3,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "feyenoordrotterdam": [
+      {
+        "date": "2026-09-09T16:45:00+00:00",
+        "gf": 1,
+        "ga": 5,
+        "result": "L",
+        "opponent": "Barcelona",
+        "home": "Barcelona",
+        "away": "Feyenoord Rotterdam",
+        "homeGoals": 5,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-14T16:45:00+00:00",
+        "gf": 3,
+        "ga": 2,
+        "result": "W",
+        "opponent": "Como",
+        "home": "Feyenoord Rotterdam",
+        "away": "Como",
+        "homeGoals": 3,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-21T19:00:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "Real Betis",
+        "home": "Real Betis",
+        "away": "Feyenoord Rotterdam",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "vikingfk": [
+      {
+        "date": "2026-09-09T16:45:00+00:00",
+        "gf": 1,
+        "ga": 3,
+        "result": "L",
+        "opponent": "VfB Stuttgart",
+        "home": "VfB Stuttgart",
+        "away": "Viking FK",
+        "homeGoals": 3,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-13T19:00:00+00:00",
+        "gf": 3,
+        "ga": 3,
+        "result": "D",
+        "opponent": "Bayern Munich",
+        "home": "Viking FK",
+        "away": "Bayern Munich",
+        "homeGoals": 3,
+        "awayGoals": 3,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-21T19:00:00+00:00",
+        "gf": 1,
+        "ga": 3,
+        "result": "L",
+        "opponent": "Aston Villa",
+        "home": "Aston Villa",
+        "away": "Viking FK",
+        "homeGoals": 3,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "slovanbratislava": [
+      {
+        "date": "2026-09-09T19:00:00+00:00",
+        "gf": 1,
+        "ga": 6,
+        "result": "L",
+        "opponent": "Paris Saint-Germain",
+        "home": "Paris Saint-Germain",
+        "away": "Slovan Bratislava",
+        "homeGoals": 6,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-14T19:00:00+00:00",
+        "gf": 0,
+        "ga": 3,
+        "result": "L",
+        "opponent": "VfB Stuttgart",
+        "home": "Slovan Bratislava",
+        "away": "VfB Stuttgart",
+        "homeGoals": 0,
+        "awayGoals": 3,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-20T19:00:00+00:00",
+        "gf": 0,
+        "ga": 4,
+        "result": "L",
+        "opponent": "AS Roma",
+        "home": "AS Roma",
+        "away": "Slovan Bratislava",
+        "homeGoals": 4,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
     "galatasaray": [
       {
         "date": "2026-08-21T18:30:00+00:00",
@@ -22451,6 +22697,343 @@
         "away": "Galatasaray",
         "homeGoals": 2,
         "awayGoals": 4,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "fenerbahce": [
+      {
+        "date": "2026-08-30T18:30:00+00:00",
+        "gf": 2,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Samsunspor",
+        "home": "Samsunspor",
+        "away": "Fenerbahce",
+        "homeGoals": 0,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-05T17:00:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Besiktas",
+        "home": "Fenerbahce",
+        "away": "Besiktas",
+        "homeGoals": 1,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-10T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "AS Roma",
+        "home": "Fenerbahce",
+        "away": "AS Roma",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-14T17:00:00+00:00",
+        "gf": 0,
+        "ga": 0,
+        "result": "D",
+        "opponent": "Gaziantep FK",
+        "home": "Gaziantep FK",
+        "away": "Fenerbahce",
+        "homeGoals": 0,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-20T14:00:00+00:00",
+        "gf": 8,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Eyupspor",
+        "home": "Fenerbahce",
+        "away": "Eyupspor",
+        "homeGoals": 8,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-10T16:00:00+00:00",
+        "gf": 3,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Caykur Rizespor",
+        "home": "Caykur Rizespor",
+        "away": "Fenerbahce",
+        "homeGoals": 0,
+        "awayGoals": 3,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-14T19:00:00+00:00",
+        "gf": 0,
+        "ga": 6,
+        "result": "L",
+        "opponent": "Aston Villa",
+        "home": "Aston Villa",
+        "away": "Fenerbahce",
+        "homeGoals": 6,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-17T16:00:00+00:00",
+        "gf": 3,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Alanyaspor",
+        "home": "Fenerbahce",
+        "away": "Alanyaspor",
+        "homeGoals": 3,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-20T16:45:00+00:00",
+        "gf": 2,
+        "ga": 2,
+        "result": "D",
+        "opponent": "Slavia Prague",
+        "home": "Fenerbahce",
+        "away": "Slavia Prague",
+        "homeGoals": 2,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-20T16:45:00+00:00",
+        "gf": 2,
+        "ga": 2,
+        "result": "D",
+        "opponent": "SK Slavia Praha",
+        "home": "Fenerbahce",
+        "away": "SK Slavia Praha",
+        "homeGoals": 2,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      }
+    ],
+    "psveindhoven": [
+      {
+        "date": "2026-09-10T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Shakhtar Donetsk",
+        "home": "PSV Eindhoven",
+        "away": "Shakhtar Donetsk",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-13T19:00:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "RB Leipzig",
+        "home": "RB Leipzig",
+        "away": "PSV Eindhoven",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-20T19:00:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "FC Porto",
+        "home": "FC Porto",
+        "away": "PSV Eindhoven",
+        "homeGoals": 0,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "shakhtardonetsk": [
+      {
+        "date": "2026-09-10T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "PSV Eindhoven",
+        "home": "PSV Eindhoven",
+        "away": "Shakhtar Donetsk",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-14T19:00:00+00:00",
+        "gf": 3,
+        "ga": 1,
+        "result": "W",
+        "opponent": "AEK Athens",
+        "home": "Shakhtar Donetsk",
+        "away": "AEK Athens",
+        "homeGoals": 3,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-21T19:00:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "Internazionale",
+        "home": "Internazionale",
+        "away": "Shakhtar Donetsk",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "bodoglimt": [
+      {
+        "date": "2026-09-10T19:00:00+00:00",
+        "gf": 0,
+        "ga": 5,
+        "result": "L",
+        "opponent": "Bayern Munich",
+        "home": "Bayern Munich",
+        "away": "Bodo/Glimt",
+        "homeGoals": 5,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-14T19:00:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Borussia Dortmund",
+        "home": "Bodo/Glimt",
+        "away": "Borussia Dortmund",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-20T19:00:00+00:00",
+        "gf": 3,
+        "ga": 4,
+        "result": "L",
+        "opponent": "Napoli",
+        "home": "Napoli",
+        "away": "Bodo/Glimt",
+        "homeGoals": 4,
+        "awayGoals": 3,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "sabahfk": [
+      {
+        "date": "2026-09-10T19:00:00+00:00",
+        "gf": 0,
+        "ga": 4,
+        "result": "L",
+        "opponent": "Manchester United",
+        "home": "Manchester United",
+        "away": "Sabah FK",
+        "homeGoals": 4,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-13T16:45:00+00:00",
+        "gf": 2,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Slavia Prague",
+        "home": "Sabah FK",
+        "away": "Slavia Prague",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-20T16:45:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Borussia Dortmund",
+        "home": "Sabah FK",
+        "away": "Borussia Dortmund",
+        "homeGoals": 1,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "slaviaprague": [
+      {
+        "date": "2026-09-10T19:00:00+00:00",
+        "gf": 2,
+        "ga": 3,
+        "result": "L",
+        "opponent": "Lens",
+        "home": "Slavia Prague",
+        "away": "Lens",
+        "homeGoals": 2,
+        "awayGoals": 3,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-13T16:45:00+00:00",
+        "gf": 0,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Sabah FK",
+        "home": "Sabah FK",
+        "away": "Slavia Prague",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-20T16:45:00+00:00",
+        "gf": 2,
+        "ga": 2,
+        "result": "D",
+        "opponent": "Fenerbahce",
+        "home": "Fenerbahce",
+        "away": "Slavia Prague",
+        "homeGoals": 2,
+        "awayGoals": 2,
         "teamIsHome": false,
         "historySource": "ESPN completed scoreboard"
       }
@@ -23407,138 +23990,6 @@
         "historySource": "ESPN completed scoreboard"
       }
     ],
-    "fenerbahce": [
-      {
-        "date": "2026-08-30T18:30:00+00:00",
-        "gf": 2,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Samsunspor",
-        "home": "Samsunspor",
-        "away": "Fenerbahce",
-        "homeGoals": 0,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-05T17:00:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Besiktas",
-        "home": "Fenerbahce",
-        "away": "Besiktas",
-        "homeGoals": 1,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-10T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "AS Roma",
-        "home": "Fenerbahce",
-        "away": "AS Roma",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-14T17:00:00+00:00",
-        "gf": 0,
-        "ga": 0,
-        "result": "D",
-        "opponent": "Gaziantep FK",
-        "home": "Gaziantep FK",
-        "away": "Fenerbahce",
-        "homeGoals": 0,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-20T14:00:00+00:00",
-        "gf": 8,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Eyupspor",
-        "home": "Fenerbahce",
-        "away": "Eyupspor",
-        "homeGoals": 8,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-10T16:00:00+00:00",
-        "gf": 3,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Caykur Rizespor",
-        "home": "Caykur Rizespor",
-        "away": "Fenerbahce",
-        "homeGoals": 0,
-        "awayGoals": 3,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-14T19:00:00+00:00",
-        "gf": 0,
-        "ga": 6,
-        "result": "L",
-        "opponent": "Aston Villa",
-        "home": "Aston Villa",
-        "away": "Fenerbahce",
-        "homeGoals": 6,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-17T16:00:00+00:00",
-        "gf": 3,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Alanyaspor",
-        "home": "Fenerbahce",
-        "away": "Alanyaspor",
-        "homeGoals": 3,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-20T16:45:00+00:00",
-        "gf": 2,
-        "ga": 2,
-        "result": "D",
-        "opponent": "Slavia Prague",
-        "home": "Fenerbahce",
-        "away": "Slavia Prague",
-        "homeGoals": 2,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-20T16:45:00+00:00",
-        "gf": 2,
-        "ga": 2,
-        "result": "D",
-        "opponent": "SK Slavia Praha",
-        "home": "Fenerbahce",
-        "away": "SK Slavia Praha",
-        "homeGoals": 2,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      }
-    ],
     "istanbulbasaksehir": [
       {
         "date": "2026-08-16T16:00:00+00:00",
@@ -24488,457 +24939,6 @@
         "homeGoals": 2,
         "awayGoals": 0,
         "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "aekathens": [
-      {
-        "date": "2026-09-08T16:45:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "LASK Linz",
-        "home": "AEK Athens",
-        "away": "LASK Linz",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-14T19:00:00+00:00",
-        "gf": 1,
-        "ga": 3,
-        "result": "L",
-        "opponent": "Shakhtar Donetsk",
-        "home": "Shakhtar Donetsk",
-        "away": "AEK Athens",
-        "homeGoals": 3,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-20T19:00:00+00:00",
-        "gf": 1,
-        "ga": 5,
-        "result": "L",
-        "opponent": "Manchester City",
-        "home": "Manchester City",
-        "away": "AEK Athens",
-        "homeGoals": 5,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "lasklinz": [
-      {
-        "date": "2026-09-08T16:45:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "AEK Athens",
-        "home": "AEK Athens",
-        "away": "LASK Linz",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-14T16:45:00+00:00",
-        "gf": 3,
-        "ga": 6,
-        "result": "L",
-        "opponent": "Liverpool",
-        "home": "LASK Linz",
-        "away": "Liverpool",
-        "homeGoals": 3,
-        "awayGoals": 6,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-21T19:00:00+00:00",
-        "gf": 3,
-        "ga": 2,
-        "result": "W",
-        "opponent": "Sporting CP",
-        "home": "Sporting CP",
-        "away": "LASK Linz",
-        "homeGoals": 2,
-        "awayGoals": 3,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "clubbrugge": [
-      {
-        "date": "2026-09-08T16:45:00+00:00",
-        "gf": 2,
-        "ga": 3,
-        "result": "L",
-        "opponent": "Aston Villa",
-        "home": "Club Brugge",
-        "away": "Aston Villa",
-        "homeGoals": 2,
-        "awayGoals": 3,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-13T19:00:00+00:00",
-        "gf": 4,
-        "ga": 3,
-        "result": "W",
-        "opponent": "Internazionale",
-        "home": "Internazionale",
-        "away": "Club Brugge",
-        "homeGoals": 3,
-        "awayGoals": 4,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-21T19:00:00+00:00",
-        "gf": 3,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Lens",
-        "home": "Club Brugge",
-        "away": "Lens",
-        "homeGoals": 3,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "feyenoordrotterdam": [
-      {
-        "date": "2026-09-09T16:45:00+00:00",
-        "gf": 1,
-        "ga": 5,
-        "result": "L",
-        "opponent": "Barcelona",
-        "home": "Barcelona",
-        "away": "Feyenoord Rotterdam",
-        "homeGoals": 5,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-14T16:45:00+00:00",
-        "gf": 3,
-        "ga": 2,
-        "result": "W",
-        "opponent": "Como",
-        "home": "Feyenoord Rotterdam",
-        "away": "Como",
-        "homeGoals": 3,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-21T19:00:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "Real Betis",
-        "home": "Real Betis",
-        "away": "Feyenoord Rotterdam",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "vikingfk": [
-      {
-        "date": "2026-09-09T16:45:00+00:00",
-        "gf": 1,
-        "ga": 3,
-        "result": "L",
-        "opponent": "VfB Stuttgart",
-        "home": "VfB Stuttgart",
-        "away": "Viking FK",
-        "homeGoals": 3,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-13T19:00:00+00:00",
-        "gf": 3,
-        "ga": 3,
-        "result": "D",
-        "opponent": "Bayern Munich",
-        "home": "Viking FK",
-        "away": "Bayern Munich",
-        "homeGoals": 3,
-        "awayGoals": 3,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-21T19:00:00+00:00",
-        "gf": 1,
-        "ga": 3,
-        "result": "L",
-        "opponent": "Aston Villa",
-        "home": "Aston Villa",
-        "away": "Viking FK",
-        "homeGoals": 3,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "slovanbratislava": [
-      {
-        "date": "2026-09-09T19:00:00+00:00",
-        "gf": 1,
-        "ga": 6,
-        "result": "L",
-        "opponent": "Paris Saint-Germain",
-        "home": "Paris Saint-Germain",
-        "away": "Slovan Bratislava",
-        "homeGoals": 6,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-14T19:00:00+00:00",
-        "gf": 0,
-        "ga": 3,
-        "result": "L",
-        "opponent": "VfB Stuttgart",
-        "home": "Slovan Bratislava",
-        "away": "VfB Stuttgart",
-        "homeGoals": 0,
-        "awayGoals": 3,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-20T19:00:00+00:00",
-        "gf": 0,
-        "ga": 4,
-        "result": "L",
-        "opponent": "AS Roma",
-        "home": "AS Roma",
-        "away": "Slovan Bratislava",
-        "homeGoals": 4,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "psveindhoven": [
-      {
-        "date": "2026-09-10T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Shakhtar Donetsk",
-        "home": "PSV Eindhoven",
-        "away": "Shakhtar Donetsk",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-13T19:00:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "RB Leipzig",
-        "home": "RB Leipzig",
-        "away": "PSV Eindhoven",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-20T19:00:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "FC Porto",
-        "home": "FC Porto",
-        "away": "PSV Eindhoven",
-        "homeGoals": 0,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "shakhtardonetsk": [
-      {
-        "date": "2026-09-10T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "PSV Eindhoven",
-        "home": "PSV Eindhoven",
-        "away": "Shakhtar Donetsk",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-14T19:00:00+00:00",
-        "gf": 3,
-        "ga": 1,
-        "result": "W",
-        "opponent": "AEK Athens",
-        "home": "Shakhtar Donetsk",
-        "away": "AEK Athens",
-        "homeGoals": 3,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-21T19:00:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "Internazionale",
-        "home": "Internazionale",
-        "away": "Shakhtar Donetsk",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "bodoglimt": [
-      {
-        "date": "2026-09-10T19:00:00+00:00",
-        "gf": 0,
-        "ga": 5,
-        "result": "L",
-        "opponent": "Bayern Munich",
-        "home": "Bayern Munich",
-        "away": "Bodo/Glimt",
-        "homeGoals": 5,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-14T19:00:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Borussia Dortmund",
-        "home": "Bodo/Glimt",
-        "away": "Borussia Dortmund",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-20T19:00:00+00:00",
-        "gf": 3,
-        "ga": 4,
-        "result": "L",
-        "opponent": "Napoli",
-        "home": "Napoli",
-        "away": "Bodo/Glimt",
-        "homeGoals": 4,
-        "awayGoals": 3,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "sabahfk": [
-      {
-        "date": "2026-09-10T19:00:00+00:00",
-        "gf": 0,
-        "ga": 4,
-        "result": "L",
-        "opponent": "Manchester United",
-        "home": "Manchester United",
-        "away": "Sabah FK",
-        "homeGoals": 4,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-13T16:45:00+00:00",
-        "gf": 2,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Slavia Prague",
-        "home": "Sabah FK",
-        "away": "Slavia Prague",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-20T16:45:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Borussia Dortmund",
-        "home": "Sabah FK",
-        "away": "Borussia Dortmund",
-        "homeGoals": 1,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "slaviaprague": [
-      {
-        "date": "2026-09-10T19:00:00+00:00",
-        "gf": 2,
-        "ga": 3,
-        "result": "L",
-        "opponent": "Lens",
-        "home": "Slavia Prague",
-        "away": "Lens",
-        "homeGoals": 2,
-        "awayGoals": 3,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-13T16:45:00+00:00",
-        "gf": 0,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Sabah FK",
-        "home": "Sabah FK",
-        "away": "Slavia Prague",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-20T16:45:00+00:00",
-        "gf": 2,
-        "ga": 2,
-        "result": "D",
-        "opponent": "Fenerbahce",
-        "home": "Fenerbahce",
-        "away": "Slavia Prague",
-        "homeGoals": 2,
-        "awayGoals": 2,
-        "teamIsHome": false,
         "historySource": "ESPN completed scoreboard"
       }
     ],
@@ -26621,6 +26621,973 @@
         "historySource": "ESPN completed scoreboard"
       }
     ],
+    "araratarmenia": [
+      {
+        "date": "2026-09-16T16:45:00+00:00",
+        "gf": 1,
+        "ga": 4,
+        "result": "L",
+        "opponent": "Sparta Prague",
+        "home": "Ararat-Armenia",
+        "away": "Sparta Prague",
+        "homeGoals": 1,
+        "awayGoals": 4,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 1,
+        "ga": 3,
+        "result": "L",
+        "opponent": "Jagiellonia Bialystok",
+        "home": "Jagiellonia Bialystok",
+        "away": "Ararat-Armenia",
+        "homeGoals": 3,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 0,
+        "ga": 4,
+        "result": "L",
+        "opponent": "AZ Alkmaar",
+        "home": "Ararat-Armenia",
+        "away": "AZ Alkmaar",
+        "homeGoals": 0,
+        "awayGoals": 4,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "spartaprague": [
+      {
+        "date": "2026-09-16T16:45:00+00:00",
+        "gf": 4,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Ararat-Armenia",
+        "home": "Ararat-Armenia",
+        "away": "Sparta Prague",
+        "homeGoals": 1,
+        "awayGoals": 4,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Lillestrom",
+        "home": "Sparta Prague",
+        "away": "Lillestrom",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "Olympiacos",
+        "home": "Olympiacos",
+        "away": "Sparta Prague",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "omonianicosia": [
+      {
+        "date": "2026-09-16T16:45:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Celta Vigo",
+        "home": "Omonia Nicosia",
+        "away": "Celta Vigo",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 3,
+        "ga": 0,
+        "result": "W",
+        "opponent": "NK Celje",
+        "home": "NK Celje",
+        "away": "Omonia Nicosia",
+        "homeGoals": 0,
+        "awayGoals": 3,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 1,
+        "ga": 4,
+        "result": "L",
+        "opponent": "Benfica",
+        "home": "Omonia Nicosia",
+        "away": "Benfica",
+        "homeGoals": 1,
+        "awayGoals": 4,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "anderlecht": [
+      {
+        "date": "2026-09-16T19:00:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Lyon",
+        "home": "Anderlecht",
+        "away": "Lyon",
+        "homeGoals": 1,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "Dinamo Zagreb",
+        "home": "Dinamo Zagreb",
+        "away": "Anderlecht",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 3,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Jagiellonia Bialystok",
+        "home": "Jagiellonia Bialystok",
+        "away": "Anderlecht",
+        "homeGoals": 0,
+        "awayGoals": 3,
+        "teamIsHome": false,
+        "historySource": "SportScore"
+      }
+    ],
+    "nkcelje": [
+      {
+        "date": "2026-09-16T19:00:00+00:00",
+        "gf": 0,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Bayer Leverkusen",
+        "home": "Bayer Leverkusen",
+        "away": "NK Celje",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 0,
+        "ga": 3,
+        "result": "L",
+        "opponent": "Omonia Nicosia",
+        "home": "NK Celje",
+        "away": "Omonia Nicosia",
+        "homeGoals": 0,
+        "awayGoals": 3,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 2,
+        "ga": 2,
+        "result": "D",
+        "opponent": "RB Salzburg",
+        "home": "NK Celje",
+        "away": "RB Salzburg",
+        "homeGoals": 2,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "hapoelbeer": [
+      {
+        "date": "2026-09-16T19:00:00+00:00",
+        "gf": 0,
+        "ga": 0,
+        "result": "D",
+        "opponent": "Dinamo Zagreb",
+        "home": "Hapoel Be'er",
+        "away": "Dinamo Zagreb",
+        "homeGoals": 0,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "AZ Alkmaar",
+        "home": "AZ Alkmaar",
+        "away": "Hapoel Be'er",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 0,
+        "ga": 4,
+        "result": "L",
+        "opponent": "Union St.-Gilloise",
+        "home": "Union St.-Gilloise",
+        "away": "Hapoel Be'er",
+        "homeGoals": 4,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "dinamozagreb": [
+      {
+        "date": "2026-09-16T19:00:00+00:00",
+        "gf": 0,
+        "ga": 0,
+        "result": "D",
+        "opponent": "Hapoel Be'er",
+        "home": "Hapoel Be'er",
+        "away": "Dinamo Zagreb",
+        "homeGoals": 0,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Anderlecht",
+        "home": "Dinamo Zagreb",
+        "away": "Anderlecht",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 2,
+        "ga": 4,
+        "result": "L",
+        "opponent": "NEC Nijmegen",
+        "home": "Dinamo Zagreb",
+        "away": "NEC Nijmegen",
+        "homeGoals": 2,
+        "awayGoals": 4,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      }
+    ],
+    "olympiacos": [
+      {
+        "date": "2026-09-16T19:00:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Jagiellonia Bialystok",
+        "home": "Olympiacos",
+        "away": "Jagiellonia Bialystok",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Marseille",
+        "home": "Marseille",
+        "away": "Olympiacos",
+        "homeGoals": 0,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Sparta Prague",
+        "home": "Olympiacos",
+        "away": "Sparta Prague",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "jagielloniabialystok": [
+      {
+        "date": "2026-09-16T19:00:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Olympiacos",
+        "home": "Olympiacos",
+        "away": "Jagiellonia Bialystok",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 3,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Ararat-Armenia",
+        "home": "Jagiellonia Bialystok",
+        "away": "Ararat-Armenia",
+        "homeGoals": 3,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 0,
+        "ga": 3,
+        "result": "L",
+        "opponent": "Anderlecht",
+        "home": "Jagiellonia Bialystok",
+        "away": "Anderlecht",
+        "homeGoals": 0,
+        "awayGoals": 3,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      }
+    ],
+    "sksturmgraz": [
+      {
+        "date": "2026-09-16T19:00:00+00:00",
+        "gf": 0,
+        "ga": 0,
+        "result": "D",
+        "opponent": "Stade Rennais",
+        "home": "SK Sturm Graz",
+        "away": "Stade Rennais",
+        "homeGoals": 0,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 0,
+        "ga": 3,
+        "result": "L",
+        "opponent": "AFC Bournemouth",
+        "home": "AFC Bournemouth",
+        "away": "SK Sturm Graz",
+        "homeGoals": 3,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Marseille",
+        "home": "SK Sturm Graz",
+        "away": "Marseille",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "azalkmaar": [
+      {
+        "date": "2026-09-16T19:00:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "Sunderland",
+        "home": "Sunderland",
+        "away": "AZ Alkmaar",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Hapoel Be'er",
+        "home": "AZ Alkmaar",
+        "away": "Hapoel Be'er",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Hapoel Beer Sheva",
+        "home": "AZ Alkmaar",
+        "away": "Hapoel Beer Sheva",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 4,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Ararat-Armenia",
+        "home": "Ararat-Armenia",
+        "away": "AZ Alkmaar",
+        "homeGoals": 0,
+        "awayGoals": 4,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 4,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Ararat-Armenia FC",
+        "home": "Ararat-Armenia FC",
+        "away": "AZ Alkmaar",
+        "homeGoals": 0,
+        "awayGoals": 4,
+        "teamIsHome": false,
+        "historySource": "SportScore"
+      }
+    ],
+    "levskisofia": [
+      {
+        "date": "2026-09-17T16:45:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "RB Salzburg",
+        "home": "Levski Sofia",
+        "away": "RB Salzburg",
+        "homeGoals": 0,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "NEC Nijmegen",
+        "home": "NEC Nijmegen",
+        "away": "Levski Sofia",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Viktoria Plzen",
+        "home": "Viktoria Plzen",
+        "away": "Levski Sofia",
+        "homeGoals": 1,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "FC Viktoria Plzeň",
+        "home": "FC Viktoria Plzeň",
+        "away": "Levski Sofia",
+        "homeGoals": 1,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "SportScore"
+      }
+    ],
+    "rbsalzburg": [
+      {
+        "date": "2026-09-17T16:45:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Levski Sofia",
+        "home": "Levski Sofia",
+        "away": "RB Salzburg",
+        "homeGoals": 0,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 0,
+        "ga": 4,
+        "result": "L",
+        "opponent": "AC Milan",
+        "home": "RB Salzburg",
+        "away": "AC Milan",
+        "homeGoals": 0,
+        "awayGoals": 4,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 2,
+        "ga": 2,
+        "result": "D",
+        "opponent": "NK Celje",
+        "home": "NK Celje",
+        "away": "RB Salzburg",
+        "homeGoals": 2,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "oficrete": [
+      {
+        "date": "2026-09-17T16:45:00+00:00",
+        "gf": 2,
+        "ga": 0,
+        "result": "W",
+        "opponent": "TSG Hoffenheim",
+        "home": "OFI Crete",
+        "away": "TSG Hoffenheim",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Stade Rennais",
+        "home": "Stade Rennais",
+        "away": "OFI Crete",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 0,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Bayer Leverkusen",
+        "home": "OFI Crete",
+        "away": "Bayer Leverkusen",
+        "homeGoals": 0,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "celtic": [
+      {
+        "date": "2026-09-17T19:00:00+00:00",
+        "gf": 1,
+        "ga": 3,
+        "result": "L",
+        "opponent": "Ferencvaros",
+        "home": "Celtic",
+        "away": "Ferencvaros",
+        "homeGoals": 1,
+        "awayGoals": 3,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 1,
+        "ga": 4,
+        "result": "L",
+        "opponent": "Benfica",
+        "home": "Benfica",
+        "away": "Celtic",
+        "homeGoals": 4,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Celta Vigo",
+        "home": "Celtic",
+        "away": "Celta Vigo",
+        "homeGoals": 1,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "ferencvaros": [
+      {
+        "date": "2026-09-17T19:00:00+00:00",
+        "gf": 3,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Celtic",
+        "home": "Celtic",
+        "away": "Ferencvaros",
+        "homeGoals": 1,
+        "awayGoals": 3,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Viktoria Plzen",
+        "home": "Ferencvaros",
+        "away": "Viktoria Plzen",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 4,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Torreense",
+        "home": "Ferencvaros",
+        "away": "Torreense",
+        "homeGoals": 4,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "lechpoznan": [
+      {
+        "date": "2026-09-17T19:00:00+00:00",
+        "gf": 0,
+        "ga": 4,
+        "result": "L",
+        "opponent": "Crystal Palace",
+        "home": "Crystal Palace",
+        "away": "Lech Poznan",
+        "homeGoals": 4,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 0,
+        "ga": 4,
+        "result": "L",
+        "opponent": "Bayer Leverkusen",
+        "home": "Lech Poznan",
+        "away": "Bayer Leverkusen",
+        "homeGoals": 0,
+        "awayGoals": 4,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 0,
+        "ga": 4,
+        "result": "L",
+        "opponent": "Bayer 04 Leverkusen",
+        "home": "Lech Poznan",
+        "away": "Bayer 04 Leverkusen",
+        "homeGoals": 0,
+        "awayGoals": 4,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Sunderland",
+        "home": "Lech Poznan",
+        "away": "Sunderland",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      }
+    ],
+    "necnijmegen": [
+      {
+        "date": "2026-09-17T19:00:00+00:00",
+        "gf": 0,
+        "ga": 5,
+        "result": "L",
+        "opponent": "Juventus",
+        "home": "Juventus",
+        "away": "NEC Nijmegen",
+        "homeGoals": 5,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Levski Sofia",
+        "home": "NEC Nijmegen",
+        "away": "Levski Sofia",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 4,
+        "ga": 2,
+        "result": "W",
+        "opponent": "Dinamo Zagreb",
+        "home": "Dinamo Zagreb",
+        "away": "NEC Nijmegen",
+        "homeGoals": 2,
+        "awayGoals": 4,
+        "teamIsHome": false,
+        "historySource": "SportScore"
+      }
+    ],
+    "lillestrom": [
+      {
+        "date": "2026-09-17T19:00:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Torreense",
+        "home": "Lillestrom",
+        "away": "Torreense",
+        "homeGoals": 1,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Sparta Prague",
+        "home": "Sparta Prague",
+        "away": "Lillestrom",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "AC Sparta Praha",
+        "home": "AC Sparta Praha",
+        "away": "Lillestrom",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "SportScore"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 0,
+        "ga": 6,
+        "result": "L",
+        "opponent": "Real Sociedad",
+        "home": "Lillestrom",
+        "away": "Real Sociedad",
+        "homeGoals": 0,
+        "awayGoals": 6,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      }
+    ],
+    "torreense": [
+      {
+        "date": "2026-09-17T19:00:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Lillestrom",
+        "home": "Lillestrom",
+        "away": "Torreense",
+        "homeGoals": 1,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Sunderland",
+        "home": "Torreense",
+        "away": "Sunderland",
+        "homeGoals": 1,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 1,
+        "ga": 4,
+        "result": "L",
+        "opponent": "Ferencvaros",
+        "home": "Ferencvaros",
+        "away": "Torreense",
+        "homeGoals": 4,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "viktoriaplzen": [
+      {
+        "date": "2026-09-17T19:00:00+00:00",
+        "gf": 0,
+        "ga": 3,
+        "result": "L",
+        "opponent": "Union St.-Gilloise",
+        "home": "Viktoria Plzen",
+        "away": "Union St.-Gilloise",
+        "homeGoals": 0,
+        "awayGoals": 3,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Ferencvaros",
+        "home": "Ferencvaros",
+        "away": "Viktoria Plzen",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Levski Sofia",
+        "home": "Viktoria Plzen",
+        "away": "Levski Sofia",
+        "homeGoals": 1,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "unionstgilloise": [
+      {
+        "date": "2026-09-17T19:00:00+00:00",
+        "gf": 3,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Viktoria Plzen",
+        "home": "Viktoria Plzen",
+        "away": "Union St.-Gilloise",
+        "homeGoals": 0,
+        "awayGoals": 3,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Real Sociedad",
+        "home": "Union St.-Gilloise",
+        "away": "Real Sociedad",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 4,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Hapoel Be'er",
+        "home": "Union St.-Gilloise",
+        "away": "Hapoel Be'er",
+        "homeGoals": 4,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
     "cskasofia": [
       {
         "date": "2026-10-15T16:45:00+00:00",
@@ -27585,973 +28552,6 @@
         "away": "FC Twente",
         "homeGoals": 1,
         "awayGoals": 4,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "araratarmenia": [
-      {
-        "date": "2026-09-16T16:45:00+00:00",
-        "gf": 1,
-        "ga": 4,
-        "result": "L",
-        "opponent": "Sparta Prague",
-        "home": "Ararat-Armenia",
-        "away": "Sparta Prague",
-        "homeGoals": 1,
-        "awayGoals": 4,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 1,
-        "ga": 3,
-        "result": "L",
-        "opponent": "Jagiellonia Bialystok",
-        "home": "Jagiellonia Bialystok",
-        "away": "Ararat-Armenia",
-        "homeGoals": 3,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 0,
-        "ga": 4,
-        "result": "L",
-        "opponent": "AZ Alkmaar",
-        "home": "Ararat-Armenia",
-        "away": "AZ Alkmaar",
-        "homeGoals": 0,
-        "awayGoals": 4,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "spartaprague": [
-      {
-        "date": "2026-09-16T16:45:00+00:00",
-        "gf": 4,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Ararat-Armenia",
-        "home": "Ararat-Armenia",
-        "away": "Sparta Prague",
-        "homeGoals": 1,
-        "awayGoals": 4,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Lillestrom",
-        "home": "Sparta Prague",
-        "away": "Lillestrom",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "Olympiacos",
-        "home": "Olympiacos",
-        "away": "Sparta Prague",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "omonianicosia": [
-      {
-        "date": "2026-09-16T16:45:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Celta Vigo",
-        "home": "Omonia Nicosia",
-        "away": "Celta Vigo",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 3,
-        "ga": 0,
-        "result": "W",
-        "opponent": "NK Celje",
-        "home": "NK Celje",
-        "away": "Omonia Nicosia",
-        "homeGoals": 0,
-        "awayGoals": 3,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 1,
-        "ga": 4,
-        "result": "L",
-        "opponent": "Benfica",
-        "home": "Omonia Nicosia",
-        "away": "Benfica",
-        "homeGoals": 1,
-        "awayGoals": 4,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "anderlecht": [
-      {
-        "date": "2026-09-16T19:00:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Lyon",
-        "home": "Anderlecht",
-        "away": "Lyon",
-        "homeGoals": 1,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "Dinamo Zagreb",
-        "home": "Dinamo Zagreb",
-        "away": "Anderlecht",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 3,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Jagiellonia Bialystok",
-        "home": "Jagiellonia Bialystok",
-        "away": "Anderlecht",
-        "homeGoals": 0,
-        "awayGoals": 3,
-        "teamIsHome": false,
-        "historySource": "SportScore"
-      }
-    ],
-    "nkcelje": [
-      {
-        "date": "2026-09-16T19:00:00+00:00",
-        "gf": 0,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Bayer Leverkusen",
-        "home": "Bayer Leverkusen",
-        "away": "NK Celje",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 0,
-        "ga": 3,
-        "result": "L",
-        "opponent": "Omonia Nicosia",
-        "home": "NK Celje",
-        "away": "Omonia Nicosia",
-        "homeGoals": 0,
-        "awayGoals": 3,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 2,
-        "ga": 2,
-        "result": "D",
-        "opponent": "RB Salzburg",
-        "home": "NK Celje",
-        "away": "RB Salzburg",
-        "homeGoals": 2,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "hapoelbeer": [
-      {
-        "date": "2026-09-16T19:00:00+00:00",
-        "gf": 0,
-        "ga": 0,
-        "result": "D",
-        "opponent": "Dinamo Zagreb",
-        "home": "Hapoel Be'er",
-        "away": "Dinamo Zagreb",
-        "homeGoals": 0,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "AZ Alkmaar",
-        "home": "AZ Alkmaar",
-        "away": "Hapoel Be'er",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 0,
-        "ga": 4,
-        "result": "L",
-        "opponent": "Union St.-Gilloise",
-        "home": "Union St.-Gilloise",
-        "away": "Hapoel Be'er",
-        "homeGoals": 4,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "dinamozagreb": [
-      {
-        "date": "2026-09-16T19:00:00+00:00",
-        "gf": 0,
-        "ga": 0,
-        "result": "D",
-        "opponent": "Hapoel Be'er",
-        "home": "Hapoel Be'er",
-        "away": "Dinamo Zagreb",
-        "homeGoals": 0,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Anderlecht",
-        "home": "Dinamo Zagreb",
-        "away": "Anderlecht",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 2,
-        "ga": 4,
-        "result": "L",
-        "opponent": "NEC Nijmegen",
-        "home": "Dinamo Zagreb",
-        "away": "NEC Nijmegen",
-        "homeGoals": 2,
-        "awayGoals": 4,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      }
-    ],
-    "olympiacos": [
-      {
-        "date": "2026-09-16T19:00:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Jagiellonia Bialystok",
-        "home": "Olympiacos",
-        "away": "Jagiellonia Bialystok",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Marseille",
-        "home": "Marseille",
-        "away": "Olympiacos",
-        "homeGoals": 0,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Sparta Prague",
-        "home": "Olympiacos",
-        "away": "Sparta Prague",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "jagielloniabialystok": [
-      {
-        "date": "2026-09-16T19:00:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Olympiacos",
-        "home": "Olympiacos",
-        "away": "Jagiellonia Bialystok",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 3,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Ararat-Armenia",
-        "home": "Jagiellonia Bialystok",
-        "away": "Ararat-Armenia",
-        "homeGoals": 3,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 0,
-        "ga": 3,
-        "result": "L",
-        "opponent": "Anderlecht",
-        "home": "Jagiellonia Bialystok",
-        "away": "Anderlecht",
-        "homeGoals": 0,
-        "awayGoals": 3,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      }
-    ],
-    "sksturmgraz": [
-      {
-        "date": "2026-09-16T19:00:00+00:00",
-        "gf": 0,
-        "ga": 0,
-        "result": "D",
-        "opponent": "Stade Rennais",
-        "home": "SK Sturm Graz",
-        "away": "Stade Rennais",
-        "homeGoals": 0,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 0,
-        "ga": 3,
-        "result": "L",
-        "opponent": "AFC Bournemouth",
-        "home": "AFC Bournemouth",
-        "away": "SK Sturm Graz",
-        "homeGoals": 3,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Marseille",
-        "home": "SK Sturm Graz",
-        "away": "Marseille",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "azalkmaar": [
-      {
-        "date": "2026-09-16T19:00:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "Sunderland",
-        "home": "Sunderland",
-        "away": "AZ Alkmaar",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Hapoel Be'er",
-        "home": "AZ Alkmaar",
-        "away": "Hapoel Be'er",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Hapoel Beer Sheva",
-        "home": "AZ Alkmaar",
-        "away": "Hapoel Beer Sheva",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 4,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Ararat-Armenia",
-        "home": "Ararat-Armenia",
-        "away": "AZ Alkmaar",
-        "homeGoals": 0,
-        "awayGoals": 4,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 4,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Ararat-Armenia FC",
-        "home": "Ararat-Armenia FC",
-        "away": "AZ Alkmaar",
-        "homeGoals": 0,
-        "awayGoals": 4,
-        "teamIsHome": false,
-        "historySource": "SportScore"
-      }
-    ],
-    "levskisofia": [
-      {
-        "date": "2026-09-17T16:45:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "RB Salzburg",
-        "home": "Levski Sofia",
-        "away": "RB Salzburg",
-        "homeGoals": 0,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "NEC Nijmegen",
-        "home": "NEC Nijmegen",
-        "away": "Levski Sofia",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Viktoria Plzen",
-        "home": "Viktoria Plzen",
-        "away": "Levski Sofia",
-        "homeGoals": 1,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "FC Viktoria Plzeň",
-        "home": "FC Viktoria Plzeň",
-        "away": "Levski Sofia",
-        "homeGoals": 1,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "SportScore"
-      }
-    ],
-    "rbsalzburg": [
-      {
-        "date": "2026-09-17T16:45:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Levski Sofia",
-        "home": "Levski Sofia",
-        "away": "RB Salzburg",
-        "homeGoals": 0,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 0,
-        "ga": 4,
-        "result": "L",
-        "opponent": "AC Milan",
-        "home": "RB Salzburg",
-        "away": "AC Milan",
-        "homeGoals": 0,
-        "awayGoals": 4,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 2,
-        "ga": 2,
-        "result": "D",
-        "opponent": "NK Celje",
-        "home": "NK Celje",
-        "away": "RB Salzburg",
-        "homeGoals": 2,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "oficrete": [
-      {
-        "date": "2026-09-17T16:45:00+00:00",
-        "gf": 2,
-        "ga": 0,
-        "result": "W",
-        "opponent": "TSG Hoffenheim",
-        "home": "OFI Crete",
-        "away": "TSG Hoffenheim",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Stade Rennais",
-        "home": "Stade Rennais",
-        "away": "OFI Crete",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 0,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Bayer Leverkusen",
-        "home": "OFI Crete",
-        "away": "Bayer Leverkusen",
-        "homeGoals": 0,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "celtic": [
-      {
-        "date": "2026-09-17T19:00:00+00:00",
-        "gf": 1,
-        "ga": 3,
-        "result": "L",
-        "opponent": "Ferencvaros",
-        "home": "Celtic",
-        "away": "Ferencvaros",
-        "homeGoals": 1,
-        "awayGoals": 3,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 1,
-        "ga": 4,
-        "result": "L",
-        "opponent": "Benfica",
-        "home": "Benfica",
-        "away": "Celtic",
-        "homeGoals": 4,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Celta Vigo",
-        "home": "Celtic",
-        "away": "Celta Vigo",
-        "homeGoals": 1,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "ferencvaros": [
-      {
-        "date": "2026-09-17T19:00:00+00:00",
-        "gf": 3,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Celtic",
-        "home": "Celtic",
-        "away": "Ferencvaros",
-        "homeGoals": 1,
-        "awayGoals": 3,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Viktoria Plzen",
-        "home": "Ferencvaros",
-        "away": "Viktoria Plzen",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 4,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Torreense",
-        "home": "Ferencvaros",
-        "away": "Torreense",
-        "homeGoals": 4,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "lechpoznan": [
-      {
-        "date": "2026-09-17T19:00:00+00:00",
-        "gf": 0,
-        "ga": 4,
-        "result": "L",
-        "opponent": "Crystal Palace",
-        "home": "Crystal Palace",
-        "away": "Lech Poznan",
-        "homeGoals": 4,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 0,
-        "ga": 4,
-        "result": "L",
-        "opponent": "Bayer Leverkusen",
-        "home": "Lech Poznan",
-        "away": "Bayer Leverkusen",
-        "homeGoals": 0,
-        "awayGoals": 4,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 0,
-        "ga": 4,
-        "result": "L",
-        "opponent": "Bayer 04 Leverkusen",
-        "home": "Lech Poznan",
-        "away": "Bayer 04 Leverkusen",
-        "homeGoals": 0,
-        "awayGoals": 4,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Sunderland",
-        "home": "Lech Poznan",
-        "away": "Sunderland",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      }
-    ],
-    "necnijmegen": [
-      {
-        "date": "2026-09-17T19:00:00+00:00",
-        "gf": 0,
-        "ga": 5,
-        "result": "L",
-        "opponent": "Juventus",
-        "home": "Juventus",
-        "away": "NEC Nijmegen",
-        "homeGoals": 5,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Levski Sofia",
-        "home": "NEC Nijmegen",
-        "away": "Levski Sofia",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 4,
-        "ga": 2,
-        "result": "W",
-        "opponent": "Dinamo Zagreb",
-        "home": "Dinamo Zagreb",
-        "away": "NEC Nijmegen",
-        "homeGoals": 2,
-        "awayGoals": 4,
-        "teamIsHome": false,
-        "historySource": "SportScore"
-      }
-    ],
-    "lillestrom": [
-      {
-        "date": "2026-09-17T19:00:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Torreense",
-        "home": "Lillestrom",
-        "away": "Torreense",
-        "homeGoals": 1,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Sparta Prague",
-        "home": "Sparta Prague",
-        "away": "Lillestrom",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "AC Sparta Praha",
-        "home": "AC Sparta Praha",
-        "away": "Lillestrom",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "SportScore"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 0,
-        "ga": 6,
-        "result": "L",
-        "opponent": "Real Sociedad",
-        "home": "Lillestrom",
-        "away": "Real Sociedad",
-        "homeGoals": 0,
-        "awayGoals": 6,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      }
-    ],
-    "torreense": [
-      {
-        "date": "2026-09-17T19:00:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Lillestrom",
-        "home": "Lillestrom",
-        "away": "Torreense",
-        "homeGoals": 1,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Sunderland",
-        "home": "Torreense",
-        "away": "Sunderland",
-        "homeGoals": 1,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 1,
-        "ga": 4,
-        "result": "L",
-        "opponent": "Ferencvaros",
-        "home": "Ferencvaros",
-        "away": "Torreense",
-        "homeGoals": 4,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "viktoriaplzen": [
-      {
-        "date": "2026-09-17T19:00:00+00:00",
-        "gf": 0,
-        "ga": 3,
-        "result": "L",
-        "opponent": "Union St.-Gilloise",
-        "home": "Viktoria Plzen",
-        "away": "Union St.-Gilloise",
-        "homeGoals": 0,
-        "awayGoals": 3,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Ferencvaros",
-        "home": "Ferencvaros",
-        "away": "Viktoria Plzen",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Levski Sofia",
-        "home": "Viktoria Plzen",
-        "away": "Levski Sofia",
-        "homeGoals": 1,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "unionstgilloise": [
-      {
-        "date": "2026-09-17T19:00:00+00:00",
-        "gf": 3,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Viktoria Plzen",
-        "home": "Viktoria Plzen",
-        "away": "Union St.-Gilloise",
-        "homeGoals": 0,
-        "awayGoals": 3,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Real Sociedad",
-        "home": "Union St.-Gilloise",
-        "away": "Real Sociedad",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 4,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Hapoel Be'er",
-        "home": "Union St.-Gilloise",
-        "away": "Hapoel Be'er",
-        "homeGoals": 4,
-        "awayGoals": 0,
         "teamIsHome": true,
         "historySource": "ESPN completed scoreboard"
       }
@@ -54392,7 +54392,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -54670,7 +54670,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -54918,7 +54918,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -55191,7 +55191,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -55469,7 +55469,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -55717,7 +55717,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -55995,7 +55995,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -56759,7 +56759,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -57041,7 +57041,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -57294,7 +57294,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -57552,7 +57552,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -57835,7 +57835,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -58087,7 +58087,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -58344,7 +58344,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -58627,7 +58627,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -58879,7 +58879,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -59161,7 +59161,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -59439,7 +59439,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -59697,7 +59697,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -60486,7 +60486,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -60744,7 +60744,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -60992,7 +60992,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -61240,7 +61240,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -61498,7 +61498,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -84796,7 +84796,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -85079,7 +85079,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -85331,7 +85331,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -88191,7 +88191,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -90545,7 +90545,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -91318,7 +91318,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -92675,7 +92675,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -94792,7 +94792,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -95044,7 +95044,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -95842,7 +95842,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -99259,7 +99259,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -100823,7 +100823,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -102410,7 +102410,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -102688,7 +102688,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -102961,7 +102961,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -103239,7 +103239,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -103512,7 +103512,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -103760,7 +103760,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -104008,7 +104008,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -104281,7 +104281,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -104559,7 +104559,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results, SportScore",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -106663,7 +106663,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results, SportScore",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -106913,7 +106913,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -107429,7 +107429,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -108208,7 +108208,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -108724,7 +108724,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -110572,7 +110572,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -110855,7 +110855,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -141100,7 +141100,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -141378,7 +141378,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -141626,7 +141626,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -141899,7 +141899,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -142177,7 +142177,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -142425,7 +142425,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -142703,7 +142703,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -143467,7 +143467,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -143749,7 +143749,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -144002,7 +144002,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -144260,7 +144260,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -144543,7 +144543,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -144795,7 +144795,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -145052,7 +145052,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -145335,7 +145335,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -145587,7 +145587,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -145869,7 +145869,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -146147,7 +146147,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -146405,7 +146405,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -147194,7 +147194,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -147452,7 +147452,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -147700,7 +147700,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -147948,7 +147948,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -148206,7 +148206,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -171504,7 +171504,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -171787,7 +171787,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -172039,7 +172039,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -174899,7 +174899,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -177253,7 +177253,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -178026,7 +178026,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -179383,7 +179383,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -181500,7 +181500,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -181752,7 +181752,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -182550,7 +182550,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -185967,7 +185967,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -187531,7 +187531,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -189118,7 +189118,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -189396,7 +189396,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -189669,7 +189669,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -189947,7 +189947,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -190220,7 +190220,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -190468,7 +190468,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -190716,7 +190716,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -190989,7 +190989,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard, OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -191267,7 +191267,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results, SportScore",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -193371,7 +193371,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results, SportScore",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -193621,7 +193621,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -194137,7 +194137,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -194916,7 +194916,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -195432,7 +195432,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: OpenFootball season results",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -197280,7 +197280,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -197563,7 +197563,7 @@
         "recentForm": "Heim: 5/5; Gast: 5/5; Quellen: ESPN completed scoreboard",
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
-        "googleResearch": "Google-Suche mit Team-Cache; einzelne Teams werden laufend ergänzt"
+        "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)"
       },
       "form": {
         "home": [
@@ -202798,6 +202798,87 @@
   ],
   "errors": [],
   "source": "OpenFootball + ESPN + OpenLigaDB + Google News RSS + Google Suche + Poisson-Basismodell",
+  "sourceDiagnostics": {
+    "OpenFootball": {
+      "status": "ok",
+      "httpSuccess": true,
+      "fixtures": 125,
+      "perLeague": {
+        "Bundesliga": 18,
+        "Serie A": 30,
+        "Ligue 1": 18,
+        "La Liga": 20,
+        "Premier League": 20,
+        "Süper Lig": 0,
+        "Primeira Liga": 19,
+        "Champions League": 0,
+        "Europa League": 0,
+        "Conference League": 0
+      }
+    },
+    "ESPN": {
+      "status": "ok",
+      "httpSuccess": true,
+      "fixtures": 202,
+      "perLeague": {
+        "Bundesliga": 18,
+        "Champions League": 18,
+        "Conference League": 18,
+        "Europa League": 18,
+        "La Liga": 21,
+        "Ligue 1": 19,
+        "Premier League": 20,
+        "Primeira Liga": 19,
+        "Serie A": 30,
+        "Süper Lig": 21
+      },
+      "requestedLeagues": 10,
+      "failedLeagues": 0
+    },
+    "OpenLigaDB": {
+      "status": "empty",
+      "httpSuccess": true,
+      "fixtures": 0,
+      "responseRows": 9
+    },
+    "SportScore": {
+      "status": "ok",
+      "httpSuccess": true,
+      "fixtures": 62,
+      "dailyRequests": 60,
+      "httpSuccesses": 60,
+      "emptyResponses": 0,
+      "failedDays": 0,
+      "perLeague": {
+        "Champions League": 18,
+        "Conference League": 18,
+        "Europa League": 18,
+        "La Liga": 1,
+        "Premier League": 1,
+        "Serie A": 6
+      },
+      "historyByLeague": {
+        "Champions League": 4,
+        "Conference League": 24,
+        "Europa League": 26,
+        "La Liga": 1,
+        "Premier League": 1,
+        "Serie A": 5
+      }
+    },
+    "football-data.org": {
+      "status": "not_configured",
+      "httpSuccess": null,
+      "fixtures": 0,
+      "error": "FOOTBALL_DATA_TOKEN is empty"
+    },
+    "API-Football": {
+      "status": "not_configured",
+      "httpSuccess": null,
+      "fixtures": 0,
+      "error": "API_FOOTBALL_KEY is empty"
+    }
+  },
   "teamResearchCache": {
     "news": {
       "Besiktas": {
@@ -215550,6 +215631,206 @@
         "items": [],
         "updatedAt": "2026-10-26T09:59:57.200535+00:00",
         "status": "ok"
+      },
+      "Olympique de Marseille": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Sporting Clube de Braga": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Marseille": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Toulouse": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Real Sociedad": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Toulouse FC": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Genclerbirligi": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "FC Famalicao": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "FC Famalicão": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Alanyaspor": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Newcastle United FC": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Braga": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "RC Deportivo": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Deportivo": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Everton FC": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Gil Vicente FC": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "FC Alverca": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Vitória Guimarães": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Alverca": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Gil Vicente": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Vitória de Guimaraes": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Shakhtar Donetsk": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "FC Shakhtar Donetsk": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Bayern Munich": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Bodo/Glimt": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Feyenoord Rotterdam": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Manchester United": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "LASK Linz": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Slovan Bratislava": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Atletico Madrid": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "FC Bayern Munich": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "LOSC Lille": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Feyenoord": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Inter Milan": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "FK Bodo/Glimt": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Paris Saint Germain": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "AEK Athens": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Liverpool": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "PSV Eindhoven": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
+      },
+      "Club Brugge": {
+        "items": [],
+        "updatedAt": "2026-10-26T10:26:04.384290+00:00",
+        "status": "ok"
       }
     }
   },
@@ -215560,7 +215841,7 @@
       "cachedErrors": 0
     },
     "googleSearch": {
-      "teamsCached": 200,
+      "teamsCached": 240,
       "cachedErrors": 0
     }
   }
