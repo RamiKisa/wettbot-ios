@@ -467,6 +467,7 @@
   $('refreshBtn').onclick=async()=>{
     const btn=$('refreshBtn');
     const setMessage=message=>{const el=$('refreshMsg');if(el)el.textContent=message;};
+    if(!btn){console.error('Spielplan-Abrufbutton fehlt im DOM');return;}
     btn.disabled=true;
     btn.textContent='↻ Spieltag wird geladen …';
     setMessage('Rufe den heutigen Spielplan ab …');
@@ -551,21 +552,27 @@
   $('clearBtn').onclick=()=>{if(confirm('Wirklich alle lokalen Spiele, Quoten und Paper-Wetten unwiderruflich löschen?')){state={matches:[],odds:[],bets:[],lastRefresh:null};save();toast('Lokale Daten gelöscht.');}};
   function fillAnalysisSelectors(){
     const league=$('analysisLeague'),match=$('analysisMatch'),status=$('selectorStatus');
+    if(!league||!match||!status){
+      console.error('Analysis selector DOM incomplete',{league:!!league,match:!!match,status:!!status});
+      return false;
+    }
     const priorLeague=league.value,priorMatch=match.value;
-    const items=analysisData?.recommendations||[];
-    const leagues=[...new Set(items.map(x=>x.league).filter(Boolean))].sort();
+    const items=Array.isArray(analysisData?.recommendations)?analysisData.recommendations:[];
+    const leagues=[...new Set(items.map(x=>x?.league).filter(Boolean))].sort();
     league.innerHTML='<option value="">Alle Ligen</option>'+leagues.map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join('');
     if(leagues.includes(priorLeague))league.value=priorLeague;
-    const filtered=items.filter(x=>!league.value||x.league===league.value);
-    match.innerHTML='<option value="">Spiel auswählen …</option>'+filtered.map(x=>'<option value="'+String(x.id)+'">'+esc(x.home+' – '+x.away+' · '+new Date(x.date).toLocaleString('de-DE',{dateStyle:'short',timeStyle:'short'}))+'</option>').join('');
+    const filtered=items.filter(x=>!league.value||x?.league===league.value);
+    match.innerHTML='<option value="">Spiel auswählen …</option>'+filtered.map(x=>'<option value="'+esc(String(x.id??''))+'">'+esc((x.home||'Heim')+' – '+(x.away||'Gast')+' · '+new Date(x.date).toLocaleString('de-DE',{dateStyle:'short',timeStyle:'short'}))+'</option>').join('');
     match.disabled=!filtered.length;
     if(filtered.some(x=>String(x.id)===priorMatch))match.value=priorMatch;
     status.textContent=items.length?items.length+' Spiele verfügbar in '+leagues.length+' Wettbewerben.':'Noch keine Spieldaten. Datenquelle und API-Schlüssel prüfen.';
+    return true;
   }
   function renderSelectedAnalysis(){
-    const id=$('analysisMatch').value;
+    const selector=$('analysisMatch'),out=$('selectedAnalysis');
+    if(!selector||!out){console.error('Selected-analysis DOM incomplete',{selector:!!selector,out:!!out});return;}
+    const id=selector.value;
     const m=(analysisData?.recommendations||[]).find(x=>String(x.id)===id);
-    const out=$('selectedAnalysis');
     if(!m){out.innerHTML='<div class="empty">Bitte wähle eine Liga und ein Spiel aus.</div>';return;}
     const p=m.prediction||{},pr=p.probabilities||{},c=p.comparison||{},coverage=m.dataCoverage||{},mc=m.marketCoverage||{};
     const fmt=v=>v===null||v===undefined||v===''?'Keine Daten':String(v);
@@ -708,6 +715,10 @@
   }
   async function loadAnalyses(){
     const status=$('top10Status'),list=$('analysisList'),stamp=$('analysisTimestamp');
+    if(!status||!list||!stamp){
+      console.error('Analysis-list DOM incomplete',{status:!!status,list:!!list,stamp:!!stamp});
+      return;
+    }
     status.textContent='Lade automatische Spielanalysen …';list.innerHTML='';stamp.textContent='';
     try{
       const res=await fetch('./recommendations.json?v='+Date.now(),{cache:'no-store'});
