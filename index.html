@@ -538,7 +538,7 @@
   $('exportBtn').onclick=()=>{
     const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});download(blob,`wettbot-sicherung-${today()}.json`);
   };
-  $('exportCsvBtn').onclick=()=>{
+  if($('exportCsvBtn')) $('exportCsvBtn').onclick=()=>{
     const cols=['id','createdAt','matchName','selection','odds','prob','ev','stake','result','pnl','closedAt'];
     const rows=[cols.join(','),...state.bets.map(b=>cols.map(c=>csv(b[c])).join(','))].join('\r\n');
     download(new Blob(['\ufeff'+rows],{type:'text/csv;charset=utf-8'}),`paper-trading-${today()}.csv`);
