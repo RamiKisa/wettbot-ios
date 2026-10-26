@@ -239,29 +239,40 @@ def fixture_fallback():
    all_matches.append({"id":"openligadb-"+str(m.get("matchID")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":"Bundesliga","home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenLigaDB","dataCoverage":{"fixture":"OpenLigaDB"}})
  except Exception as e:
   errors.append("OpenLigaDB Bundesliga: "+str(e)[:80])
- # Deduplicate feeds by competition, kickoff date and normalized team names.
- import unicodedata,re
- unique=[]; seen=set()
- for match in sorted(all_matches,key=lambda x:x.get("timestamp",0)):
-  key=(match.get("league"),match.get("date","")[:10],re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",match.get("home","")).encode("ascii","ignore").decode().lower()),re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",match.get("away","")).encode("ascii","ignore").decode().lower()))
-  if key in seen: continue
-  seen.add(key); unique.append(match)
- all_matches=unique
- all_matches.sort(key=lambda x:x["timestamp"])
- import math, unicodedata, re
+ # Canonical team names before source merging; this removes ESPN/OpenFootball alias duplicates.
+ import unicodedata,re,math
  aliases={
   "fcbarcelona":"barcelona","barcelonafc":"barcelona",
   "bayernmunchen":"bayernmunich","fcbayernmunchen":"bayernmunich","fcbayern":"bayernmunich",
-  "internazionale":"intermilan","inter":"intermilan",
-  "parissaintgermain":"psg","parissaintgermainfc":"psg",
-  "galatasarayistanbul":"galatasaray","fenerbahceistanbul":"fenerbahce","besiktasistanbul":"besiktas",
-  "fcporto":"porto","sportingcp":"sportinglisbon","sportinglisbon":"sportinglisbon",
-  "athleticclub":"athleticbilbao","athleticbilbao":"athleticbilbao",
-  "atleticodemadrid":"atleticomadrid"
+  "fcinternazionalemilano":"intermilan","internazionalemilano":"intermilan","internazionale":"intermilan","inter":"intermilan",
+  "milan":"acmilan","acmilan":"acmilan","sscnapoli":"napoli","napoli":"napoli","juventusfc":"juventus",
+  "parissaintgermain":"psg","parissaintgermainfc":"psg","galatasarayistanbul":"galatasaray","galatasaraysk":"galatasaray",
+  "fenerbahceistanbul":"fenerbahce","fenerbahcesk":"fenerbahce","besiktasistanbul":"besiktas","besiktasjk":"besiktas",
+  "fcporto":"porto","sportingcp":"sportinglisbon","sportingclubedeportugal":"sportinglisbon","sportinglisbon":"sportinglisbon",
+  "athleticclub":"athleticbilbao","athleticbilbao":"athleticbilbao","realbetisseville":"realbetis",
+  "atleticodemadrid":"atleticomadrid","realmadridcf":"realmadrid","realracingclubdesantander":"racingdesantander",
+  "arsenalfc":"arsenal","liverpoolfc":"liverpool","chelseafc":"chelsea","manchesterunitedfc":"manchesterunited",
+  "manchestercityfc":"manchestercity","tottenhamhotspurfc":"tottenhamhotspur","evertonfc":"everton",
+  "westhamunitedfc":"westhamunited","newcastleunitedfc":"newcastleunited","crystalpalacefc":"crystalpalace",
+  "astonvillafc":"astonvilla","brightonandhovealbionfc":"brighton",
+  "olympiquedemarseille":"marseille","olympiquelyonnais":"lyon","asmonaco":"monaco","lilleosc":"lille",
+  "fcfamalicao":"famalicao","sportingclube":"sportinglisbon"
  }
  def team_key(value):
   key=re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",str(value or "")).encode("ascii","ignore").decode().lower())
   return aliases.get(key,key)
+ unique=[]; seen=set(); duplicate_sources=collections.Counter()
+ for match in sorted(all_matches,key=lambda x:x.get("timestamp",0)):
+  home_key=team_key(match.get("home")); away_key=team_key(match.get("away"))
+  pair=tuple(sorted((home_key,away_key)))
+  key=(match.get("league"),match.get("date","")[:10],pair)
+  if key in seen:
+   duplicate_sources[match.get("source","unknown")]+=1
+   continue
+  seen.add(key); unique.append(match)
+ print("Duplicate fixtures removed by source:",json.dumps(dict(sorted(duplicate_sources.items())),ensure_ascii=False))
+ all_matches=unique
+ all_matches.sort(key=lambda x:x["timestamp"])
  history_by_team={}
  for (history_league,team),rows in history.items():
   history_by_team.setdefault(team_key(team),[]).extend(rows)
