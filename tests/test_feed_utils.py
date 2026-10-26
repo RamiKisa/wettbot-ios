@@ -6,7 +6,7 @@ import unittest
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from feed_utils import espn_completed_match_rows, full_time_score, match_rows, poisson_match_model
+from feed_utils import espn_completed_match_rows, full_time_score, match_rows, poisson_match_model, sportscore_match_rows
 
 
 class MatchRowsTests(unittest.TestCase):
@@ -121,6 +121,50 @@ class PoissonModelTests(unittest.TestCase):
         self.assertGreater(result["awayGoals"], 0)
         self.assertAlmostEqual(sum(result["probabilities"].values()), 100.0, delta=0.2)
         self.assertEqual(result["historyMatches"], {"home": 0, "away": 0})
+
+
+class SportScoreFixtureTests(unittest.TestCase):
+    def test_parses_documented_widget_style_match(self):
+        payload = {"sport": "football", "count": 1, "matches": [{
+            "slug": "home-fc-vs-away-fc",
+            "competition": {"name": "Bundesliga"},
+            "home": "Home FC",
+            "away": "Away FC",
+            "status": "finished",
+            "time": "2026-10-24T14:30:00Z",
+            "score": "2-1",
+            "venue": {"name": "Home Stadium"},
+        }]}
+        rows = sportscore_match_rows(payload)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["home"], "Home FC")
+        self.assertEqual(rows[0]["away"], "Away FC")
+        self.assertEqual(rows[0]["competition"], "Bundesliga")
+        self.assertEqual((rows[0]["homeGoals"], rows[0]["awayGoals"]), (2, 1))
+        self.assertEqual(rows[0]["venue"], "Home Stadium")
+
+    def test_parses_v1_fixture_variants_and_deduplicates(self):
+        match = {
+            "fixtureId": 17,
+            "competition_name": "uefa-champions-league",
+            "homeTeam": {"name": "Team A"},
+            "away_team": {"displayName": "Team B"},
+            "utcDate": "2026-11-03T18:45:00Z",
+            "status": {"name": "FINISHED"},
+            "scores": {"fullTime": {"home": 0, "away": 0}},
+        }
+        payload = {"data": {"fixtures": [match, match, None]}}
+        rows = sportscore_match_rows(payload)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["id"], "17")
+        self.assertEqual(rows[0]["competition"], "uefa-champions-league")
+        self.assertEqual((rows[0]["homeGoals"], rows[0]["awayGoals"]), (0, 0))
+        self.assertEqual(rows[0]["status"], "FINISHED")
+
+    def test_ignores_unusable_payloads(self):
+        self.assertEqual(sportscore_match_rows(None), [])
+        self.assertEqual(sportscore_match_rows({"data": "not-a-list"}), [])
+        self.assertEqual(sportscore_match_rows([{"home": "A"}]), [])
 
 
 if __name__ == "__main__":
