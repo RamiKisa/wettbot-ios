@@ -232,11 +232,15 @@ def fetch_espn_events(slug, start_date=None, end_date=None):
  return list(found.values())
 def fixture_fallback():
  all_matches=[]; errors=[]; history={}
+ SOURCE_DIAGNOSTICS.clear()
+ openfootball_fixture_counts=collections.Counter()
+ openfootball_history_counts=collections.Counter()
  for league,(file,zone) in leagues.items():
   try:
    d=fetch_openfootball(season,file)
    current_rows=match_rows(d)
    print("OpenFootball current season:",league,"matches=",len(current_rows),"root_type=",type(d).__name__)
+   parsed_count=0
    for m in current_rows:
     day=m.get("date"); tm=m.get("time") or "15:00"
     if not day: continue
@@ -259,8 +263,12 @@ def fixture_fallback():
     except (TypeError,ValueError): pass
     if dt<=now or dt>now+datetime.timedelta(days=WINDOW_DAYS): continue
     all_matches.append({"id":"fallback-"+league.lower().replace(" ","-")+"-"+str(day)+"-"+str(len(all_matches)),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenFootball","dataCoverage":{"fixture":"OpenFootball"}})
+    parsed_count+=1
+   openfootball_fixture_counts[league]=parsed_count
+   _diag("OpenFootball","ok" if current_rows else "empty",True,parsed_count,league=league,seasonRows=len(current_rows),season=season)
   except Exception as e:
-   errors.append(league+" OpenFootball: "+str(e)[:80]) # Supplement current-season results with previous-season results for a stable form baseline.
+   errors.append(league+" OpenFootball: "+str(e)[:80])
+   _diag("OpenFootball","error",False,0,str(e),league=league) # Supplement current-season results with previous-season results for a stable form baseline.
  previous_season=season-1
  for league,(file,zone) in leagues.items():
   try:
@@ -289,6 +297,8 @@ def fixture_fallback():
   except Exception as e:
    errors.append(league+" previous-season history: "+str(e)[:70])
  # Secondary independent fixture feed: ESPN for every configured competition.
+ espn_fixture_counts=collections.Counter()
+ espn_errors=[]
  for league,slug in ESPN_SLUGS.items():
   try:
    for event in fetch_espn_events(slug):
@@ -301,9 +311,12 @@ def fixture_fallback():
     if not home or not away or not rawdate: continue
     dt=datetime.datetime.fromisoformat(rawdate.replace("Z","+00:00"))
     if dt<=now or dt>now+datetime.timedelta(days=WINDOW_DAYS): continue
-    all_matches.append({"id":"espn-"+str(event.get("id")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"ESPN public scoreboard","dataCoverage":{"fixture":"ESPN public scoreboard"}})
+    all_matches.append({"id":"espn-"+str(event.get("id")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"ESPN","dataCoverage":{"fixture":"ESPN public scoreboard"}})
+    espn_fixture_counts[league]+=1
   except Exception as e:
+   espn_errors.append(league+": "+str(e)[:100])
    errors.append(league+" ESPN fallback: "+str(e)[:100])
+ _diag("ESPN","error" if espn_errors else "ok" if sum(espn_fixture_counts.values()) else "empty",not bool(espn_errors),sum(espn_fixture_counts.values()),"; ".join(espn_errors[:10]) or None,perLeague=dict(espn_fixture_counts),requestedLeagues=len(ESPN_SLUGS),failedLeagues=len(espn_errors))
  # Recent completed ESPN results fill form gaps, especially for UEFA fixtures and Turkish clubs.
  history_days=90
  history_start=now.date()-datetime.timedelta(days=history_days)
