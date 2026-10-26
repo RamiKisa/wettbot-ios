@@ -41,9 +41,7 @@
     {
       "name": "Süper Lig",
       "espnSlug": "tur.1",
-      "apiFootballId": 203,
-      "openFootballFile": "tr.1.json",
-      "openFootballTimezone": "Europe/Istanbul"
+      "apiFootballId": 203
     },
     {
       "name": "Primeira Liga",
