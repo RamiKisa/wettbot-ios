@@ -3,7 +3,7 @@ KEY=os.environ.get("API_FOOTBALL_KEY","").strip()
 OUT=pathlib.Path("recommendations.json"); now=datetime.datetime.now(datetime.timezone.utc)
 season=now.year if now.month>=6 else now.year-1
 leagues={"Premier League":("en.1.json","Europe/London"),"Bundesliga":("de.1.json","Europe/Berlin"),"La Liga":("es.1.json","Europe/Madrid"),"Serie A":("it.1.json","Europe/Rome"),"Ligue 1":("fr.1.json","Europe/Paris"),"Primeira Liga":("pt.1.json","Europe/Lisbon")}
-uefa={"Champions League":2,"Europa League":3,"Conference League":848}
+uefa={"Champions League":2,"Europa League":3,"Conference League":848,"Süper Lig":203}
 BUDGET=92; used=0
 def save(x): OUT.write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding="utf-8")
 def api(path,params):
@@ -152,7 +152,7 @@ def fixture_fallback():
       all_matches.append({"id":"espn-"+str(event.get("id")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"ESPN public scoreboard","dataCoverage":{"fixture":"ESPN public scoreboard"}})
     except Exception as ee: errors.append(league+" ESPN: "+str(ee)[:80])
  # Secondary independent fixture feed: ESPN scoreboard for all supported competitions.
- espn_leagues={"Premier League":"eng.1","Bundesliga":"ger.1","La Liga":"esp.1","Serie A":"ita.1","Ligue 1":"fra.1","Primeira Liga":"por.1","Champions League":"uefa.champions","Europa League":"uefa.europa","Conference League":"uefa.europa.conf"}
+ espn_leagues={"Premier League":"eng.1","Bundesliga":"ger.1","La Liga":"esp.1","Serie A":"ita.1","Ligue 1":"fra.1","Primeira Liga":"por.1","Champions League":"uefa.champions","Europa League":"uefa.europa","Conference League":"uefa.europa.conf","Süper Lig":"tur.1"}
  dates=now.strftime("%Y%m%d")+"-"+(now+datetime.timedelta(days=7)).strftime("%Y%m%d")
  for league,slug in espn_leagues.items():
   try:
@@ -240,7 +240,7 @@ for name,lid in leagues_api.items():
    home=t.get("home") or {}; away=t.get("away") or {}
    fixtures.append({"id":f.get("id"),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":name,"home":home.get("name"),"away":away.get("name"),"homeId":home.get("id"),"awayId":away.get("id"),"venue":(f.get("venue") or {}).get("name"),"status":"scheduled","dataCoverage":{}})
  except Exception as e: errors.append(name+" fixtures: "+str(e)[:100])
-fixtures.sort(key=lambda x:x["timestamp"]); fixtures=fixtures[:45]
+fixtures.sort(key=lambda x:x["timestamp"])
 for f in fixtures:
  try:
   rows=api("predictions",{"fixture":f["id"]})
