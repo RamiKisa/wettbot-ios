@@ -1,4 +1,4 @@
-import json, os, datetime, urllib.request, urllib.parse, pathlib
+import json, os, datetime, urllib.request, urllib.parse, pathlib, base64, collections
 KEY=os.environ.get("API_FOOTBALL_KEY","").strip()
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 CONFIG=json.loads((ROOT/"competitions.json").read_text(encoding="utf-8"))
@@ -21,6 +21,15 @@ def api(path,params):
  used+=1
  if d.get("errors"): raise RuntimeError(str(d["errors"]))
  return d.get("response",[])
+def fetch_openfootball(season_year, filename):
+ season_folder=str(season_year)+"-"+str((season_year+1)%100).zfill(2)
+ url="https://api.github.com/repos/openfootball/football.json/contents/"+season_folder+"/"+filename+"?ref=master"
+ req=urllib.request.Request(url,headers={"User-Agent":"RamoBet/3.3","Accept":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"})
+ with urllib.request.urlopen(req,timeout=18) as resp: entry=json.load(resp)
+ if entry.get("encoding")!="base64" or not entry.get("content"):
+  raise RuntimeError("OpenFootball GitHub Contents API returned no base64 file content")
+ try: return json.loads(base64.b64decode(entry["content"]).decode("utf-8"))
+ except Exception as exc: raise RuntimeError("Could not decode OpenFootball season file: "+str(exc)[:100])
 def pct(v):
  try:return round(float(str(v).replace("%","").strip()),1)
  except:return None
@@ -108,10 +117,9 @@ def enrich_team_news(fixtures, max_teams=24):
 def fixture_fallback():
  all_matches=[]; errors=[]; history={}
  for league,(file,zone) in leagues.items():
-  url="https://raw.githubusercontent.com/openfootball/football.json/master/%s/%s"%(str(season)+"-"+str((season+1)%100).zfill(2),file)
   try:
-   req=urllib.request.Request(url,headers={"User-Agent":"Wettbot/3.0"})
-   with urllib.request.urlopen(req,timeout=15) as resp: d=json.load(resp)
+   d=fetch_openfootball(season,file)
+   print("OpenFootball current season:",league,"matches=",len(d.get("matches",[])))
    for m in d.get("matches",[]):
     day=m.get("date"); tm=m.get("time") or "15:00"
     if not day: continue
@@ -139,7 +147,7 @@ def fixture_fallback():
   except Exception as e:
    errors.append(league+" OpenFootball: "+str(e)[:80])
    # Free ESPN public scoreboard fallback if the current OpenFootball season is not published.
-   espn_slug={"Premier League":"eng.1","Bundesliga":"ger.1","La Liga":"esp.1","Serie A":"ita.1","Ligue 1":"fra.1","Primeira Liga":"por.1"}.get(league)
+   espn_slug=ESPN_SLUGS.get(league)
    if espn_slug:
     try:
      dates=now.strftime("%Y%m%d")+"-"+(now+datetime.timedelta(days=WINDOW_DAYS)).strftime("%Y%m%d")
@@ -161,10 +169,8 @@ def fixture_fallback():
  # Supplement current-season results with previous-season results for a stable form baseline.
  previous_season=season-1
  for league,(file,zone) in leagues.items():
-  previous_url="https://raw.githubusercontent.com/openfootball/football.json/master/%s/%s"%(str(previous_season)+"-"+str((previous_season+1)%100).zfill(2),file)
   try:
-   req=urllib.request.Request(previous_url,headers={"User-Agent":"RamoBet/3.2 historical-form"})
-   with urllib.request.urlopen(req,timeout=12) as resp: previous_data=json.load(resp)
+   previous_data=fetch_openfootball(previous_season,file)
    from zoneinfo import ZoneInfo
    for m in previous_data.get("matches",[]):
     day=m.get("date"); tm=m.get("time") or "15:00"
@@ -287,6 +293,9 @@ def fixture_fallback():
   f["h2h"]=sorted([x for x in history_by_team.get(team_key(f["home"]),[]) if team_key(x.get("opponent"))==team_key(f["away"])],key=lambda x:x["date"])[-5:]
  enrich_team_news(all_matches,max_teams=40)
  enrich_google_team_research(all_matches,max_teams=20)
+ print("Fallback fixture counts by league:",json.dumps(dict(sorted(collections.Counter(x.get("league","UNKNOWN") for x in all_matches).items()),ensure_ascii=False))
+ print("Fallback fixture counts by source:",json.dumps(dict(sorted(collections.Counter(x.get("source","unknown") for x in all_matches).items()),ensure_ascii=False))
+ print("Source errors:",json.dumps(errors[:30],ensure_ascii=False))
  return all_matches,errors
 if not KEY:
  fixtures,errors=fixture_fallback()
