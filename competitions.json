@@ -7,6 +7,7 @@
       "name": "Bundesliga",
       "espnSlug": "ger.1",
       "apiFootballId": 78,
+      "footballDataCode": "BL1",
       "openFootballFile": "de.1.json",
       "openFootballTimezone": "Europe/Berlin"
     },
@@ -14,6 +15,7 @@
       "name": "Serie A",
       "espnSlug": "ita.1",
       "apiFootballId": 135,
+      "footballDataCode": "SA",
       "openFootballFile": "it.1.json",
       "openFootballTimezone": "Europe/Rome"
     },
@@ -21,6 +23,7 @@
       "name": "Ligue 1",
       "espnSlug": "fra.1",
       "apiFootballId": 61,
+      "footballDataCode": "FL1",
       "openFootballFile": "fr.1.json",
       "openFootballTimezone": "Europe/Paris"
     },
@@ -28,6 +31,7 @@
       "name": "La Liga",
       "espnSlug": "esp.1",
       "apiFootballId": 140,
+      "footballDataCode": "PD",
       "openFootballFile": "es.1.json",
       "openFootballTimezone": "Europe/Madrid"
     },
@@ -35,6 +39,7 @@
       "name": "Premier League",
       "espnSlug": "eng.1",
       "apiFootballId": 39,
+      "footballDataCode": "PL",
       "openFootballFile": "en.1.json",
       "openFootballTimezone": "Europe/London"
     },
@@ -47,18 +52,21 @@
       "name": "Primeira Liga",
       "espnSlug": "por.1",
       "apiFootballId": 94,
+      "footballDataCode": "PPL",
       "openFootballFile": "pt.1.json",
       "openFootballTimezone": "Europe/Lisbon"
     },
     {
       "name": "Champions League",
       "espnSlug": "uefa.champions",
-      "apiFootballId": 2
+      "apiFootballId": 2,
+      "footballDataCode": "CL"
     },
     {
       "name": "Europa League",
       "espnSlug": "uefa.europa",
-      "apiFootballId": 3
+      "apiFootballId": 3,
+      "footballDataCode": "EL"
     },
     {
       "name": "Conference League",
