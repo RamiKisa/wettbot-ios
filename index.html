@@ -457,10 +457,10 @@
   });
   $('refreshBtn').onclick=async()=>{
     const btn=$('refreshBtn');
+    const setMessage=message=>{const el=$('refreshMsg');if(el)el.textContent=message;};
     btn.disabled=true;
     btn.textContent='↻ Spieltag wird geladen …';
-    const setRefreshMessage=message=>{const el=$('refreshMsg');if(el)el.textContent=message;};
-    setRefreshMessage('Rufe den heutigen Spielplan ab …'));
+    setMessage('Rufe den heutigen Spielplan ab …');
     let added=0;
     const errors=[];
     const leagues=[
@@ -518,18 +518,12 @@
       fillAnalysisSelectors();
       const todays=state.matches.filter(m=>m.date===date&&String(m.source||'').startsWith('ESPN'));
       const leagueNames=[...new Set(todays.map(m=>m.league))];
-      if(added){
-        $('refreshMsg').textContent=added+' heutige(s) Spiel(e) geladen. '+(leagueNames.length?'Ligen: '+leagueNames.join(', '):'');
-      }else if(errors.length===leagues.length){
-        $('refreshMsg').textContent='Abruf fehlgeschlagen: Keine der kostenlosen Spielplanquellen war erreichbar. Bitte erneut versuchen.';
-      }else{
-        $('refreshMsg').textContent='Abruf abgeschlossen. Die erreichbaren Quellen melden keine weiteren heutigen Spiele.';
-      }
-      
+      if(added)setMessage(added+' heutige(s) Spiel(e) geladen. Ligen: '+leagueNames.join(', ')+'.');
+      else if(errors.length===leagues.length)setMessage('Abruf fehlgeschlagen: Keine der kostenlosen Spielplanquellen war erreichbar. Bitte erneut versuchen.');
+      else setMessage('Abruf abgeschlossen. Die erreichbaren Quellen melden keine weiteren heutigen Spiele.');
     }catch(error){
       console.error('Spielplan-Abruf fehlgeschlagen:',error);
-      $('refreshMsg').textContent='Abruf fehlgeschlagen: '+(error?.message||'Unbekannter Fehler')+'. Bitte erneut versuchen.';
-      
+      setMessage('Abruf fehlgeschlagen: '+(error?.message||'Unbekannter Fehler')+'. Bitte erneut versuchen.');
     }finally{
       btn.disabled=false;
       btn.textContent='↻ Heutige Spiele abrufen';
