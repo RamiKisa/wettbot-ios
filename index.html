@@ -462,7 +462,8 @@
     const now=new Date();
     const date=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
     const targetDates=new Set([date]);
-    const allowed=['Premier League','Bundesliga','La Liga','Serie A','Ligue 1','Primeira Liga','Champions League','Europa League','Conference League'];
+    const weekday=now.getDay();
+    const allowed=weekday===2||weekday===3?['Champions League']:weekday===4?['Europa League','Conference League']:['Premier League','Bundesliga','La Liga','Serie A','Ligue 1','Primeira Liga'];
     const referenced=new Set([...state.bets.map(b=>b.matchId),...state.odds.map(o=>o.matchId)]);
     state.matches=state.matches.filter(m=>!(/^(?:ESPN|OpenLigaDB|OpenFootball)/.test(String(m.source||''))&&!referenced.has(m.id)&&m.date!==date));
     const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
@@ -481,7 +482,8 @@
     const results=await Promise.allSettled(allowed.map(async league=>{
       const code=espnCodes[league];
       const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+code+'/scoreboard?dates='+ymd;
-      const res=await fetch(url,{headers:{'Accept':'application/json'},cache:'no-store'});
+      const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),5000);
+      let res;try{res=await fetch(url,{headers:{'Accept':'application/json'},cache:'no-store',signal:controller.signal});}finally{clearTimeout(timeout);}
       if(!res.ok)throw Error('ESPN '+league);
       const json=await res.json();let count=0;
       for(const ev of json.events||[]){
@@ -496,7 +498,7 @@
     save();fillAnalysisSelectors();
     const todays=state.matches.filter(m=>m.date===date&&/^(?:ESPN|OpenLigaDB|OpenFootball)/.test(String(m.source||'')));
     $('refreshMsg').textContent=added?added+' heutige(s) Spiel(e) geladen. Ligen: '+[...new Set(todays.map(m=>m.league))].join(', ')+'.':errors.length?'Keine neuen Spiele gefunden. Einige kostenlose Quellen waren nicht erreichbar.':'Für heute wurden keine weiteren Spiele gefunden.';
-    btn.disabled=false;btn.textContent='↻ Heutige Spiele abrufen';toast(added?added+' heutige Spiele geladen.':'Keine neuen heutigen Spiele geladen.');
+    btn.disabled=false;btn.textContent='↻ Heutige Spiele abrufen';toast(added?added+' heutige Spiele geladen.':'Abruf abgeschlossen.');
   };
   $('exportBtn').onclick=()=>{
     const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});download(blob,`wettbot-sicherung-${today()}.json`);
@@ -559,57 +561,31 @@
   $('analysisMatch').addEventListener('change',renderSelectedAnalysis);
   $('refreshAnalysisDataBtn').addEventListener('click',()=>loadAnalyses());
   async function loadFixtureSchedules(){
-    const sources=[
-      ['Premier League','en.1.json','Europe/London'],['Bundesliga','de.1.json','Europe/Berlin'],['La Liga','es.1.json','Europe/Madrid'],
-      ['Serie A','it.1.json','Europe/Rome'],['Ligue 1','fr.1.json','Europe/Paris'],['Primeira Liga','pt.1.json','Europe/Lisbon']
+    const codes=[
+      ['Premier League','eng.1'],['Bundesliga','ger.1'],['La Liga','esp.1'],
+      ['Serie A','ita.1'],['Ligue 1','fra.1'],['Primeira Liga','por.1'],
+      ['Champions League','uefa.champions'],['Europa League','uefa.europa'],['Conference League','uefa.europa.conf']
     ];
-    const season=(new Date().getMonth()>=6?new Date().getFullYear():new Date().getFullYear()-1)+'-'+String((new Date().getMonth()>=6?new Date().getFullYear()+1:new Date().getFullYear())%100).padStart(2,'0'),all=[],errors=[];
-    const loaded=await Promise.allSettled(sources.map(async ([league,file,sourceZone])=>{
-      const url='https://raw.githubusercontent.com/openfootball/football.json/master/'+season+'/'+file;
-      const res=await fetch(url,{cache:'no-store'});
-      if(!res.ok)throw Error(league+': HTTP '+res.status);
-      const json=await res.json();
-      for(const m of (json.matches||[])){
-        if(!m.date||!m.team1||!m.team2)continue;
-        const parts=m.date.split('-').map(Number),clock=(m.time||'12:00').split(':').map(Number);
-        // Convert the source league's local kickoff time into an absolute timestamp, then display it in German time.
-        const desired=Date.UTC(parts[0],parts[1]-1,parts[2],clock[0]||0,clock[1]||0,0);
-        let utcGuess=desired;
-        for(let k=0;k<2;k++){
-          const z=new Date(utcGuess);
-          const f=new Intl.DateTimeFormat('en-GB',{timeZone:sourceZone,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
-          const vals={};f.formatToParts(z).forEach(p=>{if(p.type!=='literal')vals[p.type]=Number(p.value);});
-          const represented=Date.UTC(vals.year,vals.month-1,vals.day,vals.hour,vals.minute,0);
-          utcGuess+=desired-represented;
-        }
-        const dt=new Date(utcGuess);
-        if(Number.isNaN(dt.getTime()))continue;
-        const score=m.score||{};
-        const hasResult=Array.isArray(score.ft)||Array.isArray(score);
-        if(dt.toDateString()!==new Date().toDateString())continue;
-        if(dt.getTime()<Date.now()&&!hasResult)continue;
-        all.push({id:'openfootball-'+file+'-'+m.date+'-'+m.team1+'-'+m.team2,date:dt.toISOString(),timestamp:dt.getTime()/1000,league,home:m.team1,away:m.team2,venue:'',analysisStatus:'fixture_only',prediction:{},h2h:[],source:'OpenFootball'});
-      }
-    }));
-    loaded.forEach((x,i)=>{if(x.status==='rejected')errors.push(String(x.reason));});
-    // UEFA competitions are not part of every openfootball season file; ESPN is a separate fallback for European cups.
-    for(const [league,code] of [['Champions League','uefa.champions'],['Europa League','uefa.europa'],['Conference League','uefa.europa.conf']]){
+    const now=new Date(),todayKey=now.getFullYear()+String(now.getMonth()+1).padStart(2,'0')+String(now.getDate()).padStart(2,'0');
+    const settled=await Promise.allSettled(codes.map(async ([league,code])=>{
+      const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),5000);
       try{
-        const from=new Date();
-        const fmt=d=>d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0');
-        const res=await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/'+code+'/scoreboard?dates='+fmt(from),{cache:'no-store'});
-        if(!res.ok)throw Error(league+' ESPN HTTP '+res.status);
-        const json=await res.json();
+        const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+code+'/scoreboard?dates='+todayKey;
+        const res=await fetch(url,{cache:'no-store',signal:controller.signal});
+        if(!res.ok)throw Error('HTTP '+res.status);
+        const json=await res.json(),out=[];
         for(const e of json.events||[]){
           const c=e.competitions?.[0],cs=c?.competitors||[],home=cs.find(x=>x.homeAway==='home'),away=cs.find(x=>x.homeAway==='away');
           if(!home||!away||!e.date)continue;
-          const dt=new Date(e.date);if(dt.toDateString()!==new Date().toDateString()||dt.getTime()<Date.now())continue;
-          all.push({id:'espn-'+code+'-'+e.id,date:dt.toISOString(),timestamp:dt.getTime()/1000,league,home:home.team?.displayName||home.team?.name||'Heimteam',away:away.team?.displayName||away.team?.name||'Auswärtsteam',venue:c?.venue?.fullName||'',analysisStatus:'fixture_only',prediction:{},h2h:[],source:'ESPN Spielplan'});
+          const dt=new Date(e.date);if(dt.toDateString()!==now.toDateString())continue;
+          const hasStarted=dt.getTime()<Date.now()&&(c?.status?.type?.state==='in'||c?.status?.type?.state==='post');
+          if(hasStarted)continue;
+          out.push({id:'espn-'+code+'-'+e.id,date:dt.toISOString(),timestamp:dt.getTime()/1000,league,home:home.team?.displayName||home.team?.name||'Heimteam',away:away.team?.displayName||away.team?.name||'Auswärtsteam',venue:c?.venue?.fullName||'',analysisStatus:'fixture_only',prediction:{},h2h:[],source:'ESPN Spielplan'});
         }
-      }catch(e){errors.push(String(e));}
-    }
-    const seen=new Set();
-    return all.filter(m=>{if(seen.has(m.id))return false;seen.add(m.id);return true;}).sort((a,b)=>a.timestamp-b.timestamp);
+        return out;
+      }finally{clearTimeout(timeout);}
+    }));
+    return settled.flatMap(x=>x.status==='fulfilled'?x.value:[]).sort((a,b)=>a.timestamp-b.timestamp);
   }
   async function loadAnalyses(){
     const status=$('top10Status'),list=$('analysisList'),stamp=$('analysisTimestamp');
@@ -620,15 +596,15 @@
       const data=await res.json();
       analysisData=data;
       if(!Array.isArray(analysisData.recommendations)||analysisData.recommendations.length===0){
-        status.textContent='Keine Prognosedaten verfügbar – lade Spielpläne der Top-Ligen …';
+        status.textContent='Keine Prognosedaten verfügbar – lade nur heutige Spiele …';
         try{const fallback=await loadFixtureSchedules();analysisData={...data,recommendations:fallback,source:'OpenFootball / ESPN (Spielpläne)',generatedAt:new Date().toISOString()};}
         catch(feedError){analysisData={...data,recommendations:[],source:'Kein Spielplan verfügbar'};}
       }
       fillAnalysisSelectors();
       if(data.status==='needs_api_key'){
         const scheduled=analysisData.recommendations||[];
-        status.textContent=scheduled.length+' Spiel(e) im Spielplan · für Prognosen ist noch ein Datenzugang nötig.';
-        list.innerHTML='<div class="empty"><strong>Spielplan geladen, Pre-Match-Prognosen noch nicht aktiv.</strong><br>'+esc(data.message||'Für zusätzliche Statistiken und Prognosen fehlt der Datenzugang.')+'<br><br>'+scheduled.length+' kommende Spiele aus dem kostenlosen Spielplan-Fallback. Wähle oben eine Liga und ein Spiel aus. Die App zeigt nur verfügbare Informationen und erfindet keine Prognosen.</div>';
+        status.textContent=scheduled.length+' Spiel(e) im heutigen Spielplan · für Prognosen ist noch ein Datenzugang nötig.';
+        list.innerHTML='<div class="empty"><strong>Spielplan geladen, Pre-Match-Prognosen noch nicht aktiv.</strong><br>'+esc(data.message||'Für zusätzliche Statistiken und Prognosen fehlt der Datenzugang.')+'<br><br>'+'+scheduled.length+' heutige Spiele aus dem kostenlosen Spielplan-Fallback. Wähle oben eine Liga und ein Spiel aus. Die App zeigt nur verfügbare Informationen und erfindet keine Prognosen.</div>';
       }else if(!data.recommendations||!data.recommendations.length){
         status.textContent='Der Datenlauf enthält aktuell keine auswertbaren Spiele.';
         list.innerHTML='<div class="empty">Keine Prognosedaten verfügbar. Das bedeutet nicht, dass keine Spiele stattfinden.</div>';
