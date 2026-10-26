@@ -361,16 +361,14 @@
   ['oOdds','oProb'].forEach(x=>$(x).addEventListener('input',updateEvPreview));
 
   // Transparent baseline probability estimate from recent completed ESPN results.
-  const espnCodesForModel={
-    'Premier League':'eng.1','Bundesliga':'ger.1','La Liga':'esp.1','Serie A':'ita.1','Ligue 1':'fra.1','Primeira Liga':'por.1',
-    'Champions League':'uefa.champions','Europa League':'uefa.europa','Conference League':'uefa.europa.conf'
-  };
   const poisson=(lambda,k)=>Math.exp(-lambda)*Math.pow(lambda,k)/factorial(k);
   const factorial=n=>{let v=1;for(let i=2;i<=n;i++)v*=i;return v;};
   async function estimateModelProbability(){
     const match=state.matches.find(m=>m.id===$('oMatch').value);
     if(!match){toast('Bitte zuerst ein Spiel auswählen.');return;}
-    const code=espnCodesForModel[match.league];
+    let code;
+    try{code=(await getCompetitions()).find(c=>c.name===match.league)?.espnSlug;}
+    catch(err){toast('Wettbewerbskonfiguration konnte nicht geladen werden: '+err.message);return;}
     if(!code){toast('Für diesen Wettbewerb ist kein Statistikabruf hinterlegt.');return;}
     const btn=$('estimateProbBtn');btn.disabled=true;btn.textContent='Ergebnisse werden geladen …';
     $('modelMsg').textContent='Lade abgeschlossene Spiele der letzten 60 Tage. Das Modell berücksichtigt nur Tore, Heim-/Auswärtsleistung und keine Aufstellungen oder Verletzungen.';
