@@ -355,14 +355,18 @@ def fixture_fallback():
  try:
   req=urllib.request.Request("https://api.openligadb.de/getmatchdata/bl1",headers={"User-Agent":"RamoBet/1.0","Accept":"application/json"})
   with urllib.request.urlopen(req,timeout=8) as resp: matches=json.load(resp)
-  for m in matches:
+  count=0
+  for m in matches if isinstance(matches,list) else []:
    rawdate=m.get("matchDateTimeUTC"); home=(m.get("team1") or {}).get("teamName"); away=(m.get("team2") or {}).get("teamName")
    if not rawdate or not home or not away: continue
    dt=datetime.datetime.fromisoformat(rawdate.replace("Z","+00:00"))
    if dt<=now or dt>now+datetime.timedelta(days=WINDOW_DAYS): continue
    all_matches.append({"id":"openligadb-"+str(m.get("matchID")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":"Bundesliga","home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenLigaDB","dataCoverage":{"fixture":"OpenLigaDB"}})
+   count+=1
+  _diag("OpenLigaDB","ok" if count else "empty",True,count,responseRows=len(matches) if isinstance(matches,list) else 0)
  except Exception as e:
   errors.append("OpenLigaDB Bundesliga: "+str(e)[:80])
+  _diag("OpenLigaDB","error",False,0,str(e))
  # Independent SportScore source: daily fixture/result endpoint, separate from ESPN.
  # One request per calendar day covers all competitions; restrict output to RamoBet's fixed list.
  def sportscore_competition(value):
