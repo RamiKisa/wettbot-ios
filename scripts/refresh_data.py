@@ -517,26 +517,26 @@ def fixture_fallback():
  _fd_errors=[e for e in errors if " football-data.org:" in e]
  _diag("football-data.org","error" if _fd_errors else "ok" if sum(football_data_counts.values()) else "empty",not bool(_fd_errors),sum(football_data_counts.values()),"; ".join(_fd_errors[:8]) or None,perLeague=dict(sorted(football_data_counts.items())),historyByLeague=dict(sorted(football_data_history_counts.items())))
  print("football-data.org completed-history matches by league:",json.dumps(dict(sorted(football_data_history_counts.items())),ensure_ascii=False))
-if not FOOTBALL_DATA_TOKEN:
- _diag("football-data.org","not_configured",None,0,"FOOTBALL_DATA_TOKEN is empty")
-# Canonical team names before source merging; this removes ESPN/OpenFootball alias duplicates.
-import unicodedata,math
+ if not FOOTBALL_DATA_TOKEN:
+  _diag("football-data.org","not_configured",None,0,"FOOTBALL_DATA_TOKEN is empty")
+ # Canonical team names before source merging; this removes ESPN/OpenFootball alias duplicates.
+ import unicodedata,math
  aliases={
-  "fcbarcelona":"barcelona","barcelonafc":"barcelona",
-  "bayernmunchen":"bayernmunich","fcbayernmunchen":"bayernmunich","fcbayern":"bayernmunich",
-  "fcinternazionalemilano":"intermilan","internazionalemilano":"intermilan","internazionale":"intermilan","inter":"intermilan",
-  "milan":"acmilan","acmilan":"acmilan","sscnapoli":"napoli","napoli":"napoli","juventusfc":"juventus",
-  "parissaintgermain":"psg","parissaintgermainfc":"psg","galatasarayistanbul":"galatasaray","galatasaraysk":"galatasaray",
-  "fenerbahceistanbul":"fenerbahce","fenerbahcesk":"fenerbahce","besiktasistanbul":"besiktas","besiktasjk":"besiktas",
-  "fcporto":"porto","sportingcp":"sportinglisbon","sportingclubedeportugal":"sportinglisbon","sportinglisbon":"sportinglisbon",
-  "athleticclub":"athleticbilbao","athleticbilbao":"athleticbilbao","realbetisseville":"realbetis",
-  "atleticodemadrid":"atleticomadrid","realmadridcf":"realmadrid","realracingclubdesantander":"racingdesantander",
-  "arsenalfc":"arsenal","liverpoolfc":"liverpool","chelseafc":"chelsea","manchesterunitedfc":"manchesterunited",
-  "manchestercityfc":"manchestercity","tottenhamhotspurfc":"tottenhamhotspur","evertonfc":"everton",
-  "westhamunitedfc":"westhamunited","newcastleunitedfc":"newcastleunited","crystalpalacefc":"crystalpalace",
-  "astonvillafc":"astonvilla","brightonandhovealbionfc":"brighton",
-  "olympiquedemarseille":"marseille","olympiquelyonnais":"lyon","asmonaco":"monaco","lilleosc":"lille",
-  "fcfamalicao":"famalicao","sportingclube":"sportinglisbon"
+   "fcbarcelona":"barcelona","barcelonafc":"barcelona",
+   "bayernmunchen":"bayernmunich","fcbayernmunchen":"bayernmunich","fcbayern":"bayernmunich",
+   "fcinternazionalemilano":"intermilan","internazionalemilano":"intermilan","internazionale":"intermilan","inter":"intermilan",
+   "milan":"acmilan","acmilan":"acmilan","sscnapoli":"napoli","napoli":"napoli","juventusfc":"juventus",
+   "parissaintgermain":"psg","parissaintgermainfc":"psg","galatasarayistanbul":"galatasaray","galatasaraysk":"galatasaray",
+   "fenerbahceistanbul":"fenerbahce","fenerbahcesk":"fenerbahce","besiktasistanbul":"besiktas","besiktasjk":"besiktas",
+   "fcporto":"porto","sportingcp":"sportinglisbon","sportingclubedeportugal":"sportinglisbon","sportinglisbon":"sportinglisbon",
+   "athleticclub":"athleticbilbao","athleticbilbao":"athleticbilbao","realbetisseville":"realbetis",
+   "atleticodemadrid":"atleticomadrid","realmadridcf":"realmadrid","realracingclubdesantander":"racingdesantander",
+   "arsenalfc":"arsenal","liverpoolfc":"liverpool","chelseafc":"chelsea","manchesterunitedfc":"manchesterunited",
+   "manchestercityfc":"manchestercity","tottenhamhotspurfc":"tottenhamhotspur","evertonfc":"everton",
+   "westhamunitedfc":"westhamunited","newcastleunitedfc":"newcastleunited","crystalpalacefc":"crystalpalace",
+   "astonvillafc":"astonvilla","brightonandhovealbionfc":"brighton",
+   "olympiquedemarseille":"marseille","olympiquelyonnais":"lyon","asmonaco":"monaco","lilleosc":"lille",
+   "fcfamalicao":"famalicao","sportingclube":"sportinglisbon"
  }
  def team_key(value):
   key=re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",str(value or "")).encode("ascii","ignore").decode().lower())
