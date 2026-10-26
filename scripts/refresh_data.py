@@ -518,6 +518,11 @@ def fixture_fallback():
    except Exception as exc:
     errors.append(league+" football-data.org: "+str(exc)[:120])
  print("football-data.org upcoming fixtures by league:",json.dumps(dict(sorted(football_data_counts.items())),ensure_ascii=False))
+ _diag("football-data.org","error" if any("football-data.org:" in e for e in errors) else "ok" if sum(football_data_counts.values()) else "empty",
+       not any("football-data.org:" in e for e in errors),sum(football_data_counts.values()),
+       "; ".join([e for e in errors if "football-data.org:" in e][:8]) or None,
+       perLeague=dict(sorted(football_data_counts.items())),historyByLeague=dict(sorted(football_data_history_counts.items())))
+ print("football-data.org upcoming fixtures by league:",json.dumps(dict(sorted(football_data_counts.items())),ensure_ascii=False))
  print("football-data.org completed-history matches by league:",json.dumps(dict(sorted(football_data_history_counts.items())),ensure_ascii=False))
  # Canonical team names before source merging; this removes ESPN/OpenFootball alias duplicates.
  import unicodedata,math
@@ -757,12 +762,13 @@ for item in fixtures:
   item["apiFootballLineupsUpdatedAt"]=cached["lineupsUpdatedAt"]
   item.setdefault("dataCoverage",{})["lineups"]="API-Football (zwischengespeichert)"
 if not KEY:
+ _diag("API-Football","not_configured",None,0,"API_FOOTBALL_KEY is empty")
  coverage=coverage_summary(fixtures)
  save({
   "generatedAt":now.isoformat(),"status":"free_mode",
   "message":"Kostenloser Modus: alle zehn konfigurierten Wettbewerbe, 14-Tage-Spielplan, historische Ergebnisse aus OpenFootball/ESPN, heim-/auswärtsgewichtete Poisson-Schätzung sowie Team-News und Google-Recherche mit begrenztem Abrufbudget. API-Football-Detaildaten benötigen einen konfigurierten Schlüssel.",
   "configuredLeagues":[x["name"] for x in COMPETITIONS],"fixtureWindowDays":WINDOW_DAYS,
-  "teamHistory":team_history,"coverage":coverage,"apiFootball":{"configured":False,"requestsUsed":0},
+  "teamHistory":team_history,"coverage":coverage,"apiFootball":{"configured":False,"requestsUsed":0},"sourceDiagnostics":SOURCE_DIAGNOSTICS,
   "recommendations":fixtures,"fixtures":fixtures,"errors":errors[:50],
   "source":"OpenFootball + ESPN + OpenLigaDB + Google News RSS + Google Suche + Poisson-Basismodell"
  })
@@ -921,7 +927,7 @@ save({
  "generatedAt":now.isoformat(),"status":"hybrid_mode",
  "message":"Alle Spiele aus dem festen 10-Ligen-Spielplan werden mit dem Basis-Modell analysiert. API-Football erweitert ausgewählte zeitnahe Spiele quota-bewusst; fehlende Detaildaten bleiben ausdrücklich gekennzeichnet.",
  "configuredLeagues":[x["name"] for x in COMPETITIONS],"fixtureWindowDays":WINDOW_DAYS,
- "teamHistory":team_history,"coverage":coverage,"apiFootball":api_meta,
+ "teamHistory":team_history,"coverage":coverage,"apiFootball":api_meta,"sourceDiagnostics":SOURCE_DIAGNOSTICS,
  "recommendations":fixtures,"fixtures":fixtures,"errors":errors[:50],
  "source":"OpenFootball + ESPN + OpenLigaDB + API-Football (quota-aware) + Google News RSS + Google Suche + Poisson-Modell"
 })
