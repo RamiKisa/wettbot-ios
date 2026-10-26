@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T08:08:21.922905+00:00",
+  "generatedAt": "2026-10-26T08:11:48.607562+00:00",
   "status": "free_mode",
   "message": "Kostenloser Modus: OpenFootball-Spielplan und Ergebnisse, eigene einfache Tor-Modellschätzung sowie Google News RSS. Verletzungen und Aufstellungen sind nicht garantiert verfügbar.",
   "recommendations": [
@@ -309,12 +309,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -327,10 +321,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -2181,12 +2181,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -2199,10 +2193,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -4541,12 +4541,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -4559,10 +4553,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -6045,12 +6045,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -6063,10 +6057,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -8037,12 +8037,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -8055,10 +8049,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -9909,12 +9909,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -9927,10 +9921,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -12853,12 +12853,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -12871,10 +12865,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -13373,12 +13373,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -13391,10 +13385,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -15213,12 +15213,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -15231,10 +15225,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -17269,12 +17269,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -17287,10 +17281,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -20181,12 +20181,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -20199,10 +20193,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -22101,12 +22101,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -22119,10 +22113,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -23173,12 +23173,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -23191,10 +23185,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -24341,12 +24341,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -24359,10 +24353,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -26933,12 +26933,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -26951,10 +26945,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -28797,12 +28797,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -28815,10 +28809,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -30669,12 +30669,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -30687,10 +30681,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -32309,12 +32309,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -32327,10 +32321,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -35133,12 +35133,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -35151,10 +35145,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -35877,12 +35877,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -35895,10 +35889,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -38621,12 +38621,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -38639,10 +38633,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -39733,12 +39733,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -39751,10 +39745,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -42373,12 +42373,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -42391,10 +42385,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -43093,12 +43093,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -43111,10 +43105,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -44605,12 +44605,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -44623,10 +44617,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -48101,12 +48101,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -48119,10 +48113,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -49989,12 +49989,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -50007,10 +50001,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -51669,12 +51669,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -51687,10 +51681,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -52005,12 +52005,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -52023,10 +52017,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -54637,12 +54637,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -54655,10 +54649,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -55911,12 +55911,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -55929,10 +55923,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -57783,12 +57783,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -57801,10 +57795,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -60143,12 +60143,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -60161,10 +60155,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -61647,12 +61647,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -61665,10 +61659,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -63639,12 +63639,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -63657,10 +63651,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -65511,12 +65511,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -65529,10 +65523,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -68455,12 +68455,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -68473,10 +68467,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -68975,12 +68975,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -68993,10 +68987,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -70815,12 +70815,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -70833,10 +70827,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -72871,12 +72871,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -72889,10 +72883,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -75783,12 +75783,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -75801,10 +75795,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -77703,12 +77703,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -77721,10 +77715,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -78775,12 +78775,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -78793,10 +78787,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -79943,12 +79943,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -79961,10 +79955,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -82535,12 +82535,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -82553,10 +82547,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -84399,12 +84399,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -84417,10 +84411,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -86271,12 +86271,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -86289,10 +86283,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -87911,12 +87911,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -87929,10 +87923,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -90735,12 +90735,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -90753,10 +90747,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -91479,12 +91479,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -91497,10 +91491,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -94223,12 +94223,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -94241,10 +94235,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -95335,12 +95335,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -95353,10 +95347,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -97975,12 +97975,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -97993,10 +97987,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -98695,12 +98695,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -98713,10 +98707,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -100207,12 +100207,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -100225,10 +100219,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -103703,12 +103703,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -103721,10 +103715,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -105591,12 +105591,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -105609,10 +105603,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -107271,12 +107271,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -107289,10 +107283,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
@@ -107607,12 +107607,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -107625,10 +107619,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ],
         "away": [
@@ -110239,12 +110239,6 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Fenerbahçe vs Roma | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPY1huQnpRV0JzVnBQQ1NET19zWkl0TGlBeWN4OGx2bHR5NUowZGJKUENDbW4tMlBHd2JKZ1FTdmVHTTMxcXIweVk1dzZOSnpYYWUtSV9uWk1nNGIwUC1ObmdVS090VGp0MWpBdlFkRFFQNGZvRFBJcE5aZ0dXUld1bUxKYkNPVGpQYUE?oc=5",
-            "publishedAt": "Sat, 29 Aug 2026 14:41:51 GMT",
-            "source": "UEFA.com"
-          },
-          {
             "title": "Punkteteilung für Fenerbahçe und Roma beim CL-Auftakt - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbWNQU0lMdzRXNmdvMG5kdFNuTl9EeUFsQzEtNDlpazI1SDVnWkN6a0JhY01zQkxrMTlfRFVFMjVWb25MU243b1pZRjNHcWVuek9uRG54czFLUnlFdTdSMk84UmJSZkpId3pqY0JETWJxX3N6Uk9VSTNVUVA5SVVKbg?oc=5",
             "publishedAt": "Thu, 10 Sep 2026 07:00:00 GMT",
@@ -110257,10 +110251,16 @@
             "source": "OneFootball"
           },
           {
-            "title": "Fingerbruch setzt Mile Svilar vor dem Como-Spiel außer Gefecht - 90PLUS",
-            "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oc0hKa3BYWVlVNTAtUTJBMlRQTHhNbUZLX1J4VkppQkt4ZzR3OEJLRmdJNDdCR01veHowRkV5dl9ZblpYbndaR0tFRU5KSmVSZW1wR1l2bm9xREJiWUhEYUdxUjlKd2NYaGVSYg?oc=5",
-            "publishedAt": "Sat, 10 Oct 2026 14:46:00 GMT",
-            "source": "90PLUS"
+            "title": "David Alaba wohl erneut verletzt - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmJKbWZYWDVQR0ZXT1ZqNjZKSUVzN1NSWDI3dU9UakRjeENORTNheTd2bFk2Sms2MXZOc1o1STlXekJlc0pObXcyU2U2WG1ISGpjdk9Dem5RRFltd1pUa09nODJ1R2RIRnBxQUNYS2hyanhwTFh5YlJTU1NQNmtPdFpDVXk3Mnl0RkpJczc3ZTlLaHFITFRGeWd5OTVJMkw2NWVBMExBa3Zhdw?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 15:56:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Gleiche Verletzung wie vor 2 Jahren: Pilgrim fällt bei der AS Roma lange aus - Tages-Anzeiger",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVXBXMmo0UjF0S3lEY1JpeFJJNXpUQ3dDdndRWkpDZ1BrWXU5YlJMUEdJX3cteXJDcDhIRkFtb05rbjM5ZnhVQWlKQ29hUkcyMzdVbVc0UGpzdHdvR2ZJWXI2VGtqRmdrY3FwYW9COURvUEg1dFQ5SGRhZmZjNjlZUWZkZ0tKYk9QUXROd2NpR2Z1TEZkdGJjcEVjZTA?oc=5",
+            "publishedAt": "Sat, 24 Jan 2026 08:00:00 GMT",
+            "source": "Tages-Anzeiger"
           }
         ]
       },
