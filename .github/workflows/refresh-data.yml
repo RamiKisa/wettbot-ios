@@ -7,7 +7,9 @@ on:
     paths:
       - 'scripts/refresh_data.py'
       - 'scripts/feed_utils.py'
+      - 'scripts/validate_data.py'
       - 'tests/test_feed_utils.py'
+      - 'tests/test_validate_data.py'
       - 'competitions.json'
       - '.github/workflows/refresh-data.yml'
   schedule:
