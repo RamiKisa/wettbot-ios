@@ -227,6 +227,35 @@ def fixture_fallback():
     all_matches.append({"id":"espn-"+str(event.get("id")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"ESPN public scoreboard","dataCoverage":{"fixture":"ESPN public scoreboard"}})
   except Exception as e:
    errors.append(league+" ESPN fallback: "+str(e)[:100])
+ # Recent completed ESPN results fill form gaps, especially for UEFA fixtures and Turkish clubs.
+ history_days=45
+ history_start=now.date()-datetime.timedelta(days=history_days)
+ history_end=now.date()-datetime.timedelta(days=1)
+ espn_history_counts={}
+ for league,slug in ESPN_SLUGS.items():
+  try:
+   events=fetch_espn_events(slug,history_start,history_end)
+   completed_rows=espn_completed_match_rows(events)
+   added_rows=0
+   for row in completed_rows:
+    try: dt=datetime.datetime.fromisoformat(row["date"].replace("Z","+00:00"))
+    except Exception: continue
+    if dt>now or dt<now-datetime.timedelta(days=history_days): continue
+    home=row["home"]; away=row["away"]; hg=row["homeGoals"]; ag=row["awayGoals"]
+    for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
+     history.setdefault((league,team),[]).append({
+      "date":dt.isoformat(),"gf":gf,"ga":ga,
+      "result":"W" if gf>ga else "D" if gf==ga else "L",
+      "opponent":opponent,"home":home,"away":away,
+      "homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home,
+      "historySource":"ESPN completed scoreboard"
+     })
+    added_rows+=1
+   espn_history_counts[league]=added_rows
+  except Exception as e:
+   espn_history_counts[league]=0
+   errors.append(league+" ESPN history: "+str(e)[:100])
+ print("ESPN completed-history matches by league:",json.dumps(dict(sorted(espn_history_counts.items())),ensure_ascii=False))
  # OpenLigaDB is an additional keyless source for the German Bundesliga.
  try:
   req=urllib.request.Request("https://api.openligadb.de/getmatchdata/bl1",headers={"User-Agent":"RamoBet/1.0","Accept":"application/json"})
