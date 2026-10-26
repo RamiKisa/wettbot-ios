@@ -2,7 +2,7 @@ import json, os, datetime, urllib.request, urllib.parse, pathlib
 KEY=os.environ.get("API_FOOTBALL_KEY","").strip()
 OUT=pathlib.Path("recommendations.json"); now=datetime.datetime.now(datetime.timezone.utc)
 season=now.year if now.month>=6 else now.year-1
-leagues={"Premier League":("en.1.json","Europe/London"),"Bundesliga":("de.1.json","Europe/Berlin"),"La Liga":("es.1.json","Europe/Madrid"),"Serie A":("it.1.json","Europe/Rome"),"Ligue 1":("fr.1.json","Europe/Paris"),"Primeira Liga":("pt.1.json","Europe/Lisbon")}
+leagues={"Premier League":("en.1.json","Europe/London"),"Bundesliga":("de.1.json","Europe/Berlin"),"La Liga":("es.1.json","Europe/Madrid"),"Serie A":("it.1.json","Europe/Rome"),"Ligue 1":("fr.1.json","Europe/Paris"),"Primeira Liga":("pt.1.json","Europe/Lisbon"),"Süper Lig":("tr.1.json","Europe/Istanbul")}
 uefa={"Champions League":2,"Europa League":3,"Conference League":848,"Süper Lig":203}
 BUDGET=92; used=0
 def save(x): OUT.write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding="utf-8")
@@ -127,7 +127,7 @@ def fixture_fallback():
       for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
        history.setdefault((league,team),[]).append({"date":dt.isoformat(),"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent})
     except (TypeError,ValueError): pass
-    if dt<now-datetime.timedelta(hours=4): continue
+    if dt<=now: continue
     all_matches.append({"id":"fallback-"+league.lower().replace(" ","-")+"-"+str(day)+"-"+str(len(all_matches)),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenFootball","dataCoverage":{"fixture":"OpenFootball"}})
   except Exception as e:
    errors.append(league+" OpenFootball: "+str(e)[:80])
@@ -148,9 +148,40 @@ def fixture_fallback():
       rawdate=event.get("date")
       if not home or not away or not rawdate: continue
       dt=datetime.datetime.fromisoformat(rawdate.replace("Z","+00:00"))
-      if dt<now-datetime.timedelta(hours=4): continue
+      if dt<=now: continue
       all_matches.append({"id":"espn-"+str(event.get("id")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"ESPN public scoreboard","dataCoverage":{"fixture":"ESPN public scoreboard"}})
     except Exception as ee: errors.append(league+" ESPN: "+str(ee)[:80])
+ # Supplement current-season results with previous-season results for a stable form baseline.
+ previous_season=season-1
+ for league,(file,zone) in leagues.items():
+  previous_url="https://raw.githubusercontent.com/openfootball/football.json/master/%s/%s"%(str(previous_season)+"-"+str((previous_season+1)%100).zfill(2),file)
+  try:
+   req=urllib.request.Request(previous_url,headers={"User-Agent":"RamoBet/3.2 historical-form"})
+   with urllib.request.urlopen(req,timeout=12) as resp: previous_data=json.load(resp)
+   from zoneinfo import ZoneInfo
+   for m in previous_data.get("matches",[]):
+    day=m.get("date"); tm=m.get("time") or "15:00"
+    if not day: continue
+    try: dt=datetime.datetime.fromisoformat(day+"T"+tm).replace(tzinfo=ZoneInfo(zone)).astimezone(datetime.timezone.utc)
+    except Exception: continue
+    if dt>now: continue
+    t1=m.get("team1"); t2=m.get("team2")
+    home=(t1.get("name") if isinstance(t1,dict) else t1 if isinstance(t1,str) else None)
+    away=(t2.get("name") if isinstance(t2,dict) else t2 if isinstance(t2,str) else None)
+    if not home or not away: continue
+    score=m.get("score") or {}; ft=score.get("ft") or score.get("fulltime") or []
+    if isinstance(ft,dict): hg=ft.get("team1",ft.get("home")); ag=ft.get("team2",ft.get("away"))
+    elif isinstance(ft,list) and len(ft)>=2: hg,ag=ft[0],ft[1]
+    else: continue
+    try: hg=int(hg); ag=int(ag)
+    except (TypeError,ValueError): continue
+    if hg<0 or ag<0: continue
+    for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
+     rows=history.setdefault((league,team),[])
+     if not any(x.get("date")==dt.isoformat() and x.get("opponent")==opponent for x in rows):
+      rows.append({"date":dt.isoformat(),"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent})
+  except Exception as e:
+   errors.append(league+" previous-season history: "+str(e)[:70])
  # Secondary independent fixture feed: ESPN scoreboard for all supported competitions.
  espn_leagues={"Premier League":"eng.1","Bundesliga":"ger.1","La Liga":"esp.1","Serie A":"ita.1","Ligue 1":"fra.1","Primeira Liga":"por.1","Champions League":"uefa.champions","Europa League":"uefa.europa","Conference League":"uefa.europa.conf","Süper Lig":"tur.1"}
  dates=now.strftime("%Y%m%d")+"-"+(now+datetime.timedelta(days=7)).strftime("%Y%m%d")
@@ -168,7 +199,7 @@ def fixture_fallback():
     rawdate=event.get("date")
     if not home or not away or not rawdate: continue
     dt=datetime.datetime.fromisoformat(rawdate.replace("Z","+00:00"))
-    if dt<now-datetime.timedelta(hours=4): continue
+    if dt<=now: continue
     all_matches.append({"id":"espn-"+str(event.get("id")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"ESPN public scoreboard","dataCoverage":{"fixture":"ESPN public scoreboard"}})
   except Exception as e:
    errors.append(league+" ESPN fallback: "+str(e)[:80])
@@ -180,7 +211,7 @@ def fixture_fallback():
    rawdate=m.get("matchDateTimeUTC"); home=(m.get("team1") or {}).get("teamName"); away=(m.get("team2") or {}).get("teamName")
    if not rawdate or not home or not away: continue
    dt=datetime.datetime.fromisoformat(rawdate.replace("Z","+00:00"))
-   if dt<now-datetime.timedelta(hours=4) or dt>now+datetime.timedelta(days=7): continue
+   if dt<=now or dt>now+datetime.timedelta(days=7): continue
    all_matches.append({"id":"openligadb-"+str(m.get("matchID")),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":"Bundesliga","home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenLigaDB","dataCoverage":{"fixture":"OpenLigaDB"}})
  except Exception as e:
   errors.append("OpenLigaDB Bundesliga: "+str(e)[:80])
@@ -193,13 +224,37 @@ def fixture_fallback():
   seen.add(key); unique.append(match)
  all_matches=unique
  all_matches.sort(key=lambda x:x["timestamp"])
- import math
+ import math, unicodedata, re
+ aliases={
+  "fcbarcelona":"barcelona","barcelonafc":"barcelona",
+  "bayernmunchen":"bayernmunich","fcbayernmunchen":"bayernmunich","fcbayern":"bayernmunich",
+  "internazionale":"intermilan","inter":"intermilan",
+  "parissaintgermain":"psg","parissaintgermainfc":"psg",
+  "galatasarayistanbul":"galatasaray","fenerbahceistanbul":"fenerbahce","besiktasistanbul":"besiktas",
+  "fcporto":"porto","sportingcp":"sportinglisbon","sportinglisbon":"sportinglisbon",
+  "athleticclub":"athleticbilbao","athleticbilbao":"athleticbilbao",
+  "atleticodemadrid":"atleticomadrid"
+ }
+ def team_key(value):
+  key=re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",str(value or "")).encode("ascii","ignore").decode().lower())
+  return aliases.get(key,key)
+ history_by_team={}
+ for (history_league,team),rows in history.items():
+  history_by_team.setdefault(team_key(team),[]).extend(rows)
+ all_history_rows=[row for rows in history.values() for row in rows]
+ def last_five(team,league):
+  combined={}
+  for row in history.get((league,team),[])+history_by_team.get(team_key(team),[]):
+   key=(row.get("date"),team_key(row.get("opponent")),row.get("gf"),row.get("ga"))
+   combined[key]=row
+  return sorted(combined.values(),key=lambda x:x["date"])[-5:]
  for f in all_matches:
-  h=sorted(history.get((f["league"],f["home"]),[]),key=lambda x:x["date"])[-5:]
-  a=sorted(history.get((f["league"],f["away"]),[]),key=lambda x:x["date"])[-5:]
+  h=last_five(f["home"],f["league"])
+  a=last_five(f["away"],f["league"])
   f["form"]={"home":h,"away":a}
   f["dataCoverage"]["recentForm"]="OpenFootball-Ergebnisse" if h or a else "Keine historischen Ergebnisse im kostenlosen Feed"
   league_rows=[v for (lg,_),vals in history.items() if lg==f["league"] for v in vals]
+  if not league_rows: league_rows=all_history_rows
   avg=sum(v["gf"] for v in league_rows)/len(league_rows) if league_rows else 1.35
   def avg_goals(rows,key,default):
    vals=[x[key] for x in rows]
@@ -216,10 +271,11 @@ def fixture_fallback():
     if i>0 and j>0: btts+=p
   total=sum(probs.values()) or 1
   probs={k:round(v/total*100,1) for k,v in probs.items()}
-  f["prediction"]={"model":"Kostenloses Basis-Modell (letzte verfügbare Ergebnisse)","probabilities":probs,"homeGoals":round(lam_h,2),"awayGoals":round(lam_a,2),"underOver":"Über 2,5" if over25>=0.5 else "Unter 2,5","markets":{"over25":round(over25*100,1),"under25":round((1-over25)*100,1),"bttsYes":round(btts*100,1),"bttsNo":round((1-btts)*100,1)},"mostLikelyScore":"%s:%s"%(max(scores)[1],max(scores)[2])}
+  f["prediction"]={"model":"Kostenloses Basis-Modell (letzte verfügbare Ergebnisse)","probabilities":probs,"homeGoals":round(lam_h,2),"awayGoals":round(lam_a,2),"underOver":"Über 2,5" if over25>=0.5 else "Unter 2,5","markets":{"over25":round(over25*100,1),"under25":round((1-over25)*100,1),"bttsYes":round(btts*100,1),"bttsNo":round((1-btts)*100,1)},"mostLikelyScore":"%s:%s"%(max(scores,key=lambda z:z[0])[1],max(scores,key=lambda z:z[0])[2])}
   f["analysisStatus"]="model_estimate" if h or a else "limited_model"
-  f["dataCoverage"]["prediction"]="Eigene Poisson-Schätzung aus verfügbaren Ergebnissen; nicht validiert"
-  f["h2h"]=[x for x in h if x.get("opponent")==f["away"]][-5:]
+  f["dataCoverage"]["prediction"]="Eigene Poisson-Schätzung aus letzten Team-Ergebnissen; nicht extern validiert" if h or a else "Begrenzte Basisschätzung: keine passenden Team-Ergebnisse gefunden"
+  f["marketCoverage"]={"1X2":True,"overUnder":True,"btts":"Poisson-Modell","corners":"Keine belastbare kostenlose Prognose verfügbar","cards":"Keine belastbare kostenlose Prognose verfügbar","playerProps":"Keine belastbare kostenlose Prognose verfügbar"}
+  f["h2h"]=sorted([x for x in history_by_team.get(team_key(f["home"]),[]) if team_key(x.get("opponent"))==team_key(f["away"])],key=lambda x:x["date"])[-5:]
  enrich_team_news(all_matches,max_teams=40)
  enrich_google_team_research(all_matches,max_teams=20)
  return all_matches,errors
