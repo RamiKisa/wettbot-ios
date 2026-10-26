@@ -101,6 +101,13 @@ jobs:
               if key in duplicate_keys:
                   errors.append(f"duplicate fixture: {key}")
               duplicate_keys.add(key)
+          if data.get("status") == "free_mode":
+              required_primary = ["Bundesliga", "Serie A", "Ligue 1", "La Liga", "Premier League", "Primeira Liga"]
+              missing_primary = [name for name in required_primary if league_counts[name] == 0]
+              if missing_primary:
+                  errors.append("Missing primary league fixtures in free mode: " + ", ".join(missing_primary))
+              if len([name for name, count in league_counts.items() if count]) < 6:
+                  errors.append("Free mode contains fixtures from fewer than six configured domestic leagues")
           if errors:
               sys.exit("Feed validation failed:\\n- " + "\\n- ".join(errors[:30]))
           print(f"Validation OK: {len(fixtures)} fixtures")
