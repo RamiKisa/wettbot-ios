@@ -65,6 +65,23 @@ jobs:
           PY
           node --check /tmp/ramobet-inline.js
 
+      - name: Check static DOM write targets exist
+        run: |
+          python3 - <<'PY'
+          import pathlib, re, sys
+          html = pathlib.Path("index.html").read_text(encoding="utf-8")
+          ids = set(re.findall(r'\\bid=["\\']([^"\\']+)["\\']', html))
+          # Match only literal-ID setters: reads and dynamically created toast elements are not false-positive write targets.
+          setters = re.findall(
+              r"\\$\\(['\\"]([^'\\"]+)['\\"]\\)\\.(?:textContent|innerHTML|value|disabled|className|src|href|checked)\\s*=",
+              html,
+          )
+          missing = sorted(set(setters) - ids)
+          if missing:
+              sys.exit("DOM write targets missing from index.html: " + ", ".join(missing))
+          print(f"DOM setter targets OK: {len(set(setters))} distinct literal IDs")
+          PY
+
       - name: Validate service worker cache includes configuration
         run: |
           python3 - <<'PY'
