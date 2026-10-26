@@ -1,7 +1,7 @@
 {
   "version": 1,
   "timezone": "Europe/Berlin",
-  "fixtureWindowDays": 7,
+  "fixtureWindowDays": 14,
   "competitions": [
     {
       "name": "Bundesliga",
