@@ -459,7 +459,8 @@
     const btn=$('refreshBtn');
     btn.disabled=true;
     btn.textContent='↻ Spieltag wird geladen …';
-    setRefreshMessage('Rufe den heutigen Spielplan ab …';
+    const setRefreshMessage=message=>{const el=$('refreshMsg');if(el)el.textContent=message;};
+    setRefreshMessage('Rufe den heutigen Spielplan ab …'));
     let added=0;
     const errors=[];
     const leagues=[
