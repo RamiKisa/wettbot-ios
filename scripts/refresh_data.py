@@ -551,94 +551,89 @@ def fixture_fallback():
  "fcfamalicao":"famalicao","sportingclube":"sportinglisbon"
  }
  def team_key(value):
- key=re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",str(value or "")).encode("ascii","ignore").decode().lower())
- return aliases.get(key,key)
+  key=re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",str(value or "")).encode("ascii","ignore").decode().lower())
+  return aliases.get(key,key)
  unique=[]; seen=set(); duplicate_sources=collections.Counter()
  for match in sorted(all_matches,key=lambda x:x.get("timestamp",0)):
- home_key=team_key(match.get("home")); away_key=team_key(match.get("away"))
- pair=tuple(sorted((home_key,away_key)))
- key=(match.get("league"),match.get("date","")[:10],pair)
- if key in seen:
- duplicate_sources[match.get("source","unknown")]+=1
- continue
- seen.add(key); unique.append(match)
+  home_key=team_key(match.get("home")); away_key=team_key(match.get("away"))
+  pair=tuple(sorted((home_key,away_key)))
+  key=(match.get("league"),match.get("date","")[:10],pair)
+  if key in seen:
+   duplicate_sources[match.get("source","unknown")]+=1
+   continue
+  seen.add(key); unique.append(match)
  print("Duplicate fixtures removed by source:",json.dumps(dict(sorted(duplicate_sources.items())),ensure_ascii=False))
  all_matches=unique
  all_matches.sort(key=lambda x:x["timestamp"])
  history_by_team={}
  for (history_league,team),rows in history.items():
- history_by_team.setdefault(team_key(team),[]).extend(rows)
+  history_by_team.setdefault(team_key(team),[]).extend(rows)
  def last_five(team,league):
- combined={}
- for row in history.get((league,team),[])+history_by_team.get(team_key(team),[]):
- key=(str(row.get("date",""))[:10],team_key(row.get("opponent")),row.get("gf"),row.get("ga"))
- prior=combined.get(key)
- # Prefer precise ESPN kickoff time/source metadata when the two feeds describe the same result.
- if prior is None or row.get("historySource")=="ESPN completed scoreboard":
-  combined[key]=row
- return sorted(combined.values(),key=lambda x:x.get("date",""))[-5:]
+  combined={}
+  for row in history.get((league,team),[])+history_by_team.get(team_key(team),[]):
+   key=(str(row.get("date",""))[:10],team_key(row.get("opponent")),row.get("gf"),row.get("ga"))
+   prior=combined.get(key)
+   # Prefer precise ESPN kickoff time/source metadata when the two feeds describe the same result.
+   if prior is None or row.get("historySource")=="ESPN completed scoreboard":
+    combined[key]=row
+  return sorted(combined.values(),key=lambda x:x.get("date",""))[-5:]
  # Estimate league home/away goal baselines from unique completed matches, not duplicated team-perspective rows.
  unique_matches_by_league={}
  for (history_league,_team),rows in history.items():
- for row in rows:
- hg=row.get("homeGoals"); ag=row.get("awayGoals")
- if hg is None or ag is None or not row.get("home") or not row.get("away"): continue
- try: hg=int(hg); ag=int(ag)
- except (TypeError,ValueError): continue
- match_key=(str(row.get("date",""))[:10],team_key(row.get("home")),team_key(row.get("away")),hg,ag)
- unique_matches_by_league.setdefault(history_league,{})[match_key]=(hg,ag)
+  for row in rows:
+   hg=row.get("homeGoals"); ag=row.get("awayGoals")
+   if hg is None or ag is None or not row.get("home") or not row.get("away"): continue
+   try: hg=int(hg); ag=int(ag)
+   except (TypeError,ValueError): continue
+   match_key=(str(row.get("date",""))[:10],team_key(row.get("home")),team_key(row.get("away")),hg,ag)
+   unique_matches_by_league.setdefault(history_league,{})[match_key]=(hg,ag)
  global_match_map={}
  for games in unique_matches_by_league.values():
- global_match_map.update(games)
+  global_match_map.update(games)
  global_games=list(global_match_map.values())
  def goal_baselines(games,default_home=1.45,default_away=1.20):
- if not games: return default_home,default_away
- return (sum(x[0] for x in games)/len(games),sum(x[1] for x in games)/len(games))
+  if not games: return default_home,default_away
+  return (sum(x[0] for x in games)/len(games),sum(x[1] for x in games)/len(games))
  global_home_avg,global_away_avg=goal_baselines(global_games)
  league_baselines={league:goal_baselines(list(games.values()),global_home_avg,global_away_avg) for league,games in unique_matches_by_league.items()}
  for f in all_matches:
- h=last_five(f["home"],f["league"])
- a=last_five(f["away"],f["league"])
- f["form"]={"home":h,"away":a}
- home_sources=sorted({row.get("historySource","OpenFootball season results") for row in h})
- away_sources=sorted({row.get("historySource","OpenFootball season results") for row in a})
- f["dataCoverage"]["recentForm"]="Heim: %s/5; Gast: %s/5; Quellen: %s" % (
- len(h),len(a),", ".join(sorted(set(home_sources+away_sources))) or "keine"
- )
- league_home_avg,league_away_avg=league_baselines.get(f["league"],(global_home_avg,global_away_avg))
- prediction=poisson_match_model(h,a,league_home_avg,league_away_avg)
- winner_key=max(prediction["probabilities"],key=prediction["probabilities"].get)
- prediction["winner"]={"home":f["home"],"draw":"Unentschieden","away":f["away"]}[winner_key]
- prediction["winnerComment"]="Eigene Modellschätzung; keine bestätigte Buchmacher- oder API-Prognose"
- f["prediction"]=prediction
- enough_form=len(h)>=3 and len(a)>=3
- f["analysisStatus"]="model_estimate" if enough_form else "limited_model"
- f["dataCoverage"]["prediction"]=(
- "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim %s Historien, Gast %s Historien; nicht extern validiert" % (len(h),len(a))
- if enough_form else
- "Begrenzte Modellbasis: Heim %s/5 und Gast %s/5 historische Ergebnisse; Liga-Durchschnitt gleicht fehlende Werte teilweise aus" % (len(h),len(a))
- )
- f["marketCoverage"]={"1X2":"Poisson-Modell aus jüngster Teamform und Liga-Heim-/Auswärtsschnitt","overUnder":"Poisson-Torverteilung","btts":"Poisson-Torverteilung","corners":"Keine belastbare kostenlose Prognose verfügbar","cards":"Keine belastbare kostenlose Prognose verfügbar","playerProps":"Keine belastbare kostenlose Prognose verfügbar"}
- f["h2h"]=sorted([x for x in history_by_team.get(team_key(f["home"]),[]) if team_key(x.get("opponent"))==team_key(f["away"])],key=lambda x:x.get("date",""))[-5:]
+  h=last_five(f["home"],f["league"])
+  a=last_five(f["away"],f["league"])
+  f["form"]={"home":h,"away":a}
+  home_sources=sorted({row.get("historySource","OpenFootball season results") for row in h})
+  away_sources=sorted({row.get("historySource","OpenFootball season results") for row in a})
+  f["dataCoverage"]["recentForm"]="Heim: %s/5; Gast: %s/5; Quellen: %s" % (
+   len(h),len(a),", ".join(sorted(set(home_sources+away_sources))) or "keine"
+  )
+  league_home_avg,league_away_avg=league_baselines.get(f["league"],(global_home_avg,global_away_avg))
+  prediction=poisson_match_model(h,a,league_home_avg,league_away_avg)
+  winner_key=max(prediction["probabilities"],key=prediction["probabilities"].get)
+  prediction["winner"]={"home":f["home"],"draw":"Unentschieden","away":f["away"]}[winner_key]
+  prediction["winnerComment"]="Eigene Modellschätzung; keine bestätigte Buchmacher- oder API-Prognose"
+  f["prediction"]=prediction
+  enough=len(h)>=3 and len(a)>=3
+  f["analysisStatus"]="model_estimate" if enough else "limited_model"
+  f["dataCoverage"]["prediction"]=(
+   "Recency-weighted Poisson-Modell, Heim %s Historien, Gast %s Historien; nicht extern validiert"%(len(h),len(a))
+   if enough else "Eingeschränkte Modellbasis: Heim %s/5, Gast %s/5; Ligamittel glättet fehlende Werte"%(len(h),len(a))
+  )
+  f["marketCoverage"]={"1X2":"Poisson-Modell aus Teamform und Liga-Heim-/Auswärtsschnitt","overUnder":"Poisson-Torverteilung","btts":"Poisson-Torverteilung","corners":"Keine belastbare kostenlose Prognose verfügbar","cards":"Keine belastbare kostenlose Prognose verfügbar","playerProps":"Keine belastbare kostenlose Prognose verfügbar"}
+  f["h2h"]=sorted([x for x in history_by_team.get(team_key(f["home"]),[]) if team_key(x.get("opponent"))==team_key(f["away"])],key=lambda x:x.get("date",""))[-5:]
  enrich_team_news(all_matches,max_teams=80)
  enrich_google_team_research(all_matches,max_teams=40)
  print("Fallback fixture counts by league:",json.dumps(dict(sorted(collections.Counter(x.get("league","UNKNOWN") for x in all_matches).items())),ensure_ascii=False))
  print("Fallback fixture counts by source:",json.dumps(dict(sorted(collections.Counter(x.get("source","unknown") for x in all_matches).items())),ensure_ascii=False))
- status_by_league={}
- date_bounds={}
- for fixture in all_matches:
- league_name=fixture.get("league","UNKNOWN")
- status_by_league.setdefault(league_name,collections.Counter())[fixture.get("analysisStatus","unknown")]+=1
- date_value=fixture.get("date")
- if date_value:
- date_obj=datetime.datetime.fromisoformat(date_value.replace("Z","+00:00"))
- bounds=date_bounds.setdefault(league_name,{"first":date_obj,"last":date_obj})
- if date_obj<bounds["first"]: bounds["first"]=date_obj
- if date_obj>bounds["last"]: bounds["last"]=date_obj
- print("Analysis status by league:",json.dumps({k:dict(v) for k,v in sorted(status_by_league.items())},ensure_ascii=False))
- print("Fixture date bounds by league:",json.dumps({k:{"count":status_by_league[k].total(),"first":v["first"].isoformat(),"last":v["last"].isoformat()} for k,v in sorted(date_bounds.items())},ensure_ascii=False))
  print("Source errors:",json.dumps(errors[:30],ensure_ascii=False))
- # Store a compact, normalized team-history index so browser-side ESPN fallback fixtures can also be modeled.
+ _diag("Google News RSS","error" if any(x.get("source")=="news" for x in TEAM_RESEARCH_ERRORS) else "ok",not any(x.get("source")=="news" for x in TEAM_RESEARCH_ERRORS),sum(len(x.get("teamNews",{}).get("home",[]))+len(x.get("teamNews",{}).get("away",[])) for x in all_matches))
+ _diag("Google Search","error" if any(x.get("source")=="googleSearch" for x in TEAM_RESEARCH_ERRORS) else "ok",not any(x.get("source")=="googleSearch" for x in TEAM_RESEARCH_ERRORS),sum(len(x.get("googleResearch",{}).get("home",[]))+len(x.get("googleResearch",{}).get("away",[])) for x in all_matches))
+ compact_history={}
+ for key,rows in history_by_team.items():
+  unique_rows={}
+  for row in rows:
+   row_key=(str(row.get("date",""))[:10],row.get("opponent"),row.get("gf"),row.get("ga"))
+   unique_rows[row_key]=row
+  compact_history[key]=sorted(unique_rows.values(),key=lambda x:x.get("date",""))[-10:]
+ return all_matches,errors,compact_history
  compact_history={}
  for key,rows in history_by_team.items():
  unique={}
