@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T08:47:46.834017+00:00",
+  "generatedAt": "2026-10-26T08:48:04.964461+00:00",
   "status": "free_mode",
   "message": "Kostenloser Modus: feste 10-Ligen-Konfiguration, OpenFootball/ESPN/OpenLigaDB-Spielpläne, letzte Team-Ergebnisse und eigene Poisson-Schätzung. Verletzungen, Aufstellungen und Quoten sind nicht für alle Spiele verfügbar.",
   "configuredLeagues": [
@@ -267,16 +267,16 @@
             "source": "Kicker"
           },
           {
-            "title": "Sportings Bayern-Generalprobe: Lissaboner Derby bei Benfica endet Remis - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNzBZcnVUeGJBay1QbmdiQlIyQnpOUDdNLVdna1ZrUjY0dmhnRmNnaHNXR2dFOFNVLWxEMkJGVWJlY2hzeU9scHZjOTBrZ09KYW14U081LXRoRGM4MVhKTlFja2RUdTVxTlhMZUVjYk5KSkh0dy1NUWlJd3dFSTAzRUp6bE1FU2RsSC1TelZjMEFWbWxZ?oc=5",
-            "publishedAt": "Fri, 05 Dec 2025 08:00:00 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "SL Benfica - sport.de",
             "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5SMTMyNG1LT3BoRUxqdkRtaVJjYWRnOXNwNkhCOEdQYkRiR3JMSmN5NVVBX3JvTk14bU1HSjNMd0lRV1FzX19SRmxMeE1RUmkyREc5X0RyX1UxYnlM?oc=5",
             "publishedAt": "Sat, 11 Mar 2017 16:14:09 GMT",
             "source": "sport.de"
+          },
+          {
+            "title": "Teils auf Bewährung: UEFA sperrt Benficas Prestianni für sechs Spiele - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdmpCSkM1eTdVc3M3X2NCN1dwSHdlQW1BODhfQ3M2cUVGWllFS3hGbE1WR2tWUzFMSW03aGRlZmhxeWJydUpBczVPSjR1VG9jQnlET0tyNU5PNko4RHFBVkVzbzQ3cHlhN3o3bE1xeWZpdHlVSXY0blFNaUtZUHJNMGRkNE1Qb2kxSk1MOUhQQVd6S19yaUVjazh3d2Nka1lROUcwSzN4a0l3ODJs?oc=5",
+            "publishedAt": "Fri, 24 Apr 2026 07:00:00 GMT",
+            "source": "Kicker"
           }
         ]
       },
@@ -524,10 +524,10 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Für nur 1,2 Millionen geholt: Wie dieser junge Torwart jetzt zum absoluten Lazio-Glücksgriff wurde - Absolut Fussball",
-            "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcmRVSjZ6MWtiU0p4UW9UZXVLWXk2c0xRRjMxN3Z4WEg1YnRpVUhnQTZkaWVCTU9DN1AzaWZTd1VFalpHUHpsQVZzZHVvYzZ2a2FJSWZ5bVNfMmpRNV9DcFRraUgydVVydlBxMHNhZzNHdjhpRDh1VXdXTlMwYllrWlRXLW50cGhUYVZPUE5QS1BIOU1keS1UanE5NTNlOUJ0c0JKRzNvakJBYVdiSUN4Q194OS03T2Y0NVFQWEhPaEdBYkFHenMwM3ZadGxwVEt0akNIVw?oc=5",
-            "publishedAt": "Thu, 23 Apr 2026 07:00:00 GMT",
-            "source": "Absolut Fussball"
+            "title": "Juventus Turin: 0:3 gegen Lazio, Gattusos Team zieht mit Inter gleich - 90PLUS",
+            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZFh0SWNCdG5waF9fYXpfM2w4T29NUkRaeFRSODZPVm8zZlZIaEp3Y04tWXU4aUozYUNsOW9Ra3VuQ3lNeXdVSUl1Nk4zamxFUnlZNGFYeENqXzRsSGQ5a2xWdzhhRzhFZE5pR0s1eTZIdGxFcnJ1ZGpydFAxcG94NDNDd3ZmdjVEdGVZaU9qN0pxQ1Z0MEVxaWRFbFNDaGc?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 07:42:00 GMT",
+            "source": "90PLUS"
           },
           {
             "title": "Lazio gibt zwei Stürmer ab – kuriose Bedingungen entscheiden über Millionen - fussballdaten.de",
@@ -536,16 +536,16 @@
             "source": "fussballdaten.de"
           },
           {
-            "title": "Faschisten-Gruß und Messerstich: Römisches Stadtderby schlägt in Gewalt um - n-tv.de",
-            "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPV0hmeS1HeHVuWlhEZlA1X2MxN3RKZjFOZTMybVV1OFNxaVRQS0tuNk1LYzRRV1BUenhZZm5Uckxsbzh1Q2k5OWcxYnllOWowMDJfZ2hRMWM4ZG4tcjlGTklLOS12NUxib2xKb1hQOS1WWWsxaElDS0k2RTZyaHBuN05CYm9CSVNOQjBiWm94TWNHSTJoSW0ydEtfd2ZlQjdK?oc=5",
-            "publishedAt": "Thu, 11 Jan 2024 08:00:00 GMT",
-            "source": "n-tv.de"
+            "title": "Für nur 1,2 Millionen geholt: Wie dieser junge Torwart jetzt zum absoluten Lazio-Glücksgriff wurde - Absolut Fussball",
+            "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcmRVSjZ6MWtiU0p4UW9UZXVLWXk2c0xRRjMxN3Z4WEg1YnRpVUhnQTZkaWVCTU9DN1AzaWZTd1VFalpHUHpsQVZzZHVvYzZ2a2FJSWZ5bVNfMmpRNV9DcFRraUgydVVydlBxMHNhZzNHdjhpRDh1VXdXTlMwYllrWlRXLW50cGhUYVZPUE5QS1BIOU1keS1UanE5NTNlOUJ0c0JKRzNvakJBYVdiSUN4Q194OS03T2Y0NVFQWEhPaEdBYkFHenMwM3ZadGxwVEt0akNIVw?oc=5",
+            "publishedAt": "Thu, 23 Apr 2026 07:00:00 GMT",
+            "source": "Absolut Fussball"
           },
           {
-            "title": "Trainer verlässt Lazio und soll bei Atalanta unterschreiben - fussballdaten.de",
-            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRnJkN2RrVkw2RS11ZzhqOFFpcGtVZWtqSGMxSEwxN3RscERMZThqb3REVmtxODFJREtnNFNPUmZrR3JtOGhid2REQXFYSllpVFNxWGFxTFNiLUk3NnU5Mmd1ejZEWHJ4ajRDQjJxLXFZTFdDQ3ZzQnBGN0dSYWNoellIWUp4U3NiajZRVE1HeEo?oc=5",
-            "publishedAt": "Sat, 23 May 2026 07:00:00 GMT",
-            "source": "fussballdaten.de"
+            "title": "36. Spieltag: Lazio Rom - Inter Mailand - S.S. Lazio - Le Aquile - Forum | Page 1 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSUlrRnN0WGdxTG10RDhqQ0JHS2xfdzlpaUJiZzNrNU14V2xGNVJZQ3drRlNLNVlGRU9SQXBBcGR1T1V5bWt3cW83UEZEMmQ0LThhV0M0c0xkczB6eC1mOTdXOXFFRTRCeFhlbGY0LVdwM2ROOEJMeThiVERCODRqbTh6TXhaSWFWaV9aMDNLXzIwLWZTVmJNUTBoN28?oc=5",
+            "publishedAt": "Fri, 08 May 2026 06:48:42 GMT",
+            "source": "Transfermarkt"
           }
         ]
       },
@@ -1555,16 +1555,16 @@
             "source": "sport.de"
           },
           {
+            "title": "Cesena FC U20 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNb1FsWFdBUVNlTm9HdWN1REI0X1dKM0kwOG9yODdwaE41VWkwN2YzZ05zQXpHanRzcWpjc1M2MzNiSlpJZFBjYTd1bXRLaXRPa0plLTFxN1NpUTlCV3Y1MmN5ZHlsSmd0MjlRd3hwLURjNG5leTY2NFY1M3E5T2kySkticFJHaFNKSGU0cUFBZjN3bE0?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 07:58:14 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Aufstellung: Frosinone - Venezia | 06.09.2026 - Aufstellung & Formation | Serie A 3. Spieltag 2026/2027 - SPORT1",
             "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWVB3RTNqRmYtaWd0bG5qRjZDb3g1VGh4dUNya0ZqZU5LZ1hvemVHMFpkUTljVFYwbDRVZ2ZFZnBQYy0tMl83ZXY4WWEySXZVQVBwQ2lwdU1BMHdDZlNZRjVJT0o3cmU0WjB0SlhRUGliSXk2Zm9CUjlXTk9kdE5INHA4WFQ3N1IybG93ei1LRkFRNmZmOUVnQzJicWF1QQ?oc=5",
             "publishedAt": "Sun, 06 Sep 2026 07:00:00 GMT",
             "source": "SPORT1"
-          },
-          {
-            "title": "Aufstellung Atalanta - Venezia FC 3:1 | 6. Spieltag, Serie A 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTEpmck1vN0gxdFliSTkxNEJEbkFVV0ljMXF4Z1JEZnNvNm1fYW1FelkyRlkzazZMMzFEeUQwRmI3bmh0VnJnOHlLb2VaRTFRT2pUbE9VeVJYTlBOc1F0TGhDbEJSdVExS2NVWWdrVmE2cDBwR2dicE9Qam1Tc3ZyOG5lS2ZaMnNscjQ4dWFkdzNTVXM?oc=5",
-            "publishedAt": "Mon, 12 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
           }
         ],
         "away": [
@@ -2351,12 +2351,6 @@
         ],
         "away": [
           {
-            "title": "8. Spieltag: SSC Neapel - AS Rom - S.S.C. Napoli - I Partenopei - Forum | Page 1 - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUlFrU1RSVHJseVZmVWJTQnlVYXZQaWFwd29WM0RfTV9Ha1B3U2xrTVROTEF5UFBlRm5UdXRRV3hvVTlkaWIxVmZ4U1JPdnQ0NEZNVldCUEVhSWNMU1ZnaFY1Q0lTVTNEUXdzWlpsYjRZMDFfZFFRb2dPdjNuNmVWNDU4bjd5SlBXaW5uUVg0clVKdEk?oc=5",
-            "publishedAt": "Sat, 24 Oct 2026 14:58:00 GMT",
-            "source": "Transfermarkt"
-          },
-          {
             "title": "Napoli verliert Abwehrchef: Buongiorno droht monatelanger Ausfall - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPby15dk1FZmQ5bWRzSDhUUFBZSW9sSWRKaElLbkxKbExmaDlsVTQybHdpbWE3TjZrYU41LU11cDU4LWw4aVRUSTE0dmNfZF9KWXNJcG0wcGV5NWZUOVZybk9BM000ZllJb3pNV0ZMX2tWT09hTzJqQ2hVaGlCSndTUjJhVEJjaUQ4QjV0YzEzWGh5YXN4M2Z1ZUplX2dQOVZn?oc=5",
             "publishedAt": "Tue, 21 Jul 2026 07:00:00 GMT",
@@ -2369,16 +2363,22 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Inter Mailand gegen Neapel, Serie-A-Vorschau: Alles, was ihr wissen müsst - Goal.com",
-            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMGxUekRLTGtKckpYSHN5QkNIckVqU3hRUmx4MzRfQ29IalpjNGJ6U3QzcEgwd1VfMFZqMEJTcEM2ZEgxV2Y2Zld4a3dWQ25kNFl2RDM4Nl9uc0JIQWpha2luekZsenpJbVlScnNYSmlEQUZYTUpRWkNYUzVNQXBWQlBWRVdhU0puQ3pPVGZ1UWtQRzVfb3ZEakJNalNQbGlfMk9Bd0p4eFNDcDMxcXMxUU1nRllmenA3VnlPcVp0ZF9GZ2s?oc=5",
-            "publishedAt": "Fri, 04 Sep 2026 07:00:00 GMT",
-            "source": "Goal.com"
+            "title": "Vorschau: Nächster Halt Neapel - Eintracht Frankfurt",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1yMHdYblNJWkNmV0V5dEVRTXZCeFdwblNVM0RjZUU4RTItMHc1Q0NDZU91OUk1czFpbTdqaGs3TUlUTk5teERSY21vRW15c3Fzc2s0eWVMR2dhZ2NGSXpTVmFHRlBRNm1ZaVJQbEFmRFdkQTlWblFMRDd0dw?oc=5",
+            "publishedAt": "Sun, 02 Nov 2025 07:00:00 GMT",
+            "source": "Eintracht Frankfurt"
           },
           {
-            "title": "SSC Napoli - Celta Vigo Live ticker, H2H und Aufstellungen - Sofascore",
-            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53TE1FZWdwTzlVVktnRGp4TmtRNUh4RGItY1BLeFBxUFkxdExObzZzOFp5NkdxaUZuUFc2NGxZUkFzMGY0VXBlTWtPbkxnX1pYcXVsTmo0OE03dVdaSzgwZmU4aHE1bzdWbnBMbnM0M25qRkhaVUxzTjJIYm00dw?oc=5",
-            "publishedAt": "Sat, 08 Aug 2026 07:00:00 GMT",
-            "source": "Sofascore"
+            "title": "Oberschenkelverletzung! Havel verpasst Genua-Auftakt gegen Napoli - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUUhlalZNbndFNDRrQkQtLThSNHdWYy1sXzllck1Tb2NVaDhveGRBWEx3UGtuelRYOGhSVHJyMURUbG9GMHh5ZTJFRmNxWHBNTnNlLUN1RHRBNS1qY05kcWFmeTNjTXU0RkdFTnVMemNaTXdtNjRQTWtueTljRXhzMVpxQ0JMSWlCYUVkSDRLSDI1bFJsTHFRTnRsc2VOQkllT253eGJOaTc1SzFUYThWNkU3SGhXLUhKNkxid2JsM2hmaklWOEY0dlRzemJ3QkNFbGpUMkFxM2hyOERmblhjRg?oc=5",
+            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Anguissa verpasst Afrika-Cup: Nächste schwere Verletzung bei SSC Napoli - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOYmluZWw3bkl4ME5SRjVyQmU5cVNPcUN3c2hmX3JnVVI0d0p3U1I3OVR4TzNZaVphdjBZbElmMTB1VjlteGRoOC1ra1ZSb2tIcnpUbUtDUWplUW1XcUtYSGgwNU9tZWhEenJmRDNIanQ2RVhnb3lXYUFIemh0VjRlRFRSRE5hX3BIRnU5OHZPWklqaGZ0cm9wWDRwWjBQQlpncnVOQ015SzFtZ1lrUnNCbENpeExmOG8?oc=5",
+            "publishedAt": "Fri, 14 Nov 2025 08:00:00 GMT",
+            "source": "Transfermarkt"
           }
         ]
       },
@@ -2595,34 +2595,34 @@
         ],
         "away": [
           {
-            "title": "Aufstellung | US Lecce - Juventus Turin 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQLUVMclpRTlFDVUxvX1BaZFZzVmliRXVkbnBRN0JCUVRjTGNIQWhvbWhEeWpMSUVRaFFkdmRYdkZNb3RLS05TU29YUk5mcElWbnY0V3A2cERvc19mY3R4Zm5ZaHBWcGYxbDd3Ukw3c28zYmpOeEUxczB0V1BxUlhaag?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 17:54:02 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "Aufstellung US Lecce - Juventus Turin 0:2 | 8. Spieltag, Serie A 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQOFZoQlRjem1QT0dnTXBZVlRIRlZvZTJBRDNjMmE1RkVTS0JPVGZkcTdoU1dwLTVaY1lraG9ocWhsOURIenN0aU5NaXdqMDBIZXhwMWRYYmZWUTFkeEpNTWI4M2x5OEdZWkctcG0xM3FsdUJqSFNKSE4xWU9sNy1UejhzNWw1cER2STlxMTlGbVFKdTFSdXNZNg?oc=5",
             "publishedAt": "Sun, 25 Oct 2026 16:00:00 GMT",
             "source": "sport.de"
           },
           {
-            "title": "US Lecce gegen Juventus Turin Aufstellung - Serie A 8. Spieltag 2026/2027 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWThOZDdNMG1WZF9xbTRVUG9PRlBYMXpFRzRuVHpzLXI5cnU1NGlfcDNNaHRiUlVkZ2E1TjlNYjl4RVRkcEVKWGFRUlJ6azRzancyS1c3c2NjYjlNQU1xOUZ5dXdLVm11d3kxVkI4aFNGQ2lsVTQzMFVxcUJMMVl3WDdUQUt2OFJGcDlERmV5Skp3UQ?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 18:16:00 GMT",
-            "source": "BILD"
+            "title": "US Lecce - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPa0FRMGpiU2N2WF9pNjVObEZsVDRRaEg4SDZYR0xwX0RxaG1MWUVXWXczRnpVcF9Rd0V3d2x3eGFkREJsNVRMMWZ6VW4tVnBUNEx1UjBVRlpRSnljS3ZONk02TlNVVHI5OTFaTURDcW9GNXpSMEhrcWo3NmJXSk5Rb2xldkU5MXc?oc=5",
+            "publishedAt": "Fri, 23 Oct 2026 05:34:37 GMT",
+            "source": "Transfermarkt"
           },
           {
-            "title": "US Lecce - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMnRCOVFId3ZQcVVjcEJYdUdOWmNnazNQajJWVlR1RVFFaVdvYXRqZHdtMVFvVWphTXRfbGVtMGMxQm9YZTAxYTdEcldHMG1WYk5mSDJFcTk1QzYteklYei1pVzYxWUlrTGJuQkpnZ1h2N3JoT0JITExLeTdOUXdYMGdnWTZxdjd5?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 18:40:56 GMT",
-            "source": "Transfermarkt"
+            "title": "Aufstellung | US Lecce - Juventus Turin 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQLUVMclpRTlFDVUxvX1BaZFZzVmliRXVkbnBRN0JCUVRjTGNIQWhvbWhEeWpMSUVRaFFkdmRYdkZNb3RLS05TU29YUk5mcElWbnY0V3A2cERvc19mY3R4Zm5ZaHBWcGYxbDd3Ukw3c28zYmpOeEUxczB0V1BxUlhaag?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 17:54:02 GMT",
+            "source": "Kicker"
           },
           {
             "title": "Ergebnis Lecce - Juventus (0-2) 8. Spieltag Serie A 2026/2027 25/10 - FussballTransfers.com",
             "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPa2JDMUNFOFlZQmVLRFplQTk5YUwyUXV3YzBwc2dyd19mZ19UV0dMRTF3MVp0clpDVFUtb2hOZXlocVZkOGY3UFhqRlZyZDZ6SFZ5bk1sbVFOSElPaXR2al83Z1JwczhUSjFIM3pvTTVITUdENHFHOWxYZFBkSS1jMmpaSXd4dkF5cXBVMHQ5TQ?oc=5",
             "publishedAt": "Sun, 25 Oct 2026 15:40:00 GMT",
             "source": "FussballTransfers.com"
+          },
+          {
+            "title": "US Lecce gegen AS Rom Aufstellung - Serie A 2. Spieltag 2026/2027 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVGhfS1c0VWd6SW1VMjlaN25uSmFfd1RsVDlMbXoxNkF3MTNCZ2RSMmFoTFVxTHhsb1p2d2ZFZ1k5N3p6RGJ1VWNhNm4tbmM3QXlSNU5xeWh5M1g1a0dCX3hrVXRoQXJqSnZnWjdnZ0ZhWHUzVm9hM2ZjUjBMUnFnc0ozaUw?oc=5",
+            "publishedAt": "Tue, 01 Sep 2026 22:27:05 GMT",
+            "source": "BILD"
           }
         ]
       },
@@ -3620,10 +3620,10 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Osimhen trifft an alter Wirkungsstätte: Galatasaray feiert in Lille ersten CL-Sieg - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNTlaV2taRDdTWk1OOXJENzV2WFJkM2hSeVJIUWYwbjVCeWNUUG9RLU0tZXJwRjYxN1dPSU5sMk1sTV9uV0dkY2kzYW1rT3JPeU1XWk80ZV9jUk1LbGFFVDRHYmg1dGc2Rk4yYTlwUHBqZXVwVUhZZnVKUGRJR1gtcmlnNE9mSFhHZkdmRTBUWkk?oc=5",
-            "publishedAt": "Wed, 21 Oct 2026 15:45:03 GMT",
-            "source": "Kicker"
+            "title": "Osimhen trifft an alter Wirkungsstätte: Galatasaray feiert in Lille ersten CL-Sieg - kicker.ch",
+            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVEh2MlhyWTNXN2R6Tk0xVTFYU3Vza1dQd2FpbV9tdU1QakRoUjhnaGgyYXpzVEN0N05NT2JETjc3TzlaOGFMVURVdS1zR2M2Z0N5SXNKdS0ySDRFaDY5OWloem5vY09ESjN6YWNuUHA4S1RTRkY2RVJXRUdoN3Y5TnlQdkJJdTMxVzgzNUZYdFc?oc=5",
+            "publishedAt": "Wed, 21 Oct 2026 17:00:23 GMT",
+            "source": "kicker.ch"
           },
           {
             "title": "Arsenal FC gegen Lille OSC Aufstellung - Champions League 2. Spieltag Ligaphase 2026/2027 - BILD",
@@ -3921,16 +3921,16 @@
             "source": "Eintracht Frankfurt"
           },
           {
+            "title": "Sporting Lissabon - Vereinsprofil - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBQODNOdXgxTFZkWnNLaHNKNTNJY0VlbWFVZm15Z1EyZG5XSnRXNDdqbUFILWJrZGJ3OXFoTTRyTnVaOGRzVWpZM2M4emtsRFZmaFo5a1d0YlFSLWhkeXpabkEzSzUxMXU1aWgxZFo5ckxRaFU4dHhB?oc=5",
+            "publishedAt": "Mon, 08 May 2017 06:56:55 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Einem droht jetzt das Aus beim FC Bayern! Comeback von Alphonso Davies hat weitreichende Konsequenzen - SPOX.com",
             "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPMDdzdnB0XzJaR0dJZVNTZlVyUDB6bnFTYjBFcURFNm9RVFVpX29xLVBEM3FRbmtfQmlVQzZtY2lUbWtpcDhRV3l1MUFEaTNIeE5SdVllSFZzZEs1V1diTGlEWHM3a0JlcV9zRDQzTUpVdUFZRkpGZFZjbjBzdDJxbklaUGZHSE9QMjdKb01keWZpcEJLUHZkSkVWTmlKdTdBengyNm5KeEtDZ3AxM1BlUHk4cTl3UXNtWDdtNHFHLXhHaFlXdFZTQkgwX0tIOVpxOExVQWh4RExjSklydTJhZy1RR2tWUHNlQXRBcTlB?oc=5",
             "publishedAt": "Thu, 11 Dec 2025 08:00:00 GMT",
             "source": "SPOX.com"
-          },
-          {
-            "title": "Geschichte: Napoli 2-1 Sporting CP | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPbmU2Yy12OVBxcUhpWllGdG9vMURJRWttVU5QSUtaSUpNeDFKYURqRWZlM2VyT3FyREw3SjF0TVVQU1hJQ0ZaamVnM2lfd0hVSHlTcmRRYUZEVEpBTXNvWVB2RERkajdVNG5kVTFuTXdWN1RJZFoxZXFNVnVXXzVPeHFVTGRMM0xWaE52M3pR?oc=5",
-            "publishedAt": "Sat, 30 Aug 2025 13:12:44 GMT",
-            "source": "UEFA.com"
           }
         ]
       },
@@ -4164,9 +4164,9 @@
             "source": "LAOLA1"
           },
           {
-            "title": "Fußball Premier League: Arsenal gegen Chelsea - Aufstellung - 3. Spieltag - 2026/2027 - sportschau.de",
-            "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxObkVvM3pSbVViTl9yX0JoS1RjTENoY1RpcWJJMWJZNXRrUHE3MEZ6cmU2WWNqNm5ablg2TGQ1Q2wyZEsydTc1VTZsY0dha3h2ZG5faloyekdidEdwZEc3cmpTVDByQkhYaGVPQ0FuLURYbVlaTVpDZmpFUEZXNTJHck4wNk1NTlh4UnR0TzRlS1k5VmFNNHE3aFVnQl84azhDX2QzNURiVW1tNlVzSW1XODFWZDNGcmhYRWxfVV9kSU5OTEZCSHQtMWE5UFE?oc=5",
-            "publishedAt": "Sun, 06 Sep 2026 18:08:30 GMT",
+            "title": "Fußball Premier League: Everton gegen Chelsea - Aufstellung - 7. Spieltag - 2026/2027 - sportschau.de",
+            "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPM2hpYVJRRG5tYVJHMl9xRHo5ckF5Wi1QWVVDTlhlSEplVkN0MS1zWjlKM1MwT2VUbzdaZnl3T2xGR0k0dTVjcDIxb0stYlFOQkNaNkRLNG40M0xSdDZfYklJb0x0TGxyeEw2Qk50eGNNdU4zNy1zMmxYY29FbHBXckhmZFdpdGI2MF8wLXp1R0trU3VvbVhmejVBd2c4QURvYl9XQlV0ZXZQLUxNdnZnYmlRUVZVUGh4Z0ozSVVJMDVkZXd4c1Y3LVBzNjU?oc=5",
+            "publishedAt": "Sat, 17 Oct 2026 14:24:28 GMT",
             "source": "sportschau.de"
           }
         ],
@@ -9248,16 +9248,16 @@
             "source": "sport.de"
           },
           {
+            "title": "Cesena FC U20 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNb1FsWFdBUVNlTm9HdWN1REI0X1dKM0kwOG9yODdwaE41VWkwN2YzZ05zQXpHanRzcWpjc1M2MzNiSlpJZFBjYTd1bXRLaXRPa0plLTFxN1NpUTlCV3Y1MmN5ZHlsSmd0MjlRd3hwLURjNG5leTY2NFY1M3E5T2kySkticFJHaFNKSGU0cUFBZjN3bE0?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 07:58:14 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Aufstellung: Frosinone - Venezia | 06.09.2026 - Aufstellung & Formation | Serie A 3. Spieltag 2026/2027 - SPORT1",
             "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWVB3RTNqRmYtaWd0bG5qRjZDb3g1VGh4dUNya0ZqZU5LZ1hvemVHMFpkUTljVFYwbDRVZ2ZFZnBQYy0tMl83ZXY4WWEySXZVQVBwQ2lwdU1BMHdDZlNZRjVJT0o3cmU0WjB0SlhRUGliSXk2Zm9CUjlXTk9kdE5INHA4WFQ3N1IybG93ei1LRkFRNmZmOUVnQzJicWF1QQ?oc=5",
             "publishedAt": "Sun, 06 Sep 2026 07:00:00 GMT",
             "source": "SPORT1"
-          },
-          {
-            "title": "Aufstellung Atalanta - Venezia FC 3:1 | 6. Spieltag, Serie A 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTEpmck1vN0gxdFliSTkxNEJEbkFVV0ljMXF4Z1JEZnNvNm1fYW1FelkyRlkzazZMMzFEeUQwRmI3bmh0VnJnOHlLb2VaRTFRT2pUbE9VeVJYTlBOc1F0TGhDbEJSdVExS2NVWWdrVmE2cDBwR2dicE9Qam1Tc3ZyOG5lS2ZaMnNscjQ4dWFkdzNTVXM?oc=5",
-            "publishedAt": "Mon, 12 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
           }
         ]
       },
@@ -9717,10 +9717,10 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Für nur 1,2 Millionen geholt: Wie dieser junge Torwart jetzt zum absoluten Lazio-Glücksgriff wurde - Absolut Fussball",
-            "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcmRVSjZ6MWtiU0p4UW9UZXVLWXk2c0xRRjMxN3Z4WEg1YnRpVUhnQTZkaWVCTU9DN1AzaWZTd1VFalpHUHpsQVZzZHVvYzZ2a2FJSWZ5bVNfMmpRNV9DcFRraUgydVVydlBxMHNhZzNHdjhpRDh1VXdXTlMwYllrWlRXLW50cGhUYVZPUE5QS1BIOU1keS1UanE5NTNlOUJ0c0JKRzNvakJBYVdiSUN4Q194OS03T2Y0NVFQWEhPaEdBYkFHenMwM3ZadGxwVEt0akNIVw?oc=5",
-            "publishedAt": "Thu, 23 Apr 2026 07:00:00 GMT",
-            "source": "Absolut Fussball"
+            "title": "Juventus Turin: 0:3 gegen Lazio, Gattusos Team zieht mit Inter gleich - 90PLUS",
+            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZFh0SWNCdG5waF9fYXpfM2w4T29NUkRaeFRSODZPVm8zZlZIaEp3Y04tWXU4aUozYUNsOW9Ra3VuQ3lNeXdVSUl1Nk4zamxFUnlZNGFYeENqXzRsSGQ5a2xWdzhhRzhFZE5pR0s1eTZIdGxFcnJ1ZGpydFAxcG94NDNDd3ZmdjVEdGVZaU9qN0pxQ1Z0MEVxaWRFbFNDaGc?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 07:42:00 GMT",
+            "source": "90PLUS"
           },
           {
             "title": "Lazio gibt zwei Stürmer ab – kuriose Bedingungen entscheiden über Millionen - fussballdaten.de",
@@ -9729,16 +9729,16 @@
             "source": "fussballdaten.de"
           },
           {
-            "title": "Faschisten-Gruß und Messerstich: Römisches Stadtderby schlägt in Gewalt um - n-tv.de",
-            "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPV0hmeS1HeHVuWlhEZlA1X2MxN3RKZjFOZTMybVV1OFNxaVRQS0tuNk1LYzRRV1BUenhZZm5Uckxsbzh1Q2k5OWcxYnllOWowMDJfZ2hRMWM4ZG4tcjlGTklLOS12NUxib2xKb1hQOS1WWWsxaElDS0k2RTZyaHBuN05CYm9CSVNOQjBiWm94TWNHSTJoSW0ydEtfd2ZlQjdK?oc=5",
-            "publishedAt": "Thu, 11 Jan 2024 08:00:00 GMT",
-            "source": "n-tv.de"
+            "title": "Für nur 1,2 Millionen geholt: Wie dieser junge Torwart jetzt zum absoluten Lazio-Glücksgriff wurde - Absolut Fussball",
+            "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcmRVSjZ6MWtiU0p4UW9UZXVLWXk2c0xRRjMxN3Z4WEg1YnRpVUhnQTZkaWVCTU9DN1AzaWZTd1VFalpHUHpsQVZzZHVvYzZ2a2FJSWZ5bVNfMmpRNV9DcFRraUgydVVydlBxMHNhZzNHdjhpRDh1VXdXTlMwYllrWlRXLW50cGhUYVZPUE5QS1BIOU1keS1UanE5NTNlOUJ0c0JKRzNvakJBYVdiSUN4Q194OS03T2Y0NVFQWEhPaEdBYkFHenMwM3ZadGxwVEt0akNIVw?oc=5",
+            "publishedAt": "Thu, 23 Apr 2026 07:00:00 GMT",
+            "source": "Absolut Fussball"
           },
           {
-            "title": "Trainer verlässt Lazio und soll bei Atalanta unterschreiben - fussballdaten.de",
-            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRnJkN2RrVkw2RS11ZzhqOFFpcGtVZWtqSGMxSEwxN3RscERMZThqb3REVmtxODFJREtnNFNPUmZrR3JtOGhid2REQXFYSllpVFNxWGFxTFNiLUk3NnU5Mmd1ejZEWHJ4ajRDQjJxLXFZTFdDQ3ZzQnBGN0dSYWNoellIWUp4U3NiajZRVE1HeEo?oc=5",
-            "publishedAt": "Sat, 23 May 2026 07:00:00 GMT",
-            "source": "fussballdaten.de"
+            "title": "36. Spieltag: Lazio Rom - Inter Mailand - S.S. Lazio - Le Aquile - Forum | Page 1 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSUlrRnN0WGdxTG10RDhqQ0JHS2xfdzlpaUJiZzNrNU14V2xGNVJZQ3drRlNLNVlGRU9SQXBBcGR1T1V5bWt3cW83UEZEMmQ0LThhV0M0c0xkczB6eC1mOTdXOXFFRTRCeFhlbGY0LVdwM2ROOEJMeThiVERCODRqbTh6TXhaSWFWaV9aMDNLXzIwLWZTVmJNUTBoN28?oc=5",
+            "publishedAt": "Fri, 08 May 2026 06:48:42 GMT",
+            "source": "Transfermarkt"
           }
         ],
         "away": [
@@ -13217,34 +13217,34 @@
       "teamNews": {
         "home": [
           {
-            "title": "Aufstellung | US Lecce - Juventus Turin 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQLUVMclpRTlFDVUxvX1BaZFZzVmliRXVkbnBRN0JCUVRjTGNIQWhvbWhEeWpMSUVRaFFkdmRYdkZNb3RLS05TU29YUk5mcElWbnY0V3A2cERvc19mY3R4Zm5ZaHBWcGYxbDd3Ukw3c28zYmpOeEUxczB0V1BxUlhaag?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 17:54:02 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "Aufstellung US Lecce - Juventus Turin 0:2 | 8. Spieltag, Serie A 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQOFZoQlRjem1QT0dnTXBZVlRIRlZvZTJBRDNjMmE1RkVTS0JPVGZkcTdoU1dwLTVaY1lraG9ocWhsOURIenN0aU5NaXdqMDBIZXhwMWRYYmZWUTFkeEpNTWI4M2x5OEdZWkctcG0xM3FsdUJqSFNKSE4xWU9sNy1UejhzNWw1cER2STlxMTlGbVFKdTFSdXNZNg?oc=5",
             "publishedAt": "Sun, 25 Oct 2026 16:00:00 GMT",
             "source": "sport.de"
           },
           {
-            "title": "US Lecce gegen Juventus Turin Aufstellung - Serie A 8. Spieltag 2026/2027 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWThOZDdNMG1WZF9xbTRVUG9PRlBYMXpFRzRuVHpzLXI5cnU1NGlfcDNNaHRiUlVkZ2E1TjlNYjl4RVRkcEVKWGFRUlJ6azRzancyS1c3c2NjYjlNQU1xOUZ5dXdLVm11d3kxVkI4aFNGQ2lsVTQzMFVxcUJMMVl3WDdUQUt2OFJGcDlERmV5Skp3UQ?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 18:16:00 GMT",
-            "source": "BILD"
+            "title": "US Lecce - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPa0FRMGpiU2N2WF9pNjVObEZsVDRRaEg4SDZYR0xwX0RxaG1MWUVXWXczRnpVcF9Rd0V3d2x3eGFkREJsNVRMMWZ6VW4tVnBUNEx1UjBVRlpRSnljS3ZONk02TlNVVHI5OTFaTURDcW9GNXpSMEhrcWo3NmJXSk5Rb2xldkU5MXc?oc=5",
+            "publishedAt": "Fri, 23 Oct 2026 05:34:37 GMT",
+            "source": "Transfermarkt"
           },
           {
-            "title": "US Lecce - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMnRCOVFId3ZQcVVjcEJYdUdOWmNnazNQajJWVlR1RVFFaVdvYXRqZHdtMVFvVWphTXRfbGVtMGMxQm9YZTAxYTdEcldHMG1WYk5mSDJFcTk1QzYteklYei1pVzYxWUlrTGJuQkpnZ1h2N3JoT0JITExLeTdOUXdYMGdnWTZxdjd5?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 18:40:56 GMT",
-            "source": "Transfermarkt"
+            "title": "Aufstellung | US Lecce - Juventus Turin 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQLUVMclpRTlFDVUxvX1BaZFZzVmliRXVkbnBRN0JCUVRjTGNIQWhvbWhEeWpMSUVRaFFkdmRYdkZNb3RLS05TU29YUk5mcElWbnY0V3A2cERvc19mY3R4Zm5ZaHBWcGYxbDd3Ukw3c28zYmpOeEUxczB0V1BxUlhaag?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 17:54:02 GMT",
+            "source": "Kicker"
           },
           {
             "title": "Ergebnis Lecce - Juventus (0-2) 8. Spieltag Serie A 2026/2027 25/10 - FussballTransfers.com",
             "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPa2JDMUNFOFlZQmVLRFplQTk5YUwyUXV3YzBwc2dyd19mZ19UV0dMRTF3MVp0clpDVFUtb2hOZXlocVZkOGY3UFhqRlZyZDZ6SFZ5bk1sbVFOSElPaXR2al83Z1JwczhUSjFIM3pvTTVITUdENHFHOWxYZFBkSS1jMmpaSXd4dkF5cXBVMHQ5TQ?oc=5",
             "publishedAt": "Sun, 25 Oct 2026 15:40:00 GMT",
             "source": "FussballTransfers.com"
+          },
+          {
+            "title": "US Lecce gegen AS Rom Aufstellung - Serie A 2. Spieltag 2026/2027 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVGhfS1c0VWd6SW1VMjlaN25uSmFfd1RsVDlMbXoxNkF3MTNCZ2RSMmFoTFVxTHhsb1p2d2ZFZ1k5N3p6RGJ1VWNhNm4tbmM3QXlSNU5xeWh5M1g1a0dCX3hrVXRoQXJqSnZnWjdnZ0ZhWHUzVm9hM2ZjUjBMUnFnc0ozaUw?oc=5",
+            "publishedAt": "Tue, 01 Sep 2026 22:27:05 GMT",
+            "source": "BILD"
           }
         ],
         "away": [
@@ -13913,12 +13913,6 @@
         ],
         "away": [
           {
-            "title": "8. Spieltag: SSC Neapel - AS Rom - S.S.C. Napoli - I Partenopei - Forum | Page 1 - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUlFrU1RSVHJseVZmVWJTQnlVYXZQaWFwd29WM0RfTV9Ha1B3U2xrTVROTEF5UFBlRm5UdXRRV3hvVTlkaWIxVmZ4U1JPdnQ0NEZNVldCUEVhSWNMU1ZnaFY1Q0lTVTNEUXdzWlpsYjRZMDFfZFFRb2dPdjNuNmVWNDU4bjd5SlBXaW5uUVg0clVKdEk?oc=5",
-            "publishedAt": "Sat, 24 Oct 2026 14:58:00 GMT",
-            "source": "Transfermarkt"
-          },
-          {
             "title": "Napoli verliert Abwehrchef: Buongiorno droht monatelanger Ausfall - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPby15dk1FZmQ5bWRzSDhUUFBZSW9sSWRKaElLbkxKbExmaDlsVTQybHdpbWE3TjZrYU41LU11cDU4LWw4aVRUSTE0dmNfZF9KWXNJcG0wcGV5NWZUOVZybk9BM000ZllJb3pNV0ZMX2tWT09hTzJqQ2hVaGlCSndTUjJhVEJjaUQ4QjV0YzEzWGh5YXN4M2Z1ZUplX2dQOVZn?oc=5",
             "publishedAt": "Tue, 21 Jul 2026 07:00:00 GMT",
@@ -13931,16 +13925,22 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Inter Mailand gegen Neapel, Serie-A-Vorschau: Alles, was ihr wissen müsst - Goal.com",
-            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMGxUekRLTGtKckpYSHN5QkNIckVqU3hRUmx4MzRfQ29IalpjNGJ6U3QzcEgwd1VfMFZqMEJTcEM2ZEgxV2Y2Zld4a3dWQ25kNFl2RDM4Nl9uc0JIQWpha2luekZsenpJbVlScnNYSmlEQUZYTUpRWkNYUzVNQXBWQlBWRVdhU0puQ3pPVGZ1UWtQRzVfb3ZEakJNalNQbGlfMk9Bd0p4eFNDcDMxcXMxUU1nRllmenA3VnlPcVp0ZF9GZ2s?oc=5",
-            "publishedAt": "Fri, 04 Sep 2026 07:00:00 GMT",
-            "source": "Goal.com"
+            "title": "Vorschau: Nächster Halt Neapel - Eintracht Frankfurt",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1yMHdYblNJWkNmV0V5dEVRTXZCeFdwblNVM0RjZUU4RTItMHc1Q0NDZU91OUk1czFpbTdqaGs3TUlUTk5teERSY21vRW15c3Fzc2s0eWVMR2dhZ2NGSXpTVmFHRlBRNm1ZaVJQbEFmRFdkQTlWblFMRDd0dw?oc=5",
+            "publishedAt": "Sun, 02 Nov 2025 07:00:00 GMT",
+            "source": "Eintracht Frankfurt"
           },
           {
-            "title": "SSC Napoli - Celta Vigo Live ticker, H2H und Aufstellungen - Sofascore",
-            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53TE1FZWdwTzlVVktnRGp4TmtRNUh4RGItY1BLeFBxUFkxdExObzZzOFp5NkdxaUZuUFc2NGxZUkFzMGY0VXBlTWtPbkxnX1pYcXVsTmo0OE03dVdaSzgwZmU4aHE1bzdWbnBMbnM0M25qRkhaVUxzTjJIYm00dw?oc=5",
-            "publishedAt": "Sat, 08 Aug 2026 07:00:00 GMT",
-            "source": "Sofascore"
+            "title": "Oberschenkelverletzung! Havel verpasst Genua-Auftakt gegen Napoli - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUUhlalZNbndFNDRrQkQtLThSNHdWYy1sXzllck1Tb2NVaDhveGRBWEx3UGtuelRYOGhSVHJyMURUbG9GMHh5ZTJFRmNxWHBNTnNlLUN1RHRBNS1qY05kcWFmeTNjTXU0RkdFTnVMemNaTXdtNjRQTWtueTljRXhzMVpxQ0JMSWlCYUVkSDRLSDI1bFJsTHFRTnRsc2VOQkllT253eGJOaTc1SzFUYThWNkU3SGhXLUhKNkxid2JsM2hmaklWOEY0dlRzemJ3QkNFbGpUMkFxM2hyOERmblhjRg?oc=5",
+            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Anguissa verpasst Afrika-Cup: Nächste schwere Verletzung bei SSC Napoli - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOYmluZWw3bkl4ME5SRjVyQmU5cVNPcUN3c2hmX3JnVVI0d0p3U1I3OVR4TzNZaVphdjBZbElmMTB1VjlteGRoOC1ra1ZSb2tIcnpUbUtDUWplUW1XcUtYSGgwNU9tZWhEenJmRDNIanQ2RVhnb3lXYUFIemh0VjRlRFRSRE5hX3BIRnU5OHZPWklqaGZ0cm9wWDRwWjBQQlpncnVOQ015SzFtZ1lrUnNCbENpeExmOG8?oc=5",
+            "publishedAt": "Fri, 14 Nov 2025 08:00:00 GMT",
+            "source": "Transfermarkt"
           }
         ]
       },
@@ -15327,16 +15327,16 @@
             "source": "Kicker"
           },
           {
-            "title": "Sportings Bayern-Generalprobe: Lissaboner Derby bei Benfica endet Remis - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNzBZcnVUeGJBay1QbmdiQlIyQnpOUDdNLVdna1ZrUjY0dmhnRmNnaHNXR2dFOFNVLWxEMkJGVWJlY2hzeU9scHZjOTBrZ09KYW14U081LXRoRGM4MVhKTlFja2RUdTVxTlhMZUVjYk5KSkh0dy1NUWlJd3dFSTAzRUp6bE1FU2RsSC1TelZjMEFWbWxZ?oc=5",
-            "publishedAt": "Fri, 05 Dec 2025 08:00:00 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "SL Benfica - sport.de",
             "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5SMTMyNG1LT3BoRUxqdkRtaVJjYWRnOXNwNkhCOEdQYkRiR3JMSmN5NVVBX3JvTk14bU1HSjNMd0lRV1FzX19SRmxMeE1RUmkyREc5X0RyX1UxYnlM?oc=5",
             "publishedAt": "Sat, 11 Mar 2017 16:14:09 GMT",
             "source": "sport.de"
+          },
+          {
+            "title": "Teils auf Bewährung: UEFA sperrt Benficas Prestianni für sechs Spiele - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdmpCSkM1eTdVc3M3X2NCN1dwSHdlQW1BODhfQ3M2cUVGWllFS3hGbE1WR2tWUzFMSW03aGRlZmhxeWJydUpBczVPSjR1VG9jQnlET0tyNU5PNko4RHFBVkVzbzQ3cHlhN3o3bE1xeWZpdHlVSXY0blFNaUtZUHJNMGRkNE1Qb2kxSk1MOUhQQVd6S19yaUVjazh3d2Nka1lROUcwSzN4a0l3ODJs?oc=5",
+            "publishedAt": "Fri, 24 Apr 2026 07:00:00 GMT",
+            "source": "Kicker"
           }
         ],
         "away": []
@@ -15985,16 +15985,16 @@
             "source": "sport.de"
           },
           {
+            "title": "Cesena FC U20 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNb1FsWFdBUVNlTm9HdWN1REI0X1dKM0kwOG9yODdwaE41VWkwN2YzZ05zQXpHanRzcWpjc1M2MzNiSlpJZFBjYTd1bXRLaXRPa0plLTFxN1NpUTlCV3Y1MmN5ZHlsSmd0MjlRd3hwLURjNG5leTY2NFY1M3E5T2kySkticFJHaFNKSGU0cUFBZjN3bE0?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 07:58:14 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Aufstellung: Frosinone - Venezia | 06.09.2026 - Aufstellung & Formation | Serie A 3. Spieltag 2026/2027 - SPORT1",
             "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWVB3RTNqRmYtaWd0bG5qRjZDb3g1VGh4dUNya0ZqZU5LZ1hvemVHMFpkUTljVFYwbDRVZ2ZFZnBQYy0tMl83ZXY4WWEySXZVQVBwQ2lwdU1BMHdDZlNZRjVJT0o3cmU0WjB0SlhRUGliSXk2Zm9CUjlXTk9kdE5INHA4WFQ3N1IybG93ei1LRkFRNmZmOUVnQzJicWF1QQ?oc=5",
             "publishedAt": "Sun, 06 Sep 2026 07:00:00 GMT",
             "source": "SPORT1"
-          },
-          {
-            "title": "Aufstellung Atalanta - Venezia FC 3:1 | 6. Spieltag, Serie A 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTEpmck1vN0gxdFliSTkxNEJEbkFVV0ljMXF4Z1JEZnNvNm1fYW1FelkyRlkzazZMMzFEeUQwRmI3bmh0VnJnOHlLb2VaRTFRT2pUbE9VeVJYTlBOc1F0TGhDbEJSdVExS2NVWWdrVmE2cDBwR2dicE9Qam1Tc3ZyOG5lS2ZaMnNscjQ4dWFkdzNTVXM?oc=5",
-            "publishedAt": "Mon, 12 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
           }
         ],
         "away": [
@@ -16682,34 +16682,34 @@
         ],
         "away": [
           {
-            "title": "Aufstellung | US Lecce - Juventus Turin 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQLUVMclpRTlFDVUxvX1BaZFZzVmliRXVkbnBRN0JCUVRjTGNIQWhvbWhEeWpMSUVRaFFkdmRYdkZNb3RLS05TU29YUk5mcElWbnY0V3A2cERvc19mY3R4Zm5ZaHBWcGYxbDd3Ukw3c28zYmpOeEUxczB0V1BxUlhaag?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 17:54:02 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "Aufstellung US Lecce - Juventus Turin 0:2 | 8. Spieltag, Serie A 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQOFZoQlRjem1QT0dnTXBZVlRIRlZvZTJBRDNjMmE1RkVTS0JPVGZkcTdoU1dwLTVaY1lraG9ocWhsOURIenN0aU5NaXdqMDBIZXhwMWRYYmZWUTFkeEpNTWI4M2x5OEdZWkctcG0xM3FsdUJqSFNKSE4xWU9sNy1UejhzNWw1cER2STlxMTlGbVFKdTFSdXNZNg?oc=5",
             "publishedAt": "Sun, 25 Oct 2026 16:00:00 GMT",
             "source": "sport.de"
           },
           {
-            "title": "US Lecce gegen Juventus Turin Aufstellung - Serie A 8. Spieltag 2026/2027 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWThOZDdNMG1WZF9xbTRVUG9PRlBYMXpFRzRuVHpzLXI5cnU1NGlfcDNNaHRiUlVkZ2E1TjlNYjl4RVRkcEVKWGFRUlJ6azRzancyS1c3c2NjYjlNQU1xOUZ5dXdLVm11d3kxVkI4aFNGQ2lsVTQzMFVxcUJMMVl3WDdUQUt2OFJGcDlERmV5Skp3UQ?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 18:16:00 GMT",
-            "source": "BILD"
+            "title": "US Lecce - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPa0FRMGpiU2N2WF9pNjVObEZsVDRRaEg4SDZYR0xwX0RxaG1MWUVXWXczRnpVcF9Rd0V3d2x3eGFkREJsNVRMMWZ6VW4tVnBUNEx1UjBVRlpRSnljS3ZONk02TlNVVHI5OTFaTURDcW9GNXpSMEhrcWo3NmJXSk5Rb2xldkU5MXc?oc=5",
+            "publishedAt": "Fri, 23 Oct 2026 05:34:37 GMT",
+            "source": "Transfermarkt"
           },
           {
-            "title": "US Lecce - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMnRCOVFId3ZQcVVjcEJYdUdOWmNnazNQajJWVlR1RVFFaVdvYXRqZHdtMVFvVWphTXRfbGVtMGMxQm9YZTAxYTdEcldHMG1WYk5mSDJFcTk1QzYteklYei1pVzYxWUlrTGJuQkpnZ1h2N3JoT0JITExLeTdOUXdYMGdnWTZxdjd5?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 18:40:56 GMT",
-            "source": "Transfermarkt"
+            "title": "Aufstellung | US Lecce - Juventus Turin 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQLUVMclpRTlFDVUxvX1BaZFZzVmliRXVkbnBRN0JCUVRjTGNIQWhvbWhEeWpMSUVRaFFkdmRYdkZNb3RLS05TU29YUk5mcElWbnY0V3A2cERvc19mY3R4Zm5ZaHBWcGYxbDd3Ukw3c28zYmpOeEUxczB0V1BxUlhaag?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 17:54:02 GMT",
+            "source": "Kicker"
           },
           {
             "title": "Ergebnis Lecce - Juventus (0-2) 8. Spieltag Serie A 2026/2027 25/10 - FussballTransfers.com",
             "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPa2JDMUNFOFlZQmVLRFplQTk5YUwyUXV3YzBwc2dyd19mZ19UV0dMRTF3MVp0clpDVFUtb2hOZXlocVZkOGY3UFhqRlZyZDZ6SFZ5bk1sbVFOSElPaXR2al83Z1JwczhUSjFIM3pvTTVITUdENHFHOWxYZFBkSS1jMmpaSXd4dkF5cXBVMHQ5TQ?oc=5",
             "publishedAt": "Sun, 25 Oct 2026 15:40:00 GMT",
             "source": "FussballTransfers.com"
+          },
+          {
+            "title": "US Lecce gegen AS Rom Aufstellung - Serie A 2. Spieltag 2026/2027 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVGhfS1c0VWd6SW1VMjlaN25uSmFfd1RsVDlMbXoxNkF3MTNCZ2RSMmFoTFVxTHhsb1p2d2ZFZ1k5N3p6RGJ1VWNhNm4tbmM3QXlSNU5xeWh5M1g1a0dCX3hrVXRoQXJqSnZnWjdnZ0ZhWHUzVm9hM2ZjUjBMUnFnc0ozaUw?oc=5",
+            "publishedAt": "Tue, 01 Sep 2026 22:27:05 GMT",
+            "source": "BILD"
           }
         ]
       },
@@ -19289,9 +19289,9 @@
             "source": "LAOLA1"
           },
           {
-            "title": "Fußball Premier League: Arsenal gegen Chelsea - Aufstellung - 3. Spieltag - 2026/2027 - sportschau.de",
-            "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxObkVvM3pSbVViTl9yX0JoS1RjTENoY1RpcWJJMWJZNXRrUHE3MEZ6cmU2WWNqNm5ablg2TGQ1Q2wyZEsydTc1VTZsY0dha3h2ZG5faloyekdidEdwZEc3cmpTVDByQkhYaGVPQ0FuLURYbVlaTVpDZmpFUEZXNTJHck4wNk1NTlh4UnR0TzRlS1k5VmFNNHE3aFVnQl84azhDX2QzNURiVW1tNlVzSW1XODFWZDNGcmhYRWxfVV9kSU5OTEZCSHQtMWE5UFE?oc=5",
-            "publishedAt": "Sun, 06 Sep 2026 18:08:30 GMT",
+            "title": "Fußball Premier League: Everton gegen Chelsea - Aufstellung - 7. Spieltag - 2026/2027 - sportschau.de",
+            "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPM2hpYVJRRG5tYVJHMl9xRHo5ckF5Wi1QWVVDTlhlSEplVkN0MS1zWjlKM1MwT2VUbzdaZnl3T2xGR0k0dTVjcDIxb0stYlFOQkNaNkRLNG40M0xSdDZfYklJb0x0TGxyeEw2Qk50eGNNdU4zNy1zMmxYY29FbHBXckhmZFdpdGI2MF8wLXp1R0trU3VvbVhmejVBd2c4QURvYl9XQlV0ZXZQLUxNdnZnYmlRUVZVUGh4Z0ozSVVJMDVkZXd4c1Y3LVBzNjU?oc=5",
+            "publishedAt": "Sat, 17 Oct 2026 14:24:28 GMT",
             "source": "sportschau.de"
           }
         ]
@@ -21763,16 +21763,16 @@
             "source": "Eintracht Frankfurt"
           },
           {
+            "title": "Sporting Lissabon - Vereinsprofil - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBQODNOdXgxTFZkWnNLaHNKNTNJY0VlbWFVZm15Z1EyZG5XSnRXNDdqbUFILWJrZGJ3OXFoTTRyTnVaOGRzVWpZM2M4emtsRFZmaFo5a1d0YlFSLWhkeXpabkEzSzUxMXU1aWgxZFo5ckxRaFU4dHhB?oc=5",
+            "publishedAt": "Mon, 08 May 2017 06:56:55 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Einem droht jetzt das Aus beim FC Bayern! Comeback von Alphonso Davies hat weitreichende Konsequenzen - SPOX.com",
             "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPMDdzdnB0XzJaR0dJZVNTZlVyUDB6bnFTYjBFcURFNm9RVFVpX29xLVBEM3FRbmtfQmlVQzZtY2lUbWtpcDhRV3l1MUFEaTNIeE5SdVllSFZzZEs1V1diTGlEWHM3a0JlcV9zRDQzTUpVdUFZRkpGZFZjbjBzdDJxbklaUGZHSE9QMjdKb01keWZpcEJLUHZkSkVWTmlKdTdBengyNm5KeEtDZ3AxM1BlUHk4cTl3UXNtWDdtNHFHLXhHaFlXdFZTQkgwX0tIOVpxOExVQWh4RExjSklydTJhZy1RR2tWUHNlQXRBcTlB?oc=5",
             "publishedAt": "Thu, 11 Dec 2025 08:00:00 GMT",
             "source": "SPOX.com"
-          },
-          {
-            "title": "Geschichte: Napoli 2-1 Sporting CP | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPbmU2Yy12OVBxcUhpWllGdG9vMURJRWttVU5QSUtaSUpNeDFKYURqRWZlM2VyT3FyREw3SjF0TVVQU1hJQ0ZaamVnM2lfd0hVSHlTcmRRYUZEVEpBTXNvWVB2RERkajdVNG5kVTFuTXdWN1RJZFoxZXFNVnVXXzVPeHFVTGRMM0xWaE52M3pR?oc=5",
-            "publishedAt": "Sat, 30 Aug 2025 13:12:44 GMT",
-            "source": "UEFA.com"
           }
         ],
         "away": []
@@ -21983,12 +21983,6 @@
       "teamNews": {
         "home": [
           {
-            "title": "8. Spieltag: SSC Neapel - AS Rom - S.S.C. Napoli - I Partenopei - Forum | Page 1 - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUlFrU1RSVHJseVZmVWJTQnlVYXZQaWFwd29WM0RfTV9Ha1B3U2xrTVROTEF5UFBlRm5UdXRRV3hvVTlkaWIxVmZ4U1JPdnQ0NEZNVldCUEVhSWNMU1ZnaFY1Q0lTVTNEUXdzWlpsYjRZMDFfZFFRb2dPdjNuNmVWNDU4bjd5SlBXaW5uUVg0clVKdEk?oc=5",
-            "publishedAt": "Sat, 24 Oct 2026 14:58:00 GMT",
-            "source": "Transfermarkt"
-          },
-          {
             "title": "Napoli verliert Abwehrchef: Buongiorno droht monatelanger Ausfall - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPby15dk1FZmQ5bWRzSDhUUFBZSW9sSWRKaElLbkxKbExmaDlsVTQybHdpbWE3TjZrYU41LU11cDU4LWw4aVRUSTE0dmNfZF9KWXNJcG0wcGV5NWZUOVZybk9BM000ZllJb3pNV0ZMX2tWT09hTzJqQ2hVaGlCSndTUjJhVEJjaUQ4QjV0YzEzWGh5YXN4M2Z1ZUplX2dQOVZn?oc=5",
             "publishedAt": "Tue, 21 Jul 2026 07:00:00 GMT",
@@ -22001,16 +21995,22 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Inter Mailand gegen Neapel, Serie-A-Vorschau: Alles, was ihr wissen müsst - Goal.com",
-            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMGxUekRLTGtKckpYSHN5QkNIckVqU3hRUmx4MzRfQ29IalpjNGJ6U3QzcEgwd1VfMFZqMEJTcEM2ZEgxV2Y2Zld4a3dWQ25kNFl2RDM4Nl9uc0JIQWpha2luekZsenpJbVlScnNYSmlEQUZYTUpRWkNYUzVNQXBWQlBWRVdhU0puQ3pPVGZ1UWtQRzVfb3ZEakJNalNQbGlfMk9Bd0p4eFNDcDMxcXMxUU1nRllmenA3VnlPcVp0ZF9GZ2s?oc=5",
-            "publishedAt": "Fri, 04 Sep 2026 07:00:00 GMT",
-            "source": "Goal.com"
+            "title": "Vorschau: Nächster Halt Neapel - Eintracht Frankfurt",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1yMHdYblNJWkNmV0V5dEVRTXZCeFdwblNVM0RjZUU4RTItMHc1Q0NDZU91OUk1czFpbTdqaGs3TUlUTk5teERSY21vRW15c3Fzc2s0eWVMR2dhZ2NGSXpTVmFHRlBRNm1ZaVJQbEFmRFdkQTlWblFMRDd0dw?oc=5",
+            "publishedAt": "Sun, 02 Nov 2025 07:00:00 GMT",
+            "source": "Eintracht Frankfurt"
           },
           {
-            "title": "SSC Napoli - Celta Vigo Live ticker, H2H und Aufstellungen - Sofascore",
-            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53TE1FZWdwTzlVVktnRGp4TmtRNUh4RGItY1BLeFBxUFkxdExObzZzOFp5NkdxaUZuUFc2NGxZUkFzMGY0VXBlTWtPbkxnX1pYcXVsTmo0OE03dVdaSzgwZmU4aHE1bzdWbnBMbnM0M25qRkhaVUxzTjJIYm00dw?oc=5",
-            "publishedAt": "Sat, 08 Aug 2026 07:00:00 GMT",
-            "source": "Sofascore"
+            "title": "Oberschenkelverletzung! Havel verpasst Genua-Auftakt gegen Napoli - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUUhlalZNbndFNDRrQkQtLThSNHdWYy1sXzllck1Tb2NVaDhveGRBWEx3UGtuelRYOGhSVHJyMURUbG9GMHh5ZTJFRmNxWHBNTnNlLUN1RHRBNS1qY05kcWFmeTNjTXU0RkdFTnVMemNaTXdtNjRQTWtueTljRXhzMVpxQ0JMSWlCYUVkSDRLSDI1bFJsTHFRTnRsc2VOQkllT253eGJOaTc1SzFUYThWNkU3SGhXLUhKNkxid2JsM2hmaklWOEY0dlRzemJ3QkNFbGpUMkFxM2hyOERmblhjRg?oc=5",
+            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Anguissa verpasst Afrika-Cup: Nächste schwere Verletzung bei SSC Napoli - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOYmluZWw3bkl4ME5SRjVyQmU5cVNPcUN3c2hmX3JnVVI0d0p3U1I3OVR4TzNZaVphdjBZbElmMTB1VjlteGRoOC1ra1ZSb2tIcnpUbUtDUWplUW1XcUtYSGgwNU9tZWhEenJmRDNIanQ2RVhnb3lXYUFIemh0VjRlRFRSRE5hX3BIRnU5OHZPWklqaGZ0cm9wWDRwWjBQQlpncnVOQ015SzFtZ1lrUnNCbENpeExmOG8?oc=5",
+            "publishedAt": "Fri, 14 Nov 2025 08:00:00 GMT",
+            "source": "Transfermarkt"
           }
         ],
         "away": [
@@ -22021,10 +22021,10 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Für nur 1,2 Millionen geholt: Wie dieser junge Torwart jetzt zum absoluten Lazio-Glücksgriff wurde - Absolut Fussball",
-            "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcmRVSjZ6MWtiU0p4UW9UZXVLWXk2c0xRRjMxN3Z4WEg1YnRpVUhnQTZkaWVCTU9DN1AzaWZTd1VFalpHUHpsQVZzZHVvYzZ2a2FJSWZ5bVNfMmpRNV9DcFRraUgydVVydlBxMHNhZzNHdjhpRDh1VXdXTlMwYllrWlRXLW50cGhUYVZPUE5QS1BIOU1keS1UanE5NTNlOUJ0c0JKRzNvakJBYVdiSUN4Q194OS03T2Y0NVFQWEhPaEdBYkFHenMwM3ZadGxwVEt0akNIVw?oc=5",
-            "publishedAt": "Thu, 23 Apr 2026 07:00:00 GMT",
-            "source": "Absolut Fussball"
+            "title": "Juventus Turin: 0:3 gegen Lazio, Gattusos Team zieht mit Inter gleich - 90PLUS",
+            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZFh0SWNCdG5waF9fYXpfM2w4T29NUkRaeFRSODZPVm8zZlZIaEp3Y04tWXU4aUozYUNsOW9Ra3VuQ3lNeXdVSUl1Nk4zamxFUnlZNGFYeENqXzRsSGQ5a2xWdzhhRzhFZE5pR0s1eTZIdGxFcnJ1ZGpydFAxcG94NDNDd3ZmdjVEdGVZaU9qN0pxQ1Z0MEVxaWRFbFNDaGc?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 07:42:00 GMT",
+            "source": "90PLUS"
           },
           {
             "title": "Lazio gibt zwei Stürmer ab – kuriose Bedingungen entscheiden über Millionen - fussballdaten.de",
@@ -22033,16 +22033,16 @@
             "source": "fussballdaten.de"
           },
           {
-            "title": "Faschisten-Gruß und Messerstich: Römisches Stadtderby schlägt in Gewalt um - n-tv.de",
-            "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPV0hmeS1HeHVuWlhEZlA1X2MxN3RKZjFOZTMybVV1OFNxaVRQS0tuNk1LYzRRV1BUenhZZm5Uckxsbzh1Q2k5OWcxYnllOWowMDJfZ2hRMWM4ZG4tcjlGTklLOS12NUxib2xKb1hQOS1WWWsxaElDS0k2RTZyaHBuN05CYm9CSVNOQjBiWm94TWNHSTJoSW0ydEtfd2ZlQjdK?oc=5",
-            "publishedAt": "Thu, 11 Jan 2024 08:00:00 GMT",
-            "source": "n-tv.de"
+            "title": "Für nur 1,2 Millionen geholt: Wie dieser junge Torwart jetzt zum absoluten Lazio-Glücksgriff wurde - Absolut Fussball",
+            "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcmRVSjZ6MWtiU0p4UW9UZXVLWXk2c0xRRjMxN3Z4WEg1YnRpVUhnQTZkaWVCTU9DN1AzaWZTd1VFalpHUHpsQVZzZHVvYzZ2a2FJSWZ5bVNfMmpRNV9DcFRraUgydVVydlBxMHNhZzNHdjhpRDh1VXdXTlMwYllrWlRXLW50cGhUYVZPUE5QS1BIOU1keS1UanE5NTNlOUJ0c0JKRzNvakJBYVdiSUN4Q194OS03T2Y0NVFQWEhPaEdBYkFHenMwM3ZadGxwVEt0akNIVw?oc=5",
+            "publishedAt": "Thu, 23 Apr 2026 07:00:00 GMT",
+            "source": "Absolut Fussball"
           },
           {
-            "title": "Trainer verlässt Lazio und soll bei Atalanta unterschreiben - fussballdaten.de",
-            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRnJkN2RrVkw2RS11ZzhqOFFpcGtVZWtqSGMxSEwxN3RscERMZThqb3REVmtxODFJREtnNFNPUmZrR3JtOGhid2REQXFYSllpVFNxWGFxTFNiLUk3NnU5Mmd1ejZEWHJ4ajRDQjJxLXFZTFdDQ3ZzQnBGN0dSYWNoellIWUp4U3NiajZRVE1HeEo?oc=5",
-            "publishedAt": "Sat, 23 May 2026 07:00:00 GMT",
-            "source": "fussballdaten.de"
+            "title": "36. Spieltag: Lazio Rom - Inter Mailand - S.S. Lazio - Le Aquile - Forum | Page 1 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSUlrRnN0WGdxTG10RDhqQ0JHS2xfdzlpaUJiZzNrNU14V2xGNVJZQ3drRlNLNVlGRU9SQXBBcGR1T1V5bWt3cW83UEZEMmQ0LThhV0M0c0xkczB6eC1mOTdXOXFFRTRCeFhlbGY0LVdwM2ROOEJMeThiVERCODRqbTh6TXhaSWFWaV9aMDNLXzIwLWZTVmJNUTBoN28?oc=5",
+            "publishedAt": "Fri, 08 May 2026 06:48:42 GMT",
+            "source": "Transfermarkt"
           }
         ]
       },
@@ -22784,10 +22784,10 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Osimhen trifft an alter Wirkungsstätte: Galatasaray feiert in Lille ersten CL-Sieg - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNTlaV2taRDdTWk1OOXJENzV2WFJkM2hSeVJIUWYwbjVCeWNUUG9RLU0tZXJwRjYxN1dPSU5sMk1sTV9uV0dkY2kzYW1rT3JPeU1XWk80ZV9jUk1LbGFFVDRHYmg1dGc2Rk4yYTlwUHBqZXVwVUhZZnVKUGRJR1gtcmlnNE9mSFhHZkdmRTBUWkk?oc=5",
-            "publishedAt": "Wed, 21 Oct 2026 15:45:03 GMT",
-            "source": "Kicker"
+            "title": "Osimhen trifft an alter Wirkungsstätte: Galatasaray feiert in Lille ersten CL-Sieg - kicker.ch",
+            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVEh2MlhyWTNXN2R6Tk0xVTFYU3Vza1dQd2FpbV9tdU1QakRoUjhnaGgyYXpzVEN0N05NT2JETjc3TzlaOGFMVURVdS1zR2M2Z0N5SXNKdS0ySDRFaDY5OWloem5vY09ESjN6YWNuUHA4S1RTRkY2RVJXRUdoN3Y5TnlQdkJJdTMxVzgzNUZYdFc?oc=5",
+            "publishedAt": "Wed, 21 Oct 2026 17:00:23 GMT",
+            "source": "kicker.ch"
           },
           {
             "title": "Arsenal FC gegen Lille OSC Aufstellung - Champions League 2. Spieltag Ligaphase 2026/2027 - BILD",
@@ -28163,16 +28163,16 @@
             "source": "Kicker"
           },
           {
-            "title": "Sportings Bayern-Generalprobe: Lissaboner Derby bei Benfica endet Remis - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNzBZcnVUeGJBay1QbmdiQlIyQnpOUDdNLVdna1ZrUjY0dmhnRmNnaHNXR2dFOFNVLWxEMkJGVWJlY2hzeU9scHZjOTBrZ09KYW14U081LXRoRGM4MVhKTlFja2RUdTVxTlhMZUVjYk5KSkh0dy1NUWlJd3dFSTAzRUp6bE1FU2RsSC1TelZjMEFWbWxZ?oc=5",
-            "publishedAt": "Fri, 05 Dec 2025 08:00:00 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "SL Benfica - sport.de",
             "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5SMTMyNG1LT3BoRUxqdkRtaVJjYWRnOXNwNkhCOEdQYkRiR3JMSmN5NVVBX3JvTk14bU1HSjNMd0lRV1FzX19SRmxMeE1RUmkyREc5X0RyX1UxYnlM?oc=5",
             "publishedAt": "Sat, 11 Mar 2017 16:14:09 GMT",
             "source": "sport.de"
+          },
+          {
+            "title": "Teils auf Bewährung: UEFA sperrt Benficas Prestianni für sechs Spiele - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdmpCSkM1eTdVc3M3X2NCN1dwSHdlQW1BODhfQ3M2cUVGWllFS3hGbE1WR2tWUzFMSW03aGRlZmhxeWJydUpBczVPSjR1VG9jQnlET0tyNU5PNko4RHFBVkVzbzQ3cHlhN3o3bE1xeWZpdHlVSXY0blFNaUtZUHJNMGRkNE1Qb2kxSk1MOUhQQVd6S19yaUVjazh3d2Nka1lROUcwSzN4a0l3ODJs?oc=5",
+            "publishedAt": "Fri, 24 Apr 2026 07:00:00 GMT",
+            "source": "Kicker"
           }
         ]
       },
@@ -28434,16 +28434,16 @@
             "source": "Kicker"
           },
           {
-            "title": "Sportings Bayern-Generalprobe: Lissaboner Derby bei Benfica endet Remis - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNzBZcnVUeGJBay1QbmdiQlIyQnpOUDdNLVdna1ZrUjY0dmhnRmNnaHNXR2dFOFNVLWxEMkJGVWJlY2hzeU9scHZjOTBrZ09KYW14U081LXRoRGM4MVhKTlFja2RUdTVxTlhMZUVjYk5KSkh0dy1NUWlJd3dFSTAzRUp6bE1FU2RsSC1TelZjMEFWbWxZ?oc=5",
-            "publishedAt": "Fri, 05 Dec 2025 08:00:00 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "SL Benfica - sport.de",
             "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5SMTMyNG1LT3BoRUxqdkRtaVJjYWRnOXNwNkhCOEdQYkRiR3JMSmN5NVVBX3JvTk14bU1HSjNMd0lRV1FzX19SRmxMeE1RUmkyREc5X0RyX1UxYnlM?oc=5",
             "publishedAt": "Sat, 11 Mar 2017 16:14:09 GMT",
             "source": "sport.de"
+          },
+          {
+            "title": "Teils auf Bewährung: UEFA sperrt Benficas Prestianni für sechs Spiele - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdmpCSkM1eTdVc3M3X2NCN1dwSHdlQW1BODhfQ3M2cUVGWllFS3hGbE1WR2tWUzFMSW03aGRlZmhxeWJydUpBczVPSjR1VG9jQnlET0tyNU5PNko4RHFBVkVzbzQ3cHlhN3o3bE1xeWZpdHlVSXY0blFNaUtZUHJNMGRkNE1Qb2kxSk1MOUhQQVd6S19yaUVjazh3d2Nka1lROUcwSzN4a0l3ODJs?oc=5",
+            "publishedAt": "Fri, 24 Apr 2026 07:00:00 GMT",
+            "source": "Kicker"
           }
         ]
       },
@@ -28691,10 +28691,10 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Für nur 1,2 Millionen geholt: Wie dieser junge Torwart jetzt zum absoluten Lazio-Glücksgriff wurde - Absolut Fussball",
-            "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcmRVSjZ6MWtiU0p4UW9UZXVLWXk2c0xRRjMxN3Z4WEg1YnRpVUhnQTZkaWVCTU9DN1AzaWZTd1VFalpHUHpsQVZzZHVvYzZ2a2FJSWZ5bVNfMmpRNV9DcFRraUgydVVydlBxMHNhZzNHdjhpRDh1VXdXTlMwYllrWlRXLW50cGhUYVZPUE5QS1BIOU1keS1UanE5NTNlOUJ0c0JKRzNvakJBYVdiSUN4Q194OS03T2Y0NVFQWEhPaEdBYkFHenMwM3ZadGxwVEt0akNIVw?oc=5",
-            "publishedAt": "Thu, 23 Apr 2026 07:00:00 GMT",
-            "source": "Absolut Fussball"
+            "title": "Juventus Turin: 0:3 gegen Lazio, Gattusos Team zieht mit Inter gleich - 90PLUS",
+            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZFh0SWNCdG5waF9fYXpfM2w4T29NUkRaeFRSODZPVm8zZlZIaEp3Y04tWXU4aUozYUNsOW9Ra3VuQ3lNeXdVSUl1Nk4zamxFUnlZNGFYeENqXzRsSGQ5a2xWdzhhRzhFZE5pR0s1eTZIdGxFcnJ1ZGpydFAxcG94NDNDd3ZmdjVEdGVZaU9qN0pxQ1Z0MEVxaWRFbFNDaGc?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 07:42:00 GMT",
+            "source": "90PLUS"
           },
           {
             "title": "Lazio gibt zwei Stürmer ab – kuriose Bedingungen entscheiden über Millionen - fussballdaten.de",
@@ -28703,16 +28703,16 @@
             "source": "fussballdaten.de"
           },
           {
-            "title": "Faschisten-Gruß und Messerstich: Römisches Stadtderby schlägt in Gewalt um - n-tv.de",
-            "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPV0hmeS1HeHVuWlhEZlA1X2MxN3RKZjFOZTMybVV1OFNxaVRQS0tuNk1LYzRRV1BUenhZZm5Uckxsbzh1Q2k5OWcxYnllOWowMDJfZ2hRMWM4ZG4tcjlGTklLOS12NUxib2xKb1hQOS1WWWsxaElDS0k2RTZyaHBuN05CYm9CSVNOQjBiWm94TWNHSTJoSW0ydEtfd2ZlQjdK?oc=5",
-            "publishedAt": "Thu, 11 Jan 2024 08:00:00 GMT",
-            "source": "n-tv.de"
+            "title": "Für nur 1,2 Millionen geholt: Wie dieser junge Torwart jetzt zum absoluten Lazio-Glücksgriff wurde - Absolut Fussball",
+            "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcmRVSjZ6MWtiU0p4UW9UZXVLWXk2c0xRRjMxN3Z4WEg1YnRpVUhnQTZkaWVCTU9DN1AzaWZTd1VFalpHUHpsQVZzZHVvYzZ2a2FJSWZ5bVNfMmpRNV9DcFRraUgydVVydlBxMHNhZzNHdjhpRDh1VXdXTlMwYllrWlRXLW50cGhUYVZPUE5QS1BIOU1keS1UanE5NTNlOUJ0c0JKRzNvakJBYVdiSUN4Q194OS03T2Y0NVFQWEhPaEdBYkFHenMwM3ZadGxwVEt0akNIVw?oc=5",
+            "publishedAt": "Thu, 23 Apr 2026 07:00:00 GMT",
+            "source": "Absolut Fussball"
           },
           {
-            "title": "Trainer verlässt Lazio und soll bei Atalanta unterschreiben - fussballdaten.de",
-            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRnJkN2RrVkw2RS11ZzhqOFFpcGtVZWtqSGMxSEwxN3RscERMZThqb3REVmtxODFJREtnNFNPUmZrR3JtOGhid2REQXFYSllpVFNxWGFxTFNiLUk3NnU5Mmd1ejZEWHJ4ajRDQjJxLXFZTFdDQ3ZzQnBGN0dSYWNoellIWUp4U3NiajZRVE1HeEo?oc=5",
-            "publishedAt": "Sat, 23 May 2026 07:00:00 GMT",
-            "source": "fussballdaten.de"
+            "title": "36. Spieltag: Lazio Rom - Inter Mailand - S.S. Lazio - Le Aquile - Forum | Page 1 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSUlrRnN0WGdxTG10RDhqQ0JHS2xfdzlpaUJiZzNrNU14V2xGNVJZQ3drRlNLNVlGRU9SQXBBcGR1T1V5bWt3cW83UEZEMmQ0LThhV0M0c0xkczB6eC1mOTdXOXFFRTRCeFhlbGY0LVdwM2ROOEJMeThiVERCODRqbTh6TXhaSWFWaV9aMDNLXzIwLWZTVmJNUTBoN28?oc=5",
+            "publishedAt": "Fri, 08 May 2026 06:48:42 GMT",
+            "source": "Transfermarkt"
           }
         ]
       },
@@ -29722,16 +29722,16 @@
             "source": "sport.de"
           },
           {
+            "title": "Cesena FC U20 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNb1FsWFdBUVNlTm9HdWN1REI0X1dKM0kwOG9yODdwaE41VWkwN2YzZ05zQXpHanRzcWpjc1M2MzNiSlpJZFBjYTd1bXRLaXRPa0plLTFxN1NpUTlCV3Y1MmN5ZHlsSmd0MjlRd3hwLURjNG5leTY2NFY1M3E5T2kySkticFJHaFNKSGU0cUFBZjN3bE0?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 07:58:14 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Aufstellung: Frosinone - Venezia | 06.09.2026 - Aufstellung & Formation | Serie A 3. Spieltag 2026/2027 - SPORT1",
             "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWVB3RTNqRmYtaWd0bG5qRjZDb3g1VGh4dUNya0ZqZU5LZ1hvemVHMFpkUTljVFYwbDRVZ2ZFZnBQYy0tMl83ZXY4WWEySXZVQVBwQ2lwdU1BMHdDZlNZRjVJT0o3cmU0WjB0SlhRUGliSXk2Zm9CUjlXTk9kdE5INHA4WFQ3N1IybG93ei1LRkFRNmZmOUVnQzJicWF1QQ?oc=5",
             "publishedAt": "Sun, 06 Sep 2026 07:00:00 GMT",
             "source": "SPORT1"
-          },
-          {
-            "title": "Aufstellung Atalanta - Venezia FC 3:1 | 6. Spieltag, Serie A 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTEpmck1vN0gxdFliSTkxNEJEbkFVV0ljMXF4Z1JEZnNvNm1fYW1FelkyRlkzazZMMzFEeUQwRmI3bmh0VnJnOHlLb2VaRTFRT2pUbE9VeVJYTlBOc1F0TGhDbEJSdVExS2NVWWdrVmE2cDBwR2dicE9Qam1Tc3ZyOG5lS2ZaMnNscjQ4dWFkdzNTVXM?oc=5",
-            "publishedAt": "Mon, 12 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
           }
         ],
         "away": [
@@ -30518,12 +30518,6 @@
         ],
         "away": [
           {
-            "title": "8. Spieltag: SSC Neapel - AS Rom - S.S.C. Napoli - I Partenopei - Forum | Page 1 - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUlFrU1RSVHJseVZmVWJTQnlVYXZQaWFwd29WM0RfTV9Ha1B3U2xrTVROTEF5UFBlRm5UdXRRV3hvVTlkaWIxVmZ4U1JPdnQ0NEZNVldCUEVhSWNMU1ZnaFY1Q0lTVTNEUXdzWlpsYjRZMDFfZFFRb2dPdjNuNmVWNDU4bjd5SlBXaW5uUVg0clVKdEk?oc=5",
-            "publishedAt": "Sat, 24 Oct 2026 14:58:00 GMT",
-            "source": "Transfermarkt"
-          },
-          {
             "title": "Napoli verliert Abwehrchef: Buongiorno droht monatelanger Ausfall - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPby15dk1FZmQ5bWRzSDhUUFBZSW9sSWRKaElLbkxKbExmaDlsVTQybHdpbWE3TjZrYU41LU11cDU4LWw4aVRUSTE0dmNfZF9KWXNJcG0wcGV5NWZUOVZybk9BM000ZllJb3pNV0ZMX2tWT09hTzJqQ2hVaGlCSndTUjJhVEJjaUQ4QjV0YzEzWGh5YXN4M2Z1ZUplX2dQOVZn?oc=5",
             "publishedAt": "Tue, 21 Jul 2026 07:00:00 GMT",
@@ -30536,16 +30530,22 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Inter Mailand gegen Neapel, Serie-A-Vorschau: Alles, was ihr wissen müsst - Goal.com",
-            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMGxUekRLTGtKckpYSHN5QkNIckVqU3hRUmx4MzRfQ29IalpjNGJ6U3QzcEgwd1VfMFZqMEJTcEM2ZEgxV2Y2Zld4a3dWQ25kNFl2RDM4Nl9uc0JIQWpha2luekZsenpJbVlScnNYSmlEQUZYTUpRWkNYUzVNQXBWQlBWRVdhU0puQ3pPVGZ1UWtQRzVfb3ZEakJNalNQbGlfMk9Bd0p4eFNDcDMxcXMxUU1nRllmenA3VnlPcVp0ZF9GZ2s?oc=5",
-            "publishedAt": "Fri, 04 Sep 2026 07:00:00 GMT",
-            "source": "Goal.com"
+            "title": "Vorschau: Nächster Halt Neapel - Eintracht Frankfurt",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1yMHdYblNJWkNmV0V5dEVRTXZCeFdwblNVM0RjZUU4RTItMHc1Q0NDZU91OUk1czFpbTdqaGs3TUlUTk5teERSY21vRW15c3Fzc2s0eWVMR2dhZ2NGSXpTVmFHRlBRNm1ZaVJQbEFmRFdkQTlWblFMRDd0dw?oc=5",
+            "publishedAt": "Sun, 02 Nov 2025 07:00:00 GMT",
+            "source": "Eintracht Frankfurt"
           },
           {
-            "title": "SSC Napoli - Celta Vigo Live ticker, H2H und Aufstellungen - Sofascore",
-            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53TE1FZWdwTzlVVktnRGp4TmtRNUh4RGItY1BLeFBxUFkxdExObzZzOFp5NkdxaUZuUFc2NGxZUkFzMGY0VXBlTWtPbkxnX1pYcXVsTmo0OE03dVdaSzgwZmU4aHE1bzdWbnBMbnM0M25qRkhaVUxzTjJIYm00dw?oc=5",
-            "publishedAt": "Sat, 08 Aug 2026 07:00:00 GMT",
-            "source": "Sofascore"
+            "title": "Oberschenkelverletzung! Havel verpasst Genua-Auftakt gegen Napoli - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUUhlalZNbndFNDRrQkQtLThSNHdWYy1sXzllck1Tb2NVaDhveGRBWEx3UGtuelRYOGhSVHJyMURUbG9GMHh5ZTJFRmNxWHBNTnNlLUN1RHRBNS1qY05kcWFmeTNjTXU0RkdFTnVMemNaTXdtNjRQTWtueTljRXhzMVpxQ0JMSWlCYUVkSDRLSDI1bFJsTHFRTnRsc2VOQkllT253eGJOaTc1SzFUYThWNkU3SGhXLUhKNkxid2JsM2hmaklWOEY0dlRzemJ3QkNFbGpUMkFxM2hyOERmblhjRg?oc=5",
+            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Anguissa verpasst Afrika-Cup: Nächste schwere Verletzung bei SSC Napoli - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOYmluZWw3bkl4ME5SRjVyQmU5cVNPcUN3c2hmX3JnVVI0d0p3U1I3OVR4TzNZaVphdjBZbElmMTB1VjlteGRoOC1ra1ZSb2tIcnpUbUtDUWplUW1XcUtYSGgwNU9tZWhEenJmRDNIanQ2RVhnb3lXYUFIemh0VjRlRFRSRE5hX3BIRnU5OHZPWklqaGZ0cm9wWDRwWjBQQlpncnVOQ015SzFtZ1lrUnNCbENpeExmOG8?oc=5",
+            "publishedAt": "Fri, 14 Nov 2025 08:00:00 GMT",
+            "source": "Transfermarkt"
           }
         ]
       },
@@ -30762,34 +30762,34 @@
         ],
         "away": [
           {
-            "title": "Aufstellung | US Lecce - Juventus Turin 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQLUVMclpRTlFDVUxvX1BaZFZzVmliRXVkbnBRN0JCUVRjTGNIQWhvbWhEeWpMSUVRaFFkdmRYdkZNb3RLS05TU29YUk5mcElWbnY0V3A2cERvc19mY3R4Zm5ZaHBWcGYxbDd3Ukw3c28zYmpOeEUxczB0V1BxUlhaag?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 17:54:02 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "Aufstellung US Lecce - Juventus Turin 0:2 | 8. Spieltag, Serie A 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQOFZoQlRjem1QT0dnTXBZVlRIRlZvZTJBRDNjMmE1RkVTS0JPVGZkcTdoU1dwLTVaY1lraG9ocWhsOURIenN0aU5NaXdqMDBIZXhwMWRYYmZWUTFkeEpNTWI4M2x5OEdZWkctcG0xM3FsdUJqSFNKSE4xWU9sNy1UejhzNWw1cER2STlxMTlGbVFKdTFSdXNZNg?oc=5",
             "publishedAt": "Sun, 25 Oct 2026 16:00:00 GMT",
             "source": "sport.de"
           },
           {
-            "title": "US Lecce gegen Juventus Turin Aufstellung - Serie A 8. Spieltag 2026/2027 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWThOZDdNMG1WZF9xbTRVUG9PRlBYMXpFRzRuVHpzLXI5cnU1NGlfcDNNaHRiUlVkZ2E1TjlNYjl4RVRkcEVKWGFRUlJ6azRzancyS1c3c2NjYjlNQU1xOUZ5dXdLVm11d3kxVkI4aFNGQ2lsVTQzMFVxcUJMMVl3WDdUQUt2OFJGcDlERmV5Skp3UQ?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 18:16:00 GMT",
-            "source": "BILD"
+            "title": "US Lecce - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPa0FRMGpiU2N2WF9pNjVObEZsVDRRaEg4SDZYR0xwX0RxaG1MWUVXWXczRnpVcF9Rd0V3d2x3eGFkREJsNVRMMWZ6VW4tVnBUNEx1UjBVRlpRSnljS3ZONk02TlNVVHI5OTFaTURDcW9GNXpSMEhrcWo3NmJXSk5Rb2xldkU5MXc?oc=5",
+            "publishedAt": "Fri, 23 Oct 2026 05:34:37 GMT",
+            "source": "Transfermarkt"
           },
           {
-            "title": "US Lecce - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMnRCOVFId3ZQcVVjcEJYdUdOWmNnazNQajJWVlR1RVFFaVdvYXRqZHdtMVFvVWphTXRfbGVtMGMxQm9YZTAxYTdEcldHMG1WYk5mSDJFcTk1QzYteklYei1pVzYxWUlrTGJuQkpnZ1h2N3JoT0JITExLeTdOUXdYMGdnWTZxdjd5?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 18:40:56 GMT",
-            "source": "Transfermarkt"
+            "title": "Aufstellung | US Lecce - Juventus Turin 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQLUVMclpRTlFDVUxvX1BaZFZzVmliRXVkbnBRN0JCUVRjTGNIQWhvbWhEeWpMSUVRaFFkdmRYdkZNb3RLS05TU29YUk5mcElWbnY0V3A2cERvc19mY3R4Zm5ZaHBWcGYxbDd3Ukw3c28zYmpOeEUxczB0V1BxUlhaag?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 17:54:02 GMT",
+            "source": "Kicker"
           },
           {
             "title": "Ergebnis Lecce - Juventus (0-2) 8. Spieltag Serie A 2026/2027 25/10 - FussballTransfers.com",
             "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPa2JDMUNFOFlZQmVLRFplQTk5YUwyUXV3YzBwc2dyd19mZ19UV0dMRTF3MVp0clpDVFUtb2hOZXlocVZkOGY3UFhqRlZyZDZ6SFZ5bk1sbVFOSElPaXR2al83Z1JwczhUSjFIM3pvTTVITUdENHFHOWxYZFBkSS1jMmpaSXd4dkF5cXBVMHQ5TQ?oc=5",
             "publishedAt": "Sun, 25 Oct 2026 15:40:00 GMT",
             "source": "FussballTransfers.com"
+          },
+          {
+            "title": "US Lecce gegen AS Rom Aufstellung - Serie A 2. Spieltag 2026/2027 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVGhfS1c0VWd6SW1VMjlaN25uSmFfd1RsVDlMbXoxNkF3MTNCZ2RSMmFoTFVxTHhsb1p2d2ZFZ1k5N3p6RGJ1VWNhNm4tbmM3QXlSNU5xeWh5M1g1a0dCX3hrVXRoQXJqSnZnWjdnZ0ZhWHUzVm9hM2ZjUjBMUnFnc0ozaUw?oc=5",
+            "publishedAt": "Tue, 01 Sep 2026 22:27:05 GMT",
+            "source": "BILD"
           }
         ]
       },
@@ -31787,10 +31787,10 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Osimhen trifft an alter Wirkungsstätte: Galatasaray feiert in Lille ersten CL-Sieg - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNTlaV2taRDdTWk1OOXJENzV2WFJkM2hSeVJIUWYwbjVCeWNUUG9RLU0tZXJwRjYxN1dPSU5sMk1sTV9uV0dkY2kzYW1rT3JPeU1XWk80ZV9jUk1LbGFFVDRHYmg1dGc2Rk4yYTlwUHBqZXVwVUhZZnVKUGRJR1gtcmlnNE9mSFhHZkdmRTBUWkk?oc=5",
-            "publishedAt": "Wed, 21 Oct 2026 15:45:03 GMT",
-            "source": "Kicker"
+            "title": "Osimhen trifft an alter Wirkungsstätte: Galatasaray feiert in Lille ersten CL-Sieg - kicker.ch",
+            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVEh2MlhyWTNXN2R6Tk0xVTFYU3Vza1dQd2FpbV9tdU1QakRoUjhnaGgyYXpzVEN0N05NT2JETjc3TzlaOGFMVURVdS1zR2M2Z0N5SXNKdS0ySDRFaDY5OWloem5vY09ESjN6YWNuUHA4S1RTRkY2RVJXRUdoN3Y5TnlQdkJJdTMxVzgzNUZYdFc?oc=5",
+            "publishedAt": "Wed, 21 Oct 2026 17:00:23 GMT",
+            "source": "kicker.ch"
           },
           {
             "title": "Arsenal FC gegen Lille OSC Aufstellung - Champions League 2. Spieltag Ligaphase 2026/2027 - BILD",
@@ -32088,16 +32088,16 @@
             "source": "Eintracht Frankfurt"
           },
           {
+            "title": "Sporting Lissabon - Vereinsprofil - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBQODNOdXgxTFZkWnNLaHNKNTNJY0VlbWFVZm15Z1EyZG5XSnRXNDdqbUFILWJrZGJ3OXFoTTRyTnVaOGRzVWpZM2M4emtsRFZmaFo5a1d0YlFSLWhkeXpabkEzSzUxMXU1aWgxZFo5ckxRaFU4dHhB?oc=5",
+            "publishedAt": "Mon, 08 May 2017 06:56:55 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Einem droht jetzt das Aus beim FC Bayern! Comeback von Alphonso Davies hat weitreichende Konsequenzen - SPOX.com",
             "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPMDdzdnB0XzJaR0dJZVNTZlVyUDB6bnFTYjBFcURFNm9RVFVpX29xLVBEM3FRbmtfQmlVQzZtY2lUbWtpcDhRV3l1MUFEaTNIeE5SdVllSFZzZEs1V1diTGlEWHM3a0JlcV9zRDQzTUpVdUFZRkpGZFZjbjBzdDJxbklaUGZHSE9QMjdKb01keWZpcEJLUHZkSkVWTmlKdTdBengyNm5KeEtDZ3AxM1BlUHk4cTl3UXNtWDdtNHFHLXhHaFlXdFZTQkgwX0tIOVpxOExVQWh4RExjSklydTJhZy1RR2tWUHNlQXRBcTlB?oc=5",
             "publishedAt": "Thu, 11 Dec 2025 08:00:00 GMT",
             "source": "SPOX.com"
-          },
-          {
-            "title": "Geschichte: Napoli 2-1 Sporting CP | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPbmU2Yy12OVBxcUhpWllGdG9vMURJRWttVU5QSUtaSUpNeDFKYURqRWZlM2VyT3FyREw3SjF0TVVQU1hJQ0ZaamVnM2lfd0hVSHlTcmRRYUZEVEpBTXNvWVB2RERkajdVNG5kVTFuTXdWN1RJZFoxZXFNVnVXXzVPeHFVTGRMM0xWaE52M3pR?oc=5",
-            "publishedAt": "Sat, 30 Aug 2025 13:12:44 GMT",
-            "source": "UEFA.com"
           }
         ]
       },
@@ -32331,9 +32331,9 @@
             "source": "LAOLA1"
           },
           {
-            "title": "Fußball Premier League: Arsenal gegen Chelsea - Aufstellung - 3. Spieltag - 2026/2027 - sportschau.de",
-            "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxObkVvM3pSbVViTl9yX0JoS1RjTENoY1RpcWJJMWJZNXRrUHE3MEZ6cmU2WWNqNm5ablg2TGQ1Q2wyZEsydTc1VTZsY0dha3h2ZG5faloyekdidEdwZEc3cmpTVDByQkhYaGVPQ0FuLURYbVlaTVpDZmpFUEZXNTJHck4wNk1NTlh4UnR0TzRlS1k5VmFNNHE3aFVnQl84azhDX2QzNURiVW1tNlVzSW1XODFWZDNGcmhYRWxfVV9kSU5OTEZCSHQtMWE5UFE?oc=5",
-            "publishedAt": "Sun, 06 Sep 2026 18:08:30 GMT",
+            "title": "Fußball Premier League: Everton gegen Chelsea - Aufstellung - 7. Spieltag - 2026/2027 - sportschau.de",
+            "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPM2hpYVJRRG5tYVJHMl9xRHo5ckF5Wi1QWVVDTlhlSEplVkN0MS1zWjlKM1MwT2VUbzdaZnl3T2xGR0k0dTVjcDIxb0stYlFOQkNaNkRLNG40M0xSdDZfYklJb0x0TGxyeEw2Qk50eGNNdU4zNy1zMmxYY29FbHBXckhmZFdpdGI2MF8wLXp1R0trU3VvbVhmejVBd2c4QURvYl9XQlV0ZXZQLUxNdnZnYmlRUVZVUGh4Z0ozSVVJMDVkZXd4c1Y3LVBzNjU?oc=5",
+            "publishedAt": "Sat, 17 Oct 2026 14:24:28 GMT",
             "source": "sportschau.de"
           }
         ],
@@ -37415,16 +37415,16 @@
             "source": "sport.de"
           },
           {
+            "title": "Cesena FC U20 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNb1FsWFdBUVNlTm9HdWN1REI0X1dKM0kwOG9yODdwaE41VWkwN2YzZ05zQXpHanRzcWpjc1M2MzNiSlpJZFBjYTd1bXRLaXRPa0plLTFxN1NpUTlCV3Y1MmN5ZHlsSmd0MjlRd3hwLURjNG5leTY2NFY1M3E5T2kySkticFJHaFNKSGU0cUFBZjN3bE0?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 07:58:14 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Aufstellung: Frosinone - Venezia | 06.09.2026 - Aufstellung & Formation | Serie A 3. Spieltag 2026/2027 - SPORT1",
             "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWVB3RTNqRmYtaWd0bG5qRjZDb3g1VGh4dUNya0ZqZU5LZ1hvemVHMFpkUTljVFYwbDRVZ2ZFZnBQYy0tMl83ZXY4WWEySXZVQVBwQ2lwdU1BMHdDZlNZRjVJT0o3cmU0WjB0SlhRUGliSXk2Zm9CUjlXTk9kdE5INHA4WFQ3N1IybG93ei1LRkFRNmZmOUVnQzJicWF1QQ?oc=5",
             "publishedAt": "Sun, 06 Sep 2026 07:00:00 GMT",
             "source": "SPORT1"
-          },
-          {
-            "title": "Aufstellung Atalanta - Venezia FC 3:1 | 6. Spieltag, Serie A 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTEpmck1vN0gxdFliSTkxNEJEbkFVV0ljMXF4Z1JEZnNvNm1fYW1FelkyRlkzazZMMzFEeUQwRmI3bmh0VnJnOHlLb2VaRTFRT2pUbE9VeVJYTlBOc1F0TGhDbEJSdVExS2NVWWdrVmE2cDBwR2dicE9Qam1Tc3ZyOG5lS2ZaMnNscjQ4dWFkdzNTVXM?oc=5",
-            "publishedAt": "Mon, 12 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
           }
         ]
       },
@@ -37884,10 +37884,10 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Für nur 1,2 Millionen geholt: Wie dieser junge Torwart jetzt zum absoluten Lazio-Glücksgriff wurde - Absolut Fussball",
-            "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcmRVSjZ6MWtiU0p4UW9UZXVLWXk2c0xRRjMxN3Z4WEg1YnRpVUhnQTZkaWVCTU9DN1AzaWZTd1VFalpHUHpsQVZzZHVvYzZ2a2FJSWZ5bVNfMmpRNV9DcFRraUgydVVydlBxMHNhZzNHdjhpRDh1VXdXTlMwYllrWlRXLW50cGhUYVZPUE5QS1BIOU1keS1UanE5NTNlOUJ0c0JKRzNvakJBYVdiSUN4Q194OS03T2Y0NVFQWEhPaEdBYkFHenMwM3ZadGxwVEt0akNIVw?oc=5",
-            "publishedAt": "Thu, 23 Apr 2026 07:00:00 GMT",
-            "source": "Absolut Fussball"
+            "title": "Juventus Turin: 0:3 gegen Lazio, Gattusos Team zieht mit Inter gleich - 90PLUS",
+            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZFh0SWNCdG5waF9fYXpfM2w4T29NUkRaeFRSODZPVm8zZlZIaEp3Y04tWXU4aUozYUNsOW9Ra3VuQ3lNeXdVSUl1Nk4zamxFUnlZNGFYeENqXzRsSGQ5a2xWdzhhRzhFZE5pR0s1eTZIdGxFcnJ1ZGpydFAxcG94NDNDd3ZmdjVEdGVZaU9qN0pxQ1Z0MEVxaWRFbFNDaGc?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 07:42:00 GMT",
+            "source": "90PLUS"
           },
           {
             "title": "Lazio gibt zwei Stürmer ab – kuriose Bedingungen entscheiden über Millionen - fussballdaten.de",
@@ -37896,16 +37896,16 @@
             "source": "fussballdaten.de"
           },
           {
-            "title": "Faschisten-Gruß und Messerstich: Römisches Stadtderby schlägt in Gewalt um - n-tv.de",
-            "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPV0hmeS1HeHVuWlhEZlA1X2MxN3RKZjFOZTMybVV1OFNxaVRQS0tuNk1LYzRRV1BUenhZZm5Uckxsbzh1Q2k5OWcxYnllOWowMDJfZ2hRMWM4ZG4tcjlGTklLOS12NUxib2xKb1hQOS1WWWsxaElDS0k2RTZyaHBuN05CYm9CSVNOQjBiWm94TWNHSTJoSW0ydEtfd2ZlQjdK?oc=5",
-            "publishedAt": "Thu, 11 Jan 2024 08:00:00 GMT",
-            "source": "n-tv.de"
+            "title": "Für nur 1,2 Millionen geholt: Wie dieser junge Torwart jetzt zum absoluten Lazio-Glücksgriff wurde - Absolut Fussball",
+            "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcmRVSjZ6MWtiU0p4UW9UZXVLWXk2c0xRRjMxN3Z4WEg1YnRpVUhnQTZkaWVCTU9DN1AzaWZTd1VFalpHUHpsQVZzZHVvYzZ2a2FJSWZ5bVNfMmpRNV9DcFRraUgydVVydlBxMHNhZzNHdjhpRDh1VXdXTlMwYllrWlRXLW50cGhUYVZPUE5QS1BIOU1keS1UanE5NTNlOUJ0c0JKRzNvakJBYVdiSUN4Q194OS03T2Y0NVFQWEhPaEdBYkFHenMwM3ZadGxwVEt0akNIVw?oc=5",
+            "publishedAt": "Thu, 23 Apr 2026 07:00:00 GMT",
+            "source": "Absolut Fussball"
           },
           {
-            "title": "Trainer verlässt Lazio und soll bei Atalanta unterschreiben - fussballdaten.de",
-            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRnJkN2RrVkw2RS11ZzhqOFFpcGtVZWtqSGMxSEwxN3RscERMZThqb3REVmtxODFJREtnNFNPUmZrR3JtOGhid2REQXFYSllpVFNxWGFxTFNiLUk3NnU5Mmd1ejZEWHJ4ajRDQjJxLXFZTFdDQ3ZzQnBGN0dSYWNoellIWUp4U3NiajZRVE1HeEo?oc=5",
-            "publishedAt": "Sat, 23 May 2026 07:00:00 GMT",
-            "source": "fussballdaten.de"
+            "title": "36. Spieltag: Lazio Rom - Inter Mailand - S.S. Lazio - Le Aquile - Forum | Page 1 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSUlrRnN0WGdxTG10RDhqQ0JHS2xfdzlpaUJiZzNrNU14V2xGNVJZQ3drRlNLNVlGRU9SQXBBcGR1T1V5bWt3cW83UEZEMmQ0LThhV0M0c0xkczB6eC1mOTdXOXFFRTRCeFhlbGY0LVdwM2ROOEJMeThiVERCODRqbTh6TXhaSWFWaV9aMDNLXzIwLWZTVmJNUTBoN28?oc=5",
+            "publishedAt": "Fri, 08 May 2026 06:48:42 GMT",
+            "source": "Transfermarkt"
           }
         ],
         "away": [
@@ -41384,34 +41384,34 @@
       "teamNews": {
         "home": [
           {
-            "title": "Aufstellung | US Lecce - Juventus Turin 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQLUVMclpRTlFDVUxvX1BaZFZzVmliRXVkbnBRN0JCUVRjTGNIQWhvbWhEeWpMSUVRaFFkdmRYdkZNb3RLS05TU29YUk5mcElWbnY0V3A2cERvc19mY3R4Zm5ZaHBWcGYxbDd3Ukw3c28zYmpOeEUxczB0V1BxUlhaag?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 17:54:02 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "Aufstellung US Lecce - Juventus Turin 0:2 | 8. Spieltag, Serie A 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQOFZoQlRjem1QT0dnTXBZVlRIRlZvZTJBRDNjMmE1RkVTS0JPVGZkcTdoU1dwLTVaY1lraG9ocWhsOURIenN0aU5NaXdqMDBIZXhwMWRYYmZWUTFkeEpNTWI4M2x5OEdZWkctcG0xM3FsdUJqSFNKSE4xWU9sNy1UejhzNWw1cER2STlxMTlGbVFKdTFSdXNZNg?oc=5",
             "publishedAt": "Sun, 25 Oct 2026 16:00:00 GMT",
             "source": "sport.de"
           },
           {
-            "title": "US Lecce gegen Juventus Turin Aufstellung - Serie A 8. Spieltag 2026/2027 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWThOZDdNMG1WZF9xbTRVUG9PRlBYMXpFRzRuVHpzLXI5cnU1NGlfcDNNaHRiUlVkZ2E1TjlNYjl4RVRkcEVKWGFRUlJ6azRzancyS1c3c2NjYjlNQU1xOUZ5dXdLVm11d3kxVkI4aFNGQ2lsVTQzMFVxcUJMMVl3WDdUQUt2OFJGcDlERmV5Skp3UQ?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 18:16:00 GMT",
-            "source": "BILD"
+            "title": "US Lecce - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPa0FRMGpiU2N2WF9pNjVObEZsVDRRaEg4SDZYR0xwX0RxaG1MWUVXWXczRnpVcF9Rd0V3d2x3eGFkREJsNVRMMWZ6VW4tVnBUNEx1UjBVRlpRSnljS3ZONk02TlNVVHI5OTFaTURDcW9GNXpSMEhrcWo3NmJXSk5Rb2xldkU5MXc?oc=5",
+            "publishedAt": "Fri, 23 Oct 2026 05:34:37 GMT",
+            "source": "Transfermarkt"
           },
           {
-            "title": "US Lecce - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMnRCOVFId3ZQcVVjcEJYdUdOWmNnazNQajJWVlR1RVFFaVdvYXRqZHdtMVFvVWphTXRfbGVtMGMxQm9YZTAxYTdEcldHMG1WYk5mSDJFcTk1QzYteklYei1pVzYxWUlrTGJuQkpnZ1h2N3JoT0JITExLeTdOUXdYMGdnWTZxdjd5?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 18:40:56 GMT",
-            "source": "Transfermarkt"
+            "title": "Aufstellung | US Lecce - Juventus Turin 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQLUVMclpRTlFDVUxvX1BaZFZzVmliRXVkbnBRN0JCUVRjTGNIQWhvbWhEeWpMSUVRaFFkdmRYdkZNb3RLS05TU29YUk5mcElWbnY0V3A2cERvc19mY3R4Zm5ZaHBWcGYxbDd3Ukw3c28zYmpOeEUxczB0V1BxUlhaag?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 17:54:02 GMT",
+            "source": "Kicker"
           },
           {
             "title": "Ergebnis Lecce - Juventus (0-2) 8. Spieltag Serie A 2026/2027 25/10 - FussballTransfers.com",
             "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPa2JDMUNFOFlZQmVLRFplQTk5YUwyUXV3YzBwc2dyd19mZ19UV0dMRTF3MVp0clpDVFUtb2hOZXlocVZkOGY3UFhqRlZyZDZ6SFZ5bk1sbVFOSElPaXR2al83Z1JwczhUSjFIM3pvTTVITUdENHFHOWxYZFBkSS1jMmpaSXd4dkF5cXBVMHQ5TQ?oc=5",
             "publishedAt": "Sun, 25 Oct 2026 15:40:00 GMT",
             "source": "FussballTransfers.com"
+          },
+          {
+            "title": "US Lecce gegen AS Rom Aufstellung - Serie A 2. Spieltag 2026/2027 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVGhfS1c0VWd6SW1VMjlaN25uSmFfd1RsVDlMbXoxNkF3MTNCZ2RSMmFoTFVxTHhsb1p2d2ZFZ1k5N3p6RGJ1VWNhNm4tbmM3QXlSNU5xeWh5M1g1a0dCX3hrVXRoQXJqSnZnWjdnZ0ZhWHUzVm9hM2ZjUjBMUnFnc0ozaUw?oc=5",
+            "publishedAt": "Tue, 01 Sep 2026 22:27:05 GMT",
+            "source": "BILD"
           }
         ],
         "away": [
@@ -42080,12 +42080,6 @@
         ],
         "away": [
           {
-            "title": "8. Spieltag: SSC Neapel - AS Rom - S.S.C. Napoli - I Partenopei - Forum | Page 1 - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUlFrU1RSVHJseVZmVWJTQnlVYXZQaWFwd29WM0RfTV9Ha1B3U2xrTVROTEF5UFBlRm5UdXRRV3hvVTlkaWIxVmZ4U1JPdnQ0NEZNVldCUEVhSWNMU1ZnaFY1Q0lTVTNEUXdzWlpsYjRZMDFfZFFRb2dPdjNuNmVWNDU4bjd5SlBXaW5uUVg0clVKdEk?oc=5",
-            "publishedAt": "Sat, 24 Oct 2026 14:58:00 GMT",
-            "source": "Transfermarkt"
-          },
-          {
             "title": "Napoli verliert Abwehrchef: Buongiorno droht monatelanger Ausfall - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPby15dk1FZmQ5bWRzSDhUUFBZSW9sSWRKaElLbkxKbExmaDlsVTQybHdpbWE3TjZrYU41LU11cDU4LWw4aVRUSTE0dmNfZF9KWXNJcG0wcGV5NWZUOVZybk9BM000ZllJb3pNV0ZMX2tWT09hTzJqQ2hVaGlCSndTUjJhVEJjaUQ4QjV0YzEzWGh5YXN4M2Z1ZUplX2dQOVZn?oc=5",
             "publishedAt": "Tue, 21 Jul 2026 07:00:00 GMT",
@@ -42098,16 +42092,22 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Inter Mailand gegen Neapel, Serie-A-Vorschau: Alles, was ihr wissen müsst - Goal.com",
-            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMGxUekRLTGtKckpYSHN5QkNIckVqU3hRUmx4MzRfQ29IalpjNGJ6U3QzcEgwd1VfMFZqMEJTcEM2ZEgxV2Y2Zld4a3dWQ25kNFl2RDM4Nl9uc0JIQWpha2luekZsenpJbVlScnNYSmlEQUZYTUpRWkNYUzVNQXBWQlBWRVdhU0puQ3pPVGZ1UWtQRzVfb3ZEakJNalNQbGlfMk9Bd0p4eFNDcDMxcXMxUU1nRllmenA3VnlPcVp0ZF9GZ2s?oc=5",
-            "publishedAt": "Fri, 04 Sep 2026 07:00:00 GMT",
-            "source": "Goal.com"
+            "title": "Vorschau: Nächster Halt Neapel - Eintracht Frankfurt",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1yMHdYblNJWkNmV0V5dEVRTXZCeFdwblNVM0RjZUU4RTItMHc1Q0NDZU91OUk1czFpbTdqaGs3TUlUTk5teERSY21vRW15c3Fzc2s0eWVMR2dhZ2NGSXpTVmFHRlBRNm1ZaVJQbEFmRFdkQTlWblFMRDd0dw?oc=5",
+            "publishedAt": "Sun, 02 Nov 2025 07:00:00 GMT",
+            "source": "Eintracht Frankfurt"
           },
           {
-            "title": "SSC Napoli - Celta Vigo Live ticker, H2H und Aufstellungen - Sofascore",
-            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53TE1FZWdwTzlVVktnRGp4TmtRNUh4RGItY1BLeFBxUFkxdExObzZzOFp5NkdxaUZuUFc2NGxZUkFzMGY0VXBlTWtPbkxnX1pYcXVsTmo0OE03dVdaSzgwZmU4aHE1bzdWbnBMbnM0M25qRkhaVUxzTjJIYm00dw?oc=5",
-            "publishedAt": "Sat, 08 Aug 2026 07:00:00 GMT",
-            "source": "Sofascore"
+            "title": "Oberschenkelverletzung! Havel verpasst Genua-Auftakt gegen Napoli - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUUhlalZNbndFNDRrQkQtLThSNHdWYy1sXzllck1Tb2NVaDhveGRBWEx3UGtuelRYOGhSVHJyMURUbG9GMHh5ZTJFRmNxWHBNTnNlLUN1RHRBNS1qY05kcWFmeTNjTXU0RkdFTnVMemNaTXdtNjRQTWtueTljRXhzMVpxQ0JMSWlCYUVkSDRLSDI1bFJsTHFRTnRsc2VOQkllT253eGJOaTc1SzFUYThWNkU3SGhXLUhKNkxid2JsM2hmaklWOEY0dlRzemJ3QkNFbGpUMkFxM2hyOERmblhjRg?oc=5",
+            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Anguissa verpasst Afrika-Cup: Nächste schwere Verletzung bei SSC Napoli - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOYmluZWw3bkl4ME5SRjVyQmU5cVNPcUN3c2hmX3JnVVI0d0p3U1I3OVR4TzNZaVphdjBZbElmMTB1VjlteGRoOC1ra1ZSb2tIcnpUbUtDUWplUW1XcUtYSGgwNU9tZWhEenJmRDNIanQ2RVhnb3lXYUFIemh0VjRlRFRSRE5hX3BIRnU5OHZPWklqaGZ0cm9wWDRwWjBQQlpncnVOQ015SzFtZ1lrUnNCbENpeExmOG8?oc=5",
+            "publishedAt": "Fri, 14 Nov 2025 08:00:00 GMT",
+            "source": "Transfermarkt"
           }
         ]
       },
@@ -43494,16 +43494,16 @@
             "source": "Kicker"
           },
           {
-            "title": "Sportings Bayern-Generalprobe: Lissaboner Derby bei Benfica endet Remis - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNzBZcnVUeGJBay1QbmdiQlIyQnpOUDdNLVdna1ZrUjY0dmhnRmNnaHNXR2dFOFNVLWxEMkJGVWJlY2hzeU9scHZjOTBrZ09KYW14U081LXRoRGM4MVhKTlFja2RUdTVxTlhMZUVjYk5KSkh0dy1NUWlJd3dFSTAzRUp6bE1FU2RsSC1TelZjMEFWbWxZ?oc=5",
-            "publishedAt": "Fri, 05 Dec 2025 08:00:00 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "SL Benfica - sport.de",
             "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5SMTMyNG1LT3BoRUxqdkRtaVJjYWRnOXNwNkhCOEdQYkRiR3JMSmN5NVVBX3JvTk14bU1HSjNMd0lRV1FzX19SRmxMeE1RUmkyREc5X0RyX1UxYnlM?oc=5",
             "publishedAt": "Sat, 11 Mar 2017 16:14:09 GMT",
             "source": "sport.de"
+          },
+          {
+            "title": "Teils auf Bewährung: UEFA sperrt Benficas Prestianni für sechs Spiele - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdmpCSkM1eTdVc3M3X2NCN1dwSHdlQW1BODhfQ3M2cUVGWllFS3hGbE1WR2tWUzFMSW03aGRlZmhxeWJydUpBczVPSjR1VG9jQnlET0tyNU5PNko4RHFBVkVzbzQ3cHlhN3o3bE1xeWZpdHlVSXY0blFNaUtZUHJNMGRkNE1Qb2kxSk1MOUhQQVd6S19yaUVjazh3d2Nka1lROUcwSzN4a0l3ODJs?oc=5",
+            "publishedAt": "Fri, 24 Apr 2026 07:00:00 GMT",
+            "source": "Kicker"
           }
         ],
         "away": []
@@ -44152,16 +44152,16 @@
             "source": "sport.de"
           },
           {
+            "title": "Cesena FC U20 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNb1FsWFdBUVNlTm9HdWN1REI0X1dKM0kwOG9yODdwaE41VWkwN2YzZ05zQXpHanRzcWpjc1M2MzNiSlpJZFBjYTd1bXRLaXRPa0plLTFxN1NpUTlCV3Y1MmN5ZHlsSmd0MjlRd3hwLURjNG5leTY2NFY1M3E5T2kySkticFJHaFNKSGU0cUFBZjN3bE0?oc=5",
+            "publishedAt": "Tue, 20 Oct 2026 07:58:14 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Aufstellung: Frosinone - Venezia | 06.09.2026 - Aufstellung & Formation | Serie A 3. Spieltag 2026/2027 - SPORT1",
             "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWVB3RTNqRmYtaWd0bG5qRjZDb3g1VGh4dUNya0ZqZU5LZ1hvemVHMFpkUTljVFYwbDRVZ2ZFZnBQYy0tMl83ZXY4WWEySXZVQVBwQ2lwdU1BMHdDZlNZRjVJT0o3cmU0WjB0SlhRUGliSXk2Zm9CUjlXTk9kdE5INHA4WFQ3N1IybG93ei1LRkFRNmZmOUVnQzJicWF1QQ?oc=5",
             "publishedAt": "Sun, 06 Sep 2026 07:00:00 GMT",
             "source": "SPORT1"
-          },
-          {
-            "title": "Aufstellung Atalanta - Venezia FC 3:1 | 6. Spieltag, Serie A 2026/2027 - sport.de",
-            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTEpmck1vN0gxdFliSTkxNEJEbkFVV0ljMXF4Z1JEZnNvNm1fYW1FelkyRlkzazZMMzFEeUQwRmI3bmh0VnJnOHlLb2VaRTFRT2pUbE9VeVJYTlBOc1F0TGhDbEJSdVExS2NVWWdrVmE2cDBwR2dicE9Qam1Tc3ZyOG5lS2ZaMnNscjQ4dWFkdzNTVXM?oc=5",
-            "publishedAt": "Mon, 12 Oct 2026 07:00:00 GMT",
-            "source": "sport.de"
           }
         ],
         "away": [
@@ -44849,34 +44849,34 @@
         ],
         "away": [
           {
-            "title": "Aufstellung | US Lecce - Juventus Turin 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQLUVMclpRTlFDVUxvX1BaZFZzVmliRXVkbnBRN0JCUVRjTGNIQWhvbWhEeWpMSUVRaFFkdmRYdkZNb3RLS05TU29YUk5mcElWbnY0V3A2cERvc19mY3R4Zm5ZaHBWcGYxbDd3Ukw3c28zYmpOeEUxczB0V1BxUlhaag?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 17:54:02 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "Aufstellung US Lecce - Juventus Turin 0:2 | 8. Spieltag, Serie A 2026/2027 - sport.de",
             "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQOFZoQlRjem1QT0dnTXBZVlRIRlZvZTJBRDNjMmE1RkVTS0JPVGZkcTdoU1dwLTVaY1lraG9ocWhsOURIenN0aU5NaXdqMDBIZXhwMWRYYmZWUTFkeEpNTWI4M2x5OEdZWkctcG0xM3FsdUJqSFNKSE4xWU9sNy1UejhzNWw1cER2STlxMTlGbVFKdTFSdXNZNg?oc=5",
             "publishedAt": "Sun, 25 Oct 2026 16:00:00 GMT",
             "source": "sport.de"
           },
           {
-            "title": "US Lecce gegen Juventus Turin Aufstellung - Serie A 8. Spieltag 2026/2027 - BILD",
-            "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWThOZDdNMG1WZF9xbTRVUG9PRlBYMXpFRzRuVHpzLXI5cnU1NGlfcDNNaHRiUlVkZ2E1TjlNYjl4RVRkcEVKWGFRUlJ6azRzancyS1c3c2NjYjlNQU1xOUZ5dXdLVm11d3kxVkI4aFNGQ2lsVTQzMFVxcUJMMVl3WDdUQUt2OFJGcDlERmV5Skp3UQ?oc=5",
-            "publishedAt": "Sun, 25 Oct 2026 18:16:00 GMT",
-            "source": "BILD"
+            "title": "US Lecce - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPa0FRMGpiU2N2WF9pNjVObEZsVDRRaEg4SDZYR0xwX0RxaG1MWUVXWXczRnpVcF9Rd0V3d2x3eGFkREJsNVRMMWZ6VW4tVnBUNEx1UjBVRlpRSnljS3ZONk02TlNVVHI5OTFaTURDcW9GNXpSMEhrcWo3NmJXSk5Rb2xldkU5MXc?oc=5",
+            "publishedAt": "Fri, 23 Oct 2026 05:34:37 GMT",
+            "source": "Transfermarkt"
           },
           {
-            "title": "US Lecce - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMnRCOVFId3ZQcVVjcEJYdUdOWmNnazNQajJWVlR1RVFFaVdvYXRqZHdtMVFvVWphTXRfbGVtMGMxQm9YZTAxYTdEcldHMG1WYk5mSDJFcTk1QzYteklYei1pVzYxWUlrTGJuQkpnZ1h2N3JoT0JITExLeTdOUXdYMGdnWTZxdjd5?oc=5",
-            "publishedAt": "Thu, 22 Oct 2026 18:40:56 GMT",
-            "source": "Transfermarkt"
+            "title": "Aufstellung | US Lecce - Juventus Turin 0:2 | 8. Spieltag | Serie A 2026/27 - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQLUVMclpRTlFDVUxvX1BaZFZzVmliRXVkbnBRN0JCUVRjTGNIQWhvbWhEeWpMSUVRaFFkdmRYdkZNb3RLS05TU29YUk5mcElWbnY0V3A2cERvc19mY3R4Zm5ZaHBWcGYxbDd3Ukw3c28zYmpOeEUxczB0V1BxUlhaag?oc=5",
+            "publishedAt": "Sun, 25 Oct 2026 17:54:02 GMT",
+            "source": "Kicker"
           },
           {
             "title": "Ergebnis Lecce - Juventus (0-2) 8. Spieltag Serie A 2026/2027 25/10 - FussballTransfers.com",
             "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPa2JDMUNFOFlZQmVLRFplQTk5YUwyUXV3YzBwc2dyd19mZ19UV0dMRTF3MVp0clpDVFUtb2hOZXlocVZkOGY3UFhqRlZyZDZ6SFZ5bk1sbVFOSElPaXR2al83Z1JwczhUSjFIM3pvTTVITUdENHFHOWxYZFBkSS1jMmpaSXd4dkF5cXBVMHQ5TQ?oc=5",
             "publishedAt": "Sun, 25 Oct 2026 15:40:00 GMT",
             "source": "FussballTransfers.com"
+          },
+          {
+            "title": "US Lecce gegen AS Rom Aufstellung - Serie A 2. Spieltag 2026/2027 - BILD",
+            "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVGhfS1c0VWd6SW1VMjlaN25uSmFfd1RsVDlMbXoxNkF3MTNCZ2RSMmFoTFVxTHhsb1p2d2ZFZ1k5N3p6RGJ1VWNhNm4tbmM3QXlSNU5xeWh5M1g1a0dCX3hrVXRoQXJqSnZnWjdnZ0ZhWHUzVm9hM2ZjUjBMUnFnc0ozaUw?oc=5",
+            "publishedAt": "Tue, 01 Sep 2026 22:27:05 GMT",
+            "source": "BILD"
           }
         ]
       },
@@ -47456,9 +47456,9 @@
             "source": "LAOLA1"
           },
           {
-            "title": "Fußball Premier League: Arsenal gegen Chelsea - Aufstellung - 3. Spieltag - 2026/2027 - sportschau.de",
-            "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxObkVvM3pSbVViTl9yX0JoS1RjTENoY1RpcWJJMWJZNXRrUHE3MEZ6cmU2WWNqNm5ablg2TGQ1Q2wyZEsydTc1VTZsY0dha3h2ZG5faloyekdidEdwZEc3cmpTVDByQkhYaGVPQ0FuLURYbVlaTVpDZmpFUEZXNTJHck4wNk1NTlh4UnR0TzRlS1k5VmFNNHE3aFVnQl84azhDX2QzNURiVW1tNlVzSW1XODFWZDNGcmhYRWxfVV9kSU5OTEZCSHQtMWE5UFE?oc=5",
-            "publishedAt": "Sun, 06 Sep 2026 18:08:30 GMT",
+            "title": "Fußball Premier League: Everton gegen Chelsea - Aufstellung - 7. Spieltag - 2026/2027 - sportschau.de",
+            "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPM2hpYVJRRG5tYVJHMl9xRHo5ckF5Wi1QWVVDTlhlSEplVkN0MS1zWjlKM1MwT2VUbzdaZnl3T2xGR0k0dTVjcDIxb0stYlFOQkNaNkRLNG40M0xSdDZfYklJb0x0TGxyeEw2Qk50eGNNdU4zNy1zMmxYY29FbHBXckhmZFdpdGI2MF8wLXp1R0trU3VvbVhmejVBd2c4QURvYl9XQlV0ZXZQLUxNdnZnYmlRUVZVUGh4Z0ozSVVJMDVkZXd4c1Y3LVBzNjU?oc=5",
+            "publishedAt": "Sat, 17 Oct 2026 14:24:28 GMT",
             "source": "sportschau.de"
           }
         ]
@@ -49930,16 +49930,16 @@
             "source": "Eintracht Frankfurt"
           },
           {
+            "title": "Sporting Lissabon - Vereinsprofil - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBQODNOdXgxTFZkWnNLaHNKNTNJY0VlbWFVZm15Z1EyZG5XSnRXNDdqbUFILWJrZGJ3OXFoTTRyTnVaOGRzVWpZM2M4emtsRFZmaFo5a1d0YlFSLWhkeXpabkEzSzUxMXU1aWgxZFo5ckxRaFU4dHhB?oc=5",
+            "publishedAt": "Mon, 08 May 2017 06:56:55 GMT",
+            "source": "Transfermarkt"
+          },
+          {
             "title": "Einem droht jetzt das Aus beim FC Bayern! Comeback von Alphonso Davies hat weitreichende Konsequenzen - SPOX.com",
             "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPMDdzdnB0XzJaR0dJZVNTZlVyUDB6bnFTYjBFcURFNm9RVFVpX29xLVBEM3FRbmtfQmlVQzZtY2lUbWtpcDhRV3l1MUFEaTNIeE5SdVllSFZzZEs1V1diTGlEWHM3a0JlcV9zRDQzTUpVdUFZRkpGZFZjbjBzdDJxbklaUGZHSE9QMjdKb01keWZpcEJLUHZkSkVWTmlKdTdBengyNm5KeEtDZ3AxM1BlUHk4cTl3UXNtWDdtNHFHLXhHaFlXdFZTQkgwX0tIOVpxOExVQWh4RExjSklydTJhZy1RR2tWUHNlQXRBcTlB?oc=5",
             "publishedAt": "Thu, 11 Dec 2025 08:00:00 GMT",
             "source": "SPOX.com"
-          },
-          {
-            "title": "Geschichte: Napoli 2-1 Sporting CP | Aufstellungen - UEFA.com",
-            "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPbmU2Yy12OVBxcUhpWllGdG9vMURJRWttVU5QSUtaSUpNeDFKYURqRWZlM2VyT3FyREw3SjF0TVVQU1hJQ0ZaamVnM2lfd0hVSHlTcmRRYUZEVEpBTXNvWVB2RERkajdVNG5kVTFuTXdWN1RJZFoxZXFNVnVXXzVPeHFVTGRMM0xWaE52M3pR?oc=5",
-            "publishedAt": "Sat, 30 Aug 2025 13:12:44 GMT",
-            "source": "UEFA.com"
           }
         ],
         "away": []
@@ -50150,12 +50150,6 @@
       "teamNews": {
         "home": [
           {
-            "title": "8. Spieltag: SSC Neapel - AS Rom - S.S.C. Napoli - I Partenopei - Forum | Page 1 - Transfermarkt",
-            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUlFrU1RSVHJseVZmVWJTQnlVYXZQaWFwd29WM0RfTV9Ha1B3U2xrTVROTEF5UFBlRm5UdXRRV3hvVTlkaWIxVmZ4U1JPdnQ0NEZNVldCUEVhSWNMU1ZnaFY1Q0lTVTNEUXdzWlpsYjRZMDFfZFFRb2dPdjNuNmVWNDU4bjd5SlBXaW5uUVg0clVKdEk?oc=5",
-            "publishedAt": "Sat, 24 Oct 2026 14:58:00 GMT",
-            "source": "Transfermarkt"
-          },
-          {
             "title": "Napoli verliert Abwehrchef: Buongiorno droht monatelanger Ausfall - fussballdaten.de",
             "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPby15dk1FZmQ5bWRzSDhUUFBZSW9sSWRKaElLbkxKbExmaDlsVTQybHdpbWE3TjZrYU41LU11cDU4LWw4aVRUSTE0dmNfZF9KWXNJcG0wcGV5NWZUOVZybk9BM000ZllJb3pNV0ZMX2tWT09hTzJqQ2hVaGlCSndTUjJhVEJjaUQ4QjV0YzEzWGh5YXN4M2Z1ZUplX2dQOVZn?oc=5",
             "publishedAt": "Tue, 21 Jul 2026 07:00:00 GMT",
@@ -50168,16 +50162,22 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Inter Mailand gegen Neapel, Serie-A-Vorschau: Alles, was ihr wissen müsst - Goal.com",
-            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOMGxUekRLTGtKckpYSHN5QkNIckVqU3hRUmx4MzRfQ29IalpjNGJ6U3QzcEgwd1VfMFZqMEJTcEM2ZEgxV2Y2Zld4a3dWQ25kNFl2RDM4Nl9uc0JIQWpha2luekZsenpJbVlScnNYSmlEQUZYTUpRWkNYUzVNQXBWQlBWRVdhU0puQ3pPVGZ1UWtQRzVfb3ZEakJNalNQbGlfMk9Bd0p4eFNDcDMxcXMxUU1nRllmenA3VnlPcVp0ZF9GZ2s?oc=5",
-            "publishedAt": "Fri, 04 Sep 2026 07:00:00 GMT",
-            "source": "Goal.com"
+            "title": "Vorschau: Nächster Halt Neapel - Eintracht Frankfurt",
+            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1yMHdYblNJWkNmV0V5dEVRTXZCeFdwblNVM0RjZUU4RTItMHc1Q0NDZU91OUk1czFpbTdqaGs3TUlUTk5teERSY21vRW15c3Fzc2s0eWVMR2dhZ2NGSXpTVmFHRlBRNm1ZaVJQbEFmRFdkQTlWblFMRDd0dw?oc=5",
+            "publishedAt": "Sun, 02 Nov 2025 07:00:00 GMT",
+            "source": "Eintracht Frankfurt"
           },
           {
-            "title": "SSC Napoli - Celta Vigo Live ticker, H2H und Aufstellungen - Sofascore",
-            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53TE1FZWdwTzlVVktnRGp4TmtRNUh4RGItY1BLeFBxUFkxdExObzZzOFp5NkdxaUZuUFc2NGxZUkFzMGY0VXBlTWtPbkxnX1pYcXVsTmo0OE03dVdaSzgwZmU4aHE1bzdWbnBMbnM0M25qRkhaVUxzTjJIYm00dw?oc=5",
-            "publishedAt": "Sat, 08 Aug 2026 07:00:00 GMT",
-            "source": "Sofascore"
+            "title": "Oberschenkelverletzung! Havel verpasst Genua-Auftakt gegen Napoli - LAOLA1",
+            "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQUUhlalZNbndFNDRrQkQtLThSNHdWYy1sXzllck1Tb2NVaDhveGRBWEx3UGtuelRYOGhSVHJyMURUbG9GMHh5ZTJFRmNxWHBNTnNlLUN1RHRBNS1qY05kcWFmeTNjTXU0RkdFTnVMemNaTXdtNjRQTWtueTljRXhzMVpxQ0JMSWlCYUVkSDRLSDI1bFJsTHFRTnRsc2VOQkllT253eGJOaTc1SzFUYThWNkU3SGhXLUhKNkxid2JsM2hmaklWOEY0dlRzemJ3QkNFbGpUMkFxM2hyOERmblhjRg?oc=5",
+            "publishedAt": "Sat, 22 Aug 2026 07:00:00 GMT",
+            "source": "LAOLA1"
+          },
+          {
+            "title": "Anguissa verpasst Afrika-Cup: Nächste schwere Verletzung bei SSC Napoli - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOYmluZWw3bkl4ME5SRjVyQmU5cVNPcUN3c2hmX3JnVVI0d0p3U1I3OVR4TzNZaVphdjBZbElmMTB1VjlteGRoOC1ra1ZSb2tIcnpUbUtDUWplUW1XcUtYSGgwNU9tZWhEenJmRDNIanQ2RVhnb3lXYUFIemh0VjRlRFRSRE5hX3BIRnU5OHZPWklqaGZ0cm9wWDRwWjBQQlpncnVOQ015SzFtZ1lrUnNCbENpeExmOG8?oc=5",
+            "publishedAt": "Fri, 14 Nov 2025 08:00:00 GMT",
+            "source": "Transfermarkt"
           }
         ],
         "away": [
@@ -50188,10 +50188,10 @@
             "source": "Transfermarkt"
           },
           {
-            "title": "Für nur 1,2 Millionen geholt: Wie dieser junge Torwart jetzt zum absoluten Lazio-Glücksgriff wurde - Absolut Fussball",
-            "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcmRVSjZ6MWtiU0p4UW9UZXVLWXk2c0xRRjMxN3Z4WEg1YnRpVUhnQTZkaWVCTU9DN1AzaWZTd1VFalpHUHpsQVZzZHVvYzZ2a2FJSWZ5bVNfMmpRNV9DcFRraUgydVVydlBxMHNhZzNHdjhpRDh1VXdXTlMwYllrWlRXLW50cGhUYVZPUE5QS1BIOU1keS1UanE5NTNlOUJ0c0JKRzNvakJBYVdiSUN4Q194OS03T2Y0NVFQWEhPaEdBYkFHenMwM3ZadGxwVEt0akNIVw?oc=5",
-            "publishedAt": "Thu, 23 Apr 2026 07:00:00 GMT",
-            "source": "Absolut Fussball"
+            "title": "Juventus Turin: 0:3 gegen Lazio, Gattusos Team zieht mit Inter gleich - 90PLUS",
+            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZFh0SWNCdG5waF9fYXpfM2w4T29NUkRaeFRSODZPVm8zZlZIaEp3Y04tWXU4aUozYUNsOW9Ra3VuQ3lNeXdVSUl1Nk4zamxFUnlZNGFYeENqXzRsSGQ5a2xWdzhhRzhFZE5pR0s1eTZIdGxFcnJ1ZGpydFAxcG94NDNDd3ZmdjVEdGVZaU9qN0pxQ1Z0MEVxaWRFbFNDaGc?oc=5",
+            "publishedAt": "Mon, 19 Oct 2026 07:42:00 GMT",
+            "source": "90PLUS"
           },
           {
             "title": "Lazio gibt zwei Stürmer ab – kuriose Bedingungen entscheiden über Millionen - fussballdaten.de",
@@ -50200,16 +50200,16 @@
             "source": "fussballdaten.de"
           },
           {
-            "title": "Faschisten-Gruß und Messerstich: Römisches Stadtderby schlägt in Gewalt um - n-tv.de",
-            "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPV0hmeS1HeHVuWlhEZlA1X2MxN3RKZjFOZTMybVV1OFNxaVRQS0tuNk1LYzRRV1BUenhZZm5Uckxsbzh1Q2k5OWcxYnllOWowMDJfZ2hRMWM4ZG4tcjlGTklLOS12NUxib2xKb1hQOS1WWWsxaElDS0k2RTZyaHBuN05CYm9CSVNOQjBiWm94TWNHSTJoSW0ydEtfd2ZlQjdK?oc=5",
-            "publishedAt": "Thu, 11 Jan 2024 08:00:00 GMT",
-            "source": "n-tv.de"
+            "title": "Für nur 1,2 Millionen geholt: Wie dieser junge Torwart jetzt zum absoluten Lazio-Glücksgriff wurde - Absolut Fussball",
+            "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcmRVSjZ6MWtiU0p4UW9UZXVLWXk2c0xRRjMxN3Z4WEg1YnRpVUhnQTZkaWVCTU9DN1AzaWZTd1VFalpHUHpsQVZzZHVvYzZ2a2FJSWZ5bVNfMmpRNV9DcFRraUgydVVydlBxMHNhZzNHdjhpRDh1VXdXTlMwYllrWlRXLW50cGhUYVZPUE5QS1BIOU1keS1UanE5NTNlOUJ0c0JKRzNvakJBYVdiSUN4Q194OS03T2Y0NVFQWEhPaEdBYkFHenMwM3ZadGxwVEt0akNIVw?oc=5",
+            "publishedAt": "Thu, 23 Apr 2026 07:00:00 GMT",
+            "source": "Absolut Fussball"
           },
           {
-            "title": "Trainer verlässt Lazio und soll bei Atalanta unterschreiben - fussballdaten.de",
-            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRnJkN2RrVkw2RS11ZzhqOFFpcGtVZWtqSGMxSEwxN3RscERMZThqb3REVmtxODFJREtnNFNPUmZrR3JtOGhid2REQXFYSllpVFNxWGFxTFNiLUk3NnU5Mmd1ejZEWHJ4ajRDQjJxLXFZTFdDQ3ZzQnBGN0dSYWNoellIWUp4U3NiajZRVE1HeEo?oc=5",
-            "publishedAt": "Sat, 23 May 2026 07:00:00 GMT",
-            "source": "fussballdaten.de"
+            "title": "36. Spieltag: Lazio Rom - Inter Mailand - S.S. Lazio - Le Aquile - Forum | Page 1 - Transfermarkt",
+            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSUlrRnN0WGdxTG10RDhqQ0JHS2xfdzlpaUJiZzNrNU14V2xGNVJZQ3drRlNLNVlGRU9SQXBBcGR1T1V5bWt3cW83UEZEMmQ0LThhV0M0c0xkczB6eC1mOTdXOXFFRTRCeFhlbGY0LVdwM2ROOEJMeThiVERCODRqbTh6TXhaSWFWaV9aMDNLXzIwLWZTVmJNUTBoN28?oc=5",
+            "publishedAt": "Fri, 08 May 2026 06:48:42 GMT",
+            "source": "Transfermarkt"
           }
         ]
       },
@@ -50951,10 +50951,10 @@
             "source": "sportschau.de"
           },
           {
-            "title": "Osimhen trifft an alter Wirkungsstätte: Galatasaray feiert in Lille ersten CL-Sieg - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNTlaV2taRDdTWk1OOXJENzV2WFJkM2hSeVJIUWYwbjVCeWNUUG9RLU0tZXJwRjYxN1dPSU5sMk1sTV9uV0dkY2kzYW1rT3JPeU1XWk80ZV9jUk1LbGFFVDRHYmg1dGc2Rk4yYTlwUHBqZXVwVUhZZnVKUGRJR1gtcmlnNE9mSFhHZkdmRTBUWkk?oc=5",
-            "publishedAt": "Wed, 21 Oct 2026 15:45:03 GMT",
-            "source": "Kicker"
+            "title": "Osimhen trifft an alter Wirkungsstätte: Galatasaray feiert in Lille ersten CL-Sieg - kicker.ch",
+            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVEh2MlhyWTNXN2R6Tk0xVTFYU3Vza1dQd2FpbV9tdU1QakRoUjhnaGgyYXpzVEN0N05NT2JETjc3TzlaOGFMVURVdS1zR2M2Z0N5SXNKdS0ySDRFaDY5OWloem5vY09ESjN6YWNuUHA4S1RTRkY2RVJXRUdoN3Y5TnlQdkJJdTMxVzgzNUZYdFc?oc=5",
+            "publishedAt": "Wed, 21 Oct 2026 17:00:23 GMT",
+            "source": "kicker.ch"
           },
           {
             "title": "Arsenal FC gegen Lille OSC Aufstellung - Champions League 2. Spieltag Ligaphase 2026/2027 - BILD",
@@ -56330,16 +56330,16 @@
             "source": "Kicker"
           },
           {
-            "title": "Sportings Bayern-Generalprobe: Lissaboner Derby bei Benfica endet Remis - Kicker",
-            "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNzBZcnVUeGJBay1QbmdiQlIyQnpOUDdNLVdna1ZrUjY0dmhnRmNnaHNXR2dFOFNVLWxEMkJGVWJlY2hzeU9scHZjOTBrZ09KYW14U081LXRoRGM4MVhKTlFja2RUdTVxTlhMZUVjYk5KSkh0dy1NUWlJd3dFSTAzRUp6bE1FU2RsSC1TelZjMEFWbWxZ?oc=5",
-            "publishedAt": "Fri, 05 Dec 2025 08:00:00 GMT",
-            "source": "Kicker"
-          },
-          {
             "title": "SL Benfica - sport.de",
             "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5SMTMyNG1LT3BoRUxqdkRtaVJjYWRnOXNwNkhCOEdQYkRiR3JMSmN5NVVBX3JvTk14bU1HSjNMd0lRV1FzX19SRmxMeE1RUmkyREc5X0RyX1UxYnlM?oc=5",
             "publishedAt": "Sat, 11 Mar 2017 16:14:09 GMT",
             "source": "sport.de"
+          },
+          {
+            "title": "Teils auf Bewährung: UEFA sperrt Benficas Prestianni für sechs Spiele - Kicker",
+            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdmpCSkM1eTdVc3M3X2NCN1dwSHdlQW1BODhfQ3M2cUVGWllFS3hGbE1WR2tWUzFMSW03aGRlZmhxeWJydUpBczVPSjR1VG9jQnlET0tyNU5PNko4RHFBVkVzbzQ3cHlhN3o3bE1xeWZpdHlVSXY0blFNaUtZUHJNMGRkNE1Qb2kxSk1MOUhQQVd6S19yaUVjazh3d2Nka1lROUcwSzN4a0l3ODJs?oc=5",
+            "publishedAt": "Fri, 24 Apr 2026 07:00:00 GMT",
+            "source": "Kicker"
           }
         ]
       },
