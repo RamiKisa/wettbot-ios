@@ -161,6 +161,23 @@ class SportScoreFixtureTests(unittest.TestCase):
         self.assertEqual((rows[0]["homeGoals"], rows[0]["awayGoals"]), (0, 0))
         self.assertEqual(rows[0]["status"], "FINISHED")
 
+
+    def test_combines_date_and_clock_without_losing_timezone(self):
+        row = {
+            "id": "match-19",
+            "competitionSlug": "turkish-super-lig",
+            "home": {"name": "Galatasaray"},
+            "away": {"name": "Fenerbahce"},
+            "date": "2026-10-31",
+            "time": "19:00",
+            "timeZone": "Europe/Istanbul",
+            "status": "upcoming",
+        }
+        parsed = sportscore_match_rows({"fixtures": [row]})[0]
+        self.assertEqual(parsed["date"], "2026-10-31T19:00:00")
+        self.assertEqual(parsed["timezone"], "Europe/Istanbul")
+        self.assertEqual(parsed["competition"], "turkish-super-lig")
+
     def test_ignores_unusable_payloads(self):
         self.assertEqual(sportscore_match_rows(None), [])
         self.assertEqual(sportscore_match_rows({"data": "not-a-list"}), [])
