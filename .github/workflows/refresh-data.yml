@@ -49,7 +49,7 @@ jobs:
             python3 scripts/refresh_data.py
 
             python3 - <<'PY'
-          import collections, datetime, json, pathlib, sys, unicodedata, re
+          import collections, datetime, json, pathlib, sys, unicodedata, re, math
           path = pathlib.Path("recommendations.json")
           try:
               data = json.loads(path.read_text(encoding="utf-8"))
@@ -101,6 +101,32 @@ jobs:
               league_counts[item.get("league", "UNKNOWN")] += 1
               source_counts[item.get("source", "unknown")] += 1
               model_counts[item.get("analysisStatus", "unknown")] += 1
+              if item.get("analysisStatus") not in {"available", "model_estimate", "limited_model"}:
+                  errors.append(f"fixture[{i}] is not analyzed: status={item.get('analysisStatus')}")
+              prediction = item.get("prediction")
+              if not isinstance(prediction, dict):
+                  errors.append(f"fixture[{i}] has no prediction/model object")
+              else:
+                  probabilities = prediction.get("probabilities")
+                  if not isinstance(probabilities, dict) or any(
+                      not isinstance(probabilities.get(k), (int, float)) or not math.isfinite(probabilities[k])
+                      for k in ("home", "draw", "away")
+                  ):
+                      errors.append(f"fixture[{i}] is missing finite 1X2 probabilities")
+                  elif not 98.0 <= sum(probabilities[k] for k in ("home", "draw", "away")) <= 102.0:
+                      errors.append(f"fixture[{i}] 1X2 probabilities do not sum to approximately 100%")
+                  for goal_key in ("homeGoals", "awayGoals"):
+                      value = prediction.get(goal_key)
+                      if not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0:
+                          errors.append(f"fixture[{i}] has no valid {goal_key} estimate")
+                  markets = prediction.get("markets")
+                  if not isinstance(markets, dict) or any(
+                      not isinstance(markets.get(k), (int, float)) or not math.isfinite(markets[k])
+                      for k in ("over25", "under25", "bttsYes", "bttsNo")
+                  ):
+                      errors.append(f"fixture[{i}] is missing finite O/U and BTTS estimates")
+              if not isinstance(item.get("dataCoverage"), dict) or not item.get("source"):
+                  errors.append(f"fixture[{i}] is missing source/data coverage metadata")
               try:
                   fixture_dt = datetime.datetime.fromisoformat(str(item.get("date")).replace("Z", "+00:00"))
                   if fixture_dt.tzinfo is None:
