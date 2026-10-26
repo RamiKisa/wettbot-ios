@@ -126,7 +126,21 @@ def fetch_google_search(query, limit=5):
    item['snippet']=htmlmod.unescape(item['snippet']).strip()
    out.append(item)
    if len(out)>=limit: break
-  return out
+  if out:
+   return out
+  # Google HTML often serves consent/challenge pages to automated clients.
+  # Fall back to Google News RSS for the same query rather than silently returning no results.
+  rss_url='https://news.google.com/rss/search?'+urllib.parse.urlencode({'q':query,'hl':'de','gl':'DE','ceid':'DE:de'})
+  rss_req=urllib.request.Request(rss_url,headers={'User-Agent':'Mozilla/5.0 RamoBet/3.5','Accept':'application/rss+xml, application/xml'})
+  with urllib.request.urlopen(rss_req,timeout=12) as resp: raw=resp.read()
+  import xml.etree.ElementTree as ET
+  root=ET.fromstring(raw); fallback=[]
+  for item in root.findall('.//item')[:limit]:
+   title=(item.findtext('title') or '').strip(); link=(item.findtext('link') or '').strip()
+   pub=(item.findtext('pubDate') or '').strip(); source=(item.findtext('source') or '').strip()
+   if title and link.startswith('https://'):
+    fallback.append({'url':link,'title':title,'snippet':'Google News RSS · '+pub if pub else 'Google News RSS','source':source or 'Google News RSS','publishedAt':pub})
+  return fallback
  except Exception:
   return None
 def research_cache_fresh(entry,ttl_hours):
