@@ -716,35 +716,49 @@
       const res=await fetch('./recommendations.json?v='+Date.now(),{cache:'no-store'});
       if(!res.ok)throw Error('Datenfeed HTTP '+res.status);
       const data=await res.json();
-      analysisData=data;
-      if(!Array.isArray(analysisData.recommendations)||analysisData.recommendations.length===0){
-        status.textContent='Keine Prognosedaten verfügbar – lade nur heutige Spiele …';
-        try{const fallback=await loadFixtureSchedules();analysisData={...data,recommendations:fallback,source:'OpenFootball / ESPN (Spielpläne)',generatedAt:new Date().toISOString()};}
-        catch(feedError){analysisData={...data,recommendations:[],source:'Kein Spielplan verfügbar'};}
+      analysisData={...data,recommendations:Array.isArray(data.recommendations)?data.recommendations:[]};
+      let supplementalCount=0, scheduleErrors=[];
+      if(data.status==='free_mode'||analysisData.recommendations.length===0){
+        status.textContent='Ergänze den Spielplan aus allen zehn festgelegten Wettbewerben …';
+        try{
+          const live=await loadFixtureSchedules();
+          scheduleErrors=live.errors||[];
+          const merged=mergeSupplementalFixtures(analysisData.recommendations,live.fixtures||[],data.teamHistory||{});
+          analysisData.recommendations=merged.fixtures;
+          supplementalCount=merged.added;
+          analysisData.liveScheduleErrors=scheduleErrors;
+        }catch(feedError){
+          scheduleErrors=[String(feedError.message||feedError)];
+          analysisData.liveScheduleErrors=scheduleErrors;
+        }
       }
       fillAnalysisSelectors();
       if(data.status==='needs_api_key'){
         const scheduled=analysisData.recommendations||[];
         status.textContent=scheduled.length+' Spiel(e) im heutigen Spielplan · für Prognosen ist noch ein Datenzugang nötig.';
         list.innerHTML='<div class="empty"><strong>Spielplan geladen, Pre-Match-Prognosen noch nicht aktiv.</strong><br>'+esc(data.message||'Für zusätzliche Statistiken und Prognosen fehlt der Datenzugang.')+'<br><br>'+scheduled.length+' heutige Spiele aus dem kostenlosen Spielplan-Fallback. Wähle oben eine Liga und ein Spiel aus. Die App zeigt nur verfügbare Informationen und erfindet keine Prognosen.</div>';
-      }else if(!data.recommendations||!data.recommendations.length){
+      }else if(!analysisData.recommendations||!analysisData.recommendations.length){
         status.textContent='Der Datenlauf enthält aktuell keine auswertbaren Spiele.';
         list.innerHTML='<div class="empty">Keine Prognosedaten verfügbar. Das bedeutet nicht, dass keine Spiele stattfinden.</div>';
       }else{
-        status.textContent=data.recommendations.length+' Spiele aus den zehn festgelegten Wettbewerben geladen. Qualität und Datenabdeckung werden je Spiel ausgewiesen.';
+        status.textContent=analysisData.recommendations.length+' Spiele aus den zehn festgelegten Wettbewerben werden ausgewertet.';
         const fmt=v=>v===null||v===undefined||v===''?'Keine Angabe':String(v);
         const pct=v=>v===null||v===undefined?'—':v+' %';
-        list.innerHTML=data.recommendations.map((m)=>{
+        list.innerHTML=analysisData.recommendations.map((m)=>{
           const p=m.prediction||{},pr=p.probabilities||{},c=p.comparison||{};
           const h2h=Array.isArray(m.h2h)?m.h2h:[];
           const h2hText=h2h.length?h2h.map(x=>{const t=x.teams||{},g=x.goals||{},f=x.fixture||{};return '<div class="resultline"><span>'+esc((t.home||{}).name||'Heim')+' – '+esc((t.away||{}).name||'Gast')+'</span><strong>'+fmt(g.home)+' : '+fmt(g.away)+'</strong></div>';}).join(''):'Keine direkten Duelle in der Antwort der Datenquelle.';
           const probBlock='<div class="grid" style="margin-top:8px"><div class="stat"><div class="small muted">Heimsieg</div><div class="value">'+pct(pr.home)+'</div></div><div class="stat"><div class="small muted">Unentschieden</div><div class="value">'+pct(pr.draw)+'</div></div><div class="stat"><div class="small muted">Auswärtssieg</div><div class="value">'+pct(pr.away)+'</div></div><div class="stat"><div class="small muted">Modell-Tendenz</div><div class="value" style="font-size:14px">'+esc(fmt(p.winner))+'</div></div></div>';
           const compRows=Object.entries(c).map(([k,v])=>'<div class="resultline"><span>'+esc(k.replaceAll('_',' '))+'</span><strong>'+esc(fmt(v))+'</strong></div>').join('');
-          return '<div class="match"><div class="matchhead"><div><div class="teams">'+esc(m.home)+' – '+esc(m.away)+'</div><div class="small muted">'+esc(m.league)+' · '+new Date(m.date).toLocaleString('de-DE',{dateStyle:'medium',timeStyle:'short'})+'</div></div><span class="status '+((m.analysisStatus==='available'||m.analysisStatus==='model_estimate')?'good':'warn')+'">'+(m.analysisStatus==='available'?'Datenquellen-Prognose':m.analysisStatus==='model_estimate'?'Modellschätzung':'Begrenzte Datenbasis')+'</span></div>'+probBlock+'<div class="hr"></div><h3>Torprognose & Empfehlung</h3><div class="resultline"><span>Modell-Empfehlung</span><strong>'+esc(fmt(p.advice))+'</strong></div><div class="resultline"><span>Unter/Über</span><strong>'+esc(fmt(p.underOver))+'</strong></div><div class="resultline"><span>Heimtore laut Modell</span><strong>'+esc(fmt(p.homeGoals))+'</strong></div><div class="resultline"><span>Auswärtstore laut Modell</span><strong>'+esc(fmt(p.awayGoals))+'</strong></div><div class="resultline"><span>Modell-Konfidenz</span><strong>'+esc(fmt(p.confidence))+'</strong></div><div class="hr"></div><details><summary>Teamvergleich / Formindikatoren</summary><div style="margin-top:8px">'+(compRows||'<div class="small muted">Kein Teamvergleich geliefert.</div>')+'</div></details><details><summary>Letzte direkte Duelle</summary><div style="margin-top:8px">'+h2hText+'</div></details><p class="small muted">Keine Buchmacherquoten. Die Quelle liefert nicht für jedes Spiel alle Märkte, Verletzungen oder Aufstellungen; fehlende Informationen werden nicht erfunden.</p></div>';
+          return '<div class="match"><div class="matchhead"><div><div class="teams">'+esc(m.home)+' – '+esc(m.away)+'</div><div class="small muted">'+esc(m.league)+' · '+new Date(m.date).toLocaleString('de-DE',{dateStyle:'medium',timeStyle:'short'})+'</div></div><span class="status '+((m.analysisStatus==='available'||m.analysisStatus==='model_estimate')?'good':'warn')+'">'+(m.analysisStatus==='available'?'Datenquellen-Prognose':m.analysisStatus==='model_estimate'?'Modellschätzung':'Begrenzte Datenbasis')+'</span></div>'+probBlock+'<div class="hr"></div><h3>Torprognose & Empfehlung</h3><div class="resultline"><span>Modell-Empfehlung</span><strong>'+esc(fmt(p.advice))+'</strong></div><div class="resultline"><span>Unter/Über</span><strong>'+esc(fmt(p.underOver))+'</strong></div><div class="resultline"><span>Heimtore laut Modell</span><strong>'+esc(fmt(p.homeGoals))+'</strong></div><div class="resultline"><span>Auswärtstore laut Modell</span><strong>'+esc(fmt(p.awayGoals))+'</strong></div><div class="resultline"><span>Wahrscheinlichstes Ergebnis</span><strong>'+esc(fmt(p.mostLikelyScore))+'</strong></div><div class="resultline"><span>Modell-Konfidenz</span><strong>'+esc(fmt(p.confidence))+'</strong></div><div class="hr"></div><details><summary>Teamvergleich / Formindikatoren</summary><div style="margin-top:8px">'+(compRows||'<div class="small muted">Kein Teamvergleich geliefert.</div>')+'</div></details><details><summary>Letzte direkte Duelle</summary><div style="margin-top:8px">'+h2hText+'</div></details><p class="small muted">Keine Buchmacherquoten. Die Quelle liefert nicht für jedes Spiel alle Märkte, Verletzungen oder Aufstellungen; fehlende Informationen werden nicht erfunden.</p></div>';
         }).join('');
       }
       if(analysisData?.generatedAt)stamp.textContent='Datenstand: '+new Date(analysisData.generatedAt).toLocaleString('de-DE')+'. Quelle: '+(analysisData.source||data.source||'');
-      if(analysisData?.recommendations?.length)status.textContent=analysisData.recommendations.length+' Spiele geladen. '+(data.status==='needs_api_key'?'Spielplan verfügbar; Prognosen benötigen noch die Datenanbindung.':'');
+      if(analysisData?.recommendations?.length){
+        const windowDays=Number(data.fixtureWindowDays)||14;
+        const failedSourceText=scheduleErrors.length?' '+scheduleErrors.length+' Live-Abfrage(n) fehlgeschlagen; fehlende Daten sind in der Abdeckung erkennbar.':'';
+        status.textContent=analysisData.recommendations.length+' Spiele im '+windowDays+'-Tage-Zeitraum. '+supplementalCount+' zusätzliche ESPN-Spielpläne ergänzt.'+failedSourceText;
+      }
     }catch(e){status.textContent='Automatische Analysen konnten nicht geladen werden: '+e.message;list.innerHTML='<div class="empty">Bitte später erneut versuchen.</div>';}
   }
   $('reloadAnalysisBtn').addEventListener('click',loadAnalyses);
