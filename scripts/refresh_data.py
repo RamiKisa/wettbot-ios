@@ -393,7 +393,10 @@ def fixture_fallback():
     rawdate=row.get("date")
     try:
      kickoff=datetime.datetime.fromisoformat(str(rawdate).replace("Z","+00:00"))
-     if kickoff.tzinfo is None: kickoff=kickoff.replace(tzinfo=datetime.timezone.utc)
+     if kickoff.tzinfo is None:
+      from zoneinfo import ZoneInfo
+      try: kickoff=kickoff.replace(tzinfo=ZoneInfo(str(row.get("timezone") or "UTC")))
+      except Exception: kickoff=kickoff.replace(tzinfo=datetime.timezone.utc)
      kickoff=kickoff.astimezone(datetime.timezone.utc)
     except Exception:
      continue
