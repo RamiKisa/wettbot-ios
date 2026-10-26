@@ -1,0 +1,77 @@
+name: Validate RamoBet app
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'sw.js'
+      - 'competitions.json'
+      - 'scripts/**'
+      - 'tests/**'
+      - '.github/workflows/validate-app.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Compile Python and run regression tests
+        run: |
+          set -euo pipefail
+          python3 -m py_compile scripts/refresh_data.py scripts/feed_utils.py
+          python3 -m unittest discover -s tests -v
+
+      - name: Validate the fixed competition configuration
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, sys
+          data=json.loads(pathlib.Path("competitions.json").read_text(encoding="utf-8"))
+          expected=["Bundesliga","Serie A","Ligue 1","La Liga","Premier League","Süper Lig","Primeira Liga","Champions League","Europa League","Conference League"]
+          actual=[x.get("name") for x in data.get("competitions",[])]
+          if actual!=expected:
+              sys.exit("Fixed competition list mismatch: "+repr(actual))
+          if data.get("fixtureWindowDays")!=14:
+              sys.exit("The configured fixture window must remain 14 days")
+          if any(not x.get("espnSlug") or not x.get("apiFootballId") for x in data["competitions"]):
+              sys.exit("Each competition must retain its configured ESPN and API-Football mapping")
+          if any(x.get("openFootballFile") and not x.get("openFootballTimezone") for x in data["competitions"]):
+              sys.exit("OpenFootball feeds must have explicit timezone metadata")
+          print("Fixed configuration OK: "+", ".join(actual))
+          PY
+
+      - name: Extract and syntax-check browser JavaScript
+        run: |
+          python3 - <<'PY'
+          import pathlib, re, sys
+          html=pathlib.Path("index.html").read_text(encoding="utf-8")
+          scripts=re.findall(r"<script[^>]*>(.*?)</script>",html,flags=re.I|re.S)
+          if not scripts:
+              sys.exit("No inline JavaScript was found")
+          pathlib.Path("/tmp/ramobet-inline.js").write_text("\n;\n".join(scripts),encoding="utf-8")
+          print(f"Extracted {len(scripts)} inline JavaScript block(s)")
+          PY
+          node --check /tmp/ramobet-inline.js
+
+      - name: Validate service worker cache includes configuration
+        run: |
+          python3 - <<'PY'
+          import pathlib, re, sys
+          code=pathlib.Path("sw.js").read_text(encoding="utf-8")
+          m=re.search(r"const CACHE='ramobet-free-v(\\d+)';",code)
+          if not m: sys.exit("Service worker cache version missing")
+          if "'./competitions.json'" not in code: sys.exit("Service worker does not precache competitions.json")
+          print("Service worker cache version:",m.group(1))
+          PY
