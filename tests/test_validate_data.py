@@ -73,9 +73,14 @@ class ValidateDataTests(unittest.TestCase):
         second["date"] = first["date"]
         self.assertTrue(any("Duplicate fixture" in error for error in self.run_validation(self.dataset([first, second]), False)))
 
-    def test_normalizes_benfica_and_santa_clara_aliases(self):
+    def test_normalizes_portuguese_club_aliases(self):
         self.assertEqual(norm("Benfica"), norm("Sport Lisboa e Benfica"))
         self.assertEqual(norm("CD Santa Clara"), norm("Santa Clara"))
+        self.assertEqual(norm("FC Arouca"), norm("Arouca"))
+        self.assertEqual(norm("CD Nacional"), norm("C.D. Nacional"))
+        self.assertEqual(norm("Sporting Clube de Braga"), norm("Braga"))
+        self.assertEqual(norm("CS Marítimo"), norm("Maritimo"))
+        self.assertEqual(norm("Omonia Nicosia FC"), norm("Omonia Nicosia"))
 
     def test_rejects_timezone_naive_kickoff(self):
         data = self.dataset([self.fixture("Bundesliga", 1, "2026-10-29T19:00:00")])
