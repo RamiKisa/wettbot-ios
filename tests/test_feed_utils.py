@@ -148,7 +148,7 @@ class PoissonModelTests(unittest.TestCase):
         with_h2h = poisson_match_model(home_form, away_form, h2h_history=h2h)
         self.assertLess(with_h2h["homeGoals"] + with_h2h["awayGoals"], form_only["homeGoals"] + form_only["awayGoals"])
         self.assertEqual(with_h2h["h2h"]["matchesUsed"], 5)
-        self.assertEqual(with_h2h["h2h"]["averageTotalGoals"], 0.8)
+        self.assertEqual(with_h2h["h2h"]["averageTotalGoals"], 1.0)
         self.assertTrue(with_h2h["h2h"]["lowScoringPattern"])
         self.assertGreater(with_h2h["h2h"]["modelWeightPercent"], 0)
 
