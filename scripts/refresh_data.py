@@ -418,54 +418,40 @@ def fixture_fallback():
  # Load historical seasons for the supported leagues plus Germany's 2. Bundesliga as
  # a history-only competition. It is not added to the app's selectable competition list,
  # but is essential when a cup opponent was recently outside the top division.
- # The DFB-Pokal is a separate competition and is not present in the league JSON files.
- # Load its historical match list directly from OpenFootball/deutschland. These rows
- # enrich history only; they never create selectable fixtures or alter the fixed app leagues.
+ # DFB-Pokal data are stored in a separate OpenFootball source, not in league JSON.
+ # Load the prior two cup seasons into the shared history index so cup fixtures can
+ # show verified cross-division form and head-to-head records.
+ import re as _cup_re
+ from zoneinfo import ZoneInfo
  for cup_season in range(season-1, season-3, -1):
   try:
-   cup_url="https://raw.githubusercontent.com/openfootball/deutschland/master/"+str(cup_season)+"-"+str((cup_season+1)%100).zfill(2)+"/cup.txt"
+   season_folder=str(cup_season)+"-"+str((cup_season+1)%100).zfill(2)
+   cup_url="https://raw.githubusercontent.com/openfootball/deutschland/master/"+season_folder+"/cup.txt"
    cup_req=urllib.request.Request(cup_url,headers={"User-Agent":"RamoBet/3.6","Accept":"text/plain"})
    with urllib.request.urlopen(cup_req,timeout=18) as resp:
     cup_text=resp.read().decode("utf-8","replace")
-   import re as _cup_re
-   from zoneinfo import ZoneInfo
-   current_round=None
-   cup_rows=0
-   for line in cup_text.splitlines():
-    if line.lstrip().startswith("▪"):
-     current_round=line.lstrip("▪ ").strip()
-     continue
-    match=_cup_re.match(r"^\s*(?:\d{2}:\d{2}\s+)?(.+?)\s{2,}v\s+(.+?)\s{2,}(\d+)\s*[-:]\s*(\d+)(?:\s|$)",line)
-    if not match:
-     continue
-    home,away=match.group(1).strip(),match.group(2).strip()
-    hg,ag=int(match.group(3)),int(match.group(4))
-    # Cup text uses dated headers; retain the most recent valid date heading.
-    # Headers can include weekday/month, e.g. "Sat Aug 17 2024".
-    if not current_round:
-     continue
-    # Parse the most recent date heading preceding the result line.
-    # Search backwards by tracking date-header state below.
    current_date=None
+   cup_rows=0
    for line in cup_text.splitlines():
     header=_cup_re.match(r"^\s{0,4}(?:[A-Z][a-z]{2})\s+([A-Z][a-z]{2})\s+(\d{1,2})(?:\s+(\d{4}))?\s*$",line)
     if header:
      month,day,year=header.group(1),int(header.group(2)),int(header.group(3) or cup_season)
      current_date=datetime.datetime.strptime(f"{year} {month} {day}","%Y %b %d").date()
      continue
-    match=_cup_re.match(r"^\s*(?:\d{2}:\d{2}\s+)?(.+?)\s{2,}v\s+(.+?)\s{2,}(\d+)\s*[-:]\s*(\d+)(?:\s|$)",line)
-    if not match or current_date is None or current_date>now.date():
+    if current_date is None or current_date>now.date():
      continue
-    home,away=match.group(1).strip(),match.group(2).strip()
-    hg,ag=int(match.group(3)),int(match.group(4))
-    # Aggregate score after penalties is not a normal FT score; only plain FT score rows match.
+    result=_cup_re.match(r"^\s*(?:\d{2}:\d{2}\s+)?(.+?)\s{2,}v\s+(.+?)\s{2,}(\d+)\s*[-:]\s*(\d+)\s*(?:\([^)]*\))?\s*$",line)
+    if not result:
+     continue
+    home,away=result.group(1).strip(),result.group(2).strip()
+    hg,ag=int(result.group(3)),int(result.group(4))
     if not home or not away:
      continue
     stamp=datetime.datetime.combine(current_date,datetime.time(15,0),tzinfo=ZoneInfo("Europe/Berlin")).astimezone(datetime.timezone.utc).isoformat()
     for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
      rows=history.setdefault(("DFB-Pokal",team),[])
-     key_date=stamp[:10]
-     if not any(x.get("date","")[:10]==key_date and normalize_team_name(x.get("opponent"))==normalize_team_name(opponent) for x in rows):
+     day_key=stamp[:10]
+     if not any(x.get("date","")[:10]==day_key and normalize_team_name(x.get("opponent"))==normalize_team_name(opponent) for x in rows):
       rows.append({"date":stamp,"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent,"home":home,"away":away,"homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home,"historySource":"OpenFootball DFB-Pokal"})
     cup_rows+=1
    print("OpenFootball DFB-Pokal history",cup_season,cup_rows)
