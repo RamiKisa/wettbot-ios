@@ -277,6 +277,52 @@ def espn_completed_match_rows(events: Any) -> list[dict]:
     return rows
 
 
+def latest_unique_history(rows: Any, team: Any, limit: int = 5) -> list[dict]:
+    """Return distinct completed results for one team, newest first.
+
+    Deduplicate across feed providers using the date, normalized home/away teams,
+    and full-time score. Prefer precise ESPN timestamp/source metadata when feeds
+    describe the same match; keep separate fixtures with different venues/scores.
+    """
+    try:
+        limit = max(0, int(limit))
+    except (TypeError, ValueError):
+        limit = 5
+    combined: dict[tuple, dict] = {}
+    team_name = str(team or "")
+    for row in rows if isinstance(rows, (list, tuple)) else []:
+        if not isinstance(row, dict):
+            continue
+        date_value = str(row.get("date") or (row.get("fixture") or {}).get("date") or "")
+        if not date_value:
+            continue
+        is_home = row.get("teamIsHome") is not False
+        opponent = row.get("opponent")
+        home_name = row.get("home") or (team_name if is_home else opponent)
+        away_name = row.get("away") or (opponent if is_home else team_name)
+        home_key, away_key = normalize_team_name(home_name), normalize_team_name(away_name)
+        if not home_key or not away_key:
+            continue
+        gf, ga = _score_int(row.get("gf")), _score_int(row.get("ga"))
+        hg, ag = _score_int(row.get("homeGoals")), _score_int(row.get("awayGoals"))
+        if hg is None or ag is None:
+            if gf is None or ga is None:
+                continue
+            hg, ag = (gf, ga) if is_home else (ga, gf)
+        identity = (date_value[:10], home_key, away_key, hg, ag)
+        previous = combined.get(identity)
+        if previous is None or (
+            row.get("historySource") == "ESPN completed scoreboard"
+            and previous.get("historySource") != "ESPN completed scoreboard"
+        ):
+            combined[identity] = row
+    return sorted(
+        combined.values(),
+        key=lambda item: str(item.get("date") or ""),
+        reverse=True,
+    )[:limit]
+
+
 def poisson_match_model(
     home_history: list[dict],
     away_history: list[dict],
