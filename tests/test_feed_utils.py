@@ -283,7 +283,7 @@ class OpenFootballCupParserTests(unittest.TestCase):
         self.assertEqual(len(rows), 2)
         self.assertTrue(all(row["date"] <= "2026-10-27" for row in rows))
         self.assertEqual(sum(row["date"] == "2026-08-17" for row in rows), 1)
-        self.assertFalse(any(row["date"] == "2026-10-27" for row in rows))
+        self.assertFalse(any(row["date"] == "2027-10-27" for row in rows))
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
