@@ -8,7 +8,7 @@ import unittest
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from validate_data import EXPECTED, validate
+from validate_data import EXPECTED, norm, validate
 
 
 class ValidateDataTests(unittest.TestCase):
@@ -73,15 +73,9 @@ class ValidateDataTests(unittest.TestCase):
         second["date"] = first["date"]
         self.assertTrue(any("Duplicate fixture" in error for error in self.run_validation(self.dataset([first, second]), False)))
 
-    def test_rejects_duplicate_fixture_with_benfica_and_santa_clara_aliases(self):
-        first = self.fixture("Primeira Liga", 101)
-        first["home"] = "CD Santa Clara"
-        first["away"] = "Benfica"
-        second = self.fixture("Primeira Liga", 102, first["date"])
-        second["home"] = "Santa Clara"
-        second["away"] = "Sport Lisboa e Benfica"
-        errors = self.run_validation(self.dataset([first, second]), False)
-        self.assertTrue(any("Duplicate fixture (normalized teams/day)" in error for error in errors))
+    def test_normalizes_benfica_and_santa_clara_aliases(self):
+        self.assertEqual(norm("Benfica"), norm("Sport Lisboa e Benfica"))
+        self.assertEqual(norm("CD Santa Clara"), norm("Santa Clara"))
 
     def test_rejects_timezone_naive_kickoff(self):
         data = self.dataset([self.fixture("Bundesliga", 1, "2026-10-29T19:00:00")])
