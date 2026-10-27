@@ -60,13 +60,17 @@ def api(path,params):
   LAST_API_REQUEST=time.monotonic()
 def fetch_openfootball(season_year, filename):
  season_folder=str(season_year)+"-"+str((season_year+1)%100).zfill(2)
- url="https://api.github.com/repos/openfootball/football.json/contents/"+season_folder+"/"+filename+"?ref=master"
- req=urllib.request.Request(url,headers={"User-Agent":"RamoBet/3.3","Accept":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"})
- with urllib.request.urlopen(req,timeout=18) as resp: entry=json.load(resp)
- if entry.get("encoding")!="base64" or not entry.get("content"):
-  raise RuntimeError("OpenFootball GitHub Contents API returned no base64 file content")
- try: return json.loads(base64.b64decode(entry["content"]).decode("utf-8"))
- except Exception as exc: raise RuntimeError("Could not decode OpenFootball season file: "+str(exc)[:100])
+ # Use raw.githubusercontent.com rather than the GitHub Contents API: the latter has a
+ # low unauthenticated rate limit and ten-season H2H lookups can exhaust it.
+ url="https://raw.githubusercontent.com/openfootball/football.json/master/"+season_folder+"/"+filename
+ req=urllib.request.Request(url,headers={"User-Agent":"RamoBet/3.6","Accept":"application/json"})
+ try:
+  with urllib.request.urlopen(req,timeout=18) as resp:
+   if not 200<=resp.status<300: raise RuntimeError("HTTP "+str(resp.status))
+   payload=resp.read().decode("utf-8")
+  return json.loads(payload)
+ except Exception as exc:
+  raise RuntimeError("OpenFootball "+season_folder+"/"+filename+": "+str(exc)[:120])
 from feed_utils import espn_completed_match_rows, full_time_score, match_rows, poisson_match_model, sportscore_match_rows
 def pct(v):
  try:return round(float(str(v).replace("%","").strip()),1)
