@@ -4,8 +4,8 @@ FOOTBALL_DATA_TOKEN=os.environ.get("FOOTBALL_DATA_TOKEN","").strip()
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 CONFIG=json.loads((ROOT/"competitions.json").read_text(encoding="utf-8"))
 COMPETITIONS=CONFIG["competitions"]
-if len(COMPETITIONS)!=10 or len({x.get("name") for x in COMPETITIONS})!=10:
- raise SystemExit("competitions.json must contain exactly 10 uniquely named configured competitions")
+if len(COMPETITIONS)!=11 or len({x.get("name") for x in COMPETITIONS})!=11:
+ raise SystemExit("competitions.json must contain exactly 11 uniquely named configured competitions")
 OUT=ROOT/"recommendations.json"; now=datetime.datetime.now(datetime.timezone.utc)
 TEAM_RESEARCH_CACHE={"news":{},"googleSearch":{}}; MATCH_RESEARCH_CACHE={}; TEAM_RESEARCH_ERRORS=[]
 SOURCE_DIAGNOSTICS={}
