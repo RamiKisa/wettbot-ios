@@ -6,7 +6,7 @@ import unittest
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from feed_utils import espn_completed_match_rows, full_time_score, match_rows, poisson_match_model, sportscore_match_rows
+from feed_utils import espn_completed_match_rows, full_time_score, match_rows, normalize_team_name, poisson_match_model, sportscore_match_rows
 
 
 class MatchRowsTests(unittest.TestCase):
@@ -217,30 +217,39 @@ class SportScoreFixtureTests(unittest.TestCase):
 
 
 class HistoricalH2HRegressionTests(unittest.TestCase):
+    def test_canonical_team_names_join_across_public_feed_aliases(self):
+        self.assertEqual(normalize_team_name("Rot-Weiss Essen"), "rotweissessen")
+        self.assertEqual(normalize_team_name("Rot Weiss Essen e.V."), "rotweissessen")
+        self.assertEqual(normalize_team_name("RasenBallsport Leipzig"), "rbleipzig")
+        self.assertEqual(normalize_team_name("RasenBallsport Leipzig GmbH"), "rbleipzig")
+        self.assertEqual(normalize_team_name("RB Leipzig"), "rbleipzig")
+
     def test_rot_weiss_essen_rb_leipzig_confirmed_2024_pokal_result(self):
-        # Official DFB Datencenter and RWE match report confirm: 17 Aug 2024, 1-4.
-        # Keep a real historical record available to the H2H match-up selector.
-        from datetime import datetime, timezone
+        # Official DFB Datencenter and RWE match report: 17 Aug 2024, 1-4.
         history = {
-            "rotweissessen": [{
+            normalize_team_name("Rot-Weiss Essen"): [{
                 "date": "2024-08-17T13:30:00+00:00",
                 "gf": 1, "ga": 4, "result": "L",
-                "opponent": "RB Leipzig",
+                "opponent": "RasenBallsport Leipzig GmbH",
                 "home": "Rot-Weiss Essen", "away": "RB Leipzig",
                 "homeGoals": 1, "awayGoals": 4, "teamIsHome": True,
                 "historySource": "verified-regression-fixture",
             }]
         }
-        normalize = lambda value: "".join(
-            ch for ch in value.lower() if ch.isalnum()
-        )
         rows = [
-            row for row in history["rotweissessen"]
-            if normalize(row["opponent"]) == normalize("RB Leipzig")
+            row for team_key, matches in history.items()
+            if team_key == normalize_team_name("Rot-Weiss Essen")
+            for row in matches
+            if normalize_team_name(row["opponent"]) == normalize_team_name("RB Leipzig")
         ]
         self.assertEqual(len(rows), 1)
         self.assertEqual((rows[0]["homeGoals"], rows[0]["awayGoals"]), (1, 4))
         self.assertEqual(rows[0]["date"][:10], "2024-08-17")
+        model = poisson_match_model([], [], h2h_history=[{
+            "gf": rows[0]["gf"], "ga": rows[0]["ga"], "teamIsHome": True
+        }])
+        self.assertEqual(model["h2h"]["matchesUsed"], 1)
+        self.assertEqual(model["h2h"]["averageTotalGoals"], 5.0)
 
 
 if __name__ == "__main__":
