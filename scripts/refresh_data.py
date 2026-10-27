@@ -559,7 +559,7 @@ def fixture_fallback():
    "westhamunitedfc":"westhamunited","newcastleunitedfc":"newcastleunited","crystalpalacefc":"crystalpalace",
    "astonvillafc":"astonvilla","brightonandhovealbionfc":"brighton",
    "olympiquedemarseille":"marseille","olympiquelyonnais":"lyon","asmonaco":"monaco","lilleosc":"lille",
-   "fcfamalicao":"famalicao","sportingclube":"sportinglisbon","sportlisboabenfica":"benfica","slbenfica":"benfica","benficasl":"benfica","benfica":"benfica","sportlisboabenficafutebol":"benfica","cdsantaclara":"santaclara","santaclara":"santaclara","santaclaracd":"santaclara"
+   "fcfamalicao":"famalicao","sportingclube":"sportinglisbon","sportlisboabenfica":"benfica","sportlisboaebenfica":"benfica","sportlisboaebenficafutebolclube":"benfica","slbenfica":"benfica","benficasl":"benfica","benfica":"benfica","sportlisboabenficafutebol":"benfica","cdsantaclara":"santaclara","santaclara":"santaclara","santaclaracd":"santaclara"
  }
  def team_key(value):
   key=re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",str(value or "")).encode("ascii","ignore").decode().lower())
@@ -701,7 +701,7 @@ def normalize_team_name(value):
   "westhamunitedfc":"westhamunited","newcastleunitedfc":"newcastleunited","crystalpalacefc":"crystalpalace",
   "astonvillafc":"astonvilla","brightonandhovealbionfc":"brighton",
   "olympiquedemarseille":"marseille","olympiquelyonnais":"lyon","asmonaco":"monaco","lilleosc":"lille",
-  "fcfamalicao":"famalicao","sportingclube":"sportinglisbon","sportlisboabenfica":"benfica","slbenfica":"benfica","benficasl":"benfica","benfica":"benfica","sportlisboabenficafutebol":"benfica","cdsantaclara":"santaclara","santaclara":"santaclara","santaclaracd":"santaclara"
+  "fcfamalicao":"famalicao","sportingclube":"sportinglisbon","sportlisboabenfica":"benfica","sportlisboaebenfica":"benfica","sportlisboaebenficafutebolclube":"benfica","slbenfica":"benfica","benficasl":"benfica","benfica":"benfica","sportlisboabenficafutebol":"benfica","cdsantaclara":"santaclara","santaclara":"santaclara","santaclaracd":"santaclara"
  }
  return aliases.get(key,key)
 def local_day(value):
