@@ -58,7 +58,7 @@ class FixedCompetitionConfigTests(unittest.TestCase):
                 "DFB-Pokal",
             ],
         )
-        self.assertEqual(len({item["name"] for item in config["competitions"]}), 10)
+        self.assertEqual(len({item["name"] for item in config["competitions"]}), 11)
         self.assertTrue(all(item.get("espnSlug") for item in config["competitions"]))
 
 
