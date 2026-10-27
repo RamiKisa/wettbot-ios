@@ -222,7 +222,9 @@ def enrich_google_team_research(fixtures, max_teams=40):
    store_research_result("googleSearch",team,items)
  for fixture in fixtures:
   home_entry=cache.get(fixture.get("home"),{}); away_entry=cache.get(fixture.get("away"),{})
-  fixture["googleResearch"]={"home":home_entry.get("items",[]),"away":away_entry.get("items",[])}
+  home_items=[item for item in home_entry.get("items",[]) if _relevant_team_research(fixture.get("home"),item,"googleSearch")]
+  away_items=[item for item in away_entry.get("items",[]) if _relevant_team_research(fixture.get("away"),item,"googleSearch")]
+  fixture["googleResearch"]={"home":home_items,"away":away_items}
   if home_entry.get("status")=="error" or away_entry.get("status")=="error":
    note="Google-Suche momentan nicht erreichbar; vorhandene Treffer können älter sein"
   elif fixture.get("home") in stale or fixture.get("away") in stale:
@@ -242,7 +244,9 @@ def enrich_team_news(fixtures, max_teams=None):
    store_research_result("news",team,items)
  for fixture in fixtures:
   home_entry=cache.get(fixture.get("home"),{}); away_entry=cache.get(fixture.get("away"),{})
-  fixture["teamNews"]={"home":home_entry.get("items",[]),"away":away_entry.get("items",[])}
+  home_items=[item for item in home_entry.get("items",[]) if _relevant_team_research(fixture.get("home"),item,"news")]
+  away_items=[item for item in away_entry.get("items",[]) if _relevant_team_research(fixture.get("away"),item,"news")]
+  fixture["teamNews"]={"home":home_items,"away":away_items}
   fresh_home=research_cache_fresh(home_entry,12); fresh_away=research_cache_fresh(away_entry,12)
   if home_entry.get("status")=="error" or away_entry.get("status")=="error":
    note="Google News RSS momentan nicht erreichbar; vorhandene Treffer können älter sein"
