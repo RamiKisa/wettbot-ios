@@ -25,6 +25,10 @@ def norm(value: object) -> str:
     key = re.sub(r"[^a-z0-9]", "", text)
     aliases = {
         "sportlisboabenfica": "benfica", "sportlisboaebenfica": "benfica",
+        "fcarouca": "arouca", "arouca": "arouca", "cdnacional": "nacional", "nacional": "nacional",
+        "sportingclubedebraga": "braga", "braga": "braga", "csmaritimo": "maritimo", "maritimo": "maritimo",
+        "omonianicosiafc": "omonianicosia", "omonianicosia": "omonianicosia",
+        
         "sportlisboaebenficafutebolclube": "benfica", "slbenfica": "benfica",
         "benficasl": "benfica", "benfica": "benfica",
         "sportlisboabenficafutebol": "benfica",
