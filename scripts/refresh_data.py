@@ -151,7 +151,9 @@ def match_research_key(fixture):
  try: day=local_day(fixture.get("date",""))
  except Exception: day=str(fixture.get("date",""))[:10]
  return "|".join((str(fixture.get("league","")),day,normalize_team_name(fixture.get("home")),normalize_team_name(fixture.get("away"))))
-def enrich_match_research(fixtures,max_matches=12):
+def enrich_match_research(fixtures,max_matches=None):
+ # Cover every scheduled fixture unless an explicit operational cap is supplied.
+ if max_matches is None: max_matches=len(fixtures)
  # Rotate through upcoming fixtures over repeated runs; cache by stable fixture identity.
  upcoming=[]
  for fixture in fixtures:
@@ -172,13 +174,14 @@ def enrich_match_research(fixtures,max_matches=12):
  def research_one(item):
   _,key,fixture=item; home=fixture.get("home",""); away=fixture.get("away",""); league=fixture.get("league","")
   h2h_query='"'+home+'" "'+away+'" head to head H2H previous meetings goals yellow cards scorers'
-  player_query='"'+home+'" "'+away+'" 2026 2027 player goals assists top scorer statistics'
+  active_season=str(season)+"/"+str((season+1)%100).zfill(2)
+  player_query='"'+home+'" "'+away+'" "'+active_season+'" player goals assists top scorer statistics'
   h2h=fetch_google_search(h2h_query,4)
   players=fetch_google_search(player_query,4)
   return key,{"h2h":h2h if isinstance(h2h,list) else [],"players":players if isinstance(players,list) else [],
               "updatedAt":now.isoformat(),"queryTeams":[home,away],"league":league}
  if selected:
-  with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+  with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
    futures=[executor.submit(research_one,item) for item in selected]
    for future in concurrent.futures.as_completed(futures):
     try:
@@ -259,7 +262,9 @@ def team_names(fixtures):
   for name in (fixture.get("home"),fixture.get("away")):
    if name and name not in names: names.append(name)
  return names
-def enrich_google_team_research(fixtures, max_teams=40):
+def enrich_google_team_research(fixtures, max_teams=None):
+ # Every team appearing in the upcoming schedule should be researched, not just the first batch.
+ if max_teams is None: max_teams=len(team_names(fixtures))
  teams=team_names(fixtures); cache=TEAM_RESEARCH_CACHE.setdefault("googleSearch",{})
  stale=[team for team in teams if not research_cache_fresh(cache.get(team),24)]
  selected=stale[:max_teams]
@@ -367,34 +372,35 @@ def fixture_fallback():
     all_matches.append({"id":"fallback-"+league.lower().replace(" ","-")+"-"+str(day)+"-"+str(len(all_matches)),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenFootball","dataCoverage":{"fixture":"OpenFootball"}})
   except Exception as e:
    errors.append(league+" OpenFootball: "+str(e)[:80]) # Supplement current-season results with previous-season results for a stable form baseline.
- previous_season=season-1
- for league,(file,zone) in leagues.items():
-  try:
-   previous_data=fetch_openfootball(previous_season,file)
-   from zoneinfo import ZoneInfo
-   for m in match_rows(previous_data):
-    day=m.get("date"); tm=m.get("time") or "15:00"
-    if not day: continue
-    try: dt=datetime.datetime.fromisoformat(day+"T"+tm).replace(tzinfo=ZoneInfo(zone)).astimezone(datetime.timezone.utc)
-    except Exception: continue
-    if dt>now: continue
-    t1=m.get("team1"); t2=m.get("team2")
-    home=(t1.get("name") if isinstance(t1,dict) else t1 if isinstance(t1,str) else None)
-    away=(t2.get("name") if isinstance(t2,dict) else t2 if isinstance(t2,str) else None)
-    if not home or not away: continue
-    score=m.get("score")
-    hg,ag=full_time_score(score)
-    if hg is None or ag is None: continue
-    try: hg=int(hg); ag=int(ag)
-    except (TypeError,ValueError): continue
-    if hg<0 or ag<0: continue
-    for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
-     rows=history.setdefault((league,team),[])
-     if not any(x.get("date")==dt.isoformat() and x.get("opponent")==opponent for x in rows):
-      rows.append({"date":dt.isoformat(),"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent,"home":home,"away":away,"homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home})
-  except Exception as e:
-   errors.append(league+" previous-season history: "+str(e)[:70])
- _of_errors=[e for e in errors if "OpenFootball:" in e or "previous-season history:" in e]
+ # Load three previous seasons so H2H and team form are not limited to the current campaign.
+ for previous_season in (season-1,season-2,season-3):
+  for league,(file,zone) in leagues.items():
+   try:
+    previous_data=fetch_openfootball(previous_season,file)
+    from zoneinfo import ZoneInfo
+    for m in match_rows(previous_data):
+     day=m.get("date"); tm=m.get("time") or "15:00"
+     if not day: continue
+     try: dt=datetime.datetime.fromisoformat(day+"T"+tm).replace(tzinfo=ZoneInfo(zone)).astimezone(datetime.timezone.utc)
+     except Exception: continue
+     if dt>now: continue
+     t1=m.get("team1"); t2=m.get("team2")
+     home=(t1.get("name") if isinstance(t1,dict) else t1 if isinstance(t1,str) else None)
+     away=(t2.get("name") if isinstance(t2,dict) else t2 if isinstance(t2,str) else None)
+     if not home or not away: continue
+     score=m.get("score")
+     hg,ag=full_time_score(score)
+     if hg is None or ag is None: continue
+     try: hg=int(hg); ag=int(ag)
+     except (TypeError,ValueError): continue
+     if hg<0 or ag<0: continue
+     for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
+      rows=history.setdefault((league,team),[])
+      if not any(x.get("date")==dt.isoformat() and x.get("opponent")==opponent for x in rows):
+       rows.append({"date":dt.isoformat(),"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent,"home":home,"away":away,"homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home})
+   except Exception as e:
+    errors.append(league+" previous-season "+str(previous_season)+" history: "+str(e)[:70])
+ _of_errors=[e for e in errors if "OpenFootball:" in e or "previous-season" in e]
  _of_by_league={league:sum(1 for row in all_matches if row.get("league")==league and row.get("source")=="OpenFootball") for league in [x["name"] for x in COMPETITIONS]}
  _diag("OpenFootball","error" if _of_errors else "ok" if sum(_of_by_league.values()) else "empty",not bool(_of_errors),sum(_of_by_league.values()),"; ".join(_of_errors[:8]) or None,perLeague=_of_by_league)
  # Secondary independent fixture feed: ESPN for every configured competition.
@@ -744,8 +750,8 @@ def fixture_fallback():
     h2h_unique[h2h_key]=row
   f["h2h"]=sorted(h2h_unique.values(),key=lambda x:x.get("date",""))[-5:]
  enrich_team_news(all_matches,max_teams=80)
- enrich_google_team_research(all_matches,max_teams=40)
- enrich_match_research(all_matches,max_matches=12)
+ enrich_google_team_research(all_matches)
+ enrich_match_research(all_matches)
  news_cache=TEAM_RESEARCH_CACHE.get("news",{})
  google_cache=TEAM_RESEARCH_CACHE.get("googleSearch",{})
  news_errors=[x for x in TEAM_RESEARCH_ERRORS if x.get("source")=="news"]
