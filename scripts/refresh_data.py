@@ -419,7 +419,17 @@ def fixture_fallback():
  # a history-only competition. It is not added to the app's selectable competition list,
  # but is essential when a cup opponent was recently outside the top division.
  history_leagues=dict(leagues)
- history_leagues["2. Bundesliga"]=("de.2.json","Europe/Berlin")
+ # History-only divisions fill the last-five form for clubs appearing in cups
+ # or European matches while playing outside the configured top division.
+ history_leagues.update({
+  "2. Bundesliga":("de.2.json","Europe/Berlin"),
+  "3. Liga":("de.3.json","Europe/Berlin"),
+  "English Championship":("en.2.json","Europe/London"),
+  "Spanish Segunda":("es.2.json","Europe/Madrid"),
+  "Italian Serie B":("it.2.json","Europe/Rome"),
+  "French Ligue 2":("fr.2.json","Europe/Paris"),
+  "Portuguese Liga 2":("pt.2.json","Europe/Lisbon"),
+ })
  for previous_season in range(season-1,season-11,-1):
   for league,(file,zone) in history_leagues.items():
    try:
