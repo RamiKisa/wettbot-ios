@@ -440,7 +440,7 @@ def fixture_fallback():
     if current_date is None or current_date>now.date():
      continue
     # Ignore penalty-shootout results rather than mistaking them for match scores.
-    result=_cup_re.match(r"^\s*(?:\d{2}:\d{2}\s+)?(.+?)\s{2,}v\s+(.+?)\s{2,}(\d+)\s*[-:]\s*(\d+)",line)
+    result=_cup_re.match(r"^\s*(?:\d{2}:\d{2}\s+)?(.+?)\s{2,}v\s+(.+?)\s{2,}(\d+)\s*[-:]\s*(\d+)(.*)$",line)
     if not result or (result.group(5) or "").strip().startswith("pen."):
      continue
     home,away=result.group(1).strip(),result.group(2).strip()
