@@ -234,7 +234,7 @@ def enrich_match_research(fixtures,max_matches=None):
    fixture.setdefault("dataCoverage",{})["matchResearch"]="Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
   else:
    fixture["matchResearch"]={"h2h":[],"players":[],"updatedAt":None}
-   fixture.setdefault("dataCoverage",{})["matchResearch"]="Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+   fixture.setdefault("dataCoverage",{})["matchResearch"]="Noch keine gezielten Treffer im Cache; erneute Recherche nach Ablauf des 36-Stunden-Cache. Fehlende Treffer werden nicht als Statistik interpretiert"
 def research_cache_fresh(entry,ttl_hours):
  if not isinstance(entry,dict) or not isinstance(entry.get("items"),list): return False
  if entry.get("status")=="error":
