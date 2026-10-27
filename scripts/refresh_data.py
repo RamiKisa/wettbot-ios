@@ -132,8 +132,47 @@ def fetch_google_search(query, limit=5):
    if len(out)>=limit: break
   if out:
    return out
-  # Google HTML often serves consent/challenge pages to automated clients.
-  # Fall back to Google News RSS for the same query rather than silently returning no results.
+  # Google often serves consent/challenge pages to automated clients. Try an independent web index
+  # before falling back to news-only RSS, especially for historical H2H and player-stat research.
+  try:
+   ddg_url='https://html.duckduckgo.com/html/?'+urllib.parse.urlencode({'q':query})
+   ddg_req=urllib.request.Request(ddg_url,headers={'User-Agent':'Mozilla/5.0 RamoBet/3.6','Accept-Language':'de-DE,de;q=0.9,en;q=0.7'})
+   with urllib.request.urlopen(ddg_req,timeout=12) as resp: ddg_html=resp.read().decode('utf-8','ignore')
+   from html.parser import HTMLParser
+   class DDGParser(HTMLParser):
+    def __init__(self):
+     super().__init__(); self.items=[]; self.current=None; self.in_title=False; self.in_snippet=False
+    def handle_starttag(self,tag,attrs):
+     attrs=dict(attrs); classes=attrs.get('class','').split()
+     if tag=='a' and 'result__a' in classes:
+      self.current={'url':attrs.get('href',''),'title':'','snippet':'','source':'DuckDuckGo Search'}; self.in_title=True
+     elif self.current is not None and 'result__snippet' in classes:
+      self.in_snippet=True
+    def handle_data(self,data):
+     if self.current is None:return
+     value=data.strip()
+     if not value:return
+     if self.in_title:self.current['title']+=((' ' if self.current['title'] else '')+value)
+     elif self.in_snippet and len(self.current['snippet'])<600:self.current['snippet']+=((' ' if self.current['snippet'] else '')+value)
+    def handle_endtag(self,tag):
+     if tag=='a' and self.current is not None and self.in_title:
+      self.in_title=False
+      if self.current.get('title') and self.current.get('url','').startswith('http'):
+       self.items.append(self.current); self.current=None
+     if tag in ('a','div') and self.current is not None and self.in_snippet:self.in_snippet=False
+   ddg=DDGParser(); ddg.feed(ddg_html)
+   ddg_out=[]; seen_ddg=set()
+   for item in ddg.items:
+    if item['url'] in seen_ddg:continue
+    seen_ddg.add(item['url'])
+    item['title']=htmlmod.unescape(item['title']).strip()
+    item['snippet']=htmlmod.unescape(item['snippet']).strip()
+    ddg_out.append(item)
+    if len(ddg_out)>=limit:break
+   if ddg_out:return ddg_out
+  except Exception:
+   pass
+  # Last fallback: Google News RSS can still provide current reports when web indexes fail.
   rss_url='https://news.google.com/rss/search?'+urllib.parse.urlencode({'q':query,'hl':'de','gl':'DE','ceid':'DE:de'})
   rss_req=urllib.request.Request(rss_url,headers={'User-Agent':'Mozilla/5.0 RamoBet/3.5','Accept':'application/rss+xml, application/xml'})
   with urllib.request.urlopen(rss_req,timeout=12) as resp: raw=resp.read()
