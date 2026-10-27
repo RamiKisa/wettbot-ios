@@ -432,7 +432,7 @@ def fixture_fallback():
    current_date=None
    cup_rows=0
    for line in cup_text.splitlines():
-    header=_cup_re.match(r"^\\s{0,4}(?:[A-Z][a-z]{2})\\s+([A-Z][a-z]{2})\\s+(\\d{1,2})(?:\\s+(\\d{4}))?\\s*$",line)
+    header=_cup_re.match(r"^\s{0,4}(?:[A-Z][a-z]{2})\s+([A-Z][a-z]{2})\s+(\d{1,2})(?:\s+(\d{4}))?\s*$",line)
     if header:
      month,day,year=header.group(1),int(header.group(2)),int(header.group(3) or cup_season)
      current_date=datetime.datetime.strptime(f"{year} {month} {day}","%Y %b %d").date()
@@ -440,7 +440,7 @@ def fixture_fallback():
     if current_date is None or current_date>now.date():
      continue
     # Ignore penalty-shootout results rather than mistaking them for match scores.
-    result=_cup_re.match(r"^\\s*(?:\\d{2}:\\d{2}\\s+)?(.+?)\\s{2,}v\\s+(.+?)\\s{2,}(\\d+)\\s*[-:]\\s*(\\d+)(?:\\s+(a\\.e\\.t\\.|pen\\.).*)?\\s*$",line)
+    result=_cup_re.match(r"^\s*(?:\d{2}:\d{2}\s+)?(.+?)\s{2,}v\s+(.+?)\s{2,}(\d+)\s*[-:]\s*(\d+)(?:\s+(a\.e\.t\.|pen\.).*)?\s*$",line)
     if not result or (result.group(5) or "").strip().startswith("pen."):
      continue
     home,away=result.group(1).strip(),result.group(2).strip()
