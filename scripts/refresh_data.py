@@ -7,7 +7,7 @@ COMPETITIONS=CONFIG["competitions"]
 if len(COMPETITIONS)!=10 or len({x.get("name") for x in COMPETITIONS})!=10:
  raise SystemExit("competitions.json must contain exactly 10 uniquely named configured competitions")
 OUT=ROOT/"recommendations.json"; now=datetime.datetime.now(datetime.timezone.utc)
-TEAM_RESEARCH_CACHE={"news":{},"googleSearch":{}}; TEAM_RESEARCH_ERRORS=[]
+TEAM_RESEARCH_CACHE={"news":{},"googleSearch":{}}; MATCH_RESEARCH_CACHE={}; TEAM_RESEARCH_ERRORS=[]
 SOURCE_DIAGNOSTICS={}
 def _diag(source,status,http_success,fixtures=0,error=None,**extra):
  item={"status":status,"httpSuccess":http_success,"fixtures":int(fixtures)}
@@ -25,6 +25,7 @@ API_LEAGUE_IDS={x["name"]:x["apiFootballId"] for x in COMPETITIONS if x.get("api
 BUDGET=20; DAILY_QUOTA_RESERVE=10; used=0; API_DAILY_REMAINING=None; LAST_API_REQUEST=0.0
 def save(x):
  x.setdefault("teamResearchCache",TEAM_RESEARCH_CACHE)
+ x.setdefault("matchResearchCache",MATCH_RESEARCH_CACHE)
  x.setdefault("researchErrors",TEAM_RESEARCH_ERRORS[-100:])
  x.setdefault("researchSummary",{kind:{"teamsCached":len(items),"cachedErrors":sum(1 for v in items.values() if v.get("status")=="error")} for kind,items in TEAM_RESEARCH_CACHE.items()})
  OUT.write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding="utf-8")
@@ -143,6 +144,52 @@ def fetch_google_search(query, limit=5):
   return fallback
  except Exception:
   return None
+def match_research_key(fixture):
+ try: day=local_day(fixture.get("date",""))
+ except Exception: day=str(fixture.get("date",""))[:10]
+ return "|".join((str(fixture.get("league","")),day,normalize_team_name(fixture.get("home")),normalize_team_name(fixture.get("away"))))
+def enrich_match_research(fixtures,max_matches=12):
+ # Rotate through upcoming fixtures over repeated runs; cache by stable fixture identity.
+ upcoming=[]
+ for fixture in fixtures:
+  try:
+   kickoff=datetime.datetime.fromisoformat(str(fixture.get("date","")).replace("Z","+00:00"))
+   if kickoff.tzinfo is None: kickoff=kickoff.replace(tzinfo=datetime.timezone.utc)
+  except Exception: continue
+  if now<kickoff<=now+datetime.timedelta(days=WINDOW_DAYS):
+   key=match_research_key(fixture); entry=MATCH_RESEARCH_CACHE.get(key,{})
+   try:
+    stamp=datetime.datetime.fromisoformat(str(entry.get("updatedAt","")).replace("Z","+00:00"))
+    if stamp.tzinfo is None: stamp=stamp.replace(tzinfo=datetime.timezone.utc)
+    fresh=(now-stamp).total_seconds()<36*3600
+   except Exception: fresh=False
+   if not fresh: upcoming.append((kickoff.timestamp(),key,fixture))
+ upcoming.sort(key=lambda x:x[0])
+ selected=upcoming[:max_matches]
+ def research_one(item):
+  _,key,fixture=item; home=fixture.get("home",""); away=fixture.get("away",""); league=fixture.get("league","")
+  h2h_query='"'+home+'" "'+away+'" head to head H2H previous meetings goals yellow cards scorers'
+  player_query='"'+home+'" "'+away+'" 2026 2027 player goals assists top scorer statistics'
+  h2h=fetch_google_search(h2h_query,4)
+  players=fetch_google_search(player_query,4)
+  return key,{"h2h":h2h if isinstance(h2h,list) else [],"players":players if isinstance(players,list) else [],
+              "updatedAt":now.isoformat(),"queryTeams":[home,away],"league":league}
+ if selected:
+  with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+   futures=[executor.submit(research_one,item) for item in selected]
+   for future in concurrent.futures.as_completed(futures):
+    try:
+     key,entry=future.result(); MATCH_RESEARCH_CACHE[key]=entry
+    except Exception as exc:
+     TEAM_RESEARCH_ERRORS.append({"source":"matchResearch","error":str(exc)[:140],"at":now.isoformat()})
+ for fixture in fixtures:
+  key=match_research_key(fixture); entry=MATCH_RESEARCH_CACHE.get(key)
+  if entry:
+   fixture["matchResearch"]={"h2h":entry.get("h2h",[]),"players":entry.get("players",[]),"updatedAt":entry.get("updatedAt")}
+   fixture.setdefault("dataCoverage",{})["matchResearch"]="Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
+  else:
+   fixture["matchResearch"]={"h2h":[],"players":[],"updatedAt":None}
+   fixture.setdefault("dataCoverage",{})["matchResearch"]="Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
 def research_cache_fresh(entry,ttl_hours):
  if not isinstance(entry,dict) or not isinstance(entry.get("items"),list): return False
  if entry.get("status")=="error":
@@ -679,6 +726,7 @@ def fixture_fallback():
   f["h2h"]=sorted(h2h_unique.values(),key=lambda x:x.get("date",""))[-5:]
  enrich_team_news(all_matches,max_teams=80)
  enrich_google_team_research(all_matches,max_teams=40)
+ enrich_match_research(all_matches,max_matches=12)
  news_cache=TEAM_RESEARCH_CACHE.get("news",{})
  google_cache=TEAM_RESEARCH_CACHE.get("googleSearch",{})
  news_errors=[x for x in TEAM_RESEARCH_ERRORS if x.get("source")=="news"]
@@ -775,6 +823,10 @@ except Exception:
  previous_data={}
 # Reuse team-level research between scheduled refreshes to reduce duplicate source traffic.
 def hydrate_team_research_cache(data):
+ stored_matches=data.get("matchResearchCache") if isinstance(data.get("matchResearchCache"),dict) else {}
+ for key,entry in stored_matches.items():
+  if isinstance(key,str) and isinstance(entry,dict) and isinstance(entry.get("h2h"),list) and isinstance(entry.get("players"),list):
+   MATCH_RESEARCH_CACHE[key]=entry
  cache=data.get("teamResearchCache") if isinstance(data.get("teamResearchCache"),dict) else {}
  for kind in ("news","googleSearch"):
   stored=cache.get(kind) if isinstance(cache.get(kind),dict) else {}
