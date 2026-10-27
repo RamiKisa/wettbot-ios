@@ -701,11 +701,14 @@ def fixture_fallback():
    len(h),len(a),", ".join(sorted(set(home_sources+away_sources))) or "keine"
   )
   league_home_avg,league_away_avg=league_baselines.get(f["league"],(global_home_avg,global_away_avg))
-  h2h_model_rows=[
-   row for row in history_by_team.get(team_key(f["home"]),[])
-   if team_key(row.get("opponent"))==team_key(f["away"])
-  ]
-  h2h_model_rows=sorted(h2h_model_rows,key=lambda row:row.get("date",""))[-5:]
+  h2h_model_unique={}
+  for row in history_by_team.get(team_key(f["home"]),[]):
+   if team_key(row.get("opponent"))!=team_key(f["away"]): continue
+   row_key=(local_day(row.get("date","")),team_key(f["home"]),team_key(f["away"]),row.get("gf"),row.get("ga"),bool(row.get("teamIsHome",True)))
+   prior=h2h_model_unique.get(row_key)
+   if prior is None or row.get("historySource")=="ESPN completed scoreboard":
+    h2h_model_unique[row_key]=row
+  h2h_model_rows=sorted(h2h_model_unique.values(),key=lambda row:row.get("date",""))[-5:]
   prediction=poisson_match_model(h,a,league_home_avg,league_away_avg,h2h_model_rows)
   prediction_h2h=prediction.get("h2h",{})
   f["dataCoverage"]["h2hModel"]=(
