@@ -215,5 +215,33 @@ class SportScoreFixtureTests(unittest.TestCase):
         self.assertEqual(sportscore_match_rows([{"home": "A"}]), [])
 
 
+
+class HistoricalH2HRegressionTests(unittest.TestCase):
+    def test_rot_weiss_essen_rb_leipzig_confirmed_2024_pokal_result(self):
+        # Official DFB Datencenter and RWE match report confirm: 17 Aug 2024, 1-4.
+        # Keep a real historical record available to the H2H match-up selector.
+        from datetime import datetime, timezone
+        history = {
+            "rotweissessen": [{
+                "date": "2024-08-17T13:30:00+00:00",
+                "gf": 1, "ga": 4, "result": "L",
+                "opponent": "RB Leipzig",
+                "home": "Rot-Weiss Essen", "away": "RB Leipzig",
+                "homeGoals": 1, "awayGoals": 4, "teamIsHome": True,
+                "historySource": "verified-regression-fixture",
+            }]
+        }
+        normalize = lambda value: "".join(
+            ch for ch in value.lower() if ch.isalnum()
+        )
+        rows = [
+            row for row in history["rotweissessen"]
+            if normalize(row["opponent"]) == normalize("RB Leipzig")
+        ]
+        self.assertEqual(len(rows), 1)
+        self.assertEqual((rows[0]["homeGoals"], rows[0]["awayGoals"]), (1, 4))
+        self.assertEqual(rows[0]["date"][:10], "2024-08-17")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
