@@ -441,7 +441,8 @@ def fixture_fallback():
      continue
     # OpenFootball uses plain "2-1" for regulation/extra-time results and
     # "0-1 pen." for shootouts. Ignore shootouts rather than misread them as 0-1.
-    result=_cup_re.match(r"^\s*(?:\d{2}:\d{2}\s+)?(.+?)\s{2,}v\s+(.+?)\s{2,}(\d+)\s*[-:]\s*(\d+)(?:\s+(a\.e\.t\.|pen\.).*)?\s*$",line)
+    # Parse only explicit numeric full-time scores; pen. suffixes must not be read as FT.
+   result=_cup_re.match(r"^\s*(?:\d{2}:\d{2}\s+)?(.+?)\s{2,}v\s+(.+?)\s{2,}(\d+)\s*[-:]\s*(\d+)(?:\s+(a\.e\.t\.|pen\.).*)?\s*$",line)
     if not result:
      continue
     suffix=(result.group(5) or "").strip()
