@@ -260,7 +260,7 @@
     const res=await fetch('./competitions.json',{cache:'no-store'});
     if(!res.ok)throw Error('Wettbewerbskonfiguration HTTP '+res.status);
     const data=await res.json(),items=data.competitions;
-    if(!Array.isArray(items)||items.length!==10||new Set(items.map(x=>x.name)).size!==10||items.some(x=>!x.name||!x.espnSlug))throw Error('Ungültige Wettbewerbskonfiguration');
+    if(!Array.isArray(items)||items.length!==11||new Set(items.map(x=>x.name)).size!==11||items.some(x=>!x.name||!x.espnSlug))throw Error('Ungültige Wettbewerbskonfiguration');
     competitionsCache=items;
     return items;
   }
