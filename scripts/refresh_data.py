@@ -701,7 +701,20 @@ def fixture_fallback():
    len(h),len(a),", ".join(sorted(set(home_sources+away_sources))) or "keine"
   )
   league_home_avg,league_away_avg=league_baselines.get(f["league"],(global_home_avg,global_away_avg))
-  prediction=poisson_match_model(h,a,league_home_avg,league_away_avg)
+  h2h_model_rows=[
+   row for row in history_by_team.get(team_key(f["home"]),[])
+   if team_key(row.get("opponent"))==team_key(f["away"])
+  ]
+  h2h_model_rows=sorted(h2h_model_rows,key=lambda row:row.get("date",""))[-5:]
+  prediction=poisson_match_model(h,a,league_home_avg,league_away_avg,h2h_model_rows)
+  prediction_h2h=prediction.get("h2h",{})
+  f["dataCoverage"]["h2hModel"]=(
+   "H2H in Tor-Modell einbezogen: %s Duelle, Ø %.2f Gesamttore; Gewicht %.1f%%" % (
+    prediction_h2h.get("matchesUsed",0),prediction_h2h.get("averageTotalGoals") or 0,
+    prediction_h2h.get("modelWeightPercent",0)
+   ) if prediction_h2h.get("matchesUsed",0) else
+   "Keine belastbaren direkten Duelle in der Historie; Modell stützt sich auf aktuelle Form und Liga-Basis"
+  )
   winner_key=max(prediction["probabilities"],key=prediction["probabilities"].get)
   prediction["winner"]={"home":f["home"],"draw":"Unentschieden","away":f["away"]}[winner_key]
   prediction["winnerComment"]="Eigene Modellschätzung; keine bestätigte Buchmacher- oder API-Prognose"
