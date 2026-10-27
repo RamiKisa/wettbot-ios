@@ -177,6 +177,8 @@ def parse_openfootball_cup(text: Any, season_year: int, today: Any = None) -> li
         home, away = match.group(1).strip(), match.group(2).strip()
         if not home or not away:
             continue
+        if current_date > today:
+            continue
         key = (current_date.isoformat(), normalize_team_name(home), normalize_team_name(away), int(match.group(3)), int(match.group(4)))
         if key in seen:
             continue
