@@ -22,7 +22,21 @@ EXPECTED = [
 
 def norm(value: object) -> str:
     text = unicodedata.normalize("NFKD", str(value or "")).encode("ascii", "ignore").decode().lower()
-    return re.sub(r"[^a-z0-9]", "", text)
+    key = re.sub(r"[^a-z0-9]", "", text)
+    aliases = {
+        "sportlisboabenfica": "benfica", "slbenfica": "benfica",
+        "benficasl": "benfica", "benfica": "benfica",
+        "sportlisboabenficafutebol": "benfica",
+        "cdsantaclara": "santaclara", "santaclara": "santaclara",
+        "santaclaracd": "santaclara",
+        "fcbarcelona": "barcelona", "barcelonafc": "barcelona",
+        "bayernmunchen": "bayernmunich", "fcbayernmunchen": "bayernmunich",
+        "fcbayern": "bayernmunich", "parissaintgermain": "psg",
+        "parissaintgermainfc": "psg", "fcporto": "porto",
+        "sportingcp": "sportinglisbon", "sportingclubedeportugal": "sportinglisbon",
+        "sportinglisbon": "sportinglisbon",
+    }
+    return aliases.get(key, key)
 
 
 def parse_datetime(value: object) -> dt.datetime:
