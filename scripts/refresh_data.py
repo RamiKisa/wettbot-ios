@@ -418,9 +418,8 @@ def fixture_fallback():
  # Load historical seasons for the supported leagues plus Germany's 2. Bundesliga as
  # a history-only competition. It is not added to the app's selectable competition list,
  # but is essential when a cup opponent was recently outside the top division.
- # DFB-Pokal data are stored in a separate OpenFootball source, not in league JSON.
- # Load the prior two cup seasons into the shared history index so cup fixtures can
- # show verified cross-division form and head-to-head records.
+ # DFB-Pokal results come from a distinct public OpenFootball source, not league JSON.
+ # Load the prior two seasons into the common history index for genuine cross-division H2H.
  import re as _cup_re
  from zoneinfo import ZoneInfo
  for cup_season in range(season-1, season-3, -1):
@@ -440,8 +439,13 @@ def fixture_fallback():
      continue
     if current_date is None or current_date>now.date():
      continue
-    result=_cup_re.match(r"^\s*(?:\d{2}:\d{2}\s+)?(.+?)\s{2,}v\s+(.+?)\s{2,}(\d+)\s*[-:]\s*(\d+)\s*(?:\([^)]*\))?\s*$",line)
+    # OpenFootball uses plain "2-1" for regulation/extra-time results and
+    # "0-1 pen." for shootouts. Ignore shootouts rather than misread them as 0-1.
+    result=_cup_re.match(r"^\s*(?:\d{2}:\d{2}\s+)?(.+?)\s{2,}v\s+(.+?)\s{2,}(\d+)\s*[-:]\s*(\d+)(?:\s+(a\.e\.t\.|pen\.).*)?\s*$",line)
     if not result:
+     continue
+    suffix=(result.group(5) or "").strip()
+    if suffix.startswith("pen."):
      continue
     home,away=result.group(1).strip(),result.group(2).strip()
     hg,ag=int(result.group(3)),int(result.group(4))
@@ -451,7 +455,7 @@ def fixture_fallback():
     for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
      rows=history.setdefault(("DFB-Pokal",team),[])
      day_key=stamp[:10]
-     if not any(x.get("date","")[:10]==day_key and normalize_team_name(x.get("opponent"))==normalize_team_name(opponent) for x in rows):
+     if not any(x.get("date","")[:10]==day_key and canonical_team_name(x.get("opponent"))==canonical_team_name(opponent) for x in rows):
       rows.append({"date":stamp,"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent,"home":home,"away":away,"homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home,"historySource":"OpenFootball DFB-Pokal"})
     cup_rows+=1
    print("OpenFootball DFB-Pokal history",cup_season,cup_rows)
