@@ -638,7 +638,7 @@ def fixture_fallback():
  # Broader rolling history helps teams outside the top divisions and cup-only
  # fixtures retain recent form. This is history only; visible fixtures remain
  # restricted to the configured competitions.
- SPORTScore_HISTORY_DAYS=365
+ SPORTScore_HISTORY_DAYS=120
  for offset in range(-SPORTScore_HISTORY_DAYS,WINDOW_DAYS+1):
   sportscore_days.append(now.date()+datetime.timedelta(days=offset))
  def fetch_sportscore_safe(day):
