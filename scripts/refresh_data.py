@@ -412,7 +412,7 @@ def fixture_fallback():
   except Exception as e:
    errors.append(league+" OpenFootball: "+str(e)[:80]) # Supplement current-season results with previous-season results for a stable form baseline.
  # Load three previous seasons so H2H and team form are not limited to the current campaign.
- for previous_season in (season-1,season-2,season-3):
+ for previous_season in range(season-1,season-11,-1):
   for league,(file,zone) in leagues.items():
    try:
     previous_data=fetch_openfootball(previous_season,file)
@@ -674,6 +674,8 @@ def fixture_fallback():
  # Canonical team names before source merging; this removes ESPN/OpenFootball alias duplicates.
  import unicodedata,math
  aliases={
+   "hamburgersv":"hamburgersv","hsv":"hamburgersv","hamburgersportverein":"hamburgersv","hamburgersvfootballclub":"hamburgersv",
+   "eintrachtfrankfurt":"eintrachtfrankfurt","frankfurteintracht":"eintrachtfrankfurt","eintrachtfrankfurtammain":"eintrachtfrankfurt",
    "fcbarcelona":"barcelona","barcelonafc":"barcelona",
    "bayernmunchen":"bayernmunich","fcbayernmunchen":"bayernmunich","fcbayern":"bayernmunich",
    "fcinternazionalemilano":"intermilan","internazionalemilano":"intermilan","internazionale":"intermilan","inter":"intermilan",
