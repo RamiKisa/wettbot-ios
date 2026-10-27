@@ -752,7 +752,7 @@ def fixture_fallback():
    # Prefer precise ESPN kickoff time/source metadata when the two feeds describe the same result.
    if prior is None or row.get("historySource")=="ESPN completed scoreboard":
     combined[key]=row
-  return sorted(combined.values(),key=lambda x:x.get("date",""))[-5:]
+  return sorted(combined.values(),key=lambda x:x.get("date",""))[-10:]
  # Estimate league home/away goal baselines from unique completed matches, not duplicated team-perspective rows.
  unique_matches_by_league={}
  for (history_league,_team),rows in history.items():
@@ -823,7 +823,8 @@ def fixture_fallback():
    prior=h2h_unique.get(h2h_key)
    if prior is None or row.get("historySource")=="ESPN completed scoreboard":
     h2h_unique[h2h_key]=row
-  f["h2h"]=sorted(h2h_unique.values(),key=lambda x:x.get("date",""),reverse=True)[:5]
+  # Keep a longer history for Flashscore-style H2H browsing; the model still uses only its latest five rows.
+  f["h2h"]=sorted(h2h_unique.values(),key=lambda x:x.get("date",""),reverse=True)[:20]
  enrich_team_news(all_matches,max_teams=80)
  enrich_google_team_research(all_matches)
  enrich_match_research(all_matches)
