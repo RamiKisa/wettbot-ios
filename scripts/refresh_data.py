@@ -160,9 +160,39 @@ def research_cache_fresh(entry,ttl_hours):
   return datetime.timedelta(0)<=age<=datetime.timedelta(hours=ttl_hours)
  except Exception:
   return False
+def _normalized_search_text(value):
+ return re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",str(value or "")).encode("ascii","ignore").decode().lower())
+def _relevant_team_research(team,item,kind):
+ title=str(item.get("title") or "")
+ snippet=str(item.get("snippet") or "")
+ text_value=title+" "+snippet
+ text_key=_normalized_search_text(text_value)
+ canonical=normalize_team_name(team)
+ relevant=bool(canonical and len(canonical)>=5 and canonical in text_key)
+ if not relevant:
+  stop={"fc","cf","cd","sc","ac","as","afc","club","de","da","do","the","football"}
+  words=[_normalized_search_text(x) for x in re.findall(r"[A-Za-zÀ-ÿ0-9]+",str(team or ""))]
+  words=[x for x in words if len(x)>=4 and x not in stop]
+  title_words=set(re.findall(r"[a-z0-9]+",unicodedata.normalize("NFKD",text_value).encode("ascii","ignore").decode().lower()))
+  if words:
+   relevant=all(word in title_words for word in words)
+ if not relevant: return False
+ if kind=="news":
+  published=str(item.get("publishedAt") or "").strip()
+  if not published: return False
+  try:
+   import email.utils
+   stamp=email.utils.parsedate_to_datetime(published)
+   if stamp.tzinfo is None: stamp=stamp.replace(tzinfo=datetime.timezone.utc)
+   age=now-stamp.astimezone(datetime.timezone.utc)
+   if age < -datetime.timedelta(days=1) or age > datetime.timedelta(days=45): return False
+  except (TypeError,ValueError,OverflowError):
+   return False
+ return True
 def store_research_result(kind,team,items):
  cache=TEAM_RESEARCH_CACHE.setdefault(kind,{})
  if isinstance(items,list):
+  items=[item for item in items if isinstance(item,dict) and _relevant_team_research(team,item,kind)]
   entry={"items":items,"updatedAt":now.isoformat(),"status":"ok"}
  else:
   previous=cache.get(team,{})
