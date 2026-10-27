@@ -559,7 +559,7 @@ def fixture_fallback():
    "westhamunitedfc":"westhamunited","newcastleunitedfc":"newcastleunited","crystalpalacefc":"crystalpalace",
    "astonvillafc":"astonvilla","brightonandhovealbionfc":"brighton",
    "olympiquedemarseille":"marseille","olympiquelyonnais":"lyon","asmonaco":"monaco","lilleosc":"lille",
-   "fcfamalicao":"famalicao","sportingclube":"sportinglisbon"
+   "fcfamalicao":"famalicao","sportingclube":"sportinglisbon","sportlisboabenfica":"benfica","slbenfica":"benfica","benficasl":"benfica","benfica":"benfica","sportlisboabenficafutebol":"benfica","cdsantaclara":"santaclara","santaclara":"santaclara","santaclaracd":"santaclara"
  }
  def team_key(value):
   key=re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",str(value or "")).encode("ascii","ignore").decode().lower())
@@ -568,7 +568,7 @@ def fixture_fallback():
  for match in sorted(all_matches,key=lambda x:x.get("timestamp",0)):
   home_key=team_key(match.get("home")); away_key=team_key(match.get("away"))
   pair=tuple(sorted((home_key,away_key)))
-  key=(match.get("league"),match.get("date","")[:10],pair)
+  key=(match.get("league"),local_day(match.get("date")),pair)
   if key in seen:
    duplicate_sources[match.get("source","unknown")]+=1
    continue
@@ -630,7 +630,19 @@ def fixture_fallback():
    "Begrenzte Modellbasis: Heim %s/5 und Gast %s/5 historische Ergebnisse; Liga-Durchschnitt gleicht fehlende Werte teilweise aus" % (len(h),len(a))
   )
   f["marketCoverage"]={"1X2":"Poisson-Modell aus jüngster Teamform und Liga-Heim-/Auswärtsschnitt","overUnder":"Poisson-Torverteilung","btts":"Poisson-Torverteilung","corners":"Keine belastbare kostenlose Prognose verfügbar","cards":"Keine belastbare kostenlose Prognose verfügbar","playerProps":"Keine belastbare kostenlose Prognose verfügbar"}
-  f["h2h"]=sorted([x for x in history_by_team.get(team_key(f["home"]),[]) if team_key(x.get("opponent"))==team_key(f["away"])],key=lambda x:x.get("date",""))[-5:]
+  h2h_unique={}
+  for row in history_by_team.get(team_key(f["home"]),[]):
+   if team_key(row.get("opponent"))!=team_key(f["away"]): continue
+   row_date=row.get("date","")
+   row_home=team_key(row.get("home") or (f["home"] if row.get("teamIsHome",True) else row.get("opponent")))
+   row_away=team_key(row.get("away") or (row.get("opponent") if row.get("teamIsHome",True) else f["home"]))
+   hg=row.get("homeGoals",row.get("gf") if row.get("teamIsHome",True) else row.get("ga"))
+   ag=row.get("awayGoals",row.get("ga") if row.get("teamIsHome",True) else row.get("gf"))
+   h2h_key=(local_day(row_date),row_home,row_away,hg,ag)
+   prior=h2h_unique.get(h2h_key)
+   if prior is None or row.get("historySource")=="ESPN completed scoreboard":
+    h2h_unique[h2h_key]=row
+  f["h2h"]=sorted(h2h_unique.values(),key=lambda x:x.get("date",""))[-5:]
  enrich_team_news(all_matches,max_teams=80)
  enrich_google_team_research(all_matches,max_teams=40)
  news_cache=TEAM_RESEARCH_CACHE.get("news",{})
@@ -689,7 +701,7 @@ def normalize_team_name(value):
   "westhamunitedfc":"westhamunited","newcastleunitedfc":"newcastleunited","crystalpalacefc":"crystalpalace",
   "astonvillafc":"astonvilla","brightonandhovealbionfc":"brighton",
   "olympiquedemarseille":"marseille","olympiquelyonnais":"lyon","asmonaco":"monaco","lilleosc":"lille",
-  "fcfamalicao":"famalicao","sportingclube":"sportinglisbon"
+  "fcfamalicao":"famalicao","sportingclube":"sportinglisbon","sportlisboabenfica":"benfica","slbenfica":"benfica","benficasl":"benfica","benfica":"benfica","sportlisboabenficafutebol":"benfica","cdsantaclara":"santaclara","santaclara":"santaclara","santaclaracd":"santaclara"
  }
  return aliases.get(key,key)
 def local_day(value):
