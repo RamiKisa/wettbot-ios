@@ -91,12 +91,12 @@ class ValidateDataTests(unittest.TestCase):
         data["sourceDiagnostics"]["OpenLigaDB"] = {"status": "empty", "httpSuccess": False, "fixtures": 0}
         self.assertTrue(any("empty without a successful HTTP response" in error for error in self.run_validation(data)))
 
-    def test_rejects_source_failure_even_if_other_feeds_have_fixtures(self):
+    def_warns_on_temporary_source_failure_if_generated_dataset_is_valid(self):
         data = self.dataset()
         data["sourceDiagnostics"]["ESPN"] = {
             "status": "error", "httpSuccess": False, "fixtures": 0, "error": "HTTP 503"
         }
-        self.assertTrue(any("Source failed during run: ESPN" in error for error in self.run_validation(data)))
+        self.assertEqual(self.run_validation(data), [])
 
     def test_rejects_empty_dataset(self):
         data = self.dataset([])
