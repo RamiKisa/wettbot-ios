@@ -418,8 +418,8 @@ def fixture_fallback():
  # Load historical seasons for the supported leagues plus Germany's 2. Bundesliga as
  # a history-only competition. It is not added to the app's selectable competition list,
  # but is essential when a cup opponent was recently outside the top division.
- # DFB-Pokal results come from a distinct public OpenFootball source, not league JSON.
- # Load the prior two seasons into the common history index for genuine cross-division H2H.
+ # DFB-Pokal results come from a separate public OpenFootball source, not league JSON.
+ # Load the prior two seasons into the common history index for cross-division H2H.
  import re as _cup_re
  from zoneinfo import ZoneInfo
  for cup_season in range(season-1, season-3, -1):
@@ -432,21 +432,16 @@ def fixture_fallback():
    current_date=None
    cup_rows=0
    for line in cup_text.splitlines():
-    header=_cup_re.match(r"^\s{0,4}(?:[A-Z][a-z]{2})\s+([A-Z][a-z]{2})\s+(\d{1,2})(?:\s+(\d{4}))?\s*$",line)
+    header=_cup_re.match(r"^\\s{0,4}(?:[A-Z][a-z]{2})\\s+([A-Z][a-z]{2})\\s+(\\d{1,2})(?:\\s+(\\d{4}))?\\s*$",line)
     if header:
      month,day,year=header.group(1),int(header.group(2)),int(header.group(3) or cup_season)
      current_date=datetime.datetime.strptime(f"{year} {month} {day}","%Y %b %d").date()
      continue
     if current_date is None or current_date>now.date():
      continue
-    # OpenFootball uses plain "2-1" for regulation/extra-time results and
-    # "0-1 pen." for shootouts. Ignore shootouts rather than misread them as 0-1.
-    # Parse only explicit numeric full-time scores; pen. suffixes must not be read as FT.
-   result=_cup_re.match(r"^\s*(?:\d{2}:\d{2}\s+)?(.+?)\s{2,}v\s+(.+?)\s{2,}(\d+)\s*[-:]\s*(\d+)(?:\s+(a\.e\.t\.|pen\.).*)?\s*$",line)
-    if not result:
-     continue
-    suffix=(result.group(5) or "").strip()
-    if suffix.startswith("pen."):
+    # Ignore penalty-shootout results rather than mistaking them for match scores.
+    result=_cup_re.match(r"^\\s*(?:\\d{2}:\\d{2}\\s+)?(.+?)\\s{2,}v\\s+(.+?)\\s{2,}(\\d+)\\s*[-:]\\s*(\\d+)(?:\\s+(a\\.e\\.t\\.|pen\\.).*)?\\s*$",line)
+    if not result or (result.group(5) or "").strip().startswith("pen."):
      continue
     home,away=result.group(1).strip(),result.group(2).strip()
     hg,ag=int(result.group(3)),int(result.group(4))
