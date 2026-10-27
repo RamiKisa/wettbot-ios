@@ -39,7 +39,7 @@ jobs:
           python3 - <<'PY'
           import json, pathlib, sys
           data=json.loads(pathlib.Path("competitions.json").read_text(encoding="utf-8"))
-          expected=["Bundesliga","Serie A","Ligue 1","La Liga","Premier League","Süper Lig","Primeira Liga","Champions League","Europa League","Conference League"]
+          expected=["Bundesliga","Serie A","Ligue 1","La Liga","Premier League","Süper Lig","Primeira Liga","Champions League","Europa League","Conference League","DFB-Pokal"]
           actual=[x.get("name") for x in data.get("competitions",[])]
           if actual!=expected:
               sys.exit("Fixed competition list mismatch: "+repr(actual))
