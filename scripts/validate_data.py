@@ -110,7 +110,9 @@ def validate(data_path: pathlib.Path, config_path: pathlib.Path, require_leagues
             if status not in {"ok", "empty", "not_configured", "error"}:
                 errors.append(f"Invalid diagnostic status for {source}: {status!r}")
             if status == "error":
-                errors.append(f"Source failed during run: {source}: {item.get('error') or 'no error detail'}")
+                # Source outages are reported as degraded coverage; only malformed
+                # diagnostics or invalid generated data should block publication.
+                print(f"WARNING: source unavailable during run: {source}: {item.get('error') or 'no error detail'}")
             if status == "empty" and item.get("httpSuccess") is not True:
                 errors.append(f"{source} reported empty without a successful HTTP response")
             if status == "ok" and int(item.get("fixtures", 0)) < 0:
@@ -187,9 +189,9 @@ def validate(data_path: pathlib.Path, config_path: pathlib.Path, require_leagues
     if not isinstance(data.get("errors"), list):
         errors.append("Generated data is missing source/error list")
     elif data.get("errors"):
-        # A source outage is an actionable warning and must not be hidden by
-        # other successful feeds. Treat source errors as release-blocking.
-        errors.append("Refresh reported source errors: " + "; ".join(map(str, data["errors"][:12])))
+        # Keep source diagnostics visible without blocking a valid multi-source
+        # dataset when an optional provider is temporarily unavailable.
+        print("WARNING: refresh source errors: " + "; ".join(map(str, data["errors"][:12])))
 
     print(f"Validation summary: fixtures={len(fixtures)} leagues={len(by_league)}")
     print("Fixtures by league: " + json.dumps(dict(sorted(by_league.items())), ensure_ascii=False))
