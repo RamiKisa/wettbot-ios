@@ -6,7 +6,7 @@ import unittest
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from feed_utils import espn_completed_match_rows, full_time_score, match_rows, normalize_team_name, poisson_match_model, sportscore_match_rows
+from feed_utils import espn_completed_match_rows, full_time_score, match_rows, normalize_team_name, parse_openfootball_cup, poisson_match_model, sportscore_match_rows
 
 
 class MatchRowsTests(unittest.TestCase):
@@ -251,6 +251,37 @@ class HistoricalH2HRegressionTests(unittest.TestCase):
         self.assertEqual(model["h2h"]["matchesUsed"], 1)
         self.assertEqual(model["h2h"]["averageTotalGoals"], 5.0)
 
+
+
+
+class OpenFootballCupParserTests(unittest.TestCase):
+    def test_parses_confirmed_rwe_leipzig_and_ignores_penalty_aggregate(self):
+        source = """
+▪ Round 1
+  Sat Aug 17
+           Rot-Weiss Essen         v RB Leipzig               1-4 (1-2)
+           Würzburger Kickers      v 1899 Hoffenheim          3-5 pen. 2-2 a.e.t. (1-1, 1-1)
+           SV Wehen Wiesbaden      v 1. FSV Mainz 05          1-3 a.e.t. (1-1, 1-0)
+"""
+        rows = parse_openfootball_cup(source, 2024, today="2024-12-31")
+        self.assertEqual(len(rows), 2)
+        rwe = next(row for row in rows if row["home"] == "Rot-Weiss Essen")
+        self.assertEqual((rwe["homeGoals"], rwe["awayGoals"]), (1, 4))
+        self.assertEqual(rwe["date"], "2024-08-17")
+        aet = next(row for row in rows if row["home"] == "SV Wehen Wiesbaden")
+        self.assertEqual((aet["homeGoals"], aet["awayGoals"]), (1, 3))
+
+    def test_skips_future_matches_and_duplicate_rows(self):
+        source = """
+  Sat Aug 17
+           Rot-Weiss Essen         v RB Leipzig               1-4 (1-2)
+           Rot-Weiss Essen         v RB Leipzig               1-4 (1-2)
+  Tue Oct 27
+           Rot-Weiss Essen         v RB Leipzig               0-0
+"""
+        rows = parse_openfootball_cup(source, 2026, today="2026-10-27")
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["date"], "2026-08-17")
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
