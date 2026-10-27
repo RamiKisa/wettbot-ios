@@ -119,6 +119,78 @@ def match_rows(payload: Any) -> list[dict]:
     return []
 
 
+
+def parse_openfootball_cup(text: Any, season_year: int, today: Any = None) -> list[dict]:
+    """Parse completed DFB-Pokal rows from OpenFootball's plain-text cup archive.
+
+    The source uses date headings (e.g. 'Sat Aug 17') and scores followed by
+    optional half-time/extra-time detail. Penalty shootout aggregate scores are
+    deliberately excluded because they are not full-time goal counts.
+    """
+    import datetime
+    import re
+
+    if not isinstance(text, str):
+        return []
+    try:
+        season_year = int(season_year)
+    except (TypeError, ValueError):
+        return []
+    if today is None:
+        today = datetime.date.today()
+    elif isinstance(today, str):
+        try:
+            today = datetime.date.fromisoformat(today)
+        except ValueError:
+            return []
+    if not isinstance(today, datetime.date):
+        return []
+
+    date_pattern = re.compile(
+        r"^\s{0,4}(?:[A-Z][a-z]{2})\s+([A-Z][a-z]{2})\s+(\d{1,2})(?:\s+(\d{4}))?\s*$"
+    )
+    score_pattern = re.compile(
+        r"^\s*(?:\d{2}:\d{2}\s+)?(.+?)\s{2,}v\s+(.+?)\s{2,}(\d+)\s*[-:]\s*(\d+)(.*)$"
+    )
+    current_date = None
+    rows = []
+    seen = set()
+    for line in text.splitlines():
+        header = date_pattern.match(line)
+        if header:
+            month, day, year = header.group(1), int(header.group(2)), int(header.group(3) or season_year)
+            try:
+                current_date = datetime.datetime.strptime(
+                    f"{year} {month} {day}", "%Y %b %d"
+                ).date()
+            except ValueError:
+                current_date = None
+            continue
+        if current_date is None or current_date > today:
+            continue
+        match = score_pattern.match(line)
+        if not match:
+            continue
+        suffix = (match.group(5) or "").strip().lower()
+        if suffix.startswith("pen."):
+            continue
+        home, away = match.group(1).strip(), match.group(2).strip()
+        if not home or not away:
+            continue
+        key = (current_date.isoformat(), normalize_team_name(home), normalize_team_name(away), int(match.group(3)), int(match.group(4)))
+        if key in seen:
+            continue
+        seen.add(key)
+        rows.append({
+            "date": current_date.isoformat(),
+            "home": home,
+            "away": away,
+            "homeGoals": int(match.group(3)),
+            "awayGoals": int(match.group(4)),
+            "source": "OpenFootball DFB-Pokal",
+        })
+    return rows
+
 def full_time_score(score: Any) -> tuple[Any, Any]:
     """Return the final home/away score for object and pair-list score encodings."""
     if isinstance(score, list):
