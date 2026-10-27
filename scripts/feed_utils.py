@@ -4,6 +4,110 @@ from __future__ import annotations
 from typing import Any
 
 
+
+def normalize_team_name(value: Any) -> str:
+    """Return a deterministic canonical key for common football-team aliases.
+
+    Keep this shared by feed parsing and historical matching so an alias in one
+    provider cannot silently break form/H2H joins from another provider.
+    """
+    import re
+    import unicodedata
+
+    key = re.sub(
+        r"[^a-z0-9]",
+        "",
+        unicodedata.normalize("NFKD", str(value or "")).encode("ascii", "ignore").decode().lower(),
+    )
+    aliases = {
+        "rotweissessen": "rotweissessen",
+        "rotweissessenev": "rotweissessen",
+        "rotweissessenfussball": "rotweissessen",
+        "rotweissessenfussballverein": "rotweissessen",
+        "rotweissessen1907": "rotweissessen",
+        "rwessen": "rotweissessen",
+        "rbleipzig": "rbleipzig",
+        "rbleipzigev": "rbleipzig",
+        "rasenballsportleipzig": "rbleipzig",
+        "rasenballsportleipzigev": "rbleipzig",
+        "rasenballsportleipziggmbh": "rbleipzig",
+        "redbullleipzig": "rbleipzig",
+        "fcrbleipzig": "rbleipzig",
+        "fcbarcelona": "barcelona",
+        "barcelonafc": "barcelona",
+        "bayernmunchen": "bayernmunich",
+        "fcbayernmunchen": "bayernmunich",
+        "fcbayern": "bayernmunich",
+        "fcinternazionalemilano": "intermilan",
+        "internazionalemilano": "intermilan",
+        "internazionale": "intermilan",
+        "milan": "acmilan",
+        "acmilan": "acmilan",
+        "sscnapoli": "napoli",
+        "juventusfc": "juventus",
+        "parissaintgermain": "psg",
+        "parissaintgermainfc": "psg",
+        "galatasarayistanbul": "galatasaray",
+        "galatasaraysk": "galatasaray",
+        "fenerbahceistanbul": "fenerbahce",
+        "fenerbahcesk": "fenerbahce",
+        "besiktasistanbul": "besiktas",
+        "besiktasjk": "besiktas",
+        "fcporto": "porto",
+        "sportingcp": "sportinglisbon",
+        "sportingclubedeportugal": "sportinglisbon",
+        "sportinglisbon": "sportinglisbon",
+        "athleticclub": "athleticbilbao",
+        "athleticbilbao": "athleticbilbao",
+        "realbetisseville": "realbetis",
+        "atleticodemadrid": "atleticomadrid",
+        "realmadridcf": "realmadrid",
+        "realracingclubdesantander": "racingdesantander",
+        "arsenalfc": "arsenal",
+        "liverpoolfc": "liverpool",
+        "chelseafc": "chelsea",
+        "manchesterunitedfc": "manchesterunited",
+        "manchestercityfc": "manchestercity",
+        "tottenhamhotspurfc": "tottenhamhotspur",
+        "evertonfc": "everton",
+        "westhamunitedfc": "westhamunited",
+        "newcastleunitedfc": "newcastleunited",
+        "crystalpalacefc": "crystalpalace",
+        "astonvillafc": "astonvilla",
+        "brightonandhovealbionfc": "brighton",
+        "olympiquedemarseille": "marseille",
+        "olympiquelyonnais": "lyon",
+        "asmonaco": "monaco",
+        "lilleosc": "lille",
+        "fcfamalicao": "famalicao",
+        "sportingclube": "sportinglisbon",
+        "sportlisboabenfica": "benfica",
+        "sportlisboaebenfica": "benfica",
+        "sportlisboaebenficafutebolclube": "benfica",
+        "fcarouca": "arouca",
+        "cdnacional": "nacional",
+        "sportingclubedebraga": "braga",
+        "csmaritimo": "maritimo",
+        "omonianicosiafc": "omonianicosia",
+        "omonianicosia": "omonianicosia",
+        "slbenfica": "benfica",
+        "benficasl": "benfica",
+        "benfica": "benfica",
+        "sportlisboabenficafutebol": "benfica",
+        "cdsantaclara": "santaclara",
+        "santaclara": "santaclara",
+        "santaclaracd": "santaclara",
+    }
+    # Remove common legal suffixes before alias lookup; the original display name
+    # is retained separately in match data.
+    for suffix in ("eassociacao", "associacao", "futebolclube", "futebol", "club", "footballclub", "fc", "ev", "gmbh"):
+        if key.endswith(suffix) and len(key) > len(suffix) + 3:
+            stripped = key[:-len(suffix)]
+            if stripped in aliases:
+                key = stripped
+                break
+    return aliases.get(key, key)
+
 def match_rows(payload: Any) -> list[dict]:
     """Accept either OpenFootball's {matches: [...]} object or a top-level list."""
     if isinstance(payload, list):
