@@ -104,8 +104,9 @@ def poisson_match_model(
     away_history: list[dict],
     league_home_avg: float = 1.45,
     league_away_avg: float = 1.20,
+    h2h_history: list[dict] | None = None,
 ) -> dict:
-    """Estimate 1X2, over/under 2.5 and BTTS using recency-weighted home/away rates."""
+    """Estimate match probabilities from recent form, venue splits, league rates and direct H2H history."""
     import math
 
     def valid_rows(rows: Any) -> list[dict]:
@@ -149,6 +150,29 @@ def poisson_match_model(
     lambda_home = max(0.15, min(4.0, league_home_avg * (home_attack / league_home_avg) ** 0.55 * (away_defence / league_home_avg) ** 0.45))
     lambda_away = max(0.15, min(4.0, league_away_avg * (away_attack / league_away_avg) ** 0.55 * (home_defence / league_away_avg) ** 0.45))
 
+    # Direct H2H is a separate signal, not a replacement for current form.
+    # The caller supplies rows from the perspective of the scheduled home team.
+    h2h_rows = [row for row in (h2h_history or []) if isinstance(row, dict)]
+    h2h_totals: list[tuple[int, int]] = []
+    for row in h2h_rows[-5:]:
+        gf, ga = _score_int(row.get("gf")), _score_int(row.get("ga"))
+        if gf is None or ga is None:
+            continue
+        if row.get("teamIsHome") is False:
+            h2h_totals.append((ga, gf))
+        else:
+            h2h_totals.append((gf, ga))
+    h2h_count = len(h2h_totals)
+    h2h_avg_home = sum(x[0] for x in h2h_totals) / h2h_count if h2h_count else None
+    h2h_avg_away = sum(x[1] for x in h2h_totals) / h2h_count if h2h_count else None
+    h2h_avg_total = (sum(x[0] + x[1] for x in h2h_totals) / h2h_count) if h2h_count else None
+    # Maximum H2H blend is 30% with five valid meetings; fewer matches get less weight.
+    # This allows consistently low-scoring matchups to temper a high recent-form estimate.
+    h2h_weight = min(0.30, 0.06 * h2h_count)
+    if h2h_count:
+        lambda_home = max(0.15, min(4.0, (1 - h2h_weight) * lambda_home + h2h_weight * h2h_avg_home))
+        lambda_away = max(0.15, min(4.0, (1 - h2h_weight) * lambda_away + h2h_weight * h2h_avg_away))
+
     def poisson(lam: float, goals: int) -> float:
         return math.exp(-lam) * lam ** goals / math.factorial(goals)
 
@@ -171,7 +195,7 @@ def poisson_match_model(
                 btts += probability
     total = total or 1.0
     return {
-        "model": "Recency-weighted Poisson-Modell (Heim-/Auswärtsleistung, zur Liga gemittelt)",
+        "model": "Poisson-Modell: aktuelle Form + Heim-/Auswärtsraten + begrenzte H2H-Gewichtung",
         "probabilities": {
             "home": round(p_home / total * 100, 1),
             "draw": round(p_draw / total * 100, 1),
@@ -179,6 +203,14 @@ def poisson_match_model(
         },
         "homeGoals": round(lambda_home, 2),
         "awayGoals": round(lambda_away, 2),
+        "h2h": {
+            "matchesUsed": h2h_count,
+            "averageHomeGoals": round(h2h_avg_home, 2) if h2h_avg_home is not None else None,
+            "averageAwayGoals": round(h2h_avg_away, 2) if h2h_avg_away is not None else None,
+            "averageTotalGoals": round(h2h_avg_total, 2) if h2h_avg_total is not None else None,
+            "modelWeightPercent": round(h2h_weight * 100, 1),
+            "lowScoringPattern": bool(h2h_count >= 3 and h2h_avg_total is not None and h2h_avg_total < 2.2),
+        },
         "underOver": "Über 2,5" if over25 / total >= 0.5 else "Unter 2,5",
         "markets": {
             "over25": round(over25 / total * 100, 1),
