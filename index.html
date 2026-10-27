@@ -141,6 +141,32 @@
     #settings .card:nth-child(2){display:none!important}
     #settings #exportCsvBtn{display:none!important}
 
+
+    /* RamoBet redesign: clean light surface with red accents */
+    :root{color-scheme:light;--bg:#f4f6f9;--panel:#ffffff;--panel2:#f0f2f5;--border:#dce1e8;--text:#18202b;--muted:#667085;--accent:#d7193f;--blue:#2858a6;--red:#c51e3a;--amber:#8a5b00}
+    body{background:var(--bg);color:var(--text)}
+    .logo{background:var(--accent);color:#fff}
+    .notice{background:#fff2f4;border-color:#f2c6cf;color:#812039}
+    .tab{background:#fff;color:var(--muted)}
+    .tab.active,.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+    input,select,textarea{background:#fff;color:var(--text)}
+    .btn{background:#fff;color:var(--text)}
+    .btn.primary{background:var(--accent);color:#fff}
+    .match{background:#fff;box-shadow:0 2px 8px #18202b08}
+    .chip{background:#fce7eb;color:#922037}
+    .status{background:#edf0f4;color:#5b6573}
+    .status.good{background:#e3f5e9;color:#17643a}
+    .status.bad{background:#fde7ea;color:#a51932}
+    .status.warn{background:#fff2d8;color:#805400}
+    .stat{background:#f5f6f8}
+    .danger-note{border-color:#f0c5ce;background:#fff4f5;color:#812039}
+    .toast{background:#18202b;color:#fff}
+    .card{box-shadow:0 2px 12px #18202b08}
+    details.card{padding:0;overflow:hidden}
+    details.card>summary{padding:16px;cursor:pointer;font-weight:750;list-style-position:inside}
+    details.card[open]>summary{border-bottom:1px solid var(--border);background:#fafbfc}
+    .view .card h2{letter-spacing:-.01em}
+    @media(min-width:760px){.wrap{max-width:1120px}.analysis-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:14px}}
   </style>
 </head>
 <body>
