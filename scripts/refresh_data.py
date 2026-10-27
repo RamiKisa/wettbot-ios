@@ -1096,10 +1096,11 @@ if api_status is not None:
    if item.get("apiFootballPredictionUpdatedAt") and cache_is_fresh(item.get("apiFootballPredictionUpdatedAt"),kickoff):
     continue
    api_rows.append((kickoff.timestamp(),item,api_match))
- # Use a bounded number of individual prediction calls; all remaining fixtures retain the tested baseline model.
+ # Keep official predictions useful but reserve request capacity for injury and lineup coverage.
+ # Every fixture already has the baseline model; the API calls should broaden missing-data coverage.
  api_rows.sort(key=lambda x:x[0])
  predictions_added=0
- for _,item,api_match in api_rows[:5]:
+ for _,item,api_match in api_rows[:3]:
   if used>=BUDGET or (API_DAILY_REMAINING is not None and API_DAILY_REMAINING<=DAILY_QUOTA_RESERVE): break
   try:
    rows=api("predictions",{"fixture":api_match["fixtureId"]})
@@ -1122,7 +1123,7 @@ if api_status is not None:
   except Exception as exc:
    errors.append("API-Football prediction "+str(api_match["fixtureId"])+": "+str(exc)[:100])
    if "Run-Budget erreicht" in str(exc) or "Tagesquote geschützt" in str(exc): break
- # Injury data is reserved for the next three matches with API IDs and kickoff within 72 hours.
+ # Injury data is rotated across the next four matches with API IDs and kickoff within 72 hours.
  injuries_added=0
  injury_candidates=[]
  for item in fixtures:
@@ -1133,7 +1134,7 @@ if api_status is not None:
   if kickoff.tzinfo is None: kickoff=kickoff.replace(tzinfo=datetime.timezone.utc)
   if now<kickoff<=now+datetime.timedelta(hours=72) and not cache_is_fresh(item.get("apiFootballInjuriesUpdatedAt"),kickoff,near_hours=48):
    injury_candidates.append((kickoff.timestamp(),item))
- for _,item in sorted(injury_candidates,key=lambda x:x[0])[:3]:
+ for _,item in sorted(injury_candidates,key=lambda x:x[0])[:4]:
   if used>=BUDGET or (API_DAILY_REMAINING is not None and API_DAILY_REMAINING<=DAILY_QUOTA_RESERVE): break
   try:
    rows=api("injuries",{"fixture":item["apiFootballFixtureId"]})
@@ -1145,7 +1146,7 @@ if api_status is not None:
   except Exception as exc:
    errors.append("API-Football injuries "+str(item["apiFootballFixtureId"])+": "+str(exc)[:100])
    if "Run-Budget erreicht" in str(exc) or "Tagesquote geschützt" in str(exc): break
- # Ask for a lineup only when kickoff is near enough for official lineups to exist; at most one extra call per run.
+ # Reserve one request for a lineup when kickoff is near enough for official lineups to exist.
  lineup_candidates=[]
  for item in fixtures:
   fid=item.get("apiFootballFixtureId")
