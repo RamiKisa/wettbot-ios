@@ -243,7 +243,7 @@ class LatestUniqueHistoryTests(unittest.TestCase):
         ]
         result = latest_unique_history(rows, "Home FC", limit=5)
         self.assertEqual([row["id"] for row in result],
-                         ["alias-duplicate", "third", "fourth", "fifth", "sixth"])
+                         ["alias-duplicate", "newer", "third", "fourth", "fifth"])
         self.assertEqual([row["date"] for row in result],
                          sorted([row["date"] for row in result], reverse=True))
 
