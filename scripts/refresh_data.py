@@ -752,7 +752,7 @@ def fixture_fallback():
    # Prefer precise ESPN kickoff time/source metadata when the two feeds describe the same result.
    if prior is None or row.get("historySource")=="ESPN completed scoreboard":
     combined[key]=row
-  return sorted(combined.values(),key=lambda x:x.get("date",""))[-5:]
+  return sorted(combined.values(),key=lambda x:x.get("date",""))[-10:]
  # Estimate league home/away goal baselines from unique completed matches, not duplicated team-perspective rows.
  unique_matches_by_league={}
  for (history_league,_team),rows in history.items():
