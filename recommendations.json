@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T08:04:21.563603+00:00",
+  "generatedAt": "2026-10-27T08:05:05.979428+00:00",
   "status": "free_mode",
   "message": "Kostenloser Modus: alle zehn konfigurierten Wettbewerbe, 14-Tage-Spielplan, historische Ergebnisse aus OpenFootball/ESPN, heim-/auswärtsgewichtete Poisson-Schätzung sowie Team-News und Google-Recherche mit begrenztem Abrufbudget. API-Football-Detaildaten benötigen einen konfigurierten Schlüssel.",
   "configuredLeagues": [
@@ -15449,828 +15449,6 @@
         "teamIsHome": false
       }
     ],
-    "fccologne": [
-      {
-        "date": "2026-08-29T13:30:00+00:00",
-        "gf": 3,
-        "ga": 2,
-        "result": "W",
-        "opponent": "TSG Hoffenheim",
-        "home": "FC Cologne",
-        "away": "TSG Hoffenheim",
-        "homeGoals": 3,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-04T18:30:00+00:00",
-        "gf": 1,
-        "ga": 4,
-        "result": "L",
-        "opponent": "VfB Stuttgart",
-        "home": "VfB Stuttgart",
-        "away": "FC Cologne",
-        "homeGoals": 4,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-12T16:30:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Werder Bremen",
-        "home": "FC Cologne",
-        "away": "Werder Bremen",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-19T13:30:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Hamburg SV",
-        "home": "Hamburg SV",
-        "away": "FC Cologne",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-11T13:30:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Borussia Mönchengladbach",
-        "home": "FC Cologne",
-        "away": "Borussia Mönchengladbach",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-16T18:30:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "Eintracht Frankfurt",
-        "home": "Eintracht Frankfurt",
-        "away": "FC Cologne",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-24T13:30:00+00:00",
-        "gf": 0,
-        "ga": 0,
-        "result": "D",
-        "opponent": "Schalke 04",
-        "home": "FC Cologne",
-        "away": "Schalke 04",
-        "homeGoals": 0,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "tsghoffenheim": [
-      {
-        "date": "2026-08-29T13:30:00+00:00",
-        "gf": 2,
-        "ga": 3,
-        "result": "L",
-        "opponent": "FC Cologne",
-        "home": "FC Cologne",
-        "away": "TSG Hoffenheim",
-        "homeGoals": 3,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-05T13:30:00+00:00",
-        "gf": 2,
-        "ga": 3,
-        "result": "L",
-        "opponent": "Borussia Dortmund",
-        "home": "TSG Hoffenheim",
-        "away": "Borussia Dortmund",
-        "homeGoals": 2,
-        "awayGoals": 3,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-12T13:30:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "VfB Stuttgart",
-        "home": "TSG Hoffenheim",
-        "away": "VfB Stuttgart",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-17T16:45:00+00:00",
-        "gf": 0,
-        "ga": 2,
-        "result": "L",
-        "opponent": "OFI Crete",
-        "home": "OFI Crete",
-        "away": "TSG Hoffenheim",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-20T17:30:00+00:00",
-        "gf": 1,
-        "ga": 3,
-        "result": "L",
-        "opponent": "SC Paderborn 07",
-        "home": "SC Paderborn 07",
-        "away": "TSG Hoffenheim",
-        "homeGoals": 3,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-10T13:30:00+00:00",
-        "gf": 2,
-        "ga": 3,
-        "result": "L",
-        "opponent": "Hamburg SV",
-        "home": "TSG Hoffenheim",
-        "away": "Hamburg SV",
-        "homeGoals": 2,
-        "awayGoals": 3,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 2,
-        "ga": 3,
-        "result": "L",
-        "opponent": "Besiktas",
-        "home": "TSG Hoffenheim",
-        "away": "Besiktas",
-        "homeGoals": 2,
-        "awayGoals": 3,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-18T15:30:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Borussia Mönchengladbach",
-        "home": "Borussia Mönchengladbach",
-        "away": "TSG Hoffenheim",
-        "homeGoals": 1,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 3,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Lyon",
-        "home": "TSG Hoffenheim",
-        "away": "Lyon",
-        "homeGoals": 3,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      },
-      {
-        "date": "2026-10-25T14:30:00+00:00",
-        "gf": 3,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Bayer Leverkusen",
-        "home": "TSG Hoffenheim",
-        "away": "Bayer Leverkusen",
-        "homeGoals": 3,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "mainz": [
-      {
-        "date": "2026-08-29T13:30:00+00:00",
-        "gf": 0,
-        "ga": 0,
-        "result": "D",
-        "opponent": "SC Paderborn 07",
-        "home": "Mainz",
-        "away": "SC Paderborn 07",
-        "homeGoals": 0,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-06T13:30:00+00:00",
-        "gf": 5,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Hamburg SV",
-        "home": "Hamburg SV",
-        "away": "Mainz",
-        "homeGoals": 0,
-        "awayGoals": 5,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-12T13:30:00+00:00",
-        "gf": 1,
-        "ga": 3,
-        "result": "L",
-        "opponent": "Eintracht Frankfurt",
-        "home": "Mainz",
-        "away": "Eintracht Frankfurt",
-        "homeGoals": 1,
-        "awayGoals": 3,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-19T13:30:00+00:00",
-        "gf": 4,
-        "ga": 3,
-        "result": "W",
-        "opponent": "Borussia Mönchengladbach",
-        "home": "Borussia Mönchengladbach",
-        "away": "Mainz",
-        "homeGoals": 3,
-        "awayGoals": 4,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-10T13:30:00+00:00",
-        "gf": 3,
-        "ga": 4,
-        "result": "L",
-        "opponent": "Bayer Leverkusen",
-        "home": "Mainz",
-        "away": "Bayer Leverkusen",
-        "homeGoals": 3,
-        "awayGoals": 4,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-17T13:30:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Schalke 04",
-        "home": "Schalke 04",
-        "away": "Mainz",
-        "homeGoals": 0,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-24T13:30:00+00:00",
-        "gf": 2,
-        "ga": 3,
-        "result": "L",
-        "opponent": "Werder Bremen",
-        "home": "Mainz",
-        "away": "Werder Bremen",
-        "homeGoals": 2,
-        "awayGoals": 3,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "svelversberg": [
-      {
-        "date": "2026-08-29T13:30:00+00:00",
-        "gf": 3,
-        "ga": 2,
-        "result": "W",
-        "opponent": "Bayer Leverkusen",
-        "home": "SV Elversberg",
-        "away": "Bayer Leverkusen",
-        "homeGoals": 3,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-05T13:30:00+00:00",
-        "gf": 4,
-        "ga": 3,
-        "result": "W",
-        "opponent": "Borussia Mönchengladbach",
-        "home": "Borussia Mönchengladbach",
-        "away": "SV Elversberg",
-        "homeGoals": 3,
-        "awayGoals": 4,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-13T15:30:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Bayern Munich",
-        "home": "SV Elversberg",
-        "away": "Bayern Munich",
-        "homeGoals": 1,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-20T15:30:00+00:00",
-        "gf": 0,
-        "ga": 0,
-        "result": "D",
-        "opponent": "Schalke 04",
-        "home": "Schalke 04",
-        "away": "SV Elversberg",
-        "homeGoals": 0,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-10T13:30:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "1. FC Union Berlin",
-        "home": "1. FC Union Berlin",
-        "away": "SV Elversberg",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-17T13:30:00+00:00",
-        "gf": 4,
-        "ga": 3,
-        "result": "W",
-        "opponent": "FC Augsburg",
-        "home": "SV Elversberg",
-        "away": "FC Augsburg",
-        "homeGoals": 4,
-        "awayGoals": 3,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-24T13:30:00+00:00",
-        "gf": 0,
-        "ga": 4,
-        "result": "L",
-        "opponent": "RB Leipzig",
-        "home": "RB Leipzig",
-        "away": "SV Elversberg",
-        "homeGoals": 4,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "bayerleverkusen": [
-      {
-        "date": "2026-08-29T13:30:00+00:00",
-        "gf": 2,
-        "ga": 3,
-        "result": "L",
-        "opponent": "SV Elversberg",
-        "home": "SV Elversberg",
-        "away": "Bayer Leverkusen",
-        "homeGoals": 3,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-05T13:30:00+00:00",
-        "gf": 4,
-        "ga": 0,
-        "result": "W",
-        "opponent": "1. FC Union Berlin",
-        "home": "Bayer Leverkusen",
-        "away": "1. FC Union Berlin",
-        "homeGoals": 4,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-12T13:30:00+00:00",
-        "gf": 2,
-        "ga": 2,
-        "result": "D",
-        "opponent": "FC Augsburg",
-        "home": "FC Augsburg",
-        "away": "Bayer Leverkusen",
-        "homeGoals": 2,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-16T19:00:00+00:00",
-        "gf": 2,
-        "ga": 0,
-        "result": "W",
-        "opponent": "NK Celje",
-        "home": "Bayer Leverkusen",
-        "away": "NK Celje",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-20T13:30:00+00:00",
-        "gf": 2,
-        "ga": 0,
-        "result": "W",
-        "opponent": "RB Leipzig",
-        "home": "Bayer Leverkusen",
-        "away": "RB Leipzig",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-10T13:30:00+00:00",
-        "gf": 4,
-        "ga": 3,
-        "result": "W",
-        "opponent": "Mainz",
-        "home": "Mainz",
-        "away": "Bayer Leverkusen",
-        "homeGoals": 3,
-        "awayGoals": 4,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 4,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Lech Poznan",
-        "home": "Lech Poznan",
-        "away": "Bayer Leverkusen",
-        "homeGoals": 0,
-        "awayGoals": 4,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-18T13:30:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "SC Freiburg",
-        "home": "Bayer Leverkusen",
-        "away": "SC Freiburg",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 2,
-        "ga": 0,
-        "result": "W",
-        "opponent": "OFI Crete",
-        "home": "OFI Crete",
-        "away": "Bayer Leverkusen",
-        "homeGoals": 0,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-25T14:30:00+00:00",
-        "gf": 0,
-        "ga": 3,
-        "result": "L",
-        "opponent": "TSG Hoffenheim",
-        "home": "TSG Hoffenheim",
-        "away": "Bayer Leverkusen",
-        "homeGoals": 3,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "hamburgsv": [
-      {
-        "date": "2026-08-29T16:30:00+00:00",
-        "gf": 0,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Borussia Dortmund",
-        "home": "Borussia Dortmund",
-        "away": "Hamburg SV",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-06T13:30:00+00:00",
-        "gf": 0,
-        "ga": 5,
-        "result": "L",
-        "opponent": "Mainz",
-        "home": "Hamburg SV",
-        "away": "Mainz",
-        "homeGoals": 0,
-        "awayGoals": 5,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-13T13:30:00+00:00",
-        "gf": 0,
-        "ga": 5,
-        "result": "L",
-        "opponent": "RB Leipzig",
-        "home": "RB Leipzig",
-        "away": "Hamburg SV",
-        "homeGoals": 5,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-19T13:30:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "FC Cologne",
-        "home": "Hamburg SV",
-        "away": "FC Cologne",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-10T13:30:00+00:00",
-        "gf": 3,
-        "ga": 2,
-        "result": "W",
-        "opponent": "TSG Hoffenheim",
-        "home": "TSG Hoffenheim",
-        "away": "Hamburg SV",
-        "homeGoals": 2,
-        "awayGoals": 3,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-17T13:30:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "VfB Stuttgart",
-        "home": "Hamburg SV",
-        "away": "VfB Stuttgart",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-24T13:30:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "SC Paderborn 07",
-        "home": "SC Paderborn 07",
-        "away": "Hamburg SV",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "werderbremen": [
-      {
-        "date": "2026-08-30T13:30:00+00:00",
-        "gf": 1,
-        "ga": 4,
-        "result": "L",
-        "opponent": "SC Freiburg",
-        "home": "SC Freiburg",
-        "away": "Werder Bremen",
-        "homeGoals": 4,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-05T13:30:00+00:00",
-        "gf": 3,
-        "ga": 1,
-        "result": "W",
-        "opponent": "RB Leipzig",
-        "home": "Werder Bremen",
-        "away": "RB Leipzig",
-        "homeGoals": 3,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-12T16:30:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "FC Cologne",
-        "home": "FC Cologne",
-        "away": "Werder Bremen",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-19T13:30:00+00:00",
-        "gf": 3,
-        "ga": 2,
-        "result": "W",
-        "opponent": "FC Augsburg",
-        "home": "Werder Bremen",
-        "away": "FC Augsburg",
-        "homeGoals": 3,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-09T18:30:00+00:00",
-        "gf": 2,
-        "ga": 2,
-        "result": "D",
-        "opponent": "Borussia Dortmund",
-        "home": "Borussia Dortmund",
-        "away": "Werder Bremen",
-        "homeGoals": 2,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-17T13:30:00+00:00",
-        "gf": 2,
-        "ga": 2,
-        "result": "D",
-        "opponent": "SC Paderborn 07",
-        "home": "Werder Bremen",
-        "away": "SC Paderborn 07",
-        "homeGoals": 2,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-24T13:30:00+00:00",
-        "gf": 3,
-        "ga": 2,
-        "result": "W",
-        "opponent": "Mainz",
-        "home": "Mainz",
-        "away": "Werder Bremen",
-        "homeGoals": 2,
-        "awayGoals": 3,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "schalke04": [
-      {
-        "date": "2026-08-30T15:30:00+00:00",
-        "gf": 0,
-        "ga": 3,
-        "result": "L",
-        "opponent": "FC Augsburg",
-        "home": "FC Augsburg",
-        "away": "Schalke 04",
-        "homeGoals": 3,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-05T16:30:00+00:00",
-        "gf": 0,
-        "ga": 0,
-        "result": "D",
-        "opponent": "Bayern Munich",
-        "home": "Schalke 04",
-        "away": "Bayern Munich",
-        "homeGoals": 0,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-11T18:30:00+00:00",
-        "gf": 3,
-        "ga": 1,
-        "result": "W",
-        "opponent": "1. FC Union Berlin",
-        "home": "1. FC Union Berlin",
-        "away": "Schalke 04",
-        "homeGoals": 1,
-        "awayGoals": 3,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-09-20T15:30:00+00:00",
-        "gf": 0,
-        "ga": 0,
-        "result": "D",
-        "opponent": "SV Elversberg",
-        "home": "Schalke 04",
-        "away": "SV Elversberg",
-        "homeGoals": 0,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-11T15:30:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "SC Freiburg",
-        "home": "SC Freiburg",
-        "away": "Schalke 04",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-17T13:30:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "Mainz",
-        "home": "Schalke 04",
-        "away": "Mainz",
-        "homeGoals": 0,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-24T13:30:00+00:00",
-        "gf": 0,
-        "ga": 0,
-        "result": "D",
-        "opponent": "FC Cologne",
-        "home": "FC Cologne",
-        "away": "Schalke 04",
-        "homeGoals": 0,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
     "strasbourg": [
       {
         "date": "2026-08-21T18:45:00+00:00",
@@ -17512,6 +16690,828 @@
         "homeGoals": 3,
         "awayGoals": 0,
         "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "fccologne": [
+      {
+        "date": "2026-08-29T13:30:00+00:00",
+        "gf": 3,
+        "ga": 2,
+        "result": "W",
+        "opponent": "TSG Hoffenheim",
+        "home": "FC Cologne",
+        "away": "TSG Hoffenheim",
+        "homeGoals": 3,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-04T18:30:00+00:00",
+        "gf": 1,
+        "ga": 4,
+        "result": "L",
+        "opponent": "VfB Stuttgart",
+        "home": "VfB Stuttgart",
+        "away": "FC Cologne",
+        "homeGoals": 4,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-12T16:30:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Werder Bremen",
+        "home": "FC Cologne",
+        "away": "Werder Bremen",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-19T13:30:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Hamburg SV",
+        "home": "Hamburg SV",
+        "away": "FC Cologne",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-11T13:30:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Borussia Mönchengladbach",
+        "home": "FC Cologne",
+        "away": "Borussia Mönchengladbach",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-16T18:30:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "Eintracht Frankfurt",
+        "home": "Eintracht Frankfurt",
+        "away": "FC Cologne",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-24T13:30:00+00:00",
+        "gf": 0,
+        "ga": 0,
+        "result": "D",
+        "opponent": "Schalke 04",
+        "home": "FC Cologne",
+        "away": "Schalke 04",
+        "homeGoals": 0,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "tsghoffenheim": [
+      {
+        "date": "2026-08-29T13:30:00+00:00",
+        "gf": 2,
+        "ga": 3,
+        "result": "L",
+        "opponent": "FC Cologne",
+        "home": "FC Cologne",
+        "away": "TSG Hoffenheim",
+        "homeGoals": 3,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-05T13:30:00+00:00",
+        "gf": 2,
+        "ga": 3,
+        "result": "L",
+        "opponent": "Borussia Dortmund",
+        "home": "TSG Hoffenheim",
+        "away": "Borussia Dortmund",
+        "homeGoals": 2,
+        "awayGoals": 3,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-12T13:30:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "VfB Stuttgart",
+        "home": "TSG Hoffenheim",
+        "away": "VfB Stuttgart",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-17T16:45:00+00:00",
+        "gf": 0,
+        "ga": 2,
+        "result": "L",
+        "opponent": "OFI Crete",
+        "home": "OFI Crete",
+        "away": "TSG Hoffenheim",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-20T17:30:00+00:00",
+        "gf": 1,
+        "ga": 3,
+        "result": "L",
+        "opponent": "SC Paderborn 07",
+        "home": "SC Paderborn 07",
+        "away": "TSG Hoffenheim",
+        "homeGoals": 3,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-10T13:30:00+00:00",
+        "gf": 2,
+        "ga": 3,
+        "result": "L",
+        "opponent": "Hamburg SV",
+        "home": "TSG Hoffenheim",
+        "away": "Hamburg SV",
+        "homeGoals": 2,
+        "awayGoals": 3,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 2,
+        "ga": 3,
+        "result": "L",
+        "opponent": "Besiktas",
+        "home": "TSG Hoffenheim",
+        "away": "Besiktas",
+        "homeGoals": 2,
+        "awayGoals": 3,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-18T15:30:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Borussia Mönchengladbach",
+        "home": "Borussia Mönchengladbach",
+        "away": "TSG Hoffenheim",
+        "homeGoals": 1,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 3,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Lyon",
+        "home": "TSG Hoffenheim",
+        "away": "Lyon",
+        "homeGoals": 3,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      },
+      {
+        "date": "2026-10-25T14:30:00+00:00",
+        "gf": 3,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Bayer Leverkusen",
+        "home": "TSG Hoffenheim",
+        "away": "Bayer Leverkusen",
+        "homeGoals": 3,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "mainz": [
+      {
+        "date": "2026-08-29T13:30:00+00:00",
+        "gf": 0,
+        "ga": 0,
+        "result": "D",
+        "opponent": "SC Paderborn 07",
+        "home": "Mainz",
+        "away": "SC Paderborn 07",
+        "homeGoals": 0,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-06T13:30:00+00:00",
+        "gf": 5,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Hamburg SV",
+        "home": "Hamburg SV",
+        "away": "Mainz",
+        "homeGoals": 0,
+        "awayGoals": 5,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-12T13:30:00+00:00",
+        "gf": 1,
+        "ga": 3,
+        "result": "L",
+        "opponent": "Eintracht Frankfurt",
+        "home": "Mainz",
+        "away": "Eintracht Frankfurt",
+        "homeGoals": 1,
+        "awayGoals": 3,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-19T13:30:00+00:00",
+        "gf": 4,
+        "ga": 3,
+        "result": "W",
+        "opponent": "Borussia Mönchengladbach",
+        "home": "Borussia Mönchengladbach",
+        "away": "Mainz",
+        "homeGoals": 3,
+        "awayGoals": 4,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-10T13:30:00+00:00",
+        "gf": 3,
+        "ga": 4,
+        "result": "L",
+        "opponent": "Bayer Leverkusen",
+        "home": "Mainz",
+        "away": "Bayer Leverkusen",
+        "homeGoals": 3,
+        "awayGoals": 4,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-17T13:30:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Schalke 04",
+        "home": "Schalke 04",
+        "away": "Mainz",
+        "homeGoals": 0,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-24T13:30:00+00:00",
+        "gf": 2,
+        "ga": 3,
+        "result": "L",
+        "opponent": "Werder Bremen",
+        "home": "Mainz",
+        "away": "Werder Bremen",
+        "homeGoals": 2,
+        "awayGoals": 3,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "svelversberg": [
+      {
+        "date": "2026-08-29T13:30:00+00:00",
+        "gf": 3,
+        "ga": 2,
+        "result": "W",
+        "opponent": "Bayer Leverkusen",
+        "home": "SV Elversberg",
+        "away": "Bayer Leverkusen",
+        "homeGoals": 3,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-05T13:30:00+00:00",
+        "gf": 4,
+        "ga": 3,
+        "result": "W",
+        "opponent": "Borussia Mönchengladbach",
+        "home": "Borussia Mönchengladbach",
+        "away": "SV Elversberg",
+        "homeGoals": 3,
+        "awayGoals": 4,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-13T15:30:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Bayern Munich",
+        "home": "SV Elversberg",
+        "away": "Bayern Munich",
+        "homeGoals": 1,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-20T15:30:00+00:00",
+        "gf": 0,
+        "ga": 0,
+        "result": "D",
+        "opponent": "Schalke 04",
+        "home": "Schalke 04",
+        "away": "SV Elversberg",
+        "homeGoals": 0,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-10T13:30:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "1. FC Union Berlin",
+        "home": "1. FC Union Berlin",
+        "away": "SV Elversberg",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-17T13:30:00+00:00",
+        "gf": 4,
+        "ga": 3,
+        "result": "W",
+        "opponent": "FC Augsburg",
+        "home": "SV Elversberg",
+        "away": "FC Augsburg",
+        "homeGoals": 4,
+        "awayGoals": 3,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-24T13:30:00+00:00",
+        "gf": 0,
+        "ga": 4,
+        "result": "L",
+        "opponent": "RB Leipzig",
+        "home": "RB Leipzig",
+        "away": "SV Elversberg",
+        "homeGoals": 4,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "bayerleverkusen": [
+      {
+        "date": "2026-08-29T13:30:00+00:00",
+        "gf": 2,
+        "ga": 3,
+        "result": "L",
+        "opponent": "SV Elversberg",
+        "home": "SV Elversberg",
+        "away": "Bayer Leverkusen",
+        "homeGoals": 3,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-05T13:30:00+00:00",
+        "gf": 4,
+        "ga": 0,
+        "result": "W",
+        "opponent": "1. FC Union Berlin",
+        "home": "Bayer Leverkusen",
+        "away": "1. FC Union Berlin",
+        "homeGoals": 4,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-12T13:30:00+00:00",
+        "gf": 2,
+        "ga": 2,
+        "result": "D",
+        "opponent": "FC Augsburg",
+        "home": "FC Augsburg",
+        "away": "Bayer Leverkusen",
+        "homeGoals": 2,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-16T19:00:00+00:00",
+        "gf": 2,
+        "ga": 0,
+        "result": "W",
+        "opponent": "NK Celje",
+        "home": "Bayer Leverkusen",
+        "away": "NK Celje",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-20T13:30:00+00:00",
+        "gf": 2,
+        "ga": 0,
+        "result": "W",
+        "opponent": "RB Leipzig",
+        "home": "Bayer Leverkusen",
+        "away": "RB Leipzig",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-10T13:30:00+00:00",
+        "gf": 4,
+        "ga": 3,
+        "result": "W",
+        "opponent": "Mainz",
+        "home": "Mainz",
+        "away": "Bayer Leverkusen",
+        "homeGoals": 3,
+        "awayGoals": 4,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 4,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Lech Poznan",
+        "home": "Lech Poznan",
+        "away": "Bayer Leverkusen",
+        "homeGoals": 0,
+        "awayGoals": 4,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-18T13:30:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "SC Freiburg",
+        "home": "Bayer Leverkusen",
+        "away": "SC Freiburg",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 2,
+        "ga": 0,
+        "result": "W",
+        "opponent": "OFI Crete",
+        "home": "OFI Crete",
+        "away": "Bayer Leverkusen",
+        "homeGoals": 0,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-25T14:30:00+00:00",
+        "gf": 0,
+        "ga": 3,
+        "result": "L",
+        "opponent": "TSG Hoffenheim",
+        "home": "TSG Hoffenheim",
+        "away": "Bayer Leverkusen",
+        "homeGoals": 3,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "hamburgsv": [
+      {
+        "date": "2026-08-29T16:30:00+00:00",
+        "gf": 0,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Borussia Dortmund",
+        "home": "Borussia Dortmund",
+        "away": "Hamburg SV",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-06T13:30:00+00:00",
+        "gf": 0,
+        "ga": 5,
+        "result": "L",
+        "opponent": "Mainz",
+        "home": "Hamburg SV",
+        "away": "Mainz",
+        "homeGoals": 0,
+        "awayGoals": 5,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-13T13:30:00+00:00",
+        "gf": 0,
+        "ga": 5,
+        "result": "L",
+        "opponent": "RB Leipzig",
+        "home": "RB Leipzig",
+        "away": "Hamburg SV",
+        "homeGoals": 5,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-19T13:30:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "FC Cologne",
+        "home": "Hamburg SV",
+        "away": "FC Cologne",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-10T13:30:00+00:00",
+        "gf": 3,
+        "ga": 2,
+        "result": "W",
+        "opponent": "TSG Hoffenheim",
+        "home": "TSG Hoffenheim",
+        "away": "Hamburg SV",
+        "homeGoals": 2,
+        "awayGoals": 3,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-17T13:30:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "VfB Stuttgart",
+        "home": "Hamburg SV",
+        "away": "VfB Stuttgart",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-24T13:30:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "SC Paderborn 07",
+        "home": "SC Paderborn 07",
+        "away": "Hamburg SV",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "werderbremen": [
+      {
+        "date": "2026-08-30T13:30:00+00:00",
+        "gf": 1,
+        "ga": 4,
+        "result": "L",
+        "opponent": "SC Freiburg",
+        "home": "SC Freiburg",
+        "away": "Werder Bremen",
+        "homeGoals": 4,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-05T13:30:00+00:00",
+        "gf": 3,
+        "ga": 1,
+        "result": "W",
+        "opponent": "RB Leipzig",
+        "home": "Werder Bremen",
+        "away": "RB Leipzig",
+        "homeGoals": 3,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-12T16:30:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "FC Cologne",
+        "home": "FC Cologne",
+        "away": "Werder Bremen",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-19T13:30:00+00:00",
+        "gf": 3,
+        "ga": 2,
+        "result": "W",
+        "opponent": "FC Augsburg",
+        "home": "Werder Bremen",
+        "away": "FC Augsburg",
+        "homeGoals": 3,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-09T18:30:00+00:00",
+        "gf": 2,
+        "ga": 2,
+        "result": "D",
+        "opponent": "Borussia Dortmund",
+        "home": "Borussia Dortmund",
+        "away": "Werder Bremen",
+        "homeGoals": 2,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-17T13:30:00+00:00",
+        "gf": 2,
+        "ga": 2,
+        "result": "D",
+        "opponent": "SC Paderborn 07",
+        "home": "Werder Bremen",
+        "away": "SC Paderborn 07",
+        "homeGoals": 2,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-24T13:30:00+00:00",
+        "gf": 3,
+        "ga": 2,
+        "result": "W",
+        "opponent": "Mainz",
+        "home": "Mainz",
+        "away": "Werder Bremen",
+        "homeGoals": 2,
+        "awayGoals": 3,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "schalke04": [
+      {
+        "date": "2026-08-30T15:30:00+00:00",
+        "gf": 0,
+        "ga": 3,
+        "result": "L",
+        "opponent": "FC Augsburg",
+        "home": "FC Augsburg",
+        "away": "Schalke 04",
+        "homeGoals": 3,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-05T16:30:00+00:00",
+        "gf": 0,
+        "ga": 0,
+        "result": "D",
+        "opponent": "Bayern Munich",
+        "home": "Schalke 04",
+        "away": "Bayern Munich",
+        "homeGoals": 0,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-11T18:30:00+00:00",
+        "gf": 3,
+        "ga": 1,
+        "result": "W",
+        "opponent": "1. FC Union Berlin",
+        "home": "1. FC Union Berlin",
+        "away": "Schalke 04",
+        "homeGoals": 1,
+        "awayGoals": 3,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-09-20T15:30:00+00:00",
+        "gf": 0,
+        "ga": 0,
+        "result": "D",
+        "opponent": "SV Elversberg",
+        "home": "Schalke 04",
+        "away": "SV Elversberg",
+        "homeGoals": 0,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-11T15:30:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "SC Freiburg",
+        "home": "SC Freiburg",
+        "away": "Schalke 04",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-17T13:30:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "Mainz",
+        "home": "Schalke 04",
+        "away": "Mainz",
+        "homeGoals": 0,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-24T13:30:00+00:00",
+        "gf": 0,
+        "ga": 0,
+        "result": "D",
+        "opponent": "FC Cologne",
+        "home": "FC Cologne",
+        "away": "Schalke 04",
+        "homeGoals": 0,
+        "awayGoals": 0,
+        "teamIsHome": false,
         "historySource": "ESPN completed scoreboard"
       }
     ],
@@ -26136,6 +26136,974 @@
         "historySource": "ESPN completed scoreboard"
       }
     ],
+    "cskasofia": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "AS Monaco",
+        "home": "CSKA Sofia",
+        "away": "AS Monaco",
+        "homeGoals": 1,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 2,
+        "ga": 2,
+        "result": "D",
+        "opponent": "FC Nordsjælland",
+        "home": "FC Nordsjælland",
+        "away": "CSKA Sofia",
+        "homeGoals": 2,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 2,
+        "ga": 2,
+        "result": "D",
+        "opponent": "Nordsjaelland",
+        "home": "Nordsjaelland",
+        "away": "CSKA Sofia",
+        "homeGoals": 2,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "SportScore"
+      }
+    ],
+    "csucraiova": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Getafe",
+        "home": "CSU Craiova",
+        "away": "Getafe",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 3,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Inter D'Escaldes",
+        "home": "Inter D'Escaldes",
+        "away": "CSU Craiova",
+        "homeGoals": 1,
+        "awayGoals": 3,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "egnatia": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "FC Midtjylland",
+        "home": "Egnatia",
+        "away": "FC Midtjylland",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Midtjylland",
+        "home": "Egnatia",
+        "away": "Midtjylland",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "AGF",
+        "home": "AGF",
+        "away": "Egnatia",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "fcmidtjylland": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Egnatia",
+        "home": "Egnatia",
+        "away": "FC Midtjylland",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "Sint-Truidense",
+        "home": "FC Midtjylland",
+        "away": "Sint-Truidense",
+        "homeGoals": 0,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "fclugano": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 3,
+        "ga": 2,
+        "result": "W",
+        "opponent": "Red Star Belgrade",
+        "home": "FC Lugano",
+        "away": "Red Star Belgrade",
+        "homeGoals": 3,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 5,
+        "ga": 2,
+        "result": "W",
+        "opponent": "Getafe",
+        "home": "Getafe",
+        "away": "FC Lugano",
+        "homeGoals": 2,
+        "awayGoals": 5,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "redstarbelgrade": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 2,
+        "ga": 3,
+        "result": "L",
+        "opponent": "FC Lugano",
+        "home": "FC Lugano",
+        "away": "Red Star Belgrade",
+        "homeGoals": 3,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 2,
+        "ga": 2,
+        "result": "D",
+        "opponent": "F.C. København",
+        "home": "Red Star Belgrade",
+        "away": "F.C. København",
+        "homeGoals": 2,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "hajduksplit": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Ajax Amsterdam",
+        "home": "Hajduk Split",
+        "away": "Ajax Amsterdam",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "AFC Ajax",
+        "home": "Hajduk Split",
+        "away": "AFC Ajax",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "FC Thun",
+        "home": "FC Thun",
+        "away": "Hajduk Split",
+        "homeGoals": 0,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "ajaxamsterdam": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Hajduk Split",
+        "home": "Hajduk Split",
+        "away": "Ajax Amsterdam",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 2,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Atalanta",
+        "home": "Ajax Amsterdam",
+        "away": "Atalanta",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "kaagent": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "AGF",
+        "home": "KAA Gent",
+        "away": "AGF",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Aarhus AGF",
+        "home": "KAA Gent",
+        "away": "Aarhus AGF",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 0,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Braga",
+        "home": "Braga",
+        "away": "KAA Gent",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 0,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Sporting Braga",
+        "home": "Sporting Braga",
+        "away": "KAA Gent",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "SportScore"
+      }
+    ],
+    "agf": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "KAA Gent",
+        "home": "KAA Gent",
+        "away": "AGF",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Egnatia",
+        "home": "AGF",
+        "away": "Egnatia",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "kupskuopio": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 2,
+        "ga": 4,
+        "result": "L",
+        "opponent": "Trabzonspor",
+        "home": "KuPS Kuopio",
+        "away": "Trabzonspor",
+        "homeGoals": 2,
+        "awayGoals": 4,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 0,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Borac Banja Luka",
+        "home": "Borac Banja Luka",
+        "away": "KuPS Kuopio",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "mjallbyaif": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 2,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Inter D'Escaldes",
+        "home": "Mjällby AIF",
+        "away": "Inter D'Escaldes",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 2,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Inter Club d'Escaldes",
+        "home": "Mjallby AIF",
+        "away": "Inter Club d'Escaldes",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Iberia 1999",
+        "home": "Iberia 1999",
+        "away": "Mjällby AIF",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "FC Iberia 1999 Tbilisi",
+        "home": "FC Iberia 1999 Tbilisi",
+        "away": "Mjallby AIF",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "SportScore"
+      }
+    ],
+    "interdescaldes": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 0,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Mjällby AIF",
+        "home": "Mjällby AIF",
+        "away": "Inter D'Escaldes",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 1,
+        "ga": 3,
+        "result": "L",
+        "opponent": "CSU Craiova",
+        "home": "Inter D'Escaldes",
+        "away": "CSU Craiova",
+        "homeGoals": 1,
+        "awayGoals": 3,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "panathinaikos": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Borac Banja Luka",
+        "home": "Panathinaikos",
+        "away": "Borac Banja Luka",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      },
+      {
+        "date": "2026-10-22T14:30:00+00:00",
+        "gf": 5,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Kairat Almaty",
+        "home": "Kairat Almaty",
+        "away": "Panathinaikos",
+        "homeGoals": 1,
+        "awayGoals": 5,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T14:30:00+00:00",
+        "gf": 5,
+        "ga": 1,
+        "result": "W",
+        "opponent": "FC Kairat Almaty",
+        "home": "FC Kairat Almaty",
+        "away": "Panathinaikos",
+        "homeGoals": 1,
+        "awayGoals": 5,
+        "teamIsHome": false,
+        "historySource": "SportScore"
+      }
+    ],
+    "boracbanjaluka": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Panathinaikos",
+        "home": "Panathinaikos",
+        "away": "Borac Banja Luka",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "SportScore"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 2,
+        "ga": 0,
+        "result": "W",
+        "opponent": "KuPS Kuopio",
+        "home": "Borac Banja Luka",
+        "away": "KuPS Kuopio",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 2,
+        "ga": 0,
+        "result": "W",
+        "opponent": "KuPs",
+        "home": "Borac Banja Luka",
+        "away": "KuPs",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      }
+    ],
+    "rigafc": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Kairat Almaty",
+        "home": "Riga FC",
+        "away": "Kairat Almaty",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "FC Kairat Almaty",
+        "home": "Riga FC",
+        "away": "FC Kairat Almaty",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Pafos",
+        "home": "Pafos",
+        "away": "Riga FC",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Pafos FC",
+        "home": "Pafos FC",
+        "away": "Riga FC",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "SportScore"
+      }
+    ],
+    "kairatalmaty": [
+      {
+        "date": "2026-10-15T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Riga FC",
+        "home": "Riga FC",
+        "away": "Kairat Almaty",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T14:30:00+00:00",
+        "gf": 1,
+        "ga": 5,
+        "result": "L",
+        "opponent": "Panathinaikos",
+        "home": "Kairat Almaty",
+        "away": "Panathinaikos",
+        "homeGoals": 1,
+        "awayGoals": 5,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "pafos": [
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 1,
+        "ga": 3,
+        "result": "L",
+        "opponent": "Atalanta",
+        "home": "Atalanta",
+        "away": "Pafos",
+        "homeGoals": 3,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Riga FC",
+        "home": "Pafos",
+        "away": "Riga FC",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "kaunozalgiris": [
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 0,
+        "ga": 4,
+        "result": "L",
+        "opponent": "Brighton & Hove Albion",
+        "home": "Brighton & Hove Albion",
+        "away": "Kauno Zalgiris",
+        "homeGoals": 4,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 1,
+        "ga": 4,
+        "result": "L",
+        "opponent": "SK Brann",
+        "home": "Kauno Zalgiris",
+        "away": "SK Brann",
+        "homeGoals": 1,
+        "awayGoals": 4,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 1,
+        "ga": 4,
+        "result": "L",
+        "opponent": "Brann",
+        "home": "Kauno Zalgiris",
+        "away": "Brann",
+        "homeGoals": 1,
+        "awayGoals": 4,
+        "teamIsHome": true,
+        "historySource": "SportScore"
+      }
+    ],
+    "fckbenhavn": [
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 3,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Braga",
+        "home": "F.C. København",
+        "away": "Braga",
+        "homeGoals": 3,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 2,
+        "ga": 2,
+        "result": "D",
+        "opponent": "Red Star Belgrade",
+        "home": "Red Star Belgrade",
+        "away": "F.C. København",
+        "homeGoals": 2,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "fctwente": [
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "FC Thun",
+        "home": "FC Twente",
+        "away": "FC Thun",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 4,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Lincoln Red Imps",
+        "home": "Lincoln Red Imps",
+        "away": "FC Twente",
+        "homeGoals": 1,
+        "awayGoals": 4,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "fcthun": [
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "FC Twente",
+        "home": "FC Twente",
+        "away": "FC Thun",
+        "homeGoals": 1,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 0,
+        "ga": 1,
+        "result": "L",
+        "opponent": "Hajduk Split",
+        "home": "FC Thun",
+        "away": "Hajduk Split",
+        "homeGoals": 0,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "heartofmidlothian": [
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "FC Nordsjælland",
+        "home": "Heart of Midlothian",
+        "away": "FC Nordsjælland",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 0,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Trabzonspor",
+        "home": "Trabzonspor",
+        "away": "Heart of Midlothian",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "fcnordsjlland": [
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Heart of Midlothian",
+        "home": "Heart of Midlothian",
+        "away": "FC Nordsjælland",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 2,
+        "ga": 2,
+        "result": "D",
+        "opponent": "CSKA Sofia",
+        "home": "FC Nordsjælland",
+        "away": "CSKA Sofia",
+        "homeGoals": 2,
+        "awayGoals": 2,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "jablonec": [
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 2,
+        "ga": 3,
+        "result": "L",
+        "opponent": "SC Freiburg",
+        "home": "SC Freiburg",
+        "away": "Jablonec",
+        "homeGoals": 3,
+        "awayGoals": 2,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 0,
+        "ga": 0,
+        "result": "D",
+        "opponent": "Brighton & Hove Albion",
+        "home": "Jablonec",
+        "away": "Brighton & Hove Albion",
+        "homeGoals": 0,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "sinttruidense": [
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 2,
+        "ga": 0,
+        "result": "W",
+        "opponent": "Iberia 1999",
+        "home": "Sint-Truidense",
+        "away": "Iberia 1999",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 1,
+        "ga": 0,
+        "result": "W",
+        "opponent": "FC Midtjylland",
+        "home": "FC Midtjylland",
+        "away": "Sint-Truidense",
+        "homeGoals": 0,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "iberia1999": [
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 0,
+        "ga": 2,
+        "result": "L",
+        "opponent": "Sint-Truidense",
+        "home": "Sint-Truidense",
+        "away": "Iberia 1999",
+        "homeGoals": 2,
+        "awayGoals": 0,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 1,
+        "ga": 1,
+        "result": "D",
+        "opponent": "Mjällby AIF",
+        "home": "Iberia 1999",
+        "away": "Mjällby AIF",
+        "homeGoals": 1,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "skbrann": [
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 2,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Lincoln Red Imps",
+        "home": "SK Brann",
+        "away": "Lincoln Red Imps",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T16:45:00+00:00",
+        "gf": 4,
+        "ga": 1,
+        "result": "W",
+        "opponent": "Kauno Zalgiris",
+        "home": "Kauno Zalgiris",
+        "away": "SK Brann",
+        "homeGoals": 1,
+        "awayGoals": 4,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
+    "lincolnredimps": [
+      {
+        "date": "2026-10-15T19:00:00+00:00",
+        "gf": 1,
+        "ga": 2,
+        "result": "L",
+        "opponent": "SK Brann",
+        "home": "SK Brann",
+        "away": "Lincoln Red Imps",
+        "homeGoals": 2,
+        "awayGoals": 1,
+        "teamIsHome": false,
+        "historySource": "ESPN completed scoreboard"
+      },
+      {
+        "date": "2026-10-22T19:00:00+00:00",
+        "gf": 1,
+        "ga": 4,
+        "result": "L",
+        "opponent": "FC Twente",
+        "home": "Lincoln Red Imps",
+        "away": "FC Twente",
+        "homeGoals": 1,
+        "awayGoals": 4,
+        "teamIsHome": true,
+        "historySource": "ESPN completed scoreboard"
+      }
+    ],
     "araratarmenia": [
       {
         "date": "2026-09-16T16:45:00+00:00",
@@ -27112,974 +28080,6 @@
         "away": "Hapoel Be'er",
         "homeGoals": 4,
         "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "cskasofia": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "AS Monaco",
-        "home": "CSKA Sofia",
-        "away": "AS Monaco",
-        "homeGoals": 1,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 2,
-        "ga": 2,
-        "result": "D",
-        "opponent": "FC Nordsjælland",
-        "home": "FC Nordsjælland",
-        "away": "CSKA Sofia",
-        "homeGoals": 2,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 2,
-        "ga": 2,
-        "result": "D",
-        "opponent": "Nordsjaelland",
-        "home": "Nordsjaelland",
-        "away": "CSKA Sofia",
-        "homeGoals": 2,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "SportScore"
-      }
-    ],
-    "csucraiova": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Getafe",
-        "home": "CSU Craiova",
-        "away": "Getafe",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 3,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Inter D'Escaldes",
-        "home": "Inter D'Escaldes",
-        "away": "CSU Craiova",
-        "homeGoals": 1,
-        "awayGoals": 3,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "egnatia": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "FC Midtjylland",
-        "home": "Egnatia",
-        "away": "FC Midtjylland",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Midtjylland",
-        "home": "Egnatia",
-        "away": "Midtjylland",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "AGF",
-        "home": "AGF",
-        "away": "Egnatia",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "fcmidtjylland": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Egnatia",
-        "home": "Egnatia",
-        "away": "FC Midtjylland",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "Sint-Truidense",
-        "home": "FC Midtjylland",
-        "away": "Sint-Truidense",
-        "homeGoals": 0,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "fclugano": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 3,
-        "ga": 2,
-        "result": "W",
-        "opponent": "Red Star Belgrade",
-        "home": "FC Lugano",
-        "away": "Red Star Belgrade",
-        "homeGoals": 3,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 5,
-        "ga": 2,
-        "result": "W",
-        "opponent": "Getafe",
-        "home": "Getafe",
-        "away": "FC Lugano",
-        "homeGoals": 2,
-        "awayGoals": 5,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "redstarbelgrade": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 2,
-        "ga": 3,
-        "result": "L",
-        "opponent": "FC Lugano",
-        "home": "FC Lugano",
-        "away": "Red Star Belgrade",
-        "homeGoals": 3,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 2,
-        "ga": 2,
-        "result": "D",
-        "opponent": "F.C. København",
-        "home": "Red Star Belgrade",
-        "away": "F.C. København",
-        "homeGoals": 2,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "hajduksplit": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Ajax Amsterdam",
-        "home": "Hajduk Split",
-        "away": "Ajax Amsterdam",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "AFC Ajax",
-        "home": "Hajduk Split",
-        "away": "AFC Ajax",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "FC Thun",
-        "home": "FC Thun",
-        "away": "Hajduk Split",
-        "homeGoals": 0,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "ajaxamsterdam": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Hajduk Split",
-        "home": "Hajduk Split",
-        "away": "Ajax Amsterdam",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 2,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Atalanta",
-        "home": "Ajax Amsterdam",
-        "away": "Atalanta",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "kaagent": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "AGF",
-        "home": "KAA Gent",
-        "away": "AGF",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Aarhus AGF",
-        "home": "KAA Gent",
-        "away": "Aarhus AGF",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 0,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Braga",
-        "home": "Braga",
-        "away": "KAA Gent",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 0,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Sporting Braga",
-        "home": "Sporting Braga",
-        "away": "KAA Gent",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "SportScore"
-      }
-    ],
-    "agf": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "KAA Gent",
-        "home": "KAA Gent",
-        "away": "AGF",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Egnatia",
-        "home": "AGF",
-        "away": "Egnatia",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "kupskuopio": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 2,
-        "ga": 4,
-        "result": "L",
-        "opponent": "Trabzonspor",
-        "home": "KuPS Kuopio",
-        "away": "Trabzonspor",
-        "homeGoals": 2,
-        "awayGoals": 4,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 0,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Borac Banja Luka",
-        "home": "Borac Banja Luka",
-        "away": "KuPS Kuopio",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "mjallbyaif": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 2,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Inter D'Escaldes",
-        "home": "Mjällby AIF",
-        "away": "Inter D'Escaldes",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 2,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Inter Club d'Escaldes",
-        "home": "Mjallby AIF",
-        "away": "Inter Club d'Escaldes",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Iberia 1999",
-        "home": "Iberia 1999",
-        "away": "Mjällby AIF",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "FC Iberia 1999 Tbilisi",
-        "home": "FC Iberia 1999 Tbilisi",
-        "away": "Mjallby AIF",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "SportScore"
-      }
-    ],
-    "interdescaldes": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 0,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Mjällby AIF",
-        "home": "Mjällby AIF",
-        "away": "Inter D'Escaldes",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 1,
-        "ga": 3,
-        "result": "L",
-        "opponent": "CSU Craiova",
-        "home": "Inter D'Escaldes",
-        "away": "CSU Craiova",
-        "homeGoals": 1,
-        "awayGoals": 3,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "panathinaikos": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Borac Banja Luka",
-        "home": "Panathinaikos",
-        "away": "Borac Banja Luka",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      },
-      {
-        "date": "2026-10-22T14:30:00+00:00",
-        "gf": 5,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Kairat Almaty",
-        "home": "Kairat Almaty",
-        "away": "Panathinaikos",
-        "homeGoals": 1,
-        "awayGoals": 5,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T14:30:00+00:00",
-        "gf": 5,
-        "ga": 1,
-        "result": "W",
-        "opponent": "FC Kairat Almaty",
-        "home": "FC Kairat Almaty",
-        "away": "Panathinaikos",
-        "homeGoals": 1,
-        "awayGoals": 5,
-        "teamIsHome": false,
-        "historySource": "SportScore"
-      }
-    ],
-    "boracbanjaluka": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Panathinaikos",
-        "home": "Panathinaikos",
-        "away": "Borac Banja Luka",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "SportScore"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 2,
-        "ga": 0,
-        "result": "W",
-        "opponent": "KuPS Kuopio",
-        "home": "Borac Banja Luka",
-        "away": "KuPS Kuopio",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 2,
-        "ga": 0,
-        "result": "W",
-        "opponent": "KuPs",
-        "home": "Borac Banja Luka",
-        "away": "KuPs",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      }
-    ],
-    "rigafc": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Kairat Almaty",
-        "home": "Riga FC",
-        "away": "Kairat Almaty",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "FC Kairat Almaty",
-        "home": "Riga FC",
-        "away": "FC Kairat Almaty",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Pafos",
-        "home": "Pafos",
-        "away": "Riga FC",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Pafos FC",
-        "home": "Pafos FC",
-        "away": "Riga FC",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "SportScore"
-      }
-    ],
-    "kairatalmaty": [
-      {
-        "date": "2026-10-15T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Riga FC",
-        "home": "Riga FC",
-        "away": "Kairat Almaty",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T14:30:00+00:00",
-        "gf": 1,
-        "ga": 5,
-        "result": "L",
-        "opponent": "Panathinaikos",
-        "home": "Kairat Almaty",
-        "away": "Panathinaikos",
-        "homeGoals": 1,
-        "awayGoals": 5,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "pafos": [
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 1,
-        "ga": 3,
-        "result": "L",
-        "opponent": "Atalanta",
-        "home": "Atalanta",
-        "away": "Pafos",
-        "homeGoals": 3,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Riga FC",
-        "home": "Pafos",
-        "away": "Riga FC",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "kaunozalgiris": [
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 0,
-        "ga": 4,
-        "result": "L",
-        "opponent": "Brighton & Hove Albion",
-        "home": "Brighton & Hove Albion",
-        "away": "Kauno Zalgiris",
-        "homeGoals": 4,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 1,
-        "ga": 4,
-        "result": "L",
-        "opponent": "SK Brann",
-        "home": "Kauno Zalgiris",
-        "away": "SK Brann",
-        "homeGoals": 1,
-        "awayGoals": 4,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 1,
-        "ga": 4,
-        "result": "L",
-        "opponent": "Brann",
-        "home": "Kauno Zalgiris",
-        "away": "Brann",
-        "homeGoals": 1,
-        "awayGoals": 4,
-        "teamIsHome": true,
-        "historySource": "SportScore"
-      }
-    ],
-    "fckbenhavn": [
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 3,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Braga",
-        "home": "F.C. København",
-        "away": "Braga",
-        "homeGoals": 3,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 2,
-        "ga": 2,
-        "result": "D",
-        "opponent": "Red Star Belgrade",
-        "home": "Red Star Belgrade",
-        "away": "F.C. København",
-        "homeGoals": 2,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "fctwente": [
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "FC Thun",
-        "home": "FC Twente",
-        "away": "FC Thun",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 4,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Lincoln Red Imps",
-        "home": "Lincoln Red Imps",
-        "away": "FC Twente",
-        "homeGoals": 1,
-        "awayGoals": 4,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "fcthun": [
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "FC Twente",
-        "home": "FC Twente",
-        "away": "FC Thun",
-        "homeGoals": 1,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 0,
-        "ga": 1,
-        "result": "L",
-        "opponent": "Hajduk Split",
-        "home": "FC Thun",
-        "away": "Hajduk Split",
-        "homeGoals": 0,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "heartofmidlothian": [
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "FC Nordsjælland",
-        "home": "Heart of Midlothian",
-        "away": "FC Nordsjælland",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 0,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Trabzonspor",
-        "home": "Trabzonspor",
-        "away": "Heart of Midlothian",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "fcnordsjlland": [
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Heart of Midlothian",
-        "home": "Heart of Midlothian",
-        "away": "FC Nordsjælland",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 2,
-        "ga": 2,
-        "result": "D",
-        "opponent": "CSKA Sofia",
-        "home": "FC Nordsjælland",
-        "away": "CSKA Sofia",
-        "homeGoals": 2,
-        "awayGoals": 2,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "jablonec": [
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 2,
-        "ga": 3,
-        "result": "L",
-        "opponent": "SC Freiburg",
-        "home": "SC Freiburg",
-        "away": "Jablonec",
-        "homeGoals": 3,
-        "awayGoals": 2,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 0,
-        "ga": 0,
-        "result": "D",
-        "opponent": "Brighton & Hove Albion",
-        "home": "Jablonec",
-        "away": "Brighton & Hove Albion",
-        "homeGoals": 0,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "sinttruidense": [
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 2,
-        "ga": 0,
-        "result": "W",
-        "opponent": "Iberia 1999",
-        "home": "Sint-Truidense",
-        "away": "Iberia 1999",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 1,
-        "ga": 0,
-        "result": "W",
-        "opponent": "FC Midtjylland",
-        "home": "FC Midtjylland",
-        "away": "Sint-Truidense",
-        "homeGoals": 0,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "iberia1999": [
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 0,
-        "ga": 2,
-        "result": "L",
-        "opponent": "Sint-Truidense",
-        "home": "Sint-Truidense",
-        "away": "Iberia 1999",
-        "homeGoals": 2,
-        "awayGoals": 0,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 1,
-        "ga": 1,
-        "result": "D",
-        "opponent": "Mjällby AIF",
-        "home": "Iberia 1999",
-        "away": "Mjällby AIF",
-        "homeGoals": 1,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "skbrann": [
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 2,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Lincoln Red Imps",
-        "home": "SK Brann",
-        "away": "Lincoln Red Imps",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": true,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T16:45:00+00:00",
-        "gf": 4,
-        "ga": 1,
-        "result": "W",
-        "opponent": "Kauno Zalgiris",
-        "home": "Kauno Zalgiris",
-        "away": "SK Brann",
-        "homeGoals": 1,
-        "awayGoals": 4,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      }
-    ],
-    "lincolnredimps": [
-      {
-        "date": "2026-10-15T19:00:00+00:00",
-        "gf": 1,
-        "ga": 2,
-        "result": "L",
-        "opponent": "SK Brann",
-        "home": "SK Brann",
-        "away": "Lincoln Red Imps",
-        "homeGoals": 2,
-        "awayGoals": 1,
-        "teamIsHome": false,
-        "historySource": "ESPN completed scoreboard"
-      },
-      {
-        "date": "2026-10-22T19:00:00+00:00",
-        "gf": 1,
-        "ga": 4,
-        "result": "L",
-        "opponent": "FC Twente",
-        "home": "Lincoln Red Imps",
-        "away": "FC Twente",
-        "homeGoals": 1,
-        "awayGoals": 4,
         "teamIsHome": true,
         "historySource": "ESPN completed scoreboard"
       }
@@ -38346,7 +38346,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 4 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -38534,9 +38534,25 @@
         "away": []
       },
       "matchResearch": {
-        "h2h": [],
-        "players": [],
-        "updatedAt": null
+        "h2h": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8zZkU4ODhjOERCN1lfeFhSNHUyU0dhNEdFeEg4RndESXl2Zm9HUE9fRXJxbTNKQ01Cak4tMXpmUVZKeEZZcURHdW00dnRsQzlwek9ld3BRTzNLaXZpb0U4MkpjdXpoNjFtc3lTdFo3Y2RqWW8?oc=5",
+            "title": "Schalke 04 gegen Elversberg - live Ergebnisse, voraussichtliche Aufstellungen und H2H-Statistiken - FotMob",
+            "snippet": "Google News RSS · Sat, 04 Nov 2023 21:36:09 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 04 Nov 2023 21:36:09 GMT"
+          }
+        ],
+        "players": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1EM19mUmtfZDJYRzJJU2N4LThBQ1pjdG5wX21hQVc1UVo2QTAwYjBuZWpRTlIyd2tKMXVGbEVhN0NLaXJfY2JTT1ZUa0xHRGx0dXYxRzhMOU1FcWh5YXV6bWt6RFZWbzdPbGFmT0s4dzd3QQ?oc=5",
+            "title": "Assan Ouédraogo - FotMob",
+            "snippet": "Google News RSS · Sat, 02 Dec 2023 07:58:38 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 02 Dec 2023 07:58:38 GMT"
+          }
+        ],
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -38615,7 +38631,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -38826,8 +38842,16 @@
       },
       "matchResearch": {
         "h2h": [],
-        "players": [],
-        "updatedAt": null
+        "players": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9jeGVoeUtZbWFCeHczV2pCOVRDbUxobkxOb1FjYmdTU1RXU0Q4dVVMVE5xcGQ0d2NYaElGeUtsSVA3ZHQwakhSOS03dEpYSjdmTnVtNk9EWE83TXM?oc=5",
+            "title": "Bundesliga top scorers 2026/27: goals, assists and stats - VAVEL.com",
+            "snippet": "Google News RSS · Thu, 18 Jan 2024 13:55:33 GMT",
+            "source": "VAVEL.com",
+            "publishedAt": "Thu, 18 Jan 2024 13:55:33 GMT"
+          }
+        ],
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -38906,7 +38930,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -39108,8 +39132,16 @@
       },
       "matchResearch": {
         "h2h": [],
-        "players": [],
-        "updatedAt": null
+        "players": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MdW5VZU9KU0hQUVVqY0hjYmVZc2x1SHMySGt4RDJHMTFGNmJxeFdkdjZCM0FhTmJsM3c2WjNvWHhTZnVqaUJWdVVKNl9ZZEpFeG9ZYTUwa2hPeWsyd0RpZFUxRm53MnVLOVRBZDR0NWNRYk53eTZJ?oc=5",
+            "title": "Frauen-Bundesliga matches, tables and news 2026/2027 - FotMob",
+            "snippet": "Google News RSS · Sat, 07 Oct 2023 07:30:11 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 07 Oct 2023 07:30:11 GMT"
+          }
+        ],
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -39188,7 +39220,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -39403,8 +39435,30 @@
       },
       "matchResearch": {
         "h2h": [],
-        "players": [],
-        "updatedAt": null
+        "players": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MdW5VZU9KU0hQUVVqY0hjYmVZc2x1SHMySGt4RDJHMTFGNmJxeFdkdjZCM0FhTmJsM3c2WjNvWHhTZnVqaUJWdVVKNl9ZZEpFeG9ZYTUwa2hPeWsyd0RpZFUxRm53MnVLOVRBZDR0NWNRYk53eTZJ?oc=5",
+            "title": "Frauen-Bundesliga matches, tables and news 2026/2027 - FotMob",
+            "snippet": "Google News RSS · Sat, 07 Oct 2023 07:30:11 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 07 Oct 2023 07:30:11 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9jeGVoeUtZbWFCeHczV2pCOVRDbUxobkxOb1FjYmdTU1RXU0Q4dVVMVE5xcGQ0d2NYaElGeUtsSVA3ZHQwakhSOS03dEpYSjdmTnVtNk9EWE83TXM?oc=5",
+            "title": "Bundesliga top scorers 2026/27: goals, assists and stats - VAVEL.com",
+            "snippet": "Google News RSS · Thu, 18 Jan 2024 13:55:33 GMT",
+            "source": "VAVEL.com",
+            "publishedAt": "Thu, 18 Jan 2024 13:55:33 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1WdDdkakxqTDVTZnpvZGZvaGtXRC1UaWR0emFCdWlXY1cyS1V6MzBrYzhpNUtJZEpsVkU2UTJtUlgxSTdRN3U2VHVFdF91ZXhzUHBZX1RKN2owZjZET250QVhB?oc=5",
+            "title": "Ken Izekor - Statistiken, Karriere und Marktwert - FotMob",
+            "snippet": "Google News RSS · Sat, 23 Dec 2023 09:14:29 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 23 Dec 2023 09:14:29 GMT"
+          }
+        ],
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -39458,7 +39512,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -39670,8 +39724,37 @@
       },
       "matchResearch": {
         "h2h": [],
-        "players": [],
-        "updatedAt": null
+        "players": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5abVBaN2o1RnNZNXpEYWtjU3VZejdXUHVQdWJlZnUzNHMwbTYtaHV1X3BWYW1hWnUxM3g4d1BQUkNQLVU5NlNoNjhVd0hSdDk3b1ZBS2RSR1F5X1RGaE8tZVpFcTE3bzl4QXdZ?oc=5",
+            "title": "Julia Mickenhagen - Statistiken, Karriere und Marktwert - FotMob",
+            "snippet": "Google News RSS · Wed, 14 Feb 2024 11:27:59 GMT",
+            "source": "FotMob",
+            "publishedAt": "Wed, 14 Feb 2024 11:27:59 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE16VndIdHZsQ2lCR0J3M1pGLXA2YWo0ZXI4d29rM1YzY0tVdVpFQWhlRE5TN0U3T1pTazJLLVhnMmZsX2s5a1MwbnN4ZTJOOHp6eHBOTGNJRDM4YmNwcUQ2bHR6X3I5QnNrWUJF?oc=5",
+            "title": "Alejandro Grimaldo - FotMob",
+            "snippet": "Google News RSS · Mon, 22 Jan 2024 16:41:42 GMT",
+            "source": "FotMob",
+            "publishedAt": "Mon, 22 Jan 2024 16:41:42 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5WdWs0Vk1sRFkySHRwUndabDRaOUc5dnRIbXlKaTY1OWJ0ZzktMVZzRUVDd1ZKczJMVEpUakZYZkprNTUwWEphVldJcThFVnhNdGstWHo1MFEwRHlyZHFOaGJsdFk?oc=5",
+            "title": "Verena Wieder - Statistiken, Karriere und Marktwert - FotMob",
+            "snippet": "Google News RSS · Sat, 18 Nov 2023 17:35:25 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 18 Nov 2023 17:35:25 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE13ZEtobW9iaGdWVk9qaW1RaDZob21qRW1Fekt2ZmVaTFhWTmpUb01TaGltcEp4YUxqendjeEZ0YlFwX2l6MjFWWnl1bmtvdzBkUEwzVUFwY0FIZG8w?oc=5",
+            "title": "Arthur - FotMob",
+            "snippet": "Google News RSS · Sun, 10 Dec 2023 09:28:24 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sun, 10 Dec 2023 09:28:24 GMT"
+          }
+        ],
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -39725,7 +39808,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -39936,9 +40019,53 @@
         "away": []
       },
       "matchResearch": {
-        "h2h": [],
-        "players": [],
-        "updatedAt": null
+        "h2h": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8zZkU4ODhjOERCN1lfeFhSNHUyU0dhNEdFeEg4RndESXl2Zm9HUE9fRXJxbTNKQ01Cak4tMXpmUVZKeEZZcURHdW00dnRsQzlwek9ld3BRTzNLaXZpb0U4MkpjdXpoNjFtc3lTdFo3Y2RqWW8?oc=5",
+            "title": "Schalke 04 gegen Elversberg - live Ergebnisse, voraussichtliche Aufstellungen und H2H-Statistiken - FotMob",
+            "snippet": "Google News RSS · Sat, 04 Nov 2023 21:36:09 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 04 Nov 2023 21:36:09 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5KVlExWU51cUkwVjJ3UmpUcHdQQlFSNUJTcVhJVG80X3QweUZTMXhkTlBFU0lxUGF1MmVDVlgzenY5TElReVN0YXJiRmlraTJKQmVGNVd4V2hXX0s2dVJpN1duUGQ2T1M4eDZPRUYzeDlCdw?oc=5",
+            "title": "Augsburg vs Bayern München - live score, predicted lineups and H2H stats - FotMob",
+            "snippet": "Google News RSS · Thu, 02 Nov 2023 02:29:03 GMT",
+            "source": "FotMob",
+            "publishedAt": "Thu, 02 Nov 2023 02:29:03 GMT"
+          }
+        ],
+        "players": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4yekk1YXFTa0lKR1l3dzBkVi1mQ2lYQ2ZRRDg4ZnlCNVBONTdKeVN2X1B4dEtvd2lidlhxSGZOTkZQdzJPY05VaHRuU0lEcUVIWGlzVG9lclJyLXF3dFVB?oc=5",
+            "title": "Bundesliga stats for 2026/2027 - players and teams - FotMob",
+            "snippet": "Google News RSS · Wed, 13 Jul 2022 13:02:21 GMT",
+            "source": "FotMob",
+            "publishedAt": "Wed, 13 Jul 2022 13:02:21 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1EM19mUmtfZDJYRzJJU2N4LThBQ1pjdG5wX21hQVc1UVo2QTAwYjBuZWpRTlIyd2tKMXVGbEVhN0NLaXJfY2JTT1ZUa0xHRGx0dXYxRzhMOU1FcWh5YXV6bWt6RFZWbzdPbGFmT0s4dzd3QQ?oc=5",
+            "title": "Assan Ouédraogo - FotMob",
+            "snippet": "Google News RSS · Sat, 02 Dec 2023 07:58:38 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 02 Dec 2023 07:58:38 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9jeGVoeUtZbWFCeHczV2pCOVRDbUxobkxOb1FjYmdTU1RXU0Q4dVVMVE5xcGQ0d2NYaElGeUtsSVA3ZHQwakhSOS03dEpYSjdmTnVtNk9EWE83TXM?oc=5",
+            "title": "Bundesliga top scorers 2026/27: goals, assists and stats - VAVEL.com",
+            "snippet": "Google News RSS · Thu, 18 Jan 2024 13:55:33 GMT",
+            "source": "VAVEL.com",
+            "publishedAt": "Thu, 18 Jan 2024 13:55:33 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBCUHNKS1JMbl8xWDFhVHExRjVObFJzSC05a05RSEZNaEZjd29hUmFEN0FfelBuMTZwVWtwLTdiTmxyTFE5MnpNcjNmeDJ6UnZiU241VGVJS0hMVEpSOUJwVGtVT05wRF9YNy01cHVR?oc=5",
+            "title": "Bundesliga 2026/2027 bestbewertete Spieler, Tore, Assists und andere Statistiken - FotMob",
+            "snippet": "Google News RSS · Mon, 28 Aug 2023 15:30:14 GMT",
+            "source": "FotMob",
+            "publishedAt": "Mon, 28 Aug 2023 15:30:14 GMT"
+          }
+        ],
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -39992,7 +40119,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -40193,7 +40320,7 @@
       "matchResearch": {
         "h2h": [],
         "players": [],
-        "updatedAt": null
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -40272,7 +40399,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -40437,7 +40564,7 @@
       "matchResearch": {
         "h2h": [],
         "players": [],
-        "updatedAt": null
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -40516,7 +40643,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -40706,7 +40833,7 @@
       "matchResearch": {
         "h2h": [],
         "players": [],
-        "updatedAt": null
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -40760,7 +40887,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -40963,7 +41090,7 @@
       "matchResearch": {
         "h2h": [],
         "players": [],
-        "updatedAt": null
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -41017,7 +41144,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -41177,7 +41304,7 @@
       "matchResearch": {
         "h2h": [],
         "players": [],
-        "updatedAt": null
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -41256,7 +41383,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -41428,7 +41555,7 @@
       "matchResearch": {
         "h2h": [],
         "players": [],
-        "updatedAt": null
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -121519,7 +121646,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 4 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -121707,9 +121834,25 @@
         "away": []
       },
       "matchResearch": {
-        "h2h": [],
-        "players": [],
-        "updatedAt": null
+        "h2h": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8zZkU4ODhjOERCN1lfeFhSNHUyU0dhNEdFeEg4RndESXl2Zm9HUE9fRXJxbTNKQ01Cak4tMXpmUVZKeEZZcURHdW00dnRsQzlwek9ld3BRTzNLaXZpb0U4MkpjdXpoNjFtc3lTdFo3Y2RqWW8?oc=5",
+            "title": "Schalke 04 gegen Elversberg - live Ergebnisse, voraussichtliche Aufstellungen und H2H-Statistiken - FotMob",
+            "snippet": "Google News RSS · Sat, 04 Nov 2023 21:36:09 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 04 Nov 2023 21:36:09 GMT"
+          }
+        ],
+        "players": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1EM19mUmtfZDJYRzJJU2N4LThBQ1pjdG5wX21hQVc1UVo2QTAwYjBuZWpRTlIyd2tKMXVGbEVhN0NLaXJfY2JTT1ZUa0xHRGx0dXYxRzhMOU1FcWh5YXV6bWt6RFZWbzdPbGFmT0s4dzd3QQ?oc=5",
+            "title": "Assan Ouédraogo - FotMob",
+            "snippet": "Google News RSS · Sat, 02 Dec 2023 07:58:38 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 02 Dec 2023 07:58:38 GMT"
+          }
+        ],
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -121788,7 +121931,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -121999,8 +122142,16 @@
       },
       "matchResearch": {
         "h2h": [],
-        "players": [],
-        "updatedAt": null
+        "players": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9jeGVoeUtZbWFCeHczV2pCOVRDbUxobkxOb1FjYmdTU1RXU0Q4dVVMVE5xcGQ0d2NYaElGeUtsSVA3ZHQwakhSOS03dEpYSjdmTnVtNk9EWE83TXM?oc=5",
+            "title": "Bundesliga top scorers 2026/27: goals, assists and stats - VAVEL.com",
+            "snippet": "Google News RSS · Thu, 18 Jan 2024 13:55:33 GMT",
+            "source": "VAVEL.com",
+            "publishedAt": "Thu, 18 Jan 2024 13:55:33 GMT"
+          }
+        ],
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -122079,7 +122230,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -122281,8 +122432,16 @@
       },
       "matchResearch": {
         "h2h": [],
-        "players": [],
-        "updatedAt": null
+        "players": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MdW5VZU9KU0hQUVVqY0hjYmVZc2x1SHMySGt4RDJHMTFGNmJxeFdkdjZCM0FhTmJsM3c2WjNvWHhTZnVqaUJWdVVKNl9ZZEpFeG9ZYTUwa2hPeWsyd0RpZFUxRm53MnVLOVRBZDR0NWNRYk53eTZJ?oc=5",
+            "title": "Frauen-Bundesliga matches, tables and news 2026/2027 - FotMob",
+            "snippet": "Google News RSS · Sat, 07 Oct 2023 07:30:11 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 07 Oct 2023 07:30:11 GMT"
+          }
+        ],
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -122361,7 +122520,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -122576,8 +122735,30 @@
       },
       "matchResearch": {
         "h2h": [],
-        "players": [],
-        "updatedAt": null
+        "players": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MdW5VZU9KU0hQUVVqY0hjYmVZc2x1SHMySGt4RDJHMTFGNmJxeFdkdjZCM0FhTmJsM3c2WjNvWHhTZnVqaUJWdVVKNl9ZZEpFeG9ZYTUwa2hPeWsyd0RpZFUxRm53MnVLOVRBZDR0NWNRYk53eTZJ?oc=5",
+            "title": "Frauen-Bundesliga matches, tables and news 2026/2027 - FotMob",
+            "snippet": "Google News RSS · Sat, 07 Oct 2023 07:30:11 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 07 Oct 2023 07:30:11 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9jeGVoeUtZbWFCeHczV2pCOVRDbUxobkxOb1FjYmdTU1RXU0Q4dVVMVE5xcGQ0d2NYaElGeUtsSVA3ZHQwakhSOS03dEpYSjdmTnVtNk9EWE83TXM?oc=5",
+            "title": "Bundesliga top scorers 2026/27: goals, assists and stats - VAVEL.com",
+            "snippet": "Google News RSS · Thu, 18 Jan 2024 13:55:33 GMT",
+            "source": "VAVEL.com",
+            "publishedAt": "Thu, 18 Jan 2024 13:55:33 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1WdDdkakxqTDVTZnpvZGZvaGtXRC1UaWR0emFCdWlXY1cyS1V6MzBrYzhpNUtJZEpsVkU2UTJtUlgxSTdRN3U2VHVFdF91ZXhzUHBZX1RKN2owZjZET250QVhB?oc=5",
+            "title": "Ken Izekor - Statistiken, Karriere und Marktwert - FotMob",
+            "snippet": "Google News RSS · Sat, 23 Dec 2023 09:14:29 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 23 Dec 2023 09:14:29 GMT"
+          }
+        ],
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -122631,7 +122812,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -122843,8 +123024,37 @@
       },
       "matchResearch": {
         "h2h": [],
-        "players": [],
-        "updatedAt": null
+        "players": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5abVBaN2o1RnNZNXpEYWtjU3VZejdXUHVQdWJlZnUzNHMwbTYtaHV1X3BWYW1hWnUxM3g4d1BQUkNQLVU5NlNoNjhVd0hSdDk3b1ZBS2RSR1F5X1RGaE8tZVpFcTE3bzl4QXdZ?oc=5",
+            "title": "Julia Mickenhagen - Statistiken, Karriere und Marktwert - FotMob",
+            "snippet": "Google News RSS · Wed, 14 Feb 2024 11:27:59 GMT",
+            "source": "FotMob",
+            "publishedAt": "Wed, 14 Feb 2024 11:27:59 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE16VndIdHZsQ2lCR0J3M1pGLXA2YWo0ZXI4d29rM1YzY0tVdVpFQWhlRE5TN0U3T1pTazJLLVhnMmZsX2s5a1MwbnN4ZTJOOHp6eHBOTGNJRDM4YmNwcUQ2bHR6X3I5QnNrWUJF?oc=5",
+            "title": "Alejandro Grimaldo - FotMob",
+            "snippet": "Google News RSS · Mon, 22 Jan 2024 16:41:42 GMT",
+            "source": "FotMob",
+            "publishedAt": "Mon, 22 Jan 2024 16:41:42 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5WdWs0Vk1sRFkySHRwUndabDRaOUc5dnRIbXlKaTY1OWJ0ZzktMVZzRUVDd1ZKczJMVEpUakZYZkprNTUwWEphVldJcThFVnhNdGstWHo1MFEwRHlyZHFOaGJsdFk?oc=5",
+            "title": "Verena Wieder - Statistiken, Karriere und Marktwert - FotMob",
+            "snippet": "Google News RSS · Sat, 18 Nov 2023 17:35:25 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 18 Nov 2023 17:35:25 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE13ZEtobW9iaGdWVk9qaW1RaDZob21qRW1Fekt2ZmVaTFhWTmpUb01TaGltcEp4YUxqendjeEZ0YlFwX2l6MjFWWnl1bmtvdzBkUEwzVUFwY0FIZG8w?oc=5",
+            "title": "Arthur - FotMob",
+            "snippet": "Google News RSS · Sun, 10 Dec 2023 09:28:24 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sun, 10 Dec 2023 09:28:24 GMT"
+          }
+        ],
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -122898,7 +123108,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -123109,9 +123319,53 @@
         "away": []
       },
       "matchResearch": {
-        "h2h": [],
-        "players": [],
-        "updatedAt": null
+        "h2h": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8zZkU4ODhjOERCN1lfeFhSNHUyU0dhNEdFeEg4RndESXl2Zm9HUE9fRXJxbTNKQ01Cak4tMXpmUVZKeEZZcURHdW00dnRsQzlwek9ld3BRTzNLaXZpb0U4MkpjdXpoNjFtc3lTdFo3Y2RqWW8?oc=5",
+            "title": "Schalke 04 gegen Elversberg - live Ergebnisse, voraussichtliche Aufstellungen und H2H-Statistiken - FotMob",
+            "snippet": "Google News RSS · Sat, 04 Nov 2023 21:36:09 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 04 Nov 2023 21:36:09 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5KVlExWU51cUkwVjJ3UmpUcHdQQlFSNUJTcVhJVG80X3QweUZTMXhkTlBFU0lxUGF1MmVDVlgzenY5TElReVN0YXJiRmlraTJKQmVGNVd4V2hXX0s2dVJpN1duUGQ2T1M4eDZPRUYzeDlCdw?oc=5",
+            "title": "Augsburg vs Bayern München - live score, predicted lineups and H2H stats - FotMob",
+            "snippet": "Google News RSS · Thu, 02 Nov 2023 02:29:03 GMT",
+            "source": "FotMob",
+            "publishedAt": "Thu, 02 Nov 2023 02:29:03 GMT"
+          }
+        ],
+        "players": [
+          {
+            "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4yekk1YXFTa0lKR1l3dzBkVi1mQ2lYQ2ZRRDg4ZnlCNVBONTdKeVN2X1B4dEtvd2lidlhxSGZOTkZQdzJPY05VaHRuU0lEcUVIWGlzVG9lclJyLXF3dFVB?oc=5",
+            "title": "Bundesliga stats for 2026/2027 - players and teams - FotMob",
+            "snippet": "Google News RSS · Wed, 13 Jul 2022 13:02:21 GMT",
+            "source": "FotMob",
+            "publishedAt": "Wed, 13 Jul 2022 13:02:21 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1EM19mUmtfZDJYRzJJU2N4LThBQ1pjdG5wX21hQVc1UVo2QTAwYjBuZWpRTlIyd2tKMXVGbEVhN0NLaXJfY2JTT1ZUa0xHRGx0dXYxRzhMOU1FcWh5YXV6bWt6RFZWbzdPbGFmT0s4dzd3QQ?oc=5",
+            "title": "Assan Ouédraogo - FotMob",
+            "snippet": "Google News RSS · Sat, 02 Dec 2023 07:58:38 GMT",
+            "source": "FotMob",
+            "publishedAt": "Sat, 02 Dec 2023 07:58:38 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9jeGVoeUtZbWFCeHczV2pCOVRDbUxobkxOb1FjYmdTU1RXU0Q4dVVMVE5xcGQ0d2NYaElGeUtsSVA3ZHQwakhSOS03dEpYSjdmTnVtNk9EWE83TXM?oc=5",
+            "title": "Bundesliga top scorers 2026/27: goals, assists and stats - VAVEL.com",
+            "snippet": "Google News RSS · Thu, 18 Jan 2024 13:55:33 GMT",
+            "source": "VAVEL.com",
+            "publishedAt": "Thu, 18 Jan 2024 13:55:33 GMT"
+          },
+          {
+            "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBCUHNKS1JMbl8xWDFhVHExRjVObFJzSC05a05RSEZNaEZjd29hUmFEN0FfelBuMTZwVWtwLTdiTmxyTFE5MnpNcjNmeDJ6UnZiU241VGVJS0hMVEpSOUJwVGtVT05wRF9YNy01cHVR?oc=5",
+            "title": "Bundesliga 2026/2027 bestbewertete Spieler, Tore, Assists und andere Statistiken - FotMob",
+            "snippet": "Google News RSS · Mon, 28 Aug 2023 15:30:14 GMT",
+            "source": "FotMob",
+            "publishedAt": "Mon, 28 Aug 2023 15:30:14 GMT"
+          }
+        ],
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -123165,7 +123419,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -123366,7 +123620,7 @@
       "matchResearch": {
         "h2h": [],
         "players": [],
-        "updatedAt": null
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -123445,7 +123699,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -123610,7 +123864,7 @@
       "matchResearch": {
         "h2h": [],
         "players": [],
-        "updatedAt": null
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -123689,7 +123943,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -123879,7 +124133,7 @@
       "matchResearch": {
         "h2h": [],
         "players": [],
-        "updatedAt": null
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -123933,7 +124187,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -124136,7 +124390,7 @@
       "matchResearch": {
         "h2h": [],
         "players": [],
-        "updatedAt": null
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -124190,7 +124444,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -124350,7 +124604,7 @@
       "matchResearch": {
         "h2h": [],
         "players": [],
-        "updatedAt": null
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -124429,7 +124683,7 @@
         "prediction": "Recency-weighted Poisson-Modell mit Heim-/Auswärtsraten; Heim 5 Historien, Gast 5 Historien; nicht extern validiert",
         "teamNews": "Google News RSS (Treffer sind Hinweise, keine automatisch bestätigten Ausfälle)",
         "googleResearch": "Google-Suchergebnisse aus frischem Team-Cache (Links/Snippets, keine bestätigten Statistiken)",
-        "matchResearch": "Noch keine gezielte Recherche für dieses Spiel; wird über aufeinanderfolgende Aktualisierungen ergänzt"
+        "matchResearch": "Google-Recherche zu H2H-Spielern und Tor-/Assist-Statistiken; Links/Snippets, keine bestätigte Ereignisstatistik"
       },
       "form": {
         "home": [
@@ -124601,7 +124855,7 @@
       "matchResearch": {
         "h2h": [],
         "players": [],
-        "updatedAt": null
+        "updatedAt": "2026-10-27T08:05:05.979428+00:00"
       }
     },
     {
@@ -210188,6 +210442,253 @@
         "SC Paderborn 07"
       ],
       "league": "Bundesliga"
+    },
+    "Bundesliga|2026-10-31|svwerderbremen|tsg1899hoffenheim": {
+      "h2h": [],
+      "players": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MdW5VZU9KU0hQUVVqY0hjYmVZc2x1SHMySGt4RDJHMTFGNmJxeFdkdjZCM0FhTmJsM3c2WjNvWHhTZnVqaUJWdVVKNl9ZZEpFeG9ZYTUwa2hPeWsyd0RpZFUxRm53MnVLOVRBZDR0NWNRYk53eTZJ?oc=5",
+          "title": "Frauen-Bundesliga matches, tables and news 2026/2027 - FotMob",
+          "snippet": "Google News RSS · Sat, 07 Oct 2023 07:30:11 GMT",
+          "source": "FotMob",
+          "publishedAt": "Sat, 07 Oct 2023 07:30:11 GMT"
+        }
+      ],
+      "updatedAt": "2026-10-27T08:05:05.979428+00:00",
+      "queryTeams": [
+        "SV Werder Bremen",
+        "TSG 1899 Hoffenheim"
+      ],
+      "league": "Bundesliga"
+    },
+    "Bundesliga|2026-10-31|fcschalke04|rbleipzig": {
+      "h2h": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8zZkU4ODhjOERCN1lfeFhSNHUyU0dhNEdFeEg4RndESXl2Zm9HUE9fRXJxbTNKQ01Cak4tMXpmUVZKeEZZcURHdW00dnRsQzlwek9ld3BRTzNLaXZpb0U4MkpjdXpoNjFtc3lTdFo3Y2RqWW8?oc=5",
+          "title": "Schalke 04 gegen Elversberg - live Ergebnisse, voraussichtliche Aufstellungen und H2H-Statistiken - FotMob",
+          "snippet": "Google News RSS · Sat, 04 Nov 2023 21:36:09 GMT",
+          "source": "FotMob",
+          "publishedAt": "Sat, 04 Nov 2023 21:36:09 GMT"
+        }
+      ],
+      "players": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1EM19mUmtfZDJYRzJJU2N4LThBQ1pjdG5wX21hQVc1UVo2QTAwYjBuZWpRTlIyd2tKMXVGbEVhN0NLaXJfY2JTT1ZUa0xHRGx0dXYxRzhMOU1FcWh5YXV6bWt6RFZWbzdPbGFmT0s4dzd3QQ?oc=5",
+          "title": "Assan Ouédraogo - FotMob",
+          "snippet": "Google News RSS · Sat, 02 Dec 2023 07:58:38 GMT",
+          "source": "FotMob",
+          "publishedAt": "Sat, 02 Dec 2023 07:58:38 GMT"
+        }
+      ],
+      "updatedAt": "2026-10-27T08:05:05.979428+00:00",
+      "queryTeams": [
+        "FC Schalke 04",
+        "RB Leipzig"
+      ],
+      "league": "Bundesliga"
+    },
+    "Bundesliga|2026-10-31|bayer04leverkusen|vfbstuttgart": {
+      "h2h": [],
+      "players": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MdW5VZU9KU0hQUVVqY0hjYmVZc2x1SHMySGt4RDJHMTFGNmJxeFdkdjZCM0FhTmJsM3c2WjNvWHhTZnVqaUJWdVVKNl9ZZEpFeG9ZYTUwa2hPeWsyd0RpZFUxRm53MnVLOVRBZDR0NWNRYk53eTZJ?oc=5",
+          "title": "Frauen-Bundesliga matches, tables and news 2026/2027 - FotMob",
+          "snippet": "Google News RSS · Sat, 07 Oct 2023 07:30:11 GMT",
+          "source": "FotMob",
+          "publishedAt": "Sat, 07 Oct 2023 07:30:11 GMT"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9jeGVoeUtZbWFCeHczV2pCOVRDbUxobkxOb1FjYmdTU1RXU0Q4dVVMVE5xcGQ0d2NYaElGeUtsSVA3ZHQwakhSOS03dEpYSjdmTnVtNk9EWE83TXM?oc=5",
+          "title": "Bundesliga top scorers 2026/27: goals, assists and stats - VAVEL.com",
+          "snippet": "Google News RSS · Thu, 18 Jan 2024 13:55:33 GMT",
+          "source": "VAVEL.com",
+          "publishedAt": "Thu, 18 Jan 2024 13:55:33 GMT"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1WdDdkakxqTDVTZnpvZGZvaGtXRC1UaWR0emFCdWlXY1cyS1V6MzBrYzhpNUtJZEpsVkU2UTJtUlgxSTdRN3U2VHVFdF91ZXhzUHBZX1RKN2owZjZET250QVhB?oc=5",
+          "title": "Ken Izekor - Statistiken, Karriere und Marktwert - FotMob",
+          "snippet": "Google News RSS · Sat, 23 Dec 2023 09:14:29 GMT",
+          "source": "FotMob",
+          "publishedAt": "Sat, 23 Dec 2023 09:14:29 GMT"
+        }
+      ],
+      "updatedAt": "2026-10-27T08:05:05.979428+00:00",
+      "queryTeams": [
+        "Bayer 04 Leverkusen",
+        "VfB Stuttgart"
+      ],
+      "league": "Bundesliga"
+    },
+    "Bundesliga|2026-10-31|fcaugsburg|scfreiburg": {
+      "h2h": [],
+      "players": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9jeGVoeUtZbWFCeHczV2pCOVRDbUxobkxOb1FjYmdTU1RXU0Q4dVVMVE5xcGQ0d2NYaElGeUtsSVA3ZHQwakhSOS03dEpYSjdmTnVtNk9EWE83TXM?oc=5",
+          "title": "Bundesliga top scorers 2026/27: goals, assists and stats - VAVEL.com",
+          "snippet": "Google News RSS · Thu, 18 Jan 2024 13:55:33 GMT",
+          "source": "VAVEL.com",
+          "publishedAt": "Thu, 18 Jan 2024 13:55:33 GMT"
+        }
+      ],
+      "updatedAt": "2026-10-27T08:05:05.979428+00:00",
+      "queryTeams": [
+        "FC Augsburg",
+        "SC Freiburg"
+      ],
+      "league": "Bundesliga"
+    },
+    "Bundesliga|2026-10-31|bayerleverkusen|vfbstuttgart": {
+      "h2h": [],
+      "players": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5abVBaN2o1RnNZNXpEYWtjU3VZejdXUHVQdWJlZnUzNHMwbTYtaHV1X3BWYW1hWnUxM3g4d1BQUkNQLVU5NlNoNjhVd0hSdDk3b1ZBS2RSR1F5X1RGaE8tZVpFcTE3bzl4QXdZ?oc=5",
+          "title": "Julia Mickenhagen - Statistiken, Karriere und Marktwert - FotMob",
+          "snippet": "Google News RSS · Wed, 14 Feb 2024 11:27:59 GMT",
+          "source": "FotMob",
+          "publishedAt": "Wed, 14 Feb 2024 11:27:59 GMT"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE16VndIdHZsQ2lCR0J3M1pGLXA2YWo0ZXI4d29rM1YzY0tVdVpFQWhlRE5TN0U3T1pTazJLLVhnMmZsX2s5a1MwbnN4ZTJOOHp6eHBOTGNJRDM4YmNwcUQ2bHR6X3I5QnNrWUJF?oc=5",
+          "title": "Alejandro Grimaldo - FotMob",
+          "snippet": "Google News RSS · Mon, 22 Jan 2024 16:41:42 GMT",
+          "source": "FotMob",
+          "publishedAt": "Mon, 22 Jan 2024 16:41:42 GMT"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5WdWs0Vk1sRFkySHRwUndabDRaOUc5dnRIbXlKaTY1OWJ0ZzktMVZzRUVDd1ZKczJMVEpUakZYZkprNTUwWEphVldJcThFVnhNdGstWHo1MFEwRHlyZHFOaGJsdFk?oc=5",
+          "title": "Verena Wieder - Statistiken, Karriere und Marktwert - FotMob",
+          "snippet": "Google News RSS · Sat, 18 Nov 2023 17:35:25 GMT",
+          "source": "FotMob",
+          "publishedAt": "Sat, 18 Nov 2023 17:35:25 GMT"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE13ZEtobW9iaGdWVk9qaW1RaDZob21qRW1Fekt2ZmVaTFhWTmpUb01TaGltcEp4YUxqendjeEZ0YlFwX2l6MjFWWnl1bmtvdzBkUEwzVUFwY0FIZG8w?oc=5",
+          "title": "Arthur - FotMob",
+          "snippet": "Google News RSS · Sun, 10 Dec 2023 09:28:24 GMT",
+          "source": "FotMob",
+          "publishedAt": "Sun, 10 Dec 2023 09:28:24 GMT"
+        }
+      ],
+      "updatedAt": "2026-10-27T08:05:05.979428+00:00",
+      "queryTeams": [
+        "Bayer Leverkusen",
+        "VfB Stuttgart"
+      ],
+      "league": "Bundesliga"
+    },
+    "Bundesliga|2026-10-31|schalke04|rbleipzig": {
+      "h2h": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8zZkU4ODhjOERCN1lfeFhSNHUyU0dhNEdFeEg4RndESXl2Zm9HUE9fRXJxbTNKQ01Cak4tMXpmUVZKeEZZcURHdW00dnRsQzlwek9ld3BRTzNLaXZpb0U4MkpjdXpoNjFtc3lTdFo3Y2RqWW8?oc=5",
+          "title": "Schalke 04 gegen Elversberg - live Ergebnisse, voraussichtliche Aufstellungen und H2H-Statistiken - FotMob",
+          "snippet": "Google News RSS · Sat, 04 Nov 2023 21:36:09 GMT",
+          "source": "FotMob",
+          "publishedAt": "Sat, 04 Nov 2023 21:36:09 GMT"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5KVlExWU51cUkwVjJ3UmpUcHdQQlFSNUJTcVhJVG80X3QweUZTMXhkTlBFU0lxUGF1MmVDVlgzenY5TElReVN0YXJiRmlraTJKQmVGNVd4V2hXX0s2dVJpN1duUGQ2T1M4eDZPRUYzeDlCdw?oc=5",
+          "title": "Augsburg vs Bayern München - live score, predicted lineups and H2H stats - FotMob",
+          "snippet": "Google News RSS · Thu, 02 Nov 2023 02:29:03 GMT",
+          "source": "FotMob",
+          "publishedAt": "Thu, 02 Nov 2023 02:29:03 GMT"
+        }
+      ],
+      "players": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4yekk1YXFTa0lKR1l3dzBkVi1mQ2lYQ2ZRRDg4ZnlCNVBONTdKeVN2X1B4dEtvd2lidlhxSGZOTkZQdzJPY05VaHRuU0lEcUVIWGlzVG9lclJyLXF3dFVB?oc=5",
+          "title": "Bundesliga stats for 2026/2027 - players and teams - FotMob",
+          "snippet": "Google News RSS · Wed, 13 Jul 2022 13:02:21 GMT",
+          "source": "FotMob",
+          "publishedAt": "Wed, 13 Jul 2022 13:02:21 GMT"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1EM19mUmtfZDJYRzJJU2N4LThBQ1pjdG5wX21hQVc1UVo2QTAwYjBuZWpRTlIyd2tKMXVGbEVhN0NLaXJfY2JTT1ZUa0xHRGx0dXYxRzhMOU1FcWh5YXV6bWt6RFZWbzdPbGFmT0s4dzd3QQ?oc=5",
+          "title": "Assan Ouédraogo - FotMob",
+          "snippet": "Google News RSS · Sat, 02 Dec 2023 07:58:38 GMT",
+          "source": "FotMob",
+          "publishedAt": "Sat, 02 Dec 2023 07:58:38 GMT"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9jeGVoeUtZbWFCeHczV2pCOVRDbUxobkxOb1FjYmdTU1RXU0Q4dVVMVE5xcGQ0d2NYaElGeUtsSVA3ZHQwakhSOS03dEpYSjdmTnVtNk9EWE83TXM?oc=5",
+          "title": "Bundesliga top scorers 2026/27: goals, assists and stats - VAVEL.com",
+          "snippet": "Google News RSS · Thu, 18 Jan 2024 13:55:33 GMT",
+          "source": "VAVEL.com",
+          "publishedAt": "Thu, 18 Jan 2024 13:55:33 GMT"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBCUHNKS1JMbl8xWDFhVHExRjVObFJzSC05a05RSEZNaEZjd29hUmFEN0FfelBuMTZwVWtwLTdiTmxyTFE5MnpNcjNmeDJ6UnZiU241VGVJS0hMVEpSOUJwVGtVT05wRF9YNy01cHVR?oc=5",
+          "title": "Bundesliga 2026/2027 bestbewertete Spieler, Tore, Assists und andere Statistiken - FotMob",
+          "snippet": "Google News RSS · Mon, 28 Aug 2023 15:30:14 GMT",
+          "source": "FotMob",
+          "publishedAt": "Mon, 28 Aug 2023 15:30:14 GMT"
+        }
+      ],
+      "updatedAt": "2026-10-27T08:05:05.979428+00:00",
+      "queryTeams": [
+        "Schalke 04",
+        "RB Leipzig"
+      ],
+      "league": "Bundesliga"
+    },
+    "Bundesliga|2026-10-31|werderbremen|tsghoffenheim": {
+      "h2h": [],
+      "players": [],
+      "updatedAt": "2026-10-27T08:05:05.979428+00:00",
+      "queryTeams": [
+        "Werder Bremen",
+        "TSG Hoffenheim"
+      ],
+      "league": "Bundesliga"
+    },
+    "Premier League|2026-10-31|manchestercity|brightonhovealbionfc": {
+      "h2h": [],
+      "players": [],
+      "updatedAt": "2026-10-27T08:05:05.979428+00:00",
+      "queryTeams": [
+        "Manchester City FC",
+        "Brighton & Hove Albion FC"
+      ],
+      "league": "Premier League"
+    },
+    "Premier League|2026-10-31|afcbournemouth|leedsunitedfc": {
+      "h2h": [],
+      "players": [],
+      "updatedAt": "2026-10-27T08:05:05.979428+00:00",
+      "queryTeams": [
+        "AFC Bournemouth",
+        "Leeds United FC"
+      ],
+      "league": "Premier League"
+    },
+    "Premier League|2026-10-31|coventrycityfc|sunderlandafc": {
+      "h2h": [],
+      "players": [],
+      "updatedAt": "2026-10-27T08:05:05.979428+00:00",
+      "queryTeams": [
+        "Coventry City FC",
+        "Sunderland AFC"
+      ],
+      "league": "Premier League"
+    },
+    "Premier League|2026-10-31|hullcityafc|ipswichtownfc": {
+      "h2h": [],
+      "players": [],
+      "updatedAt": "2026-10-27T08:05:05.979428+00:00",
+      "queryTeams": [
+        "Hull City AFC",
+        "Ipswich Town FC"
+      ],
+      "league": "Premier League"
+    },
+    "Premier League|2026-10-31|brentfordfc|nottinghamforestfc": {
+      "h2h": [],
+      "players": [],
+      "updatedAt": "2026-10-27T08:05:05.979428+00:00",
+      "queryTeams": [
+        "Brentford FC",
+        "Nottingham Forest FC"
+      ],
+      "league": "Premier League"
     }
   },
   "researchErrors": [],
