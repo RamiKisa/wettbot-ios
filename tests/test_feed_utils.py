@@ -225,32 +225,41 @@ class HistoricalH2HRegressionTests(unittest.TestCase):
         self.assertEqual(normalize_team_name("RB Leipzig"), "rbleipzig")
 
     def test_rot_weiss_essen_rb_leipzig_confirmed_2024_pokal_result(self):
-        # Official DFB Datencenter and RWE match report: 17 Aug 2024, 1-4.
-        history = {
-            normalize_team_name("Rot-Weiss Essen"): [{
-                "date": "2024-08-17T13:30:00+00:00",
-                "gf": 1, "ga": 4, "result": "L",
+        # The score/date match the public DFB Datencenter and RWE's official report.
+        # Exercise the actual OpenFootball cup parser before joining canonical team keys.
+        source = """
+  Sat Aug 17
+           Rot-Weiss Essen         v RB Leipzig               1-4 (1-2)
+"""
+        parsed = parse_openfootball_cup(source, 2024, today="2024-12-31")
+        self.assertEqual(len(parsed), 1)
+        match = parsed[0]
+        self.assertEqual((match["home"], match["away"]), ("Rot-Weiss Essen", "RB Leipzig"))
+        self.assertEqual((match["homeGoals"], match["awayGoals"]), (1, 4))
+        self.assertEqual(match["date"], "2024-08-17")
+
+        history_by_team = {
+            normalize_team_name(match["home"]): [{
+                "date": match["date"] + "T13:30:00+00:00",
+                "gf": match["homeGoals"], "ga": match["awayGoals"], "result": "L",
                 "opponent": "RasenBallsport Leipzig GmbH",
-                "home": "Rot-Weiss Essen", "away": "RB Leipzig",
-                "homeGoals": 1, "awayGoals": 4, "teamIsHome": True,
-                "historySource": "verified-regression-fixture",
+                "home": match["home"], "away": match["away"],
+                "homeGoals": match["homeGoals"], "awayGoals": match["awayGoals"],
+                "teamIsHome": True, "historySource": match["source"],
             }]
         }
-        rows = [
-            row for team_key, matches in history.items()
+        h2h = [
+            row for team_key, matches in history_by_team.items()
             if team_key == normalize_team_name("Rot-Weiss Essen")
             for row in matches
             if normalize_team_name(row["opponent"]) == normalize_team_name("RB Leipzig")
         ]
-        self.assertEqual(len(rows), 1)
-        self.assertEqual((rows[0]["homeGoals"], rows[0]["awayGoals"]), (1, 4))
-        self.assertEqual(rows[0]["date"][:10], "2024-08-17")
+        self.assertEqual(len(h2h), 1)
         model = poisson_match_model([], [], h2h_history=[{
-            "gf": rows[0]["gf"], "ga": rows[0]["ga"], "teamIsHome": True
+            "gf": h2h[0]["gf"], "ga": h2h[0]["ga"], "teamIsHome": True
         }])
         self.assertEqual(model["h2h"]["matchesUsed"], 1)
         self.assertEqual(model["h2h"]["averageTotalGoals"], 5.0)
-
 
 
 
