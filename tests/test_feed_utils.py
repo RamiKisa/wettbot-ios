@@ -122,6 +122,36 @@ class PoissonModelTests(unittest.TestCase):
         self.assertAlmostEqual(sum(result["probabilities"].values()), 100.0, delta=0.2)
         self.assertEqual(result["historyMatches"], {"home": 0, "away": 0})
 
+    def test_low_scoring_h2h_reduces_goal_expectation_despite_high_recent_form(self):
+        home_form = [
+            {"gf": 4, "ga": 1, "teamIsHome": True},
+            {"gf": 3, "ga": 1, "teamIsHome": False},
+            {"gf": 5, "ga": 2, "teamIsHome": True},
+            {"gf": 4, "ga": 0, "teamIsHome": False},
+            {"gf": 3, "ga": 1, "teamIsHome": True},
+        ]
+        away_form = [
+            {"gf": 4, "ga": 1, "teamIsHome": False},
+            {"gf": 3, "ga": 0, "teamIsHome": True},
+            {"gf": 4, "ga": 2, "teamIsHome": False},
+            {"gf": 5, "ga": 1, "teamIsHome": True},
+            {"gf": 3, "ga": 1, "teamIsHome": False},
+        ]
+        h2h = [
+            {"gf": 0, "ga": 0, "teamIsHome": True},
+            {"gf": 1, "ga": 0, "teamIsHome": False},
+            {"gf": 1, "ga": 1, "teamIsHome": True},
+            {"gf": 0, "ga": 1, "teamIsHome": False},
+            {"gf": 1, "ga": 0, "teamIsHome": True},
+        ]
+        form_only = poisson_match_model(home_form, away_form)
+        with_h2h = poisson_match_model(home_form, away_form, h2h_history=h2h)
+        self.assertLess(with_h2h["homeGoals"] + with_h2h["awayGoals"], form_only["homeGoals"] + form_only["awayGoals"])
+        self.assertEqual(with_h2h["h2h"]["matchesUsed"], 5)
+        self.assertEqual(with_h2h["h2h"]["averageTotalGoals"], 0.8)
+        self.assertTrue(with_h2h["h2h"]["lowScoringPattern"])
+        self.assertGreater(with_h2h["h2h"]["modelWeightPercent"], 0)
+
 
 class SportScoreFixtureTests(unittest.TestCase):
     def test_parses_documented_widget_style_match(self):
