@@ -458,39 +458,27 @@ def fixture_fallback():
   except Exception as cup_exc:
    if "404" not in str(cup_exc):
     errors.append("DFB-Pokal historical archive "+str(cup_season)+": "+str(cup_exc)[:90])
- # Read OpenFootball's separate DFB-Pokal archive, because league feeds cannot cover cross-division cup H2H.
- import re as _cup_re
+ # Read OpenFootball's separate DFB-Pokal archive; league JSON files do not contain cross-division cup H2H.
+ from feed_utils import parse_openfootball_cup
  from zoneinfo import ZoneInfo
  for cup_season in range(season-1, season-3, -1):
   try:
    folder=str(cup_season)+"-"+str((cup_season+1)%100).zfill(2)
    url="https://raw.githubusercontent.com/openfootball/deutschland/master/"+folder+"/cup.txt"
-   req=urllib.request.Request(url,headers={"User-Agent":"RamoBet/3.7","Accept":"text/plain"})
+   req=urllib.request.Request(url,headers={"User-Agent":"RamoBet/3.8","Accept":"text/plain"})
    with urllib.request.urlopen(req,timeout=18) as response:
     cup_text=response.read().decode("utf-8","replace")
-   current_date=None
-   parsed_cup=0
-   for line in cup_text.splitlines():
-    header=_cup_re.match(r"^\s{0,4}(?:[A-Z][a-z]{2})\s+([A-Z][a-z]{2})\s+(\d{1,2})(?:\s+(\d{4}))?\s*$",line)
-    if header:
-     month,day,year=header.group(1),int(header.group(2)),int(header.group(3) or cup_season)
-     current_date=datetime.datetime.strptime(f"{year} {month} {day}","%Y %b %d").date()
-     continue
-    if current_date is None or current_date>now.date():
-     continue
-    result=_cup_re.match(r"^\s*(?:\d{2}:\d{2}\s+)?(.+?)\s{2,}v\s+(.+?)\s{2,}(\d+)\s*[-:]\s*(\d+)(?:\s+(a\.e\.t\.|pen\.).*)?\s*$",line)
-    if not result or (result.group(5) or "").strip().startswith("pen."):
-     continue
-    home,away=result.group(1).strip(),result.group(2).strip()
-    hg,ag=int(result.group(3)),int(result.group(4))
-    stamp=datetime.datetime.combine(current_date,datetime.time(15,0),tzinfo=ZoneInfo("Europe/Berlin")).astimezone(datetime.timezone.utc).isoformat()
+   cup_matches=parse_openfootball_cup(cup_text,cup_season,today=now.date())
+   for match in cup_matches:
+    home,away=match["home"],match["away"]
+    hg,ag=match["homeGoals"],match["awayGoals"]
+    stamp=datetime.datetime.combine(datetime.date.fromisoformat(match["date"]),datetime.time(15,0),tzinfo=ZoneInfo("Europe/Berlin")).astimezone(datetime.timezone.utc).isoformat()
     for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
      rows=history.setdefault(("DFB-Pokal",team),[])
      day_key=stamp[:10]
      if not any(x.get("date","")[:10]==day_key and canonical_team_name(x.get("opponent"))==canonical_team_name(opponent) for x in rows):
       rows.append({"date":stamp,"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent,"home":home,"away":away,"homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home,"historySource":"OpenFootball DFB-Pokal"})
-    parsed_cup+=1
-   print("OpenFootball DFB-Pokal history",cup_season,parsed_cup)
+   print("OpenFootball DFB-Pokal history",cup_season,len(cup_matches))
   except Exception as cup_exc:
    if "404" not in str(cup_exc):
     errors.append("DFB-Pokal history "+str(cup_season)+": "+str(cup_exc)[:90])
