@@ -384,7 +384,7 @@ def fetch_espn_events(slug, start_date=None, end_date=None):
   cursor=chunk_end+datetime.timedelta(days=1)
  return list(found.values())
 def fixture_fallback():
- all_matches=[]; errors=[]; history={}
+ all_matches=[]; errors=[]; history={}; history_warnings=[]
  SOURCE_DIAGNOSTICS.clear()
  for league,(file,zone) in leagues.items():
   try:
@@ -442,8 +442,16 @@ def fixture_fallback():
       if not any(x.get("date")==dt.isoformat() and x.get("opponent")==opponent for x in rows):
        rows.append({"date":dt.isoformat(),"gf":gf,"ga":ga,"result":"W" if gf>ga else "D" if gf==ga else "L","opponent":opponent,"home":home,"away":away,"homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home})
    except Exception as e:
-    errors.append(league+" previous-season "+str(previous_season)+" history: "+str(e)[:70])
- _of_errors=[e for e in errors if "OpenFootball:" in e or "previous-season" in e]
+    message=str(e)
+    # Some competitions do not publish every old season in this repository. A missing
+    # archive is a coverage warning, not a failed current fixture feed; keep trying other years.
+    if "HTTP Error 404" in message or "HTTP 404" in message:
+     history_warnings.append(league+" "+str(previous_season)+": historical archive unavailable")
+    else:
+     errors.append(league+" previous-season "+str(previous_season)+" history: "+message[:70])
+ _of_errors=[e for e in errors if "OpenFootball:" in e or ("previous-season" in e and "archive unavailable" not in e)]
+ if history_warnings:
+  print("Historical archive coverage warnings:",json.dumps(history_warnings[:30],ensure_ascii=False))
  _of_by_league={league:sum(1 for row in all_matches if row.get("league")==league and row.get("source")=="OpenFootball") for league in [x["name"] for x in COMPETITIONS]}
  _diag("OpenFootball","error" if _of_errors else "ok" if sum(_of_by_league.values()) else "empty",not bool(_of_errors),sum(_of_by_league.values()),"; ".join(_of_errors[:8]) or None,perLeague=_of_by_league)
  # Secondary independent fixture feed: ESPN for every configured competition.
