@@ -55,6 +55,7 @@ class FixedCompetitionConfigTests(unittest.TestCase):
                 "Bundesliga", "Serie A", "Ligue 1", "La Liga", "Premier League",
                 "Süper Lig", "Primeira Liga", "Champions League", "Europa League",
                 "Conference League",
+                "DFB-Pokal",
             ],
         )
         self.assertEqual(len({item["name"] for item in config["competitions"]}), 10)
