@@ -73,20 +73,23 @@ def pct(v):
  except:return None
 def fetch_team_news(team):
  if not team: return []
- q='"'+team+'" (Verletzung OR verletzt OR Ausfall OR gesperrt OR Aufstellung OR Pressekonferenz)'
+ q='"'+team+'" (injury OR injured OR unavailable OR suspended OR doubt OR team news OR Verletzung OR verletzt OR Ausfall OR gesperrt OR Aufstellung OR Pressekonferenz)'
  url='https://news.google.com/rss/search?'+urllib.parse.urlencode({'q':q,'hl':'de','gl':'DE','ceid':'DE:de'})
  try:
   req=urllib.request.Request(url,headers={'User-Agent':'Wettbot/3.1 (RSS reader)','Accept':'application/rss+xml, application/xml'})
   with urllib.request.urlopen(req,timeout=12) as resp: raw=resp.read()
   import xml.etree.ElementTree as ET
   root=ET.fromstring(raw); items=[]
-  for item in root.findall('.//item')[:5]:
+  import html as htmlmod
+  for item in root.findall('.//item')[:8]:
    title=(item.findtext('title') or '').strip()
    link=(item.findtext('link') or '').strip()
    pub=(item.findtext('pubDate') or '').strip()
    source=(item.findtext('source') or '').strip()
+   description=(item.findtext('description') or '').strip()
+   snippet=re.sub(r'\\s+',' ',htmlmod.unescape(re.sub(r'<[^>]+>',' ',description))).strip()[:700]
    if title and link.startswith('https://'):
-    items.append({'title':title,'url':link,'publishedAt':pub,'source':source or 'Google News RSS'})
+    items.append({'title':title,'snippet':snippet,'url':link,'publishedAt':pub,'source':source or 'Google News RSS'})
   return items
  except Exception:
   return None
