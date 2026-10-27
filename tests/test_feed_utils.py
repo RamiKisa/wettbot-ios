@@ -6,7 +6,7 @@ import unittest
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from feed_utils import espn_completed_match_rows, full_time_score, match_rows, normalize_team_name, parse_openfootball_cup, poisson_match_model, sportscore_match_rows
+from feed_utils import espn_completed_match_rows, full_time_score, latest_unique_history, match_rows, normalize_team_name, parse_openfootball_cup, poisson_match_model, sportscore_match_rows
 
 
 class MatchRowsTests(unittest.TestCase):
@@ -214,6 +214,50 @@ class SportScoreFixtureTests(unittest.TestCase):
         self.assertEqual(sportscore_match_rows({"data": "not-a-list"}), [])
         self.assertEqual(sportscore_match_rows([{"home": "A"}]), [])
 
+
+
+class LatestUniqueHistoryTests(unittest.TestCase):
+    def test_returns_five_newest_rows_first_and_prefers_espn_duplicate(self):
+        rows = [
+            {"id": "older", "date": "2026-10-01T12:00:00+00:00", "home": "Home FC",
+             "away": "Away FC", "homeGoals": 1, "awayGoals": 0, "gf": 1, "ga": 0,
+             "opponent": "Away FC", "teamIsHome": True, "historySource": "OpenFootball"},
+            {"id": "newer", "date": "2026-10-10T12:00:00+00:00", "home": "Home FC",
+             "away": "Team B", "homeGoals": 2, "awayGoals": 1, "gf": 2, "ga": 1,
+             "opponent": "Team B", "teamIsHome": True, "historySource": "OpenFootball"},
+            {"id": "alias-duplicate", "date": "2026-10-10T18:30:00+00:00", "home": "Home FC",
+             "away": "Team B FC", "homeGoals": 2, "awayGoals": 1, "gf": 2, "ga": 1,
+             "opponent": "Team B FC", "teamIsHome": True, "historySource": "ESPN completed scoreboard"},
+            {"id": "third", "date": "2026-10-08T12:00:00+00:00", "home": "Home FC",
+             "away": "Team C", "homeGoals": 0, "awayGoals": 0, "gf": 0, "ga": 0,
+             "opponent": "Team C", "teamIsHome": True, "historySource": "OpenFootball"},
+            {"id": "fourth", "date": "2026-10-07T12:00:00+00:00", "home": "Team D",
+             "away": "Home FC", "homeGoals": 1, "awayGoals": 3, "gf": 3, "ga": 1,
+             "opponent": "Team D", "teamIsHome": False, "historySource": "OpenFootball"},
+            {"id": "fifth", "date": "2026-10-06T12:00:00+00:00", "home": "Home FC",
+             "away": "Team E", "homeGoals": 0, "awayGoals": 1, "gf": 0, "ga": 1,
+             "opponent": "Team E", "teamIsHome": True, "historySource": "OpenFootball"},
+            {"id": "sixth", "date": "2026-10-05T12:00:00+00:00", "home": "Home FC",
+             "away": "Team F", "homeGoals": 4, "awayGoals": 0, "gf": 4, "ga": 0,
+             "opponent": "Team F", "teamIsHome": True, "historySource": "OpenFootball"},
+        ]
+        result = latest_unique_history(rows, "Home FC", limit=5)
+        self.assertEqual([row["id"] for row in result],
+                         ["alias-duplicate", "third", "fourth", "fifth", "sixth"])
+        self.assertEqual([row["date"] for row in result],
+                         sorted([row["date"] for row in result], reverse=True))
+
+    def test_keeps_distinct_home_away_fixtures_and_ignores_bad_rows(self):
+        rows = [
+            {"id": "home", "date": "2026-10-20T12:00:00+00:00", "home": "A", "away": "B",
+             "homeGoals": 1, "awayGoals": 0, "gf": 1, "ga": 0, "opponent": "B", "teamIsHome": True},
+            {"id": "away", "date": "2026-10-20T15:00:00+00:00", "home": "B", "away": "A",
+             "homeGoals": 0, "awayGoals": 1, "gf": 1, "ga": 0, "opponent": "B", "teamIsHome": False},
+            {"id": "malformed", "date": "", "home": "A", "away": "B", "homeGoals": 1, "awayGoals": 0},
+            None,
+        ]
+        result = latest_unique_history(rows, "A", limit=5)
+        self.assertEqual({row["id"] for row in result}, {"home", "away"})
 
 
 class HistoricalH2HRegressionTests(unittest.TestCase):
