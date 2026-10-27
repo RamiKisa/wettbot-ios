@@ -217,12 +217,12 @@ def _relevant_team_research(team,item,kind):
  canonical=normalize_team_name(team)
  relevant=bool(canonical and len(canonical)>=5 and canonical in text_key)
  if not relevant:
-  stop={"fc","cf","cd","sc","ac","as","afc","club","de","da","do","the","football"}
+  stop={"fc","cf","cd","sc","ac","as","afc","club","de","da","do","the","football","united","city"}
   words=[_normalized_search_text(x) for x in re.findall(r"[A-Za-zÀ-ÿ0-9]+",str(team or ""))]
   words=[x for x in words if len(x)>=4 and x not in stop]
   title_words=set(re.findall(r"[a-z0-9]+",unicodedata.normalize("NFKD",text_value).encode("ascii","ignore").decode().lower()))
-  if words:
-   relevant=all(word in title_words for word in words)
+  # Search titles often use the short club name instead of its full legal name.
+  relevant=any(word in title_words for word in words)
  if not relevant: return False
  if kind=="news":
   published=str(item.get("publishedAt") or "").strip()
