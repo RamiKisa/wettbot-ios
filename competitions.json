@@ -72,6 +72,11 @@
       "name": "Conference League",
       "espnSlug": "uefa.europa.conf",
       "apiFootballId": 848
+    },
+    {
+      "name": "DFB-Pokal",
+      "espnSlug": "ger.dfb_pokal",
+      "apiFootballId": 81
     }
   ]
 }
