@@ -16,7 +16,7 @@ from zoneinfo import ZoneInfo
 EXPECTED = [
     "Bundesliga", "Serie A", "Ligue 1", "La Liga", "Premier League",
     "Süper Lig", "Primeira Liga", "Champions League", "Europa League",
-    "Conference League",
+    "Conference League", "DFB-Pokal",
 ]
 
 
