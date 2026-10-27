@@ -71,7 +71,7 @@ def fetch_openfootball(season_year, filename):
   return json.loads(payload)
  except Exception as exc:
   raise RuntimeError("OpenFootball "+season_folder+"/"+filename+": "+str(exc)[:120])
-from feed_utils import espn_completed_match_rows, full_time_score, match_rows, poisson_match_model, sportscore_match_rows
+from feed_utils import espn_completed_match_rows, full_time_score, match_rows, normalize_team_name as canonical_team_name, poisson_match_model, sportscore_match_rows
 def pct(v):
  try:return round(float(str(v).replace("%","").strip()),1)
  except:return None
@@ -705,30 +705,9 @@ def fixture_fallback():
  print("football-data.org completed-history matches by league:",json.dumps(dict(sorted(football_data_history_counts.items())),ensure_ascii=False))
  if not FOOTBALL_DATA_TOKEN:
   _diag("football-data.org","not_configured",None,0,"FOOTBALL_DATA_TOKEN is empty")
- # Canonical team names before source merging; this removes ESPN/OpenFootball alias duplicates.
- import unicodedata,math
- aliases={
-   "hamburgersv":"hamburgersv","hamburg":"hamburgersv","hsv":"hamburgersv","hamburgersportverein":"hamburgersv","hamburgersvfootballclub":"hamburgersv","hamburgersportverein1847":"hamburgersv",
-   "eintrachtfrankfurt":"eintrachtfrankfurt","frankfurteintracht":"eintrachtfrankfurt","eintrachtfrankfurtammain":"eintrachtfrankfurt","sge":"eintrachtfrankfurt","frankfurt":"eintrachtfrankfurt",
-   "fcbarcelona":"barcelona","barcelonafc":"barcelona",
-   "bayernmunchen":"bayernmunich","fcbayernmunchen":"bayernmunich","fcbayern":"bayernmunich",
-   "fcinternazionalemilano":"intermilan","internazionalemilano":"intermilan","internazionale":"intermilan","inter":"intermilan",
-   "milan":"acmilan","acmilan":"acmilan","sscnapoli":"napoli","napoli":"napoli","juventusfc":"juventus",
-   "parissaintgermain":"psg","parissaintgermainfc":"psg","galatasarayistanbul":"galatasaray","galatasaraysk":"galatasaray",
-   "fenerbahceistanbul":"fenerbahce","fenerbahcesk":"fenerbahce","besiktasistanbul":"besiktas","besiktasjk":"besiktas",
-   "fcporto":"porto","sportingcp":"sportinglisbon","sportingclubedeportugal":"sportinglisbon","sportinglisbon":"sportinglisbon",
-   "athleticclub":"athleticbilbao","athleticbilbao":"athleticbilbao","realbetisseville":"realbetis",
-   "atleticodemadrid":"atleticomadrid","realmadridcf":"realmadrid","realracingclubdesantander":"racingdesantander",
-   "arsenalfc":"arsenal","liverpoolfc":"liverpool","chelseafc":"chelsea","manchesterunitedfc":"manchesterunited",
-   "manchestercityfc":"manchestercity","tottenhamhotspurfc":"tottenhamhotspur","evertonfc":"everton",
-   "westhamunitedfc":"westhamunited","newcastleunitedfc":"newcastleunited","crystalpalacefc":"crystalpalace",
-   "astonvillafc":"astonvilla","brightonandhovealbionfc":"brighton",
-   "olympiquedemarseille":"marseille","olympiquelyonnais":"lyon","asmonaco":"monaco","lilleosc":"lille",
-   "fcfamalicao":"famalicao","sportingclube":"sportinglisbon","sportlisboabenfica":"benfica","sportlisboaebenfica":"benfica","sportlisboaebenficafutebolclube":"benfica","fcarouca":"arouca","arouca":"arouca","cdnacional":"nacional","nacional":"nacional","sportingclubedebraga":"braga","braga":"braga","csmaritimo":"maritimo","maritimo":"maritimo","omonianicosiafc":"omonianicosia","omonianicosia":"omonianicosia","slbenfica":"benfica","benficasl":"benfica","benfica":"benfica","sportlisboabenficafutebol":"benfica","cdsantaclara":"santaclara","santaclara":"santaclara","santaclaracd":"santaclara"
- }
+ # Canonical team names before source merging; share normalization with tests and all feed parsers.
  def team_key(value):
-  key=re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",str(value or "")).encode("ascii","ignore").decode().lower())
-  return aliases.get(key,key)
+  return canonical_team_name(value)
  unique=[]; seen=set(); duplicate_sources=collections.Counter()
  for match in sorted(all_matches,key=lambda x:x.get("timestamp",0)):
   home_key=team_key(match.get("home")); away_key=team_key(match.get("away"))
@@ -868,25 +847,7 @@ def fixture_fallback():
   compact_history[key]=sorted(unique.values(),key=lambda x:x.get("date",""))[-30:]
  return all_matches,errors,compact_history
 def normalize_team_name(value):
- key=re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",str(value or "")).encode("ascii","ignore").decode().lower())
- aliases={
-  "fcbarcelona":"barcelona","barcelonafc":"barcelona",
-  "bayernmunchen":"bayernmunich","fcbayernmunchen":"bayernmunich","fcbayern":"bayernmunich",
-  "fcinternazionalemilano":"intermilan","internazionalemilano":"intermilan","internazionale":"intermilan","inter":"intermilan",
-  "milan":"acmilan","acmilan":"acmilan","sscnapoli":"napoli","napoli":"napoli","juventusfc":"juventus",
-  "parissaintgermain":"psg","parissaintgermainfc":"psg","galatasarayistanbul":"galatasaray","galatasaraysk":"galatasaray",
-  "fenerbahceistanbul":"fenerbahce","fenerbahcesk":"fenerbahce","besiktasistanbul":"besiktas","besiktasjk":"besiktas",
-  "fcporto":"porto","sportingcp":"sportinglisbon","sportingclubedeportugal":"sportinglisbon","sportinglisbon":"sportinglisbon",
-  "athleticclub":"athleticbilbao","athleticbilbao":"athleticbilbao","realbetisseville":"realbetis",
-  "atleticodemadrid":"atleticomadrid","realmadridcf":"realmadrid","realracingclubdesantander":"racingdesantander",
-  "arsenalfc":"arsenal","liverpoolfc":"liverpool","chelseafc":"chelsea","manchesterunitedfc":"manchesterunited",
-  "manchestercityfc":"manchestercity","tottenhamhotspurfc":"tottenhamhotspur","evertonfc":"everton",
-  "westhamunitedfc":"westhamunited","newcastleunitedfc":"newcastleunited","crystalpalacefc":"crystalpalace",
-  "astonvillafc":"astonvilla","brightonandhovealbionfc":"brighton",
-  "olympiquedemarseille":"marseille","olympiquelyonnais":"lyon","asmonaco":"monaco","lilleosc":"lille",
-  "fcfamalicao":"famalicao","sportingclube":"sportinglisbon","sportlisboabenfica":"benfica","sportlisboaebenfica":"benfica","sportlisboaebenficafutebolclube":"benfica","fcarouca":"arouca","arouca":"arouca","cdnacional":"nacional","nacional":"nacional","sportingclubedebraga":"braga","braga":"braga","csmaritimo":"maritimo","maritimo":"maritimo","omonianicosiafc":"omonianicosia","omonianicosia":"omonianicosia","slbenfica":"benfica","benficasl":"benfica","benfica":"benfica","sportlisboabenficafutebol":"benfica","cdsantaclara":"santaclara","santaclara":"santaclara","santaclaracd":"santaclara"
- }
- return aliases.get(key,key)
+ return canonical_team_name(value)
 def local_day(value):
  dt=datetime.datetime.fromisoformat(str(value).replace("Z","+00:00"))
  if dt.tzinfo is None: dt=dt.replace(tzinfo=datetime.timezone.utc)
