@@ -415,9 +415,13 @@ def fixture_fallback():
     all_matches.append({"id":"fallback-"+league.lower().replace(" ","-")+"-"+str(day)+"-"+str(len(all_matches)),"date":dt.isoformat(),"timestamp":dt.timestamp(),"league":league,"home":home,"away":away,"venue":None,"status":"scheduled","analysisStatus":"fixture_only","prediction":{},"h2h":[],"source":"OpenFootball","dataCoverage":{"fixture":"OpenFootball"}})
   except Exception as e:
    errors.append(league+" OpenFootball: "+str(e)[:80]) # Supplement current-season results with previous-season results for a stable form baseline.
- # Load three previous seasons so H2H and team form are not limited to the current campaign.
+ # Load historical seasons for the supported leagues plus Germany's 2. Bundesliga as
+ # a history-only competition. It is not added to the app's selectable competition list,
+ # but is essential when a cup opponent was recently outside the top division.
+ history_leagues=dict(leagues)
+ history_leagues["2. Bundesliga"]=("de.2.json","Europe/Berlin")
  for previous_season in range(season-1,season-11,-1):
-  for league,(file,zone) in leagues.items():
+  for league,(file,zone) in history_leagues.items():
    try:
     previous_data=fetch_openfootball(previous_season,file)
     from zoneinfo import ZoneInfo
