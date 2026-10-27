@@ -24,7 +24,8 @@ def norm(value: object) -> str:
     text = unicodedata.normalize("NFKD", str(value or "")).encode("ascii", "ignore").decode().lower()
     key = re.sub(r"[^a-z0-9]", "", text)
     aliases = {
-        "sportlisboabenfica": "benfica", "slbenfica": "benfica",
+        "sportlisboabenfica": "benfica", "sportlisboaebenfica": "benfica",
+        "sportlisboaebenficafutebolclube": "benfica", "slbenfica": "benfica",
         "benficasl": "benfica", "benfica": "benfica",
         "sportlisboabenficafutebol": "benfica",
         "cdsantaclara": "santaclara", "santaclara": "santaclara",
