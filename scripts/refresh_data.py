@@ -430,7 +430,7 @@ def fixture_fallback():
   "French Ligue 2":("fr.2.json","Europe/Paris"),
   "Portuguese Liga 2":("pt.2.json","Europe/Lisbon"),
  })
- for previous_season in range(season-1,season-11,-1):
+ for previous_season in range(season-1,season-16,-1):
   for league,(file,zone) in history_leagues.items():
    try:
     previous_data=fetch_openfootball(previous_season,file)
@@ -488,7 +488,7 @@ def fixture_fallback():
    errors.append(league+" ESPN fallback: "+str(e)[:100]); espn_errors.append(league+": "+str(e)[:100])
  _diag("ESPN","error" if espn_errors else "ok" if sum(espn_fixture_counts.values()) else "empty",not bool(espn_errors),sum(espn_fixture_counts.values()),"; ".join(espn_errors[:8]) or None,perLeague=dict(sorted(espn_fixture_counts.items())),requestedLeagues=len(ESPN_SLUGS),failedLeagues=len(espn_errors))
  # Recent completed ESPN results fill form gaps, especially for UEFA fixtures and Turkish clubs.
- history_days=90
+ history_days=180
  history_start=now.date()-datetime.timedelta(days=history_days)
  history_end=now.date()-datetime.timedelta(days=1)
  espn_history_counts={}
@@ -574,7 +574,7 @@ def fixture_fallback():
  # Broader rolling history helps teams outside the top divisions and cup-only
  # fixtures retain recent form. This is history only; visible fixtures remain
  # restricted to the configured competitions.
- SPORTScore_HISTORY_DAYS=120
+ SPORTScore_HISTORY_DAYS=365
  for offset in range(-SPORTScore_HISTORY_DAYS,WINDOW_DAYS+1):
   sportscore_days.append(now.date()+datetime.timedelta(days=offset))
  def fetch_sportscore_safe(day):
@@ -752,7 +752,7 @@ def fixture_fallback():
    # Prefer precise ESPN kickoff time/source metadata when the two feeds describe the same result.
    if prior is None or row.get("historySource")=="ESPN completed scoreboard":
     combined[key]=row
-  return sorted(combined.values(),key=lambda x:x.get("date",""))[-10:]
+  return sorted(combined.values(),key=lambda x:x.get("date",""))[-5:]
  # Estimate league home/away goal baselines from unique completed matches, not duplicated team-perspective rows.
  unique_matches_by_league={}
  for (history_league,_team),rows in history.items():
@@ -865,7 +865,7 @@ def fixture_fallback():
   for row in rows:
    row_key=(str(row.get("date",""))[:10],row.get("opponent"),row.get("gf"),row.get("ga"))
    unique[row_key]=row
-  compact_history[key]=sorted(unique.values(),key=lambda x:x.get("date",""))[-10:]
+  compact_history[key]=sorted(unique.values(),key=lambda x:x.get("date",""))[-30:]
  return all_matches,errors,compact_history
 def normalize_team_name(value):
  key=re.sub(r"[^a-z0-9]","",unicodedata.normalize("NFKD",str(value or "")).encode("ascii","ignore").decode().lower())
