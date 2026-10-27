@@ -280,8 +280,10 @@ class OpenFootballCupParserTests(unittest.TestCase):
            Rot-Weiss Essen         v RB Leipzig               0-0
 """
         rows = parse_openfootball_cup(source, 2026, today="2026-10-27")
-        self.assertEqual(len(rows), 1)
-        self.assertEqual(rows[0]["date"], "2026-08-17")
+        self.assertEqual(len(rows), 2)
+        self.assertTrue(all(row["date"] <= "2026-10-27" for row in rows))
+        self.assertEqual(sum(row["date"] == "2026-08-17" for row in rows), 1)
+        self.assertFalse(any(row["date"] == "2026-10-27" for row in rows))
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
