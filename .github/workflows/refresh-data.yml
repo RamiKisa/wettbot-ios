@@ -18,9 +18,10 @@ on:
 permissions:
   contents: write
 
+# Newer code supersedes an older refresh; don't let slow historical scans block current fixes.
 concurrency:
   group: ramobet-data-refresh
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   refresh:
