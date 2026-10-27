@@ -1093,7 +1093,7 @@ if api_status is not None:
                           "prediction":"Eingeschränkte Poisson-Basisschätzung; Teamdaten fehlen"}}
     fixtures.append(item); base_index.setdefault(sig,[]).append(item); api_only_fixtures+=1
    item["apiFootballFixtureId"]=fixture.get("id")
-   if item.get("apiFootballPredictionUpdatedAt") and cache_is_fresh(item.get("apiFootballPredictionUpdatedAt"),kickoff):
+   if item.get("apiFootballPredictionUpdatedAt") and cache_is_fresh(item.get("apiFootballPredictionUpdatedAt"),kickoff,near_hours=0):
     continue
    api_rows.append((kickoff.timestamp(),item,api_match))
  # Keep official predictions useful but reserve request capacity for injury and lineup coverage.
@@ -1132,7 +1132,7 @@ if api_status is not None:
   try: kickoff=datetime.datetime.fromisoformat(str(item["date"]).replace("Z","+00:00"))
   except Exception: continue
   if kickoff.tzinfo is None: kickoff=kickoff.replace(tzinfo=datetime.timezone.utc)
-  if now<kickoff<=now+datetime.timedelta(hours=72) and not cache_is_fresh(item.get("apiFootballInjuriesUpdatedAt"),kickoff,near_hours=48):
+  if now<kickoff<=now+datetime.timedelta(hours=72) and not cache_is_fresh(item.get("apiFootballInjuriesUpdatedAt"),kickoff,near_hours=0):
    injury_candidates.append((kickoff.timestamp(),item))
  for _,item in sorted(injury_candidates,key=lambda x:x[0])[:4]:
   if used>=BUDGET or (API_DAILY_REMAINING is not None and API_DAILY_REMAINING<=DAILY_QUOTA_RESERVE): break
@@ -1154,7 +1154,7 @@ if api_status is not None:
   try: kickoff=datetime.datetime.fromisoformat(str(item["date"]).replace("Z","+00:00"))
   except Exception: continue
   if kickoff.tzinfo is None: kickoff=kickoff.replace(tzinfo=datetime.timezone.utc)
-  if now<kickoff<=now+datetime.timedelta(hours=36) and not cache_is_fresh(item.get("apiFootballLineupsUpdatedAt"),kickoff,near_hours=36):
+  if now<kickoff<=now+datetime.timedelta(hours=36) and not cache_is_fresh(item.get("apiFootballLineupsUpdatedAt"),kickoff,near_hours=0):
    lineup_candidates.append((kickoff.timestamp(),item))
  for _,item in sorted(lineup_candidates,key=lambda x:x[0])[:1]:
   if used>=BUDGET or (API_DAILY_REMAINING is not None and API_DAILY_REMAINING<=DAILY_QUOTA_RESERVE): break
