@@ -87,7 +87,7 @@ def fetch_team_news(team):
    pub=(item.findtext('pubDate') or '').strip()
    source=(item.findtext('source') or '').strip()
    description=(item.findtext('description') or '').strip()
-   snippet=re.sub(r'\\s+',' ',htmlmod.unescape(re.sub(r'<[^>]+>',' ',description))).strip()[:700]
+   snippet=re.sub(r'\s+',' ',htmlmod.unescape(re.sub(r'<[^>]+>',' ',description))).strip()[:700]
    if title and link.startswith('https://'):
     items.append({'title':title,'snippet':snippet,'url':link,'publishedAt':pub,'source':source or 'Google News RSS'})
   return items
