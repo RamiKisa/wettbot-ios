@@ -422,7 +422,7 @@ def fixture_fallback():
  # Load the prior two seasons into the common history index for cross-division H2H.
  import re as _cup_re
  from zoneinfo import ZoneInfo
- for cup_season in range(season-1, season-3, -1):
+ for cup_season in range(season-1, season-6, -1):
   try:
    season_folder=str(cup_season)+"-"+str((cup_season+1)%100).zfill(2)
    cup_url="https://raw.githubusercontent.com/openfootball/deutschland/master/"+season_folder+"/cup.txt"
