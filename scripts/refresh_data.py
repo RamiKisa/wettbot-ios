@@ -561,7 +561,11 @@ def fixture_fallback():
  sportscore_errors=[]
  sportscore_http_success=0; sportscore_empty_responses=0
  sportscore_days=[]
- for offset in range(-45,WINDOW_DAYS+1):
+ # Broader rolling history helps teams outside the top divisions and cup-only
+ # fixtures retain recent form. This is history only; visible fixtures remain
+ # restricted to the configured competitions.
+ SPORTScore_HISTORY_DAYS=120
+ for offset in range(-SPORTScore_HISTORY_DAYS,WINDOW_DAYS+1):
   sportscore_days.append(now.date()+datetime.timedelta(days=offset))
  def fetch_sportscore_safe(day):
   last_error=None
@@ -582,8 +586,9 @@ def fixture_fallback():
    sportscore_http_success+=1
    if not rows: sportscore_empty_responses+=1
    for row in rows:
-    league=sportscore_competition(row.get("competition"))
-    if not league: continue
+    raw_competition=str(row.get("competition") or "").strip()
+    league=sportscore_competition(raw_competition)
+    history_league=league or ("SportScore · "+raw_competition if raw_competition else "SportScore · Unbekannter Wettbewerb")
     rawdate=row.get("date")
     try:
      kickoff=datetime.datetime.fromisoformat(str(rawdate).replace("Z","+00:00"))
@@ -599,18 +604,21 @@ def fixture_fallback():
     is_finished=status_norm in {"finished","finish","complete","completed","post","ft","fulltime","ended","final"}
     is_cancelled=any(term in status_norm for term in ("cancel","postpon","abandon","suspend"))
     if is_finished and row.get("homeGoals") is not None and row.get("awayGoals") is not None:
-     if kickoff>now or kickoff<now-datetime.timedelta(days=45): continue
+     if kickoff>now or kickoff<now-datetime.timedelta(days=SPORTScore_HISTORY_DAYS): continue
      hg=row["homeGoals"]; ag=row["awayGoals"]
+     # Index completed matches from all competitions for recent form and cross-competition H2H.
      for team,gf,ga,opponent in ((home,hg,ag,away),(away,ag,hg,home)):
-      history.setdefault((league,team),[]).append({
+      history.setdefault((history_league,team),[]).append({
        "date":kickoff.isoformat(),"gf":gf,"ga":ga,
        "result":"W" if gf>ga else "D" if gf==ga else "L",
        "opponent":opponent,"home":home,"away":away,
        "homeGoals":hg,"awayGoals":ag,"teamIsHome":team==home,
        "historySource":"SportScore"
       })
-     sportscore_history_counts[league]+=1
+     sportscore_history_counts[history_league]+=1
      continue
+    # Only show upcoming fixtures for the eleven configured competitions.
+    if not league: continue
     if is_cancelled or kickoff<=now or kickoff>now+datetime.timedelta(days=WINDOW_DAYS): continue
     all_matches.append({
      "id":"sportscore-"+str(row.get("id") or (league+"-"+kickoff.isoformat()+"-"+home+"-"+away)),
