@@ -686,8 +686,8 @@ def fixture_fallback():
  # Canonical team names before source merging; this removes ESPN/OpenFootball alias duplicates.
  import unicodedata,math
  aliases={
-   "hamburgersv":"hamburgersv","hsv":"hamburgersv","hamburgersportverein":"hamburgersv","hamburgersvfootballclub":"hamburgersv",
-   "eintrachtfrankfurt":"eintrachtfrankfurt","frankfurteintracht":"eintrachtfrankfurt","eintrachtfrankfurtammain":"eintrachtfrankfurt",
+   "hamburgersv":"hamburgersv","hamburg":"hamburgersv","hsv":"hamburgersv","hamburgersportverein":"hamburgersv","hamburgersvfootballclub":"hamburgersv","hamburgersportverein1847":"hamburgersv",
+   "eintrachtfrankfurt":"eintrachtfrankfurt","frankfurteintracht":"eintrachtfrankfurt","eintrachtfrankfurtammain":"eintrachtfrankfurt","sge":"eintrachtfrankfurt","frankfurt":"eintrachtfrankfurt",
    "fcbarcelona":"barcelona","barcelonafc":"barcelona",
    "bayernmunchen":"bayernmunich","fcbayernmunchen":"bayernmunich","fcbayern":"bayernmunich",
    "fcinternazionalemilano":"intermilan","internazionalemilano":"intermilan","internazionale":"intermilan","inter":"intermilan",
@@ -767,7 +767,7 @@ def fixture_fallback():
    prior=h2h_model_unique.get(row_key)
    if prior is None or row.get("historySource")=="ESPN completed scoreboard":
     h2h_model_unique[row_key]=row
-  h2h_model_rows=sorted(h2h_model_unique.values(),key=lambda row:row.get("date",""))[-5:]
+  h2h_model_rows=sorted(h2h_model_unique.values(),key=lambda row:row.get("date",""),reverse=True)[:5]
   prediction=poisson_match_model(h,a,league_home_avg,league_away_avg,h2h_model_rows)
   prediction_h2h=prediction.get("h2h",{})
   f["dataCoverage"]["h2hModel"]=(
@@ -801,7 +801,7 @@ def fixture_fallback():
    prior=h2h_unique.get(h2h_key)
    if prior is None or row.get("historySource")=="ESPN completed scoreboard":
     h2h_unique[h2h_key]=row
-  f["h2h"]=sorted(h2h_unique.values(),key=lambda x:x.get("date",""))[-5:]
+  f["h2h"]=sorted(h2h_unique.values(),key=lambda x:x.get("date",""),reverse=True)[:5]
  enrich_team_news(all_matches,max_teams=80)
  enrich_google_team_research(all_matches)
  enrich_match_research(all_matches)
